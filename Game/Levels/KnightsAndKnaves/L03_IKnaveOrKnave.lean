@@ -5,7 +5,7 @@ Level 3
 
 Title ""
 
-Introduction 
+Introduction
 "
 `A` says 'I am a knave or `B` is a knave'.
 
@@ -21,7 +21,6 @@ stA : A ∈ Knave ↔ A ∉ Knave ∧ B ∉ Knave
 ```
 "
 
--- A says I am a knave or B is a knave
 Statement 
 {inst : DecidableEq Inhabitant}
   {Knight : Finset Inhabitant} {Knave : Finset Inhabitant}
@@ -30,35 +29,43 @@ Statement
 {h2 :  B ∈ Knight ∨ B ∈ Knave}
 {stA : A ∈ Knight ↔ (A ∈ Knave ∨ B ∈ Knave) }
 {stAn : A ∈ Knave ↔ (A ∉ Knave ∧ B ∉ Knave) }
-: A ∈ Knight ∧ B ∈ Knave := by 
-  Template
-  have AnKnave : A ∉ Knave := by 
-    Hint 
+: A ∈ Knight ∧ B ∈ Knave := by
+
+  Hint (strict := true)
+  "
+First prove `A ∉ Knave`, which takes multiple steps.
+  "
+  have AnKnave : A ∉ Knave
+  Hint
     "
-Assuming `AKnave : A ∈ Knave`:
-- Prove `ABnotKnave : A ∉ Knave ∧ B ∉ Knave` using `stAn`,`AKnave`.
-- Prove `False` using `ABnotKnave.left : A ∉ Knave` , `AKnave : A ∈ Knave`
+Assume `AKnave : A ∈ Knave`
     "
-    Hole
-    intro AKnave
-    have ABKnave := stAn.mp AKnave 
-    exact ABKnave.left AKnave
+  intro AKnave
+  Hint
+  "
+- Prove `ABnotKnave : A ∉ Knave ∧ B ∉ Knave` using `stAn`,`AKnave`. (one step proof)
+  "
+  have ABKnave := stAn.mp AKnave 
+  Hint
+  "
+Prove `False` using `ABnotKnave.left : A ∉ Knave` , `AKnave : A ∈ Knave`
+  "
+  exact ABKnave.left AKnave
 
   Hint
   "
-Prove `AKnight : A ∈ Knight` using `{AnKnave} : A ∉ Knave` , `notright_left` 
+Prove `AKnight : A ∈ Knight` using `{AnKnave} : A ∉ Knave` , `notright_left`. (one step proof)
   "
-  Hole
   have AKnight := notright_left h1  AnKnave
 
   Hint
   "
-Prove `AorBKn: A ∈ Knave ∨ B ∈ Knave` using `{AKnight}`, `stA`. 
+Prove `AorBKn: A ∈ Knave ∨ B ∈ Knave` using `{AKnight}`, `stA`. (one step proof)
   "
   have AorBKn := stA.mp AKnight
   Hint
   "
-Prove `BKnave : B ∈ Knave` using `{AorBKn}` , `{AnKnave}`
+Prove `BKnave : B ∈ Knave` using `{AorBKn}` , `{AnKnave}`. (`have`, one step proof)
   "
   have BKnave := notleft_right AorBKn AnKnave
   Hint
@@ -70,4 +77,5 @@ Prove the goal using `AKnight` , `BKnave`.
 Conclusion
 "
 "
+
 NewTheorem not_or

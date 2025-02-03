@@ -303,51 +303,6 @@ for `P Q : Prop`, `right` transforms the goal to `Q`.
 -/
 TacticDoc right
 
-/--
-
-## Syntax
-
-### without specifying the type
-`have name := some-term `
-where `name` is the new assumption that will appear which will have `some-type` where `some-term : some-type` and `some-type : Prop` i.e `some-term` is a proof of some proposition.
-
-### with specifying the type
-```
-have name : some-proposition := by
-  proof steps
-  ...
-  proof steps
-```
-You would need to use editor mode if there are multiple proof steps.
-
-Inside the have block, you would have a new goal which is `some-proposition` say `x=2` , `A ∈ Knight` etc...
-
-Not specifying the `type` when using `have` doesn't allow you to use tactics.
-
-## Examples
-
-Given the following assumptions from lemmas world, level 1:
-```
-Assumptions:
-Aleft : A ∈ left 
-Aright : A ∈ right 
-h: left ∩ right = ∅
-AinBothInter: A ∈ left ∧ A ∈ right → A ∈ left ∩ right
-```
-
-### without specifying the type
-`have AinBoth := AinBothInter (And.intro Aleft Aright)` will add the following to the assumptions:
-```
-AinBoth : A ∈ left ∩ right
-```
-
-### specifying the type
-`have  AinBoth : A ∈ left ∩ right := by AinBothInter (And.intro Aleft Aright)` will add the following to the assumptions in the proof state:
-```
-AinBoth : A ∈ left ∩ right
-```
--/
-TacticDoc «have»
 
 /--
 `And.intro` takes a proof of `P`, a proof of `Q`, and gives a proof of `P ∧ Q` where `P Q : Prop`.
@@ -393,11 +348,7 @@ TheoremDoc true_implies as "true_implies" in "Logic"
 
 TheoremDoc not_iff as "not_iff" in "Logic"
 
-
-
 /--
-Refer to `Prop` documentation if you need to.
-
 ## Overview
 For the following proof state:
 ```
@@ -412,23 +363,119 @@ P
 ```
 Remember that `hP : P` where `P : Prop` means `hP` is a proof of `P`.
 
-Since the goal is to prove `P`, the only thing we have to do is to let Lean know that we do have such a proof. In other words, `hP` is EXACTLY whats needd to prove the goal. The type of `hP` EXACTLY matches the goal.
+Since the goal is to prove `P`, the only thing we have to do is to let Lean know that we do have such a proof. This is done by `exact h`.
 
-exact h asserts that h is exactly whats needed to prove the goal which makes sense because h is a proof of P.(It doesn't matter what P is)
-This is done by `exact h`.
+In other words, `hP` is EXACTLY whats needd to prove the goal, the type of `hP` EXACTLY matches the goal, so `exact h` will do the job.
 -/
 TacticDoc exact
 
 /--
-Here we introduce the `have` tactic which allows us to add theorems to the context(which you would have to prove, of course). 
+The `have` tactic allows you to add theorems to the context(which you would have to prove, of course).
 
+## one step 
+If the proof is one step, then the following:
 ```
-`have name-of-object : type := by ...` 
+have theorem-name := proof
 ```
-where `...` is the proof.
-`name-of-object` can be whatever you want, leaving it empty would  give the theorem a name automatically. The `type` in this case is the statement we want to prove. 
+will do.
+
+## multiple steps
+If the proof is multiple steps, then:
+```
+have theorem-name : theorem-prop
+```
+where `theorem-prop : Prop` will change the current goal to `theorem-prop`.
+
+After being proven, the original goal is restored with `theorem-name : theorem-prop` added(which is a proof of the proposition `theorem-prop`)
+
+### example
+```
+have a : 2=2
+```
+will change the goal to `2=2`, which after proving would restore the original goal with the theorem `a : 2=2` added and ready to be used.
 -/
 TacticDoc «have» 
+
+/-
+
+NNG
+## Syntax
+
+### without specifying the type
+`have name := some-term `
+where `name` is the new assumption that will appear which will have `some-type` where `some-term : some-type` and `some-type : Prop` i.e `some-term` is a proof of some proposition.
+
+### with specifying the type
+```
+have name : some-proposition := by
+  proof steps
+  ...
+  proof steps
+```
+You would need to use editor mode if there are multiple proof steps.
+
+Inside the have block, you would have a new goal which is `some-proposition` say `x=2` , `A ∈ Knight` etc...
+
+Not specifying the `type` when using `have` doesn't allow you to use tactics.
+
+## Examples
+
+Given the following assumptions from lemmas world, level 1:
+```
+Assumptions:
+Aleft : A ∈ left 
+Aright : A ∈ right 
+h: left ∩ right = ∅
+AinBothInter: A ∈ left ∧ A ∈ right → A ∈ left ∩ right
+```
+
+### without specifying the type
+`have AinBoth := AinBothInter (And.intro Aleft Aright)` will add the following to the assumptions:
+```
+AinBoth : A ∈ left ∩ right
+```
+
+### specifying the type
+`have  AinBoth : A ∈ left ∩ right := by AinBothInter (And.intro Aleft Aright)` will add the following to the assumptions in the proof state:
+```
+AinBoth : A ∈ left ∩ right
+```
+-/
+
+/-
+reference point: knights and knaves level 4
+ones that are needed:
+postponing the proof, have a : 2=2, the goal now is 2=2
+giving a proof term without specifying type, have name := ...
+
+way to handle have:
+- have can be done in one step , so use have :=..
+- have needs multiple steps so use have a : 2=2.
+tell the user explicitly:
+- prove .. which can be done in one step
+- prove .. which is done in multiple steps
+include this in doc so user can read left side and if confused read right side.
+check how nng does it.
+-------
+
+## Standard Syntax
+```
+have theorem-name : theorem-prop 
+```
+where `theorem-name` can be anything you want, `theorem-prop` is what you want to prove.
+
+The goal changes to:
+```
+theorem-prop
+```
+then (after proving it) to the original goal.
+
+## Alternative Syntax
+```
+`have name-of-object : type := by proof` 
+```
+`name-of-object` can be whatever you want, leaving it empty would  give the theorem a name automatically. The `type` in this case is the statement we want to prove. 
+-/
 
 /--
 The `contradiction` tactic works for the following proofs states:

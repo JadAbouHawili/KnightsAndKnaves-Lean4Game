@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sun Feb  2 15:04:34 2025\n"
+"POT-Creation-Date: Mon Feb  3 19:05:07 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -308,50 +308,6 @@ msgid "Having the goal of the form:\n"
 msgstr ""
 
 #: Game.Doc.doc
-msgid "## Syntax\n"
-"\n"
-"### without specifying the type\n"
-"`have name := some-term `\n"
-"where `name` is the new assumption that will appear which will have `some-type` where `some-term : some-type` and `some-type : Prop` i.e `some-term` is a proof of some proposition.\n"
-"\n"
-"### with specifying the type\n"
-"```\n"
-"have name : some-proposition := by\n"
-"  proof steps\n"
-"  ...\n"
-"  proof steps\n"
-"```\n"
-"You would need to use editor mode if there are multiple proof steps.\n"
-"\n"
-"Inside the have block, you would have a new goal which is `some-proposition` say `x=2` , `A ∈ Knight` etc...\n"
-"\n"
-"Not specifying the `type` when using `have` doesn't allow you to use tactics.\n"
-"\n"
-"## Examples\n"
-"\n"
-"Given the following assumptions from lemmas world, level 1:\n"
-"```\n"
-"Assumptions:\n"
-"Aleft : A ∈ left \n"
-"Aright : A ∈ right \n"
-"h: left ∩ right = ∅\n"
-"AinBothInter: A ∈ left ∧ A ∈ right → A ∈ left ∩ right\n"
-"```\n"
-"\n"
-"### without specifying the type\n"
-"`have AinBoth := AinBothInter (And.intro Aleft Aright)` will add the following to the assumptions:\n"
-"```\n"
-"AinBoth : A ∈ left ∩ right\n"
-"```\n"
-"\n"
-"### specifying the type\n"
-"`have  AinBoth : A ∈ left ∩ right := by AinBothInter (And.intro Aleft Aright)` will add the following to the assumptions in the proof state:\n"
-"```\n"
-"AinBoth : A ∈ left ∩ right\n"
-"```"
-msgstr ""
-
-#: Game.Doc.doc
 msgid "`And.intro` takes a proof of `P`, a proof of `Q`, and gives a proof of `P ∧ Q` where `P Q : Prop`.\n"
 "\n"
 "Given,\n"
@@ -427,9 +383,7 @@ msgid ""
 msgstr ""
 
 #: Game.Doc.doc
-msgid "Refer to `Prop` documentation if you need to.\n"
-"\n"
-"## Overview\n"
+msgid "## Overview\n"
 "For the following proof state:\n"
 "```\n"
 "Objects\n"
@@ -443,20 +397,35 @@ msgid "Refer to `Prop` documentation if you need to.\n"
 "```\n"
 "Remember that `hP : P` where `P : Prop` means `hP` is a proof of `P`.\n"
 "\n"
-"Since the goal is to prove `P`, the only thing we have to do is to let Lean know that we do have such a proof. In other words, `hP` is EXACTLY whats needd to prove the goal. The type of `hP` EXACTLY matches the goal.\n"
+"Since the goal is to prove `P`, the only thing we have to do is to let Lean know that we do have such a proof. This is done by `exact h`.\n"
 "\n"
-"exact h asserts that h is exactly whats needed to prove the goal which makes sense because h is a proof of P.(It doesn't matter what P is)\n"
-"This is done by `exact h`."
+"In other words, `hP` is EXACTLY whats needd to prove the goal, the type of `hP` EXACTLY matches the goal, so `exact h` will do the job."
 msgstr ""
 
 #: Game.Doc.doc
-msgid "Here we introduce the `have` tactic which allows us to add theorems to the context(which you would have to prove, of course). \n"
+msgid "The `have` tactic allows you to add theorems to the context(which you would have to prove, of course).\n"
 "\n"
+"## one step \n"
+"If the proof is one step, then the following:\n"
 "```\n"
-"`have name-of-object : type := by ...` \n"
+"have theorem-name := proof\n"
 "```\n"
-"where `...` is the proof.\n"
-"`name-of-object` can be whatever you want, leaving it empty would  give the theorem a name automatically. The `type` in this case is the statement we want to prove."
+"will do.\n"
+"\n"
+"## multiple steps\n"
+"If the proof is multiple steps, then:\n"
+"```\n"
+"have theorem-name : theorem-prop\n"
+"```\n"
+"where `theorem-prop : Prop` will change the current goal to `theorem-prop`.\n"
+"\n"
+"After being proven, the original goal is restored with `theorem-name : theorem-prop` added(which is a proof of the proposition `theorem-prop`)\n"
+"\n"
+"### example\n"
+"```\n"
+"have a : 2=2\n"
+"```\n"
+"will change the goal to `2=2`, which after proving would restore the original goal with the theorem `a : 2=2` added and ready to be used."
 msgstr ""
 
 #: Game.Doc.doc
@@ -1852,11 +1821,11 @@ msgid "If you have heard about the liar's paradox before (https://en.wikipedia.o
 "```"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob26
+#: Game.Levels.KnightsAndKnaves.L02_prob26
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob26
+#: Game.Levels.KnightsAndKnaves.L02_prob26
 msgid "From Raymond Smullyan's book called 'What is the name of this book', part 1 chapter 3 problem 26\n"
 "\n"
 "Three of the inhabitants `A`, `B`, and `C` were standing together in a garden.\n"
@@ -1883,7 +1852,7 @@ msgid "From Raymond Smullyan's book called 'What is the name of this book', part
 "Note that for the statement of `B`, if `B` where telling the truth then `A` indeed made such a statement which is the statement 'I am a Knave' and the formalization of that is `A ∈ Knight ↔ A ∈ Knave`. So we get `stB : B ∈ Knight ↔ (A ∈ Knight ↔ A ∈ Knave)`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob26
+#: Game.Levels.KnightsAndKnaves.L02_prob26
 msgid "We know that `A` saying 'I am a knave' leads to contradiction.\n"
 "\n"
 "In implication form, `IamKnave` is of the following form:\n"
@@ -1905,27 +1874,27 @@ msgid "We know that `A` saying 'I am a knave' leads to contradiction.\n"
 "Store this in an object using `have`, you don't have to specify the type."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob26
+#: Game.Levels.KnightsAndKnaves.L02_prob26
 msgid "Conclude `B ∈ Knave` using `stBn` and `«{this}»`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob26
+#: Game.Levels.KnightsAndKnaves.L02_prob26
 msgid "Conclude `C ∈ Knight` using `stC` and `«{BKnave}»`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob26
+#: Game.Levels.KnightsAndKnaves.L02_prob26
 msgid "Conclude `B ∈ Knave ∧ C ∈ Knight` from `«{BKnave}» : B ∈ Knave`, `«{CKnight}» : C ∈ Knight` and use exact to close the goal."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob26
+#: Game.Levels.KnightsAndKnaves.L02_prob26
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.IKnaveOrKnave
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.IKnaveOrKnave
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
 msgid "`A` says 'I am a knave or `B` is a knave'.\n"
 "\n"
 "Formally,\n"
@@ -1940,37 +1909,47 @@ msgid "`A` says 'I am a knave or `B` is a knave'.\n"
 "```"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.IKnaveOrKnave
-msgid "Assuming `AKnave : A ∈ Knave`:\n"
-"- Prove `ABnotKnave : A ∉ Knave ∧ B ∉ Knave` using `stAn`,`AKnave`.\n"
-"- Prove `False` using `ABnotKnave.left : A ∉ Knave` , `AKnave : A ∈ Knave`"
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
+msgid "First prove `A ∉ Knave`, which takes multiple steps."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.IKnaveOrKnave
-msgid "Prove `AKnight : A ∈ Knight` using `«{AnKnave}» : A ∉ Knave` , `notright_left`"
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
+msgid "Assume `AKnave : A ∈ Knave`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.IKnaveOrKnave
-msgid "Prove `AorBKn: A ∈ Knave ∨ B ∈ Knave` using `«{AKnight}»`, `stA`."
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
+msgid "- Prove `ABnotKnave : A ∉ Knave ∧ B ∉ Knave` using `stAn`,`AKnave`. (one step proof)"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.IKnaveOrKnave
-msgid "Prove `BKnave : B ∈ Knave` using `«{AorBKn}»` , `«{AnKnave}»`"
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
+msgid "Prove `False` using `ABnotKnave.left : A ∉ Knave` , `AKnave : A ∈ Knave`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.IKnaveOrKnave
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
+msgid "Prove `AKnight : A ∈ Knight` using `«{AnKnave}» : A ∉ Knave` , `notright_left`. (one step proof)"
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
+msgid "Prove `AorBKn: A ∈ Knave ∨ B ∈ Knave` using `«{AKnight}»`, `stA`. (one step proof)"
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
+msgid "Prove `BKnave : B ∈ Knave` using `«{AorBKn}»` , `«{AnKnave}»`. (`have`, one step proof)"
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
 msgid "Prove the goal using `AKnight` , `BKnave`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.IKnaveOrKnave
+#: Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob33
+#: Game.Levels.KnightsAndKnaves.L04_prob33
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob33
+#: Game.Levels.KnightsAndKnaves.L04_prob33
 msgid "From Raymond Smullyan's book called 'What is the name of this book', part 1 chapter 3 problem 33\n"
 "\n"
 "Suppose `A` says 'I am a knave, but `B` is not' i.e `A ∈ Knave ∧ B ∉ Knave`.\n"
@@ -1987,25 +1966,37 @@ msgid "From Raymond Smullyan's book called 'What is the name of this book', part
 "```"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob33
-msgid "Assuming `AKnight : A ∈ Knight`:\n"
-"- Prove `AKnBnKn : A ∈ Knave ∧ B ∉ Knave` using `AKnight`, `stA`\n"
-"- Prove `False` using `disjoint` , `AKnBnKn.left : A ∈ Knave` , `AKnight : A ∈ Knight`."
+#: Game.Levels.KnightsAndKnaves.L04_prob33
+msgid "Prove `A ∉ Knight`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob33
+#: Game.Levels.KnightsAndKnaves.L04_prob33
+msgid "Assume `AKnight : A ∈ Knight`:"
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.L04_prob33
+msgid "Prove `AKnBnKn : A ∈ Knave ∧ B ∉ Knave` using `AKnight`, `stA`."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.L04_prob33
+msgid "Prove `False` using `disjoint` , `AKnBnKn.left : A ∈ Knave` , `AKnight : A ∈ Knight`."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.L04_prob33
 msgid "Prove `AKnave : A ∈ Knave` using `notleft_right` , `«{AnKnight}» : A ∉ Knight`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob33
+#: Game.Levels.KnightsAndKnaves.L04_prob33
 msgid "Prove `AnKnBKn : A ∉ Knave ∨ B ∈ Knave` using `«{AKnave}» : A ∈ Knave` ,`stAn`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob33
-msgid "Prove `BKnave : B ∈ Knave` using  `A ∉ Knave ∨ B ∈ Knave` and `«{AKnave}» : A ∈ Knave`. Use `simp` here."
+#: Game.Levels.KnightsAndKnaves.L04_prob33
+msgid "Prove `B ∈ Knave` using  `A ∉ Knave ∨ B ∈ Knave` and `«{AKnave}» : A ∈ Knave`. Use `simp` here. \n"
+"\n"
+"After that, close the goal."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves.prob33
+#: Game.Levels.KnightsAndKnaves.L04_prob33
 msgid "In the next world, we present a different way to represent the knights and knaves puzzle which would affect what the solution looks like(the patterns of reasoning won't change though, only their execution)."
 msgstr ""
 

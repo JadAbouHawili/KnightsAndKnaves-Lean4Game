@@ -24,6 +24,7 @@ stAn : A ∈ Knave ↔ A ∉ Knave ∨ B ∈ Knave
 "
 
 Statement
+(preamble := rw [not_and_or] at stAn ; simp at stAn) 
 {inst : DecidableEq Inhabitant}
 {A B : Inhabitant}
 {Knight : Finset Inhabitant}
@@ -32,27 +33,42 @@ Statement
 {h1 : A ∈ Knight ∨ A ∈ Knave }
 {h2: B ∈ Knight ∨ B ∈ Knave }
 {stA : A ∈ Knight  ↔ (A ∈ Knave  ∧  B ∉ Knave) }
-{stAn : A ∈ Knave ↔ A ∉  Knave  ∨  B ∈ Knave }
+{stAn : A ∈ Knave  ↔ ¬(A ∈ Knave  ∧  B ∉ Knave) }
   :  A ∈ Knave ∧ B ∈ Knave:= by
-  Template
-  have AnKnight : A ∉ Knight := by
-    Hole
-    Hint
+--{stAn : A ∈ Knave ↔ A ∉  Knave  ∨  B ∈ Knave }
+  Hint (strict := true)
     "
-    Assuming `AKnight : A ∈ Knight`:
-    - Prove `AKnBnKn : A ∈ Knave ∧ B ∉ Knave` using `AKnight`, `stA`
-    - Prove `False` using `disjoint` , `AKnBnKn.left : A ∈ Knave` , `AKnight : A ∈ Knight`.
+    Prove `A ∉ Knight`.
     "
-    intro AKnight
-    have AKnBnKn  := stA.mp AKnight
-    exact disjoint h AKnight AKnBnKn.left
+  have AnKnight : A ∉ Knight
+  Hint
+  "
+Assume `AKnight : A ∈ Knight`:
+  "
+  intro AKnight
+  Hint
+  "
+Prove `AKnBnKn : A ∈ Knave ∧ B ∉ Knave` using `AKnight`, `stA`.
+  "
+  have AKnBnKn  := stA.mp AKnight
+  Hint 
+  "
+Prove `False` using `disjoint` , `AKnBnKn.left : A ∈ Knave` , `AKnight : A ∈ Knight`.
+  "
+  exact disjoint h AKnight AKnBnKn.left
 
-  Hole
   Hint "Prove `AKnave : A ∈ Knave` using `notleft_right` , `{AnKnight} : A ∉ Knight`"
   have AKnave := notleft_right h1 AnKnight
   Hint "Prove `AnKnBKn : A ∉ Knave ∨ B ∈ Knave` using `{AKnave} : A ∈ Knave` ,`stAn`"
   have AnKnBKn := stAn.mp AKnave
-  Hint "Prove `BKnave : B ∈ Knave` using  `A ∉ Knave ∨ B ∈ Knave` and `{AKnave} : A ∈ Knave`. Use `simp` here. "
+  Hint "
+  Prove `B ∈ Knave` using  `A ∉ Knave ∨ B ∈ Knave` and `{AKnave} : A ∈ Knave`. Use `simp` here. 
+
+After that, close the goal.
+  "
+--  have BKnave : B ∈ Knave
+--  exact notleft_right AnKnBKn AKnave 
+
   simp [AKnave] at AnKnBKn
   exact And.intro AKnave AnKnBKn
 
