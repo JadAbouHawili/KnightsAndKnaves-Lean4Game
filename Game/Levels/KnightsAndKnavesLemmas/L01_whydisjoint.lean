@@ -147,6 +147,6 @@ The theorem `disjoint` can be used for any two disjoint sets, specifically the t
 "
 #check Finset.not_mem_empty
 
-NewTheorem disjoint Finset.mem_inter
+NewTheorem  Finset.mem_inter
 NewDefinition Finset inter KnightsKnaves mem
 NewTactic «have» 

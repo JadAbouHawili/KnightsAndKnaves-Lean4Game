@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Feb  3 19:05:07 2025\n"
+"POT-Creation-Date: Mon Feb 10 12:11:34 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -800,6 +800,10 @@ msgid "```\n"
 "exact `inright_notinleft h Aright` will close the goal."
 msgstr ""
 
+#: Game.Doc.doc
+msgid "asdfasf"
+msgstr ""
+
 #: Game.Levels.EquationalReasoning.L01_rfl
 msgid "`rfl`, A Number Equals Itself"
 msgstr ""
@@ -1302,6 +1306,30 @@ msgid "In this world, we will be dealing with `Objects` of type `Prop` i.e propo
 "h' : `y=6`\n"
 "```\n"
 "where `P` is `x=2` and `Q` is `y=6`, we can construct a new proposition `P ∧ Q` which is read as `x=2 and y=6`. Here we know what `P`,`Q` stand for. But, the proposition `P ∧ Q` can still be constructed and reasoned about regardless. Think of reasoning about unknown numbers like `x`,`y` etc..."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_intro
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_intro
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_intro
+msgid "asdfasdjfhsladjflkasjdfl"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_intro
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves
+msgid "DSL"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves
+msgid "In this world, you will learn how to solve equations."
 msgstr ""
 
 #: Game.Levels.KnightsAndKnavesLemmas.L01_whydisjoint
@@ -1991,7 +2019,7 @@ msgid "Prove `AnKnBKn : A ∉ Knave ∨ B ∈ Knave` using `«{AKnave}» : A ∈
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves.L04_prob33
-msgid "Prove `B ∈ Knave` using  `A ∉ Knave ∨ B ∈ Knave` and `«{AKnave}» : A ∈ Knave`. Use `simp` here. \n"
+msgid "Prove `B ∈ Knave` using  `A ∉ Knave ∨ B ∈ Knave` and `«{AKnave}» : A ∈ Knave`. Use `simp` here.\n"
 "\n"
 "After that, close the goal."
 msgstr ""

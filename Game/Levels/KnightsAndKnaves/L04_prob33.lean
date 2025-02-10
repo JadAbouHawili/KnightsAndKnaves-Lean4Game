@@ -22,7 +22,10 @@ For `stAn`, the statement is equivalent to:
 stAn : A ∈ Knave ↔ A ∉ Knave ∨ B ∈ Knave
 ```
 "
-
+axiom Inhabitant : Type
+axiom inst : DecidableEq Inhabitant
+axiom A : Inhabitant
+axiom B : Inhabitant
 Statement
 (preamble := rw [not_and_or] at stAn ; simp at stAn) 
 {inst : DecidableEq Inhabitant}
@@ -62,7 +65,7 @@ Prove `False` using `disjoint` , `AKnBnKn.left : A ∈ Knave` , `AKnight : A ∈
   Hint "Prove `AnKnBKn : A ∉ Knave ∨ B ∈ Knave` using `{AKnave} : A ∈ Knave` ,`stAn`"
   have AnKnBKn := stAn.mp AKnave
   Hint "
-  Prove `B ∈ Knave` using  `A ∉ Knave ∨ B ∈ Knave` and `{AKnave} : A ∈ Knave`. Use `simp` here. 
+  Prove `B ∈ Knave` using  `A ∉ Knave ∨ B ∈ Knave` and `{AKnave} : A ∈ Knave`. Use `simp` here.
 
 After that, close the goal.
   "

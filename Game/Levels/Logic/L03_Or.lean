@@ -49,5 +49,5 @@ Conclusion
 "
 "
 
+NewDefinition logic_or
 NewTactic left right
-NewDefinition or

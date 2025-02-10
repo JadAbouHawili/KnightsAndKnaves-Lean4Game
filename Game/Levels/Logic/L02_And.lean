@@ -82,4 +82,4 @@ Conclusion
 "
 
 NewTheorem And.intro 
-NewDefinition and
+NewDefinition logic_and

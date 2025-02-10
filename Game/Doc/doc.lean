@@ -140,7 +140,7 @@ F & F & F \\
 $
 Notice that `P ∧ Q` is true when both `P` is true and `Q` is true, being false otherwise.
 -/
-DefinitionDoc and as "∧" 
+DefinitionDoc logic_and as "and" 
 
 /--
 # Truth Table
@@ -166,7 +166,7 @@ Therefore, if we have `P ∨ Q` as our goal, it is enough to prove `P` or to pro
 
 Having `P ∨ Q` as the goal, you can tell Lean that you want to prove the left side by simply typing `left` or the right side by simply typing `right`.
 -/
-DefinitionDoc or as "∨"
+DefinitionDoc logic_or as "or"
 
 /--
 `∩` is an operator on sets.
@@ -862,3 +862,8 @@ A ∉ left
 exact `inright_notinleft h Aright` will close the goal.
 -/
 TheoremDoc inright_notinleft as "inright_notinleft" in "Knights and Knaves"
+
+/--
+asdfasf
+-/
+TheoremDoc Islander.knight_said as "knight_said" in "*"
