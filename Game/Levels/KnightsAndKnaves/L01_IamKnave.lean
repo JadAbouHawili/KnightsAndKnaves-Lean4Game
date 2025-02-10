@@ -118,6 +118,17 @@ IamKnave (h : Knight ∩ Knave = ∅) (h1 : A ∈ Knight ∨ A ∈ Knave) (stA :
 ```
 "
 
+open Islander
+example  (hAKn : A said A.isKnave): False := by 
+  knight_or_knave A with hA hnA 
+  · have hnA := knight_said hAKn hA
+    #check not_isKnight_and_isKnave
+    apply @not_isKnight_and_isKnave A
+    constructor
+    assumption ; assumption
+  · have hnA := knave_said hAKn hnA
+    contradiction
+
 NewTactic cases
 
 NewTheorem IamKnave

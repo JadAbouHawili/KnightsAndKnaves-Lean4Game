@@ -4,6 +4,7 @@ import Game.LevelLemmas.settheory
 --import Mathlib.Tactic
 --import Mathlib.Util.Delaborators
 import Mathlib.Tactic.Have
+import Mathlib.Tactic.ApplyAt
 import Mathlib.Tactic.FieldSimp
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic.Linarith.Frontend
@@ -33,15 +34,15 @@ axiom Said : Islander → Prop → Prop
 /-
 the following 4 axioms can be proven from the previous ones...
 -/
-theorem isKnight_notisKnave (A : Islander) : A.isKnight → ¬A.isKnave := by
+theorem isKnight_notisKnave {A : Islander} : A.isKnight → ¬A.isKnave := by
   intro AKnight 
   intro AKnave
   apply not_isKnight_and_isKnave
   constructor
   assumption ; assumption
-axiom isKnave_notisKnight (A : Islander) : A.isKnave → ¬A.isKnight
-axiom notisKnight_isKnave (A : Islander) : ¬A.isKnight → A.isKnave
-axiom notisKnave_isKnight (A : Islander) : ¬A.isKnave → A.isKnight
+axiom isKnave_notisKnight {A : Islander} : A.isKnave → ¬A.isKnight
+axiom notisKnight_isKnave {A : Islander} : ¬A.isKnight → A.isKnave
+axiom notisKnave_isKnight {A : Islander} : ¬A.isKnave → A.isKnight
 
 --------------
 -- number affects where brackets will be needed
@@ -52,6 +53,7 @@ infixr:30 " or  "  => Or
 axiom knight_said {A : Islander} {P : Prop} : (A said P) → A.isKnight → P
 axiom said_knight {A : Islander} {P : Prop} : (A said P) →  P → A.isKnight 
 
+axiom notknight_said {A : Islander} {P : Prop} : (A said P) → ¬A.isKnight → ¬P
 theorem said_knave {A : Islander} {P : Prop} : A said P →  ¬P → A.isKnave := by 
   intro AsaidP
   intro nP
@@ -69,8 +71,9 @@ macro "knight_or_knave" t1:term "with" t2:rcasesPat t3:rcasesPat : tactic => do`
 --macro "contra_knight_knave" : tactic =>
 --  `(tactic | (repeat (solve | apply not_isKnight_and_isKnave ; constructor ; assumption ; assumption ) ))
 --
-macro "contra_knight_knave" : tactic =>
-  `(tactic | ( apply not_isKnight_and_isKnave ; constructor ; assumption ; assumption   ))
+
+--macro "contra_knight_knave" : tactic =>
+--  `(tactic | ( apply not_isKnight_and_isKnave ; constructor ; assumption ; assumption   ))
 
 -- this creates a new macro contradiction, and extends the behavior of the contradiction tactic. but when seeing docstring, you don't get that its contradiction tactic
 --macro "contradiction" : tactic =>
@@ -79,8 +82,9 @@ macro "contra_knight_knave" : tactic =>
 --  first | 
 --  ( apply not_isKnight_and_isKnave ; constructor ; assumption ; assumption   ) | contradiction
 --  )
-macro "contradict2" : tactic =>
-  `(tactic |  (solve | apply not_isKnight_and_isKnave | apply And.intro | assumption | assumption ) )
+
+--macro "contradict2" : tactic =>
+--  `(tactic |  (solve | apply not_isKnight_and_isKnave | apply And.intro | assumption | assumption ) )
 
 -- this truly extends contradiction tactic, preserving doc string
 macro_rules
