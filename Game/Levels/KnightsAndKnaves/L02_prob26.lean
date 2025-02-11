@@ -117,31 +117,6 @@ example : A said A.isKnave ↔ False := by
   · intro 
     contradiction
 
-theorem dsl_iamknave (hAKn : A said A.isKnave): False := by 
-  knight_or_knave A with hA hnA 
-  · have hnA := knight_said hAKn hA
-    #check not_isKnight_and_isKnave
-    apply @not_isKnight_and_isKnave A
-    constructor
-    assumption ; assumption
-  · have hnA := knave_said hAKn hnA
-    contradiction
-example {A B C : Islander} 
-{hB : B said (A said A.isKnave)}
-{hC : C said B.isKnave}
-: B.isKnave and C.isKnight := by 
-  have BKnave : B.isKnave
-  -- need to introduce apply in this game
-  apply notisKnight_isKnave
-  intro BKnight
-  have hA := knight_said hB BKnight
-  exact dsl_iamknave hA
-
-  constructor
-  assumption
-
-  have CKnight := said_knight hC BKnave
-  assumption
 /-
   apply  notisKnave_isKnight
   intro CKnave 

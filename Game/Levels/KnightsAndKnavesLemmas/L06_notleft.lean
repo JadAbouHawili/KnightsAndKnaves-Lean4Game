@@ -32,7 +32,7 @@ eq_false (h : ¬p) : p = False
 Use `have` and `eq_false` to get `P = False`.
 "
 
-Statement notleft_right {P Q : Prop} (Or : P ∨ Q) (notleft : ¬P) : Q := by
+Statement {P Q : Prop} (Or : P ∨ Q) (notleft : ¬P) : Q := by
 {
   have := eq_false notleft
   Hint "Replace `P` in `Or` with `False`"

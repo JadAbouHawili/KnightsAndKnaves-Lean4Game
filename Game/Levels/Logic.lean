@@ -35,26 +35,3 @@ h' : `y=6`
 where `P` is `x=2` and `Q` is `y=6`, we can construct a new proposition `P ∧ Q` which is read as `x=2 and y=6`. Here we know what `P`,`Q` stand for. But, the proposition `P ∧ Q` can still be constructed and reasoned about regardless. Think of reasoning about unknown numbers like `x`,`y` etc...
 "
 
-#check of_eq_true
-#check of_eq_false
-
-#check imp_false
-#check implies_true
-#check true_implies
-#check true_imp_iff
-#check false_implies
-#check true_iff
-#check false_iff
-#check iff_false
-#check Or.elim
--- not_true not_false_eq_true not_true_eq_false
-
-variable {emTruth : (P : Prop) → P = True ∨ P = False}
-
-#check true_ne_false
-#check not_true_eq_false
-#check refl
-#check eq_self
-     #check Implies.trans
-     #check trans
-     #check Eq.trans

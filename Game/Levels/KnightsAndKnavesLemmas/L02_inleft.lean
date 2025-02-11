@@ -13,7 +13,7 @@ The reasoning goes as follows:
 Assume `A ∈ right`. This is done using `intro` tactic.
 "
 
-Statement inleft_notinright
+Statement 
   {left : Finset K} {right : Finset K}
 {inst : DecidableEq K}
 (h : left ∩ right = ∅ )
