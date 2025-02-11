@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Feb 10 12:11:34 2025\n"
+"POT-Creation-Date: Tue Feb 11 14:05:19 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1308,19 +1308,51 @@ msgid "In this world, we will be dealing with `Objects` of type `Prop` i.e propo
 "where `P` is `x=2` and `Q` is `y=6`, we can construct a new proposition `P ∧ Q` which is read as `x=2 and y=6`. Here we know what `P`,`Q` stand for. But, the proposition `P ∧ Q` can still be constructed and reasoned about regardless. Think of reasoning about unknown numbers like `x`,`y` etc..."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L01_intro
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L01_intro
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L01_intro
-msgid "asdfasdjfhsladjflkasjdfl"
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L01_intro
+#: Game.Levels.DSL_Knights_Knaves.L02_prob26
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L02_prob26
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L02_prob26
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L04_prob33
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L04_prob33
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L04_prob33
 msgid ""
 msgstr ""
 
@@ -1329,7 +1361,43 @@ msgid "DSL"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves
-msgid "In this world, you will learn how to solve equations."
+msgid "In this world, you will have to prove basic but important theorems which will be used in the world after this one to solve actual knights and knaves puzzles.\n"
+"\n"
+"----      \n"
+"We will introduce the knights and knaves puzzle here.\n"
+"\n"
+"The setting is an island. \n"
+"Every islander will make a statement. There are two types of islanders, 'knights' that always tell the truth, and 'knaves' that always lie.\n"
+"This is represented by the following rules:\n"
+"```\n"
+"isKnight_or_isKnave (A : Islander) : A.isKnight ∨ A.isKnave\n"
+"\n"
+"knight_said : (A said P) → A.isKnight → P\n"
+"said_knight : (A said P) →  P → A.isKnight \n"
+"knave_said  : (A said P) →  A.isKnave → ¬P\n"
+"said_knave  : (A said P) →  ¬P → A.isKnave\n"
+"```\n"
+"\n"
+"In a proof state, this would look like:\n"
+"```\n"
+"Objects\n"
+"Knight Knave : Finset Inhabitant\n"
+"```\n"
+"\n"
+"Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. This is represented as:\n"
+"```\n"
+"not_isKnight_and_isKnave (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)\n"
+"```\n"
+"\n"
+"The statement `A ∈ Knight` is read as: `A` belongs to the finite set `Knight`(`A in Knight`), and it should be understood as 'A IS Knight' i.e 'A' always tells the truth.\n"
+"Similarly, the statement `A ∉ Knight` is read as: `A` doesn't belong to the finite set `Knight`(`A not in Knight`), and it should be understood as 'A ISNOT Knight'.\n"
+"The same reasoning applies to `x ∈ Knave`, `x ∉ Knave`.\n"
+"\n"
+"The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning. Every inhabitant will make at most one statement.\n"
+"\n"
+"get a taste:\n"
+"Logic Puzzles: Knights and Knaves - YouTube\n"
+"https://www.youtube.com/watch?v=jY6dvQUHIOs"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnavesLemmas.L01_whydisjoint

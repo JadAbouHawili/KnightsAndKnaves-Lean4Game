@@ -1,6 +1,5 @@
 import Mathlib.Data.Set.Basic
 import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Multiset.Basic
 import Game.LevelLemmas.Logical
 
 -- experiment with simp_rw
