@@ -7,33 +7,35 @@ World "DSL_Knights_Knaves"
 Title "DSL"
 Introduction 
 "
-We will introduce the knights and knaves puzzle here.
+We will introduce the knights and knaves puzzle here explaining rules of the game and the corresponding lean representation
 
 The setting is an island. 
-Every islander will make a statement. There are two types of islanders, 'knights' that always tell the truth, and 'knaves' that always lie.
-This is represented by the following rules:
+Every islander will make a statement. There are two types of islanders, 'knights' and knaves.
+For a given islander `A`, 
+- The proposition that `A` is a knight
 ```
--- The proposition that the islander A is a knight
-A.isKnight 
+A.isKnight
+```
+- The proposition that `A` is a knave
+```
+A.isKnave
+```
 
--- The proposition that the islander A is a knave
-A.isKnave 
+Every islander is either a knight or a knave: 
 
+```
 isKnight_or_isKnave (A : Islander) : A.isKnight ∨ A.isKnave
+```
 
+Knights always tell the truth, and 'knaves' that always lie.
+```
 knight_said : (A said P) → A.isKnight → P
 said_knight : (A said P) →  P → A.isKnight 
 knave_said  : (A said P) →  A.isKnave → ¬P
 said_knave  : (A said P) →  ¬P → A.isKnave
 ```
 
-In a proof state, this would look like:
-```
-Objects
-Knight Knave : Finset Inhabitant
-```
-
-Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. This is represented as:
+Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave.
 ```
 not_isKnight_and_isKnave (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
 ```

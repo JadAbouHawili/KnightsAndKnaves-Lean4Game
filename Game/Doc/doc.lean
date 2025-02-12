@@ -752,6 +752,52 @@ stAn : A ∈ Knave ↔ ¬(B ∈ Knave)
 -/
 DefinitionDoc KnightsKnaves as "Knights and Knaves"
 
+/--
+We will introduce the knights and knaves puzzle here.
+
+The setting is an island. 
+Every islander will make a statement. There are two types of islanders, 'knights' that always tell the truth, and 'knaves' that always lie.
+
+We give english statements and their corresponding translation to lean.
+
+Given an islander `A`
+
+`A` is a knight
+```
+A.isKnight
+```
+
+`A` is a knave
+```
+A.isKnave
+```
+
+`A` is either a knight or a knave
+```
+isKnight_or_isKnave (A : Islander) : A.isKnight or A.isKnave
+```
+
+Knights always tell the truth.
+```
+knight_said : (A said P) → A.isKnight → P
+said_knight : (A said P) →  P → A.isKnight 
+```
+
+Knaves always lie.
+```
+knave_said  : (A said P) →  A.isKnave → ¬P
+said_knave  : (A said P) →  ¬P → A.isKnave
+```
+
+Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. `A` is not a knight and a knave at the same time. This is represented as:
+```
+not_isKnight_and_isKnave (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
+```
+
+The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning.
+-/
+DefinitionDoc DSLKnightsKnaves as "DSL Knights and Knaves"
+
 DefinitionDoc Nat as "ℕ"
 
 /--
