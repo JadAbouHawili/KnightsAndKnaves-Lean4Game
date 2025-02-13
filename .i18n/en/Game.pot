@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Feb 13 13:01:55 2025\n"
+"POT-Creation-Date: Thu Feb 13 14:16:41 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -977,18 +977,6 @@ msgstr ""
 
 #: Game.Levels.EquationalReasoning
 msgid "In this world, you will learn how to solve equations."
-msgstr ""
-
-#: Game.Levels.Logic_dsl.L01_contra
-msgid ""
-msgstr ""
-
-#: Game.Levels.Logic_dsl.L01_contra
-msgid ""
-msgstr ""
-
-#: Game.Levels.Logic_dsl.L01_contra
-msgid ""
 msgstr ""
 
 #: Game.Levels.Logic.L01_Intro

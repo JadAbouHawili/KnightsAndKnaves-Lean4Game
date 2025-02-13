@@ -46,4 +46,5 @@ Statement (PsameQ : P ↔ Q) (hP : P)
 Conclusion 
 "
 "
-NewTactic «have» 
+--NewTactic cases
+NewTactic «have» cases

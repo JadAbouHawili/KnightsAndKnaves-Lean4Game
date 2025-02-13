@@ -118,7 +118,7 @@ IamKnave (h : Knight ∩ Knave = ∅) (h1 : A ∈ Knight ∨ A ∈ Knave) (stA :
 ```
 "
 
-NewTactic cases
+--NewTactic cases
 
 NewTheorem IamKnave
 NewDefinition Iff
