@@ -47,4 +47,5 @@ Conclusion
 "
 "
 --NewTactic cases
-NewTactic «have» cases
+NewTactic «have» cases simp
+NewTheorem notleft_right

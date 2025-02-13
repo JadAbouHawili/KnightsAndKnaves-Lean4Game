@@ -50,4 +50,3 @@ The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or
 "
 
 NewTheorem notright_left eq_false or_false_iff
-NewTactic simp

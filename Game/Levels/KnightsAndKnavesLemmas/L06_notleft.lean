@@ -57,4 +57,4 @@ The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or
 `simp` will simplify `Or` with the theorems you gave, in this case `notleft : ¬P`. The resulting simplified expression would be `Or : P`.
 "
 
-NewTheorem notleft_right false_or_iff eq_false
+NewTheorem false_or_iff eq_false
