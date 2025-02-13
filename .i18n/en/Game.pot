@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Feb 12 17:31:13 2025\n"
+"POT-Creation-Date: Thu Feb 13 13:01:55 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -979,6 +979,18 @@ msgstr ""
 msgid "In this world, you will learn how to solve equations."
 msgstr ""
 
+#: Game.Levels.Logic_dsl.L01_contra
+msgid ""
+msgstr ""
+
+#: Game.Levels.Logic_dsl.L01_contra
+msgid ""
+msgstr ""
+
+#: Game.Levels.Logic_dsl.L01_contra
+msgid ""
+msgstr ""
+
 #: Game.Levels.Logic.L01_Intro
 msgid "Intro"
 msgstr ""
@@ -1379,51 +1391,17 @@ msgid "In this level, we present the 'I am a knave' puzzle.\n"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "You get two cases , the first where `h : A.isKnight` and the second where `h: A.isKnave`"
+msgid "You get two cases , the first where `h : A.isKnight` and the second where `h: A.isKnave`\n"
+"\n"
+"We are now in the first case where `h : A.isKnight`"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L02_prob26
-msgid ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L02_prob26
-msgid ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L02_prob26
-msgid ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
-msgid ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
-msgid ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
-msgid ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L04_prob33
-msgid ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L04_prob33
-msgid ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L04_prob33
-msgid ""
-msgstr ""
-
 #: Game.Levels.DSL_Knights_Knaves
-msgid "DSL"
+msgid "DSL Knights and Knaves"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves

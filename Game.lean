@@ -1,10 +1,10 @@
 import Game.Levels.EquationalReasoning
+import Game.Levels.Logic_dsl
 import Game.Levels.Logic
 import Game.Levels.DSL_Knights_Knaves
 import Game.Levels.KnightsAndKnavesLemmas
 import Game.Levels.KnightsAndKnaves
 import Game.Levels.KnightsAndKnaves2
---import Game.Metadata
 
 Title "Knights And Knaves Game"
 Introduction
@@ -111,7 +111,7 @@ CaptionLong "A guided experience that teaches you everything you need to know to
 
 Based on statements made, you will deductively conclude who is a knight(truthful) and who is a knave(liar)."
 CoverImage "images/knights-and-knaves.jpg"
-Dependency EquationalReasoning → Logic  → KnightsAndKnavesLemmas → KnightsAndKnaves  → KnightsAndKnaves2
-Dependency EquationalReasoning → Logic → DSL_Knights_Knaves
+Dependency EquationalReasoning → Logic → DSL_Knights_Knaves  → KnightsAndKnavesLemmas → KnightsAndKnaves  → KnightsAndKnaves2
+Dependency Logic_dsl → DSL_Knights_Knaves
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame
