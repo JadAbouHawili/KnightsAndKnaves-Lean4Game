@@ -83,3 +83,4 @@ Conclusion
 
 NewTheorem And.intro 
 NewDefinition logic_and
+NewTactic constructor

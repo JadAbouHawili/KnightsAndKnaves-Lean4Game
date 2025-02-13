@@ -41,8 +41,7 @@ Statement {A B C : Prop}
 {stB : B ↔ (A ↔ C)}
 {stBn : ¬B ↔ ¬(A ↔ C)}
 : A ∧ B ∧ C := by
-  Template 
-    Hint 
+  Hint 
     "
 We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.
 
@@ -52,15 +51,13 @@ Assuming `nA : ¬A`,
 - Prove `AiffC : A ↔ C` from `iff_of_false (ha : ¬a) (hb : ¬b) : a ↔ b `, `nA:¬A` , `nCnB.left : ¬C`
 - Prove `False` from `AdiffC : ¬(A ↔ C)`  `AiffC : (A ↔ C)`
     "
-  have hA: A := by
-    by_contra nA
-    Hole
-    have nCnB := by exact stAn.mp nA
-    have AdiffC := stBn.mp nCnB.right
-    have AiffC := iff_of_false nA nCnB.left
-    contradiction
+  have hA: A
+  by_contra nA
+  have nCnB := by exact stAn.mp nA
+  have AdiffC := stBn.mp nCnB.right
+  have AiffC := iff_of_false nA nCnB.left
+  contradiction
 
-  Hole
   Hint (strict := true)
     "
 Prove `CorB : C ∨ B` using `stA` , `{hA}`.
@@ -116,5 +113,5 @@ The proof of the second case for `h : B` is similar.
 Conclusion
 "
 "
-NewTactic constructor by_contra
+NewTactic by_contra
 NewTheorem iff_of_false iff_of_true

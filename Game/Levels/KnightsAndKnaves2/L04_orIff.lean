@@ -19,9 +19,8 @@ Statement {A B C : Prop}
 {stB : B ↔ (¬C ↔ ¬A)}
 {stBn : ¬B ↔ ¬(¬C ↔ ¬A)}
 : A ∧ B ∧ C := by
-  Template
-  have hB : B := by
-    Hint (strict :=true)
+  have hB : B
+  Hint (strict :=true)
   "
 Assuming `nB : ¬B`:
 - Prove `CdiffA : ¬(¬C ↔ ¬A)` using `stBn` , `nB`
@@ -29,15 +28,13 @@ Assuming `nB : ¬B`:
 - Using `not_iff_not`, reduce `¬C ↔ ¬A` in `CdiffA` to `C ↔ A`.
 - Prove `False` using `CdiffA` , `stA.symm : A ↔ C`
   "
-    by_contra nB
-    Hole
-    have CdiffA := stBn.mp nB
-    #check notleft_right
-    simp [nB] at stA
-    rw [not_iff_not] at CdiffA
-    exact CdiffA stA.symm
+  by_contra nB
+  have CdiffA := stBn.mp nB
+  #check notleft_right
+  simp [nB] at stA
+  rw [not_iff_not] at CdiffA
+  exact CdiffA stA.symm
 
-  Hole
   Hint
   "
 Prove `CsameA : C ↔ A` using `stB` , `{hB}`

@@ -23,10 +23,9 @@ Statement {A B C : Prop}
 {stB : B ↔ (A ↔ ¬C)}
 {stBn : ¬B ↔ ¬(A ↔ ¬C)}
 : A ∧ ¬B ∧ C := by
-  Template
-  have hC : C := by
-    by_contra nC
-    Hint
+  have hC : C
+  by_contra nC
+  Hint
     "
 Assuming `¬C` to prove `False` i.e `¬C → False` i.e `¬¬C` i.e `C`:
 
@@ -39,17 +38,15 @@ In our case, `b ↔ a` is `A ↔ ¬C`.
 - Rewrite `¬B` in `stA` with `¬A` using `stBn`
 - Prove `False` using `not_iff_self`
     "
-    Hole
-    rw [iff_true_right nC] at stBn
-    #check true_implies
-    rw [eq_true nC] at stA
-    rw [true_implies (¬B)] at stA
-    rw [stBn] at stA 
-    #check not_iff_self
-    exact not_iff_self stA.symm
+  rw [iff_true_right nC] at stBn
+  #check true_implies
+  rw [eq_true nC] at stA
+  rw [true_implies (¬B)] at stA
+  rw [stBn] at stA 
+  #check not_iff_self
+  exact not_iff_self stA.symm
 
-  Hole
-  Hint 
+  Hint
   "
 Rewrite `¬C` in `stA` as `¬True` using `eq_true`
   "

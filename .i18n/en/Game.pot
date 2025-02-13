@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Feb 13 14:16:41 2025\n"
+"POT-Creation-Date: Fri Feb 14 00:56:03 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1388,6 +1388,42 @@ msgstr ""
 msgid ""
 msgstr ""
 
+#: Game.Levels.DSL_Knights_Knaves.L02_prob26
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L02_prob26
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L02_prob26
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L04_prob33
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L04_prob33
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L04_prob33
+msgid ""
+msgstr ""
+
 #: Game.Levels.DSL_Knights_Knaves
 msgid "DSL Knights and Knaves"
 msgstr ""
@@ -2410,7 +2446,52 @@ msgid "Knights and Knaves, Second Approach"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2
-msgid "In this world, we also deal with the knights and knaves puzzle with the difference being the representation of the problems in Lean and therefore the solution to the puzzles as well.\n"
+msgid "Say we have an islander `A` who could be a knight or a knave.\n"
+"`A` is represented as\n"
+"```\n"
+"A : Prop\n"
+"```\n"
+"a proposition where having the proposition `A` being true means the islander `A` is a knight and having the proposition `A` being false means the islander `A` is a knave. \n"
+"\n"
+"From this, every islander being a knight or a knave is represented as follows:\n"
+"```\n"
+"A or ¬A\n"
+"```\n"
+"\n"
+"Knights always tell the truth, so if `A` makes some statement `P` we have that `A` being a knight implies that statement `P` is true\n"
+"```\n"
+"A → P\n"
+"```\n"
+"and that the statement `P` being true means th at `A` is telling the truth i.e is a knight\n"
+"```\n"
+"P → A\n"
+"```\n"
+"which are combined as \n"
+"```\n"
+"A ↔ P\n"
+"```\n"
+"\n"
+"Similarly for `A` being a knave which implies that the statement `P` is false\n"
+"```\n"
+"¬A → ¬P\n"
+"```\n"
+"and that the statement `P` being false means that `A` is lying i.e is a knave\n"
+"```\n"
+"¬P → ¬A\n"
+"```\n"
+"which are combined as \n"
+"```\n"
+"¬A ↔ ¬P\n"
+"```\n"
+"\n"
+"No islander can be a knight and a knave at the same time because\n"
+"```\n"
+"A ∧ ¬A\n"
+"```\n"
+"is false.\n"
+"\n"
+"-----------\n"
+"In this world, we also deal with the knights and knaves puzzle with the difference being the representation of the problems in Lean and therefore the solution to the puzzles as well.\n"
 "\n"
 "The setup is as follows:\n"
 "We exploit the binary nature of an inhabitant. There are two options and no third, either a knight or a knave. So, we declare an object of type `Prop` for every inhabitant. \n"

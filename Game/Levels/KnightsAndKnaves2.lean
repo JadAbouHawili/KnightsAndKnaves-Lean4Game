@@ -8,6 +8,51 @@ World "KnightsAndKnaves2"
 Title "Knights and Knaves, Second Approach"
 Introduction
 "
+Say we have an islander `A` who could be a knight or a knave.
+`A` is represented as
+```
+A : Prop
+```
+a proposition where having the proposition `A` being true means the islander `A` is a knight and having the proposition `A` being false means the islander `A` is a knave. 
+
+From this, every islander being a knight or a knave is represented as follows:
+```
+A or ¬A
+```
+
+Knights always tell the truth, so if `A` makes some statement `P` we have that `A` being a knight implies that statement `P` is true
+```
+A → P
+```
+and that the statement `P` being true means th at `A` is telling the truth i.e is a knight
+```
+P → A
+```
+which are combined as 
+```
+A ↔ P
+```
+
+Similarly for `A` being a knave which implies that the statement `P` is false
+```
+¬A → ¬P
+```
+and that the statement `P` being false means that `A` is lying i.e is a knave
+```
+¬P → ¬A
+```
+which are combined as 
+```
+¬A ↔ ¬P
+```
+
+No islander can be a knight and a knave at the same time because
+```
+A ∧ ¬A
+```
+is false.
+
+-----------
 In this world, we also deal with the knights and knaves puzzle with the difference being the representation of the problems in Lean and therefore the solution to the puzzles as well.
 
 The setup is as follows:

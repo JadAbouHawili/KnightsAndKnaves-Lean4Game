@@ -21,9 +21,8 @@ Statement {A B C : Prop}
 {stB: B ↔ (¬A ↔ C)}
 {stBn: ¬B ↔ ¬(¬A ↔ C)}
 : A ∧ B ∧ ¬C := by
-    Template
-    have hA : A := by 
-      Hint (strict := true)
+    have hA : A
+    Hint (strict := true)
         "
     We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.
 
@@ -33,15 +32,13 @@ Statement {A B C : Prop}
     - Prove `nAiffC : ¬A ↔ C` using `iff_of_true` , `nA` , `hCnB.left : C`
     - Prove `False` from `nAiffC` and `AsameC`.
     "
-      by_contra nA 
-      Hole
-      have hCnB:=  (stAn.mp nA)
-      have AsameC := stBn.mp hCnB.right
-      have nAiffC:= iff_of_true nA hCnB.left
-      #check not_iff
-      contradiction
+    by_contra nA 
+    have hCnB:=  (stAn.mp nA)
+    have AsameC := stBn.mp hCnB.right
+    have nAiffC:= iff_of_true nA hCnB.left
+    #check not_iff
+    contradiction
 
-    Hole
     Hint
     "
 Prove `nCorB : ¬C ∨ B` using `stA` , `{hA}`
