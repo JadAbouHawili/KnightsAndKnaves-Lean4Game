@@ -1,7 +1,7 @@
 import Game.Metadata
 
-World "KnightsAndKnavesLemmas" 
-Level 8
+World "Logic" 
+Level 10
 
 Title "`notright_left`" 
 
@@ -23,7 +23,7 @@ Use `have` and `eq_false` to get `Q = False`.
 
 #check or_iff_not_imp_left
 #check or_iff_not_imp_right
-Statement {P Q : Prop} (Or : P ∨ Q) (notright : ¬Q) (hPF : P ∨ False → P) : P := by
+Statement notright_left {P Q : Prop} (Or : P ∨ Q) (notright : ¬Q) (hPF : P ∨ False → P) : P := by
 {
   have := eq_false notright
   Hint "Replace `Q` in `Or` with `False`"

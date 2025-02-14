@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "KnightsAndKnavesLemmas"
-Level 9
+Level 7
 
 Title "If you're not a knave, then the only option left is a knight."
 

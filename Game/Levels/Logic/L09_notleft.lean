@@ -1,6 +1,6 @@
 import Game.Metadata
-World "KnightsAndKnavesLemmas" 
-Level 6
+World "Logic" 
+Level 9
 
 Title "`notleft_right`"
 
@@ -32,7 +32,7 @@ eq_false (h : ¬p) : p = False
 Use `have` and `eq_false` to get `P = False`.
 "
 
-Statement {P Q : Prop} (Or : P ∨ Q) (notleft : ¬P) : Q := by
+Statement notleft_right {P Q : Prop} (Or : P ∨ Q) (notleft : ¬P) : Q := by
 {
   have := eq_false notleft
   Hint "Replace `P` in `Or` with `False`"
@@ -57,4 +57,5 @@ The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or
 `simp` will simplify `Or` with the theorems you gave, in this case `notleft : ¬P`. The resulting simplified expression would be `Or : P`.
 "
 
-NewTheorem false_or_iff eq_false
+NewTactic «have» simp
+NewTheorem false_or_iff eq_false notleft_right

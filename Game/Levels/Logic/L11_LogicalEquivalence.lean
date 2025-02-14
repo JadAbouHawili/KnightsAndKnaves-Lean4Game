@@ -2,7 +2,7 @@ import Game.Metadata
 
 
 World "Logic" 
-Level 8
+Level 11
 
 Title "Logical Equivalence, `↔`" 
 
@@ -47,5 +47,3 @@ Conclusion
 "
 "
 --NewTactic cases
-NewTactic «have» cases simp
-NewTheorem notleft_right

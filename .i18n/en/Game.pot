@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Feb 14 01:10:05 2025\n"
+"POT-Creation-Date: Fri Feb 14 15:14:26 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1062,15 +1062,16 @@ msgid "In this level, we introduce the `∧` logical connective (read as 'and').
 "\n"
 "For example:\n"
 "```\n"
-"And.intro arg1 arg2 \n"
+"And.intro arg1 arg2\n"
 "```\n"
-"where `arg1 : P` , `arg2 : Q` , `(And.intro arg1 arg2) : P ∧ Q`. \n"
+"where `arg1 : P` , `arg2 : Q` , `(And.intro arg1 arg2) : P ∧ Q`.\n"
 "\n"
 "Use it to construct an object of type `P ∧ Q`, and use `exact` to close the goal."
 msgstr ""
 
 #: Game.Levels.Logic.L02_And
-msgid ""
+msgid "You can also use the constructor tactic which will split the goal `P and Q` into two,\n"
+"the first being to prove `P` and the second being to prove `Q`."
 msgstr ""
 
 #: Game.Levels.Logic.L03_Or
@@ -1156,11 +1157,27 @@ msgstr ""
 msgid "In the next level, you will learn how to deal with an implication as the goal you have to prove."
 msgstr ""
 
-#: Game.Levels.Logic.L05_ImpGoal
+#: Game.Levels.Logic.L05_cases
+msgid ""
+msgstr ""
+
+#: Game.Levels.Logic.L05_cases
+msgid "In this level, we will do a 'proof by cases'. \n"
+"By `h : P or Q`, we have two cases:\n"
+"`P` being true or `Q` being true. If we consider each case individually and prove `R`, then we can conclude that `R` is true.\n"
+"\n"
+"To do this, start with `cases h`"
+msgstr ""
+
+#: Game.Levels.Logic.L05_cases
+msgid ""
+msgstr ""
+
+#: Game.Levels.Logic.L06_ImpGoal
 msgid "Proving an implication, Implication as the goal"
 msgstr ""
 
-#: Game.Levels.Logic.L05_ImpGoal
+#: Game.Levels.Logic.L06_ImpGoal
 msgid "The goal, translated to english is: 'If P is true, then P is true'.\n"
 "\n"
 "To prove such a goal, we need to assume that `P` is true. Then, we have to prove that `P` is true.\n"
@@ -1170,15 +1187,15 @@ msgid "The goal, translated to english is: 'If P is true, then P is true'.\n"
 "After that , we have to prove the consequent."
 msgstr ""
 
-#: Game.Levels.Logic.L05_ImpGoal
+#: Game.Levels.Logic.L06_ImpGoal
 msgid "use `intro name` to give the introduced hypothesis a name"
 msgstr ""
 
-#: Game.Levels.Logic.L06_Not
+#: Game.Levels.Logic.L07_Not
 msgid "Not Connective, ¬"
 msgstr ""
 
-#: Game.Levels.Logic.L06_Not
+#: Game.Levels.Logic.L07_Not
 msgid "In this level we introduce the negation, the `¬` connective (read as 'not').\n"
 "\n"
 "Notice that this is the first logical connective that applies on one proposition only and not two.\n"
@@ -1222,27 +1239,27 @@ msgid "In this level we introduce the negation, the `¬` connective (read as 'no
 "To see `¬P` in its implication form, you can do `unfold Not` to unfold the definition of `¬`. Note that this would apply to the goal, and so `unfold Not at hnP` applies at `hnP`."
 msgstr ""
 
-#: Game.Levels.Logic.L06_Not
+#: Game.Levels.Logic.L07_Not
 msgid "Remember that an implication acts like a function, that takes a proof of whats on the left hand returning a proof of whats on the right hand side.\n"
 "\n"
 "For this level, `¬P` being true tells us that a proof of `P` gives us a proof of `False`. We have a proof of `P`. Therefore we can obtain a proof of `False` which is the goal."
 msgstr ""
 
-#: Game.Levels.Logic.L06_Not
+#: Game.Levels.Logic.L07_Not
 msgid "Remember that an implication acts like a function, that takes a proof of whats on the left hand returning a proof of whats on the right hand side.\n"
 "\n"
 "For this level, `¬P` being true tells us that a proof of `P` gives us a proof of `False`. We have a proof of `P`. Therefore we can obtain a proof of `False` which is the goal."
 msgstr ""
 
-#: Game.Levels.Logic.L06_Not
+#: Game.Levels.Logic.L07_Not
 msgid "In the next level, we will explore what it means to have proven `False`."
 msgstr ""
 
-#: Game.Levels.Logic.L07_False
+#: Game.Levels.Logic.L08_False
 msgid "From `False`, anything follows."
 msgstr ""
 
-#: Game.Levels.Logic.L07_False
+#: Game.Levels.Logic.L08_False
 msgid "We proved `False`, what does this mean? What can we conclude? What does `False` IMPLY?\n"
 "\n"
 "Let's check the `→` truth table:\n"
@@ -1281,17 +1298,106 @@ msgid "We proved `False`, what does this mean? What can we conclude? What does `
 "Use the implication `False.elim (h : False) : C` to prove `Q` where `Q` is any proposition."
 msgstr ""
 
-#: Game.Levels.Logic.L07_False
+#: Game.Levels.Logic.L08_False
 msgid "Having proven `False`, instead of going through this to prove `Q` you can use the the `contradiction` tactic. If you were able to prove `False`, then the `contradiction` tactic will prove the goal regardless what the goal is because 'from `False`, anything follows'.\n"
 "\n"
 "Proving `False` is what's usually called deriving a contradiction, and note that to prove `False` you would first need to have a proof `P`, and a proof of `¬P` i.e `P → False`."
 msgstr ""
 
-#: Game.Levels.Logic.L08_LogicalEquivalence
+#: Game.Levels.Logic.L09_notleft
+msgid "`notleft_right`"
+msgstr ""
+
+#: Game.Levels.Logic.L09_notleft
+msgid "Truth table:\n"
+"$\n"
+"\\begin{array}{|c|c|} \n"
+"\\hline\n"
+"P  & False ∨ P \\\\\n"
+"\\hline\n"
+"T  & T \\\\\n"
+"F  & F \\\\\n"
+"\\hline\n"
+"\\end{array}\n"
+"$\n"
+"Notice that `P`, `False ∨ P` always have the same truth value.\n"
+"\n"
+"In this level, we have `P ∨ Q` which means that `P` is true or `Q` is true. Since we also know `¬P` i.e `P` is not true, the only option left is `Q` being true.\n"
+"\n"
+"We will first start by transforming `P ∨ Q` into `False ∨ Q` using `¬P`.\n"
+"\n"
+"`¬P` means that `P` is False i.e `P = False`.\n"
+"We have the following theorem:\n"
+"```\n"
+"eq_false (h : ¬p) : p = False\n"
+"```\n"
+"\n"
+"Use `have` and `eq_false` to get `P = False`."
+msgstr ""
+
+#: Game.Levels.Logic.L09_notleft
+msgid "Replace `P` in `Or` with `False`"
+msgstr ""
+
+#: Game.Levels.Logic.L09_notleft
+msgid "Since `False ∨ Q` is true, then either `Q` is true or `False` is true. Therefore, `Q` must be true.\n"
+"\n"
+"Use the theorem `false_or_iff (p : Prop) : (False ∨ p) ↔ p` to reduce `False ∨ Q` to `Q`."
+msgstr ""
+
+#: Game.Levels.Logic.L09_notleft
+msgid "Instead of doing it manually, you can instead use `simp` tactic.\n"
+"\n"
+"The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or some assumption.\n"
+"\n"
+"`simp [notleft] at Or` does the job. It simplifies `Or` using `notleft` and various theorems called 'simp lemmas' , the ones relevant here are `false_or_iff` and `eq_false`.\n"
+"\n"
+"`simp` will simplify `Or` with the theorems you gave, in this case `notleft : ¬P`. The resulting simplified expression would be `Or : P`."
+msgstr ""
+
+#: Game.Levels.Logic.L10_notright
+msgid "`notright_left`"
+msgstr ""
+
+#: Game.Levels.Logic.L10_notright
+msgid "In this level, we have `P ∨ Q` which means that `P` is true or `Q` is true. Since we also know `¬Q` i.e `Q` is not true, the only option left is `P` being true.\n"
+"\n"
+"We will first start by transforming `P ∨ Q` into `P ∨ False` using `¬Q`.\n"
+"\n"
+"`¬Q` means that `Q` is False i.e `Q = False`.\n"
+"We have the following theorem:\n"
+"```\n"
+"eq_false (h : ¬p) : p = False\n"
+"```\n"
+"\n"
+"Use `have` and `eq_false` to get `Q = False`."
+msgstr ""
+
+#: Game.Levels.Logic.L10_notright
+msgid "Replace `Q` in `Or` with `False`"
+msgstr ""
+
+#: Game.Levels.Logic.L10_notright
+msgid "Since `P ∨ False` is true, then either `P` is true or `False` is true. Therefore, `P` must be true.\n"
+"\n"
+"Use `or_false_iff (p : Prop) : (p ∨ False) ↔ p` to reduce `Or : P ∨ False` to `Or : P` , then use `Or : P` to prove the goal."
+msgstr ""
+
+#: Game.Levels.Logic.L10_notright
+msgid "Instead of doing it manually, you can instead use `simp` tactic.\n"
+"\n"
+"The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or some assumption.\n"
+"\n"
+"`simp [notright] at Or` does the job. It simplifies `Or` using `notright` and various theorems called 'simp lemmas' , the ones relevant here are `or_false_iff` and `eq_false`.\n"
+"\n"
+"`simp` will simplify `Or` with the theorems you gave, in this case `notright : ¬Q`. The resulting simplified expression would be `Or : P`."
+msgstr ""
+
+#: Game.Levels.Logic.L11_LogicalEquivalence
 msgid "Logical Equivalence, `↔`"
 msgstr ""
 
-#: Game.Levels.Logic.L08_LogicalEquivalence
+#: Game.Levels.Logic.L11_LogicalEquivalence
 msgid "`P ↔ Q`  is defined as `(P → Q) ∧ (Q → P)`.\n"
 "\n"
 "Its truth table looks like the folowing:\n"
@@ -1320,7 +1426,7 @@ msgid "`P ↔ Q`  is defined as `(P → Q) ∧ (Q → P)`.\n"
 "- Since `PsameQ` means that `P` and `Q` have the same truth value, you can pretend `↔` is instead `=` and use `rw` at `hP : P` to obtain `hP : Q` and then close the goal."
 msgstr ""
 
-#: Game.Levels.Logic.L08_LogicalEquivalence
+#: Game.Levels.Logic.L11_LogicalEquivalence
 msgid ""
 msgstr ""
 
@@ -1672,62 +1778,11 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnavesLemmas.L06_notleft
-msgid "`notleft_right`"
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L06_notleft
-msgid "Truth table:\n"
-"$\n"
-"\\begin{array}{|c|c|} \n"
-"\\hline\n"
-"P  & False ∨ P \\\\\n"
-"\\hline\n"
-"T  & T \\\\\n"
-"F  & F \\\\\n"
-"\\hline\n"
-"\\end{array}\n"
-"$\n"
-"Notice that `P`, `False ∨ P` always have the same truth value.\n"
-"\n"
-"In this level, we have `P ∨ Q` which means that `P` is true or `Q` is true. Since we also know `¬P` i.e `P` is not true, the only option left is `Q` being true.\n"
-"\n"
-"We will first start by transforming `P ∨ Q` into `False ∨ Q` using `¬P`.\n"
-"\n"
-"`¬P` means that `P` is False i.e `P = False`.\n"
-"We have the following theorem:\n"
-"```\n"
-"eq_false (h : ¬p) : p = False\n"
-"```\n"
-"\n"
-"Use `have` and `eq_false` to get `P = False`."
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L06_notleft
-msgid "Replace `P` in `Or` with `False`"
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L06_notleft
-msgid "Since `False ∨ Q` is true, then either `Q` is true or `False` is true. Therefore, `Q` must be true.\n"
-"\n"
-"Use the theorem `false_or_iff (p : Prop) : (False ∨ p) ↔ p` to reduce `False ∨ Q` to `Q`."
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L06_notleft
-msgid "Instead of doing it manually, you can instead use `simp` tactic.\n"
-"\n"
-"The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or some assumption.\n"
-"\n"
-"`simp [notleft] at Or` does the job. It simplifies `Or` using `notleft` and various theorems called 'simp lemmas' , the ones relevant here are `false_or_iff` and `eq_false`.\n"
-"\n"
-"`simp` will simplify `Or` with the theorems you gave, in this case `notleft : ¬P`. The resulting simplified expression would be `Or : P`."
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L07_NotKnight_Knave
+#: Game.Levels.KnightsAndKnavesLemmas.L06_NotKnight_Knave
 msgid "If you're not a knight, then the only option left is a knave."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnavesLemmas.L07_NotKnight_Knave
+#: Game.Levels.KnightsAndKnavesLemmas.L06_NotKnight_Knave
 msgid "You are either a knight or a knave. If you are not a knight, then the only option left is being a knave.\n"
 "\n"
 "In this level, we know:\n"
@@ -1743,53 +1798,15 @@ msgid "You are either a knight or a knave. If you are not a knight, then the onl
 "In other words, we know that the left side of `∨` is not true and we want to prove the right side. This is a job for `notleft_right`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnavesLemmas.L07_NotKnight_Knave
+#: Game.Levels.KnightsAndKnavesLemmas.L06_NotKnight_Knave
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnavesLemmas.L08_notright
-msgid "`notright_left`"
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L08_notright
-msgid "In this level, we have `P ∨ Q` which means that `P` is true or `Q` is true. Since we also know `¬Q` i.e `Q` is not true, the only option left is `P` being true.\n"
-"\n"
-"We will first start by transforming `P ∨ Q` into `P ∨ False` using `¬Q`.\n"
-"\n"
-"`¬Q` means that `Q` is False i.e `Q = False`.\n"
-"We have the following theorem:\n"
-"```\n"
-"eq_false (h : ¬p) : p = False\n"
-"```\n"
-"\n"
-"Use `have` and `eq_false` to get `Q = False`."
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L08_notright
-msgid "Replace `Q` in `Or` with `False`"
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L08_notright
-msgid "Since `P ∨ False` is true, then either `P` is true or `False` is true. Therefore, `P` must be true.\n"
-"\n"
-"Use `or_false_iff (p : Prop) : (p ∨ False) ↔ p` to reduce `Or : P ∨ False` to `Or : P` , then use `Or : P` to prove the goal."
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L08_notright
-msgid "Instead of doing it manually, you can instead use `simp` tactic.\n"
-"\n"
-"The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or some assumption.\n"
-"\n"
-"`simp [notright] at Or` does the job. It simplifies `Or` using `notright` and various theorems called 'simp lemmas' , the ones relevant here are `or_false_iff` and `eq_false`.\n"
-"\n"
-"`simp` will simplify `Or` with the theorems you gave, in this case `notright : ¬Q`. The resulting simplified expression would be `Or : P`."
-msgstr ""
-
-#: Game.Levels.KnightsAndKnavesLemmas.L09_NotKnave_Knight
+#: Game.Levels.KnightsAndKnavesLemmas.L07_NotKnave_Knight
 msgid "If you're not a knave, then the only option left is a knight."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnavesLemmas.L09_NotKnave_Knight
+#: Game.Levels.KnightsAndKnavesLemmas.L07_NotKnave_Knight
 msgid "You are either a knight or a knave. If you are not a knave, then the only option left is being a knight.\n"
 "\n"
 "In this level, we know:\n"
@@ -1805,7 +1822,7 @@ msgid "You are either a knight or a knave. If you are not a knave, then the only
 "In other words, we know that the right side of `∨` is not true and we want to prove the left side. This is a job for `notright_left`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnavesLemmas.L09_NotKnave_Knight
+#: Game.Levels.KnightsAndKnavesLemmas.L07_NotKnave_Knight
 msgid "Let's recap what we have proven.\n"
 "\n"
 "Given the following proof state:\n"

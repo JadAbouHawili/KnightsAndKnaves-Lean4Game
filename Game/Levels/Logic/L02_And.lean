@@ -64,21 +64,23 @@ You can think of `And.intro` as a function that takes two inputs: a proof of `P`
 
 For example:
 ```
-And.intro arg1 arg2 
+And.intro arg1 arg2
 ```
-where `arg1 : P` , `arg2 : Q` , `(And.intro arg1 arg2) : P ∧ Q`. 
+where `arg1 : P` , `arg2 : Q` , `(And.intro arg1 arg2) : P ∧ Q`.
 
 Use it to construct an object of type `P ∧ Q`, and use `exact` to close the goal.
 "
 
-Statement (P Q : Prop) (hP : P) (hQ : Q)  
+Statement (P Q : Prop) (hP : P) (hQ : Q)
   : P ∧ Q  := by
   {
-    exact And.intro hP hQ 
+    exact And.intro hP hQ
   }
 
 Conclusion
 "
+You can also use the constructor tactic which will split the goal `P and Q` into two,
+the first being to prove `P` and the second being to prove `Q`.
 "
 
 NewTheorem And.intro 

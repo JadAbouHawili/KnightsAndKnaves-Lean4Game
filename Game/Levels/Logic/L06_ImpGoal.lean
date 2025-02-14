@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Logic"
-Level 5
+Level 6
 
 Title "Proving an implication, Implication as the goal" 
 

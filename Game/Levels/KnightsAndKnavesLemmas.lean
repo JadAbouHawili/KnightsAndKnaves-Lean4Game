@@ -5,10 +5,8 @@ import Game.Levels.KnightsAndKnavesLemmas.L02_inleft
 import Game.Levels.KnightsAndKnavesLemmas.L03_Knight_NotKnave
 import Game.Levels.KnightsAndKnavesLemmas.L04_inright
 import Game.Levels.KnightsAndKnavesLemmas.L05_Knave_NotKnight
-import Game.Levels.KnightsAndKnavesLemmas.L06_notleft
-import Game.Levels.KnightsAndKnavesLemmas.L07_NotKnight_Knave
-import Game.Levels.KnightsAndKnavesLemmas.L08_notright
-import Game.Levels.KnightsAndKnavesLemmas.L09_NotKnave_Knight
+import Game.Levels.KnightsAndKnavesLemmas.L06_NotKnight_Knave
+import Game.Levels.KnightsAndKnavesLemmas.L07_NotKnave_Knight
 
 World "KnightsAndKnavesLemmas"
 Title "Knights and Knaves, lemmas"
