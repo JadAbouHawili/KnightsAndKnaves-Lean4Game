@@ -23,6 +23,10 @@ Statement {A B C : Prop}
 {stB : B ↔ (A ↔ ¬C)}
 {stBn : ¬B ↔ ¬(A ↔ ¬C)}
 : A ∧ ¬B ∧ C := by
+  Hint
+    "
+Use `have` to set `C` as the goal
+    "
   have hC : C
   by_contra nC
   Hint

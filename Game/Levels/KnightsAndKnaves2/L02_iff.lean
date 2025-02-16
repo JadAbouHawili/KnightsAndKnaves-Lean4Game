@@ -43,6 +43,8 @@ Statement {A B C : Prop}
 : A ∧ B ∧ C := by
   Hint 
     "
+Use `have` to set `A` as the new goal.
+
 We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.
 
 Assuming `nA : ¬A`,
@@ -85,7 +87,7 @@ Now consider cases for `CorB`.
 
   Use `constructor` tactic to split the goal in two, one would be proving the left side of `∧` and the other being the right side.
 
-The proof of the second case for `h : B` is similar.
+The proof of the second case for `h : B` would require using `stB`.
   "
   constructor
   exact hA

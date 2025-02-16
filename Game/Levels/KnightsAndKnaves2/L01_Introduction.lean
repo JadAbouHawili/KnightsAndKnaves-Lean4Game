@@ -20,7 +20,11 @@ Statement
 {stBn : ¬B ↔ ¬C ∨ A}
 : ¬A ∧ ¬B ∧ ¬C := by
 
-  have hnA : ¬A 
+  Hint 
+  "
+Use `have` to set `¬A` as the new goal.
+  "
+  have hnA : ¬A
   Hint
     "
 Assuming `hA : A`:
@@ -33,6 +37,10 @@ Assuming `hA : A`:
   have CnA := stB.mp BC.left
   exact CnA.right hA
 
+  Hint 
+  "
+Use `have` to set `¬C` as the new goal.
+  "
   have hnC : ¬C
   Hint
     "
