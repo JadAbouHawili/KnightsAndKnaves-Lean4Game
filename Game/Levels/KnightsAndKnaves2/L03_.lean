@@ -34,9 +34,9 @@ Use `have` to set `A` as the goal
     - Prove `hCnB : C ∧ ¬ B` using `stAn` , `nA`.
     - Prove `AsameC : ¬(¬A ↔ C)` using `stBn` , `hCnB.right : ¬B`
     - Prove `nAiffC : ¬A ↔ C` using `iff_of_true` , `nA` , `hCnB.left : C`
-    - Prove `False` from `nAiffC` and `AsameC`.
+    - Prove `False` from `nAiffC` and `AsameC` therefore proving that `¬A → False` i.e `¬¬A` i.e `A`
     "
-    by_contra nA 
+    by_contra nA
     have hCnB:=  (stAn.mp nA)
     have AsameC := stBn.mp hCnB.right
     have nAiffC:= iff_of_true nA hCnB.left
