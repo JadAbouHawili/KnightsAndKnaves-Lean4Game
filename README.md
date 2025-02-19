@@ -11,8 +11,7 @@ The game is divided into the following worlds:
 - Knights and Knaves
 
 # Raymond Smullyan's Knights and Knaves puzzles
-Most of the puzzles in smullyan's book titled 'What is the name of this book' have been formalized and proven.
-You can find examples here:
+Most of the puzzles in smullyan's book titled 'What is the name of this book' have been formalized and proven [here](https://github.com/JadAbouHawili/Raymond-Smullyan-KnightsAndKnaves)
 
 # Run Locally, Make Your Own Game
 Follow instructions at [Game Skeleton](https://github.com/hhu-adam/GameSkeleton) to make your own game or to run this one locally.

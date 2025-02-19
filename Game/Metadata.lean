@@ -16,7 +16,7 @@ import Mathlib.Tactic.ApplyFun
 --import Mathlib.Data.Fintype.Card
 import Mathlib.Data.Multiset.Basic
 
-
+#check Implies.trans
 /-! Use this file to add things that should be available in all levels.
 
 For example, this demo imports the mathlib tactics

@@ -45,5 +45,9 @@ Statement (PsameQ : P ↔ Q) (hP : P)
 
 Conclusion 
 "
-After this world, you have three knights and knaves worlds you can choose where each formalizes in the puzzles in a different way and offers different tools to solve them. However, the patterns of reasoning and solutions are similar if not identical.
+After this world, you have three knights and knaves worlds you can choose where each formalizes the puzzles in a different way and offers different tools to solve them. 
+
+However, the patterns of reasoning and solutions are similar if not identical.
+
+You can show that these formalizations are in some sense 'equivalent'.
 "

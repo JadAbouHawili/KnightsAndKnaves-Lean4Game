@@ -33,20 +33,39 @@ Use `have` to set `C` as the goal
     "
 Assuming `¬C` to prove `False` i.e `¬C → False` i.e `¬¬C` i.e `C`:
 
-- Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value. If `A` is true then `A ↔ ¬C` is true, and if `A` is false then `A ↔ ¬C` is false.
-Use `iff_true_right (ha : a) : (b ↔ a) ↔ b` to replace `A ↔ ¬C` with `A`.
-In our case, `b ↔ a` is `A ↔ ¬C`.
+- Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value. 
 
+In other words, if `A` is true then `A ↔ ¬C` is true, and if `A` is false then `A ↔ ¬C` is false.
+
+Use 
+```
+iff_true_right (ha : a) : (b ↔ a) ↔ b
+``` 
+to replace `A ↔ ¬C` with `A`.
+(In our case, `b ↔ a` is `A ↔ ¬C`)
+
+This reduction would transform `stB` from
+```
+¬B ↔ ¬(A ↔ ¬C)
+```
+to
+```
+¬B ↔ ¬A 
+```
+"
+  rw [iff_true_right nC] at stB
+  #check true_implies
+
+  Hint
+  "
 - Rewrite `¬C` in `stA` with true using `eq_true`
 - Rewrite `True → ¬B` in `stA` with `¬B` using `true_implies`
 - Rewrite `¬B` in `stA` with `¬A` using `stBn`
 - Prove `False` using `not_iff_self`
-    "
-  rw [iff_true_right nC] at stBn
-  #check true_implies
+  "
   rw [eq_true nC] at stA
   rw [true_implies (¬B)] at stA
-  rw [stBn] at stA 
+  rw [stB] at stA 
   #check not_iff_self
   exact not_iff_self stA.symm
 
@@ -87,5 +106,8 @@ Rewrite `stA` using `iff_true_iff`.
 
 Conclusion
 "
+This is it for this approach of knights and knaves.
+
+If you want more, you can try the other approaches.
 "
 NewTheorem iff_true_right true_implies eq_true not_iff_self not_true false_implies iff_true_iff
