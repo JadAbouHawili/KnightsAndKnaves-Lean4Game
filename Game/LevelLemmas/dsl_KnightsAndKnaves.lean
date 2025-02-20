@@ -1,4 +1,5 @@
 --import Mathlib.Tactic
+import Game.Metadata
 import Mathlib.Tactic.ApplyAt
 import Mathlib.Tactic.ApplyFun
 
@@ -17,6 +18,7 @@ axiom isKnight_or_isKnave (A : Islander) : A.isKnight ∨ A.isKnave
 axiom not_isKnight_and_isKnave (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
 
 axiom Said : Islander → Prop → Prop
+notation A " said " P:200 => Said A P
 
 /-
 the following 4 axioms can be proven from the previous ones...
@@ -33,9 +35,6 @@ axiom notisKnave_isKnight {A : Islander} : ¬A.isKnave → A.isKnight
 
 --------------
 -- number affects where brackets will be needed
-notation A " said " P:200 => Said A P
-infixr:35 " and " => And
-infixr:30 " or  "  => Or
 
 axiom knight_said {A : Islander} {P : Prop} : (A said P) → A.isKnight → P
 axiom said_knight {A : Islander} {P : Prop} : (A said P) →  P → A.isKnight 
@@ -66,19 +65,16 @@ macro "knight_or_knave" t1:term "with" t2:rcasesPat t3:rcasesPat : tactic => do`
 -- this creates a new macro contradiction, and extends the behavior of the contradiction tactic. but when seeing docstring, you don't get that its contradiction tactic
 --macro "contradiction" : tactic =>
 --  `(
---  tactic | 
---  first | 
+--  tactic |
+--  first |
 --  ( apply not_isKnight_and_isKnave ; constructor ; assumption ; assumption   ) | contradiction
 --  )
 
---macro "contradict2" : tactic =>
---  `(tactic |  (solve | apply not_isKnight_and_isKnave | apply And.intro | assumption | assumption ) )
-
+#check solve
 -- this truly extends contradiction tactic, preserving doc string
 macro_rules
 | `(tactic| contradiction) => 
   do `(tactic |first | ( apply not_isKnight_and_isKnave ; constructor ; assumption ; assumption   ) )
---solve | contradiction ; contradict)
 
 theorem knave_said2 {A : Islander} {P : Prop} : A said P → A.isKnave → ¬ P := by 
   intro AP

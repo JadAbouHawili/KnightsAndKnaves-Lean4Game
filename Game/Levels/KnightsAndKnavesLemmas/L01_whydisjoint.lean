@@ -1,5 +1,7 @@
 import Game.Metadata
+import Game.LevelLemmas.KnightsAndKnaves
 
+import Game.LevelLemmas.settheory
 World "KnightsAndKnavesLemmas" 
 Level 1
 

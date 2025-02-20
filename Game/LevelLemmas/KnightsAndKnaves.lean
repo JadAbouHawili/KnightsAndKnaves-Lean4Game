@@ -4,7 +4,7 @@ import Mathlib.Data.Multiset.Basic
 import Game.LevelLemmas.Logical
 import Game.LevelLemmas.settheory
 #check and_imp
-
+#check and
 theorem IamKnave
   {A : Inhabitant}
   [inst : DecidableEq Inhabitant]

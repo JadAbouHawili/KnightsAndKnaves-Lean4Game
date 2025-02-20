@@ -1,4 +1,5 @@
 import Game.Metadata
+import Game.LevelLemmas.dsl_KnightsAndKnaves
 #check dsl_iamknave
 World "DSL_Knights_Knaves" 
 Level 3

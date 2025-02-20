@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Feb 19 09:17:19 2025\n"
+"POT-Creation-Date: Thu Feb 20 13:46:44 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2332,7 +2332,7 @@ msgid "We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False
 "- Prove `hCnB : C ∧ ¬ B` using `stAn` , `nA`.\n"
 "- Prove `AsameC : ¬(¬A ↔ C)` using `stBn` , `hCnB.right : ¬B`\n"
 "- Prove `nAiffC : ¬A ↔ C` using `iff_of_true` , `nA` , `hCnB.left : C`\n"
-"- Prove `False` from `nAiffC` and `AsameC`."
+"- Prove `False` from `nAiffC` and `AsameC` therefore proving that `¬A → False` i.e `¬¬A` i.e `A`"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L03_

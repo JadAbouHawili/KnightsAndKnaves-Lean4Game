@@ -1,7 +1,5 @@
 import GameServer.Commands
 import Game.LevelLemmas.KnightsAndKnaves
-import Game.LevelLemmas.settheory
-import Game.LevelLemmas.dsl_KnightsAndKnaves
 --import Mathlib.Tactic
 --import Mathlib.Util.Delaborators
 import Mathlib.Tactic.Have
@@ -16,6 +14,8 @@ import Mathlib.Tactic.ApplyFun
 --import Mathlib.Data.Fintype.Card
 import Mathlib.Data.Multiset.Basic
 
+infixr:35 " and " => And
+infixr:30 " or  "  => Or
 #check Implies.trans
 /-! Use this file to add things that should be available in all levels.
 

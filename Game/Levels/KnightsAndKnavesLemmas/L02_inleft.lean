@@ -1,4 +1,7 @@
 import Game.Metadata
+
+import Game.LevelLemmas.settheory
+import Game.LevelLemmas.KnightsAndKnaves
 --import Game.Levels.KnightsAndKnavesLemmas.L01_whydisjoint
 World "KnightsAndKnavesLemmas"
 Level 2
