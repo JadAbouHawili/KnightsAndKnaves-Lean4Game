@@ -1,6 +1,6 @@
 import Game.Metadata
 World "Logic" 
-Level 9
+Level 10
 
 Title "`notleft_right`"
 
@@ -55,6 +55,12 @@ The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or
 `simp [notleft] at Or` does the job. It simplifies `Or` using `notleft` and various theorems called 'simp lemmas' , the ones relevant here are `false_or_iff` and `eq_false`.
 
 `simp` will simplify `Or` with the theorems you gave, in this case `notleft : ¬P`. The resulting simplified expression would be `Or : P`.
+
+Not so challenging challenge,
+Start off the proof of this goal with:
+```
+cases Or
+```
 "
 
 NewTactic «have» simp

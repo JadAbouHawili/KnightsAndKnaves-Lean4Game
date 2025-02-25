@@ -2,13 +2,13 @@ import Game.Levels.Logic.L01_Intro
 import Game.Levels.Logic.L02_And
 import Game.Levels.Logic.L03_Or
 import Game.Levels.Logic.L04_Implication
-import Game.Levels.Logic.L05_cases
-import Game.Levels.Logic.L06_ImpGoal
-import Game.Levels.Logic.L07_Not
-import Game.Levels.Logic.L08_False
-import Game.Levels.Logic.L09_notleft
-import Game.Levels.Logic.L10_notright
-import Game.Levels.Logic.L11_LogicalEquivalence
+import Game.Levels.Logic.L05_ImpGoal
+import Game.Levels.Logic.L06_cases
+import Game.Levels.Logic.L07_LogicalEquivalence
+import Game.Levels.Logic.L08_Not
+import Game.Levels.Logic.L09_False
+import Game.Levels.Logic.L10_notleft
+import Game.Levels.Logic.L11_notright
 
 World "Logic"
 Title "Logic"

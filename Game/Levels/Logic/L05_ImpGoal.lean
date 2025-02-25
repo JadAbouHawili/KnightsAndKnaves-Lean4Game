@@ -1,11 +1,11 @@
 import Game.Metadata
 
 World "Logic"
-Level 6
+Level 5
 
 Title "Proving an implication, Implication as the goal" 
 
-Introduction 
+Introduction
 "
 The goal, translated to english is: 'If P is true, then P is true'.
 
@@ -26,5 +26,7 @@ Statement {P :Prop}
 Conclusion 
 "
 use `intro name` to give the introduced hypothesis a name
+
+The previous two levels showed how to use an implication and how to prove an implication.
 "
 NewTactic intro

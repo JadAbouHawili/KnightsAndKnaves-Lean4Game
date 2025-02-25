@@ -2,7 +2,7 @@ import Game.Metadata
 
 
 World "Logic" 
-Level 11
+Level 7
 
 Title "Logical Equivalence, `↔`" 
 
@@ -45,9 +45,13 @@ Statement (PsameQ : P ↔ Q) (hP : P)
 
 Conclusion 
 "
-After this world, you have three knights and knaves worlds you can choose where each formalizes the puzzles in a different way and offers different tools to solve them. 
+This level could have been
+```
+PsameQ : P ↔ Q
+hQ : Q
 
-However, the patterns of reasoning and solutions are similar if not identical.
-
-You can show that these formalizations are in some sense 'equivalent'.
+Goal 
+P
+```
+`exact PsameQ.mpr hQ` would close the goal.
 "

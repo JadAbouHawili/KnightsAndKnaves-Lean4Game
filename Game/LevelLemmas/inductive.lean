@@ -1,12 +1,17 @@
 import Game.Metadata
 
--- without parameter
-
 inductive Person 
 | knight : Person 
 | knave : Person 
 | normal : Person 
+
 open Person
+-- cases would replace A : Person with knight,knave,normal
+example {A : Person} : A=knight := by 
+  cases A
+  rfl 
+  sorry
+  sorry
 
 axiom Said : Person → Prop → Prop
 notation A " said " P:200 => Said A P
@@ -17,6 +22,7 @@ knight said isKnave knight
 -/
 axiom knight_said {P : Prop} : knight said P → P
 axiom knave_said {P : Prop} : knave said P → ¬P
+
 -- inductive would work like this, A : Person then A=knight
 example  (A B C : Person)  
 -- to represent statements, go to ↔ or said
@@ -36,78 +42,12 @@ example (P : Bool) : 2=2 := by
   cases P
   rfl
   rfl
---  #check statementA 
---  --#print statementA
---
---  have stAatA:= statementA 
---  -- not self contained, not easy to reuse
 
-
-def isKnight (A : Person) :=
+def isKnight2 (A : Person) :=
     match A with 
     | knight => True
     | _=> false
-example {A : Person}  : 2=2 := by 
-  cases A
-  repeat sorry
-
-
-inductive Weekday where
-  | sunday
-  | monday
-  | tuesday
-  | wednesday
-  | thursday
-  | friday
-  | saturday
-deriving Repr
-open Weekday
-
-namespace Weekday
-def next (d : Weekday) : Weekday :=
- match d with
- | sunday    => monday
- | monday    => tuesday
- | tuesday   => wednesday
- | wednesday => thursday
- | thursday  => friday
- | friday    => saturday
- | saturday  => sunday
-def previous (d : Weekday) : Weekday :=
- match d with
- | sunday    => saturday
- | monday    => sunday
- | tuesday   => monday
- | wednesday => tuesday
- | thursday  => wednesday
- | friday    => thursday
- | saturday  => friday
-
-def next_previous (d : Weekday) : next (previous d) = d := by
-  cases d <;> rfl
-
-def numberOfDay (d : Weekday) : Nat :=
-match d with
-  | sunday    => 1
-  | monday    => 2
-  | tuesday   => 3
-  | wednesday => 4
-  | thursday  => 5
-  | friday    => 6
-  | saturday  => 7
-
-axiom isKnight2 (A : Type) :  Prop
-axiom isKnave2 (A : Type) :  Prop
-inductive Inhabitant (A : Type) where
-  | knight (h : isKnight2 A) 
-  | knave (h : isKnave2 A)
-
---example {A : Type} (h : Inhabitant A)
--- doing inductive setup is reduntant because person_cases
-inductive Or2 (a b : Prop) : Prop where
-  | inl (h : a) : Or2 a b
-  /-- `Or.inr` is "right injection" into an `Or`. If `h : b` then `Or.inr h : a ∨ b`. -/
-  | inr (h : b) : Or2 a b
+#check isKnight2
 
 /-- Alias for `Or.inl`. -/
 theorem Or.intro_left2 (b : Prop) (h : a) : Or a b :=
@@ -118,33 +58,7 @@ theorem Or.intro_right2 (a : Prop) (h : b) : Or a b :=
   Or.inr h
 #check Or
 
-example(d : Weekday) :2=2 := by
-    cases d
-    repeat sorry
---def isKnave : Person A → Prop | knight => false | knave => true | normal => false 
---def isNormal : Person A → Prop | knight  => false | knave  => false | normal  => true 
---
----- with parameter, resolve issues...
---inductive Person (A : Type)
---| knight (h : A.isKnight) : Person A
---| knave (h : A.isKnave) : Person A
---| normal : Person A
---
---def isKnight {A  : Type} (Person A) := 
---  match A with
---  | knight => true | knave => false | normal => false 
-
-example {A : Type} {h : Person A}  : 2=2 := by 
-  cases h
-  sorry
-
---| dontknow : Person 
 open Person 
---def A  := knight
---def B := Person
---def C := Person
---variable {A B C : Person}
-#check Or
 
 /-
 inductive Or (a b : Prop) : Prop where
@@ -159,7 +73,7 @@ inductive Islander2 (A : Prop) : Prop where
   /-- `Or.inr` is "right injection" into an `Or`. If `h : b` then `Or.inr h : a ∨ b`. -/
   | knave (h : ¬A) : Islander2 A
 example {A : Prop} {hA : Islander2 A} : 
-  
+
 
 #check em
 macro "prop_cases" t1:term : tactic => 
@@ -189,48 +103,6 @@ example {B : Prop} {H : B ∨ ¬B} {h : Islander2 B}  : 2=2 := by
   --sorry
   sorry
 
-inductive Person2 (A : Prop) where
-  /-- `Or.inl` is "left injection" into an `Or`. If `h : a` then `Or.inl h : a ∨ b`. -/
-  | knight (h : A) : (Person2 A)
-  /-- `Or.inr` is "right injection" into an `Or`. If `h : b` then `Or.inr h : a ∨ b`. -/
-  | knave (h : ¬A) : Person2 A
-
-
---theorem Or.intro_left (b : Prop) (h : a) : Or a b :=
---  Or.inl h
---
---/-- Alias for `Or.inr`. -/
---theorem Or.intro_right (a : Prop) (h : b) : Or a b :=
---  Or.inr h
-/-
-example
-{P Q : Prop} { A : Prop} (H : P ∨ Q) : 2=2 := by 
-  cases H
-  cases (Person2)
-/-
-disadvantages of using inductive types,  
-
--/
-    
--- evalutes to whether stA true or not
--- any person here not just A
-def statementA : Person → Prop | p  => match p with | knight => isNormal knight | knave =>(isNormal knave) | normal => true 
---def statementAmod := (isKnight A) →  (isNormal A)
-def statmentB: Person  → Prop | p => match p with | knight => statementA knight | knave => ¬ (statementA knave)|normal => false -- here we don't know, B being normal we don't know if A's st is true or false|--normal => statementA normal
-def statmentC: Person  → Prop | p => match p with | knight => ¬ (isNormal knight ) | knave => ¬ (isNormal knave) | normal => true
-
-
---def solvev : Person  →  Person → Person  → Prop | A |  B|  C => (isKnight A ∧ statementA A) ∧ (isKnight B ∧ statmentB B) ∧ (isKnight C ∧ statmentC C)
---def solvevmod (A B C : Person):  Prop := (isKnight A ∧ statementA A) ∧ (isKnight B ∧ statmentB B) ∧ (isKnight C ∧ statmentC C)
---def tester : List (Person  × Person ×  Person):=[(knight, knave, normal),(knight, normal, knave),(knave, normal, knight),(normal,knight,knave),(normal,knave,knight),(knight,knight,knight),(knave,knave,knave),(normal,normal,normal)]
---
-
--/
-example (A : Person A) ( h : A = normal): isNormal A := 
-  by 
-  rw [h]
-  unfold isNormal
-  rfl
 
 #check List.permutations [1,2,3]
 #check List.permutations [normal,knave,knight]

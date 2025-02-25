@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Logic"
-Level 8
+Level 9
 
 Title "From `False`, anything follows."
 

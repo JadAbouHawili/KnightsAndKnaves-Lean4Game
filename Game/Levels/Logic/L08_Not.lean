@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Logic"
-Level 7
+Level 8
 
 Title "Not Connective, ¬"
 

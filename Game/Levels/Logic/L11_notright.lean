@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Logic" 
-Level 10
+Level 11
 
 Title "`notright_left`" 
 
@@ -47,6 +47,13 @@ The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or
 `simp [notright] at Or` does the job. It simplifies `Or` using `notright` and various theorems called 'simp lemmas' , the ones relevant here are `or_false_iff` and `eq_false`.
 
 `simp` will simplify `Or` with the theorems you gave, in this case `notright : ¬Q`. The resulting simplified expression would be `Or : P`.
+
+
+Not so challenging challenge:
+Start off the proof of this goal with:
+```
+cases Or
+```
 "
 
 NewTheorem notright_left eq_false or_false_iff

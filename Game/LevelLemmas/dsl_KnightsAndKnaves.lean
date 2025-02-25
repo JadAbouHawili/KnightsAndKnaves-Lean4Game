@@ -126,7 +126,6 @@ example {A B : Islander} (hAB : A said (A.isKnave or B.isKnave)) : A.isKnight an
     · exact ⟨hA, hB⟩
   · have := knave_said hAB hA
     sorry
-    --tauto
 
 open Islander
 theorem dsl_iamknave (hAKn : A said A.isKnave): False := by 

@@ -2,13 +2,14 @@ import Game.Metadata
 
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 
-World "DSL_Knights_Knaves" 
+World "DSL_Knights_Knaves"
 Level 2
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
+Change the goal to `B.isKnave`
 "
 
 variable { P Q : Prop}
@@ -18,7 +19,6 @@ Statement {A B C : Islander}
 {hC : C said B.isKnave}
 : B.isKnave and C.isKnight := by 
   have BKnave : B.isKnave
-  -- need to introduce apply in this game
   apply notisKnight_isKnave
   intro BKnight
   have hA := knight_said hB BKnight
@@ -54,7 +54,7 @@ example : A said A.isKnave ↔ False := by
 
 /-
   apply  notisKnave_isKnight
-  intro CKnave 
+  intro CKnave
   have hnC := knave_said hC CKnave
   contradiction
   -/
