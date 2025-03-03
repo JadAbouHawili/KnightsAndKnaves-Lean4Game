@@ -20,4 +20,4 @@ Follow instructions at [Game Skeleton](https://github.com/hhu-adam/GameSkeleton)
 This project was a collaboration between myself and [@limb0007](https://github.com/limb0007)
 
 Discussions on [zulip](https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/New.20game.20posted.20on.20Lean.20Game.20Server.20.28Knights.20And.20Knaves.29) made the dsl world for knights and knaves.
-Special thanks to @kevinbuzzard
+Special thanks to @kbuzzard
