@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Feb 25 12:42:53 2025\n"
+"POT-Creation-Date: Mon Mar  3 21:09:39 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1522,7 +1522,7 @@ msgid ""
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L02_prob26
-msgid ""
+msgid "Change the goal to `B.isKnave`"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L02_prob26

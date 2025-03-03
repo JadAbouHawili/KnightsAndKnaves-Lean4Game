@@ -82,7 +82,7 @@ example (x : False) : False := by
   revert x
   exact id
 
-Statement {inst : DecidableEq Inhabitant}{left : Finset Inhabitant } {right : Finset Inhabitant}
+Statement disjoint {inst : DecidableEq Inhabitant}{left : Finset Inhabitant } {right : Finset Inhabitant}
 (Aleft : A ∈ left)
 (Aright : A ∈ right)
 (h : left ∩ right = ∅)
@@ -149,6 +149,6 @@ The theorem `disjoint` can be used for any two disjoint sets, specifically the t
 "
 #check Finset.not_mem_empty
 
-NewTheorem  disjoint Finset.mem_inter
+NewTheorem disjoint Finset.mem_inter
 NewDefinition Finset inter KnightsKnaves mem
 --NewTactic «have» 
