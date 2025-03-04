@@ -5,13 +5,13 @@ import Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
 import Game.Levels.DSL_Knights_Knaves.L04_prob33
 World "DSL_Knights_Knaves"
 Title "DSL Knights and Knaves"
-Introduction 
+Introduction
 "
-We will introduce the knights and knaves puzzle here explaining rules of the game and the corresponding lean representation
+We will introduce the knights and knaves puzzle here explaining rules of the game and the corresponding lean representation.
 
-The setting is an island. 
+The setting is an island.
 Every islander will make a statement. There are two types of islanders, 'knights' and knaves.
-For a given islander `A`, 
+For a given islander `A`,
 - The proposition that `A` is a knight
 ```
 A.isKnight
@@ -32,12 +32,31 @@ Knights always tell the truth, and 'knaves' that always lie.
 -- A is a knight, so whatever A said is true
 knight_said : (A said P) → A.isKnight → P
 -- A said something true, so A is a knight.
-said_knight : (A said P) →  P → A.isKnight 
+said_knight : (A said P) →  P → A.isKnight
 
 -- A is a knave, so whatever A said is false
 knave_said  : (A said P) →  A.isKnave → ¬P
 -- A said something that is false(i.e a lie), so A is a knave
 said_knave  : (A said P) →  ¬P → A.isKnave
+```
+
+`P → Q → R` means if `P` is true then the implication `Q → R` is true, but if you knew `Q` as well then you can get `R`.
+
+As an example,
+```
+h : P → Q → R
+hP : P
+hQ : Q
+``` 
+`h` takes two arguments and gives `R`.
+
+Given the first argument, we get
+```
+h hP : Q → R
+```
+and giving the second,
+```
+h hP hQ : R
 ```
 
 Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave.

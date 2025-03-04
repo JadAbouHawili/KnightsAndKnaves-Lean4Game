@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Mar  4 09:30:13 2025\n"
+"POT-Creation-Date: Tue Mar  4 12:24:11 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -846,19 +846,19 @@ msgid "```\n"
 msgstr ""
 
 #: Game.Doc.doc
-msgid "asdfasf"
+msgid "A is a knight, so whatever A said is true"
 msgstr ""
 
 #: Game.Doc.doc
-msgid "asdfaaaaaaaaa"
+msgid "A said something true, so A is a knight."
 msgstr ""
 
 #: Game.Doc.doc
-msgid "test"
+msgid "A is a knave, so whatever A said is false"
 msgstr ""
 
 #: Game.Doc.doc
-msgid "test2"
+msgid "A said something that is false(i.e a lie), so A is a knave"
 msgstr ""
 
 #: Game.Levels.EquationalReasoning.L01_rfl
