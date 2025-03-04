@@ -30,8 +30,11 @@ theorem isKnight_notisKnave {A : Islander} : A.isKnight → ¬A.isKnave := by
   constructor
   assumption ; assumption
 axiom isKnave_notisKnight {A : Islander} : A.isKnave → ¬A.isKnight
+axiom isKnight_notisKnaveIff {A : Islander} : A.isKnight ↔ ¬A.isKnave
+
 axiom notisKnight_isKnave {A : Islander} : ¬A.isKnight → A.isKnave
 axiom notisKnave_isKnight {A : Islander} : ¬A.isKnave → A.isKnight
+axiom isKnave_notisKnightIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 
 --------------
 -- number affects where brackets will be needed
@@ -53,6 +56,25 @@ section tactics
 -- make custom tactics for finset.card stuff...
 
 macro "knight_or_knave" t1:term "with" t2:rcasesPat t3:rcasesPat : tactic => do`(tactic| obtain ($t2 | $t3) := isKnight_or_isKnave $t1)
+
+-- *
+macro "knight_to_knave" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic =>
+do`(tactic| simp [isKnight_notisKnaveIff] at $t1)
+-- goal
+macro "knight_to_knave" : tactic =>
+do`(tactic| simp [isKnight_notisKnaveIff])
+-- hypothesis
+macro "knight_to_knave" "at" t1:Lean.Parser.Tactic.locationHyp : tactic =>
+do`(tactic| simp [isKnight_notisKnaveIff] at $t1)
+
+-- *
+macro "knave_to_knight" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic => 
+do`(tactic| simp [isKnave_notisKnightIff] at $t1)
+macro "knave_to_knight" : tactic =>
+do`(tactic| simp [isKnave_notisKnightIff])
+-- hypothesis
+macro "knave_to_knight" "at" t1:Lean.Parser.Tactic.locationHyp : tactic =>
+do`(tactic| simp [isKnave_notisKnightIff] at $t1)
 
 -- tell the user to use this instead of explaining stuff... this custom tactic hides not_isKnight_and_isKnave from the user and makes it so that the user doesn't need to interface with that directly.
 --macro "contra_knight_knave" : tactic =>

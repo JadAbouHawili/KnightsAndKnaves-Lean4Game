@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Mar  3 21:09:39 2025\n"
+"POT-Creation-Date: Tue Mar  4 09:30:13 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -849,6 +849,18 @@ msgstr ""
 msgid "asdfasf"
 msgstr ""
 
+#: Game.Doc.doc
+msgid "asdfaaaaaaaaa"
+msgstr ""
+
+#: Game.Doc.doc
+msgid "test"
+msgstr ""
+
+#: Game.Doc.doc
+msgid "test2"
+msgstr ""
+
 #: Game.Levels.EquationalReasoning.L01_rfl
 msgid "`rfl`, A Number Equals Itself"
 msgstr ""
@@ -1560,7 +1572,18 @@ msgid "Having \n"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
-msgid "Assume `isKnave A`"
+msgid "For the previous step and to avoid having you going through the hoops everytime , you can simply execute the custom tactic `knight_to_knave` which works as its name suggests.\n"
+"Go back and try it before proceeding\n"
+"\n"
+"Assume `isKnave A`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
+msgid "Let's first prove `isKnave A or isKnave B`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
+msgid "Choose which side to prove, `left` or `right`?"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
@@ -1570,9 +1593,11 @@ msgid "For,\n"
 "hP : P\n"
 "```\n"
 "\n"
-"`apply h at hP` would change `hP : P ` to `hP : Q`. \n"
+"`apply h at hP` would change `hP : P ` to `hP : Q`.\n"
 "\n"
-"We can prove `isKnave A or isKnave B` , which means that A is telling the truth. \n"
+"This is giving the implication the argument it needs to reach the conclusion.\n"
+"\n"
+"We can prove `isKnave A or isKnave B` , which means that A is telling the truth.\n"
 "\n"
 "But we know `A` is a knave, which gives us `False`."
 msgstr ""
@@ -1664,9 +1689,14 @@ msgid "We will introduce the knights and knaves puzzle here explaining rules of 
 "\n"
 "Knights always tell the truth, and 'knaves' that always lie.\n"
 "```\n"
+"-- A is a knight, so whatever A said is true\n"
 "knight_said : (A said P) → A.isKnight → P\n"
+"-- A said something true, so A is a knight.\n"
 "said_knight : (A said P) →  P → A.isKnight \n"
+"\n"
+"-- A is a knave, so whatever A said is false\n"
 "knave_said  : (A said P) →  A.isKnave → ¬P\n"
+"-- A said something that is false(i.e a lie), so A is a knave\n"
 "said_knave  : (A said P) →  ¬P → A.isKnave\n"
 "```\n"
 "\n"
@@ -2377,7 +2407,9 @@ msgstr ""
 #: Game.Levels.KnightsAndKnaves2.L02_iff
 msgid "Use `have` to set `A` as the new goal.\n"
 "\n"
-"We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.\n"
+"We want to prove `A`, to do this we will prove `¬¬A`(which is equivalent to `A`) i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.\n"
+"\n"
+"This is called a proof by contradiction because we are assuming the negation of what we want to prove and getting a contradiction.\n"
 "\n"
 "Assuming `nA : ¬A`,\n"
 "- Prove `nCnB : ¬C ∧ ¬B` from `stAn`\n"

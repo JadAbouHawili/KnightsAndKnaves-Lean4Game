@@ -29,9 +29,14 @@ isKnight_or_isKnave (A : Islander) : A.isKnight ∨ A.isKnave
 
 Knights always tell the truth, and 'knaves' that always lie.
 ```
+-- A is a knight, so whatever A said is true
 knight_said : (A said P) → A.isKnight → P
+-- A said something true, so A is a knight.
 said_knight : (A said P) →  P → A.isKnight 
+
+-- A is a knave, so whatever A said is false
 knave_said  : (A said P) →  A.isKnave → ¬P
+-- A said something that is false(i.e a lie), so A is a knave
 said_knave  : (A said P) →  ¬P → A.isKnave
 ```
 

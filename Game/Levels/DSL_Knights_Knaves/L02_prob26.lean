@@ -19,7 +19,8 @@ Statement {A B C : Islander}
 {hC : C said B.isKnave}
 : B.isKnave and C.isKnight := by 
   have BKnave : B.isKnave
-  apply notisKnight_isKnave
+  knave_to_knight
+  --apply notisKnight_isKnave
   intro BKnight
   have hA := knight_said hB BKnight
   exact dsl_iamknave hA

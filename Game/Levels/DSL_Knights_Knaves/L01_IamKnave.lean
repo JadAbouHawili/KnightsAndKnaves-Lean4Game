@@ -1,12 +1,12 @@
 import Game.Metadata
 
 import Game.LevelLemmas.dsl_KnightsAndKnaves
-World "DSL_Knights_Knaves" 
+World "DSL_Knights_Knaves"
 Level 1
 
-Title "I am a knave, I am a liar" 
+Title "I am a knave, I am a liar"
 
-Introduction 
+Introduction
 "
 In this level, we present the 'I am a knave' puzzle.
 
@@ -51,6 +51,6 @@ Conclusion
 "
 "
 #check knight_said
-NewTheorem Islander.knight_said
+NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave
 --TheoremDoc MyNat.add_zero as "add_zero" in "+"
 NewDefinition DSLKnightsKnaves

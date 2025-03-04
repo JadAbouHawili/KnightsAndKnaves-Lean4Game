@@ -39,12 +39,29 @@ notisKnave_isKnight : ¬isKnave A → isKnight A
 
 We want to prove `isKnight A`, and a way to get there is through proving `¬isKnave A`.
   "
-  apply notisKnave_isKnight
+  knight_to_knave
+  --apply notisKnave_isKnight
   Hint "
+  For the previous step and to avoid having you going through the hoops everytime , you can simply execute the custom tactic `knight_to_knave` which works as its name suggests.
+  Go back and try it before proceeding
+
 Assume `isKnave A`
   "
   intro AKnave
 
+  Hint
+  "
+Let's first prove `isKnave A or isKnave B`.
+
+  "
+  --apply said_knight at stA
+  have orexp: isKnave A or isKnave B
+  Hint
+  "
+Choose which side to prove, `left` or `right`?
+  "
+  left
+  assumption
   Hint
   "
 For,
@@ -53,16 +70,15 @@ h : P → Q
 hP : P
 ```
 
-`apply h at hP` would change `hP : P ` to `hP : Q`. 
+`apply h at hP` would change `hP : P ` to `hP : Q`.
 
-We can prove `isKnave A or isKnave B` , which means that A is telling the truth. 
+This is giving the implication the argument it needs to reach the conclusion.
+
+We can prove `isKnave A or isKnave B` , which means that A is telling the truth.
 
 But we know `A` is a knave, which gives us `False`.
   "
-  --apply said_knight at stA
-  have orexp: isKnave A or isKnave B
-  left 
-  assumption
+  #check said_knight
   have AKnight := said_knight stA orexp
   contradiction
 
@@ -88,3 +104,4 @@ But we know `A` is a knave, which gives us `False`.
 Conclusion 
 "
 "
+NewTactic knight_to_knave
