@@ -966,33 +966,20 @@ exact `inright_notinleft h Aright` will close the goal.
 TheoremDoc inright_notinleft as "inright_notinleft" in "Knights and Knaves"
 
 /--
-asdfasf
+A is a knight, so whatever A said is true
 -/
 TheoremDoc Islander.knight_said as "knight_said" in "Islander"
 
 /--
-asdfaaaaaaaaa
+A said something true, so A is a knight.
 -/
 TheoremDoc Islander.said_knight as "said_knight" in "Islander"
 /--
-test
+A is a knave, so whatever A said is false
 -/
 TheoremDoc Islander.knave_said as "knave_said" in "Islander"
 
 /--
-test2
+A said something that is false(i.e a lie), so A is a knave
 -/
 TheoremDoc Islander.said_knave as "said_knave" in "Islander"
-
-/-
--- A is a knight, so whatever A said is true
-knight_said : (A said P) → A.isKnight → P
--- A said something true, so A is a knight.
-said_knight : (A said P) →  P → A.isKnight 
-
--- A is a knave, so whatever A said is false
-knave_said  : (A said P) →  A.isKnave → ¬P
--- A said something that is false(i.e a lie), so A is a knave
-said_knave  : (A said P) →  ¬P → A.isKnave
--/
-

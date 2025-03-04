@@ -40,9 +40,6 @@ We are now in the first case where `h : A.isKnight`
   have hnA := knight_said hAKn hA
   #check not_isKnight_and_isKnave
   contradiction
-  --apply not_isKnight_and_isKnave A 
-  --constructor
-  --assumption ; assumption
 
   have hnA := knave_said hAKn hnA
   contradiction
@@ -52,5 +49,4 @@ Conclusion
 "
 #check knight_said
 NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave
---TheoremDoc MyNat.add_zero as "add_zero" in "+"
 NewDefinition DSLKnightsKnaves
