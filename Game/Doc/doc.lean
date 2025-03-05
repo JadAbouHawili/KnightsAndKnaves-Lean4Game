@@ -197,36 +197,84 @@ we have `And.intro hP hQ : P ∧ Q`
 -/
 TheoremDoc And.intro as "And.intro" in "And"
 
+/--
+
+-/
 TheoremDoc eq_false as "eq_false" in "Logic"
 
+/--
+
+-/
 TheoremDoc eq_true as "eq_true" in "Logic"
 
+/--
+
+-/
 TheoremDoc false_implies as "false_implies" in "Logic"
 
+/--
+
+-/
 TheoremDoc false_or_iff as "false_or_iff" in "Logic"
 
+/--
+
+-/
 TheoremDoc iff_not_comm as "iff_not_comm" in "Logic"
 
+/--
+
+-/
 TheoremDoc iff_of_false as "iff_of_false" in "Logic"
 
+/--
+
+-/
 TheoremDoc iff_of_true as "iff_of_true" in "Logic"
 
+/--
+
+-/
 TheoremDoc iff_true_iff as "iff_true_iff" in "Logic"
 
+/--
+
+-/
 TheoremDoc iff_true_right as "iff_true_right" in "Logic"
 
+/--
+
+-/
 TheoremDoc not_iff_not as "not_iff_not" in "Logic"
 
+/--
+
+-/
 TheoremDoc not_iff_self as "not_iff_self" in "Logic"
 
+/--
+
+-/
 TheoremDoc not_or as "not_or" in "Logic"
 
+/--
+
+-/
 TheoremDoc not_true as "not_true" in "Logic"
 
+/--
+
+-/
 TheoremDoc or_false_iff as "or_false_iff" in "Logic"
 
+/--
+
+-/
 TheoremDoc true_implies as "true_implies" in "Logic"
 
+/--
+
+-/
 TheoremDoc not_iff as "not_iff" in "Logic"
 
 /--
@@ -319,9 +367,9 @@ hP : P
 ```
 `(thm hP) : Q`
 
-For the special case where `P : Prop`, `Q : Prop` ,the interpretation of `thm` is what implication in logic means.  
+For the special case where `P : Prop`, `Q : Prop` ,the interpretation of `thm` is what implication in logic means.
 
-What `thm` means is the following, give me an object of type `P` which in this case is a proof of `P` and i will return an object of type `Q` which in this case is a proof of `Q`. 
+What `thm` means is the following, give me an object of type `P` which in this case is a proof of `P` and i will return an object of type `Q` which in this case is a proof of `Q`.
 
 In other words, `thm` means 'If P is true, then Q is true'.
 -/
@@ -483,7 +531,7 @@ DefinitionDoc KnightsKnaves as "Knights and Knaves"
 /-
 We have the following correspondence:
 $
-\\begin{array}{|c|c|c|} 
+\\begin{array}{|c|c|c|}
 \\hline
 \\text{Old way} & \\text{New way} \\\\
 \\hline
@@ -583,6 +631,9 @@ The objective is to conclude who is a knight and who is a knave, based on the st
 -/
 DefinitionDoc DSLKnightsKnaves as "DSL Knights and Knaves"
 
+/--
+
+-/
 DefinitionDoc Nat as "ℕ"
 
 /--
