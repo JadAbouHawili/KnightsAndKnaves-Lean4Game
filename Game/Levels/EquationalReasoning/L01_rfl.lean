@@ -1,7 +1,8 @@
 import Game.Metadata
 import Game.Doc.doc
+import Game.Doc.tactic_doc
 
-World "EquationalReasoning" 
+World "EquationalReasoning"
 Level 1
 
 Title "`rfl`, A Number Equals Itself" 
@@ -14,22 +15,13 @@ Introduction "In this exercise, we will prove `2 = 2`
 
 "
 
-Statement 
+Statement
   : 2 = 2 := by
 
   {
-    rfl 
+    rfl
   }
-
-
-
-
 
 Conclusion "Notice that 'level completed! 🎉' on the bottom. We say that the goal is closed/proven. "
 
-/- Use these commands to add items to the game's inventory. -/
-
 NewTactic rfl
--- NewLemma Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq
-

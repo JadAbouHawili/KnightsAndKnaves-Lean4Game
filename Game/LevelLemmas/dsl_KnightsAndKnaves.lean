@@ -105,9 +105,6 @@ theorem knave_said2 {A : Islander} {P : Prop} : A said P → A.isKnave → ¬ P 
   have AKnight := said_knight AP hP
 
   contradiction
-  --apply not_isKnight_and_isKnave
-  --constructor <;>
-  --assumption
 example {hP : P} {hnP : ¬P} : False := by 
   contradiction
 end tactics
@@ -139,7 +136,6 @@ example {A B : Islander} (hAB : A said (A.isKnave or B.isKnave)) : A.isKnight an
   --exact And.intro AKnight Or
   --apply isKnight_notisKnave
   --intro IsKnight
-  --have 
   knight_or_knave A with hA hA
 
   --obtain hA | hA := A.isKnight_or_isKnave
