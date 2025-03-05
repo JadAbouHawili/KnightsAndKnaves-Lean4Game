@@ -39,18 +39,18 @@ axiom isKnave_notisKnightIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 --------------
 -- number affects where brackets will be needed
 
-axiom knight_said {A : Islander} {P : Prop} : (A said P) → A.isKnight → P
-axiom said_knight {A : Islander} {P : Prop} : (A said P) →  P → A.isKnight 
-axiom knave_said {A : Islander} {P : Prop} : (A said P) →  A.isKnave → ¬P
-
-axiom notknight_said {A : Islander} {P : Prop} : (A said P) → ¬A.isKnight → ¬P
-theorem said_knave {A : Islander} {P : Prop} : A said P →  ¬P → A.isKnave := by 
-  intro AsaidP
-  intro nP
+axiom knight_said {A : Islander} {P : Prop} 
+  (stA : A said P) (AKnight : A.isKnight) :  P
+axiom said_knight {A : Islander} {P : Prop} 
+(stA : A said P) (hP : P) : A.isKnight 
+axiom knave_said {A : Islander} {P : Prop} 
+(stA : A said P) (AKnave : A.isKnave) :  ¬P
+theorem said_knave {A : Islander} {P : Prop} (AsaidP : A said P) (nP : ¬P) : A.isKnave := by 
   apply notisKnight_isKnave 
   intro AKnight 
   have hP := knight_said AsaidP AKnight
   contradiction
+axiom notknight_said {A : Islander} {P : Prop} : (A said P) → ¬A.isKnight → ¬P
 
 section tactics
 -- make custom tactics for finset.card stuff...

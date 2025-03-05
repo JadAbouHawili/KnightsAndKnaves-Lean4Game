@@ -29,39 +29,31 @@ isKnight_or_isKnave (A : Islander) : A.isKnight ∨ A.isKnave
 
 Knights always tell the truth, and 'knaves' that always lie.
 ```
--- A is a knight, so whatever A said is true
-knight_said : (A said P) → A.isKnight → P
--- A said something true, so A is a knight.
-said_knight : (A said P) →  P → A.isKnight
-
--- A is a knave, so whatever A said is false
-knave_said  : (A said P) →  A.isKnave → ¬P
--- A said something that is false(i.e a lie), so A is a knave
-said_knave  : (A said P) →  ¬P → A.isKnave
+-- A is a knight, 
+-- so whatever A said is true
+knight_said 
+(stA : A said P) 
+(AKnight : A.isKnight) : P
+-- A said something true, 
+-- so A is a knight.
+said_knight 
+(stA : A said P) 
+(hP : P) : A.isKnight
 ```
 
-`P → Q → R` means if `P` is true then the implication `Q → R` is true, but if you knew `Q` as well then you can get `R`.
-
-As an example,
 ```
-h : P → Q → R
-hP : P
-hQ : Q
+-- A is a knave, 
+-- so whatever A said is false
+knave_said : (stA : A said P) (AKnave : A.isKnave) : ¬P
+-- A said something that is false(i.e a lie),
+-- so A is a knave
+said_knave  : (stA : A said P) (hnP : ¬P) : A.isKnave
 ``` 
-`h` takes two arguments and gives `R`.
-
-Given the first argument, we get
-```
-h hP : Q → R
-```
-and giving the second,
-```
-h hP hQ : R
-```
 
 Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave.
 ```
-not_isKnight_and_isKnave (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
+not_isKnight_and_isKnave 
+(A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
 ```
 
 The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning.
