@@ -57,6 +57,7 @@ section tactics
 
 macro "knight_or_knave" t1:term "with" t2:rcasesPat t3:rcasesPat : tactic => do`(tactic| obtain ($t2 | $t3) := isKnight_or_isKnave $t1)
 
+macro "knight_or_knave" t1:term : tactic => do`(tactic| cases isKnight_or_isKnave $t1)
 -- *
 macro "knight_to_knave" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic =>
 do`(tactic| simp [isKnight_notisKnaveIff] at $t1)

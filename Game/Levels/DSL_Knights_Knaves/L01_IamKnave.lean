@@ -19,20 +19,25 @@ The goal is to prove `False`, i.e that given the rules of the game , if `A` says
 
 By the rules of the game, we know that `A` is either a knight or a knave. 
 ```
-isKnight_or_isKnave (A : Islander) : A.isKnight or A.isKnave
+isKnight_or_isKnave 
+(A : Islander) : A.isKnight or A.isKnave
 ```
 
 Try
 ```
-cases isKnight_or_isKnave A 
+cases isKnight_or_isKnave A
 ```
 "
 
 open Islander
+
 Statement  (hAKn : A said A.isKnave): False := by 
   knight_or_knave A with hA hnA 
   Hint
   "
+  For the previous step and to avoid having you going through the hoops everytime , you can simply execute the custom tactic `knight_or_knave A with AKnight AKnave`.
+  Go back and try it before proceeding
+
 You get two cases , the first where `h : A.isKnight` and the second where `h: A.isKnave`
 
 We are now in the first case where `h : A.isKnight`
@@ -47,6 +52,8 @@ We are now in the first case where `h : A.isKnight`
 Conclusion
 "
 "
-#check knight_said
-NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave
-NewDefinition DSLKnightsKnaves
+
+NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave Islander.isKnight Islander.isKnave
+NewDefinition DSLKnightsKnaves 
+
+NewTactic knight_or_knave

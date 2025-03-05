@@ -1,10 +1,10 @@
 import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 #check dsl_iamknave
-World "DSL_Knights_Knaves" 
+World "DSL_Knights_Knaves"
 Level 3
 
-Title "" 
+Title ""
 
 Introduction 
 "
@@ -40,10 +40,10 @@ notisKnave_isKnight : ¬isKnave A → isKnight A
 We want to prove `isKnight A`, and a way to get there is through proving `¬isKnave A`.
   "
   knight_to_knave
-  --apply notisKnave_isKnight
   Hint "
   For the previous step and to avoid having you going through the hoops everytime , you can simply execute the custom tactic `knight_to_knave` which works as its name suggests.
   Go back and try it before proceeding
+  (There is also a similar tactic `knave_to_knight`)
 
 Assume `isKnave A`
   "
@@ -104,4 +104,4 @@ But we know `A` is a knave, which gives us `False`.
 Conclusion 
 "
 "
-NewTactic knight_to_knave
+NewTactic knight_to_knave knave_to_knight

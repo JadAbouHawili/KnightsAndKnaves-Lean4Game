@@ -71,3 +71,4 @@ Close the goal.
 Conclusion
 "
 "
+NewTactic push_neg

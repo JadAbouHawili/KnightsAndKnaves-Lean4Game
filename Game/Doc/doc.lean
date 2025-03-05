@@ -103,12 +103,13 @@ In other words, it acts like a function. If you give `P → Q` a proof of `P`, y
 DefinitionDoc imp as "→"
 
 /--
+`∧`
 Truth table:
 
 $
 \begin{array}{|c c|c|} 
 \hline
-P & Q & P ∧ Q \\
+P & Q & P and Q \\
 \hline
 T & T & T \\
 \hline
@@ -129,7 +130,7 @@ The following truth table illustrates this for the previously discussed `∧` co
 $
 \begin{array}{|c c|c|} 
 \hline
-P & Q & P ∧ Q \\
+P & Q & P and Q \\
 \hline
 T & T & T \\
 T & F & F \\
@@ -138,16 +139,18 @@ F & F & F \\
 \hline
 \end{array}
 $
-Notice that `P ∧ Q` is true when both `P` is true and `Q` is true, being false otherwise.
+Notice that `P and Q` is true when both `P` is true and `Q` is true, being false otherwise.
 -/
 DefinitionDoc logic_and as "and" 
 
 /--
+`∨`
+
 # Truth Table
 $
 \begin{array}{|c c|c|} 
 \hline
-P & Q & P ∨ Q \\
+P & Q & P or Q \\
 \hline
 T & T & T \\
 \hline
@@ -162,9 +165,9 @@ $
 
 From the truth table, we can see that if one of `P`,`Q` is true then `P ∨ Q` is true. 
 
-Therefore, if we have `P ∨ Q` as our goal, it is enough to prove `P` or to prove `Q`.
+Therefore, if we have `P or Q` as our goal, it is enough to prove `P` or to prove `Q`.
 
-Having `P ∨ Q` as the goal, you can tell Lean that you want to prove the left side by simply typing `left` or the right side by simply typing `right`.
+Having `P or Q` as the goal, you can tell Lean that you want to prove the left side by simply typing `left` or the right side by simply typing `right`.
 -/
 DefinitionDoc logic_or as "or"
 
@@ -748,19 +751,45 @@ TheoremDoc inright_notinleft as "inright_notinleft" in "Knights and Knaves"
 /--
 A is a knight, so whatever A said is true
 -/
-TheoremDoc Islander.knight_said as "knight_said" in "Islander"
+TheoremDoc Islander.knight_said as "knight_said" in "DSL"
 
 /--
 A said something true, so A is a knight.
 -/
-TheoremDoc Islander.said_knight as "said_knight" in "Islander"
+TheoremDoc Islander.said_knight as "said_knight" in "DSL"
 /--
 A is a knave, so whatever A said is false
 -/
-TheoremDoc Islander.knave_said as "knave_said" in "Islander"
+TheoremDoc Islander.knave_said as "knave_said" in "DSL"
 
 /--
 A said something that is false(i.e a lie), so A is a knave
 -/
-TheoremDoc Islander.said_knave as "said_knave" in "Islander"
+TheoremDoc Islander.said_knave as "said_knave" in "DSL"
+
+/--
+For an Islander `A`,
+```
+isKnight A : Prop
+```
+or
+```
+A.isKnight : Prop
+```
+is the proposition that `A` is a knight.
+-/
+TheoremDoc Islander.isKnight as "isKnight" in "DSL"
+
+/--
+For an Islander `A`,
+```
+isKnave A : Prop
+```
+or
+```
+A.isKnave : Prop
+```
+is the proposition that `A` is a knight.
+-/
+TheoremDoc Islander.isKnave as "isKnave" in "DSL"
 
