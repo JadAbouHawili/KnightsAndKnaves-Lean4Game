@@ -280,13 +280,13 @@ Rewrites all expression asserting being a  knight into the equivalent expression
 
 Changes all instances of `isKnight A` to `¬isKnave A`
 
-# Goal
+# Change the Goal
 `knight_to_knave`
 
-# Hypothesis
+# Change the Hypothesis
 `knight_to_knave` at `hypothesis`
 
-# Everything
+# Change the goal and all hypothesis
 `knight_to_knave` at *
 
 The `*` is called the 'wildcard', and it matches anything.
@@ -304,3 +304,55 @@ isKnight_notisKnaveIff {A : Islander} : A.isKnight ↔ ¬A.isKnave
 `A.isKnight` and `¬A.isKnave` always have the same truth value regardless of what `A` is , so they can be interchanged
 -/
 TacticDoc knight_to_knave
+
+/--
+Rewrites all expression asserting being a  knight into the equivalent expression of not being knave
+
+Changes all instances of `isKnave A` to `¬isKnight A`
+
+# Change the Goal
+`knave_to_knight`
+
+# Change the Hypothesis
+`knave_to_knight` at `hypothesis`
+
+# Change the goal and all hypothesis
+`knave_to_knight` at *
+
+The `*` is called the 'wildcard', and it matches anything.
+
+# Under the hood
+The tactic is simply a macro abbreviating:
+```
+simp [isKnave_notisKnightIff]
+```
+where 
+```
+isKnight_notisKnaveIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
+```
+
+`A.isKnave` and `¬A.isKnight` always have the same truth value regardless of what `A` is , so they can be interchanged
+-/
+TacticDoc knave_to_knight
+
+/--
+For an islander `A`,
+```
+knight_or_knave A
+```
+takes two cases, the first being `h : A.isKnight` and the second being `h:A.isKnave`
+
+You can choose the name of the hypothesis of each case by
+```
+knight_or_knave A with AKnight AKnave
+```
+which gives the first case `AKnight : A.isKnight` and the second case `AKnave : A.isKnave`.
+
+# Under the hood
+`knight_or_knave A` is just a macro for 
+```
+cases isKnight_orisKnave A
+```
+where `isKnight_or_isKnave A : A.isKnight or A.isKnave` 
+-/
+TacticDoc knight_or_knave
