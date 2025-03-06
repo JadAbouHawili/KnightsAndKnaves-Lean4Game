@@ -149,19 +149,26 @@ TacticDoc exact
 /--
 The `have` tactic allows you to add theorems to the context(which you would have to prove, of course).
 
-## one step 
+## one step
 If the proof is one step, then the following:
 ```
-have theorem-name := proof
+have theorem-name := expression
 ```
-will do.
+will do, where `expression : P` with `P : Prop` i.e `expression` is a proof of `P`
+
+The result would be adding the following to the hypothesis:
+```
+theorem-name : P
+```
+
+You are storing the proof of `P` `expression` in `theorem-name` so that you don't have to construct this expression everytime...
 
 ## multiple steps
 If the proof is multiple steps, then:
 ```
 have theorem-name : theorem-prop
 ```
-where `theorem-prop : Prop` will change the current goal to `theorem-prop`.
+will change the current goal to `theorem-prop : Prop` which is what you want to prove.
 
 After being proven, the original goal is restored with `theorem-name : theorem-prop` added(which is a proof of the proposition `theorem-prop`)
 
@@ -172,13 +179,9 @@ have a : 2=2
 will change the goal to `2=2`, which after proving would restore the original goal with the theorem `a : 2=2` added and ready to be used.
 -/
 TacticDoc «have»
-/-
-NNG
-## Syntax
 
-### without specifying the type
-`have name := some-term `
-where `name` is the new assumption that will appear which will have `some-type` where `some-term : some-type` and `some-type : Prop` i.e `some-term` is a proof of some proposition.
+/-
+## Syntax
 
 ### with specifying the type
 ```
@@ -190,8 +193,6 @@ have name : some-proposition := by
 You would need to use editor mode if there are multiple proof steps.
 
 Inside the have block, you would have a new goal which is `some-proposition` say `x=2` , `A ∈ Knight` etc...
-
-Not specifying the `type` when using `have` doesn't allow you to use tactics.
 
 ## Examples
 
@@ -218,38 +219,12 @@ AinBoth : A ∈ left ∩ right
 -/
 
 /-
-reference point: knights and knaves level 4
-ones that are needed:
-postponing the proof, have a : 2=2, the goal now is 2=2
-giving a proof term without specifying type, have name := ...
-
 way to handle have:
 - have can be done in one step , so use have :=..
 - have needs multiple steps so use have a : 2=2.
 tell the user explicitly:
 - prove .. which can be done in one step
 - prove .. which is done in multiple steps
-include this in doc so user can read left side and if confused read right side.
-check how nng does it.
--------
-
-## Standard Syntax
-```
-have theorem-name : theorem-prop 
-```
-where `theorem-name` can be anything you want, `theorem-prop` is what you want to prove.
-
-The goal changes to:
-```
-theorem-prop
-```
-then (after proving it) to the original goal.
-
-## Alternative Syntax
-```
-`have name-of-object : type := by proof` 
-```
-`name-of-object` can be whatever you want, leaving it empty would  give the theorem a name automatically. The `type` in this case is the statement we want to prove. 
 -/
 
 /--
