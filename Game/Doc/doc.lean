@@ -793,3 +793,7 @@ is the proposition that `A` is a knight.
 -/
 TheoremDoc Islander.isKnave as "isKnave" in "DSL"
 
+/--
+
+-/
+TheoremDoc Islander.not_isKnight_and_isKnave as "not_isKnight_and_isKnave" in "DSL"

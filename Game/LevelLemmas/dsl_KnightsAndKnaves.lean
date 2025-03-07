@@ -15,7 +15,9 @@ axiom isKnave : Islander → Prop
 
 axiom isKnight_or_isKnave (A : Islander) : A.isKnight ∨ A.isKnave
 
-axiom not_isKnight_and_isKnave (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
+--axiom not_isKnight_and_isKnave (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
+
+axiom not_isKnight_and_isKnave {A : Islander} (AKnight : A.isKnight) (AKnave : A.isKnave) : False
 
 axiom Said : Islander → Prop → Prop
 notation A " said " P:200 => Said A P
@@ -27,7 +29,6 @@ theorem isKnight_notisKnave {A : Islander} : A.isKnight → ¬A.isKnave := by
   intro AKnight 
   intro AKnave
   apply not_isKnight_and_isKnave
-  constructor
   assumption ; assumption
 axiom isKnave_notisKnight {A : Islander} : A.isKnave → ¬A.isKnight
 axiom isKnight_notisKnaveIff {A : Islander} : A.isKnight ↔ ¬A.isKnave
@@ -97,7 +98,7 @@ do`(tactic| simp [isKnave_notisKnightIff] at $t1)
 -- this truly extends contradiction tactic, preserving doc string
 macro_rules
 | `(tactic| contradiction) => 
-  do `(tactic |first | ( apply not_isKnight_and_isKnave ; constructor ; assumption ; assumption   ) )
+  do `(tactic |first | ( apply not_isKnight_and_isKnave  ; assumption ; assumption   ) )
 
 theorem knave_said2 {A : Islander} {P : Prop} : A said P → A.isKnave → ¬ P := by 
   intro AP
@@ -141,7 +142,7 @@ example {A B : Islander} (hAB : A said (A.isKnave or B.isKnave)) : A.isKnight an
 
   --obtain hA | hA := A.isKnight_or_isKnave
   · obtain hA' | hB := knight_said hAB hA
-    · exact (not_isKnight_and_isKnave A ⟨hA, hA'⟩).elim
+    · exact (not_isKnight_and_isKnave hA hA').elim
     · exact ⟨hA, hB⟩
   · have := knave_said hAB hA
     sorry
@@ -152,7 +153,6 @@ theorem dsl_iamknave (hAKn : A said A.isKnave): False := by
   · have hnA := knight_said hAKn hA
     --#check not_isKnight_and_isKnave
     apply @not_isKnight_and_isKnave A
-    constructor
     assumption ; assumption
   · have hnA := knave_said hAKn hnA
     contradiction

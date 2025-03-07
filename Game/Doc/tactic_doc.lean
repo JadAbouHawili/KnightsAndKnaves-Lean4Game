@@ -180,53 +180,6 @@ will change the goal to `2=2`, which after proving would restore the original go
 -/
 TacticDoc «have»
 
-/-
-## Syntax
-
-### with specifying the type
-```
-have name : some-proposition := by
-  proof steps
-  ...
-  proof steps
-```
-You would need to use editor mode if there are multiple proof steps.
-
-Inside the have block, you would have a new goal which is `some-proposition` say `x=2` , `A ∈ Knight` etc...
-
-## Examples
-
-Given the following assumptions from lemmas world, level 1:
-```
-Assumptions:
-Aleft : A ∈ left 
-Aright : A ∈ right 
-h: left ∩ right = ∅
-AinBothInter: A ∈ left ∧ A ∈ right → A ∈ left ∩ right
-```
-
-### without specifying the type
-`have AinBoth := AinBothInter (And.intro Aleft Aright)` will add the following to the assumptions:
-```
-AinBoth : A ∈ left ∩ right
-```
-
-### specifying the type
-`have  AinBoth : A ∈ left ∩ right := by AinBothInter (And.intro Aleft Aright)` will add the following to the assumptions in the proof state:
-```
-AinBoth : A ∈ left ∩ right
-```
--/
-
-/-
-way to handle have:
-- have can be done in one step , so use have :=..
-- have needs multiple steps so use have a : 2=2.
-tell the user explicitly:
-- prove .. which can be done in one step
-- prove .. which is done in multiple steps
--/
-
 /--
 The `contradiction` tactic works for the following proofs states:
 ```

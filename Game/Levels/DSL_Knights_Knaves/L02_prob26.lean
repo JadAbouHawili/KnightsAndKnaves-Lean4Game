@@ -20,7 +20,6 @@ Statement {A B C : Islander}
 : B.isKnave and C.isKnight := by 
   have BKnave : B.isKnave
   knave_to_knight
-  --apply notisKnight_isKnave
   intro BKnight
   have hA := knight_said hB BKnight
   exact dsl_iamknave hA
@@ -33,12 +32,11 @@ Statement {A B C : Islander}
 
 
 #check not_isKnight_and_isKnave -- Knight ∩ Knave = ∅ 
-#check isKnight_or_isKnave --  A ∈ Knight ∨ A ∈ Knave  
+#check isKnight_or_isKnave --  A ∈ Knight ∨ A ∈ Knave
 
 /-
 I am a knave
 -/
---open Islander
 example : A said A.isKnave ↔ False := by 
   constructor
   · intro hAKn 
@@ -46,7 +44,6 @@ example : A said A.isKnave ↔ False := by
     · have hnA := knight_said hAKn hA
       #check not_isKnight_and_isKnave
       apply @not_isKnight_and_isKnave A
-      constructor
       assumption ; assumption
     · have hnA := knave_said hAKn hnA
       contradiction

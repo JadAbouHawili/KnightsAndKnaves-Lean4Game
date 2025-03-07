@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Mar  6 12:39:53 2025\n"
+"POT-Creation-Date: Fri Mar  7 09:50:25 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -707,6 +707,10 @@ msgid "For an Islander `A`,\n"
 "A.isKnave : Prop\n"
 "```\n"
 "is the proposition that `A` is a knight."
+msgstr ""
+
+#: Game.Doc.doc
+msgid ""
 msgstr ""
 
 #: Game.Doc.tactic_doc
@@ -1645,7 +1649,42 @@ msgid "For the previous step and to avoid having you going through the hoops eve
 "\n"
 "You get two cases , the first where `h : A.isKnight` and the second where `h: A.isKnave`\n"
 "\n"
-"We are now in the first case where `h : A.isKnight`"
+"We are now in the first case where `h : A.isKnight`\n"
+"So, we can conclude that `A`'s statement is true."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "`knight_said`\n"
+"\n"
+"`A` is a knight, so whatever `A` said is true."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "We know `A` is a knight and a knave. \n"
+"This is a contradiction\n"
+"\n"
+"Recall\n"
+"```\n"
+"not_isKnight_and_isKnave (AKnight : isKnight A) (AKnave : isKnave A) : False\n"
+"```\n"
+"\n"
+"You can use this to prove `False`, or use `contradiction` which has been modified to handle when `A` is a knight and a knave."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "We are now in the second case where `h : A.isKnave`\n"
+"So, we can conclude that `A`'s statement is false."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "`knave_said`\n"
+"\n"
+"`A` is a knave, so whatever `A` said is false."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "`A` is knave and is not a knave. \n"
+"contradiction."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
