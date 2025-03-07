@@ -31,7 +31,7 @@ cases isKnight_or_isKnave A
 
 open Islander
 
-Statement  (hAKn : A said A.isKnave): False := by 
+Statement dsl_iamknave  (hAKn : A said A.isKnave): False := by 
   knight_or_knave A with hA hnA 
   Hint
   "
@@ -86,6 +86,13 @@ contradiction.
 
 Conclusion
 "
+We have proved the following theorem:
+```
+dsl_iamknave (hAKn : A said A.isKnave) : False
+```
+which is given to you to use. 
+
+You will need it in the next level.
 "
 
 NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave Islander.isKnight Islander.isKnave Islander.not_isKnight_and_isKnave

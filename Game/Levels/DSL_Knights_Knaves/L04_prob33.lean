@@ -4,7 +4,7 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 World "DSL_Knights_Knaves"
 Level 4
 
-Title "" 
+Title ""
 Introduction
 "
 Change the goal to `¬A.isKnight`
@@ -35,11 +35,18 @@ Now you have that `A` is a knave , which is a contradiction
   Hint 
   "
 Now that we know that `A` is not a knight, we know that what `A` said was a lie.
+
+You can use 
+```
+notknight_said
+```
+
+or obtain that `isKnave A` and then use `knave_said`.
   "
   have st := notknight_said stA AnK 
   --simp at st
   --#check not_and
-  Hint 
+  Hint
   "
 `h: ¬( P and Q)` means that both `P`,`Q` are not true at the same time which means one of them has to be false i.e `h : ¬P or ¬Q`.
 
@@ -72,3 +79,4 @@ Conclusion
 "
 "
 NewTactic push_neg
+NewTheorem Islander.notknight_said

@@ -19,43 +19,60 @@ Statement {A B C : Islander}
 {hC : C said B.isKnave}
 : B.isKnave and C.isKnight := by 
   have BKnave : B.isKnave
+  Hint
+  "
+Change the goal to `¬isKnight B`
+
+Having 
+```
+h : P → Q
+
+Goal: 
+Q
+```
+then `apply h` will change the goal from `Q` to `P` , because proving `P` would give you `Q`.
+
+Here, we have
+```
+notisKnight_isKnave : ¬isKnight B → isKnave B 
+```
+
+We want to prove `isKnave B`, and a way to get there is through proving `¬isKnight B`.
+
+  "
   knave_to_knight
+  Hint
+  "
+  For the previous step and to avoid having you going through the hoops everytime , you can simply execute the custom tactic `knave_to_knight` which works as its name suggests.
+  Go back and try it before proceeding
+  (There is also a similar tactic `knight_to_knave`)
+
+
+`B` is a knight so whatever `B` said is true.
+  "
   intro BKnight
   have hA := knight_said hB BKnight
+  Hint
+  "
+If an islander says 'I am a knave', we get a contradiction i.e `False`.
+  "
   exact dsl_iamknave hA
+  Hint
+  "
+Now that `B` is a knave, `C`'s statement is true then `C` is a knight.
+
+So would you have `B` is a knave, `C` is a knight to close the goal.
+  "
+
+
+  have CKnight := said_knight hC BKnave
 
   constructor
   assumption
-
-  have CKnight := said_knight hC BKnave
   assumption
-
 
 #check not_isKnight_and_isKnave -- Knight ∩ Knave = ∅ 
 #check isKnight_or_isKnave --  A ∈ Knight ∨ A ∈ Knave
-
-/-
-I am a knave
--/
-example : A said A.isKnave ↔ False := by 
-  constructor
-  · intro hAKn 
-    knight_or_knave A with hA hnA 
-    · have hnA := knight_said hAKn hA
-      #check not_isKnight_and_isKnave
-      apply @not_isKnight_and_isKnave A
-      assumption ; assumption
-    · have hnA := knave_said hAKn hnA
-      contradiction
-  · intro 
-    contradiction
-
-/-
-  apply  notisKnave_isKnight
-  intro CKnave
-  have hnC := knave_said hC CKnave
-  contradiction
-  -/
 
 Conclusion 
 "

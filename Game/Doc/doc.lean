@@ -797,3 +797,13 @@ TheoremDoc Islander.isKnave as "isKnave" in "DSL"
 
 -/
 TheoremDoc Islander.not_isKnight_and_isKnave as "not_isKnight_and_isKnave" in "DSL"
+
+/--
+Similar to `knave_said`.
+-/
+TheoremDoc Islander.notknight_said as "notknight_said" in "DSL"
+
+/--
+jk
+-/
+TheoremDoc dsl_iamknave as "dsl_iamknave" in "DSL"
