@@ -5,10 +5,7 @@ The final objective of the game is to teach you how to solve knights and knaves 
 
 ## Worlds
 The game is divided into the following worlds:
-- Equational Reasoning
-- Logic
-- Knights and Knaves Lemmas
-- Knights and Knaves
+`Equational Reasoning` followed by `Logic` where there are three knights and knaves worlds you can choose from, each with its own approach to formalize and represent the logic puzzle.
 
 # Raymond Smullyan's Knights and Knaves puzzles
 Most of the puzzles in smullyan's book titled 'What is the name of this book' have been formalized and proven [here](https://github.com/JadAbouHawili/Raymond-Smullyan-KnightsAndKnaves)
