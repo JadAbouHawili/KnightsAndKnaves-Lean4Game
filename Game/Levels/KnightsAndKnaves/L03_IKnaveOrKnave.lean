@@ -74,8 +74,6 @@ Prove the goal using `AKnight` , `BKnave`.
   "
   exact And.intro AKnight BKnave
 
-
-
 Conclusion
 "
 "

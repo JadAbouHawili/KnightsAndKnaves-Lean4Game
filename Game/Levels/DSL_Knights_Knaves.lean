@@ -24,7 +24,8 @@ A.isKnave
 Every islander is either a knight or a knave:
 
 ```
-isKnight_or_isKnave (A : Islander) : A.isKnight ∨ A.isKnave
+isKnight_or_isKnave (A : Islander)
+: A.isKnight ∨ A.isKnave
 ```
 
 Knights always tell the truth, and 'knaves' that always lie.

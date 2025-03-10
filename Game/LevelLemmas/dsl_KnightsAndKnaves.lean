@@ -4,6 +4,8 @@ import Mathlib.Tactic.ApplyFun
 
 -- hide all this from the user
 
+set_option push_neg.use_distrib true
+
 axiom Islander : Type
 
 namespace Islander

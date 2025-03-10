@@ -14,20 +14,20 @@ Change the goal to `B.isKnave`
 
 variable { P Q : Prop}
 open Islander
-Statement {A B C : Islander} 
+Statement {A B C : Islander}
 {hB : B said (A said A.isKnave)}
 {hC : C said B.isKnave}
-: B.isKnave and C.isKnight := by 
+: B.isKnave and C.isKnight := by
   have BKnave : B.isKnave
   Hint
   "
 Change the goal to `¬isKnight B`
 
-Having 
+Having
 ```
 h : P → Q
 
-Goal: 
+Goal:
 Q
 ```
 then `apply h` will change the goal from `Q` to `P` , because proving `P` would give you `Q`.
@@ -38,7 +38,6 @@ notisKnight_isKnave : ¬isKnight B → isKnave B
 ```
 
 We want to prove `isKnave B`, and a way to get there is through proving `¬isKnight B`.
-
   "
   knave_to_knight
   Hint
@@ -46,7 +45,6 @@ We want to prove `isKnave B`, and a way to get there is through proving `¬isKni
   For the previous step and to avoid having you going through the hoops everytime , you can simply execute the custom tactic `knave_to_knight` which works as its name suggests.
   Go back and try it before proceeding
   (There is also a similar tactic `knight_to_knave`)
-
 
 `B` is a knight so whatever `B` said is true.
   "
@@ -71,10 +69,10 @@ So would you have `B` is a knave, `C` is a knight to close the goal.
   assumption
   assumption
 
-#check not_isKnight_and_isKnave -- Knight ∩ Knave = ∅ 
+#check not_isKnight_and_isKnave -- Knight ∩ Knave = ∅
 #check isKnight_or_isKnave --  A ∈ Knight ∨ A ∈ Knave
 
-Conclusion 
+Conclusion
 "
 "
-NewTheorem dsl_iamknave
+NewTheorem Islander.dsl_iamknave

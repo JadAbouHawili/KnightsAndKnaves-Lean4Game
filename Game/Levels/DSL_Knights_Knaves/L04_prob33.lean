@@ -11,7 +11,6 @@ Change the goal to `¬A.isKnight`
 "
 
 open Islander
-set_option push_neg.use_distrib true
 Statement 
 {A B : Islander}
 {stA : A said (A.isKnave  and  ¬B.isKnave) }

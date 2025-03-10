@@ -83,7 +83,7 @@ Insightful:
 https://www.youtube.com/watch?v=oEAa2pQKqQU
 
 - Blog post series, includes introduction ,representation and formalization, automated solutions using other provers, and creating your own puzzles.
-https://summerofgodel.blogspot.com/search/label/Knights%20and%20Knaves%20puzzle
+https://summerofgodel.blogspot.com/2019/04/table-of-contents-for-series-of-posts.html?
 
 # Rules
 You can relax the rules and skip levels.
@@ -91,11 +91,11 @@ You can relax the rules and skip levels.
 This is not recommended for people who have never heard about Lean before. Moreover, relaxing the rules would ruin the coherence and structured/guided experience you would have when playing the game normally. If that is what you are looking for, then don't relax the rules.
 
 # Github
-The game's repository is on https://github.com/JadAbouHawili/KnightsAndKnaves-Lean4Game
+The game's repository is [here](https://github.com/JadAbouHawili/KnightsAndKnaves-Lean4Game)
 
-You can view the code for every level.(and the solution there if you are really stuck)
+You can view the code for every level there.(and the solution if you are really stuck)
 
-# Shoutouts, other educational games 
+# Shoutouts, other educational games
 Knights and Knaves education game:(games on other topics are available as well)
 https://en.oiler.education/bul
 

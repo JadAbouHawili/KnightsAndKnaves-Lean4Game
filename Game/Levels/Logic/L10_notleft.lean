@@ -1,5 +1,5 @@
 import Game.Metadata
-World "Logic" 
+World "Logic"
 Level 10
 
 Title "`notleft_right`"
