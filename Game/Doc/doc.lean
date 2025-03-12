@@ -804,6 +804,8 @@ Similar to `knave_said`.
 TheoremDoc Islander.notknight_said as "notknight_said" in "DSL"
 
 /--
-jk
+A : I am a knave
+
+This implies a contradiction, `False`
 -/
-TheoremDoc dsl_iamknave as "dsl_iamknave" in "DSL"
+TheoremDoc Islander.dsl_iamknave as "dsl_iamknave" in "DSL"

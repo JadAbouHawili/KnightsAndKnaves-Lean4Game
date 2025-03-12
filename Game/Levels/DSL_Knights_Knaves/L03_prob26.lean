@@ -3,7 +3,7 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 World "DSL_Knights_Knaves"
-Level 2
+Level 3
 
 Title ""
 
@@ -75,4 +75,3 @@ So would you have `B` is a knave, `C` is a knight to close the goal.
 Conclusion
 "
 "
-NewTheorem Islander.dsl_iamknave

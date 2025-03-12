@@ -1,8 +1,10 @@
 import Game.Metadata
 import Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-import Game.Levels.DSL_Knights_Knaves.L02_prob26
-import Game.Levels.DSL_Knights_Knaves.L03_IKnaveOrKnave
-import Game.Levels.DSL_Knights_Knaves.L04_prob33
+import Game.Levels.DSL_Knights_Knaves.L02_2plus2
+import Game.Levels.DSL_Knights_Knaves.L03_prob26
+import Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
+import Game.Levels.DSL_Knights_Knaves.L05_prob33
+import Game.Levels.DSL_Knights_Knaves.L06_allofus
 World "DSL_Knights_Knaves"
 Title "DSL Knights and Knaves"
 Introduction
