@@ -4,17 +4,18 @@ import Game.Metadata
 World "KnightsAndKnaves2" 
 Level 3
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
-"
+Generated from [here](https://philosophy.hku.hk/think/logic/knights.php)
 
---https://philosophy.hku.hk/think/logic/knights.php
---Here is your puzzle:
---
---You have met a group of 3 islanders. Their names are Xavier, Gary, and Alice.
---    Gary says: Alice is my type.   Alice says: Gary never lies.    Gary says: Xavier never lies.
+You have met a group of 3 islanders. Their names are Xavier, Gary, and Alice.
+
+Gary says: Alice is my type.
+Alice says: Gary never lies.
+Gary says: Xavier never lies.
+"
 
 /-
 use_module(library(clpb)).
@@ -49,6 +50,6 @@ Statement
   constructor <;> try constructor
   repeat assumption 
 
-Conclusion 
+Conclusion
 "
 "

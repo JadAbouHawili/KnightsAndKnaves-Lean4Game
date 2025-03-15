@@ -5,6 +5,7 @@ import Game.Levels.DSL_Knights_Knaves.L03_prob26
 import Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
 import Game.Levels.DSL_Knights_Knaves.L05_prob33
 import Game.Levels.DSL_Knights_Knaves.L06_allofus
+import Game.Levels.DSL_Knights_Knaves.L07_difftype
 World "DSL_Knights_Knaves"
 Title "DSL Knights and Knaves"
 Introduction
