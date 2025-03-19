@@ -9,9 +9,6 @@ Title ""
 
 Introduction
 "
-"
-
-/-
 problem 34
 We again have three inhabitants, A, B, and C, each of whom
 is a knight or a knave. Two people are said to be of the same
@@ -19,6 +16,9 @@ type if they are both knights or both knaves. A and B make
 the following statements:
 A: B is a knave.
 B: A and C are of the same type.
+"
+
+/-
 -/
 theorem not_iff' {P Q : Prop}
  : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by 
@@ -37,9 +37,23 @@ Statement
 {stA : A said B.isKnave}
 {stB : B said (A.isKnight ↔ C.isKnight)}
 : C.isKnave := by
+  Hint
+  "
+Take cases for `A`
+  "
   knight_or_knave A with AKnight AKnave
+  Hint
+  "
+We are in the cases where `A.isKnight`
+
+Conclude that `B.isKnave`
+  "
   have BKnave := knight_said stA AKnight
 
+  Hint
+  "
+Therefore, from `B`'s statement conclude that `A` and `C` are not the same i.e are different.
+  "
   have diff : ¬(A.isKnight ↔ C.isKnight)
   intro same
   have BKnight := said_knight stB same
@@ -47,11 +61,26 @@ Statement
 
 
   #check not_iff
+  Hint
+  "
+Use `not_iff'`
+  "
   rw [not_iff'] at diff
+  Hint 
+  "
+Conclude `¬C.isKnight` and close the goal.
+  "
   have CKnave := diff.mp AKnight
   knight_to_knave at CKnave
   assumption
 
+  Hint 
+  "
+Now that `A` is a knave. 
+We can conlude `B` is a knight.
+
+which means that `A` and `C` have the same type, obtaining the `C` is a knave and closing the goal.
+  "
   have BKnight := knave_said stA AKnave 
   knave_to_knight at BKnight
   have same := knight_said stB BKnight
@@ -62,3 +91,4 @@ Statement
 Conclusion
 "
 "
+NewTheorem not_iff'

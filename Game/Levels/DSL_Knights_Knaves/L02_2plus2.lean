@@ -9,6 +9,8 @@ Title ""
 
 Introduction 
 "
+`A` says 'I am a knave or 2+2=5'.
+
 `2+2=5` is false
 
 `P or False` is `P`

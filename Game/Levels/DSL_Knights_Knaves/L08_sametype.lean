@@ -9,21 +9,76 @@ Title ""
 
 Introduction 
 "
+You have met a group of 2 islanders. Their names are Robert and Ira.
+
+Robert says: Ira is my type.
+Ira says: Robert is truthful.
+
+
 "
 
 --https://philosophy.hku.hk/think/logic/knights.php
 --Here is your puzzle:
 --
---You have met a group of 2 islanders. Their names are Robert and Ira.
---
---    Robert says: Ira is my type.
---    Ira says: Robert is truthful.
 --solution:     A knight or a knave will say they are the same type as a knight. So when Robert says they are the same type as Ira, we know that Ira is a knight.
 --    All islanders will call one of their same kind a knight. So when Ira says that Robert is a knight, we know that Robert and Ira are the same type. Since Ira is a knight, then Robert is a knight.
 --
 --For these reasons we know there were no knaves , and the knights were Robert and Ira.
 -- there's similar level to this...
-Statement
+open Islander
+Statement 
+{stR : Robert said (Robert.isKnight ↔ Ira.isKnight)}
+{stI : Ira said (Robert.isKnight)}
+:  Robert.isKnight and Ira.isKnight := by 
+  Hint 
+  "
+Start by proving `¬Robert.isKnave`
+  "
+  have RKnight: ¬Robert.isKnave   
+  Hint
+  "
+Assume `R.isKnave`
+  "
+  intro RKnave 
+  Hint
+  "
+So `R` is not a knight, so `Ira` was lying .
+
+Therefore `Ira` is a knave
+  "
+  knave_to_knight at RKnave
+  have IKnave := said_knave stI RKnave
+  Hint 
+  "
+`Robert` are `Ira` are the same, but we know they are not by `Robert`'s lie.
+
+contradiction
+  "
+  knave_to_knight at IKnave 
+  have same : Robert.isKnight ↔ Ira.isKnight 
+  #check instDecidableIff
+  --exact instDecidableIff.proof_4 RKnave IKnave
+  #check iff_of_true
+  #check iff_of_false
+  exact iff_of_false RKnave IKnave 
+
+  have RKnight := said_knight stR same
+  contradiction
+
+  Hint
+  "
+Now that `Robert` is a knight, then `Ira` is a knight.
+
+Close the goal.
+  "
+  knave_to_knight at RKnight 
+  have same := knight_said stR RKnight
+  constructor
+  assumption
+  rw [same.symm]
+  assumption
+
+example
   {Inhabitant : Type}
   {Robert Ira: Inhabitant}
   {Knight : Set Inhabitant} 
@@ -33,6 +88,7 @@ Statement
   {stR : Robert ∈ Knight ↔ (Robert ∈ Knight ↔ Ira ∈ Knight)}
   {stI : Ira ∈ Knight ↔ Robert ∈ Knight}
    : Robert ∈ Knight ∧ Ira ∈ Knight := by
+     
     sorry
 #check iff_not_self
 example

@@ -4,8 +4,10 @@ import Game.Levels.DSL_Knights_Knaves.L02_2plus2
 import Game.Levels.DSL_Knights_Knaves.L03_prob26
 import Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
 import Game.Levels.DSL_Knights_Knaves.L05_prob33
-import Game.Levels.DSL_Knights_Knaves.L06_allofus
+import Game.Levels.DSL_Knights_Knaves.L06_stiff
 import Game.Levels.DSL_Knights_Knaves.L07_difftype
+import Game.Levels.DSL_Knights_Knaves.L08_sametype
+import Game.Levels.DSL_Knights_Knaves.L09_same
 World "DSL_Knights_Knaves"
 Title "DSL Knights and Knaves"
 Introduction

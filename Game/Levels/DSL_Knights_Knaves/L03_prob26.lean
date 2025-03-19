@@ -9,6 +9,15 @@ Title ""
 
 Introduction
 "
+According to this old problem, three of the inhabitants-A, 
+B, and C-were standing together in a garden. A stranger 
+passed by and asked A, 'Are you a knight or a knave?' A 
+answered, but rather indistinctly, so the stranger could not 
+make out what he said. The stranger than asked B, 'What 
+did A say?' B replied, 'A said that he is a knave.' At this 
+point the third man, C, said, 'Don't believe B; he is lying!' 
+The question is, what are B and C? 
+
 Change the goal to `B.isKnave`
 "
 

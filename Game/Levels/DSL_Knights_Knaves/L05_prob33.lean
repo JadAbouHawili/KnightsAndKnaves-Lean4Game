@@ -7,6 +7,9 @@ Level 5
 Title ""
 Introduction
 "
+Suppose A says, 'I am a knave, but B isn't.' 
+What are A and B?
+
 Change the goal to `¬A.isKnight`
 "
 
