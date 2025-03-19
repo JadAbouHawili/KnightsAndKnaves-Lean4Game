@@ -89,4 +89,9 @@ theorem dsl_iamknave (hAKn : A said A.isKnave): False := by
     assumption ; assumption
   · have hnA := knave_said hAKn hnA
     contradiction
+
+
+--variable {A B C : Islander}
+def allKnights {A B C : Islander}:= A.isKnight ∧ B.isKnight ∧ C.isKnight
+def allKnaves {A B C : Islander} := A.isKnave ∧ B.isKnave ∧ C.isKnave
 end Islander

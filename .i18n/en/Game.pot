@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Mar 19 11:29:03 2025\n"
+"POT-Creation-Date: Wed Mar 19 11:58:03 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2058,6 +2058,141 @@ msgid "Now that `A` is a knave. \n"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L09_same
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid "Notice in the proof state,\n"
+"```\n"
+"allKnights\n"
+"allKnaves\n"
+"```\n"
+"\n"
+"You can `unfold` to get\n"
+"```\n"
+"A.isKnight ∧ B.isKnight ∧ C.isKnave \n"
+"```\n"
+"by\n"
+"```\n"
+"unfold allKnights at stB\n"
+"```\n"
+"(similarly for `allKnaves`)\n"
+"\n"
+"However, this will make the proof state look cluttered so don't `unfold`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid "First, take cases for `B`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid "We are at the cases where `B.isKnight`\n"
+"Conclude that `B`'s statement is true"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid "`left` or `right` part of the goal?"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid "Now we have that `B.isKnave`.\n"
+"Get `¬B.isKnight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid "So, `A`'s statement is false.\n"
+"Conclude that `A` is a knave."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid "Now we have that `A.isKnave`\n"
+"Get `¬A.isKnight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid "Now, `C`'s statement is false , so conclude that `C` is a knave.\n"
+"\n"
+"You can do this in a number of ways:\n"
+"- Use `have` to construct a proof that `¬ (A.isKnight or B.isKnight)`\n"
+"- Use `simp` on `stC`, to obtain `C said False`. Conclude `C` is a knave using `said_knave`, `not_false : ¬False`.\n"
+"\n"
+"- etc...\n"
+"\n"
+"Once you have `C.isKnave` then everyone is a knave.(`right` side of the goal)\n"
+"\n"
+"You can `unfold` the goal if that facilitates your reasoning."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "A: All of us are knaves.\n"
+"B: Exactly one of us is a knave."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "Start by proving `¬A.isKnight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "Assume `A` is a knight, and conclude that everyone must be a knave."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "This would mean that `A` is also a knave, which is absurd.\n"
+"\n"
+"You can `unfold allKnaves at «{allKnave}»` and extract that from `A.isKnave`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "`«{allKnave}».left` will do it."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "Now that `A` is not a knight, conclude that not everyone is a knave."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "Take cases for `B`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "Knowing that `B` is a knight, conclude that there is exactly one knave."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "Notice what we have at our disposal.\n"
+"\n"
+"We have `A` is a knave, `B` is a knight, and that there is exactly one knave. So `C` must be a knight.\n"
+"\n"
+"You can obtain `C` by using the fact that `A` is a knave, `B` is a knight and simplifying the expression `«{exactlyoneKnave}»`.\n"
+"\n"
+"`unfold` «{exactlyoneKnave}» first then use `simp`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+msgid "Now we are in the cases where `B` is a knave.\n"
+"\n"
+"Notice what we have.\n"
+"\n"
+"We have that `A` is a knave, `B` is a knave, and that not everyone is a knave. \n"
+"\n"
+"So `C` must be a knight.\n"
+"\n"
+"Solving this is in the same spirit of what you previously did."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L11_prob32
 msgid ""
 msgstr ""
 

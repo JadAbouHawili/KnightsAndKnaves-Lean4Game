@@ -2,7 +2,7 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 World "DSL_Knights_Knaves"
-Level 6
+Level 10
 
 Title ""
 
@@ -34,10 +34,8 @@ C says A  is a knight or B is a knight
 -/
 open Islander
 
-variable {A B C : Islander}
-def allKnights := A.isKnight ∧ B.isKnight ∧ C.isKnight
-def allKnaves := A.isKnave ∧ B.isKnave ∧ C.isKnave
 #check allKnights
+#check allKnaves
 Statement
 {stA : A said B.isKnight}
 {stB : B said (@allKnights A B C)}
