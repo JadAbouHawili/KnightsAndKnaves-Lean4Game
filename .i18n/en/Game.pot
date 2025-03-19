@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Mar 19 11:58:03 2025\n"
+"POT-Creation-Date: Wed Mar 19 12:10:12 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -710,7 +710,9 @@ msgid "For an Islander `A`,\n"
 msgstr ""
 
 #: Game.Doc.doc
-msgid ""
+msgid "You can't be a knight and a knave at the same time.\n"
+"\n"
+"You can't lie and tell the truth at the same time."
 msgstr ""
 
 #: Game.Doc.doc

@@ -12,13 +12,8 @@ Introduction
 A: All of us are knaves.
 B: Exactly one of us is a knave.
 "
---def allKnaves {A B C : Islander} := A.isKnave and B.isKnave and C.isKnave
 
-def exactlyOneIsKnave {A B C : Islander} : Prop := (A.isKnave and B.isKnight and C.isKnight) ∨ (A.isKnight and B.isKnave and C.isKnight) ∨ (A.isKnight and B.isKnight and C.isKnave)
 open Islander
-#check allKnights
-#check allKnaves
-#check Islander.allKnaves
 Statement
 {A B C : Islander}
 {stA : A said @allKnaves A B C}

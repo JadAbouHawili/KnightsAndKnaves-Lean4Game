@@ -580,12 +580,11 @@ $
 \\hline
 h : A ∈ Knight ∨ A ∈ Knave & h : A ∨ ¬A \\\\
 \\hline
-h : Knight ∩ Knave = ∅ & h: A ∧ ¬A  \\\\
+h : Knight ∩ Knave = ∅ & h: ¬(A ∧ ¬A)  \\\\
 \\hline
 \\end{array}
 $
 -/
-
 
 
 /--
@@ -794,7 +793,9 @@ is the proposition that `A` is a knight.
 TheoremDoc Islander.isKnave as "isKnave" in "DSL"
 
 /--
+You can't be a knight and a knave at the same time.
 
+You can't lie and tell the truth at the same time.
 -/
 TheoremDoc Islander.not_isKnight_and_isKnave as "not_isKnight_and_isKnave" in "DSL"
 

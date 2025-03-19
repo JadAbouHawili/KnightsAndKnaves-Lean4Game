@@ -94,4 +94,5 @@ theorem dsl_iamknave (hAKn : A said A.isKnave): False := by
 --variable {A B C : Islander}
 def allKnights {A B C : Islander}:= A.isKnight ∧ B.isKnight ∧ C.isKnight
 def allKnaves {A B C : Islander} := A.isKnave ∧ B.isKnave ∧ C.isKnave
+def exactlyOneIsKnave {A B C : Islander} : Prop := (A.isKnave and B.isKnight and C.isKnight) ∨ (A.isKnight and B.isKnave and C.isKnight) ∨ (A.isKnight and B.isKnight and C.isKnave)
 end Islander
