@@ -58,7 +58,8 @@ Prove `AKnBnKn : A ∈ Knave ∧ B ∉ Knave` using `AKnight`, `stA`.
   "
 Prove `False` using `disjoint` , `AKnBnKn.left : A ∈ Knave` , `AKnight : A ∈ Knight`.
   "
-  exact disjoint h AKnight AKnBnKn.left
+  have := AKnBnKn.left
+  contradiction
 
   Hint "Prove `AKnave : A ∈ Knave` using `notleft_right` , `{AnKnight} : A ∉ Knight`"
   have AKnave := notleft_right h1 AnKnight
