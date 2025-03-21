@@ -118,4 +118,3 @@ Conclusion
 "
 "
 NewTactic by_contra
-NewTheorem iff_of_false iff_of_true

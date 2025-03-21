@@ -1,7 +1,7 @@
 import Mathlib.Data.Set.Basic
 import Mathlib.Data.Fintype.Card
 import Mathlib.Data.Multiset.Basic
-import Game.LevelLemmas.Logical
+--import Game.LevelLemmas.Logical
 import Game.LevelLemmas.settheory
 #check and_imp
 #check and
@@ -35,12 +35,6 @@ theorem IamKnaveIffFalse
     exact fun a => a.elim
     exact IamKnave h Or 
 
---axiom not_both
---  {Inhabitant : Type}
---  {A : Inhabitant}
---  {inst : DecidableEq Inhabitant}
---  {Knight : Finset Inhabitant} {Knave : Finset Inhabitant}
---  (AKnight : A ∈ Knight) (AKnave : A ∈ Knave)  : False
 macro_rules
 | `(tactic| contradiction) => 
   do `(tactic |first | ( apply disjoint  ; repeat assumption) )

@@ -102,4 +102,4 @@ Split using `constructor` or use ⟨⟩ notation.
 Conclusion
 "
 "
-NewTheorem iff_not_comm not_iff
+NewTheorem iff_not_comm

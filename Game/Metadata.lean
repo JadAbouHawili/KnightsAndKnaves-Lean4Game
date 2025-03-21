@@ -1,5 +1,4 @@
 import GameServer.Commands
-import Game.LevelLemmas.KnightsAndKnaves
 --import Mathlib.Tactic
 --import Mathlib.Util.Delaborators
 import Mathlib.Tactic.Have

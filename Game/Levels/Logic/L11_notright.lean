@@ -1,4 +1,5 @@
 import Game.Metadata
+import Game.LevelLemmas.Logical
 
 World "Logic" 
 Level 11
@@ -56,4 +57,4 @@ cases Or
 ```
 "
 
-NewTheorem notright_left eq_false or_false_iff
+NewTheorem notright_left eq_false or_false_iff not_iff iff_of_false iff_of_true not_iff_not

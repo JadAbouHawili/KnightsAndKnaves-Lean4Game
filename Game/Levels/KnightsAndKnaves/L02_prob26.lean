@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Metadata_KnightsAndKnaves
 
 #check iff_iff_implies_and_implies
 --  -- (p → q ∧ ¬p → ¬q)  ↔ (p ↔ q)
@@ -6,7 +6,7 @@ import Game.Metadata
   #check iff_and_self
   #check iff_self_and
   #check iff_iff_not_or_and_or_not
-  #check IffToIf
+--  #check IffToIf
 
 World "KnightsAndKnaves"
 Level 2

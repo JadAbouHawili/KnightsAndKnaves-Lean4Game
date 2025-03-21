@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Metadata_KnightsAndKnaves
 
 World "KnightsAndKnaves"
 Level 4
@@ -27,7 +27,9 @@ stAn : A ∈ Knave ↔ A ∉ Knave ∨ B ∈ Knave
 --axiom A : Inhabitant
 --axiom B : Inhabitant
 Statement
+
 (preamble := rw [not_and_or] at stAn ; simp at stAn) 
+{Inhabitant : Type}
 {inst : DecidableEq Inhabitant}
 {A B : Inhabitant}
 {Knight : Finset Inhabitant}

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Metadata_KnightsAndKnaves
 
 World "KnightsAndKnaves"
 Level 1

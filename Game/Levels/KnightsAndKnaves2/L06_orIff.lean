@@ -34,7 +34,7 @@ Assuming `nB : ¬B`:
   "
   by_contra nB
   have CdiffA := stBn.mp nB
-  #check notleft_right
+  --#check notleft_right
   simp [nB] at stA
   rw [not_iff_not] at CdiffA
   exact CdiffA stA.symm
@@ -77,4 +77,3 @@ Use constructor
 Conclusion
 "
 "
-NewTheorem not_iff_not

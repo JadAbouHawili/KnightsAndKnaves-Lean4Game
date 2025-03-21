@@ -1,4 +1,5 @@
 import Game.Metadata
+import Game.LevelLemmas.Logical
 
 World "Logic"
 Level 4
