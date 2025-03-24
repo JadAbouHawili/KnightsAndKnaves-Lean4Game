@@ -59,6 +59,8 @@ Remember that `A` is either a knight or a knave, represented by `h1` , and our r
 For this, we need the `cases` tactic. Try `cases h1` and see what happens.
 "
 
+open settheory_approach
+#check inst
 Statement IamKnave
   {inst : DecidableEq Inhabitant}
   {Knight : Finset Inhabitant} {Knave : Finset Inhabitant}

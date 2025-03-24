@@ -37,4 +37,4 @@ theorem IamKnaveIffFalse
 
 macro_rules
 | `(tactic| contradiction) => 
-  do `(tactic |first | ( apply disjoint  ; repeat assumption) )
+  do `(tactic |solve | ( apply disjoint  ; repeat assumption) )
