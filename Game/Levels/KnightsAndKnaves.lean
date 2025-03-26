@@ -2,6 +2,7 @@ import Game.Levels.KnightsAndKnaves.L01_IamKnave
 import Game.Levels.KnightsAndKnaves.L02_prob26
 import Game.Levels.KnightsAndKnaves.L03_IKnaveOrKnave
 import Game.Levels.KnightsAndKnaves.L04_prob33
+import Game.Levels.KnightsAndKnaves.asdf
 World "KnightsAndKnaves"
 Title "Knights And Knaves"
 

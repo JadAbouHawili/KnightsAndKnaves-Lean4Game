@@ -59,11 +59,9 @@ Remember that `A` is either a knight or a knave, represented by `h1` , and our r
 For this, we need the `cases` tactic. Try `cases h1` and see what happens.
 "
 
-open settheory_approach
-#check inst
+--open settheory_approach
 Statement IamKnave
-  {inst : DecidableEq Inhabitant}
-  {Knight : Finset Inhabitant} {Knave : Finset Inhabitant}
+  {inst : DecidableEq Inhabitant} {Knight : Finset Inhabitant} {Knave : Finset Inhabitant}
 {h : Knight ∩ Knave = ∅ }
 {h1 : A ∈ Knight ∨ A ∈ Knave }
 {stA : A ∈ Knight  ↔ (A ∈ Knave) }
@@ -73,7 +71,7 @@ Statement IamKnave
   {
   cases h1
   ·
-   Hint 
+   Hint
   "Notice that `h1` is now replaced by `h_1`, and we have two goals to prove instead of one. 
   The difference between each is that in the first, A is a knight(`h_1 : A ∈ Knight`) and in the second A is a knave(`h_1 : A ∈ Knave`).  
 
@@ -119,8 +117,6 @@ In this level, we have proven the following theorem which is now available to yo
 IamKnave (h : Knight ∩ Knave = ∅) (h1 : A ∈ Knight ∨ A ∈ Knave) (stA : A ∈ Knight ↔ A ∈ Knave) : False
 ```
 "
-
---NewTactic cases
 
 NewTheorem IamKnave
 NewDefinition Iff

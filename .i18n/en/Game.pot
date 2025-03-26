@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Mar 21 13:12:21 2025\n"
+"POT-Creation-Date: Wed Mar 26 11:25:21 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2872,6 +2872,18 @@ msgstr ""
 
 #: Game.Levels.KnightsAndKnaves.L04_prob33
 msgid "In the next world, we present a different way to represent the knights and knaves puzzle which would affect what the solution looks like(the patterns of reasoning won't change though, only their execution)."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.asdf
+msgid ""
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.asdf
+msgid ""
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves.asdf
+msgid ""
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves

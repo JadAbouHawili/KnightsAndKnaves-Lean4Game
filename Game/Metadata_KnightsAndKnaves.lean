@@ -2,10 +2,10 @@ import Game.Metadata
 import Game.LevelLemmas.KnightsAndKnaves
 -- environment
 namespace settheory_approach
-axiom Inhabitant : Type
+axiom  Inhabitant : Type
 axiom Knight : Finset Inhabitant
 axiom Knave : Finset Inhabitant
-axiom inst : DecidableEq Inhabitant
+--axiom inst : DecidableEq Inhabitant
 --variable ( inst : DecidableEq Inhabitant)
 namespace test
 variable (a b c d e : Nat)
@@ -16,7 +16,7 @@ variable (h4 : e = 1 + d)
 -- include command not in lean 4.7
 --include a b c d e h1 h2 h3 h4
 
-theorem T1 : a = e := 
+theorem T1 : a = e :=
   calc
     a = b := h1
     b = c + 1 := h2
@@ -29,8 +29,10 @@ end test
 -- theorem T1 : ∀ (a b c d e : Nat),
 --   a = b → b = c + 1 → c = d → e = 1 + d → a = e := ...
 variable [DecidableEq Inhabitant]
+-- variable [DecidableEq Inhabitant]
+
 axiom dis : Knight ∩ Knave = ∅ 
-example {A : Inhabitant} {hA : A ∈ Knight } : 2=2 := by 
+example {A : Inhabitant} {hA : A ∈ Knight } : 2=2 := by
   have := dis
   #check disjoint
   sorry
