@@ -116,5 +116,6 @@ Dependency KnightsAndKnavesLemmas → KnightsAndKnaves
 Dependency Logic → KnightsAndKnaves2 
 --Dependency KnightsAndKnaves2 → KnightsAndKnavesLemmas
 Dependency Logic → DSL_Knights_Knaves 
+--Dependency KnightsAndKnaves → DSL_Knights_Knaves
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

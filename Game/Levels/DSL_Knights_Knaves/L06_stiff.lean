@@ -10,8 +10,9 @@ Introduction
 "
 You have met a group of 2 islanders. Their names are Robert and Ira.
 
-Robert says: Ira is my type.
-Ira says: Robert is truthful.
+`Robert` says: `Ira` is my type.
+
+`Ira` says: `Robert` is truthful.
 
 Let's first prove `Robert.isKnight`
 "
@@ -24,30 +25,40 @@ Statement {Ira Robert : Islander}
   have RKnight : Robert.isKnight
   Hint 
   "
-We will do this by assuming `Robert.isKnave` then proving `False` i.e by proving `¬Robert.isKnave`. Change the goal from knight to knave.
+Change the goal from `knight_to_knave`.
   "
   knight_to_knave
-  Hint 
+  Hint
   "
 Assume `Robert.isKnave`
   "
   intro RKnave
-  Hint 
+  Hint
   "
-Now that `Robert.isKnave` , `Ira` was lying becase `¬Robert.isKnight`.
+Now that `Robert.isKnave` , `Ira` was lying becase `¬Robert.isKnight`. 
+Conclude that `Ira` is a knave using `¬Robert.isKnight`.
+
+After concluding `Ira.isKnave`:
+
+But now, `Robert` and `Ira` have the same type.
+Change the goal to `Robert.isKnight ↔ Ira.isKnight` and conclude from this that `Robert.isKnight`.
+
+
+To prove the iff statement, here are some relevant theorems:
+- iff_of_true
+- iff_of_false 
+- not_iff_not , not_iff_not.symm
+and converting from `knight_to_knave` or vice versa.
+
+You could even use `constructor` and prove every implication.
   "
   knave_to_knight at RKnave
   have IKnave := said_knave stI RKnave
-  Hint 
-  "
-But now, `Robert` and `Ira` have the same type. So we can conclude `Robert` is a knight giving us the contradiction we want.
-  "
   knight_to_knave at RKnave
   knight_to_knave at stR
   rw [not_iff_not] at stR
   have : Ira.isKnave ↔ Robert.isKnave := by 
     exact iff_of_true IKnave RKnave
-    --exact (iff_true_right RKnave).mpr IKnave
   have RKnight := said_knight stR this 
   contradiction
 

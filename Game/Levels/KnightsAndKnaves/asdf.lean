@@ -28,15 +28,15 @@ Statement
 : 1=2 := by
   -- i can have this take A instead of either as argument then use an axiom that gives the or, this tactic wouldn't work for all instantces of knight
   #check either
-  knight_to_knave B at *
-  knave_to_knight B at *
+  set_knight_to_knave B at *
+  set_knave_to_knight B at *
   have : False := disjoint_without hA hA'
   have : A ∈ Knight := by 
     have : B ∈ Knave := by 
-      knave_to_knight B
+      set_knave_to_knight B
       sorry
-    knave_to_knight B at this
-    knight_to_knave A
+    set_knave_to_knight B at this
+    set_knight_to_knave A
     sorry
   contradiction
 

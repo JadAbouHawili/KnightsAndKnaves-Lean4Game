@@ -13,8 +13,9 @@ What are A and B?
 Change the goal to `¬A.isKnight`
 "
 
+set_option push_neg.use_distrib true
 open Islander
-Statement 
+Statement
 {A B : Islander}
 {stA : A said (A.isKnave  and  ¬B.isKnave) }
 : ¬A.isKnight and B.isKnave := by 
@@ -23,13 +24,15 @@ Statement
 Assume `A` is a knight.
   "
   intro AKnight
-  Hint 
+  Hint
   "
 Conclude that `A`'s statement is true.
   "
   have AKnave := knight_said stA AKnight
   Hint "
 Now you have that `A` is a knave , which is a contradiction
+
+Remeber that `{AKnave}.left : A.isKnave`.
   "
   have AKnave := AKnave.left
   contradiction
@@ -38,16 +41,17 @@ Now you have that `A` is a knave , which is a contradiction
   "
 Now that we know that `A` is not a knight, we know that what `A` said was a lie.
 
-You can use 
+Use
 ```
 notknight_said
+    (stA : A said P) 
+    ( notKnight : ¬isKnight A) : ¬P
 ```
-
-or obtain that `isKnave A` and then use `knave_said`.
   "
+  /-
+obtain that `isKnave A` and then use `knave_said`.
+  -/
   have st := notknight_said stA AnK 
-  --simp at st
-  --#check not_and
   Hint
   "
 `h: ¬( P and Q)` means that both `P`,`Q` are not true at the same time which means one of them has to be false i.e `h : ¬P or ¬Q`.
@@ -63,16 +67,12 @@ which 'pushes' the 'negation' inside and applying the appropriate rules.
   "
 `A` is not a knight means that `A` is a knave, so `{st}` could be simplified.
 
-You can use `{AnK}` with the appropriate theorem to simplify `{st}`, or do it manually, or introduce a new hypothesis `AKnave : A.isKnave` ...
-  "
-  --have AKnave := notisKnight_isKnave AnK
-  simp [AnK,notisKnight_isKnave] at st
-  --have := notleft_right st AKnave
+Obtain `A.isKnave`, and simplify `{st}` obtaining `B.isKnave`.
 
-  Hint
+After that, close the goal
   "
-Close the goal.
-  "
+  simp [AnK,notisKnight_isKnave] at st
+
   constructor
   assumption
   assumption
