@@ -9,24 +9,14 @@ Introduction
 "
 "
 
---Statement
---  :  := by
---
---  {
---
---  }
-
-
 open settheory_approach
 #check dis
 #check Inhabitant
-axiom eith (A : Inhabitant): A ∈ Knight or A ∈ Knave 
-macro "set_knight_to_knave_notiff" t2:term "at"  t1:Lean.Parser.Tactic.locationWildcard : tactic =>
-do`(tactic| simp [inleft_notinrightIff (eith $t2) dis] at $t1)
 
 variable [DecidableEq Inhabitant]
 #check inleft_notinright dis
 #check inleft_notinrightIff
+#check either
 Statement
 {A : Inhabitant}
 {B : Inhabitant}
@@ -37,9 +27,17 @@ Statement
 (hB' : B ∈ Knave)
 : 1=2 := by
   -- i can have this take A instead of either as argument then use an axiom that gives the or, this tactic wouldn't work for all instantces of knight
-  #check eith
-  set_knight_to_knave_notiff B at *
+  #check either
+  knight_to_knave B at *
+  knave_to_knight B at *
   have : False := disjoint_without hA hA'
+  have : A ∈ Knight := by 
+    have : B ∈ Knave := by 
+      knave_to_knight B
+      sorry
+    knave_to_knight B at this
+    knight_to_knave A
+    sorry
   contradiction
 
 Conclusion
