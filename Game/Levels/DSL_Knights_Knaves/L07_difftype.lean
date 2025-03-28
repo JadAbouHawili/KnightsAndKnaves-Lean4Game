@@ -10,8 +10,9 @@ Introduction
 "
 You stumble into `A`,`B`.
 
-A says 'B is a knight'
-B says 'We are different types'
+`A` says 'B is a knight'
+
+`B` says 'We are different types'
 "
 
 open Islander
@@ -40,6 +41,8 @@ So, `B.isKnight` by `A`'s statement
   Hint
   "
 So `A`,`B` are the same type , but `B` being a knight also tells us that they are not. contradiction
+
+Conclude `¬(A.isKnight ↔ B.isKnight)` from `B`'statement then prove that `A.isKnight ↔ B.isKnight`
   "
   have notsame := knight_said stB BKnight
   exact notsame (iff_of_true AKnight BKnight)

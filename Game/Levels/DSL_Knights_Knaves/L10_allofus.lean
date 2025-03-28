@@ -4,10 +4,14 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 World "DSL_Knights_Knaves"
 Level 10
 
-Title ""
+Title "allKnights or allKnaves"
 
 Introduction
 "
+A says B is a knight
+B says all of us are knights
+C says A  is a knight or B is a knight
+
 Notice in the proof state,
 ```
 allKnights
@@ -28,9 +32,6 @@ However, this will make the proof state look cluttered so don't `unfold`.
 "
 
 /-
-A says B is a knight
-B says all of us are knights
-C says A  is a knight or B is a knight
 -/
 open Islander
 
@@ -68,6 +69,7 @@ Get `¬B.isKnight`
   Hint
   "
 So, `A`'s statement is false.
+
 Conclude that `A` is a knave.
   "
   have AKnave := said_knave stA h

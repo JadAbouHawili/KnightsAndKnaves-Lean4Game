@@ -5,7 +5,7 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 World "DSL_Knights_Knaves"
 Level 11
 
-Title ""
+Title "allKnaves , exactlyOneIsKnave"
 
 Introduction
 "
@@ -35,13 +35,13 @@ Assume `A` is a knight, and conclude that everyone must be a knave.
   "
 This would mean that `A` is also a knave, which is absurd.
 
-You can `unfold allKnaves at {allKnave}` and extract that from `A.isKnave`.
+You can `unfold allKnaves at {allKnave}` and extract `A.isKnave` from that.
   "
   Hint (hidden := true)
   "
 `{allKnave}.left` will do it.
   "
-  unfold Islander.allKnaves at allKnave
+  unfold allKnaves at allKnave
   have := allKnave.left
   contradiction
 
@@ -69,6 +69,8 @@ We have `A` is a knave, `B` is a knight, and that there is exactly one knave. So
 You can obtain `C` by using the fact that `A` is a knave, `B` is a knight and simplifying the expression `{exactlyoneKnave}`.
 
 `unfold` {exactlyoneKnave} first then use `simp`.
+
+If it doesn't get simplified enough, then change from `knight_to_knave` or vice versa the hypothesis involved.
   "
   unfold exactlyOneIsKnave at exactlyoneKnave
   simp [AKnave, BKnight] at exactlyoneKnave
@@ -76,7 +78,7 @@ You can obtain `C` by using the fact that `A` is a knave, `B` is a knight and si
 
   Hint
   "
-Now we are in the cases where `B` is a knave.
+Now we are in the case where `B` is a knave.
 
 Notice what we have.
 
@@ -85,6 +87,8 @@ We have that `A` is a knave, `B` is a knave, and that not everyone is a knave.
 So `C` must be a knight.
 
 Solving this is in the same spirit of what you previously did.
+
+`unfold allKnaves` then simplify it using the fact that `A,B` are knaves
   "
   --have notexactlyone := knave_said stB BKnave 
   --unfold exactlyOneIsKnave at notexactlyone 
@@ -100,9 +104,8 @@ Solving this is in the same spirit of what you previously did.
   -/
 
   unfold allKnaves at notallKnave 
-  simp [AKnave,BKnave] at notallKnave
   knight_to_knave at AKnave
-  have CKnight := notallKnave AKnave
+  simp [AKnave,BKnave] at notallKnave
   constructor
   assumption
   knight_to_knave

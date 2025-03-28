@@ -42,7 +42,7 @@ Assume `R.isKnave`
   intro RKnave 
   Hint
   "
-So `R` is not a knight, so `Ira` was lying .
+So `Robert` is not a knight, so `Ira` was lying .
 
 Therefore `Ira` is a knave
   "
@@ -51,8 +51,9 @@ Therefore `Ira` is a knave
   Hint 
   "
 `Robert` are `Ira` are the same, but we know they are not by `Robert`'s lie.
+This is a contradiction.
 
-contradiction
+First, conclude that `Robert`'s statement is false i.e `¬(Robert.isKnight ↔ Ira.isKnight)` then prove `Robert.isKnight ↔ Ira.isKnight`
   "
   knave_to_knight at IKnave 
   have same : Robert.isKnight ↔ Ira.isKnight 
@@ -67,7 +68,9 @@ contradiction
 
   Hint
   "
-Now that `Robert` is a knight, then `Ira` is a knight.
+Now that `Robert` is a knight, then `Ira` and `Robert` have the same type, and therefore `Ira` is a knight.
+
+Conclude `Robert`'s statement then use that to get `Ira.isKnight`.
 
 Close the goal.
   "
