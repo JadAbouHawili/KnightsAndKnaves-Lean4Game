@@ -13,6 +13,7 @@ A: All of us are knaves.
 B: Exactly one of us is a knave.
 "
 
+-- prob 32
 open Islander
 Statement
 {A B C : Islander}

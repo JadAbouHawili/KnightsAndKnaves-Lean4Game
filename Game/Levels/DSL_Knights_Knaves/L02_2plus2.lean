@@ -4,7 +4,7 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 World "DSL_Knights_Knaves" 
 Level 2
-
+-- prob 30
 Title "" 
 
 Introduction 

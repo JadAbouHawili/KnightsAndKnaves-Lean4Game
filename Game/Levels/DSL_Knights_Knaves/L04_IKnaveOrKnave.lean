@@ -6,7 +6,9 @@ World "DSL_Knights_Knaves"
 Level 4
 
 Title ""
-
+-- prob 28
+--A: 'At least one of us is a knave.'
+--What are A and B?
 Introduction 
 "
 `A` says 'I am a knave or `B` is a knave'.

@@ -58,10 +58,10 @@ Remember that `A` is either a knight or a knave, represented by `h1` , and our r
 
 For this, we need the `cases` tactic. Try `cases h1` and see what happens.
 "
-
---open settheory_approach
+#check 2=2
+open settheory_approach
 Statement IamKnave
-  {inst : DecidableEq Inhabitant} {Knight : Finset Inhabitant} {Knave : Finset Inhabitant}
+  {inst : DecidableEq Inhabitant} 
 {h : Knight ∩ Knave = ∅ }
 {h1 : A ∈ Knight ∨ A ∈ Knave }
 {stA : A ∈ Knight  ↔ (A ∈ Knave) }
@@ -105,7 +105,6 @@ Statement IamKnave
 
    exact disjoint h AKnight h_1
   }
-
 Conclusion
 "
 If you have heard about the liar's paradox before (https://en.wikipedia.org/wiki/Liar_paradox), then this should look familiar.

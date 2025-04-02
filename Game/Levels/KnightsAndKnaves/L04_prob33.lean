@@ -22,6 +22,7 @@ For `stAn`, the statement is equivalent to:
 stAn : A ∈ Knave ↔ A ∉ Knave ∨ B ∈ Knave
 ```
 "
+-- prob 33
 --axiom Inhabitant : Type
 --axiom inst : DecidableEq Inhabitant
 --axiom A : Inhabitant
@@ -77,9 +78,6 @@ After that, close the goal.
 
   simp [AKnave] at AnKnBKn
   exact And.intro AKnave AnKnBKn
-
-
-
 
 Conclusion
 "
