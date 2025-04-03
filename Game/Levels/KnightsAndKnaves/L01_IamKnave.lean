@@ -60,9 +60,12 @@ For this, we need the `cases` tactic. Try `cases h1` and see what happens.
 "
 #check 2=2
 open settheory_approach
+variable [DecidableEq Inhabitant]
+
+macro_rules
+| `(tactic| contradiction) => 
+  do `(tactic |solve | ( apply disjoint_without  ; repeat assumption) )
 Statement IamKnave
-  {inst : DecidableEq Inhabitant} 
-{h : Knight ∩ Knave = ∅ }
 {h1 : A ∈ Knight ∨ A ∈ Knave }
 {stA : A ∈ Knight  ↔ (A ∈ Knave) }
 {stAn : A ∈ Knave ↔ ¬ (A ∈ Knave) }
@@ -78,7 +81,7 @@ Statement IamKnave
   Conclude  `AKnave : A ∈ Knave` using `stA` , `h_1`.
   "
 
-   have AKnave := stA.mp h_1
+   have AKnave := stA.mp h
    Hint
   "So now we have `h_1 : A ∈ Knight` and `{AKnave} : A ∈ Knave`. 
 
@@ -86,7 +89,17 @@ Statement IamKnave
   "
 
    Hint (hidden := true) "Remember the `disjoint` theorem"
-   exact disjoint h h_1 AKnave
+   #check Knight
+   #check dis
+   --have := dis
+   --apply disjoint
+   --#check disjoint_without
+   --apply disjoint_without
+   --repeat assumption
+   contradiction
+    
+  -- exact dis
+   --exact dis h AKnave
 
   ·
    Hint
@@ -95,15 +108,15 @@ Statement IamKnave
 
     Conclude `A ∈ Knight` using `stA` , `h_1`.
   "
-   have AKnight:= stA.mpr h_1
+   have AKnight:= stA.mpr h
    Hint
   "So now we have `h_1 : A ∈ Knave` and `{AKnight} : A ∈ Knight`. 
 
   But, remember that `Knight` and `Knave` are disjoint i.e have no common element , `h : Knight ∩ Knave = ∅`.
   "
    Hint (hidden := true) "Remember the `disjoint` theorem"
-
-   exact disjoint h AKnight h_1
+   contradiction
+   --exact disjoint h AKnight h_1
   }
 Conclusion
 "

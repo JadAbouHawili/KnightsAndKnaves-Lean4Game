@@ -2,8 +2,20 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 open Islander
 
+
+
+World "DSL_Knights_Knaves" 
+Level 5
+
+Title "" 
+
+Introduction 
+"
+"
+
+
 -- prob 29
-example
+Statement
 {A B : Islander}
 {stA : A said (A.isKnave ∨ B.isKnight)}
 : A.isKnight ∧ B.isKnight := by 

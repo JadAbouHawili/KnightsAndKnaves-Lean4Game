@@ -28,8 +28,7 @@ stAn : A ∈ Knave ↔ A ∉ Knave ∨ B ∈ Knave
 --axiom A : Inhabitant
 --axiom B : Inhabitant
 Statement
-
-(preamble := rw [not_and_or] at stAn ; simp at stAn) 
+(preamble := rw [not_and_or] at stAn ; simp at stAn)
 {Inhabitant : Type}
 {inst : DecidableEq Inhabitant}
 {A B : Inhabitant}
@@ -57,7 +56,7 @@ Assume `AKnight : A ∈ Knight`:
 Prove `AKnBnKn : A ∈ Knave ∧ B ∉ Knave` using `AKnight`, `stA`.
   "
   have AKnBnKn  := stA.mp AKnight
-  Hint 
+  Hint
   "
 Prove `False` using `disjoint` , `AKnBnKn.left : A ∈ Knave` , `AKnight : A ∈ Knight`.
   "

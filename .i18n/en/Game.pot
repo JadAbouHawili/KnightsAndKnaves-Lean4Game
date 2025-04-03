@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Apr  1 01:15:35 2025\n"
+"POT-Creation-Date: Wed Apr  2 22:54:51 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1841,32 +1841,40 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid "Suppose A says, 'I am a knave, but B isn't.' \n"
 "What are A and B?\n"
 "\n"
 "Change the goal to `¬A.isKnight`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid "Assume `A` is a knight."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid "Conclude that `A`'s statement is true."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid "Now you have that `A` is a knave , which is a contradiction\n"
 "\n"
 "Remeber that `«{AKnave}».left : A.isKnave`."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid "Now that we know that `A` is not a knight, we know that what `A` said was a lie.\n"
 "\n"
 "Use\n"
@@ -1877,7 +1885,7 @@ msgid "Now that we know that `A` is not a knight, we know that what `A` said was
 "```"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid "`h: ¬( P and Q)` means that both `P`,`Q` are not true at the same time which means one of them has to be false i.e `h : ¬P or ¬Q`.\n"
 "\n"
 "You can apply this using\n"
@@ -1887,7 +1895,7 @@ msgid "`h: ¬( P and Q)` means that both `P`,`Q` are not true at the same time w
 "which 'pushes' the 'negation' inside and applying the appropriate rules."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid "`A` is not a knight means that `A` is a knave, so `«{st}»` could be simplified.\n"
 "\n"
 "Obtain `A.isKnave`, and simplify `«{st}»` obtaining `B.isKnave`.\n"
@@ -1895,15 +1903,15 @@ msgid "`A` is not a knight means that `A` is a knave, so `«{st}»` could be sim
 "After that, close the goal"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob33
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L06_stiff
+#: Game.Levels.DSL_Knights_Knaves.L07_stiff
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L06_stiff
+#: Game.Levels.DSL_Knights_Knaves.L07_stiff
 msgid "You have met a group of 2 islanders. Their names are Robert and Ira.\n"
 "\n"
 "`Robert` says: `Ira` is my type.\n"
@@ -1913,15 +1921,15 @@ msgid "You have met a group of 2 islanders. Their names are Robert and Ira.\n"
 "Let's first prove `Robert.isKnight`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L06_stiff
+#: Game.Levels.DSL_Knights_Knaves.L07_stiff
 msgid "Change the goal from `knight_to_knave`."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L06_stiff
+#: Game.Levels.DSL_Knights_Knaves.L07_stiff
 msgid "Assume `Robert.isKnave`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L06_stiff
+#: Game.Levels.DSL_Knights_Knaves.L07_stiff
 msgid "Now that `Robert.isKnave` , `Ira` was lying becase `¬Robert.isKnight`. \n"
 "Conclude that `Ira` is a knave using `¬Robert.isKnight`.\n"
 "\n"
@@ -1940,21 +1948,21 @@ msgid "Now that `Robert.isKnave` , `Ira` was lying becase `¬Robert.isKnight`. \
 "You could even use `constructor` and prove every implication."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L06_stiff
+#: Game.Levels.DSL_Knights_Knaves.L07_stiff
 msgid "Now that `Robert.isKnight` , `Ira` is telling the truth so is a knight as well.\n"
 "\n"
 "We have the goal."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L06_stiff
+#: Game.Levels.DSL_Knights_Knaves.L07_stiff
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.DSL_Knights_Knaves.L08_difftype
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.DSL_Knights_Knaves.L08_difftype
 msgid "You stumble into `A`,`B`.\n"
 "\n"
 "`A` says 'B is a knight'\n"
@@ -1962,68 +1970,68 @@ msgid "You stumble into `A`,`B`.\n"
 "`B` says 'We are different types'"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.DSL_Knights_Knaves.L08_difftype
 msgid "Let's start by proving `A.isKnave`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.DSL_Knights_Knaves.L08_difftype
 msgid "Change this to a goal about knights,\n"
 "and assume `A.isKnight`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.DSL_Knights_Knaves.L08_difftype
 msgid "So, `B.isKnight` by `A`'s statement"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.DSL_Knights_Knaves.L08_difftype
 msgid "So `A`,`B` are the same type , but `B` being a knight also tells us that they are not. contradiction\n"
 "\n"
 "Conclude `¬(A.isKnight ↔ B.isKnight)` from `B`'statement then prove that `A.isKnight ↔ B.isKnight`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.DSL_Knights_Knaves.L08_difftype
 msgid "Now that `A` is a knave, we can conclude `A` was lying and `B` is in fact a `knave`.\n"
 "\n"
 "Then, close the goal."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.DSL_Knights_Knaves.L08_difftype
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.DSL_Knights_Knaves.L09_sametype
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.DSL_Knights_Knaves.L09_sametype
 msgid "You have met a group of 2 islanders. Their names are Robert and Ira.\n"
 "\n"
 "Robert says: Ira is my type.\n"
 "Ira says: Robert is truthful."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.DSL_Knights_Knaves.L09_sametype
 msgid "Start by proving `¬Robert.isKnave`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.DSL_Knights_Knaves.L09_sametype
 msgid "Assume `R.isKnave`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.DSL_Knights_Knaves.L09_sametype
 msgid "So `Robert` is not a knight, so `Ira` was lying .\n"
 "\n"
 "Therefore `Ira` is a knave"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.DSL_Knights_Knaves.L09_sametype
 msgid "`Robert` are `Ira` are the same, but we know they are not by `Robert`'s lie.\n"
 "This is a contradiction.\n"
 "\n"
 "First, conclude that `Robert`'s statement is false i.e `¬(Robert.isKnight ↔ Ira.isKnight)` then prove `Robert.isKnight ↔ Ira.isKnight`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.DSL_Knights_Knaves.L09_sametype
 msgid "Now that `Robert` is a knight, then `Ira` and `Robert` have the same type, and therefore `Ira` is a knight.\n"
 "\n"
 "Conclude `Robert`'s statement then use that to get `Ira.isKnight`.\n"
@@ -2031,15 +2039,15 @@ msgid "Now that `Robert` is a knight, then `Ira` and `Robert` have the same type
 "Close the goal."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.DSL_Knights_Knaves.L09_sametype
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid "We have three inhabitants, `A`, `B`, and `C`.\n"
 "\n"
 "Two people are said to be of the same type if they are both knights or both knaves. \n"
@@ -2049,44 +2057,44 @@ msgid "We have three inhabitants, `A`, `B`, and `C`.\n"
 "`B`: `A` and `C` are of the same type."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid "Take cases for `A`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid "We are in the cases where `A.isKnight`\n"
 "\n"
 "Conclude that `B.isKnave`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid "Therefore, from `B`'s statement conclude that `A` and `C` are not the same i.e are different."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid "Use `not_iff'`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid "Conclude `¬C.isKnight` and close the goal."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid "Now that `A` is a knave. \n"
 "We can conlude `B` is a knight.\n"
 "\n"
 "which means that `A` and `C` have the same type, obtaining the `C` is a knave and closing the goal."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.DSL_Knights_Knaves.L10_same
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "allKnights or allKnaves"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "A says B is a knight\n"
 "B says all of us are knights\n"
 "C says A  is a knight or B is a knight\n"
@@ -2110,36 +2118,36 @@ msgid "A says B is a knight\n"
 "However, this will make the proof state look cluttered so don't `unfold`."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "First, take cases for `B`."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "We are at the cases where `B.isKnight`\n"
 "Conclude that `B`'s statement is true"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "`left` or `right` part of the goal?"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "Now we have that `B.isKnave`.\n"
 "Get `¬B.isKnight`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "So, `A`'s statement is false.\n"
 "\n"
 "Conclude that `A` is a knave."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "Now we have that `A.isKnave`\n"
 "Get `¬A.isKnight`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "Now, `C`'s statement is false , so conclude that `C` is a knave.\n"
 "\n"
 "You can do this in a number of ways:\n"
@@ -2153,50 +2161,50 @@ msgid "Now, `C`'s statement is false , so conclude that `C` is a knave.\n"
 "You can `unfold` the goal if that facilitates your reasoning."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "allKnaves , exactlyOneIsKnave"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "A: All of us are knaves.\n"
 "B: Exactly one of us is a knave."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "Start by proving `¬A.isKnight`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "Assume `A` is a knight, and conclude that everyone must be a knave."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "This would mean that `A` is also a knave, which is absurd.\n"
 "\n"
 "You can `unfold allKnaves at «{allKnave}»` and extract `A.isKnave` from that."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "`«{allKnave}».left` will do it."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "Now that `A` is not a knight, conclude that not everyone is a knave."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "Take cases for `B`"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "Knowing that `B` is a knight, conclude that there is exactly one knave."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "Notice what we have at our disposal.\n"
 "\n"
 "We have `A` is a knave, `B` is a knight, and that there is exactly one knave. So `C` must be a knight.\n"
@@ -2208,7 +2216,7 @@ msgid "Notice what we have at our disposal.\n"
 "If it doesn't get simplified enough, then change from `knight_to_knave` or vice versa the hypothesis involved."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "Now we are in the case where `B` is a knave.\n"
 "\n"
 "Notice what we have.\n"
@@ -2222,7 +2230,31 @@ msgid "Now we are in the case where `B` is a knave.\n"
 "`unfold allKnaves` then simplify it using the fact that `A,B` are knaves"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid ""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
 msgid ""
 msgstr ""
 
