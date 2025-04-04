@@ -1,11 +1,12 @@
 import Game.Metadata
-import Game.LevelLemmas.KnightsAndKnaves
+--import Game.LevelLemmas.KnightsAndKnaves
 import Mathlib.Data.Set.Basic
 import Mathlib.Data.Fintype.Card
 import Mathlib.Data.Multiset.Basic
 import Game.LevelLemmas.settheory
 
 namespace settheory_approach
+
 axiom  Inhabitant : Type
 axiom Knight : Finset Inhabitant
 axiom Knave : Finset Inhabitant
@@ -22,6 +23,10 @@ theorem disjoint_without
   rw [dis] at this
   #check dis
   contradiction
+
+macro_rules
+| `(tactic| contradiction) => 
+  do `(tactic |solve | ( apply disjoint_without  ; repeat assumption) )
 
 theorem IamKnave
 (stA : A ∈ Knight  ↔ (A ∈ Knave) )

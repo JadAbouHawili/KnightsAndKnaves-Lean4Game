@@ -711,15 +711,15 @@ DefinitionDoc Iff as "↔"
 -/
 TheoremDoc Nat.mul_left_cancel as "Nat.mul_left_cancel" in "*"
 
-/--
-As an implication
-```
-Knight ∩ Knave = ∅ →
-A ∈ Knight ∨ A ∈ Knave →
-(A ∈ Knight ↔ A ∈ Knave) → False
-```
--/
-TheoremDoc IamKnave as "IamKnave" in "Knights and Knaves"
+--/--
+--As an implication
+--```
+--Knight ∩ Knave = ∅ →
+--A ∈ Knight ∨ A ∈ Knave →
+--(A ∈ Knight ↔ A ∈ Knave) → False
+--```
+---/
+--TheoremDoc IamKnave as "IamKnave" in "Knights and Knaves"
 
 /--
 ```
