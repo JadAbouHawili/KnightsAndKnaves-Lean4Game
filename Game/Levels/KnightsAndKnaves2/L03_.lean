@@ -31,16 +31,54 @@ Statement
 {stA : Alice ↔ Gary}
 {stG2 : Gary ↔ Xavier}
 : Alice ∧ Gary ∧ Xavier := by 
+  Hint 
+  "
+Use `stA` to prove `Gary`
+  "
+  have G := stG.mpr stA
+  Hint
+  "
+Use `Gary` to prove `Xavier` and `Alice` and close the goal
+  "
+  have X := stG2.mp G
+  have A := stA.mpr G
+  exact ⟨A,G,X⟩
+
+example
+{Gary Xavier Alice : Prop}
+{stG : Gary ↔ (Alice ↔ Gary)}
+{stA : Alice ↔ Gary}
+{stG2 : Gary ↔ Xavier}
+: Alice ∧ Gary ∧ Xavier := by 
+  Hint
+  "
+Start by proving `Alice`
+  "
   have Al : Alice
   #check not_not.symm
  -- rw [not_not.symm]
+  Hint
+  "
+To prove `Alice`, assume `¬Alice` then derive a contradiction
+  "
   by_contra nAlice
   #check iff_false_right
-  have nGary: ¬Gary := by
-    exact (iff_false_right nAlice).mp (id (Iff.symm stA))
+  Hint
+  "
+  By `stA`, `Alice` and `Gary` are the same type so we can prove `¬Gary`. Change the goal to that.
+  "
+  have nGary: ¬Gary 
+  Hint
+  "
+Simplify `stA` using `{nAlice}` to prove `¬Gary`
+  "
+  simp [nAlice] at stA
+  assumption
 
-  have same : ¬Alice ↔ ¬Gary := by
-    exact not_congr stA
+    --exact (iff_false_right nAlice).mp (id (Iff.symm stA))
+
+  --have same : ¬Alice ↔ ¬Gary := by
+  --  exact not_congr stA
   have same2 := iff_of_false nAlice nGary
   have Gary := stG.mpr same2
   contradiction
