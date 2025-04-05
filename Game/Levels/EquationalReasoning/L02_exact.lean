@@ -19,8 +19,10 @@ As for the assumptions, we have `h : x=2` which means that `h` is an object of t
 
 # Goal
 Our goal is to prove that `x = 2`.
-Always look at the assumptions which represent everything you know. Well, we already have that `h` is a proof of the goal. 
-We should let Lean know. Using `exact h` accomplishes this.
+We must use our assumptions.
+We have that `h : x=2` i.e `h` is a proof that `x=2`.
+
+`h` is a proof of our goal, we should let Lean know that we have a proof of the goal. Using `exact h` accomplishes this.
 "
 
 variable (x : ℕ )

@@ -11,7 +11,8 @@ We know that `4 * y = 16`. Dividing both sides by `4` gives us `y = 4` which is 
 
 The theorem to do this is:
 ```
-Nat.mul_left_cancel firstarg secondarg
+Nat.mul_left_cancel firstarg 
+                    secondarg
 ```
 where the `firstarg` is a theorem that the number you are cancelling from both sides is positive, in our case this would be `four_pos`. 
 
@@ -93,13 +94,16 @@ Conclusion
 "
 Here is the type signature of Nat.mul_left_cancel:
   ```
-Nat.mul_left_cancel {n m k : ℕ} (np : 0 < n) (h : n * m = n * k) : m = k
+Nat.mul_left_cancel 
+(np : 0 < n) 
+(h : n * m = n * k) 
+: m = k
   ```
   `Nat.mul_left_cancel` takes two arguments which are:
    - `np`, a proof that some number `n` is positive.
    - `h`, the equation which has `n` on both sides of the equation multiplied on the left.
 
-  The result is canceling `n` from both sides of the equation.
+  The result is whats after `:` , canceling `n` from both sides of the equation giving a proof `m = k`.
 "
 
 NewTheorem Nat.mul_left_cancel four_pos

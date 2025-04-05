@@ -7,8 +7,8 @@ import Game.Levels.Logic.L06_cases
 import Game.Levels.Logic.L07_LogicalEquivalence
 import Game.Levels.Logic.L08_Not
 import Game.Levels.Logic.L09_False
-import Game.Levels.Logic.L10_notleft
-import Game.Levels.Logic.L11_notright
+--import Game.Levels.Logic.L10_notleft
+--import Game.Levels.Logic.L11_notright
 
 World "Logic"
 Title "Logic"
