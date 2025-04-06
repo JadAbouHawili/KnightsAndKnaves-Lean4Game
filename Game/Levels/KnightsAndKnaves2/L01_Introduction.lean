@@ -31,6 +31,8 @@ Assuming `hA : A`:
 - Prove `BC : B ∧ C` from `stA` using `A`
 - Prove `CnA : C ∧ ¬A` using `stB` , `BC.left : B`
 - Prove `False` using `AKnight : A`,`CnA.right : ¬A`.
+
+Each can be done in one step, so the appropriate `have` syntax should be used.
     "
   intro hA
   have BC := stA.mp hA
@@ -48,6 +50,8 @@ Assuming `hC : C`:
 - Prove `hB : B` using `stB`, `C ∧ ¬A`
 - Prove `hA : A` using `stA` , `B ∧ C`
 - Prove `False` from `hA: A`,`hnA : ¬A`
+
+For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr`. The `\\<\\>` notation is appropriate here.(although you could just use 
     "
   intro hC
   have hB := stB.mpr ⟨hC,hnA⟩

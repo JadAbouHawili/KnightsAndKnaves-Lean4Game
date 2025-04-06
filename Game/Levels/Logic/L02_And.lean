@@ -80,10 +80,12 @@ Statement (P Q : Prop) (hP : P) (hQ : Q)
 
 Conclusion
 "
-You can also use the constructor tactic which will split the goal `P and Q` into two,
+You can also use the `constructor` tactic which will split the goal `P and Q` into two,
 the first being to prove `P` and the second being to prove `Q`.
+
+Moreover, instead of `And.intro hP hQ` you can use the notation `\\<hP,hQ\\>` which means the same thing.
 "
 
-NewTheorem And.intro 
+NewTheorem And.intro
 NewDefinition logic_and
 NewTactic constructor

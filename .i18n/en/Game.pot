@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat Apr  5 14:31:29 2025\n"
+"POT-Creation-Date: Sun Apr  6 13:18:09 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1214,8 +1214,10 @@ msgid "In this level, we introduce the `∧` logical connective (read as 'and').
 msgstr ""
 
 #: Game.Levels.Logic.L02_And
-msgid "You can also use the constructor tactic which will split the goal `P and Q` into two,\n"
-"the first being to prove `P` and the second being to prove `Q`."
+msgid "You can also use the `constructor` tactic which will split the goal `P and Q` into two,\n"
+"the first being to prove `P` and the second being to prove `Q`.\n"
+"\n"
+"Moreover, instead of `And.intro hP hQ` you can use the notation `\\<hP,hQ\\>` which means the same thing."
 msgstr ""
 
 #: Game.Levels.Logic.L03_Or
@@ -1493,6 +1495,55 @@ msgstr ""
 msgid "Having proven `False`, instead of going through this to prove `Q` you can use the the `contradiction` tactic. If you were able to prove `False`, then the `contradiction` tactic will prove the goal regardless what the goal is because 'from `False`, anything follows'.\n"
 "\n"
 "Proving `False` is what's usually called deriving a contradiction, and note that to prove `False` you would first need to have a proof `P`, and a proof of `¬P` i.e `P → False`."
+msgstr ""
+
+#: Game.Levels.Logic.L10_have
+msgid "`have`"
+msgstr ""
+
+#: Game.Levels.Logic.L10_have
+msgid "In this level, we introduce that `have` tactic. \n"
+"You have to prove `R` but to you need `Q` first. \n"
+"\n"
+"Use `have hQ : Q` to change the goal to proving `Q`."
+msgstr ""
+
+#: Game.Levels.Logic.L10_have
+msgid "`hPQ` takes `hP` and gives you a proof of `Q`"
+msgstr ""
+
+#: Game.Levels.Logic.L10_have
+msgid "Now that you proved `Q`,\n"
+"\n"
+"`hQR` takes `«{hQ}»` and gives you a proof of `R` which is the goal."
+msgstr ""
+
+#: Game.Levels.Logic.L10_have
+msgid ""
+msgstr ""
+
+#: Game.Levels.Logic.L11_have
+msgid ""
+msgstr ""
+
+#: Game.Levels.Logic.L11_have
+msgid "Coming back to `have`,\n"
+"\n"
+"If you can prove something in one step then \n"
+"```\n"
+"have theorem-name := proof\n"
+"```\n"
+"will do. \n"
+"\n"
+"For example, you can obtain a proof of `Q` in one step by \n"
+"```\n"
+"hPQ hP\n"
+"```\n"
+"then `have hQ := hPQ hP` will add `hQ : Q` to the proof state i.e you have proven `Q` and `hQ` is the proof."
+msgstr ""
+
+#: Game.Levels.Logic.L11_have
+msgid ""
 msgstr ""
 
 #: Game.Levels.Logic
@@ -2251,7 +2302,9 @@ msgstr ""
 msgid "Assuming `hA : A`:\n"
 "- Prove `BC : B ∧ C` from `stA` using `A`\n"
 "- Prove `CnA : C ∧ ¬A` using `stB` , `BC.left : B`\n"
-"- Prove `False` using `AKnight : A`,`CnA.right : ¬A`."
+"- Prove `False` using `AKnight : A`,`CnA.right : ¬A`.\n"
+"\n"
+"Each can be done in one step, so the appropriate `have` syntax should be used."
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L01_Introduction
@@ -2262,7 +2315,9 @@ msgstr ""
 msgid "Assuming `hC : C`:\n"
 "- Prove `hB : B` using `stB`, `C ∧ ¬A`\n"
 "- Prove `hA : A` using `stA` , `B ∧ C`\n"
-"- Prove `False` from `hA: A`,`hnA : ¬A`"
+"- Prove `False` from `hA: A`,`hnA : ¬A`\n"
+"\n"
+"For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr`. The `\\<\\>` notation is appropriate here.(although you could just use"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L01_Introduction
@@ -2277,23 +2332,19 @@ msgstr ""
 msgid "Robert says: Ira is my type.\n"
 "Ira says: Robert is truthful.\n"
 "\n"
-"Change the goal to `Robert`"
-msgstr ""
-
-#: Game.Levels.KnightsAndKnaves2.L02_
-msgid "Assume `¬Robert` and prove `False`.\n"
+"Ira is my type is translated as \n"
+"```\n"
+"( (Ira and Robert) or (¬Ira and ¬Robert) )\n"
+"```\n"
+"Notice that this is equivalent to `Ira ↔ Robert`\n"
 "\n"
-"`by_contra nRobert` does that."
-msgstr ""
-
-#: Game.Levels.KnightsAndKnaves2.L02_
-msgid "`Robert` is equivalent to `Ira ↔ Robert`\n"
+"Replace this expression in `stR` by `Ira ↔ Robert` using\n"
+"```\n"
+"iff_iff_and_or_not_and_not.symm\n"
+": (a and b or ¬a and ¬b ) ↔ (a ↔ b)\n"
+"```\n"
 "\n"
-"So `¬Robert` is equivlent to `¬(Ira ↔ Robert)` contradicting `stI`."
-msgstr ""
-
-#: Game.Levels.KnightsAndKnaves2.L02_
-msgid "Now that you know `Robert`, conclude `Ira`"
+"then use `stI` to prove `Robert` and obtain `Ira`."
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L02_
@@ -2312,6 +2363,14 @@ msgid "Generated from [here](https://philosophy.hku.hk/think/logic/knights.php)\
 "Gary says: Alice is my type.\n"
 "Alice says: Gary never lies.\n"
 "Gary says: Xavier never lies."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L03_
+msgid "Use `stA` to prove `Gary`"
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L03_
+msgid "Use `Gary` to prove `Xavier` and `Alice` and close the goal"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L03_
@@ -2623,7 +2682,7 @@ msgid "Say we have an islander `A` who could be a knight or a knave.\n"
 "All puzzles in this world were generated(and possibly modified) from [wolfram cloud demonstration](https://www.wolframcloud.com/objects/demonstrations/KnightsAndKnavesPuzzleGenerator-source.nb)\n"
 "\n"
 "Note that you could also take a more explicit truth table approach, where you list all the cases in a truth table and eliminate the cases which contradict the rules of the game(e.g `A` being a knight but `A`'s statement being false). If you are left with one possibility then the puzzle has a unique solution, otherwise it has multiple solutions.\n"
-"This can be done in [prolog](https://www.youtube.com/watch?v=oEAa2pQKqQU) and [other provers](https://summerofgodel.blogspot.com/2019/04/table-of-contents-for-series-of-posts.html?)"
+"This can be done in [prolog](https://www.youtube.com/watch?v=oEAa2pQKqQU) and [other provers](https://summerofgodel.blogspot.com/2019/04/part-6-propositional-logic-approach-to.html)"
 msgstr ""
 
 #: Game

@@ -23,9 +23,9 @@ Statement (P Q R : Prop) (hP: P) (hQ: Q) (hR : R)
    exact hP
   }
 
-Conclusion 
+Conclusion
 "
-In the next levels, we will discuss how to construct new propositions from old ones whose meaning and truth value would depend on those old ones. 
+In the next levels, we will discuss how to construct new propositions from old ones whose meaning and truth value would depend on those old ones.
 "
 
 NewDefinition «Prop»
