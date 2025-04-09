@@ -20,7 +20,8 @@ The goal is to prove `False`, i.e that given the rules of the game , if `A` says
 By the rules of the game, we know that `A` is either a knight or a knave. 
 ```
 isKnight_or_isKnave 
-(A : Islander) : A.isKnight or A.isKnave
+(A : Islander) 
+: A.isKnight or A.isKnave
 ```
 
 Try
@@ -88,7 +89,8 @@ Conclusion
 "
 We have proved the following theorem:
 ```
-dsl_iamknave (hAKn : A said A.isKnave) : False
+dsl_iamknave 
+(hAKn : A said A.isKnave) : False
 ```
 which is given to you to use. 
 

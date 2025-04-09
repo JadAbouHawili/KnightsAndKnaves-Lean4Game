@@ -20,7 +20,7 @@ Statement
 {stBn : ¬B ↔ ¬C ∨ A}
 : ¬A ∧ ¬B ∧ ¬C := by
 
-  Hint 
+  Hint
   "
 Use `have` to set `¬A` as the new goal.
   "

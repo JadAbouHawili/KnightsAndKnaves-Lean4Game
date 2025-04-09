@@ -20,7 +20,8 @@ Introduction
 We will introduce the knights and knaves puzzle here explaining rules of the game and the corresponding lean representation.
 
 The setting is an island.
-Every islander will make a statement. There are two types of islanders, 'knights' and knaves.
+Every islander will make a statement. There are two types of islanders, 'knights' and 'knaves'.
+
 For a given islander `A`,
 - The proposition that `A` is a knight
 ```
@@ -32,13 +33,14 @@ A.isKnave
 ```
 
 Every islander is either a knight or a knave:
-
 ```
 isKnight_or_isKnave (A : Islander)
 : A.isKnight ∨ A.isKnave
 ```
 
 Knights always tell the truth, and 'knaves' that always lie.
+
+`knight_said`. Whatever `knight_said` is true.
 
 ```
 -- A is a knight,
@@ -48,6 +50,8 @@ knight_said
 (AKnight : A.isKnight) : P
 ```
 
+`said_knight`. If what is said is true, then knight. 
+
 ```
 -- A said something true,
 -- so A is a knight.
@@ -56,6 +60,8 @@ said_knight
 (hP : P) : A.isKnight
 ```
 
+`knave_said`. Whatever `knave_said` is false.
+
 ```
 -- A is a knave,
 -- so whatever A said is false
@@ -63,6 +69,8 @@ knave_said
 (stA : A said P) 
 (AKnave : A.isKnave) : ¬P
 ```
+
+`said_knave`. If what is said is false, then knave.
 
 ```
 -- A said something that is false(i.e a lie),
@@ -78,5 +86,5 @@ not_isKnight_and_isKnave
 (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
 ```
 
-The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning.
+The objective is to conclude who is a knight and who is a knave, based on the statements of several islanders. This will be done using logical reasoning.
 "

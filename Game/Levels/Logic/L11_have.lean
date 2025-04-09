@@ -1,6 +1,5 @@
 import Game.Metadata
 
-
 World "Logic" 
 Level 11
 
@@ -28,19 +27,8 @@ Statement {P Q R : Prop}
 {hPQ : P → Q}
 {hQR : Q → R}
   : R := by
-  sorry
-
-
-
-
+  tauto
 
 Conclusion 
 "
 "
-
-/- Use these commands to add items to the game's inventory. -/
-
---NewTactic 
--- NewTheorem Nat.add_comm Nat.add_assoc
--- NewDefinition Nat Add Eq
-
