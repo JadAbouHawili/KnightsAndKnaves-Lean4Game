@@ -187,9 +187,8 @@ In other words, `x ∈ A → x ∉ B` , `x ∈ B → x ∉ A` which are `inleft_
 -/
 DefinitionDoc inter as "∩"
 
-
 /--
-`And.intro` takes a proof of `P`, a proof of `Q`, and gives a proof of `P ∧ Q` where `P Q : Prop`.
+The theorem `And.intro` takes a proof of `P`, a proof of `Q`, and gives a proof of `P ∧ Q` where `P Q : Prop`.
 
 Given,
 ```

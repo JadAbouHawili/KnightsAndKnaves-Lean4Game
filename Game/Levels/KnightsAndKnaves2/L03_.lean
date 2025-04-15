@@ -10,11 +10,13 @@ Introduction
 "
 Generated from [here](https://philosophy.hku.hk/think/logic/knights.php)
 
-You have met a group of 3 islanders. Their names are Xavier, Gary, and Alice.
+You have met a group of 3 islanders. Their names are `Xavier`, `Gary`, and `Alice`.
 
-Gary says: Alice is my type.
-Alice says: Gary never lies.
-Gary says: Xavier never lies.
+`Gary` says: `Alice` is my type.
+
+`Alice` says: `Gary` never lies.
+
+`Gary` says: `Xavier` never lies.
 "
 
 /-
@@ -38,7 +40,9 @@ Use `stA` to prove `Gary`
   have G := stG.mpr stA
   Hint
   "
-Use `Gary` to prove `Xavier` and `Alice` and close the goal
+Use `Gary` to prove `Xavier` and `Alice` and close the goal.
+
+Remember the ⟨⟩ notation to close the goal.
   "
   have X := stG2.mp G
   have A := stA.mpr G
