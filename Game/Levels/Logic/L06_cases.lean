@@ -4,13 +4,16 @@ import Game.LevelLemmas.Logical
 World "Logic"
 Level 6
 
-Title ""
+Title "Proof by `cases`"
 
 Introduction 
 "
-In this level, we will do a 'proof by cases'. 
+In this level, we will do a 'proof by cases'.
+
 By `h : P or Q`, we have two cases:
-`P` being true or `Q` being true. If we consider each case individually and prove `R`, then we can conclude that `R` is true.
+`P` being true or `Q` being true. 
+
+If we consider each case individually and prove `R`, then we can conclude that `R` is true.
 
 To do this, start with `cases h`
 "

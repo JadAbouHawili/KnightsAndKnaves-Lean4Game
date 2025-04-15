@@ -52,24 +52,6 @@ stG.mpr stA : Gary
   Hint
   "
 Use `Gary` to prove `Xavier` and `Alice` and close the goal.
-
-The goal is implicitly
-```
-Alice and (Gary and Xavier)
-```
-
-You can use 
-```
-And.intro (_) (And.intro _ _)
-```
-replacing `_` with the appropriate terms.
-
-Moreover, 
-you could also use the ⟨⟩ notation,
-```
-⟨_,_,_⟩ 
-```
-replacing the `_` with the appropriate terms.
   "
   have X := stG2.mp G
   have A := stA.mpr G

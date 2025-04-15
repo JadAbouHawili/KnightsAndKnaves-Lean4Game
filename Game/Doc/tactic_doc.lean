@@ -40,6 +40,9 @@ P
 TacticDoc assumption
 
 /--
+# Proof by cases
+The `cases` tactic enables us to do a 'proof by cases'.
+
 Given,
 ```
 PorQ : P ∨ Q
@@ -47,7 +50,9 @@ PorQ : P ∨ Q
 Goal
 some-goal
 ```
-`cases PorQ` will first assume `P` and ask you to prove `some-goal` and then it will assume `Q` and ask you to prove `some-goal`. So in both cases, `some-goal` is true. Therefore we can conclude `some-goal`. This is called a proof by cases.
+`cases PorQ` will first assume `P` and ask you to prove `some-goal` and then it will assume `Q` and ask you to prove `some-goal`. 
+
+So in both cases, `some-goal` is true. Therefore we can conclude `some-goal`. This is called a proof by cases.
 -/
 TacticDoc cases
 /--

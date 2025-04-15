@@ -61,6 +61,31 @@ For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr
   Hint
   "
 Using `¬C`, we get `¬C ∨ A` which gives `¬B` using `stBn`.
+
+After which, you need to close the goal of the form 
+```
+_ and _ and _
+```
+
+The goal is implicitly
+```
+¬A and (¬B and ¬C)
+```
+
+You can use
+```
+And.intro (_) (And.intro _ _)
+```
+replacing `_` with the appropriate terms.
+
+Moreover,
+you could also use the ⟨⟩ notation,
+```
+⟨_,_,_⟩
+```
+replacing the `_` with the appropriate terms.
+
+You could even use `have` to first prove `¬B and ¬C` and add it to the hypothesis,then prove the goal.
   "
   have nCorA : ¬C ∨ A
   left
