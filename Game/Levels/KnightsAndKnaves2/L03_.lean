@@ -35,14 +35,41 @@ Statement
 : Alice ∧ Gary ∧ Xavier := by 
   Hint 
   "
-Use `stA` to prove `Gary`
+Use `stA` and `stG` to prove `Gary`
+  "
+  Hint (hidden := true)
+  "
+Note that,
+```
+stG.mpr : (Alice ↔ Gary) ↔ Gary  
+```
+and so
+```
+stG.mpr stA : Gary
+```
   "
   have G := stG.mpr stA
   Hint
   "
 Use `Gary` to prove `Xavier` and `Alice` and close the goal.
 
-Remember the ⟨⟩ notation to close the goal.
+The goal is implicitly
+```
+Alice and (Gary and Xavier)
+```
+
+You can use 
+```
+And.intro (_) (And.intro _ _)
+```
+replacing `_` with the appropriate terms.
+
+Moreover, 
+you could also use the ⟨⟩ notation,
+```
+⟨_,_,_⟩ 
+```
+replacing the `_` with the appropriate terms.
   "
   have X := stG2.mp G
   have A := stA.mpr G

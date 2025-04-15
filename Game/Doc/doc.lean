@@ -103,13 +103,13 @@ In other words, it acts like a function. If you give `P → Q` a proof of `P`, y
 DefinitionDoc imp as "→"
 
 /--
-`∧`
+`∧` read as 'and'
 Truth table:
 
 $
 \begin{array}{|c c|c|} 
 \hline
-P & Q & P and Q \\
+P & Q & \text{P and Q} \\
 \hline
 T & T & T \\
 \hline
@@ -127,10 +127,11 @@ The truth table of a logical connective illustrates the rule for that logical co
 The following truth table illustrates this for the previously discussed `∧` connective.
 `T` stands for true
 `F` stands for false
+
 $
 \begin{array}{|c c|c|} 
 \hline
-P & Q & P and Q \\
+P & Q & \text{P and Q} \\
 \hline
 T & T & T \\
 T & F & F \\
@@ -139,7 +140,10 @@ F & F & F \\
 \hline
 \end{array}
 $
+
 Notice that `P and Q` is true when both `P` is true and `Q` is true, being false otherwise.
+
+
 -/
 DefinitionDoc logic_and as "and" 
 
@@ -196,6 +200,17 @@ hP : P
 hQ : Q
 ```
 we have `And.intro hP hQ : P ∧ Q`
+
+## Alternative Notation
+Typed as `\<hP,hQ\>`,
+```
+<hP,hQ> : P ∧ Q
+```
+instead of 
+```
+And.intro hP hQ : P ∧ Q
+```
+
 -/
 TheoremDoc And.intro as "And.intro" in "And"
 

@@ -45,7 +45,9 @@ Statement {A B C : Prop}
     "
 Use `have` to set `A` as the new goal.
 
-We want to prove `A`, to do this we will prove `¬¬A`(which is equivalent to `A`) i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.
+We want to prove `A`, to do this we will prove `¬¬A`(which is equivalent to `A`) i.e `¬A → False`. The tactic `by_contra` facilitates this.
+
+`by_contra h` assumes `h : ¬A` and changes the goal to `False`.
 
 This is called a proof by contradiction because we are assuming the negation of what we want to prove and getting a contradiction.
 

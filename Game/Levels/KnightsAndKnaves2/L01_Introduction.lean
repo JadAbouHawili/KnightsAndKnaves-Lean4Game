@@ -51,7 +51,7 @@ Assuming `hC : C`:
 - Prove `hA : A` using `stA` , `B ∧ C`
 - Prove `False` from `hA: A`,`hnA : ¬A`
 
-For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr`. The `\\<\\>` notation is appropriate here.(although you could just use 
+For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr`. The `\\<\\>` notation is appropriate here.(although you could just use `And.intro`)
     "
   intro hC
   have hB := stB.mpr ⟨hC,hnA⟩

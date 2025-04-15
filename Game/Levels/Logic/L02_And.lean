@@ -58,7 +58,9 @@ Notice that `P and Q` is true when both `P` is true and `Q` is true, being false
 
 From this, we conclude that we can introduce `∧` if we have a proof of `P` and a proof of `Q`.
 ```
-  And.intro  (left : P) (right : Q) : P and Q
+And.intro  (left : P) 
+           (right : Q) 
+: P and Q
 ```
 
 You can think of `And.intro` as a function that takes two inputs: a proof of `P`, a proof of `Q` and returns a proof of `P and Q`.
