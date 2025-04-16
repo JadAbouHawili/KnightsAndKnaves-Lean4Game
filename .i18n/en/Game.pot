@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Apr 15 16:01:35 2025\n"
+"POT-Creation-Date: Wed Apr 16 18:20:46 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -598,13 +598,14 @@ msgid "### **Logic Constants & Operators**\n"
 msgstr ""
 
 #: Game.Doc.doc
-msgid "`P ↔ Q`  is defined as `(P → Q) ∧ (Q → P)`. \n"
+msgid "## Truth Table\n"
+"`P ↔ Q`  is defined as `(P → Q) ∧ (Q → P)`.\n"
 "\n"
 "Its truth table looks like the folowing:\n"
 "$\n"
-"\\begin{array}{|c c|c c|c|} \n"
+"\\begin{array}{|c c|c c|c|}\n"
 "\\hline\n"
-"P & Q & P → Q & Q → P & P → Q ∧ Q → P\\\\\n"
+"P & Q & P → Q & Q → P & P ↔ Q \\\\\n"
 "\\hline\n"
 "T & T & T & T & T \\\\\n"
 "\\hline\n"
@@ -2535,11 +2536,15 @@ msgid "Prove `CorB : C ∨ B` using `stA` , `«{hA}»`."
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L04_iff
-msgid "Now consider cases for `CorB`."
+msgid "Now consider cases for `CorB` and for every case prove the goal.\n"
+"\n"
+"(proof by cases)"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L04_iff
-msgid "Prove `AiffC : A ↔ C` using `iff_of_true (ha : a) (hb : b) : a ↔ b` , `hA : A` , `h : C`"
+msgid "Prove `AiffC : A ↔ C` using `iff_of_true (ha : a) (hb : b) : a ↔ b` , `hA : A` , `h : C`\n"
+"\n"
+"`iff_of_true` says that we can conclude `P ↔ Q` is true when `P` is true , `Q` is true(check the truth table)."
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L04_iff
@@ -2549,9 +2554,19 @@ msgstr ""
 #: Game.Levels.KnightsAndKnaves2.L04_iff
 msgid "Prove the goal using `«{hA}»`, `«{hB}»` ,`h`.\n"
 "\n"
-"Use `constructor` tactic to split the goal in two, one would be proving the left side of `∧` and the other being the right side.\n"
+"Use `constructor` tactic to split the goal in two, the first being `A` and the second being `B ∧ C` or use ⟨⟩ notation or us `And.intro` or use `have` to first construct a proof of `B ∧ C` then use `And.intro` etc...\n"
 "\n"
 "The proof of the second case for `h : B` would require using `stB`."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L04_iff
+msgid "We are now in the case where `B` is true, `h : B`.\n"
+"\n"
+"Prove `AiffC : A ↔ C` using `stB` , `h`."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L04_iff
+msgid "Prove `C` using `«{AiffC}»` , `«{hA}»`"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L04_iff

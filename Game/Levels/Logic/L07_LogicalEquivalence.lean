@@ -56,3 +56,5 @@ P
 ```
 `exact PsameQ.mpr hQ` would close the goal.
 "
+
+NewDefinition Iff

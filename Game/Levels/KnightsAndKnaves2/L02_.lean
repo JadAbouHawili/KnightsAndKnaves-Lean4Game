@@ -56,7 +56,7 @@ Assume `¬Robert` and prove `False`.
   "
 `Robert` is equivalent to `Ira ↔ Robert`
 
-So `¬Robert` is equivlent to `¬(Ira ↔ Robert)` contradicting `stI`.
+So `¬Robert` is equivalent to `¬(Ira ↔ Robert)` contradicting `stI`.
   "
   rw [stR] at h
   contradiction

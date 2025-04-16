@@ -72,12 +72,16 @@ Prove `CorB : C ∨ B` using `stA` , `{hA}`.
 
   Hint
   "
-Now consider cases for `CorB`.
+Now consider cases for `CorB` and for every case prove the goal.
+
+(proof by cases)
   "
   cases CorB
   Hint
   "
   Prove `AiffC : A ↔ C` using `iff_of_true (ha : a) (hb : b) : a ↔ b` , `hA : A` , `h : C`
+
+  `iff_of_true` says that we can conclude `P ↔ Q` is true when `P` is true , `Q` is true(check the truth table).
   "
   have AiffC := iff_of_true hA h
   Hint 
@@ -89,7 +93,7 @@ Now consider cases for `CorB`.
   "
   Prove the goal using `{hA}`, `{hB}` ,`h`.
 
-  Use `constructor` tactic to split the goal in two, one would be proving the left side of `∧` and the other being the right side.
+  Use `constructor` tactic to split the goal in two, the first being `A` and the second being `B ∧ C` or use ⟨⟩ notation or us `And.intro` or use `have` to first construct a proof of `B ∧ C` then use `And.intro` etc...
 
 The proof of the second case for `h : B` would require using `stB`.
   "
@@ -97,21 +101,19 @@ The proof of the second case for `h : B` would require using `stB`.
   exact hA
   exact And.intro hB h
 
---  Hint
---      "
---Prove `AiffC : A ↔ C` using `stB` , `h`.
---      "
+  Hint
+      "
+We are now in the case where `B` is true, `h : B`.
+
+Prove `AiffC : A ↔ C` using `stB` , `h`.
+      "
   have AiffC := stB.mp h
 
---  Hint
---      "
---Prove `C` using `{AiffC}` , `{hA}`
---      "
+  Hint
+      "
+Prove `C` using `{AiffC}` , `{hA}`
+      "
   have hC := AiffC.mp hA
---  Hint
---    "
---    Similarly use `constructor`
---    "
   constructor
   exact hA
   exact And.intro h hC

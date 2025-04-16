@@ -101,7 +101,7 @@ The truth of `P` IMPLIES the truth of `Q`. A proof of `P` IMPLIES a proof of `Q`
 In other words, it acts like a function. If you give `P → Q` a proof of `P`, you get a proof of `Q`.
 -/
 DefinitionDoc imp as "→"
-
+ 
 /--
 `∧` read as 'and'
 Truth table:
@@ -674,13 +674,14 @@ DefinitionDoc Nat as "ℕ"
 DefinitionDoc UnicodeSymbols as "Unicode Symbols"
 
 /--
-`P ↔ Q`  is defined as `(P → Q) ∧ (Q → P)`. 
+## Truth Table
+`P ↔ Q`  is defined as `(P → Q) ∧ (Q → P)`.
 
 Its truth table looks like the folowing:
 $
-\begin{array}{|c c|c c|c|} 
+\begin{array}{|c c|c c|c|}
 \hline
-P & Q & P → Q & Q → P & P → Q ∧ Q → P\\
+P & Q & P → Q & Q → P & P ↔ Q \\
 \hline
 T & T & T & T & T \\
 \hline
