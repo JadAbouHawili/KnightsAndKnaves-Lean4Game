@@ -57,3 +57,4 @@ Statement {P : Prop} {h : P or False}
 Conclusion 
 "
 "
+NewTactic simp
