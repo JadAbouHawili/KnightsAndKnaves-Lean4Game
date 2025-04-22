@@ -121,4 +121,3 @@ Prove `C` using `{AiffC}` , `{hA}`
 Conclusion
 "
 "
-NewTactic by_contra
