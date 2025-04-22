@@ -40,17 +40,37 @@ hnZ : ¬Zoey
 to the list of assumptions in the proof state.
   "
   by_contra nZ
+  Hint
+  "
+Prove `Mel` using `¬Zoey`, `stZn`.
+  "
   have hM := stZn.mp nZ
+  Hint
+  "
+Prove `Mel and Zoey` using `Mel`, `stM`
+  "
   have hMZ := stM.mp hM
+  Hint
+  "
+We have `Zoey` and `¬Zoey`
+  "
   exact nZ hMZ.right
 
-  have nM := stZ.mp hZ
+  Hint
+  "
+Use constructor and close the first goal.
+  "
   constructor
-  repeat assumption
+  assumption
+  Hint
+  "
+Prove the second goal using `Zoey`, `stZ`
+  "
+  have nM := stZ.mp hZ
+  assumption
   }
 
-
-Conclusion 
+Conclusion
 "
 "
 NewTactic by_contra

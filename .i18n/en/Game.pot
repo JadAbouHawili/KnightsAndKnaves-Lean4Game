@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Apr 22 23:20:48 2025\n"
+"POT-Creation-Date: Tue Apr 22 23:34:25 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2393,10 +2393,6 @@ msgid "A very special island is inhabited only by knights and knaves. Knights al
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L01_Intro
-msgid "appear twicw?"
-msgstr ""
-
-#: Game.Levels.KnightsAndKnaves2.L01_Intro
 msgid "To prove `Zoey`, we will do a proof by contradiction.\n"
 "\n"
 "We will assume `¬Zoey` and show a contradiction, proving that `¬Zoey → False` i.e `¬¬Zoey` which is equivalent to `Zoey`.\n"
@@ -2406,6 +2402,26 @@ msgid "To prove `Zoey`, we will do a proof by contradiction.\n"
 "hnZ : ¬Zoey\n"
 "```\n"
 "to the list of assumptions in the proof state."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+msgid "Prove `Mel` using `¬Zoey`, `stZn`."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+msgid "Prove `Mel and Zoey` using `Mel`, `stM`"
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+msgid "We have `Zoey` and `¬Zoey`"
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+msgid "Use constructor and close the first goal."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+msgid "Prove the second goal using `Zoey`, `stZ`"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L01_Intro
