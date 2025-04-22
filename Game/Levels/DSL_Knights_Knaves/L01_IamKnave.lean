@@ -70,12 +70,13 @@ This is a contradiction
 
 Recall
 ```
-not_isKnight_and_isKnave (AKnight : isKnight A) (AKnave : isKnave A) : False
+not_isKnight_and_isKnave 
+(AKnight : isKnight A) 
+(AKnave : isKnave A) : False
 ```
 
 You can use this to prove `False`, or use `contradiction` which has been modified to handle when `A` is a knight and a knave.
   "
-  #check not_isKnight_and_isKnave
   contradiction
 
   Hint

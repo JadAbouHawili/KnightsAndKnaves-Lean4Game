@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat Apr 19 20:43:08 2025\n"
+"POT-Creation-Date: Tue Apr 22 22:07:47 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1704,7 +1704,9 @@ msgid "We know `A` is a knight and a knave. \n"
 "\n"
 "Recall\n"
 "```\n"
-"not_isKnight_and_isKnave (AKnight : isKnight A) (AKnave : isKnave A) : False\n"
+"not_isKnight_and_isKnave \n"
+"(AKnight : isKnight A) \n"
+"(AKnave : isKnave A) : False\n"
 "```\n"
 "\n"
 "You can use this to prove `False`, or use `contradiction` which has been modified to handle when `A` is a knight and a knave."
@@ -2374,21 +2376,37 @@ msgid "We will introduce the knights and knaves puzzle here explaining rules of 
 "The objective is to conclude who is a knight and who is a knave, based on the statements of several islanders. This will be done using logical reasoning."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L01_Introduction
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L01_Introduction
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+msgid "A very special island is inhabited only by knights and knaves. Knights always tell the truth, and knaves always lie.\n"
+"\n"
+"You meet two inhabitants: Zoey and Mel. Zoey tells you that Mel is a knave. Mel says, “Neither Zoey nor I are knaves.”\n"
+"\n"
+"Can you determine who is a knight and who is a knave?"
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+msgid ""
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
+msgid ""
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
 msgid "`A`: `B` is a knight and `C` is a knight.\n"
 "\n"
 "`B`: `C` is a knight and `A` is a knave."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L01_Introduction
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
 msgid "Use `have` to set `¬A` as the new goal."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L01_Introduction
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
 msgid "Assuming `hA : A`:\n"
 "- Prove `BC : B ∧ C` from `stA` using `A`\n"
 "- Prove `CnA : C ∧ ¬A` using `stB` , `BC.left : B`\n"
@@ -2397,11 +2415,11 @@ msgid "Assuming `hA : A`:\n"
 "Each can be done in one step, so the appropriate `have` syntax should be used."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L01_Introduction
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
 msgid "Use `have` to set `¬C` as the new goal."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L01_Introduction
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
 msgid "Assuming `hC : C`:\n"
 "- Prove `hB : B` using `stB`, `C ∧ ¬A`\n"
 "- Prove `hA : A` using `stA` , `B ∧ C`\n"
@@ -2410,7 +2428,7 @@ msgid "Assuming `hC : C`:\n"
 "For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr`. The `\\<\\>` notation is appropriate here.(although you could just use `And.intro`)"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L01_Introduction
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
 msgid "Using `¬C`, we get `¬C ∨ A` which gives `¬B` using `stBn`.\n"
 "\n"
 "After which, you need to close the goal of the form \n"
@@ -2439,11 +2457,11 @@ msgid "Using `¬C`, we get `¬C ∨ A` which gives `¬B` using `stBn`.\n"
 "You could even use `have` to first prove `¬B and ¬C` and add it to the hypothesis,then prove the goal."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L02_
+#: Game.Levels.KnightsAndKnaves2.L03_
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L02_
+#: Game.Levels.KnightsAndKnaves2.L03_
 msgid "Robert says: Ira is my type.\n"
 "Ira says: Robert is truthful.\n"
 "\n"
@@ -2462,15 +2480,15 @@ msgid "Robert says: Ira is my type.\n"
 "then use `stI` to prove `Robert` and obtain `Ira`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L02_
-msgid ""
-msgstr ""
-
 #: Game.Levels.KnightsAndKnaves2.L03_
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L03_
+#: Game.Levels.KnightsAndKnaves2.L04_
+msgid ""
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L04_
 msgid "Generated from [here](https://philosophy.hku.hk/think/logic/knights.php)\n"
 "\n"
 "You have met a group of 3 islanders. Their names are `Xavier`, `Gary`, and `Alice`.\n"
@@ -2482,11 +2500,11 @@ msgid "Generated from [here](https://philosophy.hku.hk/think/logic/knights.php)\
 "`Gary` says: `Xavier` never lies."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L03_
+#: Game.Levels.KnightsAndKnaves2.L04_
 msgid "Use `stA` and `stG` to prove `Gary`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L03_
+#: Game.Levels.KnightsAndKnaves2.L04_
 msgid "Note that,\n"
 "```\n"
 "stG.mpr : (Alice ↔ Gary) ↔ Gary  \n"
@@ -2497,25 +2515,25 @@ msgid "Note that,\n"
 "```"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L03_
+#: Game.Levels.KnightsAndKnaves2.L04_
 msgid "Use `Gary` to prove `Xavier` and `Alice` and close the goal."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L03_
+#: Game.Levels.KnightsAndKnaves2.L04_
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "`A`: `C` is a knight or `B` is a knight.\n"
 "\n"
 "`B`: `A` is a knight, if and only if `C` is a knight."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "Use `have` to set `A` as the new goal.\n"
 "\n"
 "We want to prove `A`, to do this we will prove `¬¬A`(which is equivalent to `A`) i.e `¬A → False`. The tactic `by_contra` facilitates this.\n"
@@ -2531,27 +2549,27 @@ msgid "Use `have` to set `A` as the new goal.\n"
 "- Prove `False` from `AdiffC : ¬(A ↔ C)`  `AiffC : (A ↔ C)`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "Prove `CorB : C ∨ B` using `stA` , `«{hA}»`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "Now consider cases for `CorB` and for every case prove the goal.\n"
 "\n"
 "(proof by cases)"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "Prove `AiffC : A ↔ C` using `iff_of_true (ha : a) (hb : b) : a ↔ b` , `hA : A` , `h : C`\n"
 "\n"
 "`iff_of_true` says that we can conclude `P ↔ Q` is true when `P` is true , `Q` is true(check the truth table)."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "Prove `hB : B` using `stB` , `«{AiffC}»`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "Prove the goal using `«{hA}»`, `«{hB}»` ,`h`.\n"
 "\n"
 "Use `constructor` tactic to split the goal in two, the first being `A` and the second being `B ∧ C` or use ⟨⟩ notation or us `And.intro` or use `have` to first construct a proof of `B ∧ C` then use `And.intro` etc...\n"
@@ -2559,35 +2577,35 @@ msgid "Prove the goal using `«{hA}»`, `«{hB}»` ,`h`.\n"
 "The proof of the second case for `h : B` would require using `stB`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "We are now in the case where `B` is true, `h : B`.\n"
 "\n"
 "Prove `AiffC : A ↔ C` using `stB` , `h`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "Prove `C` using `«{AiffC}»` , `«{hA}»`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L04_iff
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "`A`: `C` is a knave or `B` is a knight.\n"
 "\n"
 "`B`: `A` is a knave, if and only if `C` is a knight."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Use `have` to set `A` as the goal"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.\n"
 "\n"
 "Assuming `hA : ¬A`:\n"
@@ -2597,27 +2615,27 @@ msgid "We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False
 "- Prove `False` from `nAiffC` and `AsameC` therefore proving that `¬A → False` i.e `¬¬A` i.e `A`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Prove `nCorB : ¬C ∨ B` using `stA` , `«{hA}»`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Take cases for `«{nCorB}»`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Use `iff_of_true` to prove `A ↔ ¬C`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Use `iff_not_comm` to prove `C ↔ ¬A`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Prove `B` using `stB` , `CiffnA.symm : C ↔ ¬A`. (symm for symmetry)"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Given `hP : P` , `hQ : Q`, `hR : R` and the goal `P ∧ Q ∧ R` , you can close this goal using:\n"
 "```\n"
 "exact ⟨hP,hQ,hR⟩\n"
@@ -2625,40 +2643,40 @@ msgid "Given `hP : P` , `hQ : Q`, `hR : R` and the goal `P ∧ Q ∧ R` , you ca
 "where ⟨⟩ is typed as \\<>.(this is to avoid nesting `And.intro` inside another)"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Prove `nAiffC : ¬A ↔ C` using `stB` , `h`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Prove `AiffnC : A ↔ ¬C` using `iff_not_comm` , `nAiffC.symm : C ↔ ¬A`(symm for symmetry)."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Prove `hC : C` using `AiffnC : A ↔ ¬C` , `hA : A`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid "Split using `constructor` or use ⟨⟩ notation."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L05_
+#: Game.Levels.KnightsAndKnaves2.L06_
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "`A`: `B` is a knight or `C` is a knight.\n"
 "`B`: `C` is a knave, if and only if `A` is a knave"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "Use `have` to set `B` as the goal"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "Assuming `nB : ¬B`:\n"
 "- Prove `CdiffA : ¬(¬C ↔ ¬A)` using `stBn` , `nB`\n"
 "- Using `simp` and `nB : ¬B` , reduce `stA` to `stA : A ↔ C`. (`B ∨ C` , `C` have the same truth value(for `C` being true or false) when `B` is false.\n"
@@ -2666,48 +2684,48 @@ msgid "Assuming `nB : ¬B`:\n"
 "- Prove `False` using `CdiffA` , `stA.symm : A ↔ C`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "Prove `CsameA : C ↔ A` using `stB` , `«{hB}»`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "Prove `BorC : B ∨ C` using `«{hB}»`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "Prove `hA : A` using `stA` , `«{BorC}»`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "Rewrite `CsameA` to `CsameA : C ↔ A` using `not_iff_not`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "Prove `hC : C` using `«{CsameA}»` , `«{hA}»`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid "Use constructor"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L06_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "`A`: If `C` is a knave, then `B` is a knave.\n"
 "`B`: `A` is a knight, if and only if `C` is a knave."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "Use `have` to set `C` as the goal"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "Assuming `¬C` to prove `False` i.e `¬C → False` i.e `¬¬C` i.e `C`:\n"
 "\n"
 "- Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value. \n"
@@ -2731,36 +2749,36 @@ msgid "Assuming `¬C` to prove `False` i.e `¬C → False` i.e `¬¬C` i.e `C`:\
 "```"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "- Rewrite `¬C` in `stA` with true using `eq_true`\n"
 "- Rewrite `True → ¬B` in `stA` with `¬B` using `true_implies`\n"
 "- Rewrite `¬B` in `stA` with `¬A` using `stBn`\n"
 "- Prove `False` using `not_iff_self`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "Rewrite `¬C` in `stA` as `¬True` using `eq_true`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "Rewrite `¬True` in `stA` as `False` using `not_true`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "Rewrite `False → ¬B` in `stA` as `¬B` using `false_implies`"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "Rewrite `stA` using `iff_true_iff`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "- Use simp and `hC : C` to simplify `stB`\n"
 "- Rewrite `stB` using `iff_not_comm` obtaining `stB : A ↔ ¬B`\n"
 "- Prove `¬B` using and conclude the goal"
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "This is it for this approach of knights and knaves.\n"
 "\n"
 "If you want more, you can try the other approaches."

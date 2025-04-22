@@ -1,11 +1,12 @@
 import Game.Metadata
-import Game.Levels.KnightsAndKnaves2.L01_Introduction
-import Game.Levels.KnightsAndKnaves2.L02_
+import Game.Levels.KnightsAndKnaves2.L01_Intro
+import Game.Levels.KnightsAndKnaves2.L02_Introduction
 import Game.Levels.KnightsAndKnaves2.L03_
-import Game.Levels.KnightsAndKnaves2.L04_iff
-import Game.Levels.KnightsAndKnaves2.L05_
-import Game.Levels.KnightsAndKnaves2.L06_orIff
-import Game.Levels.KnightsAndKnaves2.L07_imp
+import Game.Levels.KnightsAndKnaves2.L04_
+import Game.Levels.KnightsAndKnaves2.L05_iff
+import Game.Levels.KnightsAndKnaves2.L06_
+import Game.Levels.KnightsAndKnaves2.L07_orIff
+import Game.Levels.KnightsAndKnaves2.L08_imp
 World "KnightsAndKnaves2"
 Title "Knights and Knaves, Second Approach"
 Introduction
