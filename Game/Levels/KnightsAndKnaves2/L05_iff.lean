@@ -41,7 +41,7 @@ Statement {A B C : Prop}
 {stB : B ↔ (A ↔ C)}
 {stBn : ¬B ↔ ¬(A ↔ C)}
 : A ∧ B ∧ C := by
-  Hint 
+  Hint (strict := true)
     "
 Use `have` to set `A` as the new goal.
 
@@ -101,7 +101,7 @@ The proof of the second case for `h : B` would require using `stB`.
   exact hA
   exact And.intro hB h
 
-  Hint
+  Hint (strict := true)
       "
 We are now in the case where `B` is true, `h : B`.
 
@@ -109,7 +109,7 @@ Prove `AiffC : A ↔ C` using `stB` , `h`.
       "
   have AiffC := stB.mp h
 
-  Hint
+  Hint (strict := true)
       "
 Prove `C` using `{AiffC}` , `{hA}`
       "

@@ -1,7 +1,7 @@
 import Game.Metadata
 import Game.Levels.KnightsAndKnaves2.L01_Intro
 import Game.Levels.KnightsAndKnaves2.L02_Introduction
-import Game.Levels.KnightsAndKnaves2.L03_
+import Game.Levels.KnightsAndKnaves2.L03_iff_iff
 import Game.Levels.KnightsAndKnaves2.L04_
 import Game.Levels.KnightsAndKnaves2.L05_iff
 import Game.Levels.KnightsAndKnaves2.L06_

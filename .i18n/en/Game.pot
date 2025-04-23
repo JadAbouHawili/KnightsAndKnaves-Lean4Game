@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Apr 23 18:07:34 2025\n"
+"POT-Creation-Date: Wed Apr 23 18:49:15 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2495,15 +2495,16 @@ msgid "Using `¬C`, we get `¬C ∨ A` which gives `¬B` using `stBn`.\n"
 "You could even use `have` to first prove `¬B and ¬C` and add it to the hypothesis,then prove the goal."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L03_
+#: Game.Levels.KnightsAndKnaves2.L03_iff_iff
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L03_
-msgid "Robert says: Ira is my type.\n"
-"Ira says: Robert is truthful.\n"
+#: Game.Levels.KnightsAndKnaves2.L03_iff_iff
+msgid "`Robert` says: `Ira` is my type.\n"
 "\n"
-"Ira is my type is translated as \n"
+"`Ira` says: `Robert` is truthful.\n"
+"\n"
+"`Ira` is my type is translated as \n"
 "```\n"
 "( (Ira and Robert) or (¬Ira and ¬Robert) )\n"
 "```\n"
@@ -2518,7 +2519,11 @@ msgid "Robert says: Ira is my type.\n"
 "then use `stI` to prove `Robert` and obtain `Ira`."
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L03_
+#: Game.Levels.KnightsAndKnaves2.L03_iff_iff
+msgid "Remember the interpretation where you can treat `↔` like `=`(refer to `↔` docs for an example)."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L03_iff_iff
 msgid ""
 msgstr ""
 

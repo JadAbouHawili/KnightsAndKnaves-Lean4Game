@@ -6,12 +6,13 @@ Level 3
 
 Title "" 
 
-Introduction 
+Introduction
 "
-Robert says: Ira is my type.
-Ira says: Robert is truthful.
+`Robert` says: `Ira` is my type.
 
-Ira is my type is translated as 
+`Ira` says: `Robert` is truthful.
+
+`Ira` is my type is translated as 
 ```
 ( (Ira and Robert) or (¬Ira and ¬Robert) )
 ```
@@ -33,6 +34,10 @@ Statement
 {stR : Robert ↔ ( (Ira and Robert) or (¬Ira and ¬Robert) )}
 {stI : Ira ↔ Robert}
 : Robert ∧ Ira := by 
+  Hint (hidden := true)
+  "
+Remember the interpretation where you can treat `↔` like `=`(refer to `↔` docs for an example).
+  "
   rw [iff_iff_and_or_not_and_not.symm] at stR
   have R := stR.mpr stI
   have I := stI.mpr R

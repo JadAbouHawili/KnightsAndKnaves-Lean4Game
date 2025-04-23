@@ -19,7 +19,7 @@ Statement {A B C : Prop}
 {stB : B ↔ (¬C ↔ ¬A)}
 {stBn : ¬B ↔ ¬(¬C ↔ ¬A)}
 : A ∧ B ∧ C := by
-  Hint
+  Hint (strict := true)
     "
 Use `have` to set `B` as the goal
     "
