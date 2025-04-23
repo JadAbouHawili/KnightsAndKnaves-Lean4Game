@@ -5,7 +5,7 @@ Level 2
 
 Title ""
 
-Introduction 
+Introduction
 "
 `A`: `B` is a knight and `C` is a knight.
 
@@ -20,12 +20,12 @@ Statement
 {stBn : ¬B ↔ ¬C ∨ A}
 : ¬A ∧ ¬B ∧ ¬C := by
 
-  Hint
+  Hint (strict := true)
   "
 Use `have` to set `¬A` as the new goal.
   "
   have hnA : ¬A
-  Hint
+  Hint (strict := true)
     "
 Assuming `hA : A`:
 - Prove `BC : B ∧ C` from `stA` using `A`
@@ -39,12 +39,12 @@ Each can be done in one step, so the appropriate `have` syntax should be used.
   have CnA := stB.mp BC.left
   exact CnA.right hA
 
-  Hint 
+  Hint (strict := true)
   "
 Use `have` to set `¬C` as the new goal.
   "
   have hnC : ¬C
-  Hint
+  Hint (strict := true)
     "
 Assuming `hC : C`:
 - Prove `hB : B` using `stB`, `C ∧ ¬A`
@@ -58,7 +58,7 @@ For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr
   have hA := stA.mpr ⟨hB,hC⟩
   contradiction
 
-  Hint
+  Hint (strict := true)
   "
 Using `¬C`, we get `¬C ∨ A` which gives `¬B` using `stBn`.
 

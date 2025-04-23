@@ -27,7 +27,7 @@ Statement
   : Zoey ∧ ¬Mel := by
   {
   have hZ : Zoey
-  Hint
+  Hint (strict := true)
   "
 To prove `Zoey`, we will do a proof by contradiction.
 
@@ -58,15 +58,16 @@ We have `Zoey` and `¬Zoey`
 
   Hint
   "
-Use constructor and close the first goal.
+Prove the second goal using `Zoey`, `stZ`
+
+Then close the goal.(using `constructor`, or `⟨⟩` notation or `And.intro` etc..)
   "
-  constructor
-  assumption
   Hint
   "
-Prove the second goal using `Zoey`, `stZ`
   "
   have nM := stZ.mp hZ
+  constructor
+  assumption
   assumption
   }
 

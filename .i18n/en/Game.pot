@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue Apr 22 23:34:25 2025\n"
+"POT-Creation-Date: Wed Apr 23 18:07:34 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2417,11 +2417,13 @@ msgid "We have `Zoey` and `¬Zoey`"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L01_Intro
-msgid "Use constructor and close the first goal."
+msgid "Prove the second goal using `Zoey`, `stZ`\n"
+"\n"
+"Then close the goal.(using `constructor`, or `⟨⟩` notation or `And.intro` etc..)"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L01_Intro
-msgid "Prove the second goal using `Zoey`, `stZ`"
+msgid ""
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L01_Intro
