@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Apr 24 11:22:57 2025\n"
+"POT-Creation-Date: Thu Apr 24 11:28:46 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1649,7 +1649,11 @@ msgid "Simplification"
 msgstr ""
 
 #: Game.Levels.Simp_World
-msgid ""
+msgid "In the previous world, we introduced logical connectives and how to construct new propositions using them.\n"
+"\n"
+"In this world, we have these expressions and some assumptions about their building blocks and we use this to simplify the expression.\n"
+"\n"
+"For the first half of this world, all simplifications will be done manually after which the `simp` tactic is introduced. In the second half, you will redo those simplifications but now using the `simp` tactic.(which most if not all of the work)"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L01_IamKnave

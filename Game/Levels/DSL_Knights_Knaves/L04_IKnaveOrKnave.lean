@@ -29,8 +29,8 @@ Let's start with proving that `A` is a knight. (use `have`)
   Change the goal to ¬isKnave A
   "
   knight_to_knave
-  Hint "
-
+  Hint
+  "
 Assume `isKnave A`
   "
   intro AKnave
@@ -38,9 +38,7 @@ Assume `isKnave A`
   Hint
   "
 Let's first prove `isKnave A or isKnave B`.
-
   "
-  --apply said_knight at stA
   have orexp: isKnave A or isKnave B
   Hint
   "

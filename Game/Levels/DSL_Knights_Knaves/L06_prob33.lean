@@ -50,19 +50,24 @@ notknight_said
   "
   /-
 obtain that `isKnave A` and then use `knave_said`.
+
+push_neg at h
+```
+which 'pushes' the 'negation' inside and applying the appropriate rules.
   -/
   have st := notknight_said stA AnK 
   Hint
   "
+Use not_and_or
+
 `h: ¬( P and Q)` means that both `P`,`Q` are not true at the same time which means one of them has to be false i.e `h : ¬P or ¬Q`.
 
 You can apply this using
 ```
-push_neg at h
+not_and_or
 ```
-which 'pushes' the 'negation' inside and applying the appropriate rules.
   "
-  push_neg at st
+  rw [not_and_or] at st
   Hint 
   "
 `A` is not a knight means that `A` is a knave, so `{st}` could be simplified.
