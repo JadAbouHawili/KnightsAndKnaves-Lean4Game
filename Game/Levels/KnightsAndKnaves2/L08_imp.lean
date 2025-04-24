@@ -28,40 +28,45 @@ Statement {A B C : Prop}
 Use `have` to set `C` as the goal
     "
   have hC : C
+  Hint
+  "
+We will prove `C` by contradiction. 
+
+Assume `nC : ¬C` using `by_contra nC`.
+  "
   by_contra nC
   Hint
     "
-Assuming `¬C` to prove `False` i.e `¬C → False` i.e `¬¬C` i.e `C`:
 
-- Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value. 
+Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value i.e `(A ↔ ¬C) ↔ A`
 
-In other words, if `A` is true then `A ↔ ¬C` is true, and if `A` is false then `A ↔ ¬C` is false.
+If `A` is true then `A ↔ ¬C` is true, and if `A` is false then `A ↔ ¬C` is false.
 
 Use 
 ```
-iff_true_right (ha : a) : (b ↔ a) ↔ b
+iff_true_right (ha : a) 
+: (b ↔ a) ↔ b
 ``` 
 to replace `A ↔ ¬C` with `A`.
 (In our case, `b ↔ a` is `A ↔ ¬C`)
 
 This reduction would transform `stB` from
 ```
-¬B ↔ ¬(A ↔ ¬C)
+B ↔ (A ↔ ¬C)
 ```
 to
 ```
-¬B ↔ ¬A 
+B ↔ A 
 ```
 "
   rw [iff_true_right nC] at stB
-  #check true_implies
 
   Hint
   "
 - Rewrite `¬C` in `stA` with true using `eq_true`
 - Rewrite `True → ¬B` in `stA` with `¬B` using `true_implies`
-- Rewrite `¬B` in `stA` with `¬A` using `stBn`
-- Prove `False` using `not_iff_self`
+- Rewrite `B` in `stA` with `A` using `stB`
+- Prove `False` using `not_iff_self` and `stA`
   "
   rw [eq_true nC] at stA
   rw [true_implies (¬B)] at stA
@@ -71,6 +76,8 @@ to
 
   Hint
   "
+  We have proven `C`
+
 Rewrite `¬C` in `stA` as `¬True` using `eq_true`
   "
   rw [eq_true hC] at stA 

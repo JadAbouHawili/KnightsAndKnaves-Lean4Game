@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Apr 23 18:49:15 2025\n"
+"POT-Creation-Date: Thu Apr 24 11:22:57 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1569,11 +1569,40 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#: Game.Levels.Logic.L12_simp
-msgid "simp"
+#: Game.Levels.Logic
+msgid "Logic"
 msgstr ""
 
-#: Game.Levels.Logic.L12_simp
+#: Game.Levels.Logic
+msgid "In this world, we will be dealing with `Objects` of type `Prop` i.e propositions. You can think of a proposition as a statement that is either true or false(obviously, it can't be both at the same time). You have seen propositions before like `x=2`, `y=6` etc..\n"
+"\n"
+"When you have `h : P` where `P : Prop` , then we say `h` is a proof of the statement `P`(imagine `x=2` instead of `P` if you wish).\n"
+"\n"
+"In a proof state, this would look like the following:\n"
+"```\n"
+"Objects\n"
+"P : Prop\n"
+"Assumptions\n"
+"h : P\n"
+"```\n"
+"\n"
+"Moreover, we will discuss constructing new propositions from old ones.\n"
+"\n"
+"Here's an example in natural language, given the two propositions 'The sun is shining' , 'It is Monday', you can construct 'The sun is shining and it is monday'. \n"
+"\n"
+"Another example would be, having the following:\n"
+"```\n"
+"h : `x=2`\n"
+"h' : `y=6`\n"
+"```\n"
+"where `P` is `x=2` and `Q` is `y=6`, we can construct a new proposition `P ∧ Q` which is read as `x=2 and y=6`. Here we know what `P`,`Q` stand for. But, the proposition `P ∧ Q` can still be constructed and reasoned about regardless. Think of reasoning about unknown numbers like `x`,`y` etc..."
+msgstr ""
+
+#: Game.Levels.Simp_World.L01_simp
+msgid "`simp` tactic"
+msgstr ""
+
+#: Game.Levels.Simp_World.L01_simp
 msgid "In the upcoming levels, we will introduce simplications of propositions.\n"
 "\n"
 "The simplification here concerns `or`.\n"
@@ -1611,37 +1640,16 @@ msgid "In the upcoming levels, we will introduce simplications of propositions.\
 "Apply `simp` at `h` , i.e `simp at h`."
 msgstr ""
 
-#: Game.Levels.Logic.L12_simp
+#: Game.Levels.Simp_World.L01_simp
 msgid ""
 msgstr ""
 
-#: Game.Levels.Logic
-msgid "Logic"
+#: Game.Levels.Simp_World
+msgid "Simplification"
 msgstr ""
 
-#: Game.Levels.Logic
-msgid "In this world, we will be dealing with `Objects` of type `Prop` i.e propositions. You can think of a proposition as a statement that is either true or false(obviously, it can't be both at the same time). You have seen propositions before like `x=2`, `y=6` etc..\n"
-"\n"
-"When you have `h : P` where `P : Prop` , then we say `h` is a proof of the statement `P`(imagine `x=2` instead of `P` if you wish).\n"
-"\n"
-"In a proof state, this would look like the following:\n"
-"```\n"
-"Objects\n"
-"P : Prop\n"
-"Assumptions\n"
-"h : P\n"
-"```\n"
-"\n"
-"Moreover, we will discuss constructing new propositions from old ones.\n"
-"\n"
-"Here's an example in natural language, given the two propositions 'The sun is shining' , 'It is Monday', you can construct 'The sun is shining and it is monday'. \n"
-"\n"
-"Another example would be, having the following:\n"
-"```\n"
-"h : `x=2`\n"
-"h' : `y=6`\n"
-"```\n"
-"where `P` is `x=2` and `Q` is `y=6`, we can construct a new proposition `P ∧ Q` which is read as `x=2 and y=6`. Here we know what `P`,`Q` stand for. But, the proposition `P ∧ Q` can still be constructed and reasoned about regardless. Think of reasoning about unknown numbers like `x`,`y` etc..."
+#: Game.Levels.Simp_World
+msgid ""
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
@@ -2769,38 +2777,45 @@ msgid "Use `have` to set `C` as the goal"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "Assuming `¬C` to prove `False` i.e `¬C → False` i.e `¬¬C` i.e `C`:\n"
+msgid "We will prove `C` by contradiction. \n"
 "\n"
-"- Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value. \n"
+"Assume `nC : ¬C` using `by_contra nC`."
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value i.e `(A ↔ ¬C) ↔ A`\n"
 "\n"
-"In other words, if `A` is true then `A ↔ ¬C` is true, and if `A` is false then `A ↔ ¬C` is false.\n"
+"If `A` is true then `A ↔ ¬C` is true, and if `A` is false then `A ↔ ¬C` is false.\n"
 "\n"
 "Use \n"
 "```\n"
-"iff_true_right (ha : a) : (b ↔ a) ↔ b\n"
+"iff_true_right (ha : a) \n"
+": (b ↔ a) ↔ b\n"
 "``` \n"
 "to replace `A ↔ ¬C` with `A`.\n"
 "(In our case, `b ↔ a` is `A ↔ ¬C`)\n"
 "\n"
 "This reduction would transform `stB` from\n"
 "```\n"
-"¬B ↔ ¬(A ↔ ¬C)\n"
+"B ↔ (A ↔ ¬C)\n"
 "```\n"
 "to\n"
 "```\n"
-"¬B ↔ ¬A \n"
+"B ↔ A \n"
 "```"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L08_imp
 msgid "- Rewrite `¬C` in `stA` with true using `eq_true`\n"
 "- Rewrite `True → ¬B` in `stA` with `¬B` using `true_implies`\n"
-"- Rewrite `¬B` in `stA` with `¬A` using `stBn`\n"
-"- Prove `False` using `not_iff_self`"
+"- Rewrite `B` in `stA` with `A` using `stB`\n"
+"- Prove `False` using `not_iff_self` and `stA`"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "Rewrite `¬C` in `stA` as `¬True` using `eq_true`"
+msgid "We have proven `C`\n"
+"\n"
+"Rewrite `¬C` in `stA` as `¬True` using `eq_true`"
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L08_imp

@@ -1,10 +1,10 @@
 import Game.Metadata
 
 
-World "Logic" 
-Level 12 
+World "Simp_World" 
+Level 1
 
-Title "simp"
+Title "`simp` tactic"
 
 Introduction 
 "
@@ -58,3 +58,4 @@ Conclusion
 "
 "
 NewTactic simp
+NewTheorem iff_of_false iff_of_true

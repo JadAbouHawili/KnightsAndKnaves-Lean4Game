@@ -1,5 +1,6 @@
 import Game.Levels.EquationalReasoning
 import Game.Levels.Logic
+import Game.Levels.Simp_World
 import Game.Levels.DSL_Knights_Knaves
 --import Game.Levels.KnightsAndKnavesLemmas
 --import Game.Levels.KnightsAndKnaves
@@ -113,6 +114,7 @@ CoverImage "images/knights-and-knaves.jpg"
 --Dependency EquationalReasoning → Logic → DSL_Knights_Knaves -- → KnightsAndKnavesLemmas → KnightsAndKnaves  → KnightsAndKnaves2
 --Dependency KnightsAndKnavesLemmas → KnightsAndKnaves
 
+Dependency Logic → Simp_World 
 Dependency Logic → KnightsAndKnaves2 
 --Dependency KnightsAndKnaves2 → KnightsAndKnavesLemmas
 Dependency Logic → DSL_Knights_Knaves 
