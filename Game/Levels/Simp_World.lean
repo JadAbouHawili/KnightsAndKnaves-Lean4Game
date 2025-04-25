@@ -1,4 +1,10 @@
-import Game.Levels.Simp_World.L01_simp
+import Game.Levels.Simp_World.L01_or_false
+import Game.Levels.Simp_World.L02_true_or
+import Game.Levels.Simp_World.L03_not_or
+import Game.Levels.Simp_World.L04_not_and
+import Game.Levels.Simp_World.L05_iff_of_false
+import Game.Levels.Simp_World.L06_iff_of_true
+--import Game.Levels.Simp_World.L07_not_iff
 
 World "Simp_World"
 Title "Simplification"

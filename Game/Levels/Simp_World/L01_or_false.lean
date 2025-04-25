@@ -10,6 +10,21 @@ Introduction
 "
 The simplification here concerns `or`.
 
+First, we have `¬Q` which means `Q = False`
+
+Rewrite the expression `P or Q` into `P or False` using the theorem
+```
+eq_false (h : ¬p) : p = False
+```
+
+
+After doing so , we have
+```
+h : P or False
+```
+
+We can simplify it to `P`, here's why.
+
 The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:
 $
 \\begin{array}{|c c|c|}
@@ -55,10 +70,10 @@ Rewrite `P or False` at `h` with `P` using the theorem `or_false` or `or_false_i
 "
 #check or_false
 #check or_false_iff
-Statement {P : Prop} {h : P or False}
+Statement {P : Prop} {h : P or Q} {hnQ : ¬Q}
   : P := by
-
   {
+  rw [eq_false hnQ] at h
   rw [or_false_iff P] at h
   assumption
   }
@@ -66,4 +81,4 @@ Statement {P : Prop} {h : P or False}
 Conclusion 
 "
 "
-NewTheorem iff_of_false iff_of_true
+NewTheorem eq_false or_false_iff or_false

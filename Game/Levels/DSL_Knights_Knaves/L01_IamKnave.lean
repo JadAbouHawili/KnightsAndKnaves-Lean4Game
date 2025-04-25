@@ -111,6 +111,6 @@ You will need it in the next level.
 "
 
 NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave Islander.isKnight Islander.isKnave Islander.not_isKnight_and_isKnave dsl_iamknave
-NewDefinition DSLKnightsKnaves 
+NewDefinition DSLKnightsKnaves
 
 NewTactic knight_or_knave

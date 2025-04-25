@@ -57,10 +57,6 @@ First, conclude that `Robert`'s statement is false i.e `¬(Robert.isKnight ↔ I
   "
   knave_to_knight at IKnave 
   have same : Robert.isKnight ↔ Ira.isKnight 
-  #check instDecidableIff
-  --exact instDecidableIff.proof_4 RKnave IKnave
-  #check iff_of_true
-  #check iff_of_false
   exact iff_of_false RKnave IKnave 
 
   have RKnight := said_knight stR same
@@ -91,9 +87,7 @@ example
   {stR : Robert ∈ Knight ↔ (Robert ∈ Knight ↔ Ira ∈ Knight)}
   {stI : Ira ∈ Knight ↔ Robert ∈ Knight}
    : Robert ∈ Knight ∧ Ira ∈ Knight := by
-     
     sorry
-#check iff_not_self
 example
   {Inhabitant : Type}
   {Robert Ira: Inhabitant}

@@ -40,7 +40,6 @@ Use `have` to set `A` as the goal
     have hCnB:=  (stAn.mp nA)
     have AsameC := stBn.mp hCnB.right
     have nAiffC:= iff_of_true nA hCnB.left
-    #check not_iff
     contradiction
 
     Hint

@@ -27,7 +27,7 @@ Statement {P Q R : Prop}
 {hPQ : P → Q}
 {hQR : Q → R}
   : R := by
-  tauto
+  exact hQR (hPQ hP)
 
 Conclusion 
 "

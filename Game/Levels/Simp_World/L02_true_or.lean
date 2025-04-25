@@ -4,9 +4,9 @@ import Game.Metadata
 World "Simp_World" 
 Level 2
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
 Previously, the way to prove this was using the `left`/`right` tactic which was accompanied with an intuitive explanation on why `left`/`right` make sense.
 
@@ -19,10 +19,10 @@ Statement (h : P)
   : P or Q  := by
 
   {
-  rw [eq_true h] 
+  rw [eq_true h]
   Hint
   "
-Now use 
+Now use
 ```
 true_or_iff (p : Prop) : True or p ↔ True
 ```
@@ -33,7 +33,7 @@ or
 true_or (p : Prop) : (True or p) = True
 ```
   "
-  rw [true_or Q] 
+  rw [true_or Q]
   Hint
   "
 Now we want to prove `True`. But `True` is true, so the proof is trivial. 
@@ -44,7 +44,7 @@ The `trivial` tactic will do the job
   }
 
 #check or_true_iff
-Conclusion 
+Conclusion
 "
 There's an analogous theorem
 ```
@@ -56,5 +56,5 @@ or_true_iff (p : Prop) : p or True ↔ True
 ```
 "
 
-NewTactic Trivial
-NewTheorem true_or true_or_iff
+NewTactic trivial
+NewTheorem true_or true_or_iff eq_true

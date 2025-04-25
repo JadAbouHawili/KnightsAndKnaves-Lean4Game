@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Apr 24 11:28:46 2025\n"
+"POT-Creation-Date: Fri Apr 25 15:45:16 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1598,16 +1598,29 @@ msgid "In this world, we will be dealing with `Objects` of type `Prop` i.e propo
 "where `P` is `x=2` and `Q` is `y=6`, we can construct a new proposition `P ∧ Q` which is read as `x=2 and y=6`. Here we know what `P`,`Q` stand for. But, the proposition `P ∧ Q` can still be constructed and reasoned about regardless. Think of reasoning about unknown numbers like `x`,`y` etc..."
 msgstr ""
 
-#: Game.Levels.Simp_World.L01_simp
+#: Game.Levels.Simp_World.L01_or_false
 msgid "`simp` tactic"
 msgstr ""
 
-#: Game.Levels.Simp_World.L01_simp
-msgid "In the upcoming levels, we will introduce simplications of propositions.\n"
+#: Game.Levels.Simp_World.L01_or_false
+msgid "The simplification here concerns `or`.\n"
 "\n"
-"The simplification here concerns `or`.\n"
+"First, we have `¬Q` which means `Q = False`\n"
 "\n"
-"The intution behind the simplifiction can be understood from looking at the truth table which we put here for reference:\n"
+"Rewrite the expression `P or Q` into `P or False` using the theorem\n"
+"```\n"
+"eq_false (h : ¬p) : p = False\n"
+"```\n"
+"\n"
+"\n"
+"After doing so , we have\n"
+"```\n"
+"h : P or False\n"
+"```\n"
+"\n"
+"We can simplify it to `P`, here's why.\n"
+"\n"
+"The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:\n"
 "$\n"
 "\\begin{array}{|c c|c|}\n"
 "\\hline\n"
@@ -1624,23 +1637,124 @@ msgid "In the upcoming levels, we will introduce simplications of propositions.\
 "\\end{array}\n"
 "$\n"
 "\n"
-"Notice that for `Q = False`, `P or Q` is true regardless of what `P` is.\n"
+"Notice that for `Q = False`, `P or Q` is has the same truth value as `P`.\n"
 "\n"
-"In other words, `P or False` and `P` have the same truth value i.e `(P or False) ↔ P`. Whenver `P or False` occurs , we can replace it by `P`.\n"
-"\n"
-"You learned how to do this from the `↔` levels.\n"
+"In other words, `P or False` and `P` have the same truth value i.e `(P or False) ↔ P`. Whenver `P or False` occurs , we can replace it by `P` which is of a simpler form.\n"
+"$\n"
+"\\begin{array}{|c c|c|}\n"
+"\\hline\n"
+"P & P or False \\\\\n"
+"\\hline\n"
+"T & T \\\\\n"
+"\\hline\n"
+"F & F \\\\\n"
+"\\end{array}\n"
+"$\n"
 "\n"
 "The theorem for this simplication\n"
 "```\n"
 "or_false_iff (p : Prop) : p or False ↔ p\n"
 "```\n"
 "\n"
-"However, `simp` would apply such a simplification without you having to reference the theorem and use `rw`.\n"
+"There's also an equivalent\n"
+"```\n"
+"or_false (p : Prop) : (p or False) = p\n"
+"```\n"
 "\n"
-"Apply `simp` at `h` , i.e `simp at h`."
+"Rewrite `P or False` at `h` with `P` using the theorem `or_false` or `or_false_iff`."
 msgstr ""
 
-#: Game.Levels.Simp_World.L01_simp
+#: Game.Levels.Simp_World.L01_or_false
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L02_true_or
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L02_true_or
+msgid "Previously, the way to prove this was using the `left`/`right` tactic which was accompanied with an intuitive explanation on why `left`/`right` make sense.\n"
+"\n"
+"Here we introduce a simplification theorem to do it.\n"
+"\n"
+"But first, rewrite `P or Q` to `True or Q`"
+msgstr ""
+
+#: Game.Levels.Simp_World.L02_true_or
+msgid "Now use\n"
+"```\n"
+"true_or_iff (p : Prop) : True or p ↔ True\n"
+"```\n"
+"\n"
+"or\n"
+"\n"
+"```\n"
+"true_or (p : Prop) : (True or p) = True\n"
+"```"
+msgstr ""
+
+#: Game.Levels.Simp_World.L02_true_or
+msgid "Now we want to prove `True`. But `True` is true, so the proof is trivial. \n"
+"\n"
+"The `trivial` tactic will do the job"
+msgstr ""
+
+#: Game.Levels.Simp_World.L02_true_or
+msgid "There's an analogous theorem\n"
+"```\n"
+"or_true (p : Prop) : (p or True) = True\n"
+"```\n"
+"\n"
+"```\n"
+"or_true_iff (p : Prop) : p or True ↔ True\n"
+"```"
+msgstr ""
+
+#: Game.Levels.Simp_World.L03_not_or
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L03_not_or
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L03_not_or
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L04_not_and
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L04_not_and
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L04_not_and
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L05_iff_of_false
+msgid "iff_of_false"
+msgstr ""
+
+#: Game.Levels.Simp_World.L05_iff_of_false
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L05_iff_of_false
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L06_iff_of_true
+msgid "iff_of_true"
+msgstr ""
+
+#: Game.Levels.Simp_World.L06_iff_of_true
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L06_iff_of_true
 msgid ""
 msgstr ""
 
@@ -1888,7 +2002,27 @@ msgid ""
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L05_prob29
-msgid ""
+msgid "`A` says 'I am a knave or `B` is a knight'."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+msgid "Change the goal to `A.isKnight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+msgid "Transfrom the goal from `knight_to_knave`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+msgid "Conclude that `A`'s statement is false."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+msgid "Conclude `A`'s statement."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+msgid "The left side of or is false and so can be simplified."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L06_prob33
@@ -1928,13 +2062,14 @@ msgid "Now that we know that `A` is not a knight, we know that what `A` said was
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L06_prob33
-msgid "`h: ¬( P and Q)` means that both `P`,`Q` are not true at the same time which means one of them has to be false i.e `h : ¬P or ¬Q`.\n"
+msgid "Use not_and_or\n"
+"\n"
+"`h: ¬( P and Q)` means that both `P`,`Q` are not true at the same time which means one of them has to be false i.e `h : ¬P or ¬Q`.\n"
 "\n"
 "You can apply this using\n"
 "```\n"
-"push_neg at h\n"
-"```\n"
-"which 'pushes' the 'negation' inside and applying the appropriate rules."
+"not_and_or\n"
+"```"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L06_prob33

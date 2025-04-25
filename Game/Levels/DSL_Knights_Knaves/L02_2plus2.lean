@@ -2,12 +2,12 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 
-World "DSL_Knights_Knaves" 
+World "DSL_Knights_Knaves"
 Level 2
 -- prob 30
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
 `A` says 'I am a knave or 2+2=5'.
 
@@ -19,8 +19,8 @@ Use `simp` to do these simplications for you.
 "
 open Islander
 Statement {A : Islander} (stA : A said (A.isKnave or (2+2=5)))
-: False := by 
-  simp at stA 
+: False := by
+  simp at stA
   Hint
   "
 This should look familiar.
@@ -29,7 +29,7 @@ Don't repeat the proof!
   "
   exact dsl_iamknave stA
 
-Conclusion 
+Conclusion
 "
 "
 NewTheorem Islander.dsl_iamknave

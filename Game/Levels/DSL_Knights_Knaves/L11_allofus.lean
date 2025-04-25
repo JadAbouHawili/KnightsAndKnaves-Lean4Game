@@ -103,3 +103,4 @@ Get `¬A.isKnight`
 Conclusion
 "
 "
+NewTheorem not_false

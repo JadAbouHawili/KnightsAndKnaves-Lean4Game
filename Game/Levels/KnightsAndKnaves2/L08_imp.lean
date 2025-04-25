@@ -117,4 +117,4 @@ This is it for this approach of knights and knaves.
 
 If you want more, you can try the other approaches.
 "
-NewTheorem iff_true_right true_implies eq_true not_iff_self not_true false_implies iff_true_iff
+NewTheorem iff_true_right true_implies not_iff_self not_true false_implies iff_true_iff

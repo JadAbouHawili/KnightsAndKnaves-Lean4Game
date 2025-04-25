@@ -85,5 +85,5 @@ After that, close the goal
 Conclusion
 "
 "
-NewTactic push_neg
+--NewTactic push_neg
 NewTheorem Islander.notknight_said

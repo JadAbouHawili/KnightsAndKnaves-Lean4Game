@@ -24,3 +24,4 @@ Statement (h : ¬(P or Q))
 Conclusion 
 "
 "
+NewTheorem not_or
