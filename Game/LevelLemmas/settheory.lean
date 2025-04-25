@@ -5,7 +5,6 @@ import Game.LevelLemmas.Logical
 -- experiment with simp_rw
 
 #check not_iff_not
-#check not_iff
 #check not_iff_self
 theorem inleft_notinright
   [inst : DecidableEq K]
