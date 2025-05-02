@@ -75,4 +75,3 @@ We have the goal.
 Conclusion
 "
 "
-NewTheorem not_iff_not

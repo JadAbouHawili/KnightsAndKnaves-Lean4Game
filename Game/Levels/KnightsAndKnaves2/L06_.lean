@@ -101,4 +101,5 @@ Split using `constructor` or use ⟨⟩ notation.
 Conclusion
 "
 "
+#check iff_not_comm
 NewTheorem iff_not_comm

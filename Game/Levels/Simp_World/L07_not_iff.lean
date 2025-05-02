@@ -22,11 +22,11 @@ Statement (h : ¬(P ↔ Q))
   assumption
   }
 
-
-
-
-
 Conclusion 
 "
+Analogous Theorem:
+```
+not_iff'
+```
 "
 NewTheorem not_iff

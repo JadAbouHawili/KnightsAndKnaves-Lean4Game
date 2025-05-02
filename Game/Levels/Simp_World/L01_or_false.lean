@@ -1,12 +1,12 @@
 import Game.Metadata
 
 
-World "Simp_World" 
+World "Simp_World"
 Level 1
 
-Title "`simp` tactic"
+Title "`or_false`"
 
-Introduction 
+Introduction
 "
 The simplification here concerns `or`.
 
@@ -18,7 +18,7 @@ eq_false (h : ¬p) : p = False
 ```
 
 
-After doing so , we have
+After doing so , we get
 ```
 h : P or False
 ```
@@ -27,9 +27,9 @@ We can simplify it to `P`, here's why.
 
 The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:
 $
-\\begin{array}{|c c|c|}
+\\begin{array}{|c | c|c|}
 \\hline
-P & Q & P or Q \\\\
+P & Q & \\text{P or Q} \\\\
 \\hline
 T & T & T \\\\
 \\hline
@@ -48,11 +48,12 @@ In other words, `P or False` and `P` have the same truth value i.e `(P or False)
 $
 \\begin{array}{|c c|c|}
 \\hline
-P & P or False \\\\
+P & \\text{P or False} \\\\
 \\hline
 T & T \\\\
 \\hline
 F & F \\\\
+\\hline
 \\end{array}
 $
 
@@ -74,11 +75,30 @@ Statement {P : Prop} {h : P or Q} {hnQ : ¬Q}
   : P := by
   {
   rw [eq_false hnQ] at h
+  Hint
+  "
+
+$
+\\begin\{array}\{|c | c|c|}
+\\hline
+P & Q & \\text\{P or Q} \\\\
+\\hline
+T & T & T \\\\
+\\hline
+T & F & T \\\\
+\\hline
+F & T & T \\\\
+\\hline
+F & F & F \\\\
+\\hline
+\\end\{array}
+$
+  "
   rw [or_false_iff P] at h
   assumption
   }
 
-Conclusion 
+Conclusion
 "
 "
 NewTheorem eq_false or_false_iff or_false

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Apr 25 15:45:16 2025\n"
+"POT-Creation-Date: Fri May  2 23:35:19 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1599,7 +1599,7 @@ msgid "In this world, we will be dealing with `Objects` of type `Prop` i.e propo
 msgstr ""
 
 #: Game.Levels.Simp_World.L01_or_false
-msgid "`simp` tactic"
+msgid "`or_false`"
 msgstr ""
 
 #: Game.Levels.Simp_World.L01_or_false
@@ -1613,7 +1613,7 @@ msgid "The simplification here concerns `or`.\n"
 "```\n"
 "\n"
 "\n"
-"After doing so , we have\n"
+"After doing so , we get\n"
 "```\n"
 "h : P or False\n"
 "```\n"
@@ -1622,9 +1622,9 @@ msgid "The simplification here concerns `or`.\n"
 "\n"
 "The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:\n"
 "$\n"
-"\\begin{array}{|c c|c|}\n"
+"\\begin{array}{|c | c|c|}\n"
 "\\hline\n"
-"P & Q & P or Q \\\\\n"
+"P & Q & \\text{P or Q} \\\\\n"
 "\\hline\n"
 "T & T & T \\\\\n"
 "\\hline\n"
@@ -1643,11 +1643,12 @@ msgid "The simplification here concerns `or`.\n"
 "$\n"
 "\\begin{array}{|c c|c|}\n"
 "\\hline\n"
-"P & P or False \\\\\n"
+"P & \\text{P or False} \\\\\n"
 "\\hline\n"
 "T & T \\\\\n"
 "\\hline\n"
 "F & F \\\\\n"
+"\\hline\n"
 "\\end{array}\n"
 "$\n"
 "\n"
@@ -1662,6 +1663,24 @@ msgid "The simplification here concerns `or`.\n"
 "```\n"
 "\n"
 "Rewrite `P or False` at `h` with `P` using the theorem `or_false` or `or_false_iff`."
+msgstr ""
+
+#: Game.Levels.Simp_World.L01_or_false
+msgid "$\n"
+"\\begin{array}{|c | c|c|}\n"
+"\\hline\n"
+"P & Q & \\text{P or Q} \\\\\n"
+"\\hline\n"
+"T & T & T \\\\\n"
+"\\hline\n"
+"T & F & T \\\\\n"
+"\\hline\n"
+"F & T & T \\\\\n"
+"\\hline\n"
+"F & F & F \\\\\n"
+"\\hline\n"
+"\\end{array}\n"
+"$"
 msgstr ""
 
 #: Game.Levels.Simp_World.L01_or_false
@@ -1755,6 +1774,35 @@ msgid ""
 msgstr ""
 
 #: Game.Levels.Simp_World.L06_iff_of_true
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L07_not_iff
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L07_not_iff
+msgid "`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e one of them is true and the other is false.\n"
+"\n"
+"truth table here..."
+msgstr ""
+
+#: Game.Levels.Simp_World.L07_not_iff
+msgid "Analogous Theorem:\n"
+"```\n"
+"not_iff'\n"
+"```"
+msgstr ""
+
+#: Game.Levels.Simp_World.L08_not_iff_not
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L08_not_iff_not
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L08_not_iff_not
 msgid ""
 msgstr ""
 

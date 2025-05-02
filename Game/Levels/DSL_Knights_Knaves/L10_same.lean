@@ -90,4 +90,3 @@ which means that `A` and `C` have the same type, obtaining the `C` is a knave an
 Conclusion
 "
 "
-NewTheorem not_iff'

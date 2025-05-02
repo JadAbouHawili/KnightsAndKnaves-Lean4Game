@@ -114,10 +114,11 @@ CoverImage "images/knights-and-knaves.jpg"
 --Dependency EquationalReasoning → Logic → DSL_Knights_Knaves -- → KnightsAndKnavesLemmas → KnightsAndKnaves  → KnightsAndKnaves2
 --Dependency KnightsAndKnavesLemmas → KnightsAndKnaves
 
-Dependency Logic → Simp_World 
-Dependency Logic → KnightsAndKnaves2 
+Dependency Logic → Simp_World
+Dependency Simp_World →  KnightsAndKnaves2 
 --Dependency KnightsAndKnaves2 → KnightsAndKnavesLemmas
-Dependency Logic → DSL_Knights_Knaves 
+Dependency Simp_World →DSL_Knights_Knaves
+--Dependency KnightsAndKnaves2 → DSL_Knights_Knaves
 --Dependency KnightsAndKnaves → DSL_Knights_Knaves
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame
