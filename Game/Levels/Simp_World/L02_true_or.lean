@@ -1,7 +1,6 @@
 import Game.Metadata
 
-
-World "Simp_World" 
+World "Simp_World"
 Level 2
 
 Title ""
@@ -12,8 +11,13 @@ Previously, the way to prove this was using the `left`/`right` tactic which was 
 
 Here we introduce a simplification theorem to do it.
 
-But first, rewrite `P or Q` to `True or Q`
+But first, rewrite `P or Q` to `True or Q` using 
+```
+eq_true (h : p) 
+  : p = True
+```
 "
+#check eq_true
 
 Statement (h : P)
   : P or Q  := by
@@ -22,7 +26,38 @@ Statement (h : P)
   rw [eq_true h]
   Hint
   "
-Now use
+We can simplify `True or Q` to `Q`
+
+$
+\\begin\{array}\{|c | c|c|}
+\\hline
+P & Q & \\text\{P or Q} \\\\
+\\hline
+T & T & T \\\\
+\\hline
+T & F & T \\\\
+\\hline
+F & T & T \\\\
+\\hline
+F & F & F \\\\
+\\hline
+\\end\{array}
+$
+`P or Q` is always true for `P = True` i.e `True or Q` and `True` have the same truth value.
+
+$
+\\begin\{array}\{|c | c|c|}
+\\hline
+P & Q & \\text\{P or Q} \\\\
+\\hline
+T & T & T \\\\
+\\hline
+T & F & T \\\\
+\\hline
+\\end\{array}
+$
+
+You can use the theorems
 ```
 true_or_iff (p : Prop) : True or p ↔ True
 ```
@@ -36,12 +71,12 @@ true_or (p : Prop) : (True or p) = True
   rw [true_or Q]
   Hint
   "
-Now we want to prove `True`. But `True` is true, so the proof is trivial. 
+Now we want to prove `True`. But `True` is always true, so the proof is trivial.
 
-The `trivial` tactic will do the job
+The `trivial` tactic will do the job.
   "
   trivial
-  }
+}
 
 #check or_true_iff
 Conclusion
@@ -58,3 +93,4 @@ or_true_iff (p : Prop) : p or True ↔ True
 
 NewTactic trivial
 NewTheorem true_or true_or_iff eq_true
+DisabledTactic left right

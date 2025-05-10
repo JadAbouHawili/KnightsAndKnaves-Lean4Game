@@ -16,58 +16,6 @@ Rewrite the expression `P or Q` into `P or False` using the theorem
 ```
 eq_false (h : ¬p) : p = False
 ```
-
-
-After doing so , we get
-```
-h : P or False
-```
-
-We can simplify it to `P`, here's why.
-
-The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:
-$
-\\begin{array}{|c | c|c|}
-\\hline
-P & Q & \\text{P or Q} \\\\
-\\hline
-T & T & T \\\\
-\\hline
-T & F & T \\\\
-\\hline
-F & T & T \\\\
-\\hline
-F & F & F \\\\
-\\hline
-\\end{array}
-$
-
-Notice that for `Q = False`, `P or Q` is has the same truth value as `P`.
-
-In other words, `P or False` and `P` have the same truth value i.e `(P or False) ↔ P`. Whenver `P or False` occurs , we can replace it by `P` which is of a simpler form.
-$
-\\begin{array}{|c c|c|}
-\\hline
-P & \\text{P or False} \\\\
-\\hline
-T & T \\\\
-\\hline
-F & F \\\\
-\\hline
-\\end{array}
-$
-
-The theorem for this simplication
-```
-or_false_iff (p : Prop) : p or False ↔ p
-```
-
-There's also an equivalent
-```
-or_false (p : Prop) : (p or False) = p
-```
-
-Rewrite `P or False` at `h` with `P` using the theorem `or_false` or `or_false_iff`.
 "
 #check or_false
 #check or_false_iff
@@ -77,6 +25,15 @@ Statement {P : Prop} {h : P or Q} {hnQ : ¬Q}
   rw [eq_false hnQ] at h
   Hint
   "
+After doing so , we get
+```
+h : P or False
+```
+
+We can simplify it to `P`, here's why.
+
+The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:
+
 
 $
 \\begin\{array}\{|c | c|c|}
@@ -93,6 +50,48 @@ F & F & F \\\\
 \\hline
 \\end\{array}
 $
+
+Notice that for `Q = False`,
+$
+\\begin\{array}\{|c | c|c|}
+\\hline
+P & Q & \\text\{P or Q} \\\\
+\\hline
+T & F & T \\\\
+\\hline
+F & F & F \\\\
+\\hline
+\\end\{array}
+$
+
+`P or Q` has the same truth value as `P`.(for `Q = False`)
+
+In other words, `P or False` and `P` have the same truth value i.e `(P or False) ↔ P`. Whenver `P or False` occurs , we can replace it by `P` which is of a simpler form.
+$
+\\begin\{array}\{|c|c|}
+\\hline
+P & \\text\{P or False} \\\\
+\\hline
+T & T \\\\
+\\hline
+F & F \\\\
+\\hline
+\\end\{array}
+$
+
+The theorem for this simplication
+```
+or_false_iff (p : Prop) 
+: p or False ↔ p
+```
+
+There's also an equivalent
+```
+or_false (p : Prop) 
+: (p or False) = p
+```
+
+Rewrite  at `h : P or False` obtaining `h : P`, using the theorem `or_false` or `or_false_iff`.
   "
   rw [or_false_iff P] at h
   assumption
