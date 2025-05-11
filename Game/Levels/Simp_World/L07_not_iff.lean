@@ -1,16 +1,35 @@
 import Game.Metadata
 
 
-World "Simp_World" 
+World "Simp_World"
 Level 7
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
 `¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e one of them is true and the other is false.
 
-truth table here...
+Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:
+$
+\\begin{array}{|c | c|c|}
+\\hline
+P & Q & \\text{¬(P ↔ Q)} \\\\
+\\hline
+T & F & T \\\\
+\\hline
+F & T & T \\\\
+\\hline
+\\end{array}
+$
+
+We can conclude that `¬P`,`Q` have the same truth value(`¬P ↔ Q`) and `P`,`¬Q` have the same truth value(`P ↔ ¬Q`).
+
+The theorem for the former simplification:
+```
+not_iff : ¬(a ↔ b) ↔ (¬a ↔ b)
+```
+
 "
 
 #check not_iff
@@ -26,7 +45,9 @@ Conclusion
 "
 Analogous Theorem:
 ```
-not_iff'
+not_iff' : ¬(P ↔ Q) ↔ (P ↔ ¬Q)
 ```
 "
-NewTheorem not_iff
+
+#check not_iff'
+NewTheorem not_iff not_iff'

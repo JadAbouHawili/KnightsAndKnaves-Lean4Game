@@ -4,10 +4,16 @@ import Game.Metadata
 World "Simp_World" 
 Level 6
 
-Title "iff_of_true" 
+Title "`iff_of_true`"
 
 Introduction 
 "
+Here, we have that `P`,`Q` are both true.
+
+The relevant theorem,
+```
+iff_of_true (ha : a) (hb : b) : a ↔ b
+```
 "
 
 Statement (hP : P) (hQ : Q)

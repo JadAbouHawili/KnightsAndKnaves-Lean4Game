@@ -40,7 +40,7 @@ open Islander
 Statement
 {stA : A said B.isKnight}
 {stB : B said (@allKnights A B C)}
-{stC : C said A.isKnight or B.isKnight}
+{stC : C said (A.isKnight or B.isKnight)}
 : (@allKnights A B C)  ∨ (@allKnaves A B C):= by 
   Hint (strict := true)
   "

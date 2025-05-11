@@ -3,7 +3,7 @@ import Game.Metadata
 World "Simp_World"
 Level 3
 
-Title ""
+Title "`not_or`"
 
 Introduction
 "
@@ -43,7 +43,12 @@ $
 
 Therefore, they are equivalent and can be interchanged.
 
-On a more intuitive level, we can understand `¬(P or Q)` as meaning .... 
+On a more intuitive level, we can understand `¬(P or Q)` as meaning `P or Q` is not true i.e `P` is false and `Q` is false.
+
+The simplification theorem to use,
+```
+not_or : ¬(p or q) ↔ ¬p and ¬q
+```
 "
 
 #check not_or

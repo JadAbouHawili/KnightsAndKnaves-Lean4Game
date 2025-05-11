@@ -19,16 +19,16 @@ Two people are said to be of the same type if they are both knights or both knav
 `B`: `A` and `C` are of the same type.
 "
 
-theorem not_iff' {P Q : Prop}
- : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by 
-  --#check Iff.symm
-  --#check symm
-  #check Iff.symm
-  #check not_iff_comm
-  #check not_iff_not
-  nth_rw  2 [(@not_not P).symm]
-  rw [not_iff_not]
-  exact Classical.not_iff
+--theorem not_iff' {P Q : Prop}
+-- : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by 
+--  --#check Iff.symm
+--  --#check symm
+--  #check Iff.symm
+--  #check not_iff_comm
+--  #check not_iff_not
+--  nth_rw  2 [(@not_not P).symm]
+--  rw [not_iff_not]
+--  exact Classical.not_iff
 
 open Islander
 Statement

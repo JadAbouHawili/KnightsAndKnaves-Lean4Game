@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat May 10 16:38:45 2025\n"
+"POT-Creation-Date: Sun May 11 21:36:56 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1765,7 +1765,7 @@ msgid "There's an analogous theorem\n"
 msgstr ""
 
 #: Game.Levels.Simp_World.L03_not_or
-msgid ""
+msgid "`not_or`"
 msgstr ""
 
 #: Game.Levels.Simp_World.L03_not_or
@@ -1805,7 +1805,12 @@ msgid "Notice that `¬(P or Q)`,\n"
 "\n"
 "Therefore, they are equivalent and can be interchanged.\n"
 "\n"
-"On a more intuitive level, we can understand `¬(P or Q)` as meaning ...."
+"On a more intuitive level, we can understand `¬(P or Q)` as meaning `P or Q` is not true i.e `P` is false and `Q` is false.\n"
+"\n"
+"The simplification theorem to use,\n"
+"```\n"
+"not_or : ¬(p or q) ↔ ¬p and ¬q\n"
+"```"
 msgstr ""
 
 #: Game.Levels.Simp_World.L03_not_or
@@ -1813,11 +1818,52 @@ msgid ""
 msgstr ""
 
 #: Game.Levels.Simp_World.L04_not_and
-msgid ""
+msgid "`not_and_or`"
 msgstr ""
 
 #: Game.Levels.Simp_World.L04_not_and
-msgid ""
+msgid "Notice that `¬(P and Q)`,\n"
+"$\n"
+"\\begin{array}{|c | c|c|}\n"
+"\\hline\n"
+"P & Q & \\text{¬(P and Q)} \\\\\n"
+"\\hline\n"
+"T & T & F \\\\\n"
+"\\hline\n"
+"T & F & T \\\\\n"
+"\\hline\n"
+"F & T & T \\\\\n"
+"\\hline\n"
+"F & F & T \\\\\n"
+"\\hline\n"
+"\\end{array}\n"
+"$\n"
+"\n"
+"has the same truth table as `¬P or ¬Q`\n"
+"$\n"
+"\\begin{array}{|c | c|c|}\n"
+"\\hline\n"
+"P & Q & \\text{¬P or ¬Q} \\\\\n"
+"\\hline\n"
+"T & T & F \\\\\n"
+"\\hline\n"
+"T & F & T \\\\\n"
+"\\hline\n"
+"F & T & T \\\\\n"
+"\\hline\n"
+"F & F & T \\\\\n"
+"\\hline\n"
+"\\end{array}\n"
+"$\n"
+"\n"
+"Therefore, they are equivalent and can be interchanged.\n"
+"\n"
+"On a more intuitive level, we can understand `¬(P and Q)` as meaning `P and Q` is not true i.e `P`,`Q` can't be true at the same (at least one of them has to be false)\n"
+"\n"
+"The simplification theorem to use,\n"
+"```\n"
+"not_and_or : ¬(p and q) ↔ ¬p or ¬q\n"
+"```"
 msgstr ""
 
 #: Game.Levels.Simp_World.L04_not_and
@@ -1825,11 +1871,22 @@ msgid ""
 msgstr ""
 
 #: Game.Levels.Simp_World.L05_iff_of_false
-msgid "iff_of_false"
+msgid "`iff_of_false`"
 msgstr ""
 
 #: Game.Levels.Simp_World.L05_iff_of_false
-msgid ""
+msgid "`P ↔ Q` means that `P`,`Q` have the same truth value. \n"
+"\n"
+"If both of them are true, we can conclude `P ↔ Q`.\n"
+"\n"
+"If both of them are false, we can conclude `P ↔ Q` as well.\n"
+"\n"
+"Here, we have that `P`,`Q` are both false.\n"
+"\n"
+"The relevant theorem,\n"
+"```\n"
+"iff_of_false (ha : ¬a) (hb : ¬b) : a ↔ b\n"
+"```"
 msgstr ""
 
 #: Game.Levels.Simp_World.L05_iff_of_false
@@ -1837,11 +1894,16 @@ msgid ""
 msgstr ""
 
 #: Game.Levels.Simp_World.L06_iff_of_true
-msgid "iff_of_true"
+msgid "`iff_of_true`"
 msgstr ""
 
 #: Game.Levels.Simp_World.L06_iff_of_true
-msgid ""
+msgid "Here, we have that `P`,`Q` are both true.\n"
+"\n"
+"The relevant theorem,\n"
+"```\n"
+"iff_of_true (ha : a) (hb : b) : a ↔ b\n"
+"```"
 msgstr ""
 
 #: Game.Levels.Simp_World.L06_iff_of_true
@@ -1855,13 +1917,31 @@ msgstr ""
 #: Game.Levels.Simp_World.L07_not_iff
 msgid "`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e one of them is true and the other is false.\n"
 "\n"
-"truth table here..."
+"Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:\n"
+"$\n"
+"\\begin{array}{|c | c|c|}\n"
+"\\hline\n"
+"P & Q & \\text{¬(P ↔ Q)} \\\\\n"
+"\\hline\n"
+"T & F & T \\\\\n"
+"\\hline\n"
+"F & T & T \\\\\n"
+"\\hline\n"
+"\\end{array}\n"
+"$\n"
+"\n"
+"We can conclude that `¬P`,`Q` have the same truth value(`¬P ↔ Q`) and `P`,`¬Q` have the same truth value(`P ↔ ¬Q`).\n"
+"\n"
+"The theorem for the former simplification:\n"
+"```\n"
+"not_iff : ¬(a ↔ b) ↔ (¬a ↔ b)\n"
+"```"
 msgstr ""
 
 #: Game.Levels.Simp_World.L07_not_iff
 msgid "Analogous Theorem:\n"
 "```\n"
-"not_iff'\n"
+"not_iff' : ¬(P ↔ Q) ↔ (P ↔ ¬Q)\n"
 "```"
 msgstr ""
 
@@ -1870,7 +1950,12 @@ msgid ""
 msgstr ""
 
 #: Game.Levels.Simp_World.L08_not_iff_not
-msgid ""
+msgid "If we know that `¬P`,`¬Q` have the same truth value then `P`,`Q` have the same truth value.\n"
+"\n"
+"The relevant theorem,\n"
+"```\n"
+"not_iff_not : (¬a ↔ ¬b) ↔ (a ↔ b)\n"
+"```"
 msgstr ""
 
 #: Game.Levels.Simp_World.L08_not_iff_not
@@ -2542,6 +2627,59 @@ msgid "Again we have three people, A, B, C, each of whom is either \n"
 "What are A, B, C?\n"
 "\n"
 "Change the goal to `A.isKnave`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Change the goal from `knave_to_knight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Assume `A.isKnight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Conclude `A`'s statement"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Now we have that everybody is a knave, but we know `A` is a knight. Therefore, we have a contradiction.\n"
+"\n"
+"`unfold allKnaves` and obtain a contradiction."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Now that we know `A` is a knave, conclude the negation of `A`'s statement."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Let's move on to proving `B.isKnight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Convert from `knight_to_knave`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Assume `B.isKnave`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Conclude that `B`'s statement is false"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "`«{notoneknight}»` means that there are no knights or there are two or more knights.\n"
+"\n"
+"Since we know that `A,B` are knaves then it is the former i.e there are no knights. This means that `C` is a knave.\n"
+"\n"
+"To obtain this result:\n"
+"- First start by unfolding `«{notoneknight}»`.\n"
+"- Use `simp` given what you know to simplify the obtained expression after unfolding.\n"
+"- The final answer after simplification would that `C` is a knave.\n"
+"\n"
+"After obtaining that `C` is a knave, we now know that everyone is a knave but we also know that `«{notallknave}» : ¬allKnaves` and so a contradiction.\n"
+"\n"
+"To obtain this contradiction, `unfold allKnaves` then simplify the unfolded expression or construct a proof of `A.isKnave and B.isKnave and C.isKnave`."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_31
