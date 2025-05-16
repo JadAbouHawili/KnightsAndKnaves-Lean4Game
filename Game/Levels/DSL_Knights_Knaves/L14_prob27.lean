@@ -31,7 +31,7 @@ Now what are B and C?
 def oneKnight {A B C : Inhabitant} : Prop:=   (A ∈ Knight ∧ B ∈ Knave ∧ C ∈ Knave) ∨ (A ∈ Knave ∧ B ∈ Knight ∧ C ∈ Knave) ∨ (A ∈ Knave ∧ B ∈ Knave ∧ C ∈ Knight)
 
 open Islander
-example
+Statement
 {A B C : Islander}
 (stB : B.isKnight ↔ (A.isKnight ↔ @oneisknight A B C))
 (stC : C.isKnight ↔ B.isKnave)

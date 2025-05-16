@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sun May 11 21:36:56 2025\n"
+"POT-Creation-Date: Fri May 16 12:11:12 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2697,6 +2697,56 @@ msgid "Suppose the stranger, instead of asking A what he is,\n"
 "say? B replies, ;A said that there is one knight among us.;\n"
 "Then C says, 'Don't believe B; he is lying!' \n"
 "Now what are B and C?"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "First prove `B.isKnave`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "As usual, from `knave_to_knight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Assume `B` is a knight."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "You can simplify `stC` using `«{BKnight}»`. Change `«{BKnight}»` it to an expression involving knaves."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Take cases for A."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Conclude `B`'s statement"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Conclude that there is only one knight"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Unfold that statement.\n"
+"\n"
+"As you can see, it is not true that there only one knight and simplifying this expression will give the contradiction needed to close the goal."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Again conclude B's statement"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Conclude `oneisknight` using simp and what you know about `A`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Unfold `oneisknight` and notice that it is false, and a simplification will give the contradiction you desire."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "Now we finally have that `B` is a knave. Obtain information about `C` and close the goal."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L14_prob27
