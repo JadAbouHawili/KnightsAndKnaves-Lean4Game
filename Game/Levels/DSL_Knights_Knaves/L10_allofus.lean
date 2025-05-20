@@ -2,7 +2,7 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 World "DSL_Knights_Knaves"
-Level 11
+Level 10
 
 Title "allKnights or allKnaves"
 

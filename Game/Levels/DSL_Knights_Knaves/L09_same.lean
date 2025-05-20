@@ -3,7 +3,7 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 World "DSL_Knights_Knaves"
-Level 10
+Level 9
 
 Title ""
 
