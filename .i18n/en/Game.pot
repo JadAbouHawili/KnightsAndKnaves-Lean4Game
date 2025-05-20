@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue May 20 20:16:25 2025\n"
+"POT-Creation-Date: Tue May 20 21:26:48 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2336,37 +2336,41 @@ msgstr ""
 #: Game.Levels.DSL_Knights_Knaves.L08_sametype
 msgid "You have met a group of 2 islanders. Their names are Robert and Ira.\n"
 "\n"
-"Robert says: Ira is my type.\n"
-"Ira says: Robert is truthful."
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
-msgid "Start by proving `¬Robert.isKnave`"
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
-msgid "Assume `R.isKnave`"
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
-msgid "So `Robert` is not a knight, so `Ira` was lying .\n"
+"`Robert` says: `Ira` is my type.\n"
 "\n"
-"Therefore `Ira` is a knave"
+"`Ira` says: `Robert` is truthful.\n"
+"\n"
+"A knight or a knave will say they are the same type as a knight. So when Robert says they are the same type as Ira, we know that Ira is a knight.\n"
+"\n"
+"Let's start by proving `Ira.isKnight`"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L08_sametype
-msgid "`Robert` are `Ira` are the same, but we know they are not by `Robert`'s lie.\n"
-"This is a contradiction.\n"
-"\n"
-"First, conclude that `Robert`'s statement is false i.e `¬(Robert.isKnight ↔ Ira.isKnight)` then prove `Robert.isKnight ↔ Ira.isKnight`"
+msgid "Assume by contradiction that ¬Ira.isKnight"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L08_sametype
-msgid "Now that `Robert` is a knight, then `Ira` and `Robert` have the same type, and therefore `Ira` is a knight.\n"
+msgid "We will now simplify `stR`.\n"
 "\n"
-"Conclude `Robert`'s statement then use that to get `Ira.isKnight`.\n"
+"Because `¬Ira.isKnight` , `Robert.isKnight ↔ Ira.isKnight ` can be simplified to `¬ Robert.isKnight`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+msgid "`stR` now becomes `Robert said ¬ Robert.isKnight`.\n"
 "\n"
-"Close the goal."
+"Change that to `Robert said Robert.isKnave`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+msgid "`Robert` is saying 'I am a knave' which is a contradiction. Use the appropriate theorem"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+msgid "`dsl_iamknave`"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+msgid "Now that `Ira` is a knight, conclude that `Robert` is a knight and close the goal."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L08_sametype

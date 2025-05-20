@@ -28,8 +28,7 @@ example
 {Robert Ira : Islander}
 {stR : Robert said (Robert.isKnight ↔ Ira.isKnight)}
 : Ira.isKnight := by 
-  apply not_not.mp
-  intro nIKnight
+  by_contra nIKnight
   simp [nIKnight] at stR
   knight_to_knave at stR
   exact dsl_iamknave stR
@@ -39,12 +38,40 @@ Statement
 {stI : Ira said (Robert.isKnight)}
 :  Robert.isKnight and Ira.isKnight := by {
   have IKnight : Ira.isKnight 
-  apply not_not.mp
-  intro nIKnight
+  Hint
+  "
+Assume by contradiction that ¬Ira.isKnight
+  "
+  by_contra nIKnight
+  Hint
+  "
+  We will now simplify `stR`.
+
+  Because `¬Ira.isKnight` , `Robert.isKnight ↔ Ira.isKnight ` can be simplified to `¬ Robert.isKnight`
+  "
   simp [nIKnight] at stR
+  Hint
+  "
+  `stR` now becomes `Robert said ¬ Robert.isKnight`.
+
+  Change that to `Robert said Robert.isKnave`
+
+  "
   knight_to_knave at stR
+  Hint
+  "
+`Robert` is saying 'I am a knave' which is a contradiction. Use the appropriate theorem
+  "
+  Hint (hidden := true)
+  "
+`dsl_iamknave`
+  "
   exact dsl_iamknave stR
 
+  Hint
+  "
+Now that `Ira` is a knight, conclude that `Robert` is a knight and close the goal.
+  "
   have RKnight := knight_said stI IKnight
   constructor
   assumption ; assumption
