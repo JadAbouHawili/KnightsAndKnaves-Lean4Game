@@ -2,7 +2,7 @@ import Game.Metadata
 
 
 World "Simp_World" 
-Level 6
+Level 7
 
 Title "`iff_of_true`"
 

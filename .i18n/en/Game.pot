@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Tue May 20 21:26:48 2025\n"
+"POT-Creation-Date: Wed May 21 15:49:36 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1870,11 +1870,46 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#: Game.Levels.Simp_World.L05_iff_of_false
+#: Game.Levels.Simp_World.L05_not_not
+msgid "`by_contra`, `not_not`"
+msgstr ""
+
+#: Game.Levels.Simp_World.L05_not_not
+msgid "In this level, you will learn 'proof by contradiction'. \n"
+"\n"
+"To prove `P`, you would assume `¬P` and then prove false i.e you would be proving `¬P → False` which is `¬¬P`. The truth table shows that `¬¬P` is equivalent to `P`\n"
+"\n"
+"$\n"
+"\\begin{array}{|c | c|c|}\n"
+"\\hline\n"
+"P & ¬P & \\text{¬¬P}\\\\\n"
+"\\hline\n"
+"T & F & T \\\\\n"
+"\\hline\n"
+"F & T & F \\\\\n"
+"\\hline\n"
+"\\end{array}\n"
+"$\n"
+"\n"
+"There are two ways to solve this level, and you should try both.\n"
+"\n"
+"The first way is using the simplification theorem (to simplify `¬¬P` to `P`),\n"
+"```\n"
+"not_not : ¬¬a ↔ a\n"
+"```\n"
+"\n"
+"The second is using the `by_contra` tactic where `by_contra h` would be assuming `h : ¬P`."
+msgstr ""
+
+#: Game.Levels.Simp_World.L05_not_not
+msgid ""
+msgstr ""
+
+#: Game.Levels.Simp_World.L06_iff_of_false
 msgid "`iff_of_false`"
 msgstr ""
 
-#: Game.Levels.Simp_World.L05_iff_of_false
+#: Game.Levels.Simp_World.L06_iff_of_false
 msgid "`P ↔ Q` means that `P`,`Q` have the same truth value. \n"
 "\n"
 "If both of them are true, we can conclude `P ↔ Q`.\n"
@@ -1889,15 +1924,15 @@ msgid "`P ↔ Q` means that `P`,`Q` have the same truth value. \n"
 "```"
 msgstr ""
 
-#: Game.Levels.Simp_World.L05_iff_of_false
+#: Game.Levels.Simp_World.L06_iff_of_false
 msgid ""
 msgstr ""
 
-#: Game.Levels.Simp_World.L06_iff_of_true
+#: Game.Levels.Simp_World.L07_iff_of_true
 msgid "`iff_of_true`"
 msgstr ""
 
-#: Game.Levels.Simp_World.L06_iff_of_true
+#: Game.Levels.Simp_World.L07_iff_of_true
 msgid "Here, we have that `P`,`Q` are both true.\n"
 "\n"
 "The relevant theorem,\n"
@@ -1906,15 +1941,15 @@ msgid "Here, we have that `P`,`Q` are both true.\n"
 "```"
 msgstr ""
 
-#: Game.Levels.Simp_World.L06_iff_of_true
+#: Game.Levels.Simp_World.L07_iff_of_true
 msgid ""
 msgstr ""
 
-#: Game.Levels.Simp_World.L07_not_iff
+#: Game.Levels.Simp_World.L08_not_iff
 msgid ""
 msgstr ""
 
-#: Game.Levels.Simp_World.L07_not_iff
+#: Game.Levels.Simp_World.L08_not_iff
 msgid "`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e one of them is true and the other is false.\n"
 "\n"
 "Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:\n"
@@ -1938,18 +1973,18 @@ msgid "`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e one
 "```"
 msgstr ""
 
-#: Game.Levels.Simp_World.L07_not_iff
+#: Game.Levels.Simp_World.L08_not_iff
 msgid "Analogous Theorem:\n"
 "```\n"
 "not_iff' : ¬(P ↔ Q) ↔ (P ↔ ¬Q)\n"
 "```"
 msgstr ""
 
-#: Game.Levels.Simp_World.L08_not_iff_not
+#: Game.Levels.Simp_World.L09_not_iff_not
 msgid ""
 msgstr ""
 
-#: Game.Levels.Simp_World.L08_not_iff_not
+#: Game.Levels.Simp_World.L09_not_iff_not
 msgid "If we know that `¬P`,`¬Q` have the same truth value then `P`,`Q` have the same truth value.\n"
 "\n"
 "The relevant theorem,\n"
@@ -1958,7 +1993,7 @@ msgid "If we know that `¬P`,`¬Q` have the same truth value then `P`,`Q` have t
 "```"
 msgstr ""
 
-#: Game.Levels.Simp_World.L08_not_iff_not
+#: Game.Levels.Simp_World.L09_not_iff_not
 msgid ""
 msgstr ""
 

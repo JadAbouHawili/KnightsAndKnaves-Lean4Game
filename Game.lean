@@ -119,6 +119,6 @@ Dependency Simp_World →  KnightsAndKnaves2
 --Dependency KnightsAndKnaves2 → KnightsAndKnavesLemmas
 Dependency Simp_World →DSL_Knights_Knaves
 --Dependency KnightsAndKnaves2 → DSL_Knights_Knaves
---Dependency KnightsAndKnaves → DSL_Knights_Knaves
+--Dependency  DSL_Knights_Knaves → KnightsAndKnaves2
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

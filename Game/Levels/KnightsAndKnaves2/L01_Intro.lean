@@ -74,4 +74,3 @@ Then close the goal.(using `constructor`, or `⟨⟩` notation or `And.intro` et
 Conclusion
 "
 "
-NewTactic by_contra
