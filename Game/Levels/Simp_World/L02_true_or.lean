@@ -89,6 +89,11 @@ or_true (p : Prop) : (p or True) = True
 ```
 or_true_iff (p : Prop) : p or True ↔ True
 ```
+
+To solve with `simp`,
+```
+simp [h]
+```
 "
 
 NewTactic trivial

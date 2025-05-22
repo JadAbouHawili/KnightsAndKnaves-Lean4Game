@@ -61,5 +61,6 @@ Statement (h : ¬(P or Q))
 
 Conclusion
 "
+`simp [not_or] at h` instead of `rw [not_or] at h` also works.
 "
 NewTheorem not_or

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu May 22 13:49:57 2025\n"
+"POT-Creation-Date: Thu May 22 14:17:00 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1684,7 +1684,7 @@ msgid "After doing so , we get\n"
 msgstr ""
 
 #: Game.Levels.Simp_World.L01_or_false
-msgid "You can also simplify `h` using the `simp` tactic. \n"
+msgid "You can also simplify `h` using the `simp` tactic.(which stands for simplification)\n"
 "\n"
 "We want to simplify `h` using `hnQ`, so\n"
 "```\n"
@@ -1769,6 +1769,11 @@ msgid "There's an analogous theorem\n"
 "\n"
 "```\n"
 "or_true_iff (p : Prop) : p or True ↔ True\n"
+"```\n"
+"\n"
+"To solve with `simp`,\n"
+"```\n"
+"simp [h]\n"
 "```"
 msgstr ""
 
@@ -1822,7 +1827,7 @@ msgid "Notice that `¬(P or Q)`,\n"
 msgstr ""
 
 #: Game.Levels.Simp_World.L03_not_or
-msgid ""
+msgid "`simp [not_or] at h` instead of `rw [not_or] at h` also works."
 msgstr ""
 
 #: Game.Levels.Simp_World.L04_not_and
@@ -1875,7 +1880,7 @@ msgid "Notice that `¬(P and Q)`,\n"
 msgstr ""
 
 #: Game.Levels.Simp_World.L04_not_and
-msgid ""
+msgid "`simp [not_and_or] at h` instead of `rw [not_and_or] at h` also works."
 msgstr ""
 
 #: Game.Levels.Simp_World.L05_not_not
@@ -1910,7 +1915,7 @@ msgid "In this level, you will learn 'proof by contradiction'. \n"
 msgstr ""
 
 #: Game.Levels.Simp_World.L05_not_not
-msgid ""
+msgid "`simp at hP` simplifies `hP : ¬¬P` into `hP : P`"
 msgstr ""
 
 #: Game.Levels.Simp_World.L06_iff_of_false

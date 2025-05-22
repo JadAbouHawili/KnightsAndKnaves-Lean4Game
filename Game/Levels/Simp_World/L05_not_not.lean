@@ -46,6 +46,7 @@ Statement
 
 Conclusion
 "
+`simp at hP` simplifies `hP : ¬¬P` into `hP : P`
 "
 #check not_not
 NewTactic by_contra
