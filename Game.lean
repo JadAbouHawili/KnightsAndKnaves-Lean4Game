@@ -2,14 +2,13 @@ import Game.Levels.EquationalReasoning
 import Game.Levels.Logic
 import Game.Levels.Simp_World
 import Game.Levels.DSL_Knights_Knaves
---import Game.Levels.KnightsAndKnavesLemmas
 --import Game.Levels.KnightsAndKnaves
 import Game.Levels.KnightsAndKnaves2
 
 Title "Knights And Knaves Game"
 Introduction
 "
-This is a gamification of mathematical proofs. Every level has a `Goal`, which is what you are trying to prove. Closing the `Goal` means you have proved the theorem and there is nothing else to do.
+This is a gamification of mathematical proofs. Every level has a `Goal`, which is what you are trying to prove. Closing the `Goal` means you have proven the theorem and there is nothing else to do.
 
 You will use the `Lean` theorem prover, and its mathematical library `mathlib`.
 
@@ -22,30 +21,34 @@ Clicking on one will display an overview and some examples. This will be availab
 
 Any new tactic, theorem, or definition introduced in a level will be highlighted in a yellow color.
 
+(note that you can view the official documentation of tactics or theorems by hovering over a term when you are in editor mode, you can enter editor mode by clicking the icon next to the hamburger menu that is in the top right hand corner when you are in a level)
+
 We now discuss each section in the right side pane.
-(note that you can view the official documentation of tactics or theorems by hovering over a term when you are in editor mode, you can enter editor mode by clicking the icon next to the hamburger menu that is in the top right hand corner)
 ## Tactics
 In this puzzle game, you will use tactics to manipulate the `Goal` and close it, essentially proving the `Goal`. Tactics will be incrementally introduced, and tactics that haven't been introduced yet will have a lock icon which means you can't use them yet. 
 
 ## Definitions
-The point of this game is not just to showcase ***Lean***, but also to learn some mathematics. Relevant definitions will be displayed here.
+The point of this game is not just to showcase `Lean`, but also to learn some mathematics. Relevant definitions will be displayed here.
 
 ## Theorems
-Here is listed theorems to use throughout the levels. Some you would have proved in previous levels and others are presented for you to use but without having proved them. An intuitive definition of why the theorem makes sense will be presented as well when it is introduced.
+Here is listed theorems to use throughout the levels. Some you would have proven in previous levels and others are presented for you to use but without having proven them. An intuitive explanation of why the theorem makes sense will be presented as well when it is introduced.
 
 # Level Structure
-Within every level, you have the `Objects`(if any), `Assumptions`(if any), and `Goal` for the current level. This is called the initial proof state. 
+Within every level, you have the `Objects`(if any), `Assumptions`(if any), and `Goal` for the current level. This is called the initial proof state.
 
 There will also be a text input to execute tactics accordingly.
 
-***Lean*** tracks the proof state as you execute tactics and makes sure you made no mistakes.
+`Lean` tracks the proof state as you execute tactics and makes sure you made no mistakes.
 You will execute tactics one by one until Lean tells you that you have closed the goal.
 
 # More info
 You can click the hamburger menu in the top right then 'Game Info' for more information.
+
+(links related to `Lean` and `mathlib` documentation,sources of puzzles, link to the github repo etc...)
 "
 
-Info "
+Info
+"
 Many technical details have been skipped for the sake of not getting bogged down with `Lean` and its mathematical library `mathlib`, but focus on the aspects of reasoning and proof. You can search https://leanprover-community.github.io/mathlib4_docs/ for more information about any tactic or theorem used.
 
 # Editor Mode 
@@ -77,7 +80,7 @@ https://zulip.com/case-studies/lean/
 Sources for the puzzles:
 - Puzzle Generator(some of which were taken as is, and others were modified):
 https://www.wolframcloud.com/objects/demonstrations/KnightsAndKnavesPuzzleGenerator-source.nb
-- Raymond smullyan's book called 'What is the name of this book'
+- Raymond Smullyan's book called 'What is the name of this book'
 
 Insightful:
 - Knights and Knaves in a logic programming language(prolog):
@@ -111,12 +114,10 @@ CaptionLong "A guided experience that teaches you everything you need to know to
 
 Based on statements made, you will deductively conclude who is a knight(truthful) and who is a knave(liar)."
 CoverImage "images/knights-and-knaves.jpg"
---Dependency EquationalReasoning → Logic → DSL_Knights_Knaves -- → KnightsAndKnavesLemmas → KnightsAndKnaves  → KnightsAndKnaves2
---Dependency KnightsAndKnavesLemmas → KnightsAndKnaves
+--Dependency EquationalReasoning → Logic → DSL_Knights_Knaves
 
 Dependency Logic → Simp_World
 Dependency Simp_World →  KnightsAndKnaves2 
---Dependency KnightsAndKnaves2 → KnightsAndKnavesLemmas
 Dependency Simp_World →DSL_Knights_Knaves
 --Dependency KnightsAndKnaves2 → DSL_Knights_Knaves
 --Dependency  DSL_Knights_Knaves → KnightsAndKnaves2

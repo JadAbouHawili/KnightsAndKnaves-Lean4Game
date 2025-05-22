@@ -21,7 +21,7 @@ eq_false (h : ¬p) : p = False
 #check or_false_iff
 Statement {P : Prop} {h : P or Q} {hnQ : ¬Q}
   : P := by
-  {
+{
   rw [eq_false hnQ] at h
   Hint
   "
@@ -95,9 +95,20 @@ Rewrite  at `h : P or False` obtaining `h : P`, using the theorem `or_false` or 
   "
   rw [or_false_iff P] at h
   assumption
-  }
+}
 
 Conclusion
 "
+You can also simplify `h` using the `simp` tactic. 
+
+We want to simplify `h` using `hnQ`, so
+```
+simp [hnQ] at h
+```
+will do.
+
+Try it.
 "
+
 NewTheorem eq_false or_false_iff or_false
+NewTactic simp
