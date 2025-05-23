@@ -2,10 +2,10 @@ import Game.Metadata
 import Game.LevelLemmas.Logical
 
 
-World "Logic" 
+World "Logic"
 Level 7
 
-Title "Logical Equivalence, `↔`" 
+Title "Logical Equivalence, `↔`"
 
 Introduction 
 "
@@ -44,7 +44,7 @@ Statement (PsameQ : P ↔ Q) (hP : P)
   exact PsameQ.mp hP
   }
 
-Conclusion 
+Conclusion
 "
 This level could have been
 ```
@@ -55,6 +55,16 @@ Goal
 P
 ```
 `exact PsameQ.mpr hQ` would close the goal.
+
+`rw [PsameQ]` would transform the proof state into
+```
+PsameQ : P ↔ Q
+hQ : Q
+
+Goal 
+Q
+```
+which you can then close using `hQ`.
 "
 
 NewDefinition Iff

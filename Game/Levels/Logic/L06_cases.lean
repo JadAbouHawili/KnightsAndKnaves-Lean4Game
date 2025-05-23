@@ -8,7 +8,7 @@ Title "Proof by `cases`"
 
 Introduction 
 "
-In this level, we will do a 'proof by cases'.
+In this level, we will do a 'proof by cases' using the `cases` tactic.
 
 By `h : P or Q`, we have two cases:
 `P` being true or `Q` being true. 

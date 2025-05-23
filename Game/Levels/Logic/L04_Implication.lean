@@ -13,8 +13,8 @@ Logical implication `P → Q` is made up of two components:
 - The premise, which in this case is `P`
 - The conclusion, which in this case is `Q`
 
-`P → Q` is read as 'If `P` is true, then `Q` is true.
-The truth of `P` IMPLIES the truth of `Q`. A proof of `P` IMPLIES a proof of `Q`.
+`P → Q` is read as 'If `P` is true, then `Q` is true'.
+`P` being true IMPLIES `Q` being true. A proof of `P` IMPLIES a proof of `Q`.
 
 # truth table
 $
@@ -36,13 +36,21 @@ $
 A statement `P → Q` is false when `P` is true and `Q` false, it's true otherwise.
 This is because this is the only case where the meaning of `P → Q` is violated i.e we have that `P` is true so `Q` is supposed to be true as well but its not.
 
-When `P` is false, the implication `P → Q` is always false because the implication does not tell us what should happen when `P` is false.
+When `P` is false, the implication `P → Q` is always true regardless of the truth value of `Q` because the implication does not tell us what `Q` should be when `P` is false, it only tells us that `Q` must be true when `P` is true.
 
 In the current proof state, we know `P` (i.e `P` is true) , and we know `P → Q` (i.e `P → Q` is true). Therefore, we can conclude `Q` (i.e `Q` is true ).
 
 You can think of logical implication as a function with one input and one output. It takes a proof of `P` and returns a proof of `Q`.
+
+Give `ptoq : P → Q` the proof `hP : P` to get a proof of `Q`.
+
+You can then use `exact` to close the goal
 "
 Statement {P Q : Prop}  (hP : P) (ptoq: P → Q) : Q := by
+  Hint(hidden := true)
+  "
+`ptoq hP : Q` , this is exactly whats needed to prove the goal.
+  "
   exact ptoq hP
 
 Conclusion

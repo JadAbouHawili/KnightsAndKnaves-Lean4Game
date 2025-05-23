@@ -103,6 +103,8 @@ some expression involving A
 
 `rw [h]` would change the goal by replacing every occurrence of `A` with `B`.
 
+Moreover `rw [h] at h'` would apply the rewrite on an assumption `h'` instead of the goal.
+
 By default, rw uses an equation in the forward direction, matching the left-hand side of the equation `h` with an occurrence of `A` in the goal, and replaces it with the right-hand side i.e `B`. 
 
 The notation `rw [←h]` can be used to instruct the tactic to use the equality `h` in the reverse direction i.e replace an occurrence of `B` with `A`.
@@ -145,9 +147,9 @@ P
 ```
 Remember that `hP : P` where `P : Prop` means `hP` is a proof of `P`.
 
-Since the goal is to prove `P`, the only thing we have to do is to let Lean know that we do have such a proof. This is done by `exact h`.
+Since the goal is to prove `P`, the only thing we have to do is to let Lean know that we do have such a proof. This is done by `exact hP`.
 
-In other words, `hP` is EXACTLY whats needd to prove the goal, the type of `hP` EXACTLY matches the goal, so `exact h` will do the job.
+In other words, `hP` is EXACTLY whats needed to prove the goal, the type of `hP` EXACTLY matches the goal, so `exact h` will do the job.
 -/
 TacticDoc exact
 

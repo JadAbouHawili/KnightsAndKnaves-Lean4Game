@@ -52,22 +52,25 @@ Info
 Many technical details have been skipped for the sake of not getting bogged down with `Lean` and its mathematical library `mathlib`, but focus on the aspects of reasoning and proof. You can search https://leanprover-community.github.io/mathlib4_docs/ for more information about any tactic or theorem used.
 
 # Editor Mode 
-Some levels will force you to use editor mode. Editor mode is necessary for multiline tactics like `have`. Moreover, you should get used to it because it mimics a vscode `Lean` environment which is the most common way `Lean` is run.
+Editor mode mimics the `Lean` experience in vscode which is the most common way to use `Lean`.
 
 To access editor mode, click on the icon next to the hamburger menu in the top right.
 
 ## vscode like environment
-Hovering over things will give you the official documentation of things.
+Hovering over tactics/theorems will give you the official documentation.
 
 # Links
 ## documentation
+https://leanprover-community.github.io/mathlib4_docs/
+
+https://lean-lang.org/documentation/
+
 https://leanprover-community.github.io/
 
 https://lean-lang.org/
 
-https://lean-lang.org/documentation/
-
 https://github.com/leanprover-community/mathlib4
+
 
 ## zulip, ask questions
 Zulip chat for lean has been a very useful resource to resolve issues when formalizing the exercises, you can visit it and ask questions in the '#new members' stream. You can also view messages without signing up. There are other streams dedicated to various topics you can check out as well.
@@ -92,14 +95,14 @@ https://summerofgodel.blogspot.com/2019/04/table-of-contents-for-series-of-posts
 # Rules
 You can relax the rules and skip levels.
 
-This is not recommended for people who have never heard about Lean before. Moreover, relaxing the rules would ruin the coherence and structured/guided experience you would have when playing the game normally. If that is what you are looking for, then don't relax the rules.
+This is not recommended for people who have never heard about `Lean` before because every level depends on previously introduced tactics/theorems/ideas in earlier levels. Moreover, relaxing the rules would ruin the coherence and structured/guided experience you would have when playing the game normally. If that is what you are looking for, then don't relax the rules.
 
-# Github
+# Github , Level Solutions
 The game's repository is [here](https://github.com/JadAbouHawili/KnightsAndKnaves-Lean4Game)
 
 You can view the code for every level there.(and the solution if you are really stuck)
 
-# Shoutouts, other educational games
+# Other Educational Games
 Knights and Knaves education game:(games on other topics are available as well)
 https://en.oiler.education/bul
 
@@ -110,7 +113,7 @@ https://christopherphelps.trinket.io/sites/knight_knave_puzzler
 /-! Information to be displayed on the servers landing page. -/
 Languages "English"
 CaptionShort "From the basics to Knights And Knaves"
-CaptionLong "A guided experience that teaches you everything you need to know to understand and solve knights and knaves logic puzzles, including the basics of lean and basic logic.
+CaptionLong "A guided experience that teaches you everything you need to know to understand and solve knights and knaves logic puzzles, including the basics of lean and logic.
 
 Based on statements made, you will deductively conclude who is a knight(truthful) and who is a knave(liar)."
 CoverImage "images/knights-and-knaves.jpg"
@@ -119,7 +122,5 @@ CoverImage "images/knights-and-knaves.jpg"
 Dependency Logic → Simp_World
 Dependency Simp_World →  KnightsAndKnaves2 
 Dependency Simp_World →DSL_Knights_Knaves
---Dependency KnightsAndKnaves2 → DSL_Knights_Knaves
---Dependency  DSL_Knights_Knaves → KnightsAndKnaves2
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

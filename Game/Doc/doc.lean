@@ -8,7 +8,7 @@ Given
 ```
 hnP : ¬P
 ```
-unfold Not at hnP will result in:
+`unfold Not at hnP` will result in:
 ```
 hnP : P → False
 ```
@@ -73,7 +73,7 @@ Logical implication `P → Q` is made up of two components:
 - The premise, which in this case is `P`
 - The conclusion, which in this case is `Q`
 
-P → Q is read as 'If P is true, then Q is true.
+`P → Q` is read as 'If P is true, then Q is true.
 
 # truth table
 $
@@ -83,11 +83,11 @@ P & Q & P → Q \\
 \hline
 T & T & T \\
 \hline
-T & F & F \\\\
+T & F & F \\
 \hline
-F & T & T \\\\
+F & T & T \\
 \hline
-F & F & T \\\\
+F & F & T \\
 \hline
 \end{array}
 $
@@ -154,7 +154,7 @@ DefinitionDoc logic_and as "and"
 $
 \begin{array}{|c c|c|} 
 \hline
-P & Q & P or Q \\
+P & Q & \text{P or Q} \\
 \hline
 T & T & T \\
 \hline
@@ -204,7 +204,7 @@ we have `And.intro hP hQ : P ∧ Q`
 ## Alternative Notation
 Typed as `\<hP,hQ\>`,
 ```
-<hP,hQ> : P ∧ Q
+⟨hP,hQ⟩ : P ∧ Q
 ```
 instead of 
 ```
@@ -654,7 +654,7 @@ DefinitionDoc Nat as "ℕ"
 
 /--
 ### **Logic Constants & Operators**
-| $Name~~~$ | $Ascii~~~$ | $Unicode$ | $Unicode Cmd$ |
+| $Name~~~$ | $Ascii~~~$ | $Unicode~~~$ | $Unicode Cmd$ |
 | --- | :---: | :---: | --- |
 | True | `True` |  |  |
 | False | `False` |  |  |
