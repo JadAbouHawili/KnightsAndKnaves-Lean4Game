@@ -88,6 +88,8 @@ hnP : ¬P
 ```
 (or other 'simple' contradictions)
 `contradiction` will close any goal.
+
+This is because from `False`, anything follows.
 -/
 TacticDoc contradiction
 
@@ -168,7 +170,7 @@ The result would be adding the following to the hypothesis:
 theorem-name : P
 ```
 
-You are storing the proof of `P` `expression` in `theorem-name` so that you don't have to construct this expression everytime...
+You are storing the proof of `P` in `theorem-name` so that you don't have to construct this proof everytime you need it.
 
 ## multiple steps
 If the proof is multiple steps, then:

@@ -34,6 +34,23 @@ Note that we don't need to introduce a new symbol to define negation, it can be 
 
 Consider the following truth table: 
 $
+\\begin{array}{|c|c|c|} 
+\\hline
+P & Q & P → Q \\\\
+\\hline
+T & T & T \\\\
+\\hline
+T & F & F \\\\
+\\hline
+F & T & T \\\\
+\\hline
+F & F & T \\\\
+\\hline
+\\end{array}
+$
+
+Let's focus on the rows where `Q=False`,
+$
 \\begin{array}{|c|c|} 
 \\hline
 P & P → False \\\\
@@ -71,7 +88,7 @@ For this level, `¬P` being true tells us that a proof of `P` gives us a proof o
 
 Conclusion 
 "
-In the next level, we will explore what it means to have proven `False`.
+In the next level, we will explore what it means to have proven `False`, and what it means to have contradictory assumptions/propositions.
 "
 
 NewTactic unfold

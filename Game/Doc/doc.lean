@@ -25,8 +25,20 @@ F & T \\
 \end{array}
 $
 
+$
+\begin{array}{|c|c|} 
+\hline
+P & P → False \\
+\hline
+T & F  \\
+F & T  \\
+\hline
+\end{array}
+$
+
 Notice that this definition is an implication and that the truth table with `¬P` and the truth table with `P → False` are identical.
 
+## `¬P` as the goal
 What this means is that to prove `¬P`, we assume `P` and derive a contradiction i.e constructing an object of type `False`. 
 In other words, having `¬P` as a goal, you have to start the proof with `intro` because you are proving an implication.
 -/
@@ -45,7 +57,7 @@ hnP: ¬P
 ```
 Since `hnP : ¬P` is `P → False` , we can obtain `hnP hP : False`.
 
-Moreover, we know that `hFQ : False → Q` for any `Q : Prop` and so `hFQ (hnP hP) : Q`. (using `contradiction` after having proven `False` will close any goal as well)
+Moreover, we know that `False.elim : False → Q` for any `Q : Prop` and so `False.elim (hnP hP) : Q`. (using `contradiction` would close the goal as well, without having to use `False.elim`)
 -/
 DefinitionDoc False as "`False`"
 
@@ -213,6 +225,47 @@ And.intro hP hQ : P ∧ Q
 
 -/
 TheoremDoc And.intro as "And.intro" in "And"
+
+/--
+False.elim : False → C says that from False, any desired proposition C holds.
+
+## Intuitively
+
+Let's check the `→` truth table:
+$$
+\\begin{array}{|c|c|c|}
+\\hline
+P & Q & P → Q \\\\
+\\hline
+T & T & T \\\\
+\\hline
+T & F & F \\\\
+\\hline
+F & T & T \\\\
+\\hline
+F & F & T \\\\
+\\hline
+\\end{array}
+$$
+
+Let's focus on part of the truth table where `P` is `False`, because we want to see what `False` implies.
+$$
+\\begin{array}{|c|c|c|}
+\\hline
+Q & False → Q \\\\
+\\hline
+T & T \\\\
+\\hline
+F & T \\\\
+\\hline
+\\end{array}
+$$
+
+We have that the implication `False → Q` is true regardless what `Q` represents and regardless whether `Q` is true or is false. 
+
+So `False` implies any proposition. This principle is known as: 'From `False` anything follows'.
+-/
+TheoremDoc False.elim as "False.elim" in "False"
 
 /--
 
