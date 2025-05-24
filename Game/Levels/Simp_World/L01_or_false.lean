@@ -1,7 +1,7 @@
 import Game.Metadata
 
-
 World "Simp_World"
+
 Level 1
 
 Title "`or_false`"
@@ -10,7 +10,13 @@ Introduction
 "
 The simplification here concerns `or`.
 
-First, we have `¬Q` which means `Q = False`
+We know that either `P` is true or `Q` is true by `h : P or Q`.
+
+We also know that `Q` is false by `hnQ : ¬Q`.
+
+Intution would now say that, given two cases `P` or `Q` and knowing that its not `Q` then it must be `P`. Let's now do this simplification.
+
+We have `¬Q` which means `Q = False`
 
 Rewrite the expression `P or Q` into `P or False` using the theorem
 ```
@@ -30,7 +36,7 @@ After doing so , we get
 h : P or False
 ```
 
-We can simplify it to `P`, here's why.
+We can simplify it to `P`(which is the goal), here's why.
 
 The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:
 

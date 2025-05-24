@@ -18,7 +18,8 @@ Here, we have that `P`,`Q` are both false.
 
 The relevant theorem,
 ```
-iff_of_false (ha : ¬a) (hb : ¬b) : a ↔ b
+iff_of_false (ha : ¬a) (hb : ¬b) 
+  : a ↔ b
 ```
 "
 

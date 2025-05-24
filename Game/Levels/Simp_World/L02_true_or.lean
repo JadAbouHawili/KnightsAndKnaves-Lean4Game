@@ -7,7 +7,9 @@ Title ""
 
 Introduction
 "
-Previously, the way to prove this was using the `left`/`right` tactic which was accompanied with an intuitive explanation on why `left`/`right` make sense.
+`P or Q` to be true requires at least one of `P,Q` to be true.
+
+You have already done this level using `left`/`right` tactic.
 
 Here we introduce a simplification theorem to do it.
 
@@ -94,6 +96,8 @@ To solve with `simp`,
 ```
 simp [h]
 ```
+
+Try `simp` before moving on.
 "
 
 NewTactic trivial

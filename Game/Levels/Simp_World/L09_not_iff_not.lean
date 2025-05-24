@@ -1,10 +1,10 @@
 import Game.Metadata
 
 
-World "Simp_World" 
+World "Simp_World"
 Level 9
 
-Title "" 
+Title "`not_iff_not`"
 
 Introduction 
 "
@@ -21,10 +21,9 @@ Statement (h : ¬P ↔ ¬Q)
 
   {
   exact not_iff_not.mp h
-
   }
 
-Conclusion 
+Conclusion
 "
 "
 

@@ -10,8 +10,9 @@ Introduction
 "
 In this level, you will learn 'proof by contradiction'. 
 
-To prove `P`, you would assume `¬P` and then prove false i.e you would be proving `¬P → False` which is `¬¬P`. The truth table shows that `¬¬P` is equivalent to `P`
+To prove `P`, you would assume `¬P` and then prove false i.e you would be proving `¬P → False` which is `¬¬P`.
 
+The truth table shows that `¬¬P` is equivalent to `P`,
 $
 \\begin{array}{|c | c|c|}
 \\hline
@@ -47,6 +48,9 @@ Statement
 Conclusion
 "
 `simp at hP` simplifies `hP : ¬¬P` into `hP : P`
+
+You don't have to do `simp [not_not] at hP` because `not_not` is marked as a `@simp` lemma.
+You can read [here](https://lean-lang.org/doc/reference/latest/The-Simplifier/Simp-sets/) to learn more.
 "
 #check not_not
 NewTactic by_contra

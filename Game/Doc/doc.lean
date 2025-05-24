@@ -293,12 +293,16 @@ TheoremDoc false_or_iff as "false_or_iff" in "Logic"
 TheoremDoc iff_not_comm as "iff_not_comm" in "Logic"
 
 /--
+If two propositions are false, then they have the same truth value.
 
+If we know `¬P,¬Q`  then we can conclude that `P,Q` have the same truth value i.e `P ↔ Q`
 -/
 TheoremDoc iff_of_false as "iff_of_false" in "Logic"
 
 /--
+If two propositions are true, then they have the same truth value.
 
+If we know `P,Q`  then we can conclude that `P,Q` have the same truth value i.e `P ↔ Q`
 -/
 TheoremDoc iff_of_true as "iff_of_true" in "Logic"
 
@@ -313,7 +317,7 @@ TheoremDoc iff_true_iff as "iff_true_iff" in "Logic"
 TheoremDoc iff_true_right as "iff_true_right" in "Logic"
 
 /--
-
+If we know that `¬P`,`¬Q` have the same truth value then `P`,`Q` have the same truth value.
 -/
 TheoremDoc not_iff_not as "not_iff_not" in "Logic"
 
@@ -323,9 +327,82 @@ TheoremDoc not_iff_not as "not_iff_not" in "Logic"
 TheoremDoc not_iff_self as "not_iff_self" in "Logic"
 
 /--
+Notice that `¬(P or Q)`,
+$
+\begin{array}{|c | c|c|}
+\hline
+P & Q & \text{¬(P or Q)} \\
+\hline
+T & T & F \\
+\hline
+T & F & F \\
+\hline
+F & T & F \\
+\hline
+F & F & T \\
+\hline
+\end{array}
+$
 
+has the same truth table as `¬P and ¬Q`
+$
+\begin{array}{|c | c|c|}
+\hline
+P & Q & \text{¬P and ¬Q} \\
+\hline
+T & T & F \\
+\hline
+T & F & F \\
+\hline
+F & T & F \\
+\hline
+F & F & T \\
+\hline
+\end{array}
+$
+
+Therefore, they are equivalent and can be interchanged.
 -/
 TheoremDoc not_or as "not_or" in "Logic"
+
+/--
+Notice that `¬(P and Q)`,
+$
+\begin{array}{|c | c|c|}
+\hline
+P & Q & \text{¬(P and Q)} \\
+\hline
+T & T & F \\
+\hline
+T & F & T \\
+\hline
+F & T & T \\
+\hline
+F & F & T \\
+\hline
+\end{array}
+$
+
+has the same truth table as `¬P or ¬Q`
+$
+\begin{array}{|c | c|c|}
+\hline
+P & Q & \text{¬P or ¬Q} \\
+\hline
+T & T & F \\
+\hline
+T & F & T \\
+\hline
+F & T & T \\
+\hline
+F & F & T \\
+\hline
+\end{array}
+$
+
+Therefore, they are equivalent and can be interchanged.
+-/
+TheoremDoc not_and_or as "not_and_or" in "Logic"
 
 /--
 
@@ -335,7 +412,27 @@ TheoremDoc not_true as "not_true" in "Logic"
 /--
 
 -/
+TheoremDoc Classical.not_not as "not_not" in "Logic"
+
+/--
+
+-/
+TheoremDoc or_false as "or_false" in "Logic"
+
+/--
+
+-/
 TheoremDoc or_false_iff as "or_false_iff" in "Logic"
+
+/--
+
+-/
+TheoremDoc true_or as "true_or" in "Logic"
+
+/--
+
+-/
+TheoremDoc true_or_iff as "true_or_iff" in "Logic"
 
 /--
 
@@ -343,7 +440,22 @@ TheoremDoc or_false_iff as "or_false_iff" in "Logic"
 TheoremDoc true_implies as "true_implies" in "Logic"
 
 /--
+`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e one of them is true and the other is false.
 
+Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:
+$
+\\begin{array}{|c | c|c|}
+\\hline
+P & Q & \\text{¬(P ↔ Q)} \\\\
+\\hline
+T & F & T \\\\
+\\hline
+F & T & T \\\\
+\\hline
+\\end{array}
+$
+
+We can conclude that `¬P`,`Q` have the same truth value(`¬P ↔ Q`).
 -/
 TheoremDoc not_iff as "not_iff" in "Logic"
 

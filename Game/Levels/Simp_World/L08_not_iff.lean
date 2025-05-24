@@ -4,7 +4,7 @@ import Game.Metadata
 World "Simp_World"
 Level 8
 
-Title ""
+Title "`not_iff`"
 
 Introduction
 "
@@ -29,10 +29,8 @@ The theorem for the former simplification:
 ```
 not_iff : ¬(a ↔ b) ↔ (¬a ↔ b)
 ```
-
 "
 
-#check not_iff
 Statement (h : ¬(P ↔ Q))
   : ¬P ↔ Q := by
 
@@ -49,5 +47,4 @@ not_iff' : ¬(P ↔ Q) ↔ (P ↔ ¬Q)
 ```
 "
 
-#check not_iff'
 NewTheorem not_iff not_iff'
