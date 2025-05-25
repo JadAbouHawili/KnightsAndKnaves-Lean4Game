@@ -19,14 +19,14 @@ Statement
 {A B : Islander}
 {stA : A said (A.isKnave or B.isKnave)}
 : A.isKnight and B.isKnave := by 
-  Hint 
+  Hint (strict:=true)
   "
 Let's start with proving that `A` is a knight. (use `have`)
   "
   have AKnight : A.isKnight 
-  Hint
+  Hint (strict := true)
   "
-  Change the goal to ¬isKnave A
+  Change the goal to `¬isKnave A` using the `knight_to_knave` tactic
   "
   knight_to_knave
   Hint
@@ -35,9 +35,9 @@ Assume `isKnave A`
   "
   intro AKnave
 
-  Hint
+  Hint (strict := true)
   "
-Let's first prove `isKnave A or isKnave B`.
+Let's first prove `isKnave A ∨ isKnave B`. Type `∨` by \\or.
   "
   have orexp: isKnave A or isKnave B
   Hint
@@ -51,6 +51,10 @@ Choose which side to prove, `left` or `right`?
   `A`'s statement is true, so `A` is a knight.
   "
   have AKnight := said_knight stA orexp
+  Hint
+  "
+But we already knew that `A` is a knave, `contradiction`.
+  "
   contradiction
 
   Hint "
@@ -59,21 +63,22 @@ Choose which side to prove, `left` or `right`?
   have orexp := knight_said stA AKnight
   Hint
   "
-`orexp` can be simplified, using `simp` and the fact that `A` is a knight and that knights are not knaves.
+`{orexp}` can be simplified, using `simp` and the fact that `A` is a knight and that knights are not knaves.
 
-  You could also obtain that `¬isKnave A` and use `notleft_right` to get `isKnave B`.
-
-  After which, close the goal.
+  First, change `isKnave A` in `{orexp}` to `¬isKnight A` then use `simp` and the fact that `A` is a knight to simplify `{orexp}`
   "
-  --apply notleft_right at orexp 
-  --exact orexp (isKnight_notisKnave AKnight)
-  --apply orexp
-  simp [isKnight_notisKnave,AKnight] at orexp
-  --contradiction
+  knave_to_knight at orexp
+  simp [AKnight] at orexp
+
+  Hint
+  "
+Now close the goal
+  "
+  knight_to_knave at orexp
   constructor
   assumption ; assumption
 
 Conclusion 
 "
 "
-NewTactic knight_to_knave knave_to_knight
+NewTactic knight_to_knave 

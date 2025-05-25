@@ -9,11 +9,13 @@ Title ""
 
 Introduction 
 "
-Again we have three people, A, B, C, each of whom is either 
-a knight or a knave. A and B make the following statements: 
-A: All of us are knaves. 
-B: Exactly one of us is a knight. 
-What are A, B, C?
+Again we have three people, `A`, `B`, `C`, each of whom is either a knight or a knave. 
+
+`A` and `B` make the following statements: 
+
+`A`: All of us are knaves. 
+`B`: Exactly one of us is a knight. 
+What are `A`, `B`, `C`?
 
 Change the goal to `A.isKnave`
 "

@@ -9,8 +9,9 @@ Title "allKnaves , exactlyOneIsKnave"
 
 Introduction
 "
-A: All of us are knaves.
-B: Exactly one of us is a knave.
+`A`: All of us are knaves.
+
+`B`: Exactly one of us is a knave.
 "
 
 -- prob 32
@@ -21,7 +22,7 @@ Statement
 {stB : B said @exactlyOneIsKnave A B C}
 : A.isKnave and C.isKnight
 := by
-  Hint
+  Hint (strict := true)
   "
 Start by proving `¬A.isKnight`
   "
@@ -69,9 +70,9 @@ We have `A` is a knave, `B` is a knight, and that there is exactly one knave. So
 
 You can obtain `C` by using the fact that `A` is a knave, `B` is a knight and simplifying the expression `{exactlyoneKnave}`.
 
-`unfold` {exactlyoneKnave} first then use `simp`.
+`unfold exactlyOneIsKnave at {exactlyoneKnave}` first then use `simp`.
 
-If it doesn't get simplified enough, then change from `knight_to_knave` or vice versa the hypothesis involved.
+If it doesn't get simplified enough, then change the hypothesis involved from `knight_to_knave` or vice versa 
   "
   unfold exactlyOneIsKnave at exactlyoneKnave
   simp [AKnave, BKnight] at exactlyoneKnave

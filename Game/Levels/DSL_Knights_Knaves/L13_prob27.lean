@@ -9,17 +9,20 @@ Title ""
 
 Introduction
 "
-Suppose the stranger, instead of asking A what he is,
-asked A, 'How many knights are among you?' Again A
-answers indistinctly. So the stranger asks B, ;What did A
-say? B replies, ;A said that there is one knight among us.;
-Then C says, 'Don't believe B; he is lying!' 
+Suppose the stranger, instead of asking `A` what he is,
+asked `A`, 'How many knights are among you?' 
+
+Again `A` answers indistinctly. So the stranger asks `B`, 'What did `A` say?
+
+`B` replies, '`A` said that there is one knight among us.
+
+Then `C` says, 'Don't believe `B`; he is lying!' 
 Now what are B and C? 
 "
 
 -- prob 27
-open settheory_approach
-variable [DecidableEq Inhabitant]
+--open settheory_approach
+--variable [DecidableEq Inhabitant]
 /-
 Suppose the stranger, instead of asking A what he is, 
 asked A, "How many knights are among you?" Again A 
@@ -28,7 +31,7 @@ say? B replies, "A said that there is one knight among us."
 Then C says, "Don't believe B; he is lying!" 
 Now what are B and C? 
 -/
-def oneKnight {A B C : Inhabitant} : Prop:=   (A ∈ Knight ∧ B ∈ Knave ∧ C ∈ Knave) ∨ (A ∈ Knave ∧ B ∈ Knight ∧ C ∈ Knave) ∨ (A ∈ Knave ∧ B ∈ Knave ∧ C ∈ Knight)
+--def oneKnight {A B C : Inhabitant} : Prop:=   (A ∈ Knight ∧ B ∈ Knave ∧ C ∈ Knave) ∨ (A ∈ Knave ∧ B ∈ Knight ∧ C ∈ Knave) ∨ (A ∈ Knave ∧ B ∈ Knave ∧ C ∈ Knight)
 
 open Islander
 Statement
@@ -37,7 +40,7 @@ Statement
 (stC : C.isKnight ↔ B.isKnave)
 : B.isKnave and C.isKnight := by
 
-  Hint
+  Hint (strict := true)
   "
   First prove `B.isKnave`
   "
@@ -117,6 +120,6 @@ Now we finally have that `B` is a knave. Obtain information about `C` and close 
   constructor
   repeat assumption
 
-Conclusion 
+Conclusion
 "
 "

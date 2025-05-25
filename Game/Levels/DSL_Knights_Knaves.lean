@@ -16,17 +16,17 @@ World "DSL_Knights_Knaves"
 Title "DSL Knights and Knaves"
 Introduction
 "
-We will introduce the knights and knaves puzzle here explaining rules of the game and the corresponding lean representation.
+We will introduce the knights and knaves puzzle here explaining rules of the game and the corresponding `Lean` representation.
 
 The setting is an island.
 Every islander will make a statement. There are two types of islanders, 'knights' and 'knaves'.
 
 For a given islander `A`,
-- The proposition that `A` is a knight
+- The proposition that `A` is a knight:
 ```
 A.isKnight
 ```
-- The proposition that `A` is a knave
+- The proposition that `A` is a knave:
 ```
 A.isKnave
 ```
@@ -37,11 +37,13 @@ isKnight_or_isKnave (A : Islander)
 : A.isKnight ∨ A.isKnave
 ```
 
-Knights always tell the truth, and 'knaves' that always lie.
+Knights always tell the truth, and knaves always lie.
 
-`knight_said`. Whatever `knight_said` is true.
 
 ```
+-- `knight_said`.
+-- Whatever a knight says,
+-- it is true.
 -- A is a knight,
 -- so whatever A said is true
 knight_said
@@ -49,9 +51,11 @@ knight_said
 (AKnight : A.isKnight) : P
 ```
 
-`said_knight`. If what is said is true, then knight. 
 
 ```
+-- `said_knight`
+-- If what is said is true,
+-- then knight. 
 -- A said something true,
 -- so A is a knight.
 said_knight
@@ -59,9 +63,11 @@ said_knight
 (hP : P) : A.isKnight
 ```
 
-`knave_said`. Whatever `knave_said` is false.
 
 ```
+-- `knave_said`
+-- Whatever a knave says,
+-- it is false.
 -- A is a knave,
 -- so whatever A said is false
 knave_said 
@@ -69,10 +75,12 @@ knave_said
 (AKnave : A.isKnave) : ¬P
 ```
 
-`said_knave`. If what is said is false, then knave.
-
 ```
--- A said something that is false(i.e a lie),
+-- `said_knave`
+-- If what is said is false,
+-- then knave.
+-- A said something that is false
+-- (a lie),
 -- so A is a knave
 said_knave
 (stA : A said P)
@@ -82,7 +90,8 @@ said_knave
 Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave.
 ```
 not_isKnight_and_isKnave
-(A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
+(A : Islander)
+  : ¬ (A.isKnight ∧ A.isKnave)
 ```
 
 The objective is to conclude who is a knight and who is a knave, based on the statements of several islanders. This will be done using logical reasoning.

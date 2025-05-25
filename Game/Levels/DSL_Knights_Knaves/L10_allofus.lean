@@ -8,9 +8,11 @@ Title "allKnights or allKnaves"
 
 Introduction
 "
-A says B is a knight
-B says all of us are knights
-C says A  is a knight or B is a knight
+`A` says `B` is a knight
+
+`B` says all of us are knights
+
+`C` says `A`  is a knight or `B` is a knight
 
 Notice in the proof state,
 ```
@@ -31,8 +33,6 @@ unfold allKnights at stB
 However, this will make the proof state look cluttered so don't `unfold`.
 "
 
-/-
--/
 open Islander
 
 #check allKnights
@@ -49,7 +49,7 @@ First, take cases for `B`.
   knight_or_knave B
   Hint
   "
-We are at the cases where `B.isKnight`
+We are at the case where `B.isKnight`
 Conclude that `B`'s statement is true
   "
   have all := knight_said stB h

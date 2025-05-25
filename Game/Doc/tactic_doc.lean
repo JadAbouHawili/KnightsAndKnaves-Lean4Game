@@ -235,7 +235,8 @@ simp [isKnight_notisKnaveIff]
 ```
 where 
 ```
-isKnight_notisKnaveIff {A : Islander} : A.isKnight ↔ ¬A.isKnave
+isKnight_notisKnaveIff 
+: A.isKnight ↔ ¬A.isKnave
 ```
 
 `A.isKnight` and `¬A.isKnave` always have the same truth value regardless of what `A` is , so they can be interchanged

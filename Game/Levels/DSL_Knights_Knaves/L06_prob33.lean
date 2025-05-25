@@ -7,10 +7,10 @@ Level 6
 Title ""
 Introduction
 "
-Suppose A says, 'I am a knave, but B isn't.' 
-What are A and B?
+Suppose `A` says, 'I am a knave, but `B` isn't.' 
+What are `A` and `B`?
 
-Change the goal to `¬A.isKnight`
+Change the goal to `¬A.isKnight`. You write `¬` by \\not.
 "
 
 set_option push_neg.use_distrib true
@@ -29,7 +29,8 @@ Assume `A` is a knight.
 Conclude that `A`'s statement is true.
   "
   have AKnave := knight_said stA AKnight
-  Hint "
+  Hint (strict := true)
+  "
 Now you have that `A` is a knave , which is a contradiction
 
 Remeber that `{AKnave}.left : A.isKnave`.
@@ -58,14 +59,7 @@ which 'pushes' the 'negation' inside and applying the appropriate rules.
   have st := notknight_said stA AnK 
   Hint
   "
-Use not_and_or
-
-`h: ¬( P and Q)` means that both `P`,`Q` are not true at the same time which means one of them has to be false i.e `h : ¬P or ¬Q`.
-
-You can apply this using
-```
-not_and_or
-```
+Use `not_and_or` at `{st}`
   "
   rw [not_and_or] at st
   Hint 
@@ -85,5 +79,4 @@ After that, close the goal
 Conclusion
 "
 "
---NewTactic push_neg
 NewTheorem Islander.notknight_said

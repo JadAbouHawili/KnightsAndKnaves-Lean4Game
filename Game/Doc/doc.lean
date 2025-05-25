@@ -462,6 +462,11 @@ TheoremDoc not_iff as "not_iff" in "Logic"
 /--
 
 -/
+TheoremDoc not_iff' as "not_iff'" in "Logic"
+
+/--
+
+-/
 TheoremDoc notleft_right as "notleft_right" in "Logic"
 
 /--
@@ -767,9 +772,7 @@ $
 
 
 /--
-We will introduce the knights and knaves puzzle here.
-
-The setting is an island. 
+The setting is an island.
 Every islander will make a statement. There are two types of islanders, 'knights' that always tell the truth, and 'knaves' that always lie.
 
 We give english statements and their corresponding translation to lean.
@@ -788,24 +791,30 @@ A.isKnave
 
 `A` is either a knight or a knave
 ```
-isKnight_or_isKnave (A : Islander) : A.isKnight or A.isKnave
+isKnight_or_isKnave (A : Islander) 
+: A.isKnight or A.isKnave
 ```
 
 Knights always tell the truth.
 ```
-knight_said : (A said P) → A.isKnight → P
-said_knight : (A said P) →  P → A.isKnight 
+knight_said 
+: (A said P) → A.isKnight → P
+said_knight 
+: (A said P) →  P → A.isKnight 
 ```
 
 Knaves always lie.
 ```
-knave_said  : (A said P) →  A.isKnave → ¬P
-said_knave  : (A said P) →  ¬P → A.isKnave
+knave_said  
+: (A said P) →  A.isKnave → ¬P
+said_knave  
+: (A said P) →  ¬P → A.isKnave
 ```
 
 Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. `A` is not a knight and a knave at the same time. This is represented as:
 ```
-not_isKnight_and_isKnave (A : Islander) : ¬ (A.isKnight ∧ A.isKnave)
+not_isKnight_and_isKnave (A : Islander) 
+: ¬ (A.isKnight ∧ A.isKnave)
 ```
 
 The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning.
@@ -968,7 +977,7 @@ or
 ```
 A.isKnave : Prop
 ```
-is the proposition that `A` is a knight.
+is the proposition that `A` is a knave.
 -/
 TheoremDoc Islander.isKnave as "isKnave" in "DSL"
 

@@ -9,17 +9,17 @@ Title ""
 
 Introduction
 "
-Three of the inhabitants A, B, and C were standing together in a garden. 
+Three of the inhabitants `A`, `B`, and `C` were standing together in a garden. 
 
-A stranger passed by and asked A, 'Are you a knight or a knave?' A answered, but rather indistinctly, so the stranger could not make out what he said. 
+A stranger passed by and asked `A`, 'Are you a knight or a knave?' `A` answered, but rather indistinctly, so the stranger could not make out what he said. 
 
-The stranger than asked B, 'What did A say?' B replied, 'A said that he is a knave.' 
+The stranger then asked `B`, 'What did `A` say?' `B` replied, '`A` said that he is a knave.' 
 
-At this point the third man, C, said, 'Don't believe B; he is lying!' 
+At this point the third man, `C`, said, 'Don't believe `B`; he is lying!' 
 
-The question is, what are B and C? 
+The question is, what are `B` and `C`?
 
-Change the goal to `B.isKnave`
+Change the goal to `B.isKnave`(using the `have` tactic)
 "
 
 variable { P Q : Prop}
@@ -33,6 +33,40 @@ Statement {A B C : Islander}
   "
 Change the goal to `¬isKnight B`
 
+Use the `knave_to_knight` tactic.
+  "
+  knave_to_knight
+  Hint
+  "
+Assume that `B` is a knight.
+  "
+  intro BKnight
+  Hint
+  "
+`B` is a knight so whatever `B` said is true.
+  "
+  have hA := knight_said hB BKnight
+  Hint
+  "
+If an islander says 'I am a knave', we get a contradiction i.e `False`.
+  "
+  exact dsl_iamknave hA
+  Hint
+  "
+Now that `B` is a knave, `C`'s statement is true then `C` is a knight.
+
+So you would have `B` is a knave and`C` is a knight closing the goal.
+  "
+
+  have CKnight := said_knight hC BKnave
+
+  constructor
+  assumption
+  assumption
+
+#check not_isKnight_and_isKnave -- Knight ∩ Knave = ∅
+#check isKnight_or_isKnave --  A ∈ Knight ∨ A ∈ Knave
+/-
 Having
 ```
 h : P → Q
@@ -48,40 +82,10 @@ notisKnight_isKnave : ¬isKnight B → isKnave B
 ```
 
 We want to prove `isKnave B`, and a way to get there is through proving `¬isKnight B`.
-  "
-  knave_to_knight
-  Hint
-  "
-  For the previous step and to avoid having you going through the hoops everytime , you can simply execute the custom tactic `knave_to_knight` which works as its name suggests.
-  Go back and try it before proceeding
-  (There is also a similar tactic `knight_to_knave`)
-
-`B` is a knight so whatever `B` said is true.
-  "
-  intro BKnight
-  have hA := knight_said hB BKnight
-  Hint
-  "
-If an islander says 'I am a knave', we get a contradiction i.e `False`.
-  "
-  exact dsl_iamknave hA
-  Hint
-  "
-Now that `B` is a knave, `C`'s statement is true then `C` is a knight.
-
-So would you have `B` is a knave, `C` is a knight to close the goal.
-  "
-
-
-  have CKnight := said_knight hC BKnave
-
-  constructor
-  assumption
-  assumption
-
-#check not_isKnight_and_isKnave -- Knight ∩ Knave = ∅
-#check isKnight_or_isKnave --  A ∈ Knight ∨ A ∈ Knave
+-/
 
 Conclusion
 "
 "
+
+NewTactic knave_to_knight

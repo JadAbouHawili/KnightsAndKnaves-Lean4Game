@@ -9,13 +9,13 @@ Title ""
 
 Introduction
 "
-You have met a group of 2 islanders. Their names are Robert and Ira.
+You have met a group of 2 islanders. Their names are `Robert` and `Ira`.
 
 `Robert` says: `Ira` is my type.
 
 `Ira` says: `Robert` is truthful.
 
-A knight or a knave will say they are the same type as a knight. So when Robert says they are the same type as Ira, we know that Ira is a knight.
+A knight or a knave will say they are the same type as a knight. So when `Robert` says they are the same type as `Ira`, we know that `Ira` is a knight.
 
 Let's start by proving `Ira.isKnight`
 "
@@ -32,6 +32,7 @@ example
   simp [nIKnight] at stR
   knight_to_knave at stR
   exact dsl_iamknave stR
+
 Statement 
 {Robert Ira : Islander}
 {stR : Robert said (Robert.isKnight ↔ Ira.isKnight)}
@@ -40,7 +41,7 @@ Statement
   have IKnight : Ira.isKnight 
   Hint
   "
-Assume by contradiction that ¬Ira.isKnight
+Assume by contradiction that `¬Ira.isKnight` using the `by_contra` tactic.
   "
   by_contra nIKnight
   Hint

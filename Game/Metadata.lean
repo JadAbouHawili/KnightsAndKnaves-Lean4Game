@@ -10,7 +10,6 @@ import Mathlib.Tactic.Qify
 import Mathlib.Tactic.Polyrith
 import Mathlib.Algebra.Group.Basic
 import Mathlib.Tactic.ApplyFun
---import Mathlib.Data.Fintype.Card
 import Mathlib.Data.Multiset.Basic
 
 infixr:35 " and " => And
@@ -31,8 +30,6 @@ that imports all its levels.
 
 theorem not_iff' {P Q : Prop}
  : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by 
-  --#check Iff.symm
-  --#check symm
   #check Iff.symm
   #check not_iff_comm
   #check not_iff_not

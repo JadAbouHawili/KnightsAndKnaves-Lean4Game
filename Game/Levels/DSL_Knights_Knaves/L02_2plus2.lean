@@ -20,12 +20,20 @@ Use `simp` to do these simplications for you.
 open Islander
 Statement {A : Islander} (stA : A said (A.isKnave or (2+2=5)))
 : False := by
+  Hint (hidden := true)
+  "
+`simp at stA`
+  "
   simp at stA
   Hint
   "
 This should look familiar.
 
 Don't repeat the proof!
+  "
+  Hint (hidden:=true)
+  "
+Use `dsl_iamknave`.
   "
   exact dsl_iamknave stA
 

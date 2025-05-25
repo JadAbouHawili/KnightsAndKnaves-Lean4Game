@@ -22,10 +22,9 @@ Statement
 Change the goal to `A.isKnight`
   "
   have AKnight : A.isKnight
-  -- strict
-  Hint
+  Hint (strict := true)
   "
-Transfrom the goal from `knight_to_knave`.
+Transform the goal from `knight_to_knave`.
   "
   knight_to_knave
   intro AKnave
@@ -34,7 +33,15 @@ Transfrom the goal from `knight_to_knave`.
 Conclude that `A`'s statement is false.
   "
   have cont := knave_said stA AKnave 
+  Hint
+  "
+Simplify `{cont}` using `not_or`
+  "
   rw [not_or] at cont
+  Hint
+  "
+The left side of `{cont}` is `¬isKnave A`(`{cont}.left : ¬isKnave A`) which contradicts `{AKnave} : isKnave A`.
+  "
   have := cont.left
   contradiction
 
@@ -49,6 +56,10 @@ The left side of or is false and so can be simplified.
   "
   knave_to_knight at st
   simp [AKnight] at st
+  Hint
+  "
+Close the goal
+  "
   constructor
   repeat assumption
 
