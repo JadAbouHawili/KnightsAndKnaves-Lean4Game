@@ -475,67 +475,6 @@ TheoremDoc notleft_right as "notleft_right" in "Logic"
 TheoremDoc four_pos as "four_pos" in "*"
 
 /--
-Another way to express this is that you have two possibilities one of which(or both) is supposed to be true, and you know its definitely not the second option. All is left is the first option. 
-
-Given the statement, its either 'this' or 'that'. If we know its not 'that' then its definitely 'this'.
--/
-TheoremDoc notright_left as "notright_left" in "Logic"
-
-/--
-```
-theorem inleft_notinright
-(h : left ∩ right = ∅ )
-(Aleft : A ∈ left)
-: A ∉ right
-```
-
-Given the following proof state:
-```
-Objects
-A : Inhabitant
-left right : Finset Inhabitant
-
-Assumptions
-h : left ∩ right = ∅
-Aleft : A ∈ left
-
-Goal
-A ∉ right
-```
-
-exact `inleft_notinright h Aleft` will close the goal.
--/
-TheoremDoc inleft_notinright as "inleft_notinright" in "Knights and Knaves"
-
-/--
-```
-theorem disjoint
-(h : left ∩ right = ∅ )
-(Aleft : A ∈ left)
-(Aright : A ∈ right)
-: False
-```
-
-Given the following proof state:
-```
-Objects
-A : Inhabitant
-left right : Finset Inhabitant
-
-Assumptions
-h : left ∩ right = ∅ 
-Aleft : A ∈ left
-Aright : A ∈ right
-
-Goal
-False
-```
-
-`exact disjoint h Aleft Aright` will close the goal
--/
-TheoremDoc disjoint as "disjoint" in "Knights and Knaves"
-
-/--
 A summary of all the terminology presented throughout the game, in order of appearance.
 
 Theorems represent an implication say:
@@ -561,41 +500,6 @@ What `thm` means is the following, give me an object of type `P` which in this c
 In other words, `thm` means 'If P is true, then Q is true'.
 -/
 DefinitionDoc Terminology as "Terminology"
-
-/--
-## Definition
-A set is a collection of 'entities' or 'objects' that satisfy a certain property. The objects in a set are called 'elements' of the set.
-
-A finite set is a set with finitely many elements.
-
-## Examples
-The set `Knight` would be the set of inhabitants of the island that are knights i.e satisfying the property of always telling the truth, the set `Knave` being the set of inhabitants of the island that are knaves i.e the ones that always lie.
-
-## In Lean
-
-```
-Set K
-Set Inhabitant
-```
-
-```
-Finset K
-Finset Inhabitant
-```
--/
-DefinitionDoc Finset as "Finset"
-
-/--
-Given the following proof state:
-```
-left : Finset K
-```
-
-`A ∈ left` read as 'A in left'.
-
-`A ∉ left` read as 'A not in left' means `¬(A ∈ left)` , `A ∈ left → False`.
--/
-DefinitionDoc mem as "∈"
 
 /--
 ## Objects
@@ -715,6 +619,7 @@ stAn : A ∈ Knave ↔ ¬(B ∈ Knave)
 ```
 -/
 DefinitionDoc KnightsKnaves as "Knights and Knaves"
+
 /-
 We have the following correspondence:
 $
@@ -769,7 +674,6 @@ h : Knight ∩ Knave = ∅ & h: ¬(A ∧ ¬A)  \\\\
 \\end{array}
 $
 -/
-
 
 /--
 The setting is an island.
@@ -899,42 +803,6 @@ DefinitionDoc Iff as "↔"
 
 -/
 TheoremDoc Nat.mul_left_cancel as "Nat.mul_left_cancel" in "*"
-
---/--
---As an implication
---```
---Knight ∩ Knave = ∅ →
---A ∈ Knight ∨ A ∈ Knave →
---(A ∈ Knight ↔ A ∈ Knave) → False
---```
----/
---TheoremDoc IamKnave as "IamKnave" in "Knights and Knaves"
-
-/--
-```
-theorem inright_notinleft
-(h : left ∩ right = ∅ )
-(Aright : A ∈ right)
-: A ∉ left
-```
-
-Given the following proof state:
-```
-Objects
-A : Inhabitant
-left right : Finset Inhabitant
-
-Assumptions
-h : left ∩ right = ∅
-Aright : A ∈ right
-
-Goal
-A ∉ left
-```
-
-exact `inright_notinleft h Aright` will close the goal.
--/
-TheoremDoc inright_notinleft as "inright_notinleft" in "Knights and Knaves"
 
 /--
 A is a knight, so whatever A said is true

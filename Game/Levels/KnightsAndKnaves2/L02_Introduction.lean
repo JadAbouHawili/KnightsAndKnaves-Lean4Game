@@ -30,7 +30,7 @@ Use `have` to set `¬A` as the new goal.
 Assuming `hA : A`:
 - Prove `BC : B ∧ C` from `stA` using `A`
 - Prove `CnA : C ∧ ¬A` using `stB` , `BC.left : B`
-- Prove `False` using `AKnight : A`,`CnA.right : ¬A`.
+- Prove `False` using `hA : A`,`CnA.right : ¬A`.
 
 Each can be done in one step, so the appropriate `have` syntax should be used.
     "

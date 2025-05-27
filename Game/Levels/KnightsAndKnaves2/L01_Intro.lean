@@ -10,7 +10,11 @@ Introduction
 "
 A very special island is inhabited only by knights and knaves. Knights always tell the truth, and knaves always lie.
 
-You meet two inhabitants: Zoey and Mel. Zoey tells you that Mel is a knave. Mel says, “Neither Zoey nor I are knaves.”
+You meet two inhabitants: `Zoey` and `Mel`.
+
+`Zoey` tells you that Mel is a knave. 
+
+`Mel` says, “Neither `Zoey` nor I are knaves.”
 
 Can you determine who is a knight and who is a knave?
 
@@ -61,9 +65,6 @@ We have `Zoey` and `¬Zoey`
 Prove the second goal using `Zoey`, `stZ`
 
 Then close the goal.(using `constructor`, or `⟨⟩` notation or `And.intro` etc..)
-  "
-  Hint
-  "
   "
   have nM := stZ.mp hZ
   constructor

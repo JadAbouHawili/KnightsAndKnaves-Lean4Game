@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sun May 25 18:44:21 2025\n"
+"POT-Creation-Date: Tue May 27 16:43:14 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -458,64 +458,6 @@ msgid ""
 msgstr ""
 
 #: Game.Doc.doc
-msgid "Another way to express this is that you have two possibilities one of which(or both) is supposed to be true, and you know its definitely not the second option. All is left is the first option. \n"
-"\n"
-"Given the statement, its either 'this' or 'that'. If we know its not 'that' then its definitely 'this'."
-msgstr ""
-
-#: Game.Doc.doc
-msgid "```\n"
-"theorem inleft_notinright\n"
-"(h : left ∩ right = ∅ )\n"
-"(Aleft : A ∈ left)\n"
-": A ∉ right\n"
-"```\n"
-"\n"
-"Given the following proof state:\n"
-"```\n"
-"Objects\n"
-"A : Inhabitant\n"
-"left right : Finset Inhabitant\n"
-"\n"
-"Assumptions\n"
-"h : left ∩ right = ∅\n"
-"Aleft : A ∈ left\n"
-"\n"
-"Goal\n"
-"A ∉ right\n"
-"```\n"
-"\n"
-"exact `inleft_notinright h Aleft` will close the goal."
-msgstr ""
-
-#: Game.Doc.doc
-msgid "```\n"
-"theorem disjoint\n"
-"(h : left ∩ right = ∅ )\n"
-"(Aleft : A ∈ left)\n"
-"(Aright : A ∈ right)\n"
-": False\n"
-"```\n"
-"\n"
-"Given the following proof state:\n"
-"```\n"
-"Objects\n"
-"A : Inhabitant\n"
-"left right : Finset Inhabitant\n"
-"\n"
-"Assumptions\n"
-"h : left ∩ right = ∅ \n"
-"Aleft : A ∈ left\n"
-"Aright : A ∈ right\n"
-"\n"
-"Goal\n"
-"False\n"
-"```\n"
-"\n"
-"`exact disjoint h Aleft Aright` will close the goal"
-msgstr ""
-
-#: Game.Doc.doc
 msgid "A summary of all the terminology presented throughout the game, in order of appearance.\n"
 "\n"
 "Theorems represent an implication say:\n"
@@ -539,39 +481,6 @@ msgid "A summary of all the terminology presented throughout the game, in order 
 "What `thm` means is the following, give me an object of type `P` which in this case is a proof of `P` and i will return an object of type `Q` which in this case is a proof of `Q`.\n"
 "\n"
 "In other words, `thm` means 'If P is true, then Q is true'."
-msgstr ""
-
-#: Game.Doc.doc
-msgid "## Definition\n"
-"A set is a collection of 'entities' or 'objects' that satisfy a certain property. The objects in a set are called 'elements' of the set.\n"
-"\n"
-"A finite set is a set with finitely many elements.\n"
-"\n"
-"## Examples\n"
-"The set `Knight` would be the set of inhabitants of the island that are knights i.e satisfying the property of always telling the truth, the set `Knave` being the set of inhabitants of the island that are knaves i.e the ones that always lie.\n"
-"\n"
-"## In Lean\n"
-"\n"
-"```\n"
-"Set K\n"
-"Set Inhabitant\n"
-"```\n"
-"\n"
-"```\n"
-"Finset K\n"
-"Finset Inhabitant\n"
-"```"
-msgstr ""
-
-#: Game.Doc.doc
-msgid "Given the following proof state:\n"
-"```\n"
-"left : Finset K\n"
-"```\n"
-"\n"
-"`A ∈ left` read as 'A in left'.\n"
-"\n"
-"`A ∉ left` read as 'A not in left' means `¬(A ∈ left)` , `A ∈ left → False`."
 msgstr ""
 
 #: Game.Doc.doc
@@ -813,31 +722,6 @@ msgstr ""
 
 #: Game.Doc.doc
 msgid ""
-msgstr ""
-
-#: Game.Doc.doc
-msgid "```\n"
-"theorem inright_notinleft\n"
-"(h : left ∩ right = ∅ )\n"
-"(Aright : A ∈ right)\n"
-": A ∉ left\n"
-"```\n"
-"\n"
-"Given the following proof state:\n"
-"```\n"
-"Objects\n"
-"A : Inhabitant\n"
-"left right : Finset Inhabitant\n"
-"\n"
-"Assumptions\n"
-"h : left ∩ right = ∅\n"
-"Aright : A ∈ right\n"
-"\n"
-"Goal\n"
-"A ∉ left\n"
-"```\n"
-"\n"
-"exact `inright_notinleft h Aright` will close the goal."
 msgstr ""
 
 #: Game.Doc.doc
@@ -2883,7 +2767,9 @@ msgid "Again we have three people, `A`, `B`, `C`, each of whom is either a knigh
 "`A` and `B` make the following statements: \n"
 "\n"
 "`A`: All of us are knaves. \n"
+"\n"
 "`B`: Exactly one of us is a knight. \n"
+"\n"
 "What are `A`, `B`, `C`?\n"
 "\n"
 "Change the goal to `A.isKnave`"
@@ -2935,11 +2821,25 @@ msgid "`«{notoneknight}»` means that there are no knights or there are two or 
 "To obtain this result:\n"
 "- First start by unfolding `«{notoneknight}»`.\n"
 "- Use `simp` given what you know to simplify the obtained expression after unfolding.\n"
-"- The final answer after simplification would that `C` is a knave.\n"
+"- The final answer after simplification would be that `C` is a knave.\n"
 "\n"
 "After obtaining that `C` is a knave, we now know that everyone is a knave but we also know that `«{notallknave}» : ¬allKnaves` and so a contradiction.\n"
 "\n"
-"To obtain this contradiction, `unfold allKnaves` then simplify the unfolded expression or construct a proof of `A.isKnave and B.isKnave and C.isKnave`."
+"To obtain this contradiction, `unfold allKnaves at «{notallknave}»` then simplify the unfolded expression or construct a proof of `A.isKnave and B.isKnave and C.isKnave`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L12_31
+msgid "Now, we know that `A` is a knave and `B` is a knight. \n"
+"\n"
+"Conclude `B`'s statement."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L12_31
+msgid "We now have that not everyone is a knave and that there is only one knight. Since we know that knight is `B`, then `C` can't be a knight and must be a knave.\n"
+"\n"
+"Use `simp`,`«{one}»`,`«{AKnave}»`,`«{BKnight}»` to prove that `C` is a knave.\n"
+"\n"
+"After which, you can close the goal."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L12_31
@@ -2951,12 +2851,16 @@ msgid ""
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "Suppose the stranger, instead of asking A what he is,\n"
-"asked A, 'How many knights are among you?' Again A\n"
-"answers indistinctly. So the stranger asks B, ;What did A\n"
-"say? B replies, ;A said that there is one knight among us.;\n"
-"Then C says, 'Don't believe B; he is lying!' \n"
-"Now what are B and C?"
+msgid "Suppose the stranger, instead of asking `A` what he is,\n"
+"asked `A`, 'How many knights are among you?' \n"
+"\n"
+"Again `A` answers indistinctly. So the stranger asks `B`, 'What did `A` say?\n"
+"\n"
+"`B` replies, '`A` said that there is one knight among us.\n"
+"\n"
+"Then `C` says, 'Don't believe `B`; he is lying!' \n"
+"\n"
+"Now what are `B` and `C`?"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
@@ -2972,41 +2876,37 @@ msgid "Assume `B` is a knight."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "You can simplify `stC` using `«{BKnight}»`. Change `«{BKnight}»` it to an expression involving knaves."
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "Take cases for A."
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
 msgid "Conclude `B`'s statement"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "Conclude that there is only one knight"
+msgid "We know that `«{BKnight}» : B.isKnight` which is `¬B.isKnave` which means `C` told a lie which means `C` is a knave."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "Unfold that statement.\n"
+msgid "Take cases for `A`."
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_prob27
+msgid "Conclude `A`'s statement"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L13_prob27
+msgid "We now know that there is only one knight but we also know that `A` is a knight and `B` is a knight. This is the contradiction needed to close the goal.\n"
 "\n"
-"As you can see, it is not true that there only one knight and simplifying this expression will give the contradiction needed to close the goal."
+"Start by `unfold oneisknight at «{hF}»` and using `simp`"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "Again conclude B's statement"
+msgid "Now this is the second case where `A` is a knave.\n"
+"\n"
+"Conclude that `A`'s statement is false"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "Conclude `oneisknight` using simp and what you know about `A`."
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "Unfold `oneisknight` and notice that it is false, and a simplification will give the contradiction you desire."
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "Now we finally have that `B` is a knave. Obtain information about `C` and close the goal."
+msgid "It is not true that there is one knight, but that is the case so contradiction\n"
+"\n"
+"`unfold oneisknight at «{notoneknight}»` and use simp"
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
@@ -3106,7 +3006,11 @@ msgstr ""
 #: Game.Levels.KnightsAndKnaves2.L01_Intro
 msgid "A very special island is inhabited only by knights and knaves. Knights always tell the truth, and knaves always lie.\n"
 "\n"
-"You meet two inhabitants: Zoey and Mel. Zoey tells you that Mel is a knave. Mel says, “Neither Zoey nor I are knaves.”\n"
+"You meet two inhabitants: `Zoey` and `Mel`.\n"
+"\n"
+"`Zoey` tells you that Mel is a knave. \n"
+"\n"
+"`Mel` says, “Neither `Zoey` nor I are knaves.”\n"
 "\n"
 "Can you determine who is a knight and who is a knave?\n"
 "\n"
@@ -3149,10 +3053,6 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L01_Intro
-msgid ""
-msgstr ""
-
 #: Game.Levels.KnightsAndKnaves2.L02_Introduction
 msgid ""
 msgstr ""
@@ -3171,7 +3071,7 @@ msgstr ""
 msgid "Assuming `hA : A`:\n"
 "- Prove `BC : B ∧ C` from `stA` using `A`\n"
 "- Prove `CnA : C ∧ ¬A` using `stB` , `BC.left : B`\n"
-"- Prove `False` using `AKnight : A`,`CnA.right : ¬A`.\n"
+"- Prove `False` using `hA : A`,`CnA.right : ¬A`.\n"
 "\n"
 "Each can be done in one step, so the appropriate `have` syntax should be used."
 msgstr ""

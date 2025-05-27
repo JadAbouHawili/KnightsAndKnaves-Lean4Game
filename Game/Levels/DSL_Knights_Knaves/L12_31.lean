@@ -14,7 +14,9 @@ Again we have three people, `A`, `B`, `C`, each of whom is either a knight or a 
 `A` and `B` make the following statements: 
 
 `A`: All of us are knaves. 
+
 `B`: Exactly one of us is a knight. 
+
 What are `A`, `B`, `C`?
 
 Change the goal to `A.isKnave`
@@ -28,7 +30,7 @@ Statement
 {stB : B said @oneisknight A B C}
 : A.isKnave ∧ B.isKnight ∧ C.isKnave := by 
   have AKnave : A.isKnave
-  Hint 
+  Hint (strict:=true)
   "
 Change the goal from `knave_to_knight`
   "
@@ -53,23 +55,23 @@ Now we have that everybody is a knave, but we know `A` is a knight. Therefore, w
   have AKnave := allknave.left 
   contradiction
 
-  Hint
+  Hint (strict:=true)
   "
 Now that we know `A` is a knave, conclude the negation of `A`'s statement.
   "
   have notallknave := knave_said stA AKnave 
 
-  Hint
+  Hint (strict := true)
   "
 Let's move on to proving `B.isKnight`
   "
   have BKnight : B.isKnight
-  Hint
+  Hint (strict:=true)
   "
 Convert from `knight_to_knave`.
   "
   knight_to_knave
-  Hint
+  Hint (strict:=true)
   "
 Assume `B.isKnave`.
   "
@@ -88,21 +90,34 @@ Conclude that `B`'s statement is false
   To obtain this result:
   - First start by unfolding `{notoneknight}`.
   - Use `simp` given what you know to simplify the obtained expression after unfolding.
-  - The final answer after simplification would that `C` is a knave.
+  - The final answer after simplification would be that `C` is a knave.
 
   After obtaining that `C` is a knave, we now know that everyone is a knave but we also know that `{notallknave} : ¬allKnaves` and so a contradiction.
 
-  To obtain this contradiction, `unfold allKnaves` then simplify the unfolded expression or construct a proof of `A.isKnave and B.isKnave and C.isKnave`.
+  To obtain this contradiction, `unfold allKnaves at {notallknave}` then simplify the unfolded expression or construct a proof of `A.isKnave and B.isKnave and C.isKnave`.
   "
   unfold oneisknight at notoneknight
-  #check isKnight_notisKnaveIff
   knight_to_knave at notoneknight
   -- , isKnave_notisKnightIff.mp BKnave, isKnave_notisKnightIff.mp AKnave
   simp [AKnave, BKnave ] at notoneknight
   unfold allKnaves at notallknave
   simp [AKnave, BKnave, notoneknight] at notallknave
 
+  Hint
+  "
+Now, we know that `A` is a knave and `B` is a knight. 
+
+Conclude `B`'s statement.
+  "
   have one := knight_said stB BKnight
+  Hint
+  "
+We now have that not everyone is a knave and that there is only one knight. Since we know that knight is `B`, then `C` can't be a knight and must be a knave.
+
+Use `simp`,`{one}`,`{AKnave}`,`{BKnight}` to prove that `C` is a knave.
+
+After which, you can close the goal.
+  "
   unfold oneisknight at one
   simp [AKnave,BKnight] at one
   knave_to_knight at one
