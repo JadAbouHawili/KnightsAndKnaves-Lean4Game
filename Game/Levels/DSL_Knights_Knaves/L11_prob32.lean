@@ -92,19 +92,6 @@ Solving this is in the same spirit of what you previously did.
 
 `unfold allKnaves` then simplify it using the fact that `A,B` are knaves
   "
-  --have notexactlyone := knave_said stB BKnave 
-  --unfold exactlyOneIsKnave at notexactlyone 
-  /-
-  Hint
-  exactlyOneIsKnave is the following expression:
-  ```
-  (A.isKnave and B.isKnight and C.isKnight) 
-  ∨ (A.isKnight and B.isKnave and C.isKnight)
-  ∨ (A.isKnight and B.isKnight and C.isKnave)
-
-  ```
-  -/
-
   unfold allKnaves at notallKnave 
   knight_to_knave at AKnave
   simp [AKnave,BKnave] at notallKnave

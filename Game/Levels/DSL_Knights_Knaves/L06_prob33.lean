@@ -49,13 +49,6 @@ notknight_said
     ( notKnight : ¬isKnight A) : ¬P
 ```
   "
-  /-
-obtain that `isKnave A` and then use `knave_said`.
-
-push_neg at h
-```
-which 'pushes' the 'negation' inside and applying the appropriate rules.
-  -/
   have st := notknight_said stA AnK 
   Hint
   "

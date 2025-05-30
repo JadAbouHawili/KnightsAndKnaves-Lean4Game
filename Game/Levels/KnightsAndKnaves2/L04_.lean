@@ -1,6 +1,5 @@
 import Game.Metadata
 
-
 World "KnightsAndKnaves2" 
 Level 4
 
@@ -8,8 +7,6 @@ Title ""
 
 Introduction
 "
-Generated from [here](https://philosophy.hku.hk/think/logic/knights.php)
-
 You have met a group of 3 islanders. Their names are `Xavier`, `Gary`, and `Alice`.
 
 `Gary` says: `Alice` is my type.

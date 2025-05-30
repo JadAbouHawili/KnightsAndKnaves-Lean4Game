@@ -16,25 +16,9 @@ Introduction
 
 `B`: `A` is a knight, if and only if `C` is a knight.
 "
-/-
-Everytime you need to assume, and for every bullet point, you would need to use the `have` tactic.
 
-Notice that `¬A` means `¬C, ¬B` where ¬B gives that A and C dont have the same type. This is a contradiction of course so the proposition ¬A is not true which means that A is true.  
-
-Now we know A, which gives C ∨ B
-¬B means C, and it also means ¬(A ↔ C). But we know A ↔ C from A,C so we get a contradiction.
-
-lets take cases for C ∨ B. Having C gives us (A ↔ C) which gives us B. So we get as a final answer, A ∧ B ∧ C. 
-Having B, we get that (A ↔ C) which gives us C. The final answer is A ∧ B ∧ C.
-
-Now we know A,B. From B we get that A ↔ C, which means C.
-
-Now we know A,B,C.
--/
-
-    #check iff_true_right
-    #check iff_true_intro
-    #check iff_of_true
+#check iff_true_right
+#check iff_true_intro
 Statement {A B C : Prop}
 {stA : A ↔ (C ∨ B)}
 {stAn : ¬A ↔ (¬C ∧ ¬B)}

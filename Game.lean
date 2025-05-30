@@ -83,6 +83,8 @@ https://zulip.com/case-studies/lean/
 Sources for the puzzles:
 - Puzzle Generator(some of which were taken as is, and others were modified):
 https://www.wolframcloud.com/objects/demonstrations/KnightsAndKnavesPuzzleGenerator-source.nb
+- Generated Puzzles by unspecified computer program:
+https://philosophy.hku.hk/think/logic/knights.php
 - Raymond Smullyan's book called 'What is the name of this book'
 
 Insightful:

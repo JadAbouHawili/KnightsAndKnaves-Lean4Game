@@ -64,26 +64,6 @@ So you would have `B` is a knave and`C` is a knight closing the goal.
   assumption
   assumption
 
-#check not_isKnight_and_isKnave -- Knight ∩ Knave = ∅
-#check isKnight_or_isKnave --  A ∈ Knight ∨ A ∈ Knave
-/-
-Having
-```
-h : P → Q
-
-Goal:
-Q
-```
-then `apply h` will change the goal from `Q` to `P` , because proving `P` would give you `Q`.
-
-Here, we have
-```
-notisKnight_isKnave : ¬isKnight B → isKnave B 
-```
-
-We want to prove `isKnave B`, and a way to get there is through proving `¬isKnight B`.
--/
-
 Conclusion
 "
 "
