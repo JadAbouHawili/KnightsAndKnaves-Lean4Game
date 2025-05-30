@@ -56,7 +56,8 @@ Then, close the goal.
   have BKnave := knave_said stA AKnave
   knight_to_knave at BKnave 
   constructor
-  repeat assumption
+  assumption
+  assumption
 
 Conclusion
 "

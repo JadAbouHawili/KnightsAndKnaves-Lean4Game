@@ -85,7 +85,6 @@ Simplify `stA` using `{nAlice}` to prove `¬Gary`
   simp [nAlice] at stA
   assumption
 
-    --exact (iff_false_right nAlice).mp (id (Iff.symm stA))
 
   --have same : ¬Alice ↔ ¬Gary := by
   --  exact not_congr stA
@@ -95,8 +94,11 @@ Simplify `stA` using `{nAlice}` to prove `¬Gary`
 
   have Ga := stA.mp Al
   have Xa := stG2.mp Ga
-  constructor <;> try constructor
-  repeat assumption 
+  constructor
+  assumption
+  constructor
+  assumption
+  assumption
 
 Conclusion
 "

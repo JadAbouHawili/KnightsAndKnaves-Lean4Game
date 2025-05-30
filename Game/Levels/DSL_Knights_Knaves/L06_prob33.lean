@@ -59,13 +59,15 @@ Use `not_and_or` at `{st}`
   "
 `A` is not a knight means that `A` is a knave, so `{st}` could be simplified.
 
-Obtain `A.isKnave`, and simplify `{st}` obtaining `B.isKnave`.
+Obtain `A.isKnave` using `knight_to_knave`, and simplify `{st}` obtaining `B.isKnave`.
 
 After that, close the goal
   "
-  simp [AnK,notisKnight_isKnave] at st
+  knight_to_knave at AnK
+  simp [AnK] at st
 
   constructor
+  knight_to_knave
   assumption
   assumption
 

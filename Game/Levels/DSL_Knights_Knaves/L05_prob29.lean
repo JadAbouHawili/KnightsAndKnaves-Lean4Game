@@ -61,5 +61,6 @@ The left side of or is false and so can be simplified.
 Close the goal
   "
   constructor
-  repeat assumption
+  assumption
+  assumption
 

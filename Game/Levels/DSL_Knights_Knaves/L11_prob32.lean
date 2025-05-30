@@ -103,3 +103,4 @@ Solving this is in the same spirit of what you previously did.
 Conclusion
 "
 "
+NewDefinition exactlyOneIsKnave

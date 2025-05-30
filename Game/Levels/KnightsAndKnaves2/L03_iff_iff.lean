@@ -42,7 +42,8 @@ Remember the interpretation where you can treat `↔` like `=`(refer to `↔` do
   have R := stR.mpr stI
   have I := stI.mpr R
   constructor
-  repeat assumption
+  assumption
+  assumption
 
 example 
 {Robert Ira : Prop}
@@ -72,7 +73,8 @@ Now that you know `Robert`, conclude `Ira`
   "
   have := stI.mpr this
   constructor
-  repeat assumption
+  assumption
+  assumption
 
 Conclusion 
 "

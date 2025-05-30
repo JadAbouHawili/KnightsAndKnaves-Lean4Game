@@ -33,7 +33,7 @@ We consider every case using the `cases` tactic, and `isKnight_or_isKnave`.
 
 open Islander
 
-Statement dsl_iamknave  (hAKn : A said A.isKnave): False := by 
+Statement (hAKn : A said A.isKnave): False := by 
   Hint (hidden := true)(strict:=true)
   "
 Try
@@ -111,7 +111,7 @@ which you can use in future levels.
 You will need it in the next level.
 "
 
-NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave Islander.isKnight Islander.isKnave Islander.not_isKnight_and_isKnave dsl_iamknave
+NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave Islander.isKnight Islander.isKnave Islander.not_isKnight_and_isKnave
 NewDefinition DSLKnightsKnaves
 
 NewTactic knight_or_knave

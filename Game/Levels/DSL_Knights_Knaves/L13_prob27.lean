@@ -184,7 +184,8 @@ Now we finally have that `B` is a knave. Obtain information about `C` and close 
   "
   have CKnight := stC.mpr this
   constructor
-  repeat assumption
+  assumption
+  assumption
 
 Conclusion
 "
