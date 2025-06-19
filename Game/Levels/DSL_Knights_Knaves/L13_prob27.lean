@@ -88,7 +88,7 @@ Conclude that `A`'s statement is false
   "
 It is not true that there is one knight, but that is the case so contradiction
 
-`unfold oneisknight at {notoneknight}` and use simp
+`unfold oneisknight at {notoneknight}` and use `simp`
   "
   unfold oneisknight at notoneknight
   simp [BKnight,AKnave,CKnave] at notoneknight
@@ -165,7 +165,7 @@ Again conclude B's statement
   have onest := stB.mp BKnight
   Hint
   "
-Conclude `oneisknight` using simp and what you know about `A`.
+Conclude `oneisknight` using `simp` and what you know about `A`.
   "
   simp [AKnave] at onest
   Hint

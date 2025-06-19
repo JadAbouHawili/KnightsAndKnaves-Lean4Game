@@ -102,7 +102,7 @@ Rewrite `stA` using `iff_true_iff`.
   -- similarly here, let user use simp
   Hint
   "
-- Use simp and `hC : C` to simplify `stB`
+- Use `simp` and `hC : C` to simplify `stB`
 - Rewrite `stB` using `iff_not_comm` obtaining `stB : A ↔ ¬B`
 - Prove `¬B` using and conclude the goal
   "
