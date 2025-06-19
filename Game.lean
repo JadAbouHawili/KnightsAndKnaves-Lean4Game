@@ -71,8 +71,8 @@ https://lean-lang.org/
 https://github.com/leanprover-community/mathlib4
 
 
-## zulip, ask questions
-Zulip chat for lean has been a very useful resource to resolve issues when formalizing the exercises, you can visit it and ask questions in the '#new members' stream. You can also view messages without signing up. There are other streams dedicated to various topics you can check out as well.
+## Zulip, ask questions
+Zulip chat for Lean has been a very useful resource to resolve issues when formalizing the exercises, you can visit it and ask questions in the '#new members' stream. You can also view messages without signing up. There are other streams dedicated to various topics you can check out as well.
 
 https://leanprover.zulipchat.com/
 
