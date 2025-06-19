@@ -213,7 +213,7 @@ You need to show that having two sets being disjoint (i.e. sharing no common ele
 TacticDoc contradiction
 
 /--
-Rewrites all expression asserting being a  knight into the equivalent expression of not being knave
+Rewrites all expression asserting being a knight into the equivalent expression of not being knave
 
 Changes all instances of `isKnight A` to `¬isKnave A`
 
@@ -244,7 +244,7 @@ isKnight_notisKnaveIff
 TacticDoc knight_to_knave
 
 /--
-Rewrites all expression asserting being a  knight into the equivalent expression of not being knave
+Rewrites all expression asserting being a knight into the equivalent expression of not being knave
 
 Changes all instances of `isKnave A` to `¬isKnight A`
 

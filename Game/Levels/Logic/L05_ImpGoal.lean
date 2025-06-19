@@ -16,7 +16,7 @@ To do this, we need to assume the premise, i.e. introduce it to our assumptions.
 "
 
 Statement {P :Prop}
-  : P → P  := by
+  : P → P := by
   {
     intro hP
     Hint

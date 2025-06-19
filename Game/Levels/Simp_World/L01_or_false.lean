@@ -97,7 +97,7 @@ or_false (p : Prop)
 : (p or False) = p
 ```
 
-Rewrite  at `h : P or False` obtaining `h : P`, using the theorem `or_false` or `or_false_iff`.
+Rewrite at `h : P or False` obtaining `h : P`, using the theorem `or_false` or `or_false_iff`.
   "
   rw [or_false_iff P] at h
   assumption

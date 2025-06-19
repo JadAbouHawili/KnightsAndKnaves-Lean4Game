@@ -70,7 +70,7 @@ theorem notinright_inleftIff
  : A ∉ right ↔  A ∈ left := by
   constructor
   · exact notright_left LeftorRight
-  · exact inleft_notinright  h
+  · exact inleft_notinright h
 
 theorem disjoint {inst : DecidableEq K}  {left : Finset K} {right : Finset K}
 (h : left ∩ right = ∅ )

@@ -28,7 +28,7 @@ Two people are said to be of the same type if they are both knights or both knav
 --  #check Iff.symm
 --  #check not_iff_comm
 --  #check not_iff_not
---  nth_rw  2 [(@not_not P).symm]
+--  nth_rw 2 [(@not_not P).symm]
 --  rw [not_iff_not]
 --  exact Classical.not_iff
 

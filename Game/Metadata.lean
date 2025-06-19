@@ -32,6 +32,6 @@ theorem not_iff' {P Q : Prop}
   #check Iff.symm
   #check not_iff_comm
   #check not_iff_not
-  nth_rw  2 [(@not_not P).symm]
+  nth_rw 2 [(@not_not P).symm]
   rw [not_iff_not]
   exact Classical.not_iff

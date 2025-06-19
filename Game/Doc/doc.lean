@@ -30,8 +30,8 @@ $
 \hline
 P & P → False \\
 \hline
-T & F  \\
-F & T  \\
+T & F \\
+F & T \\
 \hline
 \end{array}
 $

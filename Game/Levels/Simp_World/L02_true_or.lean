@@ -22,7 +22,7 @@ eq_true (h : p)
 #check eq_true
 
 Statement (h : P)
-  : P or Q  := by
+  : P or Q := by
 
   {
   rw [eq_true h]

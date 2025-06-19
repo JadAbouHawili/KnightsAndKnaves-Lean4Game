@@ -60,8 +60,8 @@ From this, we conclude that we can prove `P and Q` if we have a proof of `P` and
 
 This is called the `and` introduction rule `And.intro`:
 ```
-And.intro  (left : P)
-           (right : Q)
+And.intro (left : P)
+          (right : Q)
 : P and Q
 ```
 

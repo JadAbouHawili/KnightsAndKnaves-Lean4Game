@@ -38,7 +38,7 @@ The second is using the `by_contra` tactic where `by_contra h` would be assuming
 Statement
 {P : Prop}
 {hP : ¬¬P}
-  : P  := by
+  : P := by
 
   {
   by_contra h
