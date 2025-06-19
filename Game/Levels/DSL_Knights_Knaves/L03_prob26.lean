@@ -55,7 +55,7 @@ If an islander says 'I am a knave', we get a contradiction, i.e. `False`.
   "
 Now that `B` is a knave, `C`'s statement is true then `C` is a knight.
 
-So you would have `B` is a knave and`C` is a knight closing the goal.
+So you would have `B` is a knave and `C` is a knight closing the goal.
   "
 
   have CKnight := said_knight hC BKnave
