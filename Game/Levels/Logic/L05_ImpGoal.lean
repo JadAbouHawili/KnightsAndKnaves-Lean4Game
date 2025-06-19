@@ -23,7 +23,7 @@ Statement {P :Prop}
     "
 We have a proof of `P` and we want to prove `P`.
 
-{hP} exactly matches the goal.
+`{hP}` exactly matches the goal.
     "
     exact hP
   }
