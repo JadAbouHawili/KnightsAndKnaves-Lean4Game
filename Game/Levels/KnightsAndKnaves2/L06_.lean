@@ -56,7 +56,7 @@ Take cases for `{nCorB}`.
     "
 Use `iff_of_true` to prove `A ↔ ¬C`
     "
-    have AiffnC:= iff_of_true hA h
+    have AiffnC := iff_of_true hA h
     Hint
     "
 Use `iff_not_comm` to prove `C ↔ ¬A`
