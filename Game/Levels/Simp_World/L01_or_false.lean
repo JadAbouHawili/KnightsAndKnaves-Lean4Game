@@ -105,7 +105,7 @@ Rewrite  at `h : P or False` obtaining `h : P`, using the theorem `or_false` or 
 
 Conclusion
 "
-You can also simplify `h` using the `simp` tactic (which stands for simplification).
+You can also simplify `h` using the `simp` tactic (which stands for 'simplification').
 
 We want to simplify `h` using `hnQ`, so
 ```

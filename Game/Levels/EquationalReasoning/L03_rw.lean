@@ -7,7 +7,7 @@ Title "`rw`, Substituting Variables By Their Values"
 
 Introduction "We will learn how to substitute a variable with its value, for example how to substitiute `x` by `2` if we know that `x=2`.
 
-This can be done using the tactic `rw` (short for rewrite).
+This can be done using the tactic `rw` (short for 'rewrite').
 
 `rw` takes a proof of `A=B` and replaces all the `A`s in the goal with `B`s.
 

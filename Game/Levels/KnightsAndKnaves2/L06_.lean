@@ -64,7 +64,7 @@ Use `iff_not_comm` to prove `C ↔ ¬A`
     have CiffnA := iff_not_comm.mp AiffnC
     Hint
     "
-Prove `B` using `stB`, `CiffnA.symm : C ↔ ¬A` (symm for symmetry).
+Prove `B` using `stB`, `CiffnA.symm : C ↔ ¬A` (symm for 'symmetry').
     "
     have hB := stB.mpr CiffnA.symm
     Hint
@@ -84,7 +84,7 @@ Prove `nAiffC : ¬A ↔ C` using `stB`, `h`
     have nAiffC := stB.mp h
     Hint
     "
-Prove `AiffnC : A ↔ ¬C` using `iff_not_comm`, `nAiffC.symm : C ↔ ¬A` (symm for symmetry).
+Prove `AiffnC : A ↔ ¬C` using `iff_not_comm`, `nAiffC.symm : C ↔ ¬A` (symm for 'symmetry').
     "
     have AiffnC := iff_not_comm.mp nAiffC.symm
     Hint
