@@ -8,7 +8,7 @@ Title "Proving an implication, Implication as the goal"
 
 Introduction
 "
-The goal, translated to English is: 'If `P` is true, then `P` is true'.
+The goal, translated to English, is: 'If `P` is true, then `P` is true'.
 
 To prove such a goal, we need to assume that `P` is true. Then, we have to prove that `P` is true.
 
