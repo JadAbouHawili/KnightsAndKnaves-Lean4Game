@@ -38,7 +38,7 @@ Nat.mul_left_cancel
   ```
   `Nat.mul_left_cancel` takes two arguments which are:
    - `np`, a proof that some number `n` is positive.
-   - `h`, the equation which has `n` on both sides of the equation multiplied on the left.
+   - `h`, an equation which has `n` on both sides of the equation multiplied on the left.
 
   The result is whats after `:`, canceling `n` from both sides of the equation giving a proof `m = k`.
 "
