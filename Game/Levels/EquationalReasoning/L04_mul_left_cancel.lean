@@ -40,7 +40,7 @@ Nat.mul_left_cancel
    - `np`, a proof that some number `n` is positive.
    - `h`, an equation which has `n` on both sides of the equation multiplied on the left.
 
-  The result is whats after `:`, canceling `n` from both sides of the equation giving a proof `m = k`.
+  The result is what's after `:`, canceling `n` from both sides of the equation giving a proof `m = k`.
 "
 
 NewTheorem Nat.mul_left_cancel four_pos
