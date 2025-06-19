@@ -13,7 +13,7 @@ hnP : ¬P
 hnP : P → False
 ```
 
-## truth table
+## Truth table
 $
 \begin{array}{|c c|}
 \hline
@@ -87,7 +87,7 @@ Logical implication `P → Q` is made up of two components:
 
 `P → Q` is read as 'If P is true, then Q is true.
 
-# truth table
+# Truth table
 $
 \begin{array}{|c c|c|}
 \hline
@@ -587,7 +587,7 @@ Combining them using `↔`:
 stA : A ∈ Knight ↔ B ∈ Knave
 ```
 
-### equivalent translations, using knaves
+### Equivalent translations, using knaves
 Given inhabitant `A`,
 
 The translation we use is based on the following:

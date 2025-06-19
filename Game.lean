@@ -55,11 +55,11 @@ Editor mode mimics the `Lean` experience in vscode which is the most common way 
 
 To access editor mode, click on the icon next to the hamburger menu in the top right.
 
-## vscode like environment
+## vscode-like environment
 Hovering over tactics/theorems will give you the official documentation.
 
 # Links
-## documentation
+## Documentation
 https://leanprover-community.github.io/mathlib4_docs/
 
 https://lean-lang.org/documentation/

@@ -16,7 +16,7 @@ Logical implication `P → Q` is made up of two components:
 `P → Q` is read as 'If `P` is true, then `Q` is true'.
 `P` being true IMPLIES `Q` being true. A proof of `P` IMPLIES a proof of `Q`.
 
-# truth table
+# Truth table
 $
 \\begin{array}{|c|c|c|}
 \\hline

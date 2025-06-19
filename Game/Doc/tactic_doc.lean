@@ -13,7 +13,7 @@ TacticDoc by_contra
 
 In fact, `rfl` is not a tactic but syntactic sugar for `exact rfl`. `rfl` is of type `a = a` for any `a`.
 
-## examples
+## Examples
 ```
 x - 7 = x - 7
 ```
@@ -158,7 +158,7 @@ TacticDoc exact
 /--
 The `have` tactic allows you to add theorems to the context (which you would have to prove, of course).
 
-## one step
+## One step
 If the proof is one step, then the following:
 ```
 have theorem-name := expression
@@ -172,7 +172,7 @@ theorem-name : P
 
 You are storing the proof of `P` in `theorem-name` so that you don't have to construct this proof everytime you need it.
 
-## multiple steps
+## Multiple steps
 If the proof is multiple steps, then:
 ```
 have theorem-name : theorem-prop
@@ -181,7 +181,7 @@ will change the current goal to `theorem-prop : Prop` which is what you want to 
 
 After being proven, the original goal is restored with `theorem-name : theorem-prop` added (which is a proof of the proposition `theorem-prop`)
 
-### example
+### Example
 ```
 have a : 2=2
 ```
