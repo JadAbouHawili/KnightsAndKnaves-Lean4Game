@@ -12,7 +12,7 @@ Introduction
 
 `Ira` says: `Robert` is truthful.
 
-`Ira` is my type is translated as
+'`Ira` is my type' is translated as
 ```
 ( (Ira and Robert) or (¬Ira and ¬Robert) )
 ```
