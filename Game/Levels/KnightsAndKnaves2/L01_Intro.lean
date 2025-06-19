@@ -64,7 +64,7 @@ We have `Zoey` and `¬Zoey`
   "
 Prove the second goal using `Zoey`, `stZ`
 
-Then close the goal (using `constructor`, or `⟨⟩` notation or `And.intro` etc..).
+Then close the goal (using `constructor`, or `⟨⟩` notation, or `And.intro` etc..).
   "
   have nM := stZ.mp hZ
   constructor
