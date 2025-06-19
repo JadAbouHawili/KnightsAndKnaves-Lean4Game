@@ -104,7 +104,8 @@ Conclusion
 We have proven the following theorem:
 ```
 dsl_iamknave
-(hAKn : A said A.isKnave) : False
+(hAKn : A said A.isKnave)
+: False
 ```
 which you can use in future levels.
 
