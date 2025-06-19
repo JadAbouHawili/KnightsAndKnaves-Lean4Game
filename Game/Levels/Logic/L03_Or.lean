@@ -27,7 +27,7 @@ F & F & F \\\\
 \\end{array}
 $
 
-From this truthtable, we conclude that to prove `P or Q`,  we need either `P` being true or `Q` being true (both being true would also mean its true).
+From this truth table, we conclude that to prove `P or Q`,  we need either `P` being true or `Q` being true (both being true would also mean its true).
 
 You can tell Lean which side of `or` you want to prove by simply executing `left` or `right`.
 
