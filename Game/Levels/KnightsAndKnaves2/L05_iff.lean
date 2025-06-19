@@ -29,7 +29,7 @@ Statement {A B C : Prop}
     "
 Use `have` to set `A` as the new goal.
 
-We want to prove `A`, to do this we will prove `¬¬A` (which is equivalent to `A`) i.e `¬A → False`. The tactic `by_contra` facilitates this.
+We want to prove `A`, to do this we will prove `¬¬A` (which is equivalent to `A`) i.e. `¬A → False`. The tactic `by_contra` facilitates this.
 
 `by_contra h` assumes `h : ¬A` and changes the goal to `False`.
 

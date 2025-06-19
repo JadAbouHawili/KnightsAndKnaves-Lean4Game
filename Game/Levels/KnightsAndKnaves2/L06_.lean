@@ -28,13 +28,13 @@ Use `have` to set `A` as the goal
     have hA : A
     Hint (strict := true)
         "
-    We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.
+    We want to prove `A`, to do this we will prove `¬¬A` i.e. `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.
 
     Assuming `hA : ¬A`:
     - Prove `hCnB : C ∧ ¬ B` using `stAn`, `nA`.
     - Prove `AsameC : ¬(¬A ↔ C)` using `stBn`, `hCnB.right : ¬B`
     - Prove `nAiffC : ¬A ↔ C` using `iff_of_true`, `nA`, `hCnB.left : C`
-    - Prove `False` from `nAiffC` and `AsameC` therefore proving that `¬A → False` i.e `¬¬A` i.e `A`
+    - Prove `False` from `nAiffC` and `AsameC` therefore proving that `¬A → False` i.e. `¬¬A` i.e. `A`
     "
     by_contra nA
     have hCnB:=  (stAn.mp nA)

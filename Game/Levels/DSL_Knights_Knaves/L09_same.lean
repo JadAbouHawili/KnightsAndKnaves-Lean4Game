@@ -57,7 +57,7 @@ Conclude that `B.isKnave`
 
   Hint
   "
-Therefore, from `B`'s statement, conclude that `A` and `C` are not the same i.e are different.
+Therefore, from `B`'s statement, conclude that `A` and `C` are not the same i.e. are different.
   "
   have diff : ¬(A.isKnight ↔ C.isKnight)
   intro same

@@ -16,7 +16,7 @@ World "Logic"
 Title "Logic"
 Introduction
 "
-In this world, we will be dealing with `Objects` of type `Prop` i.e propositions. You can think of a proposition as a statement that is either true or false (obviously, it can't be both at the same time). You have seen propositions before like `x=2`, `y=6` etc..
+In this world, we will be dealing with `Objects` of type `Prop` i.e. propositions. You can think of a proposition as a statement that is either true or false (obviously, it can't be both at the same time). You have seen propositions before like `x=2`, `y=6` etc..
 
 When you have `h : P` where `P : Prop`, then we say `h` is a proof of the statement `P`(imagine `x=2` instead of `P` if you wish).
 

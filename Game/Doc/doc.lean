@@ -39,7 +39,7 @@ $
 Notice that this definition is an implication and that the truth table with `¬P` and the truth table with `P → False` are identical.
 
 ## `¬P` as the goal
-What this means is that to prove `¬P`, we assume `P` and derive a contradiction i.e constructing an object of type `False`.
+What this means is that to prove `¬P`, we assume `P` and derive a contradiction i.e. constructing an object of type `False`.
 In other words, having `¬P` as a goal, you have to start the proof with `intro` because you are proving an implication.
 -/
 DefinitionDoc Not as "¬"
@@ -66,7 +66,7 @@ You can think of a proposition as a statement that is either true or false (obvi
 
 Moreover, these statements are denoted by a symbol like `P`,`Q`,`R`.
 
-For an object of type `P` where `P` is of type Prop, i.e `h : P` where `P : Prop`, `h` would be a proof or a witness that `P` is true.
+For an object of type `P` where `P` is of type Prop, i.e. `h : P` where `P : Prop`, `h` would be a proof or a witness that `P` is true.
 
 # Constructing new propositions from old ones
 The atomic propositions in the compound proposition `p ∧ q` are : `p`, `q`. Of course, `p ∧ q` can be used to construct more complicated propositions.
@@ -75,7 +75,7 @@ The atomic propositions in the compound proposition `p ∧ q` are : `p`, `q`. Of
 This truth value depends on the truth value of the propositions it was built out of and the rules of the logical connective. This is clearly illustrated in a truth table.
 
 # Truth table
-The truth table of a logical connective illustrates the rule for that logical connective, i.e the truth value of the compound statement depending on the truth value of the propositions it connects.
+The truth table of a logical connective illustrates the rule for that logical connective, i.e. the truth value of the compound statement depending on the truth value of the propositions it connects.
 
 -/
 DefinitionDoc «Prop» as "Prop"
@@ -135,7 +135,7 @@ F & F & T \\
 $
 
 # Truth table
-The truth table of a logical connective illustrates the rule for that logical connective, i.e the truth value of the compound statement depending on the truth value of the propositions it connects.
+The truth table of a logical connective illustrates the rule for that logical connective, i.e. the truth value of the compound statement depending on the truth value of the propositions it connects.
 The following truth table illustrates this for the previously discussed `∧` connective.
 `T` stands for true
 `F` stands for false
@@ -198,7 +198,7 @@ A ∩ B
 `A ∩ B` is itself another set, containing elements that are in both `A` and `B`.
 In other words, `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`.
 
-`A ∩ B = ∅` means that `A` and `B` have no common element i.e no element of `A` belongs to both and no element of `B` belongs to both.
+`A ∩ B = ∅` means that `A` and `B` have no common element i.e. no element of `A` belongs to both and no element of `B` belongs to both.
 In other words, `x ∈ A → x ∉ B`, `x ∈ B → x ∉ A` which are `inleft_notinright` and `inright_notinleft` respectively.
 -/
 DefinitionDoc inter as "∩"
@@ -295,14 +295,14 @@ TheoremDoc iff_not_comm as "iff_not_comm" in "Logic"
 /--
 If two propositions are false, then they have the same truth value.
 
-If we know `¬P,¬Q`  then we can conclude that `P,Q` have the same truth value i.e `P ↔ Q`
+If we know `¬P,¬Q`  then we can conclude that `P,Q` have the same truth value i.e. `P ↔ Q`
 -/
 TheoremDoc iff_of_false as "iff_of_false" in "Logic"
 
 /--
 If two propositions are true, then they have the same truth value.
 
-If we know `P,Q`  then we can conclude that `P,Q` have the same truth value i.e `P ↔ Q`
+If we know `P,Q`  then we can conclude that `P,Q` have the same truth value i.e. `P ↔ Q`
 -/
 TheoremDoc iff_of_true as "iff_of_true" in "Logic"
 
@@ -445,7 +445,7 @@ TheoremDoc true_or_iff as "true_or_iff" in "Logic"
 TheoremDoc true_implies as "true_implies" in "Logic"
 
 /--
-`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e one of them is true and the other is false.
+`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e. one of them is true and the other is false.
 
 Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:
 $
@@ -525,9 +525,9 @@ Knave : Finset Inhabitant
 There will be at most three inhabitants in the puzzles for simplicity, but you can ofcourse have more.
 
 ## Assumptions
-Knights tell the true and knaves lie. So no one can be both at the same time i.e `Knight ∩ Knave = ∅`
+Knights tell the true and knaves lie. So no one can be both at the same time i.e. `Knight ∩ Knave = ∅`
 
-Moreover, every inhabitant is either a knight or a knave i.e `A ∈ Knight ∨ A ∈ Knave` for any `A : Inhabitant`.
+Moreover, every inhabitant is either a knight or a knave i.e. `A ∈ Knight ∨ A ∈ Knave` for any `A : Inhabitant`.
 
 As a proof state:
 ```
@@ -556,7 +556,7 @@ Given an inhabitant `A`,
 
 The translation we use is based on the following:
 - If `A` is a knight, then `A`'s statement is true.
-- If `A`'s statement is true, then `A` is telling the truth i.e is a knight.
+- If `A`'s statement is true, then `A` is telling the truth i.e. is a knight.
 
 Formally:
 ```
@@ -591,8 +591,8 @@ stA : A ∈ Knight ↔ B ∈ Knave
 Given inhabitant `A`,
 
 The translation we use is based on the following:
-- If `A` is a knave, then `A`'s statement is false, i.e its negation is true.
-- If `A`'s statement is false, then `A` is lying i.e is a knave.
+- If `A` is a knave, then `A`'s statement is false, i.e. its negation is true.
+- If `A`'s statement is false, then `A` is lying i.e. is a knave.
 
 Formally:
 ```
@@ -750,7 +750,7 @@ Knights always tell the truth, so if `A` makes some statement `P` we have that `
 ```
 A → P
 ```
-Moreover, the statement `P` being true means that `A` is telling the truth i.e is a knight
+Moreover, the statement `P` being true means that `A` is telling the truth i.e. is a knight
 ```
 P → A
 ```
@@ -763,7 +763,7 @@ Similarly for `A` being a knave which implies that the statement `P` is false
 ```
 ¬A → ¬P
 ```
-Moreover, the statement `P` being false means that `A` is lying i.e is a knave
+Moreover, the statement `P` being false means that `A` is lying i.e. is a knave
 ```
 ¬P → ¬A
 ```
@@ -831,7 +831,7 @@ F & F & T & T & T \\
 \end{array}
 $
 
-So, `P ↔ Q` is true when `P,Q` are true or `P,Q` are false, i.e when `P` and `Q` have the same truth value. Therefore, `P` and `Q` are equivalent from a truth value perspective regardless what the statement of `P` and of `Q` is.
+So, `P ↔ Q` is true when `P,Q` are true or `P,Q` are false, i.e. when `P` and `Q` have the same truth value. Therefore, `P` and `Q` are equivalent from a truth value perspective regardless what the statement of `P` and of `Q` is.
 
 ## Extracting Each Implication
 ```
@@ -878,7 +878,7 @@ A is a knave, so whatever A said is false
 TheoremDoc Islander.knave_said as "knave_said" in "DSL"
 
 /--
-A said something that is false (i.e a lie), so A is a knave
+A said something that is false (i.e. a lie), so A is a knave
 -/
 TheoremDoc Islander.said_knave as "said_knave" in "DSL"
 

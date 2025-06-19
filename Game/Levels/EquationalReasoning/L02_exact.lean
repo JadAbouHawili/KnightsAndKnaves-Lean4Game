@@ -20,7 +20,7 @@ As for the assumptions, we have `h : x=2` which means that `h` is an object of t
 # Goal
 Our goal is to prove that `x = 2`.
 We must use our assumptions.
-We have that `h : x=2` i.e `h` is a proof that `x=2`.
+We have that `h : x=2` i.e. `h` is a proof that `x=2`.
 
 `h` is a proof of our goal, we should let `Lean` know that we have a proof of the goal. Using `exact h` accomplishes this because `h` is EXACTLY the goal.
 "

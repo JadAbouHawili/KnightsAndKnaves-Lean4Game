@@ -8,7 +8,7 @@ Title "`not_iff`"
 
 Introduction
 "
-`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e one of them is true and the other is false.
+`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e. one of them is true and the other is false.
 
 Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:
 $

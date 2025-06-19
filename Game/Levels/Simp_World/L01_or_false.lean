@@ -72,7 +72,7 @@ $
 
 `P or Q` has the same truth value as `P` (for `Q = False`).
 
-In other words, `P or False` and `P` have the same truth value i.e `(P or False) ↔ P`. Whenver `P or False` occurs, we can replace it by `P` which is of a simpler form.
+In other words, `P or False` and `P` have the same truth value i.e. `(P or False) ↔ P`. Whenver `P or False` occurs, we can replace it by `P` which is of a simpler form.
 $
 \\begin\{array}\{|c|c|}
 \\hline

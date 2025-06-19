@@ -43,7 +43,7 @@ $
 
 Therefore, they are equivalent and can be interchanged.
 
-On a more intuitive level, we can understand `¬(P or Q)` as meaning `P or Q` is not true i.e it is not true that either `P` or `Q` is true i.e `P` is false and `Q` is false.
+On a more intuitive level, we can understand `¬(P or Q)` as meaning `P or Q` is not true i.e. it is not true that either `P` or `Q` is true i.e. `P` is false and `Q` is false.
 
 The simplification theorem to use,
 ```

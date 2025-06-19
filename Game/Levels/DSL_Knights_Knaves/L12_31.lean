@@ -85,7 +85,7 @@ Conclude that `B`'s statement is false
   "
   `{notoneknight}` means that there are no knights or there are two or more knights.
 
-  Since we know that `A,B` are knaves then it is the former i.e there are no knights. This means that `C` is a knave.
+  Since we know that `A,B` are knaves then it is the former i.e. there are no knights. This means that `C` is a knave.
 
   To obtain this result:
   - First start by unfolding `{notoneknight}`.
