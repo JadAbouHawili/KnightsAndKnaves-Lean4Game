@@ -7,13 +7,13 @@ Level 7
 
 Title "Logical Equivalence, `↔`"
 
-Introduction 
+Introduction
 "
 `P ↔ Q`  is defined as `(P → Q) ∧ (Q → P)`.
 
 Its truth table looks like the folowing:
 $
-\\begin{array}{|c c|c c|c|} 
+\\begin{array}{|c c|c c|c|}
 \\hline
 P & Q & P → Q & Q → P & P → Q ∧ Q → P\\\\
 \\hline
@@ -51,7 +51,7 @@ This level could have been
 PsameQ : P ↔ Q
 hQ : Q
 
-Goal 
+Goal
 P
 ```
 `exact PsameQ.mpr hQ` would close the goal.
@@ -61,7 +61,7 @@ P
 PsameQ : P ↔ Q
 hQ : Q
 
-Goal 
+Goal
 Q
 ```
 which you can then close using `hQ`.

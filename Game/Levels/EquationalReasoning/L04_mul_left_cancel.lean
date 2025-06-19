@@ -14,7 +14,7 @@ The theorem to do this is:
 Nat.mul_left_cancel firstarg
                     secondarg
 ```
-where the `firstarg` is a theorem that the number you are cancelling from both sides is positive, in our case this would be `four_pos`. 
+where the `firstarg` is a theorem that the number you are cancelling from both sides is positive, in our case this would be `four_pos`.
 
 The `secondarg` would be the equation you are working with, in this case `h`.
 
@@ -31,9 +31,9 @@ Conclusion
 "
 Here is the type signature of `Nat.mul_left_cancel`:
   ```
-Nat.mul_left_cancel 
-(np : 0 < n) 
-(h : n * m = n * k) 
+Nat.mul_left_cancel
+(np : 0 < n)
+(h : n * m = n * k)
 : m = k
   ```
   `Nat.mul_left_cancel` takes two arguments which are:

@@ -55,7 +55,7 @@ knight_said
 ```
 -- `said_knight`
 -- If what is said is true,
--- then knight. 
+-- then knight.
 -- A said something true,
 -- so A is a knight.
 said_knight
@@ -70,8 +70,8 @@ said_knight
 -- it is false.
 -- A is a knave,
 -- so whatever A said is false
-knave_said 
-(stA : A said P) 
+knave_said
+(stA : A said P)
 (AKnave : A.isKnave) : ¬P
 ```
 

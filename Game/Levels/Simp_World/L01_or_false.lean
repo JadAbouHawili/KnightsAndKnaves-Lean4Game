@@ -87,13 +87,13 @@ $
 
 The theorem for this simplication
 ```
-or_false_iff (p : Prop) 
+or_false_iff (p : Prop)
 : p or False ↔ p
 ```
 
 There's also an equivalent
 ```
-or_false (p : Prop) 
+or_false (p : Prop)
 : (p or False) = p
 ```
 

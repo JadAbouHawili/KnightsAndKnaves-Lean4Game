@@ -2,12 +2,12 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 open Islander
 
-World "DSL_Knights_Knaves" 
+World "DSL_Knights_Knaves"
 Level 5
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
 `A` says 'I am a knave or `B` is a knight'.
 "
@@ -16,7 +16,7 @@ Introduction
 Statement
 {A B : Islander}
 {stA : A said (A.isKnave ∨ B.isKnight)}
-: A.isKnight ∧ B.isKnight := by 
+: A.isKnight ∧ B.isKnight := by
   Hint (strict := true)
   "
 Change the goal to `A.isKnight`
@@ -32,7 +32,7 @@ Transform the goal from `knight_to_knave`.
   "
 Conclude that `A`'s statement is false.
   "
-  have cont := knave_said stA AKnave 
+  have cont := knave_said stA AKnave
   Hint
   "
 Simplify `{cont}` using `not_or`

@@ -62,7 +62,7 @@ For proving `hB : B`, you would need to pass a proof of `C ∧ ¬A` to `stB.mpr`
   "
 Using `¬C`, we get `¬C ∨ A` which gives `¬B` using `stBn`.
 
-After which, you need to close the goal of the form 
+After which, you need to close the goal of the form
 ```
 _ and _ and _
 ```

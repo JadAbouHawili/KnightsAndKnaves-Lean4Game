@@ -2,20 +2,20 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 
-World "DSL_Knights_Knaves" 
+World "DSL_Knights_Knaves"
 Level 12
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
-Again we have three people, `A`, `B`, `C`, each of whom is either a knight or a knave. 
+Again we have three people, `A`, `B`, `C`, each of whom is either a knight or a knave.
 
-`A` and `B` make the following statements: 
+`A` and `B` make the following statements:
 
-`A`: All of us are knaves. 
+`A`: All of us are knaves.
 
-`B`: Exactly one of us is a knight. 
+`B`: Exactly one of us is a knight.
 
 What are `A`, `B`, `C`?
 
@@ -28,7 +28,7 @@ set_option push_neg.use_distrib true
 Statement
 {stA : A said @allKnaves A B C}
 {stB : B said @oneisknight A B C}
-: A.isKnave ∧ B.isKnight ∧ C.isKnave := by 
+: A.isKnave ∧ B.isKnight ∧ C.isKnave := by
   have AKnave : A.isKnave
   Hint (strict:=true)
   "
@@ -52,14 +52,14 @@ Now we have that everybody is a knave, but we know `A` is a knight. Therefore, w
 `unfold allKnaves` and obtain a contradiction.
   "
   unfold allKnaves at allknave
-  have AKnave := allknave.left 
+  have AKnave := allknave.left
   contradiction
 
   Hint (strict:=true)
   "
 Now that we know `A` is a knave, conclude the negation of `A`'s statement.
   "
-  have notallknave := knave_said stA AKnave 
+  have notallknave := knave_said stA AKnave
 
   Hint (strict := true)
   "
@@ -105,7 +105,7 @@ Conclude that `B`'s statement is false
 
   Hint
   "
-Now, we know that `A` is a knave and `B` is a knight. 
+Now, we know that `A` is a knave and `B` is a knight.
 
 Conclude `B`'s statement.
   "
@@ -122,7 +122,7 @@ After which, you can close the goal.
   simp [AKnave,BKnight] at one
   knave_to_knight at one
   simp [AKnave,BKnight] at one
-  knight_to_knave at one 
+  knight_to_knave at one
   simp [AKnave,BKnight,one]
 
 Conclusion

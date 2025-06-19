@@ -13,9 +13,9 @@ You have already done this level using `left`/`right` tactic.
 
 Here we introduce a simplification theorem to do it.
 
-But first, rewrite `P or Q` to `True or Q` using 
+But first, rewrite `P or Q` to `True or Q` using
 ```
-eq_true (h : p) 
+eq_true (h : p)
   : p = True
 ```
 "

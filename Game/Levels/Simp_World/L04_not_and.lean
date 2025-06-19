@@ -1,12 +1,12 @@
 import Game.Metadata
 
 
-World "Simp_World" 
+World "Simp_World"
 Level 4
 
-Title "`not_and_or`" 
+Title "`not_and_or`"
 
-Introduction 
+Introduction
 "
 Notice that `¬(P and Q)`,
 $

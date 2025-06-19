@@ -15,7 +15,7 @@ hnP : P → False
 
 ## truth table
 $
-\begin{array}{|c c|} 
+\begin{array}{|c c|}
 \hline
 P & ¬P \\
 \hline
@@ -26,7 +26,7 @@ F & T \\
 $
 
 $
-\begin{array}{|c|c|} 
+\begin{array}{|c|c|}
 \hline
 P & P → False \\
 \hline
@@ -39,7 +39,7 @@ $
 Notice that this definition is an implication and that the truth table with `¬P` and the truth table with `P → False` are identical.
 
 ## `¬P` as the goal
-What this means is that to prove `¬P`, we assume `P` and derive a contradiction i.e constructing an object of type `False`. 
+What this means is that to prove `¬P`, we assume `P` and derive a contradiction i.e constructing an object of type `False`.
 In other words, having `¬P` as a goal, you have to start the proof with `intro` because you are proving an implication.
 -/
 DefinitionDoc Not as "¬"
@@ -72,7 +72,7 @@ For an object of type `P` where `P` is of type Prop, i.e `h : P` where `P : Prop
 The atomic propositions in the compound proposition `p ∧ q` are : `p`, `q`. Of course, `p ∧ q` can be used to construct more complicated propositions.
 
 ## Connecting Propositions With A Logical Connective
-This truth value depends on the truth value of the propositions it was built out of and the rules of the logical connective. This is clearly illustrated in a truth table. 
+This truth value depends on the truth value of the propositions it was built out of and the rules of the logical connective. This is clearly illustrated in a truth table.
 
 # Truth table
 The truth table of a logical connective illustrates the rule for that logical connective, i.e the truth value of the compound statement depending on the truth value of the propositions it connects.
@@ -89,7 +89,7 @@ Logical implication `P → Q` is made up of two components:
 
 # truth table
 $
-\begin{array}{|c c|c|} 
+\begin{array}{|c c|c|}
 \hline
 P & Q & P → Q \\
 \hline
@@ -113,13 +113,13 @@ The truth of `P` IMPLIES the truth of `Q`. A proof of `P` IMPLIES a proof of `Q`
 In other words, it acts like a function. If you give `P → Q` a proof of `P`, you get a proof of `Q`.
 -/
 DefinitionDoc imp as "→"
- 
+
 /--
 `∧` read as 'and'
 Truth table:
 
 $
-\begin{array}{|c c|c|} 
+\begin{array}{|c c|c|}
 \hline
 P & Q & \text{P and Q} \\
 \hline
@@ -141,7 +141,7 @@ The following truth table illustrates this for the previously discussed `∧` co
 `F` stands for false
 
 $
-\begin{array}{|c c|c|} 
+\begin{array}{|c c|c|}
 \hline
 P & Q & \text{P and Q} \\
 \hline
@@ -157,14 +157,14 @@ Notice that `P and Q` is true when both `P` is true and `Q` is true, being false
 
 
 -/
-DefinitionDoc logic_and as "and" 
+DefinitionDoc logic_and as "and"
 
 /--
 `∨`
 
 # Truth Table
 $
-\begin{array}{|c c|c|} 
+\begin{array}{|c c|c|}
 \hline
 P & Q & \text{P or Q} \\
 \hline
@@ -179,7 +179,7 @@ F & F & F \\
 \end{array}
 $
 
-From the truth table, we can see that if one of `P`,`Q` is true then `P ∨ Q` is true. 
+From the truth table, we can see that if one of `P`,`Q` is true then `P ∨ Q` is true.
 
 Therefore, if we have `P or Q` as our goal, it is enough to prove `P` or to prove `Q`.
 
@@ -218,7 +218,7 @@ Typed as `\<hP,hQ\>`,
 ```
 ⟨hP,hQ⟩ : P ∧ Q
 ```
-instead of 
+instead of
 ```
 And.intro hP hQ : P ∧ Q
 ```
@@ -261,7 +261,7 @@ F & T \\\\
 \\end{array}
 $$
 
-We have that the implication `False → Q` is true regardless what `Q` represents and regardless whether `Q` is true or is false. 
+We have that the implication `False → Q` is true regardless what `Q` represents and regardless whether `Q` is true or is false.
 
 So `False` implies any proposition. This principle is known as: 'From `False` anything follows'.
 -/
@@ -487,7 +487,7 @@ Theorems represent an implication say:
 thm : P → Q
 ```
 
-They work for `P`,`Q` of any type. What `thm` means is the following, give me an object of type `P` and i will return an object of type `Q`. 
+They work for `P`,`Q` of any type. What `thm` means is the following, give me an object of type `P` and i will return an object of type `Q`.
 
 Therefore, theorems expect arguments given in a specific order after which the obtained expression is an object which has the conclusion as its type.
 
@@ -517,7 +517,7 @@ As a proof state:
 ```
 Objects
 A : Inhabitant
-B : Inhabitant 
+B : Inhabitant
 C : Inhabitant
 Knight : Finset Inhabitant
 Knave : Finset Inhabitant
@@ -532,7 +532,7 @@ Moreover, every inhabitant is either a knight or a knave i.e `A ∈ Knight ∨ A
 As a proof state:
 ```
 Assumptions:
-h : Knight ∩ Knave = ∅ 
+h : Knight ∩ Knave = ∅
 Or : A ∈ Knight ∨ A ∈ Knave
 ```
 
@@ -541,13 +541,13 @@ Putting every together:
 ```
 Objects
 A : Inhabitant
-B : Inhabitant 
+B : Inhabitant
 C : Inhabitant
 Knight : Finset Inhabitant
 Knave : Finset Inhabitant
 
 Assumptions
-h : Knight ∩ Knave = ∅ 
+h : Knight ∩ Knave = ∅
 Or : A ∈ Knight ∨ A ∈ Knave
 ```
 
@@ -648,9 +648,9 @@ The translation of statements made by each inhabitant into a propositional formu
 
 Notice that there are no explicit assumptions in this representation, but that doesn't mean that this representation is less faithful.
 
-We know that any proposition is either true or false, in our context this would translate to every inhabitant is either a knight or a knave. 
+We know that any proposition is either true or false, in our context this would translate to every inhabitant is either a knight or a knave.
 ```
-A ∈ Knight ∨ A ∈ Knave 
+A ∈ Knight ∨ A ∈ Knave
 ```
 translates to
 ```
@@ -668,7 +668,7 @@ Knight ∩ Knave = ∅
 
 Correspondence:
 $
-\\begin{array}{|c|c|c|} 
+\\begin{array}{|c|c|c|}
 \\hline
 \\text{Old way} & \\text{New way} \\\\
 \\hline
@@ -700,29 +700,29 @@ A.isKnave
 
 `A` is either a knight or a knave
 ```
-isKnight_or_isKnave (A : Islander) 
+isKnight_or_isKnave (A : Islander)
 : A.isKnight or A.isKnave
 ```
 
 Knights always tell the truth.
 ```
-knight_said 
+knight_said
 : (A said P) → A.isKnight → P
-said_knight 
-: (A said P) →  P → A.isKnight 
+said_knight
+: (A said P) →  P → A.isKnight
 ```
 
 Knaves always lie.
 ```
-knave_said  
+knave_said
 : (A said P) →  A.isKnave → ¬P
-said_knave  
+said_knave
 : (A said P) →  ¬P → A.isKnave
 ```
 
 Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. `A` is not a knight and a knave at the same time. This is represented as:
 ```
-not_isKnight_and_isKnave (A : Islander) 
+not_isKnight_and_isKnave (A : Islander)
 : ¬ (A.isKnight ∧ A.isKnave)
 ```
 
@@ -767,7 +767,7 @@ Moreover, the statement `P` being false means that `A` is lying i.e is a knave
 ```
 ¬P → ¬A
 ```
-which are combined as 
+which are combined as
 ```
 ¬A ↔ ¬P
 ```

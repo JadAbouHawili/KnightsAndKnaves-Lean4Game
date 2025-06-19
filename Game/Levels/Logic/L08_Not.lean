@@ -18,7 +18,7 @@ The job of this connective (as the name implies), is to negate a proposition:
 
 In truth table form:
 $
-\\begin{array}{|c|c|} 
+\\begin{array}{|c|c|}
 \\hline
 P & ¬P \\\\
 \\hline
@@ -32,9 +32,9 @@ Notice that since `P` is true, `¬P` should be false but in this proof state it 
 
 Note that we don't need to introduce a new symbol to define negation, it can be defined in terms of what we already know.
 
-Consider the following truth table: 
+Consider the following truth table:
 $
-\\begin{array}{|c|c|c|} 
+\\begin{array}{|c|c|c|}
 \\hline
 P & Q & P → Q \\\\
 \\hline
@@ -51,7 +51,7 @@ $
 
 Let's focus on the rows where `Q=False`,
 $
-\\begin{array}{|c|c|} 
+\\begin{array}{|c|c|}
 \\hline
 P & P → False \\\\
 \\hline
@@ -86,7 +86,7 @@ For this level, `¬P` being true tells us that a proof of `P` gives us a proof o
     exact hnP hP
  }
 
-Conclusion 
+Conclusion
 "
 In the next level, we will explore what it means to have proven `False`, and what it means to have contradictory assumptions/propositions.
 "

@@ -24,7 +24,7 @@ Any new tactic, theorem, or definition introduced in a level will be highlighted
 
 We now discuss each section in the right side pane.
 ## Tactics
-In this puzzle game, you will use tactics to manipulate the `Goal` and close it, essentially proving the `Goal`. Tactics will be incrementally introduced, and tactics that haven't been introduced yet will have a lock icon which means you can't use them yet. 
+In this puzzle game, you will use tactics to manipulate the `Goal` and close it, essentially proving the `Goal`. Tactics will be incrementally introduced, and tactics that haven't been introduced yet will have a lock icon which means you can't use them yet.
 
 ## Definitions
 The point of this game is not just to showcase `Lean`, but also to learn some mathematics. Relevant definitions will be displayed here.
@@ -50,7 +50,7 @@ Info
 "
 Many technical details have been skipped for the sake of not getting bogged down with `Lean` and its mathematical library `mathlib`, but focus on the aspects of reasoning and proof. You can search https://leanprover-community.github.io/mathlib4_docs/ for more information about any tactic or theorem used.
 
-# Editor Mode 
+# Editor Mode
 Editor mode mimics the `Lean` experience in vscode which is the most common way to use `Lean`.
 
 To access editor mode, click on the icon next to the hamburger menu in the top right.
@@ -120,7 +120,7 @@ Based on statements made, you will deductively conclude who is a knight (truthfu
 CoverImage "images/knights-and-knaves.jpg"
 
 Dependency Logic → Simp_World
-Dependency Simp_World →  KnightsAndKnaves2 
+Dependency Simp_World →  KnightsAndKnaves2
 Dependency Simp_World →DSL_Knights_Knaves
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

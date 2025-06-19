@@ -68,6 +68,6 @@ Now that `Ira` is a knight, conclude that `Robert` is a knight and close the goa
 
   }
 
-Conclusion 
+Conclusion
 "
 "

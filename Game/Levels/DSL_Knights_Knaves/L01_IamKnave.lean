@@ -17,10 +17,10 @@ Asaid : A said A.isKnave
 
 The goal is to prove `False`. Given the rules of the game, and that `A` says 'I am a knave' we have a contradiction.
 
-By the rules of the game, we know that `A` is either a knight or a knave. 
+By the rules of the game, we know that `A` is either a knight or a knave.
 ```
-isKnight_or_isKnave 
-(A : Islander) 
+isKnight_or_isKnave
+(A : Islander)
 : A.isKnight or A.isKnave
 ```
 
@@ -33,7 +33,7 @@ We consider every case using the `cases` tactic, and `isKnight_or_isKnave`.
 
 open Islander
 
-Statement (hAKn : A said A.isKnave): False := by 
+Statement (hAKn : A said A.isKnave): False := by
   Hint (hidden := true)(strict:=true)
   "
 Try
@@ -41,7 +41,7 @@ Try
 cases isKnight_or_isKnave A
 ```
   "
-  knight_or_knave A with hA hnA 
+  knight_or_knave A with hA hnA
   Hint
   "
   For the previous step, you also have the option of using the custom tactic `knight_or_knave A with AKnight AKnave`. This would allow you to name the hypothesis of every case.
@@ -66,13 +66,13 @@ Prove `A`'s statement using `have`,`knight_said`
   have hnA := knight_said hAKn hA
   Hint
   "
-We know `A` is a knight and a knave. 
+We know `A` is a knight and a knave.
 This is a contradiction
 
 Recall
 ```
-not_isKnight_and_isKnave 
-(AKnight : isKnight A) 
+not_isKnight_and_isKnave
+(AKnight : isKnight A)
 (AKnave : isKnave A) : False
 ```
 
@@ -92,9 +92,9 @@ So, we can conclude that `A`'s statement is false.
 `A` is a knave, so whatever `A` said is false.
 "
   have hnA := knave_said hAKn hnA
-  Hint 
+  Hint
   "
-`A` is knave and is not a knave. 
+`A` is knave and is not a knave.
 contradiction.
   "
   contradiction
@@ -103,7 +103,7 @@ Conclusion
 "
 We have proven the following theorem:
 ```
-dsl_iamknave 
+dsl_iamknave
 (hAKn : A said A.isKnave) : False
 ```
 which you can use in future levels.

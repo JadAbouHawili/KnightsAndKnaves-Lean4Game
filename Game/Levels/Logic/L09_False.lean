@@ -40,7 +40,7 @@ F & T \\\\
 \\end{array}
 $$
 
-We have that the implication `False → Q` is true regardless what `Q` represents and regardless whether `Q` is true or is false. 
+We have that the implication `False → Q` is true regardless what `Q` represents and regardless whether `Q` is true or is false.
 So `False` implies any proposition. This principle is known as: 'From `False` anything follows'.
 
 This principle is represented by `False.elim (h : False) : Q` which takes a proof of `False`, and proves any proposition `Q`.

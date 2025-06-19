@@ -10,7 +10,7 @@ wolfram generated
 A ⇔ (C ∨ B)
 B ⇔ (A ⇔ C)
 -/
-Introduction 
+Introduction
 "
 `A`: `C` is a knight or `B` is a knight.
 
@@ -68,7 +68,7 @@ Now consider cases for `CorB` and for every case prove the goal.
   `iff_of_true` says that we can conclude `P ↔ Q` is true when `P` is true, `Q` is true (check the truth table).
   "
   have AiffC := iff_of_true hA h
-  Hint 
+  Hint
   "
   Prove `hB : B` using `stB`, `{AiffC}`.
   "

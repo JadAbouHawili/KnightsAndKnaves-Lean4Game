@@ -49,4 +49,4 @@ Conclusion
 "
 
 NewDefinition logic_or
-NewTactic left right 
+NewTactic left right

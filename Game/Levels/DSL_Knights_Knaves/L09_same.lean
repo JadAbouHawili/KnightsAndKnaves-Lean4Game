@@ -12,7 +12,7 @@ Introduction
 "
 We have three inhabitants, `A`, `B`, and `C`.
 
-Two people are said to be of the same type if they are both knights or both knaves. 
+Two people are said to be of the same type if they are both knights or both knaves.
 
 `A` and `B` make the following statements:
 
@@ -22,7 +22,7 @@ Two people are said to be of the same type if they are both knights or both knav
 "
 
 --theorem not_iff' {P Q : Prop}
--- : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by 
+-- : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by
 --  --#check Iff.symm
 --  --#check symm
 --  #check Iff.symm
@@ -71,7 +71,7 @@ Therefore, from `B`'s statement, conclude that `A` and `C` are not the same i.e 
 Use `not_iff'`
   "
   rw [not_iff'] at diff
-  Hint 
+  Hint
   "
 Conclude `¬C.isKnight` and close the goal.
   "
@@ -79,14 +79,14 @@ Conclude `¬C.isKnight` and close the goal.
   knight_to_knave at CKnave
   assumption
 
-  Hint 
+  Hint
   "
-Now that `A` is a knave. 
+Now that `A` is a knave.
 We can conclude `B` is a knight.
 
 which means that `A` and `C` have the same type, obtaining that `C` is a knave and closing the goal.
   "
-  have BKnight := knave_said stA AKnave 
+  have BKnight := knave_said stA AKnave
   knave_to_knight at BKnight
   have same := knight_said stB BKnight
   knight_to_knave at same

@@ -1,12 +1,12 @@
 import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 
-World "DSL_Knights_Knaves" 
+World "DSL_Knights_Knaves"
 Level 7
 
 Title ""
 
-Introduction 
+Introduction
 "
 You stumble into `A`,`B`.
 
@@ -19,8 +19,8 @@ open Islander
 Statement
 {A B : Islander}
 (stA : A said B.isKnight)
-(stB : B said ( ¬ (A.isKnight ↔ B.isKnight) ) ) 
-: A.isKnave and B.isKnave := by 
+(stB : B said ( ¬ (A.isKnight ↔ B.isKnight) ) )
+: A.isKnave and B.isKnave := by
   Hint
   "
 Let's start by proving `A.isKnave`
@@ -47,14 +47,14 @@ Conclude `¬(A.isKnight ↔ B.isKnight)` from `B`'statement then prove that `A.i
   have notsame := knight_said stB BKnight
   exact notsame (iff_of_true AKnight BKnight)
 
-  Hint 
+  Hint
   "
 Now that `A` is a knave, we can conclude `A` was lying and `B` is in fact a `knave`.
 
 Then, close the goal.
   "
   have BKnave := knave_said stA AKnave
-  knight_to_knave at BKnave 
+  knight_to_knave at BKnave
   constructor
   assumption
   assumption

@@ -11,7 +11,7 @@ theorem inleft_notinright
   {left : Finset K} {right : Finset K}
 (h : left ∩ right = ∅ )
 (Aleft : A ∈ left) : A ∉ right := by
-  intro a 
+  intro a
   #check Finset.mem_inter_of_mem
   have := Finset.mem_inter_of_mem Aleft a
   rw [h] at this
@@ -22,7 +22,7 @@ theorem inright_notinleft
   {left : Finset K} {right : Finset K}
 (h : left ∩ right = ∅ )
 (Aright : A ∈ right) : A ∉ left := by
-  intro a 
+  intro a
   have := Finset.mem_inter_of_mem Aright a
   rw [Finset.inter_comm] at h
   rw [h] at this
@@ -48,7 +48,7 @@ theorem notinleft_inrightIff
 : A ∉ left ↔  A ∈ right := by
   constructor
   · exact notleft_right LeftorRight
-  · exact inright_notinleft h  
+  · exact inright_notinleft h
 
 theorem inright_notinleftIff
   {inst : DecidableEq K}
@@ -58,7 +58,7 @@ theorem inright_notinleftIff
   (h : left ∩ right = ∅)
 : A ∈ right ↔  A ∉ left := by
   constructor
-  · exact inright_notinleft h 
+  · exact inright_notinleft h
   · exact notleft_right LeftorRight
 
 theorem notinright_inleftIff
@@ -75,13 +75,13 @@ theorem notinright_inleftIff
 theorem disjoint {inst : DecidableEq K}  {left : Finset K} {right : Finset K}
 (h : left ∩ right = ∅ )
 (Aleft : A ∈ left)
-(Aright : A ∈ right)  : False := by 
+(Aright : A ∈ right)  : False := by
   have := Finset.mem_inter_of_mem Aleft Aright
   rw [h] at this
   contradiction
 
 theorem XorToOr {inst : DecidableEq Inhabitant}{Knight : Finset Inhabitant } {Knave : Finset Inhabitant} (A : Inhabitant)
-(h : Knight ∩ Knave = ∅ ) : Xor' (A ∈ Knight) (A ∈ Knave) ↔ A ∈ Knight ∨ A ∈ Knave := by 
+(h : Knight ∩ Knave = ∅ ) : Xor' (A ∈ Knight) (A ∈ Knave) ↔ A ∈ Knight ∨ A ∈ Knave := by
   constructor
   unfold Xor' at *
   · intro h'

@@ -22,7 +22,7 @@ allKnaves
 
 You can `unfold` to get
 ```
-A.isKnight ∧ B.isKnight ∧ C.isKnave 
+A.isKnight ∧ B.isKnight ∧ C.isKnave
 ```
 by
 ```
@@ -41,7 +41,7 @@ Statement
 {stA : A said B.isKnight}
 {stB : B said (@allKnights A B C)}
 {stC : C said (A.isKnight or B.isKnight)}
-: (@allKnights A B C)  ∨ (@allKnaves A B C):= by 
+: (@allKnights A B C)  ∨ (@allKnaves A B C):= by
   Hint (strict := true)
   "
 First, take cases for `B`.

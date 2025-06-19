@@ -18,7 +18,7 @@ Logical implication `P → Q` is made up of two components:
 
 # truth table
 $
-\\begin{array}{|c|c|c|} 
+\\begin{array}{|c|c|c|}
 \\hline
 P & Q & P → Q \\\\
 \\hline

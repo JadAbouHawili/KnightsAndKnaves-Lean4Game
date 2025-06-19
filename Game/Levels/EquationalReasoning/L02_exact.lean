@@ -1,6 +1,6 @@
 import Game.Metadata
 
-World "EquationalReasoning" 
+World "EquationalReasoning"
 Level 2
 
 Title "`exact`, goal is true by assumption"

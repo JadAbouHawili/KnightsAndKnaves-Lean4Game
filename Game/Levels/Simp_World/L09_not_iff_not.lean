@@ -6,7 +6,7 @@ Level 9
 
 Title "`not_iff_not`"
 
-Introduction 
+Introduction
 "
 If we know that `¬P`,`¬Q` have the same truth value then `P`,`Q` have the same truth value.
 

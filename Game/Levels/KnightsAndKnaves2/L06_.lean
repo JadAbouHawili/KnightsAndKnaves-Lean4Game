@@ -62,7 +62,7 @@ Use `iff_of_true` to prove `A ↔ ¬C`
 Use `iff_not_comm` to prove `C ↔ ¬A`
     "
     have CiffnA := iff_not_comm.mp AiffnC
-    Hint 
+    Hint
     "
 Prove `B` using `stB`, `CiffnA.symm : C ↔ ¬A`. (symm for symmetry)
     "
@@ -94,7 +94,7 @@ Prove `hC : C` using `AiffnC : A ↔ ¬C`, `hA : A`
     have hC := AiffnC.mp hA
     Hint
     "
-Split using `constructor` or use ⟨⟩ notation. 
+Split using `constructor` or use ⟨⟩ notation.
     "
     exact ⟨hA,h,hC⟩
 

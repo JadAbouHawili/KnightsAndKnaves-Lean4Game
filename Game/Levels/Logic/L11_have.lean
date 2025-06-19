@@ -1,21 +1,21 @@
 import Game.Metadata
 
-World "Logic" 
+World "Logic"
 Level 11
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
 Coming back to `have`,
 
-If you can prove something in one step then 
+If you can prove something in one step then
 ```
 have theorem-name := proof
 ```
-will do. 
+will do.
 
-For example, you can obtain a proof of `Q` in one step by 
+For example, you can obtain a proof of `Q` in one step by
 ```
 hPQ hP
 ```
@@ -29,6 +29,6 @@ Statement {P Q R : Prop}
   : R := by
   exact hQR (hPQ hP)
 
-Conclusion 
+Conclusion
 "
 "

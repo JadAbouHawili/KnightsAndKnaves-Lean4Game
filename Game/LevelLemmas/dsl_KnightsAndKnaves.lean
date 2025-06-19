@@ -25,7 +25,7 @@ notation A " said " P:200 => Said A P
 the following 4 axioms can be proven from the previous ones...
 -/
 theorem isKnight_notisKnave {A : Islander} : A.isKnight → ¬A.isKnave := by
-  intro AKnight 
+  intro AKnight
   intro AKnave
   apply not_isKnight_and_isKnave
   assumption ; assumption
@@ -36,15 +36,15 @@ axiom notisKnight_isKnave {A : Islander} : ¬A.isKnight → A.isKnave
 axiom notisKnave_isKnight {A : Islander} : ¬A.isKnave → A.isKnight
 axiom isKnave_notisKnightIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 
-axiom knight_said {A : Islander} {P : Prop} 
+axiom knight_said {A : Islander} {P : Prop}
   (stA : A said P) (AKnight : A.isKnight) :  P
-axiom said_knight {A : Islander} {P : Prop} 
-(stA : A said P) (hP : P) : A.isKnight 
-axiom knave_said {A : Islander} {P : Prop} 
+axiom said_knight {A : Islander} {P : Prop}
+(stA : A said P) (hP : P) : A.isKnight
+axiom knave_said {A : Islander} {P : Prop}
 (stA : A said P) (AKnave : A.isKnave) :  ¬P
-theorem said_knave {A : Islander} {P : Prop} (AsaidP : A said P) (nP : ¬P) : A.isKnave := by 
-  apply notisKnight_isKnave 
-  intro AKnight 
+theorem said_knave {A : Islander} {P : Prop} (AsaidP : A said P) (nP : ¬P) : A.isKnave := by
+  apply notisKnight_isKnave
+  intro AKnight
   have hP := knight_said AsaidP AKnight
   contradiction
 axiom notknight_said {A : Islander} {P : Prop} : (A said P) → ¬A.isKnight → ¬P
@@ -67,7 +67,7 @@ macro "knight_to_knave" "at" t1:Lean.Parser.Tactic.locationHyp : tactic =>
 do`(tactic| simp [isKnight_notisKnaveIff] at $t1)
 
 -- *
-macro "knave_to_knight" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic => 
+macro "knave_to_knight" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic =>
 do`(tactic| simp [isKnave_notisKnightIff] at $t1)
 macro "knave_to_knight" : tactic =>
 do`(tactic| simp [isKnave_notisKnightIff])
@@ -77,13 +77,13 @@ do`(tactic| simp [isKnave_notisKnightIff] at $t1)
 
 #check solve
 macro_rules
-| `(tactic| contradiction) => 
+| `(tactic| contradiction) =>
   do `(tactic |first | ( apply not_isKnight_and_isKnave  ; assumption ; assumption   ) )
 
 end tactics
 
-theorem dsl_iamknave (hAKn : A said A.isKnave): False := by 
-  knight_or_knave A with hA hnA 
+theorem dsl_iamknave (hAKn : A said A.isKnave): False := by
+  knight_or_knave A with hA hnA
   · have hnA := knight_said hAKn hA
     apply not_isKnight_and_isKnave
     assumption ; assumption

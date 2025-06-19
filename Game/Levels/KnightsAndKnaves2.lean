@@ -47,7 +47,7 @@ Moreover, the statement `P` being false means that `A` is lying i.e is a knave
 ```
 ¬P → ¬A
 ```
-which are combined as 
+which are combined as
 ```
 ¬A ↔ ¬P
 ```

@@ -5,7 +5,7 @@ Level 7
 
 Title ""
 
-Introduction 
+Introduction
 "
 `A`: `B` is a knight or `C` is a knight.
 `B`: `C` is a knave, if and only if `A` is a knave
@@ -48,7 +48,7 @@ Prove `CsameA : C ↔ A` using `stB`, `{hB}`
   "
 Prove `BorC : B ∨ C` using `{hB}`
   "
-  have BorC : B ∨ C := by left ; assumption 
+  have BorC : B ∨ C := by left ; assumption
   Hint
   "
 Prove `hA : A` using `stA`, `{BorC}`.

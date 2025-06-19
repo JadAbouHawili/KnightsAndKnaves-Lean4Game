@@ -28,7 +28,7 @@ that imports all its levels.
 -/
 
 theorem not_iff' {P Q : Prop}
- : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by 
+ : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by
   #check Iff.symm
   #check not_iff_comm
   #check not_iff_not

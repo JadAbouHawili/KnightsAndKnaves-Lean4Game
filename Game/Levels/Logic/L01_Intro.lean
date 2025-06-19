@@ -7,7 +7,7 @@ Level 1
 Title "Intro"
 
 Introduction
-" 
+"
 This should look familiar.
 
 If it doesn't, then replace `P` by `x=2`.

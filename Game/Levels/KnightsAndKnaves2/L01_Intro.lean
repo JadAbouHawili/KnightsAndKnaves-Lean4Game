@@ -1,18 +1,18 @@
 import Game.Metadata
 
 
-World "KnightsAndKnaves2" 
+World "KnightsAndKnaves2"
 Level 1
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
 A very special island is inhabited only by knights and knaves. Knights always tell the truth, and knaves always lie.
 
 You meet two inhabitants: `Zoey` and `Mel`.
 
-`Zoey` tells you that Mel is a knave. 
+`Zoey` tells you that Mel is a knave.
 
 `Mel` says, “Neither `Zoey` nor I are knaves.”
 
@@ -23,7 +23,7 @@ Note that `stZ` and `stZn` are saying the same thing, saying that `Zoey` and `¬
 First change the goal to `Zoey` using the `have` tactic.
 "
 
-Statement 
+Statement
 {Zoey Mel : Prop}
 (stZ : Zoey ↔ ¬Mel)
 (stZn : ¬Zoey ↔ Mel)

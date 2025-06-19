@@ -39,7 +39,7 @@ Statement (h : ¬(P ↔ Q))
   assumption
   }
 
-Conclusion 
+Conclusion
 "
 Analogous Theorem:
 ```

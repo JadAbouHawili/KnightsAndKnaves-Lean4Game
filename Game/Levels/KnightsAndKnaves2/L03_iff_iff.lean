@@ -1,10 +1,10 @@
 import Game.Metadata
 
 
-World "KnightsAndKnaves2" 
+World "KnightsAndKnaves2"
 Level 3
 
-Title "" 
+Title ""
 
 Introduction
 "
@@ -12,7 +12,7 @@ Introduction
 
 `Ira` says: `Robert` is truthful.
 
-`Ira` is my type is translated as 
+`Ira` is my type is translated as
 ```
 ( (Ira and Robert) or (¬Ira and ¬Robert) )
 ```
@@ -29,11 +29,11 @@ then use `stI` to prove `Robert` and obtain `Ira`.
 
 #check iff_iff_and_or_not_and_not
 
-Statement 
+Statement
 {Robert Ira : Prop}
 {stR : Robert ↔ ( (Ira and Robert) or (¬Ira and ¬Robert) )}
 {stI : Ira ↔ Robert}
-: Robert ∧ Ira := by 
+: Robert ∧ Ira := by
   Hint (hidden := true)
   "
 Remember the interpretation where you can treat `↔` like `=` (refer to `↔` docs for an example).
@@ -45,12 +45,12 @@ Remember the interpretation where you can treat `↔` like `=` (refer to `↔` d
   assumption
   assumption
 
-example 
+example
 {Robert Ira : Prop}
 {stR : Robert ↔ (Ira ↔ Robert)}
 {stI : Ira ↔ Robert}
-: Robert ∧ Ira := by 
-  have : Robert 
+: Robert ∧ Ira := by
+  have : Robert
   Hint
   "
 Assume `¬Robert` and prove `False`.
@@ -58,7 +58,7 @@ Assume `¬Robert` and prove `False`.
 `by_contra nRobert` does that.
   "
   by_contra h
-  Hint 
+  Hint
   "
 `Robert` is equivalent to `Ira ↔ Robert`
 
@@ -67,7 +67,7 @@ So `¬Robert` is equivalent to `¬(Ira ↔ Robert)` contradicting `stI`.
   rw [stR] at h
   contradiction
 
-  Hint 
+  Hint
   "
 Now that you know `Robert`, conclude `Ira`
   "
@@ -76,6 +76,6 @@ Now that you know `Robert`, conclude `Ira`
   assumption
   assumption
 
-Conclusion 
+Conclusion
 "
 "

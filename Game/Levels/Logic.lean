@@ -30,7 +30,7 @@ h : P
 
 Moreover, we will discuss constructing new propositions from old ones.
 
-Here's an example in natural language, given the two propositions 'The sun is shining', 'It is Monday', you can construct 'The sun is shining and it is monday'. 
+Here's an example in natural language, given the two propositions 'The sun is shining', 'It is Monday', you can construct 'The sun is shining and it is monday'.
 
 Another example would be, having the following:
 ```

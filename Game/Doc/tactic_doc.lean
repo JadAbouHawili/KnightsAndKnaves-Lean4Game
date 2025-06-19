@@ -50,7 +50,7 @@ PorQ : P ∨ Q
 Goal
 some-goal
 ```
-`cases PorQ` will first assume `P` and ask you to prove `some-goal` and then it will assume `Q` and ask you to prove `some-goal`. 
+`cases PorQ` will first assume `P` and ask you to prove `some-goal` and then it will assume `Q` and ask you to prove `some-goal`.
 
 So in both cases, `some-goal` is true. Therefore we can conclude `some-goal`. This is called a proof by cases.
 -/
@@ -63,7 +63,7 @@ Having the following:
 Goal:
 P → Q
 ```
-We want to prove that 'If `P` is true, then `Q` is true'. 
+We want to prove that 'If `P` is true, then `Q` is true'.
 
 To do this, we first need to assume `P` then prove `Q`. Assuming `P` is done using `intro name` for any 'name'.
 -/
@@ -83,7 +83,7 @@ h : False
 ```
 or
 ```
-hP : P 
+hP : P
 hnP : ¬P
 ```
 (or other 'simple' contradictions)
@@ -107,7 +107,7 @@ some expression involving A
 
 Moreover `rw [h] at h'` would apply the rewrite on an assumption `h'` instead of the goal.
 
-By default, rw uses an equation in the forward direction, matching the left-hand side of the equation `h` with an occurrence of `A` in the goal, and replaces it with the right-hand side i.e `B`. 
+By default, rw uses an equation in the forward direction, matching the left-hand side of the equation `h` with an occurrence of `A` in the goal, and replaces it with the right-hand side i.e `B`.
 
 The notation `rw [←h]` can be used to instruct the tactic to use the equality `h` in the reverse direction i.e replace an occurrence of `B` with `A`.
 
@@ -233,9 +233,9 @@ The tactic is simply a macro abbreviating:
 ```
 simp [isKnight_notisKnaveIff]
 ```
-where 
+where
 ```
-isKnight_notisKnaveIff 
+isKnight_notisKnaveIff
 : A.isKnight ↔ ¬A.isKnave
 ```
 
@@ -264,7 +264,7 @@ The tactic is simply a macro abbreviating:
 ```
 simp [isKnave_notisKnightIff]
 ```
-where 
+where
 ```
 isKnight_notisKnaveIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 ```
@@ -287,10 +287,10 @@ knight_or_knave A with AKnight AKnave
 which gives the first case `AKnight : A.isKnight` and the second case `AKnave : A.isKnave`.
 
 # Under the hood
-`knight_or_knave A` is just a macro for 
+`knight_or_knave A` is just a macro for
 ```
 cases isKnight_orisKnave A
 ```
-where `isKnight_or_isKnave A : A.isKnight or A.isKnave` 
+where `isKnight_or_isKnave A : A.isKnight or A.isKnave`
 -/
 TacticDoc knight_or_knave

@@ -30,7 +30,7 @@ Use `have` to set `C` as the goal
   have hC : C
   Hint
   "
-We will prove `C` by contradiction. 
+We will prove `C` by contradiction.
 
 Assume `nC : ¬C` using `by_contra nC`.
   "
@@ -42,11 +42,11 @@ Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth 
 
 If `A` is true then `A ↔ ¬C` is true, and if `A` is false then `A ↔ ¬C` is false.
 
-Use 
+Use
 ```
-iff_true_right (ha : a) 
+iff_true_right (ha : a)
 : (b ↔ a) ↔ b
-``` 
+```
 to replace `A ↔ ¬C` with `A`.
 (In our case, `b ↔ a` is `A ↔ ¬C`)
 
@@ -56,7 +56,7 @@ B ↔ (A ↔ ¬C)
 ```
 to
 ```
-B ↔ A 
+B ↔ A
 ```
 "
   rw [iff_true_right nC] at stB
@@ -70,7 +70,7 @@ B ↔ A
   "
   rw [eq_true nC] at stA
   rw [true_implies (¬B)] at stA
-  rw [stB] at stA 
+  rw [stB] at stA
   #check not_iff_self
   exact not_iff_self stA.symm
 
@@ -80,7 +80,7 @@ B ↔ A
 
 Rewrite `¬C` in `stA` as `¬True` using `eq_true`
   "
-  rw [eq_true hC] at stA 
+  rw [eq_true hC] at stA
   #check not_true
   Hint
   "
