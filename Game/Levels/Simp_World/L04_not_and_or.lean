@@ -1,12 +1,12 @@
 import Game.Metadata
 
 
-World "Simp_World" 
+World "Simp_World"
 Level 4
 
-Title "`not_and_or`" 
+Title "`not_and_or`"
 
-Introduction 
+Introduction
 "
 Notice that `¬(P and Q)`,
 $
@@ -44,7 +44,7 @@ $
 
 Therefore, they are equivalent and can be interchanged.
 
-On a more intuitive level, we can understand `¬(P and Q)` as meaning `P and Q` is not true i.e `P`,`Q` can't be true at the same (at least one of them has to be false)
+On a more intuitive level, we can understand `¬(P and Q)` as meaning `P and Q` is not true, i.e. `P`,`Q` can't be true at the same (at least one of them has to be false)
 
 The simplification theorem to use,
 ```

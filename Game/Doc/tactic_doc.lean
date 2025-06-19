@@ -1,6 +1,6 @@
 import Game.Metadata
 /--
-`by_contra h` proves `P` by contradiction, introducing a hypothesis `h : ¬P` and proving False i.e proving `¬¬P` which is equivalent to `P`.
+`by_contra h` proves `P` by contradiction, introducing a hypothesis `h : ¬P` and proving False, i.e. proving `¬¬P` which is equivalent to `P`.
 
 If `P` is a negation `¬Q`, h : `Q` will be introduced instead of `¬¬Q`.
 -/
@@ -13,7 +13,7 @@ TacticDoc by_contra
 
 In fact, `rfl` is not a tactic but syntactic sugar for `exact rfl`. `rfl` is of type `a = a` for any `a`.
 
-## examples
+## Examples
 ```
 x - 7 = x - 7
 ```
@@ -50,7 +50,7 @@ PorQ : P ∨ Q
 Goal
 some-goal
 ```
-`cases PorQ` will first assume `P` and ask you to prove `some-goal` and then it will assume `Q` and ask you to prove `some-goal`. 
+`cases PorQ` will first assume `P` and ask you to prove `some-goal` and then it will assume `Q` and ask you to prove `some-goal`.
 
 So in both cases, `some-goal` is true. Therefore we can conclude `some-goal`. This is called a proof by cases.
 -/
@@ -63,7 +63,7 @@ Having the following:
 Goal:
 P → Q
 ```
-We want to prove that 'If `P` is true, then `Q` is true'. 
+We want to prove that 'If `P` is true, then `Q` is true'.
 
 To do this, we first need to assume `P` then prove `Q`. Assuming `P` is done using `intro name` for any 'name'.
 -/
@@ -83,7 +83,7 @@ h : False
 ```
 or
 ```
-hP : P 
+hP : P
 hnP : ¬P
 ```
 (or other 'simple' contradictions)
@@ -107,9 +107,9 @@ some expression involving A
 
 Moreover `rw [h] at h'` would apply the rewrite on an assumption `h'` instead of the goal.
 
-By default, rw uses an equation in the forward direction, matching the left-hand side of the equation `h` with an occurrence of `A` in the goal, and replaces it with the right-hand side i.e `B`. 
+By default, rw uses an equation in the forward direction, matching the left-hand side of the equation `h` with an occurrence of `A` in the goal, and replaces it with the right-hand side, i.e. `B`.
 
-The notation `rw [←h]` can be used to instruct the tactic to use the equality `h` in the reverse direction i.e replace an occurrence of `B` with `A`.
+The notation `rw [←h]` can be used to instruct the tactic to use the equality `h` in the reverse direction, i.e. replace an occurrence of `B` with `A`.
 
 ## Behavior with `=` and `↔`
 For `rw [h]`, the behavior is exactly the same for both, whether you had `h : x=2` or `h : P ↔ Q`.
@@ -156,14 +156,14 @@ In other words, `hP` is EXACTLY whats needed to prove the goal, the type of `hP`
 TacticDoc exact
 
 /--
-The `have` tactic allows you to add theorems to the context(which you would have to prove, of course).
+The `have` tactic allows you to add theorems to the context (which you would have to prove, of course).
 
-## one step
+## One step
 If the proof is one step, then the following:
 ```
 have theorem-name := expression
 ```
-will do, where `expression : P` with `P : Prop` i.e `expression` is a proof of `P`
+will do, where `expression : P` with `P : Prop`, i.e. `expression` is a proof of `P`
 
 The result would be adding the following to the hypothesis:
 ```
@@ -172,16 +172,16 @@ theorem-name : P
 
 You are storing the proof of `P` in `theorem-name` so that you don't have to construct this proof everytime you need it.
 
-## multiple steps
+## Multiple steps
 If the proof is multiple steps, then:
 ```
 have theorem-name : theorem-prop
 ```
 will change the current goal to `theorem-prop : Prop` which is what you want to prove.
 
-After being proven, the original goal is restored with `theorem-name : theorem-prop` added(which is a proof of the proposition `theorem-prop`)
+After being proven, the original goal is restored with `theorem-name : theorem-prop` added (which is a proof of the proposition `theorem-prop`)
 
-### example
+### Example
 ```
 have a : 2=2
 ```
@@ -208,12 +208,12 @@ where Lean knows that `¬P` is true.
 
 Example:
 -- disjoint
-You need to show that having two sets being disjoint (i.e sharing no common element) and having a common element is a contradiction.
+You need to show that having two sets being disjoint (i.e. sharing no common element) and having a common element is a contradiction.
 -/
 TacticDoc contradiction
 
 /--
-Rewrites all expression asserting being a  knight into the equivalent expression of not being knave
+Rewrites all expression asserting being a knight into the equivalent expression of not being knave
 
 Changes all instances of `isKnight A` to `¬isKnave A`
 
@@ -233,18 +233,18 @@ The tactic is simply a macro abbreviating:
 ```
 simp [isKnight_notisKnaveIff]
 ```
-where 
+where
 ```
-isKnight_notisKnaveIff 
+isKnight_notisKnaveIff
 : A.isKnight ↔ ¬A.isKnave
 ```
 
-`A.isKnight` and `¬A.isKnave` always have the same truth value regardless of what `A` is , so they can be interchanged
+`A.isKnight` and `¬A.isKnave` always have the same truth value regardless of what `A` is, so they can be interchanged
 -/
 TacticDoc knight_to_knave
 
 /--
-Rewrites all expression asserting being a  knight into the equivalent expression of not being knave
+Rewrites all expression asserting being a knight into the equivalent expression of not being knave
 
 Changes all instances of `isKnave A` to `¬isKnight A`
 
@@ -264,12 +264,12 @@ The tactic is simply a macro abbreviating:
 ```
 simp [isKnave_notisKnightIff]
 ```
-where 
+where
 ```
 isKnight_notisKnaveIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 ```
 
-`A.isKnave` and `¬A.isKnight` always have the same truth value regardless of what `A` is , so they can be interchanged
+`A.isKnave` and `¬A.isKnight` always have the same truth value regardless of what `A` is, so they can be interchanged
 -/
 TacticDoc knave_to_knight
 
@@ -287,10 +287,10 @@ knight_or_knave A with AKnight AKnave
 which gives the first case `AKnight : A.isKnight` and the second case `AKnave : A.isKnave`.
 
 # Under the hood
-`knight_or_knave A` is just a macro for 
+`knight_or_knave A` is just a macro for
 ```
 cases isKnight_orisKnave A
 ```
-where `isKnight_or_isKnave A : A.isKnight or A.isKnave` 
+where `isKnight_or_isKnave A : A.isKnight or A.isKnave`
 -/
 TacticDoc knight_or_knave

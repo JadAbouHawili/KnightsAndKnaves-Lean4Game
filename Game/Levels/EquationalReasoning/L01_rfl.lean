@@ -5,7 +5,7 @@ import Game.Doc.tactic_doc
 World "EquationalReasoning"
 Level 1
 
-Title "`rfl`, A Number Equals Itself" 
+Title "`rfl`, A Number Equals Itself"
 
 Introduction "In this exercise, we will prove `2 = 2`
 

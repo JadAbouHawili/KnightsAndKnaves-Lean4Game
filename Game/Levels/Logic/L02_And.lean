@@ -4,22 +4,22 @@ import Game.LevelLemmas.Logical
 World "Logic"
 Level 2
 
-Title "And , `∧`"
+Title "And, `∧`"
 Introduction
 "
 In this level, we introduce the `∧` logical connective (read as 'and').
 
 Remember the following example:
-Given the two propositions `x=2`(`P`), `y=6`(`Q`) , we can construct a new propositon `x=2 ∧ y=6`(`P ∧ Q`) which is read as `x=2 and y=6`(`P and Q`).
+Given the two propositions `x=2` (`P`), `y=6` (`Q`), we can construct a new propositon `x=2 ∧ y=6` (`P ∧ Q`) which is read as `x=2 and y=6` (`P and Q`).
 
-What is the truth value of this new proposition `x=2 ∧ y=6`(`P ∧ Q`)? 
-Well, it would depend on the truth value of the two component propositions `x=2`(`P`) ,`y=6`(`Q`).
+What is the truth value of this new proposition `x=2 ∧ y=6` (`P ∧ Q`)?
+Well, it would depend on the truth value of the two component propositions `x=2` (`P`), `y=6` (`Q`).
 
-What possibilities are there for each's truth value? `x=2` (`P`) can either be true or false and similarly for `y=6`(`Q`). Here is a truth table that goes through all these possibilities: 
+What possibilities are there for each's truth value? `x=2` (`P`) can either be true or false and similarly for `y=6` (`Q`). Here is a truth table that goes through all these possibilities:
 `T` stands for true
 `F` stands for false
 $
-\\begin{array}{|c|c|c|} 
+\\begin{array}{|c|c|c|}
 \\hline
 x=2 & y=6 & x=2 ∧ y=6 \\\\
 \\hline
@@ -35,11 +35,11 @@ F & F & F \\\\
 $
 
 
-The proposition `x=2 and y=6`(`P and Q`) is true when `x=2`(`P`) is true AND `y=6`(`Q`) is true.
+The proposition `x=2 and y=6` (`P and Q`) is true when `x=2` (`P`) is true AND `y=6` (`Q`) is true.
 In other words, if `P` is true AND `Q` is true regardless of what proposition `P` stands for, `Q` stands for. The only thing that matters is their truth value.
 Therefore, the more general truth table is the same:
 $
-\\begin{array}{|c|c|c|} 
+\\begin{array}{|c|c|c|}
 \\hline
 P & Q & P ∧ Q \\\\
 \\hline
@@ -60,8 +60,8 @@ From this, we conclude that we can prove `P and Q` if we have a proof of `P` and
 
 This is called the `and` introduction rule `And.intro`:
 ```
-And.intro  (left : P) 
-           (right : Q) 
+And.intro (left : P)
+          (right : Q)
 : P and Q
 ```
 
@@ -71,7 +71,7 @@ For example:
 ```
 And.intro arg1 arg2
 ```
-where `arg1 : P` , `arg2 : Q` , `(And.intro arg1 arg2) : P and Q`.
+where `arg1 : P`, `arg2 : Q`, `(And.intro arg1 arg2) : P and Q`.
 
 Use it to construct an object of type `P and Q`, and use `exact` to close the goal.
 "

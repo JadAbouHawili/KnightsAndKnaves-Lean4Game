@@ -1,16 +1,16 @@
 import Game.Metadata
 
 
-World "Simp_World" 
+World "Simp_World"
 Level 5
 
-Title "`by_contra`, `not_not`" 
+Title "`by_contra`, `not_not`"
 
-Introduction 
+Introduction
 "
-In this level, you will learn 'proof by contradiction'. 
+In this level, you will learn 'proof by contradiction'.
 
-To prove `P`, you would assume `¬P` and then prove false i.e you would be proving `¬P → False` which is `¬¬P`.
+To prove `P`, you would assume `¬P` and then prove false, i.e. you would be proving `¬P → False` which is `¬¬P`.
 
 The truth table shows that `¬¬P` is equivalent to `P`,
 $
@@ -38,7 +38,7 @@ The second is using the `by_contra` tactic where `by_contra h` would be assuming
 Statement
 {P : Prop}
 {hP : ¬¬P}
-  : P  := by
+  : P := by
 
   {
   by_contra h

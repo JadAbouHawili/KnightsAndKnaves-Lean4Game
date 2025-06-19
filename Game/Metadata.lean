@@ -28,10 +28,10 @@ that imports all its levels.
 -/
 
 theorem not_iff' {P Q : Prop}
- : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by 
+ : ¬(P ↔ Q) ↔ (P ↔ ¬Q) := by
   #check Iff.symm
   #check not_iff_comm
   #check not_iff_not
-  nth_rw  2 [(@not_not P).symm]
+  nth_rw 2 [(@not_not P).symm]
   rw [not_iff_not]
   exact Classical.not_iff
