@@ -120,7 +120,7 @@ Based on statements made, you will deductively conclude who is a knight (truthfu
 CoverImage "images/knights-and-knaves.jpg"
 
 Dependency Logic → Simp_World
-Dependency Simp_World →  KnightsAndKnaves2
-Dependency Simp_World →DSL_Knights_Knaves
+Dependency Simp_World → KnightsAndKnaves2
+Dependency Simp_World → DSL_Knights_Knaves
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame
