@@ -23,7 +23,7 @@ F & T & T \\\\
 \\end{array}
 $
 
-We can conclude that `¬P`,`Q` have the same truth value (`¬P ↔ Q`) and `P`,`¬Q` have the same truth value (`P ↔ ¬Q`).
+We can conclude that `¬P`,`Q` have the same truth value (`¬P ↔ Q`), and that `P`,`¬Q` have the same truth value (`P ↔ ¬Q`).
 
 The theorem for the former simplification:
 ```
