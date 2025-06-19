@@ -9,7 +9,7 @@ Introduction
 "
 Coming back to `have`,
 
-If you can prove something in one step then
+If you can prove something in one step, then
 ```
 have theorem-name := proof
 ```
