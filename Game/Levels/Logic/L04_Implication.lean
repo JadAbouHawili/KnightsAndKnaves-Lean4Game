@@ -38,7 +38,7 @@ This is because this is the only case where the meaning of `P → Q` is violated
 
 When `P` is false, the implication `P → Q` is always true regardless of the truth value of `Q` because the implication does not tell us what `Q` should be when `P` is false, it only tells us that `Q` must be true when `P` is true.
 
-In the current proof state, we know `P` (i.e `P` is true) , and we know `P → Q` (i.e `P → Q` is true). Therefore, we can conclude `Q` (i.e `Q` is true ).
+In the current proof state, we know `P` (i.e `P` is true), and we know `P → Q` (i.e `P → Q` is true). Therefore, we can conclude `Q` (i.e `Q` is true ).
 
 You can think of logical implication as a function with one input and one output. It takes a proof of `P` and returns a proof of `Q`.
 
@@ -49,7 +49,7 @@ You can then use `exact` to close the goal
 Statement {P Q : Prop}  (hP : P) (ptoq: P → Q) : Q := by
   Hint(hidden := true)
   "
-`ptoq hP : Q` , this is exactly whats needed to prove the goal.
+`ptoq hP : Q`, this is exactly whats needed to prove the goal.
   "
   exact ptoq hP
 

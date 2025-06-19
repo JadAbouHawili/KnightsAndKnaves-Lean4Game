@@ -55,7 +55,7 @@ This principle asserts that if you have contradictory assumptions then you can p
 hP: P
 hnP: ¬P
 ```
-Since `hnP : ¬P` is `P → False` , we can obtain `hnP hP : False`.
+Since `hnP : ¬P` is `P → False`, we can obtain `hnP hP : False`.
 
 Moreover, we know that `False.elim : False → Q` for any `Q : Prop` and so `False.elim (hnP hP) : Q`. (using `contradiction` would close the goal as well, without having to use `False.elim`)
 -/
@@ -75,7 +75,7 @@ The atomic propositions in the compound proposition `p ∧ q` are : `p`, `q`. Of
 This truth value depends on the truth value of the propositions it was built out of and the rules of the logical connective. This is clearly illustrated in a truth table. 
 
 # Truth table
-The truth table of a logical connective illustrates the rule for that logical connective , i.e the truth value of the compound statement depending on the truth value of the propositions it connects.
+The truth table of a logical connective illustrates the rule for that logical connective, i.e the truth value of the compound statement depending on the truth value of the propositions it connects.
 
 -/
 DefinitionDoc «Prop» as "Prop"
@@ -135,7 +135,7 @@ F & F & T \\
 $
 
 # Truth table
-The truth table of a logical connective illustrates the rule for that logical connective , i.e the truth value of the compound statement depending on the truth value of the propositions it connects.
+The truth table of a logical connective illustrates the rule for that logical connective, i.e the truth value of the compound statement depending on the truth value of the propositions it connects.
 The following truth table illustrates this for the previously discussed `∧` connective.
 `T` stands for true
 `F` stands for false
@@ -199,7 +199,7 @@ A ∩ B
 In other words, `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`.
 
 `A ∩ B = ∅` means that `A` and `B` have no common element i.e no element of `A` belongs to both and no element of `B` belongs to both.
-In other words, `x ∈ A → x ∉ B` , `x ∈ B → x ∉ A` which are `inleft_notinright` and `inright_notinleft` respectively.
+In other words, `x ∈ A → x ∉ B`, `x ∈ B → x ∉ A` which are `inleft_notinright` and `inright_notinleft` respectively.
 -/
 DefinitionDoc inter as "∩"
 
@@ -498,7 +498,7 @@ hP : P
 ```
 `(thm hP) : Q`
 
-For the special case where `P : Prop`, `Q : Prop` ,the interpretation of `thm` is what implication in logic means.
+For the special case where `P : Prop`, `Q : Prop`, the interpretation of `thm` is what implication in logic means.
 
 What `thm` means is the following, give me an object of type `P` which in this case is a proof of `P` and i will return an object of type `Q` which in this case is a proof of `Q`.
 
@@ -511,7 +511,7 @@ DefinitionDoc Terminology as "Terminology"
 
 The objects involved are:
 - of type inhabitant indicated by a capital letter
-- the two finite sets `Knight` , `Knaves`.
+- the two finite sets `Knight`, `Knaves`.
 
 As a proof state:
 ```
@@ -842,7 +842,7 @@ h.mpr : Q → P
 `h.mp` is the forward direction and `h.mpr` is the backward direction.
 
 ## `P ↔ Q` is `P = Q`
-Since `P`, `Q` have the same truth value , they can be used interchangeably.
+Since `P`, `Q` have the same truth value, they can be used interchangeably.
 You can think of `P ↔ Q` as `P = Q` and use `rw` in the same way you would if there was an actual `=` in the expression.
 
 For example:

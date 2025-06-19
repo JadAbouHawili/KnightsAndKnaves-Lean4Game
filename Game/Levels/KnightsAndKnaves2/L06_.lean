@@ -31,9 +31,9 @@ Use `have` to set `A` as the goal
     We want to prove `A`, to do this we will prove `¬¬A` i.e `¬A → False`. The tactic `by_contra` facilitates this, assuming `¬A` and changing the goal to `False`.
 
     Assuming `hA : ¬A`:
-    - Prove `hCnB : C ∧ ¬ B` using `stAn` , `nA`.
-    - Prove `AsameC : ¬(¬A ↔ C)` using `stBn` , `hCnB.right : ¬B`
-    - Prove `nAiffC : ¬A ↔ C` using `iff_of_true` , `nA` , `hCnB.left : C`
+    - Prove `hCnB : C ∧ ¬ B` using `stAn`, `nA`.
+    - Prove `AsameC : ¬(¬A ↔ C)` using `stBn`, `hCnB.right : ¬B`
+    - Prove `nAiffC : ¬A ↔ C` using `iff_of_true`, `nA`, `hCnB.left : C`
     - Prove `False` from `nAiffC` and `AsameC` therefore proving that `¬A → False` i.e `¬¬A` i.e `A`
     "
     by_contra nA
@@ -44,7 +44,7 @@ Use `have` to set `A` as the goal
 
     Hint
     "
-Prove `nCorB : ¬C ∨ B` using `stA` , `{hA}`
+Prove `nCorB : ¬C ∨ B` using `stA`, `{hA}`
     "
     have nCorB := stA.mp hA
     Hint
@@ -64,12 +64,12 @@ Use `iff_not_comm` to prove `C ↔ ¬A`
     have CiffnA := iff_not_comm.mp AiffnC
     Hint 
     "
-Prove `B` using `stB` , `CiffnA.symm : C ↔ ¬A`. (symm for symmetry)
+Prove `B` using `stB`, `CiffnA.symm : C ↔ ¬A`. (symm for symmetry)
     "
     have hB := stB.mpr CiffnA.symm
     Hint
     "
-Given `hP : P` , `hQ : Q`, `hR : R` and the goal `P ∧ Q ∧ R` , you can close this goal using:
+Given `hP : P`, `hQ : Q`, `hR : R` and the goal `P ∧ Q ∧ R`, you can close this goal using:
 ```
 exact ⟨hP,hQ,hR⟩
 ```
@@ -79,17 +79,17 @@ where ⟨⟩ is typed as \\<>.(this is to avoid nesting `And.intro` inside anoth
 
     Hint
     "
-Prove `nAiffC : ¬A ↔ C` using `stB` , `h`
+Prove `nAiffC : ¬A ↔ C` using `stB`, `h`
     "
     have nAiffC := stB.mp h
     Hint
     "
-Prove `AiffnC : A ↔ ¬C` using `iff_not_comm` , `nAiffC.symm : C ↔ ¬A` (symm for symmetry).
+Prove `AiffnC : A ↔ ¬C` using `iff_not_comm`, `nAiffC.symm : C ↔ ¬A` (symm for symmetry).
     "
     have AiffnC := iff_not_comm.mp nAiffC.symm
     Hint
     "
-Prove `hC : C` using `AiffnC : A ↔ ¬C` , `hA : A`
+Prove `hC : C` using `AiffnC : A ↔ ¬C`, `hA : A`
     "
     have hC := AiffnC.mp hA
     Hint

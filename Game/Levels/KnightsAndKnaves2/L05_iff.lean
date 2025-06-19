@@ -37,8 +37,8 @@ This is called a proof by contradiction because we are assuming the negation of 
 
 Assuming `nA : ¬A`,
 - Prove `nCnB : ¬C ∧ ¬B` from `stAn`
-- Prove `AdiffC : ¬(A ↔ C)` from `stBn` , `nCnB.right : ¬B`
-- Prove `AiffC : A ↔ C` from `iff_of_false (ha : ¬a) (hb : ¬b) : a ↔ b `, `nA:¬A` , `nCnB.left : ¬C`
+- Prove `AdiffC : ¬(A ↔ C)` from `stBn`, `nCnB.right : ¬B`
+- Prove `AiffC : A ↔ C` from `iff_of_false (ha : ¬a) (hb : ¬b) : a ↔ b `, `nA:¬A`, `nCnB.left : ¬C`
 - Prove `False` from `AdiffC : ¬(A ↔ C)`  `AiffC : (A ↔ C)`
     "
   have hA: A
@@ -50,7 +50,7 @@ Assuming `nA : ¬A`,
 
   Hint (strict := true)
     "
-Prove `CorB : C ∨ B` using `stA` , `{hA}`.
+Prove `CorB : C ∨ B` using `stA`, `{hA}`.
     "
   have CorB := stA.mp hA
 
@@ -63,14 +63,14 @@ Now consider cases for `CorB` and for every case prove the goal.
   cases CorB
   Hint
   "
-  Prove `AiffC : A ↔ C` using `iff_of_true (ha : a) (hb : b) : a ↔ b` , `hA : A` , `h : C`
+  Prove `AiffC : A ↔ C` using `iff_of_true (ha : a) (hb : b) : a ↔ b`, `hA : A`, `h : C`
 
-  `iff_of_true` says that we can conclude `P ↔ Q` is true when `P` is true , `Q` is true (check the truth table).
+  `iff_of_true` says that we can conclude `P ↔ Q` is true when `P` is true, `Q` is true (check the truth table).
   "
   have AiffC := iff_of_true hA h
   Hint 
   "
-  Prove `hB : B` using `stB` , `{AiffC}`.
+  Prove `hB : B` using `stB`, `{AiffC}`.
   "
   have hB :=  stB.mpr AiffC
   Hint
@@ -89,13 +89,13 @@ The proof of the second case for `h : B` would require using `stB`.
       "
 We are now in the case where `B` is true, `h : B`.
 
-Prove `AiffC : A ↔ C` using `stB` , `h`.
+Prove `AiffC : A ↔ C` using `stB`, `h`.
       "
   have AiffC := stB.mp h
 
   Hint (strict := true)
       "
-Prove `C` using `{AiffC}` , `{hA}`
+Prove `C` using `{AiffC}`, `{hA}`
       "
   have hC := AiffC.mp hA
   constructor

@@ -7,7 +7,7 @@ Level 9
 
 Title ""
 
--- prob 34 , problem 34
+-- prob 34, problem 34
 Introduction
 "
 We have three inhabitants, `A`, `B`, and `C`.

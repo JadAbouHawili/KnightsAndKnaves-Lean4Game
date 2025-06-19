@@ -31,7 +31,7 @@ Conclude that `A`'s statement is true.
   have AKnave := knight_said stA AKnight
   Hint (strict := true)
   "
-Now you have that `A` is a knave , which is a contradiction
+Now you have that `A` is a knave, which is a contradiction
 
 Remeber that `{AKnave}.left : A.isKnave`.
   "

@@ -19,7 +19,7 @@ You have met a group of 3 islanders. Their names are `Xavier`, `Gary`, and `Alic
 /-
 use_module(library(clpb)).
 
-sat( (G =:= (A =:= G) ) * (A =:= G ) * (G =:= X) ) , labeling([A,G,X]).
+sat( (G =:= (A =:= G) ) * (A =:= G ) * (G =:= X) ), labeling([A,G,X]).
 
 G = A, A = X, X = 1.
 -/

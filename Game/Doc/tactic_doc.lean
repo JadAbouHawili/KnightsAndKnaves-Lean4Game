@@ -239,7 +239,7 @@ isKnight_notisKnaveIff
 : A.isKnight ↔ ¬A.isKnave
 ```
 
-`A.isKnight` and `¬A.isKnave` always have the same truth value regardless of what `A` is , so they can be interchanged
+`A.isKnight` and `¬A.isKnave` always have the same truth value regardless of what `A` is, so they can be interchanged
 -/
 TacticDoc knight_to_knave
 
@@ -269,7 +269,7 @@ where
 isKnight_notisKnaveIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 ```
 
-`A.isKnave` and `¬A.isKnight` always have the same truth value regardless of what `A` is , so they can be interchanged
+`A.isKnave` and `¬A.isKnight` always have the same truth value regardless of what `A` is, so they can be interchanged
 -/
 TacticDoc knave_to_knight
 

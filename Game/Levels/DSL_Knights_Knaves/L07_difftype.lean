@@ -40,7 +40,7 @@ So, `B.isKnight` by `A`'s statement
   have BKnight := knight_said stA AKnight
   Hint
   "
-So `A`,`B` are the same type , but `B` being a knight also tells us that they are not. contradiction
+So `A`,`B` are the same type, but `B` being a knight also tells us that they are not. contradiction
 
 Conclude `¬(A.isKnight ↔ B.isKnight)` from `B`'statement then prove that `A.isKnight ↔ B.isKnight` using `iff_of_true`
   "

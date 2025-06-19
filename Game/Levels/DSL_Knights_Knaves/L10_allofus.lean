@@ -81,7 +81,7 @@ Get `¬A.isKnight`
   knave_to_knight at AKnave
   Hint
   "
-  Now, `C`'s statement is false , so conclude that `C` is a knave.
+  Now, `C`'s statement is false, so conclude that `C` is a knave.
 
   You can do this in a number of ways:
   - Use `have` to construct a proof that `¬ (A.isKnight or B.isKnight)`

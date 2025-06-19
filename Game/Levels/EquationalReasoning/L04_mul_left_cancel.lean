@@ -3,7 +3,7 @@ import Game.Metadata
 World "EquationalReasoning"
 Level 4
 
-Title "`Nat.mul_left_cancel` , Divide both sides of an equation"
+Title "`Nat.mul_left_cancel`, Divide both sides of an equation"
 
 Introduction
 "
@@ -40,7 +40,7 @@ Nat.mul_left_cancel
    - `np`, a proof that some number `n` is positive.
    - `h`, the equation which has `n` on both sides of the equation multiplied on the left.
 
-  The result is whats after `:` , canceling `n` from both sides of the equation giving a proof `m = k`.
+  The result is whats after `:`, canceling `n` from both sides of the equation giving a proof `m = k`.
 "
 
 NewTheorem Nat.mul_left_cancel four_pos

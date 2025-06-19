@@ -5,7 +5,7 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 World "DSL_Knights_Knaves"
 Level 11
 
-Title "allKnaves , exactlyOneIsKnave"
+Title "allKnaves, exactlyOneIsKnave"
 
 Introduction
 "

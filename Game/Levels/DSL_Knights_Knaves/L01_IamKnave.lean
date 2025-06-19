@@ -15,7 +15,7 @@ The given islander `A` says 'I am a knave'
 Asaid : A said A.isKnave
 ```
 
-The goal is to prove `False`. Given the rules of the game , and that `A` says 'I am a knave' we have a contradiction.
+The goal is to prove `False`. Given the rules of the game, and that `A` says 'I am a knave' we have a contradiction.
 
 By the rules of the game, we know that `A` is either a knight or a knave. 
 ```
@@ -50,7 +50,7 @@ cases isKnight_or_isKnave A
 
   Go back and try it before proceeding
 
-You get two cases , the first where `h : A.isKnight` and the second where `h: A.isKnave`
+You get two cases, the first where `h : A.isKnight` and the second where `h: A.isKnave`
 
 We are now in the first case where `h : A.isKnight`
 So, we can conclude that `A`'s statement is true.

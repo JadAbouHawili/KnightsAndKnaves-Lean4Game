@@ -90,7 +90,7 @@ Insightful:
 - Knights and Knaves in a logic programming language (prolog):
 https://www.youtube.com/watch?v=oEAa2pQKqQU
 
-- Blog post series, includes introduction ,representation and formalization, automated solutions using other provers, and creating your own puzzles.
+- Blog post series, includes introduction, representation and formalization, automated solutions using other provers, and creating your own puzzles.
 https://summerofgodel.blogspot.com/2019/04/table-of-contents-for-series-of-posts.html?
 
 # Rules
@@ -98,7 +98,7 @@ You can relax the rules and skip levels.
 
 This is not recommended for people who have never heard about `Lean` before because every level depends on previously introduced tactics/theorems/ideas in earlier levels. Moreover, relaxing the rules would ruin the coherence and structured/guided experience you would have when playing the game normally. If that is what you are looking for, then don't relax the rules.
 
-# Github , Level Solutions
+# Github, Level Solutions
 The game's repository is [here](https://github.com/JadAbouHawili/KnightsAndKnaves-Lean4Game)
 
 You can view the code for every level there.(and the solution if you are really stuck)

@@ -37,7 +37,7 @@ Assume by contradiction that `¬Ira.isKnight` using the `by_contra` tactic.
   "
   We will now simplify `stR`.
 
-  Because `¬Ira.isKnight` , `Robert.isKnight ↔ Ira.isKnight ` can be simplified to `¬ Robert.isKnight`
+  Because `¬Ira.isKnight`, `Robert.isKnight ↔ Ira.isKnight ` can be simplified to `¬ Robert.isKnight`
   "
   simp [nIKnight] at stR
   Hint
