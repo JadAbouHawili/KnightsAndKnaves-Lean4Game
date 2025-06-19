@@ -27,7 +27,7 @@ Conclusion
 "
 This was the last simplification theorem.
 
-Some of these you will use in the next two worlds solving knights and knaves logic puzzles.(or use the `simp` tactic if you prefer)
+Some of these you will use in the next two worlds solving knights and knaves logic puzzles (or use the `simp` tactic if you prefer).
 "
 
 NewTheorem not_iff_not

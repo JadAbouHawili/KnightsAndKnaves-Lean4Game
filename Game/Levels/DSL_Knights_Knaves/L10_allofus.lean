@@ -89,7 +89,7 @@ Get `¬A.isKnight`
 
   - etc...
 
-  Once you have `C.isKnave` then everyone is a knave.(`right` side of the goal)
+  Once you have `C.isKnave` then everyone is a knave (`right` side of the goal).
 
   You can `unfold` the goal if that facilitates your reasoning.
   "

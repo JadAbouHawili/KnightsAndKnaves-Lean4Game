@@ -70,7 +70,7 @@ F & F & F \\\\
 \\end\{array}
 $
 
-`P or Q` has the same truth value as `P`.(for `Q = False`)
+`P or Q` has the same truth value as `P` (for `Q = False`).
 
 In other words, `P or False` and `P` have the same truth value i.e `(P or False) ↔ P`. Whenver `P or False` occurs, we can replace it by `P` which is of a simpler form.
 $
@@ -105,7 +105,7 @@ Rewrite  at `h : P or False` obtaining `h : P`, using the theorem `or_false` or 
 
 Conclusion
 "
-You can also simplify `h` using the `simp` tactic.(which stands for simplification)
+You can also simplify `h` using the `simp` tactic (which stands for simplification).
 
 We want to simplify `h` using `hnQ`, so
 ```

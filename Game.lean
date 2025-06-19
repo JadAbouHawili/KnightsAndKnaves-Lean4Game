@@ -101,7 +101,7 @@ This is not recommended for people who have never heard about `Lean` before beca
 # Github, Level Solutions
 The game's repository is [here](https://github.com/JadAbouHawili/KnightsAndKnaves-Lean4Game)
 
-You can view the code for every level there.(and the solution if you are really stuck)
+You can view the code for every level there (and the solution if you are really stuck).
 
 # Other Educational Games
 Knights and Knaves education game: (games on other topics are available as well)

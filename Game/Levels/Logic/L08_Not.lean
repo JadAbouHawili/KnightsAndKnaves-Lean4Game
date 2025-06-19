@@ -61,7 +61,7 @@ F & T  \\\\
 \\end{array}
 $
 
-Notice that regardless of the truth value of `P`, the two propositions `¬P` and `P → False` have the same truth table. Therefore, they can be used interchangeably.(we say that these two expressions are logically equivalent, `¬P ↔ (P → False)`)
+Notice that regardless of the truth value of `P`, the two propositions `¬P` and `P → False` have the same truth table. Therefore, they can be used interchangeably (we say that these two expressions are logically equivalent, `¬P ↔ (P → False)`).
 
 What `¬P` means is that if `P` were true, then we can deduce a contradiction. We know that `P` is true. Therefore, we can prove a contradiction which is the goal.
 

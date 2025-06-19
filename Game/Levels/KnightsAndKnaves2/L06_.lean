@@ -64,7 +64,7 @@ Use `iff_not_comm` to prove `C ↔ ¬A`
     have CiffnA := iff_not_comm.mp AiffnC
     Hint
     "
-Prove `B` using `stB`, `CiffnA.symm : C ↔ ¬A`. (symm for symmetry)
+Prove `B` using `stB`, `CiffnA.symm : C ↔ ¬A` (symm for symmetry).
     "
     have hB := stB.mpr CiffnA.symm
     Hint
@@ -73,7 +73,7 @@ Given `hP : P`, `hQ : Q`, `hR : R` and the goal `P ∧ Q ∧ R`, you can close t
 ```
 exact ⟨hP,hQ,hR⟩
 ```
-where ⟨⟩ is typed as \\<>.(this is to avoid nesting `And.intro` inside another)
+where ⟨⟩ is typed as \\<> (this is to avoid nesting `And.intro` inside another).
     "
     exact ⟨hA,hB,h⟩
 
