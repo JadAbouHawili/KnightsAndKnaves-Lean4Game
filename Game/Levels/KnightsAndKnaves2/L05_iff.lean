@@ -77,7 +77,13 @@ Now consider cases for `CorB` and for every case prove the goal.
   "
   Prove the goal using `{hA}`, `{hB}` ,`h`.
 
-  Use `constructor` tactic to split the goal in two, the first being `A` and the second being `B ∧ C` or use `⟨⟩` notation or use `And.intro` or use `have` to first construct a proof of `B ∧ C` then use `And.intro` etc...
+  You can do this in a number of ways:
+
+  - Use `constructor` tactic to split the goal in two, the first being `A` and the second being `B ∧ C`
+  - Use `⟨⟩` notation
+  - Use `And.intro`
+  - Use `have` to first construct a proof of `B ∧ C` then use `And.intro`
+  - etc...
 
 The proof of the second case for `h : B` would require using `stB`.
   "
