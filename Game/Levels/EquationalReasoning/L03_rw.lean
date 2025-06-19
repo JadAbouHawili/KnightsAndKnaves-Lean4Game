@@ -9,7 +9,7 @@ Introduction "We will learn how to substitute a variable with its value, for exa
 
 This can be done using the tactic `rw` (short for rewrite).
 
-`rw` a proof of `A=B` and replaces all the `A`s in the goal with `B`s.
+`rw` takes a proof of `A=B` and replaces all the `A`s in the goal with `B`s.
 
 So `rw [h]` where `h : x=3` will replace all the `x`s of the goal with `3`.
 "
