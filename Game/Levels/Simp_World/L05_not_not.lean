@@ -10,7 +10,7 @@ Introduction
 "
 In this level, you will learn 'proof by contradiction'.
 
-To prove `P`, you would assume `¬P` and then prove false i.e. you would be proving `¬P → False` which is `¬¬P`.
+To prove `P`, you would assume `¬P` and then prove false, i.e. you would be proving `¬P → False` which is `¬¬P`.
 
 The truth table shows that `¬¬P` is equivalent to `P`,
 $

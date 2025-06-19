@@ -45,7 +45,7 @@ F & F & F \\\\
 \\hline
 \\end\{array}
 $
-`P or Q` is always true for `P = True` i.e. `True or Q` and `True` have the same truth value.
+`P or Q` is always true for `P = True`, i.e. `True or Q` and `True` have the same truth value.
 
 $
 \\begin\{array}\{|c | c|c|}

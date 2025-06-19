@@ -44,7 +44,7 @@ $
 
 Therefore, they are equivalent and can be interchanged.
 
-On a more intuitive level, we can understand `¬(P and Q)` as meaning `P and Q` is not true i.e. `P`,`Q` can't be true at the same (at least one of them has to be false)
+On a more intuitive level, we can understand `¬(P and Q)` as meaning `P and Q` is not true, i.e. `P`,`Q` can't be true at the same (at least one of them has to be false)
 
 The simplification theorem to use,
 ```

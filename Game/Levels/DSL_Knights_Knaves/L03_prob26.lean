@@ -48,7 +48,7 @@ Assume that `B` is a knight.
   have hA := knight_said hB BKnight
   Hint
   "
-If an islander says 'I am a knave', we get a contradiction i.e. `False`.
+If an islander says 'I am a knave', we get a contradiction, i.e. `False`.
   "
   exact dsl_iamknave hA
   Hint

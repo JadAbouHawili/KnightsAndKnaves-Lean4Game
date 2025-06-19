@@ -52,7 +52,7 @@ Conclusion
 "
 Having proven `False`, instead of having to use `False.elim` to prove `Q`, you can use the the `contradiction` tactic. If you were able to prove `False`, then the `contradiction` tactic will prove the goal regardless what the goal is because 'from `False`, anything follows'.
 
-Proving `False` is what's usually called deriving a contradiction, and note that to prove `False` you would first need to have a proof `P`, and a proof of `¬P` i.e. `P → False`.
+Proving `False` is what's usually called deriving a contradiction, and note that to prove `False` you would first need to have a proof `P`, and a proof of `¬P`, i.e. `P → False`.
 
 Moreover, having a proof of `P` and a proof of `¬P` means you have contradictory theorems. If so, then `contradiction` will close any goal without having to prove `False` first.
 

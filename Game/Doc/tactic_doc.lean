@@ -1,6 +1,6 @@
 import Game.Metadata
 /--
-`by_contra h` proves `P` by contradiction, introducing a hypothesis `h : ¬P` and proving False i.e. proving `¬¬P` which is equivalent to `P`.
+`by_contra h` proves `P` by contradiction, introducing a hypothesis `h : ¬P` and proving False, i.e. proving `¬¬P` which is equivalent to `P`.
 
 If `P` is a negation `¬Q`, h : `Q` will be introduced instead of `¬¬Q`.
 -/
@@ -107,9 +107,9 @@ some expression involving A
 
 Moreover `rw [h] at h'` would apply the rewrite on an assumption `h'` instead of the goal.
 
-By default, rw uses an equation in the forward direction, matching the left-hand side of the equation `h` with an occurrence of `A` in the goal, and replaces it with the right-hand side i.e. `B`.
+By default, rw uses an equation in the forward direction, matching the left-hand side of the equation `h` with an occurrence of `A` in the goal, and replaces it with the right-hand side, i.e. `B`.
 
-The notation `rw [←h]` can be used to instruct the tactic to use the equality `h` in the reverse direction i.e. replace an occurrence of `B` with `A`.
+The notation `rw [←h]` can be used to instruct the tactic to use the equality `h` in the reverse direction, i.e. replace an occurrence of `B` with `A`.
 
 ## Behavior with `=` and `↔`
 For `rw [h]`, the behavior is exactly the same for both, whether you had `h : x=2` or `h : P ↔ Q`.
@@ -163,7 +163,7 @@ If the proof is one step, then the following:
 ```
 have theorem-name := expression
 ```
-will do, where `expression : P` with `P : Prop` i.e. `expression` is a proof of `P`
+will do, where `expression : P` with `P : Prop`, i.e. `expression` is a proof of `P`
 
 The result would be adding the following to the hypothesis:
 ```

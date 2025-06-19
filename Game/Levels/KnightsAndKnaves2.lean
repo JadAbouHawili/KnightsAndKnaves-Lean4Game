@@ -30,7 +30,7 @@ Knights always tell the truth, so if `A` makes some statement `P` we have that `
 ```
 A → P
 ```
-Moreover, the statement `P` being true means that `A` is telling the truth i.e. is a knight
+Moreover, the statement `P` being true means that `A` is telling the truth, i.e. is a knight
 ```
 P → A
 ```
@@ -43,7 +43,7 @@ Similarly for `A` being a knave which implies that the statement `P` is false
 ```
 ¬A → ¬P
 ```
-Moreover, the statement `P` being false means that `A` is lying i.e. is a knave
+Moreover, the statement `P` being false means that `A` is lying, i.e. is a knave
 ```
 ¬P → ¬A
 ```

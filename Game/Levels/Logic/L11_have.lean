@@ -19,7 +19,7 @@ For example, you can obtain a proof of `Q` in one step by
 ```
 hPQ hP
 ```
-then `have hQ := hPQ hP` will add `hQ : Q` to the proof state i.e. you have proven `Q` and `hQ` is the proof.
+then `have hQ := hPQ hP` will add `hQ : Q` to the proof state, i.e. you have proven `Q` and `hQ` is the proof.
 "
 
 Statement {P Q R : Prop}

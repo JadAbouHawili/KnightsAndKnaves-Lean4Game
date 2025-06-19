@@ -39,7 +39,7 @@ $
 Notice that this definition is an implication and that the truth table with `¬P` and the truth table with `P → False` are identical.
 
 ## `¬P` as the goal
-What this means is that to prove `¬P`, we assume `P` and derive a contradiction i.e. constructing an object of type `False`.
+What this means is that to prove `¬P`, we assume `P` and derive a contradiction, i.e. constructing an object of type `False`.
 In other words, having `¬P` as a goal, you have to start the proof with `intro` because you are proving an implication.
 -/
 DefinitionDoc Not as "¬"
@@ -198,7 +198,7 @@ A ∩ B
 `A ∩ B` is itself another set, containing elements that are in both `A` and `B`.
 In other words, `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`.
 
-`A ∩ B = ∅` means that `A` and `B` have no common element i.e. no element of `A` belongs to both and no element of `B` belongs to both.
+`A ∩ B = ∅` means that `A` and `B` have no common element, i.e. no element of `A` belongs to both and no element of `B` belongs to both.
 In other words, `x ∈ A → x ∉ B`, `x ∈ B → x ∉ A` which are `inleft_notinright` and `inright_notinleft` respectively.
 -/
 DefinitionDoc inter as "∩"
@@ -295,14 +295,14 @@ TheoremDoc iff_not_comm as "iff_not_comm" in "Logic"
 /--
 If two propositions are false, then they have the same truth value.
 
-If we know `¬P,¬Q`  then we can conclude that `P,Q` have the same truth value i.e. `P ↔ Q`
+If we know `¬P,¬Q`  then we can conclude that `P,Q` have the same truth value, i.e. `P ↔ Q`
 -/
 TheoremDoc iff_of_false as "iff_of_false" in "Logic"
 
 /--
 If two propositions are true, then they have the same truth value.
 
-If we know `P,Q`  then we can conclude that `P,Q` have the same truth value i.e. `P ↔ Q`
+If we know `P,Q`  then we can conclude that `P,Q` have the same truth value, i.e. `P ↔ Q`
 -/
 TheoremDoc iff_of_true as "iff_of_true" in "Logic"
 
@@ -445,7 +445,7 @@ TheoremDoc true_or_iff as "true_or_iff" in "Logic"
 TheoremDoc true_implies as "true_implies" in "Logic"
 
 /--
-`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value i.e. one of them is true and the other is false.
+`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value, i.e. one of them is true and the other is false.
 
 Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:
 $
@@ -525,9 +525,9 @@ Knave : Finset Inhabitant
 There will be at most three inhabitants in the puzzles for simplicity, but you can ofcourse have more.
 
 ## Assumptions
-Knights tell the true and knaves lie. So no one can be both at the same time i.e. `Knight ∩ Knave = ∅`
+Knights tell the true and knaves lie. So no one can be both at the same time, i.e. `Knight ∩ Knave = ∅`
 
-Moreover, every inhabitant is either a knight or a knave i.e. `A ∈ Knight ∨ A ∈ Knave` for any `A : Inhabitant`.
+Moreover, every inhabitant is either a knight or a knave, i.e. `A ∈ Knight ∨ A ∈ Knave` for any `A : Inhabitant`.
 
 As a proof state:
 ```
@@ -556,7 +556,7 @@ Given an inhabitant `A`,
 
 The translation we use is based on the following:
 - If `A` is a knight, then `A`'s statement is true.
-- If `A`'s statement is true, then `A` is telling the truth i.e. is a knight.
+- If `A`'s statement is true, then `A` is telling the truth, i.e. is a knight.
 
 Formally:
 ```
@@ -592,7 +592,7 @@ Given inhabitant `A`,
 
 The translation we use is based on the following:
 - If `A` is a knave, then `A`'s statement is false, i.e. its negation is true.
-- If `A`'s statement is false, then `A` is lying i.e. is a knave.
+- If `A`'s statement is false, then `A` is lying, i.e. is a knave.
 
 Formally:
 ```
@@ -750,7 +750,7 @@ Knights always tell the truth, so if `A` makes some statement `P` we have that `
 ```
 A → P
 ```
-Moreover, the statement `P` being true means that `A` is telling the truth i.e. is a knight
+Moreover, the statement `P` being true means that `A` is telling the truth, i.e. is a knight
 ```
 P → A
 ```
@@ -763,7 +763,7 @@ Similarly for `A` being a knave which implies that the statement `P` is false
 ```
 ¬A → ¬P
 ```
-Moreover, the statement `P` being false means that `A` is lying i.e. is a knave
+Moreover, the statement `P` being false means that `A` is lying, i.e. is a knave
 ```
 ¬P → ¬A
 ```

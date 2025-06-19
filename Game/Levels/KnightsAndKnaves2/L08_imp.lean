@@ -38,7 +38,7 @@ Assume `nC : ¬C` using `by_contra nC`.
   Hint
     "
 
-Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value i.e. `(A ↔ ¬C) ↔ A`
+Since `¬C` is true by `nC : ¬C`, then `A ↔ ¬C` and `A` have the same truth value, i.e. `(A ↔ ¬C) ↔ A`
 
 If `A` is true then `A ↔ ¬C` is true, and if `A` is false then `A ↔ ¬C` is false.
 

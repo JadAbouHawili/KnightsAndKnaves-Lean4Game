@@ -26,7 +26,7 @@ isKnight_or_isKnave
 
 If `A` were a knight, then `A`'s statement is true then `A` is a knave but thats impossible. So, if `A` were a knight then we can prove `False`.
 
-If `A` were a knave, then `A`'s statement would be false i.e. `A` is not a knave but thats impossible as well. So, if `A` were a knave then we can prove `False`.
+If `A` were a knave, then `A`'s statement would be false, i.e. `A` is not a knave but thats impossible as well. So, if `A` were a knave then we can prove `False`.
 
 We consider every case using the `cases` tactic, and `isKnight_or_isKnave`.
 "

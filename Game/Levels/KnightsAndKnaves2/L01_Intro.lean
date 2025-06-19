@@ -18,7 +18,7 @@ You meet two inhabitants: `Zoey` and `Mel`.
 
 Can you determine who is a knight and who is a knave?
 
-Note that `stZ` and `stZn` are saying the same thing, saying that `Zoey` and `¬Mel` have the same truth value i.e. both are true or both are false is equivalent to saying that `¬Zoey` and `Mel` have the same truth value.
+Note that `stZ` and `stZn` are saying the same thing, saying that `Zoey` and `¬Mel` have the same truth value, i.e. both are true or both are false is equivalent to saying that `¬Zoey` and `Mel` have the same truth value.
 
 First change the goal to `Zoey` using the `have` tactic.
 "
@@ -35,7 +35,7 @@ Statement
   "
 To prove `Zoey`, we will do a proof by contradiction.
 
-We will assume `¬Zoey` and show a contradiction, proving that `¬Zoey → False` i.e. `¬¬Zoey` which is equivalent to `Zoey`.
+We will assume `¬Zoey` and show a contradiction, proving that `¬Zoey → False`, i.e. `¬¬Zoey` which is equivalent to `Zoey`.
 
 `by_contra hnZ` will assume `¬Zoey` adding,
 ```
