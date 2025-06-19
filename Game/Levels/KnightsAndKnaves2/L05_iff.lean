@@ -29,7 +29,7 @@ Statement {A B C : Prop}
     "
 Use `have` to set `A` as the new goal.
 
-We want to prove `A`, to do this we will prove `¬¬A`(which is equivalent to `A`) i.e `¬A → False`. The tactic `by_contra` facilitates this.
+We want to prove `A`, to do this we will prove `¬¬A` (which is equivalent to `A`) i.e `¬A → False`. The tactic `by_contra` facilitates this.
 
 `by_contra h` assumes `h : ¬A` and changes the goal to `False`.
 
@@ -65,7 +65,7 @@ Now consider cases for `CorB` and for every case prove the goal.
   "
   Prove `AiffC : A ↔ C` using `iff_of_true (ha : a) (hb : b) : a ↔ b` , `hA : A` , `h : C`
 
-  `iff_of_true` says that we can conclude `P ↔ Q` is true when `P` is true , `Q` is true(check the truth table).
+  `iff_of_true` says that we can conclude `P ↔ Q` is true when `P` is true , `Q` is true (check the truth table).
   "
   have AiffC := iff_of_true hA h
   Hint 

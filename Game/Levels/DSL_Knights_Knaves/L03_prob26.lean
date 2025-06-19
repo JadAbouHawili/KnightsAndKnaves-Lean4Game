@@ -19,7 +19,7 @@ At this point the third man, `C`, said, 'Don't believe `B`; he is lying!'
 
 The question is, what are `B` and `C`?
 
-Change the goal to `B.isKnave`(using the `have` tactic)
+Change the goal to `B.isKnave` (using the `have` tactic)
 "
 
 variable { P Q : Prop}

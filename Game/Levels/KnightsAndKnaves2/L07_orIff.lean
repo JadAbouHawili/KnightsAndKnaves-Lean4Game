@@ -28,7 +28,7 @@ Use `have` to set `B` as the goal
   "
 Assuming `nB : ¬B`:
 - Prove `CdiffA : ¬(¬C ↔ ¬A)` using `stBn` , `nB`
-- Using `simp` and `nB : ¬B` , reduce `stA` to `stA : A ↔ C`. (`B ∨ C` , `C` have the same truth value(for `C` being true or false) when `B` is false.
+- Using `simp` and `nB : ¬B` , reduce `stA` to `stA : A ↔ C`. (`B ∨ C` , `C` have the same truth value (for `C` being true or false) when `B` is false.
 - Using `not_iff_not`, reduce `¬C ↔ ¬A` in `CdiffA` to `C ↔ A`.
 - Prove `False` using `CdiffA` , `stA.symm : A ↔ C`
   "

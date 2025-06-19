@@ -33,7 +33,7 @@ The point of this game is not just to showcase `Lean`, but also to learn some ma
 Here is listed theorems to use throughout the levels. Some you would have proven in previous levels and others are presented for you to use but without having proven them. An intuitive explanation of why the theorem makes sense will be presented as well when it is introduced.
 
 # Level Structure
-Within every level, you have the `Objects`(if any), `Assumptions`(if any), and `Goal` for the current level. This is called the initial proof state.
+Within every level, you have the `Objects` (if any), `Assumptions` (if any), and `Goal` for the current level. This is called the initial proof state.
 
 There will also be a text input to execute tactics accordingly.
 
@@ -80,14 +80,14 @@ https://zulip.com/case-studies/lean/
 
 ## Knights and Knaves
 Sources for the puzzles:
-- Puzzle Generator(some of which were taken as is, and others were modified):
+- Puzzle Generator (some of which were taken as is, and others were modified):
 https://www.wolframcloud.com/objects/demonstrations/KnightsAndKnavesPuzzleGenerator-source.nb
 - Generated Puzzles by unspecified computer program:
 https://philosophy.hku.hk/think/logic/knights.php
 - Raymond Smullyan's book called 'What is the name of this book'
 
 Insightful:
-- Knights and Knaves in a logic programming language(prolog):
+- Knights and Knaves in a logic programming language (prolog):
 https://www.youtube.com/watch?v=oEAa2pQKqQU
 
 - Blog post series, includes introduction ,representation and formalization, automated solutions using other provers, and creating your own puzzles.
@@ -104,7 +104,7 @@ The game's repository is [here](https://github.com/JadAbouHawili/KnightsAndKnave
 You can view the code for every level there.(and the solution if you are really stuck)
 
 # Other Educational Games
-Knights and Knaves education game:(games on other topics are available as well)
+Knights and Knaves education game: (games on other topics are available as well)
 https://en.oiler.education/bul
 
 Generate and solve:
@@ -116,7 +116,7 @@ Languages "English"
 CaptionShort "From the basics to Knights And Knaves"
 CaptionLong "A guided experience that teaches you everything you need to know to understand and solve knights and knaves logic puzzles, including the basics of lean and logic.
 
-Based on statements made, you will deductively conclude who is a knight(truthful) and who is a knave(liar)."
+Based on statements made, you will deductively conclude who is a knight (truthful) and who is a knave (liar)."
 CoverImage "images/knights-and-knaves.jpg"
 
 Dependency Logic → Simp_World

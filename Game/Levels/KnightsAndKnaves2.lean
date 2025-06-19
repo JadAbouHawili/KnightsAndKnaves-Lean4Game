@@ -63,6 +63,6 @@ This representation captures the rules of the knights and knaves puzzle which ar
 - No islander is both a knight and a knave at the same time
 - Knights always tell the truth, knaves always lie.
 
-Note that you could also take a more explicit truth table approach, where you list all the cases in a truth table and eliminate the cases which contradict the rules of the game(e.g `A` being a knight but `A`'s statement being false). If you are left with one possibility then the puzzle has a unique solution, otherwise it has multiple solutions.
+Note that you could also take a more explicit truth table approach, where you list all the cases in a truth table and eliminate the cases which contradict the rules of the game (e.g `A` being a knight but `A`'s statement being false). If you are left with one possibility then the puzzle has a unique solution, otherwise it has multiple solutions.
 This can be done in [prolog](https://www.youtube.com/watch?v=oEAa2pQKqQU) and [other provers](https://summerofgodel.blogspot.com/2019/04/part-6-propositional-logic-approach-to.html)
 "

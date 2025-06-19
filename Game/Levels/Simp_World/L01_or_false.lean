@@ -36,7 +36,7 @@ After doing so , we get
 h : P or False
 ```
 
-We can simplify it to `P`(which is the goal), here's why.
+We can simplify it to `P` (which is the goal), here's why.
 
 The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:
 

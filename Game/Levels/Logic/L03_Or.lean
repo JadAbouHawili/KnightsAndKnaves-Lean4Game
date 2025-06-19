@@ -31,7 +31,7 @@ From this truthtable, we conclude that to prove `P or Q`,  we need either `P` be
 
 You can tell Lean which side of `or` you want to prove by simply executing `left` or `right`.
 
-In our case, we know the left side of `or`(`P`) is true, so use `left`.
+In our case, we know the left side of `or` (`P`) is true, so use `left`.
 "
 
 #check Or.inl

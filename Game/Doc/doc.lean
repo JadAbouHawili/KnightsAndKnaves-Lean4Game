@@ -62,7 +62,7 @@ Moreover, we know that `False.elim : False → Q` for any `Q : Prop` and so `Fal
 DefinitionDoc False as "`False`"
 
 /--
-You can think of a proposition as a statement that is either true or false(obviously, it can't be both at the same time).
+You can think of a proposition as a statement that is either true or false (obviously, it can't be both at the same time).
 
 Moreover, these statements are denoted by a symbol like `P`,`Q`,`R`.
 
@@ -460,7 +460,7 @@ F & T & T \\\\
 \\end{array}
 $
 
-We can conclude that `¬P`,`Q` have the same truth value(`¬P ↔ Q`).
+We can conclude that `¬P`,`Q` have the same truth value (`¬P ↔ Q`).
 -/
 TheoremDoc not_iff as "not_iff" in "Logic"
 
@@ -878,7 +878,7 @@ A is a knave, so whatever A said is false
 TheoremDoc Islander.knave_said as "knave_said" in "DSL"
 
 /--
-A said something that is false(i.e a lie), so A is a knave
+A said something that is false (i.e a lie), so A is a knave
 -/
 TheoremDoc Islander.said_knave as "said_knave" in "DSL"
 

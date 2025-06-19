@@ -36,7 +36,7 @@ Statement
 : Robert ∧ Ira := by 
   Hint (hidden := true)
   "
-Remember the interpretation where you can treat `↔` like `=`(refer to `↔` docs for an example).
+Remember the interpretation where you can treat `↔` like `=` (refer to `↔` docs for an example).
   "
   rw [iff_iff_and_or_not_and_not.symm] at stR
   have R := stR.mpr stI

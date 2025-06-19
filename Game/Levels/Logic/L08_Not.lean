@@ -12,7 +12,7 @@ In this level we introduce the negation, the `¬` connective (read as 'not').
 
 Notice that this is the first logical connective that applies on one proposition only and not two.
 
-The job of this connective(as the name implies), is to negate a proposition:
+The job of this connective (as the name implies), is to negate a proposition:
 - For `P` true, `¬P` is false.
 - For `P` false, `¬P` is true.
 

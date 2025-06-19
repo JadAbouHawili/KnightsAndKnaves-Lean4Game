@@ -40,7 +40,7 @@ Simplify `{cont}` using `not_or`
   rw [not_or] at cont
   Hint
   "
-The left side of `{cont}` is `¬isKnave A`(`{cont}.left : ¬isKnave A`) which contradicts `{AKnave} : isKnave A`.
+The left side of `{cont}` is `¬isKnave A` (`{cont}.left : ¬isKnave A`) which contradicts `{AKnave} : isKnave A`.
   "
   have := cont.left
   contradiction

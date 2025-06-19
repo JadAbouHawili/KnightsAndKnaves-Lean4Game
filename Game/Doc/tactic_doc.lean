@@ -156,7 +156,7 @@ In other words, `hP` is EXACTLY whats needed to prove the goal, the type of `hP`
 TacticDoc exact
 
 /--
-The `have` tactic allows you to add theorems to the context(which you would have to prove, of course).
+The `have` tactic allows you to add theorems to the context (which you would have to prove, of course).
 
 ## one step
 If the proof is one step, then the following:
@@ -179,7 +179,7 @@ have theorem-name : theorem-prop
 ```
 will change the current goal to `theorem-prop : Prop` which is what you want to prove.
 
-After being proven, the original goal is restored with `theorem-name : theorem-prop` added(which is a proof of the proposition `theorem-prop`)
+After being proven, the original goal is restored with `theorem-name : theorem-prop` added (which is a proof of the proposition `theorem-prop`)
 
 ### example
 ```
