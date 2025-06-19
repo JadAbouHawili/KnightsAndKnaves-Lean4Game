@@ -34,7 +34,7 @@ F & F & T \\\\
 $
 
 A statement `P → Q` is false when `P` is true and `Q` false, it's true otherwise.
-This is because this is the only case where the meaning of `P → Q` is violated i.e. we have that `P` is true so `Q` is supposed to be true as well but its not.
+This is because this is the only case where the meaning of `P → Q` is violated i.e. we have that `P` is true so `Q` is supposed to be true as well but it's not.
 
 When `P` is false, the implication `P → Q` is always true regardless of the truth value of `Q` because the implication does not tell us what `Q` should be when `P` is false, it only tells us that `Q` must be true when `P` is true.
 
