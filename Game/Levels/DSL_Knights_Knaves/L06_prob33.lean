@@ -16,9 +16,8 @@ Change the goal to `¬A.isKnight`. You write `¬` by \\not.
 set_option push_neg.use_distrib true
 open Islander
 Statement
-{A B : Islander}
-{stA : A said (A.isKnave and ¬B.isKnave) }
-: ¬A.isKnight and B.isKnave := by
+{stA : A said (A.isKnave  and  ¬B.isKnave) }
+: ¬A.isKnight and B.isKnave := by 
   have AnK : ¬A.isKnight
   Hint "
 Assume `A` is a knight.

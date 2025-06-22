@@ -24,7 +24,6 @@ Now what are `B` and `C`?
 open Islander
 
 Statement
-{A B C : Islander}
 (stB : B said (A said @oneisknight A B C))
 (stC : C said B.isKnave)
 : B.isKnave and C.isKnight := by
@@ -101,7 +100,6 @@ It is not true that there is one knight, but that is the case so contradiction
   assumption
 
 example
-{A B C : Islander}
 (stB : B.isKnight ↔ (A.isKnight ↔ @oneisknight A B C))
 (stC : C.isKnight ↔ B.isKnave)
 : B.isKnave and C.isKnight := by

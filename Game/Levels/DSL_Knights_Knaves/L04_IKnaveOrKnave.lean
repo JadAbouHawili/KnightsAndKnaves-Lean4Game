@@ -16,7 +16,6 @@ Introduction
 
 open Islander
 Statement
-{A B : Islander}
 {stA : A said (A.isKnave or B.isKnave)}
 : A.isKnight and B.isKnave := by
   Hint (strict:=true)

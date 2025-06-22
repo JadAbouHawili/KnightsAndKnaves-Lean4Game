@@ -10,6 +10,13 @@ axiom Islander : Type
 
 namespace Islander
 
+axiom A : Islander
+axiom B : Islander
+axiom C : Islander
+
+axiom Robert : Islander
+axiom Ira : Islander
+
 axiom isKnight : Islander → Prop
 
 axiom isKnave : Islander → Prop
@@ -50,7 +57,6 @@ theorem said_knave {A : Islander} {P : Prop} (AsaidP : A said P) (nP : ¬P) : A.
 axiom notknight_said {A : Islander} {P : Prop} : (A said P) → ¬A.isKnight → ¬P
 
 section tactics
--- make custom tactics for finset.card stuff...
 
 macro "knight_or_knave" t1:term "with" t2:rcasesPat t3:rcasesPat : tactic => do`(tactic| obtain ($t2 | $t3) := isKnight_or_isKnave $t1)
 
@@ -77,19 +83,17 @@ do`(tactic| simp [isKnave_notisKnightIff] at $t1)
 
 #check solve
 macro_rules
-| `(tactic| contradiction) =>
-  do `(tactic |first | ( apply not_isKnight_and_isKnave ; assumption ; assumption   ) )
+| `(tactic| contradiction) => 
+  do `(tactic |solve | ( apply not_isKnight_and_isKnave  ; assumption ; assumption   ) )
 
 end tactics
 
-theorem dsl_iamknave (hAKn : A said A.isKnave): False := by
-  knight_or_knave A with hA hnA
+theorem dsl_iamknave {A : Islander} (hAKn : A said A.isKnave): False := by 
+  knight_or_knave A with hA hnA 
   · have hnA := knight_said hAKn hA
-    apply not_isKnight_and_isKnave
-    assumption ; assumption
+    contradiction
   · have hnA := knave_said hAKn hnA
     contradiction
-
 
 --variable {A B C : Islander}
 def allKnights {A B C : Islander}:= A.isKnight ∧ B.isKnight ∧ C.isKnight

@@ -14,7 +14,6 @@ Introduction
 
 -- prob 29
 Statement
-{A B : Islander}
 {stA : A said (A.isKnave ∨ B.isKnight)}
 : A.isKnight ∧ B.isKnight := by
   Hint (strict := true)

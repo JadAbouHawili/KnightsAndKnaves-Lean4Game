@@ -18,7 +18,7 @@ Introduction
 Use `simp` to do these simplications for you.
 "
 open Islander
-Statement {A : Islander} (stA : A said (A.isKnave or (2+2=5)))
+Statement  (stA : A said (A.isKnave or (2+2=5)))
 : False := by
   Hint (hidden := true)
   "

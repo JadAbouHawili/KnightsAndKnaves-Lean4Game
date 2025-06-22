@@ -24,7 +24,7 @@ Change the goal to `B.isKnave` (using the `have` tactic)
 
 variable { P Q : Prop}
 open Islander
-Statement {A B C : Islander}
+Statement 
 {hB : B said (A said A.isKnave)}
 {hC : C said B.isKnave}
 : B.isKnave and C.isKnight := by
