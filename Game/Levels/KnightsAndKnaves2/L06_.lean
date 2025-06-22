@@ -73,7 +73,7 @@ Given `hP : P`, `hQ : Q`, `hR : R` and the goal `P ∧ Q ∧ R`, you can close t
 ```
 exact ⟨hP,hQ,hR⟩
 ```
-where `⟨⟩` is typed as \\\<\\\> (this is to avoid nesting `And.intro` inside another).
+where `⟨⟩` is typed as \\\\<\\\\> (this is to avoid nesting `And.intro` inside another).
     "
     exact ⟨hA,hB,h⟩
 
