@@ -34,7 +34,6 @@ Two people are said to be of the same type if they are both knights or both knav
 
 open Islander
 Statement
-{A B C : Islander}
 {stA : A said B.isKnave}
 {stB : B said (A.isKnight ↔ C.isKnight)}
 : C.isKnave := by

@@ -17,7 +17,6 @@ Introduction
 -- prob 32
 open Islander
 Statement
-{A B C : Islander}
 {stA : A said @allKnaves A B C}
 {stB : B said @exactlyOneIsKnave A B C}
 : A.isKnave and C.isKnight

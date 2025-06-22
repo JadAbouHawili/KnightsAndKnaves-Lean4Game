@@ -17,7 +17,6 @@ You stumble into `A`,`B`.
 
 open Islander
 Statement
-{A B : Islander}
 (stA : A said B.isKnight)
 (stB : B said ( ¬ (A.isKnight ↔ B.isKnight) ) ) 
 : A.isKnave and B.isKnave := by 

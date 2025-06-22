@@ -23,7 +23,6 @@ Let's start by proving `Ira.isKnight`
 open Islander
 
 Statement
-{Robert Ira : Islander}
 {stR : Robert said (Robert.isKnight ↔ Ira.isKnight)}
 {stI : Ira said (Robert.isKnight)}
 :  Robert.isKnight and Ira.isKnight := by {
