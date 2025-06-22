@@ -31,12 +31,12 @@ Statement {P : Prop} {h : P or Q} {hnQ : ¬Q}
   rw [eq_false hnQ] at h
   Hint
   "
-After doing so , we get
+After doing so, we get
 ```
 h : P or False
 ```
 
-We can simplify it to `P`(which is the goal), here's why.
+We can simplify it to `P` (which is the goal), here's why.
 
 The intution behind every simplifiction introduced can be understood from looking at the truth table of the relevant proposition:
 
@@ -70,9 +70,9 @@ F & F & F \\\\
 \\end\{array}
 $
 
-`P or Q` has the same truth value as `P`.(for `Q = False`)
+`P or Q` has the same truth value as `P` (for `Q = False`).
 
-In other words, `P or False` and `P` have the same truth value i.e `(P or False) ↔ P`. Whenver `P or False` occurs , we can replace it by `P` which is of a simpler form.
+In other words, `P or False` and `P` have the same truth value, i.e. `(P or False) ↔ P`. Whenever `P or False` occurs, we can replace it by `P` which is of a simpler form.
 $
 \\begin\{array}\{|c|c|}
 \\hline
@@ -87,17 +87,17 @@ $
 
 The theorem for this simplication
 ```
-or_false_iff (p : Prop) 
+or_false_iff (p : Prop)
 : p or False ↔ p
 ```
 
 There's also an equivalent
 ```
-or_false (p : Prop) 
+or_false (p : Prop)
 : (p or False) = p
 ```
 
-Rewrite  at `h : P or False` obtaining `h : P`, using the theorem `or_false` or `or_false_iff`.
+Rewrite at `h : P or False` obtaining `h : P`, using the theorem `or_false` or `or_false_iff`.
   "
   rw [or_false_iff P] at h
   assumption
@@ -105,7 +105,7 @@ Rewrite  at `h : P or False` obtaining `h : P`, using the theorem `or_false` or 
 
 Conclusion
 "
-You can also simplify `h` using the `simp` tactic.(which stands for simplification)
+You can also simplify `h` using the `simp` tactic (which stands for 'simplification').
 
 We want to simplify `h` using `hnQ`, so
 ```

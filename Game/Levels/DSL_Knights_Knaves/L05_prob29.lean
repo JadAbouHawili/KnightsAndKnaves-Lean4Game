@@ -2,12 +2,12 @@ import Game.Metadata
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 open Islander
 
-World "DSL_Knights_Knaves" 
+World "DSL_Knights_Knaves"
 Level 5
 
-Title "" 
+Title ""
 
-Introduction 
+Introduction
 "
 `A` says 'I am a knave or `B` is a knight'.
 "
@@ -15,7 +15,7 @@ Introduction
 -- prob 29
 Statement
 {stA : A said (A.isKnave ∨ B.isKnight)}
-: A.isKnight ∧ B.isKnight := by 
+: A.isKnight ∧ B.isKnight := by
   Hint (strict := true)
   "
 Change the goal to `A.isKnight`
@@ -31,7 +31,7 @@ Transform the goal from `knight_to_knave`.
   "
 Conclude that `A`'s statement is false.
   "
-  have cont := knave_said stA AKnave 
+  have cont := knave_said stA AKnave
   Hint
   "
 Simplify `{cont}` using `not_or`
@@ -39,7 +39,7 @@ Simplify `{cont}` using `not_or`
   rw [not_or] at cont
   Hint
   "
-The left side of `{cont}` is `¬isKnave A`(`{cont}.left : ¬isKnave A`) which contradicts `{AKnave} : isKnave A`.
+The left side of `{cont}` is `¬isKnave A` (`{cont}.left : ¬isKnave A`) which contradicts `{AKnave} : isKnave A`.
   "
   have := cont.left
   contradiction

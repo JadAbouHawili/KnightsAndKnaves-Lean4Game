@@ -22,7 +22,7 @@ allKnaves
 
 You can `unfold` to get
 ```
-A.isKnight ∧ B.isKnight ∧ C.isKnave 
+A.isKnight ∧ B.isKnight ∧ C.isKnave
 ```
 by
 ```
@@ -41,7 +41,7 @@ Statement
 {stA : A said B.isKnight}
 {stB : B said (@allKnights A B C)}
 {stC : C said (A.isKnight or B.isKnight)}
-: (@allKnights A B C)  ∨ (@allKnaves A B C):= by 
+: (@allKnights A B C)  ∨ (@allKnaves A B C):= by
   Hint (strict := true)
   "
 First, take cases for `B`.
@@ -81,7 +81,7 @@ Get `¬A.isKnight`
   knave_to_knight at AKnave
   Hint
   "
-  Now, `C`'s statement is false , so conclude that `C` is a knave.
+  Now, `C`'s statement is false, so conclude that `C` is a knave.
 
   You can do this in a number of ways:
   - Use `have` to construct a proof that `¬ (A.isKnight or B.isKnight)`
@@ -89,7 +89,7 @@ Get `¬A.isKnight`
 
   - etc...
 
-  Once you have `C.isKnave` then everyone is a knave.(`right` side of the goal)
+  Once you have `C.isKnave` then everyone is a knave (`right` side of the goal).
 
   You can `unfold` the goal if that facilitates your reasoning.
   "

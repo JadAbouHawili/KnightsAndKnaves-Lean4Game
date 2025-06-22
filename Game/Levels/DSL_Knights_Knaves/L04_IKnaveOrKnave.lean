@@ -9,20 +9,20 @@ Title ""
 -- prob 28
 --A: 'At least one of us is a knave.'
 --What are A and B?
-Introduction 
+Introduction
 "
 `A` says 'I am a knave or `B` is a knave'.
 "
 
 open Islander
-Statement 
+Statement
 {stA : A said (A.isKnave or B.isKnave)}
-: A.isKnight and B.isKnave := by 
+: A.isKnight and B.isKnave := by
   Hint (strict:=true)
   "
 Let's start with proving that `A` is a knight. (use `have`)
   "
-  have AKnight : A.isKnight 
+  have AKnight : A.isKnight
   Hint (strict := true)
   "
   Change the goal to `¬isKnave A` using the `knight_to_knave` tactic
@@ -77,7 +77,7 @@ Now close the goal
   constructor
   assumption ; assumption
 
-Conclusion 
+Conclusion
 "
 "
-NewTactic knight_to_knave 
+NewTactic knight_to_knave

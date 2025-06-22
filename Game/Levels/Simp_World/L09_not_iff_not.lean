@@ -6,7 +6,7 @@ Level 9
 
 Title "`not_iff_not`"
 
-Introduction 
+Introduction
 "
 If we know that `¬P`,`¬Q` have the same truth value then `P`,`Q` have the same truth value.
 
@@ -27,7 +27,7 @@ Conclusion
 "
 This was the last simplification theorem.
 
-Some of these you will use in the next two worlds solving knights and knaves logic puzzles.(or use the `simp` tactic if you prefer)
+Some of these you will use in the next two worlds solving knights and knaves logic puzzles (or use the `simp` tactic if you prefer).
 "
 
 NewTheorem not_iff_not

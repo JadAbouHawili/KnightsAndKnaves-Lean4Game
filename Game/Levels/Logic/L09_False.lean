@@ -40,8 +40,8 @@ F & T \\\\
 \\end{array}
 $$
 
-We have that the implication `False → Q` is true regardless what `Q` represents and regardless whether `Q` is true or is false. 
-So `False` implies any proposition. This principle is known as: 'From `False` anything follows'.
+We have that the implication `False → Q` is true regardless what `Q` represents and regardless whether `Q` is true or is false.
+So `False` implies any proposition. This principle is known as: 'From `False`, anything follows'.
 
 This principle is represented by `False.elim (h : False) : Q` which takes a proof of `False`, and proves any proposition `Q`.
 "
@@ -52,7 +52,7 @@ Conclusion
 "
 Having proven `False`, instead of having to use `False.elim` to prove `Q`, you can use the the `contradiction` tactic. If you were able to prove `False`, then the `contradiction` tactic will prove the goal regardless what the goal is because 'from `False`, anything follows'.
 
-Proving `False` is what's usually called deriving a contradiction, and note that to prove `False` you would first need to have a proof `P`, and a proof of `¬P` i.e `P → False`.
+Proving `False` is what's usually called deriving a contradiction, and note that to prove `False` you would first need to have a proof `P`, and a proof of `¬P`, i.e. `P → False`.
 
 Moreover, having a proof of `P` and a proof of `¬P` means you have contradictory theorems. If so, then `contradiction` will close any goal without having to prove `False` first.
 

@@ -6,19 +6,19 @@ Level 6
 
 Title "Proof by `cases`"
 
-Introduction 
+Introduction
 "
 In this level, we will do a 'proof by cases' using the `cases` tactic.
 
 By `h : P or Q`, we have two cases:
-`P` being true or `Q` being true. 
+`P` being true or `Q` being true.
 
 If we consider each case individually and prove `R`, then we can conclude that `R` is true.
 
 To do this, start with `cases h`
 "
 
-Statement 
+Statement
 {P Q R : Prop}
 (h : P or Q)
 (hPR : P → R)

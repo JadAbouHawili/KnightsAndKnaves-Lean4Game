@@ -13,16 +13,16 @@ You have already done this level using `left`/`right` tactic.
 
 Here we introduce a simplification theorem to do it.
 
-But first, rewrite `P or Q` to `True or Q` using 
+But first, rewrite `P or Q` to `True or Q` using
 ```
-eq_true (h : p) 
+eq_true (h : p)
   : p = True
 ```
 "
 #check eq_true
 
 Statement (h : P)
-  : P or Q  := by
+  : P or Q := by
 
   {
   rw [eq_true h]
@@ -45,7 +45,7 @@ F & F & F \\\\
 \\hline
 \\end\{array}
 $
-`P or Q` is always true for `P = True` i.e `True or Q` and `True` have the same truth value.
+`P or Q` is always true for `P = True`, i.e. `True or Q` and `True` have the same truth value.
 
 $
 \\begin\{array}\{|c | c|c|}

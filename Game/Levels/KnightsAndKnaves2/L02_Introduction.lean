@@ -29,7 +29,7 @@ Use `have` to set `¬A` as the new goal.
     "
 Assuming `hA : A`:
 - Prove `BC : B ∧ C` from `stA` using `A`
-- Prove `CnA : C ∧ ¬A` using `stB` , `BC.left : B`
+- Prove `CnA : C ∧ ¬A` using `stB`, `BC.left : B`
 - Prove `False` using `hA : A`,`CnA.right : ¬A`.
 
 Each can be done in one step, so the appropriate `have` syntax should be used.
@@ -48,10 +48,10 @@ Use `have` to set `¬C` as the new goal.
     "
 Assuming `hC : C`:
 - Prove `hB : B` using `stB`, `C ∧ ¬A`
-- Prove `hA : A` using `stA` , `B ∧ C`
+- Prove `hA : A` using `stA`, `B ∧ C`
 - Prove `False` from `hA: A`,`hnA : ¬A`
 
-For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr`. The `\\<\\>` notation is appropriate here.(although you could just use `And.intro`)
+For proving `hB : B`, you would need to pass a proof of `C ∧ ¬A` to `stB.mpr`. The `\\<\\>` notation is appropriate here (although you could just use `And.intro`).
     "
   intro hC
   have hB := stB.mpr ⟨hC,hnA⟩
@@ -62,7 +62,7 @@ For proving `hB : B` , you would need to pass a proof of `C ∧ ¬A` to `stB.mpr
   "
 Using `¬C`, we get `¬C ∨ A` which gives `¬B` using `stBn`.
 
-After which, you need to close the goal of the form 
+After which, you need to close the goal of the form
 ```
 _ and _ and _
 ```

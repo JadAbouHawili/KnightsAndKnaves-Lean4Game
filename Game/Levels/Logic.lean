@@ -16,9 +16,9 @@ World "Logic"
 Title "Logic"
 Introduction
 "
-In this world, we will be dealing with `Objects` of type `Prop` i.e propositions. You can think of a proposition as a statement that is either true or false(obviously, it can't be both at the same time). You have seen propositions before like `x=2`, `y=6` etc..
+In this world, we will be dealing with `Objects` of type `Prop`, i.e. propositions. You can think of a proposition as a statement that is either true or false (obviously, it can't be both at the same time). You have seen propositions before like `x=2`, `y=6` etc..
 
-When you have `h : P` where `P : Prop` , then we say `h` is a proof of the statement `P`(imagine `x=2` instead of `P` if you wish).
+When you have `h : P` where `P : Prop`, then we say `h` is a proof of the statement `P`(imagine `x=2` instead of `P` if you wish).
 
 In a proof state, this would look like the following:
 ```
@@ -30,7 +30,7 @@ h : P
 
 Moreover, we will discuss constructing new propositions from old ones.
 
-Here's an example in natural language, given the two propositions 'The sun is shining' , 'It is Monday', you can construct 'The sun is shining and it is monday'. 
+Here's an example in natural language, given the two propositions 'The sun is shining', 'It is Monday', you can construct 'The sun is shining and it is monday'.
 
 Another example would be, having the following:
 ```

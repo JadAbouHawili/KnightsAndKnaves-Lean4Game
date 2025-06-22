@@ -1,6 +1,6 @@
 import Game.Metadata
 
-World "KnightsAndKnaves2" 
+World "KnightsAndKnaves2"
 Level 4
 
 Title ""
@@ -19,7 +19,7 @@ You have met a group of 3 islanders. Their names are `Xavier`, `Gary`, and `Alic
 /-
 use_module(library(clpb)).
 
-sat( (G =:= (A =:= G) ) * (A =:= G ) * (G =:= X) ) , labeling([A,G,X]).
+sat( (G =:= (A =:= G) ) * (A =:= G ) * (G =:= X) ), labeling([A,G,X]).
 
 G = A, A = X, X = 1.
 -/
@@ -29,8 +29,8 @@ Statement
 {stG : Gary ↔ (Alice ↔ Gary)}
 {stA : Alice ↔ Gary}
 {stG2 : Gary ↔ Xavier}
-: Alice ∧ Gary ∧ Xavier := by 
-  Hint 
+: Alice ∧ Gary ∧ Xavier := by
+  Hint
   "
 Use `stA` and `stG` to prove `Gary`
   "
@@ -38,7 +38,7 @@ Use `stA` and `stG` to prove `Gary`
   "
 Note that,
 ```
-stG.mpr : (Alice ↔ Gary) ↔ Gary  
+stG.mpr : (Alice ↔ Gary) ↔ Gary
 ```
 and so
 ```
@@ -59,7 +59,7 @@ example
 {stG : Gary ↔ (Alice ↔ Gary)}
 {stA : Alice ↔ Gary}
 {stG2 : Gary ↔ Xavier}
-: Alice ∧ Gary ∧ Xavier := by 
+: Alice ∧ Gary ∧ Xavier := by
   Hint
   "
 Start by proving `Alice`
@@ -77,7 +77,7 @@ To prove `Alice`, assume `¬Alice` then derive a contradiction
   "
   By `stA`, `Alice` and `Gary` are the same type so we can prove `¬Gary`. Change the goal to that.
   "
-  have nGary: ¬Gary 
+  have nGary: ¬Gary
   Hint
   "
 Simplify `stA` using `{nAlice}` to prove `¬Gary`

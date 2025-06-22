@@ -1,14 +1,14 @@
 import Game.Metadata
 
 
-World "Simp_World" 
+World "Simp_World"
 Level 6
 
-Title "`iff_of_false`" 
+Title "`iff_of_false`"
 
-Introduction 
+Introduction
 "
-`P ↔ Q` means that `P`,`Q` have the same truth value. 
+`P ↔ Q` means that `P`,`Q` have the same truth value.
 
 If both of them are true, we can conclude `P ↔ Q`.
 
@@ -18,7 +18,7 @@ Here, we have that `P`,`Q` are both false.
 
 The relevant theorem,
 ```
-iff_of_false (ha : ¬a) (hb : ¬b) 
+iff_of_false (ha : ¬a) (hb : ¬b)
   : a ↔ b
 ```
 "

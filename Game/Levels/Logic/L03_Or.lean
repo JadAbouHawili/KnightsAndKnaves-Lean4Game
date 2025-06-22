@@ -27,17 +27,17 @@ F & F & F \\\\
 \\end{array}
 $
 
-From this truthtable, we conclude that to prove `P or Q`,  we need either `P` being true or `Q` being true (both being true would also mean its true).
+From this truth table, we conclude that to prove `P or Q`, we need either `P` being true or `Q` being true (both being true would also mean it's true).
 
 You can tell Lean which side of `or` you want to prove by simply executing `left` or `right`.
 
-In our case, we know the left side of `or`(`P`) is true, so use `left`.
+In our case, we know the left side of `or` (`P`) is true, so use `left`.
 "
 
 #check Or.inl
 #check Or.intro_right
 Statement (hP : P)
-  : P or Q  := by
+  : P or Q := by
 {
       left
       Hint "We have a proof that `P` is true, and we want to prove `P`"
@@ -49,4 +49,4 @@ Conclusion
 "
 
 NewDefinition logic_or
-NewTactic left right 
+NewTactic left right

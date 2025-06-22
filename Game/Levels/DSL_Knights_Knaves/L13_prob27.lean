@@ -10,13 +10,13 @@ Title ""
 Introduction
 "
 Suppose the stranger, instead of asking `A` what he is,
-asked `A`, 'How many knights are among you?' 
+asked `A`, 'How many knights are among you?'
 
 Again `A` answers indistinctly. So the stranger asks `B`, 'What did `A` say?
 
 `B` replies, '`A` said that there is one knight among us.
 
-Then `C` says, 'Don't believe `B`; he is lying!' 
+Then `C` says, 'Don't believe `B`; he is lying!'
 
 Now what are `B` and `C`?
 "
@@ -32,7 +32,7 @@ Statement
   "
   First prove `B.isKnave`
   "
-  have : B.isKnave 
+  have : B.isKnave
   Hint
   "
 As usual, from `knave_to_knight`
@@ -87,14 +87,14 @@ Conclude that `A`'s statement is false
   "
 It is not true that there is one knight, but that is the case so contradiction
 
-`unfold oneisknight at {notoneknight}` and use simp
+`unfold oneisknight at {notoneknight}` and use `simp`
   "
   unfold oneisknight at notoneknight
   simp [BKnight,AKnave,CKnave] at notoneknight
   knave_to_knight at BKnight
   contradiction
 
-  have CKnight := said_knight stC this 
+  have CKnight := said_knight stC this
   constructor
   assumption
   assumption
@@ -108,7 +108,7 @@ example
   "
   First prove `B.isKnave`
   "
-  have : B.isKnave 
+  have : B.isKnave
   Hint
   "
 As usual, from `knave_to_knight`
@@ -150,7 +150,7 @@ As you can see, it is not true that there only one knight and simplifying this e
   "
   unfold oneisknight at oneK
   simp [AKnight, stC, BKnight] at oneK
-  knave_to_knight at oneK 
+  knave_to_knight at oneK
   simp [ stC, BKnight] at oneK
   contradiction
 
@@ -163,7 +163,7 @@ Again conclude B's statement
   have onest := stB.mp BKnight
   Hint
   "
-Conclude `oneisknight` using simp and what you know about `A`. 
+Conclude `oneisknight` using `simp` and what you know about `A`.
   "
   simp [AKnave] at onest
   Hint
