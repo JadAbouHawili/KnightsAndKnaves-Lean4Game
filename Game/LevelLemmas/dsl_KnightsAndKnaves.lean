@@ -84,7 +84,7 @@ do`(tactic| simp [isKnave_notisKnightIff] at $t1)
 #check solve
 macro_rules
 | `(tactic| contradiction) => 
-  do `(tactic |solve | ( apply not_isKnight_and_isKnave  ; assumption ; assumption   ) )
+  do `(tactic |solve | (exfalso ; apply not_isKnight_and_isKnave  ; assumption ; assumption   ) )
 
 end tactics
 
