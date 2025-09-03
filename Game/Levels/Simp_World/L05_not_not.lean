@@ -1,6 +1,5 @@
 import Game.Metadata
 
-
 World "Simp_World"
 Level 5
 
@@ -41,7 +40,19 @@ Statement
   : P := by
 
   {
+  Hint
+  "
+Remember that `↔` means `=`. 
+  "
+  Hint(hidden:=true)
+  "
+`rw` `¬¬P` to `P` using `not_not`.
+  "
   by_contra h
+  Hint(hidden:=true)
+  "
+Remember that `¬¬P` means `¬P → False`. You know `¬P` and want to prove `False`
+  "
   contradiction
   }
 

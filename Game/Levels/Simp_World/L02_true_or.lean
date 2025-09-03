@@ -3,7 +3,7 @@ import Game.Metadata
 World "Simp_World"
 Level 2
 
-Title ""
+Title "`true_or`"
 
 Introduction
 "
@@ -19,7 +19,6 @@ eq_true (h : p)
   : p = True
 ```
 "
-#check eq_true
 
 Statement (h : P)
   : P or Q := by
@@ -85,11 +84,11 @@ Conclusion
 "
 There's an analogous theorem
 ```
-or_true (p : Prop) : (p or True) = True
-```
+or_true (p : Prop) 
+: (p or True) = True
 
-```
-or_true_iff (p : Prop) : p or True ↔ True
+or_true_iff (p : Prop) 
+: p or True ↔ True
 ```
 
 To solve with `simp`,
