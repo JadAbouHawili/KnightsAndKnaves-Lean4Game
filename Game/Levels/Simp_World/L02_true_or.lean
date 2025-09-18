@@ -27,7 +27,7 @@ Statement (h : P)
   rw [eq_true h]
   Hint
   "
-We can simplify `True or Q` to `Q`
+We can simplify `True or Q` to `True`
 
 $
 \\begin\{array}\{|c | c|c|}
