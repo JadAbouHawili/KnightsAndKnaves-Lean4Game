@@ -58,13 +58,7 @@ T & F & T \\\\
 \\end\{array}
 $
 
-You can use the theorems
-```
-true_or_iff (p : Prop) : True or p ↔ True
-```
-
-or
-
+You can use the theorem
 ```
 true_or (p : Prop) : (True or p) = True
 ```
@@ -79,16 +73,12 @@ The `trivial` tactic will do the job.
   trivial
 }
 
-#check or_true_iff
 Conclusion
 "
 There's an analogous theorem
 ```
-or_true (p : Prop) 
+or_true (p : Prop)
 : (p or True) = True
-
-or_true_iff (p : Prop) 
-: p or True ↔ True
 ```
 
 To solve with `simp`,
@@ -100,5 +90,5 @@ Try `simp` before moving on.
 "
 
 NewTactic trivial
-NewTheorem true_or true_or_iff eq_true
+NewTheorem true_or eq_true
 DisabledTactic left right

@@ -81,15 +81,14 @@ do`(tactic| simp [isKnave_notisKnightIff])
 macro "knave_to_knight" "at" t1:Lean.Parser.Tactic.locationHyp : tactic =>
 do`(tactic| simp [isKnave_notisKnightIff] at $t1)
 
-#check solve
 macro_rules
-| `(tactic| contradiction) => 
+| `(tactic| contradiction) =>
   do `(tactic |solve | (exfalso ; apply not_isKnight_and_isKnave  ; assumption ; assumption   ) )
 
 end tactics
 
-theorem dsl_iamknave {A : Islander} (hAKn : A said A.isKnave): False := by 
-  knight_or_knave A with hA hnA 
+theorem dsl_iamknave {A : Islander} (hAKn : A said A.isKnave): False := by
+  knight_or_knave A with hA hnA
   · have hnA := knight_said hAKn hA
     contradiction
   · have hnA := knave_said hAKn hnA

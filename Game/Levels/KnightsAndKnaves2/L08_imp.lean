@@ -87,17 +87,20 @@ Rewrite `¬C` in `stA` as `¬True` using `eq_true`
 Rewrite `¬True` in `stA` as `False` using `not_true`
   "
   rw [not_true] at stA
+  -- TODO: mistake in the hint
   Hint
   "
 Rewrite `False → ¬B` in `stA` as `¬B` using `false_implies`
   "
   rw [false_implies] at stA
-  #check iff_true_iff
+  #check iff_true_right
+  #check iff_true
+
   Hint
   "
-Rewrite `stA` using `iff_true_iff`.
+Rewrite `stA` using `iff_true : (p ↔ True) = p`.
   "
-  rw [iff_true_iff] at stA
+  rw [iff_true] at stA
 
   -- similarly here, let user use simp
   Hint
@@ -117,4 +120,4 @@ This is it for this approach of knights and knaves.
 
 If you want more, you can try the other approaches.
 "
-NewTheorem iff_true_right true_implies not_iff_self not_true false_implies iff_true_iff
+NewTheorem iff_true_right true_implies not_iff_self not_true false_implies

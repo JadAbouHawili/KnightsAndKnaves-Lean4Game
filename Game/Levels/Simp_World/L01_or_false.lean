@@ -24,7 +24,6 @@ eq_false (h : ¬p) : p = False
 ```
 "
 #check or_false
-#check or_false_iff
 Statement {P : Prop} {h : P or Q} {hnQ : ¬Q}
   : P := by
 {
@@ -87,19 +86,13 @@ $
 
 The theorem for this simplication
 ```
-or_false_iff (p : Prop)
-: p or False ↔ p
-```
-
-There's also an equivalent
-```
 or_false (p : Prop)
 : (p or False) = p
 ```
 
-Rewrite at `h : P or False` obtaining `h : P`, using the theorem `or_false` or `or_false_iff`.
+Rewrite at `h : P or False` obtaining `h : P`, using the theorem `or_false`.
   "
-  rw [or_false_iff P] at h
+  rw [or_false P] at h
   assumption
 }
 
@@ -116,5 +109,5 @@ will do.
 Try it.
 "
 
-NewTheorem eq_false or_false_iff or_false
+NewTheorem eq_false or_false
 NewTactic simp

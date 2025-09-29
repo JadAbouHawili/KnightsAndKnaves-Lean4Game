@@ -69,7 +69,6 @@ To see `¬P` in its implication form, you can do `unfold Not` to unfold the defi
 
 "
 
-#check not_of_eq_false
 Statement {P: Prop}
 {hP : P} {hnP : ¬P}
 : False := by{
