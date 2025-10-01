@@ -36,7 +36,7 @@ In our case, we know the left side of `or` (`P`) is true, so use `left`.
 
 #check Or.inl
 #check Or.intro_right
-Statement (hP : P)
+Statement {P Q: Prop} (hP : P)
   : P or Q := by
 {
       left

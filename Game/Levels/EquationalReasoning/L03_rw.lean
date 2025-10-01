@@ -14,7 +14,7 @@ This can be done using the tactic `rw` (short for 'rewrite').
 So `rw [h]` where `h : x=3` will replace all the `x`s of the goal with `3`.
 "
 
-Statement (h : x = 3) (g: y = 6) (i : z=10) : x + x = y := by
+Statement {x y z : ℕ } (h : x = 3) (g: y = 6) (i : z=10) : x + x = y := by
   Hint "Do `rw [{h}]` or `rw [{g}]` and observe what happens."
   Branch
     rw [g]

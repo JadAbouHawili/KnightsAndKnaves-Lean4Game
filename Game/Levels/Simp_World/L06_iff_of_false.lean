@@ -23,7 +23,7 @@ iff_of_false (ha : ¬a) (hb : ¬b)
 ```
 "
 
-Statement (hnP : ¬P) (hnQ : ¬Q)
+Statement {P Q : Prop} (hnP : ¬P) (hnQ : ¬Q)
   : P ↔ Q := by
 
   {

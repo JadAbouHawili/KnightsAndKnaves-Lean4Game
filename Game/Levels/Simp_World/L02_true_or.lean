@@ -20,7 +20,7 @@ eq_true (h : p)
 ```
 "
 
-Statement (h : P)
+Statement {P Q : Prop} (h : P)
   : P or Q := by
 
   {

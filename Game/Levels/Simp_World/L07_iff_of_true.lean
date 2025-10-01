@@ -17,7 +17,7 @@ iff_of_true (ha : a) (hb : b)
 ```
 "
 
-Statement (hP : P) (hQ : Q)
+Statement { P Q : Prop} (hP : P) (hQ : Q)
   : P ↔ Q := by
 
   {

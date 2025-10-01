@@ -23,7 +23,7 @@ where `firstarg` is a theorem that the number you are cancelling from both sides
 Give this proof to Lean using `exact`.
 "
 
-Statement (h : 4*y=16) : y = 4 := by{
+Statement {y : ℕ } (h : 4*y=16) : y = 4 := by{
   exact Nat.mul_left_cancel four_pos h
 }
 

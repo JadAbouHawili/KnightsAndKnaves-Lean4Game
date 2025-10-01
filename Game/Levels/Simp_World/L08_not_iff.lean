@@ -31,7 +31,7 @@ not_iff : ¬(a ↔ b) ↔ (¬a ↔ b)
 ```
 "
 
-Statement (h : ¬(P ↔ Q))
+Statement {P Q : Prop} (h : ¬(P ↔ Q))
   : ¬P ↔ Q := by
 
   {

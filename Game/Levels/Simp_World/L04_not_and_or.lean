@@ -52,7 +52,7 @@ not_and_or : ¬(p and q) ↔ ¬p or ¬q
 ```
 "
 
-Statement (h : ¬(P and Q))
+Statement {P Q : Prop} (h : ¬(P and Q))
   : ¬P or ¬Q := by
 
   {

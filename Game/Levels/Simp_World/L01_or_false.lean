@@ -24,7 +24,7 @@ eq_false (h : ¬p) : p = False
 ```
 "
 #check or_false
-Statement {P : Prop} {h : P or Q} {hnQ : ¬Q}
+Statement {P Q: Prop} {h : P or Q} {hnQ : ¬Q}
   : P := by
 {
   rw [eq_false hnQ] at h

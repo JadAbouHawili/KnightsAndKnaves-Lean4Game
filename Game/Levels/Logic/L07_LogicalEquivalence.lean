@@ -37,7 +37,7 @@ There are a number of ways to prove this level:
 - Since `PsameQ` means that `P` and `Q` have the same truth value, you can pretend `↔` is instead `=` and use `rw` at `hP : P` to obtain `hP : Q` and then close the goal.
 "
 
-Statement (PsameQ : P ↔ Q) (hP : P)
+Statement {P Q : Prop} (PsameQ : P ↔ Q) (hP : P)
   : Q := by
 
   {
