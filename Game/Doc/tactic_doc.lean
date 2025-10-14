@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.MathlibTheorems
 /--
 `by_contra h` proves `P` by contradiction, introducing a hypothesis `h : ¬P` and proving False, i.e. proving `¬¬P` which is equivalent to `P`.
 

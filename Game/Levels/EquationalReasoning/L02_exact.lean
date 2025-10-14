@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.MathlibTheorems
 
 World "EquationalReasoning"
 Level 2

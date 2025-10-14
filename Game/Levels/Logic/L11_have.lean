@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.MathlibTheorems
 
 World "Logic"
 Level 11

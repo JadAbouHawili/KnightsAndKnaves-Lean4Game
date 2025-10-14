@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.MathlibTheorems
 import Game.Levels.KnightsAndKnaves2.L01_Intro
 import Game.Levels.KnightsAndKnaves2.L02_Introduction
 import Game.Levels.KnightsAndKnaves2.L03_iff_iff

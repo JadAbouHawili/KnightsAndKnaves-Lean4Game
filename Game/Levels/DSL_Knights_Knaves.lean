@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.MathlibTheorems
 import Game.Levels.DSL_Knights_Knaves.L01_IamKnave
 import Game.Levels.DSL_Knights_Knaves.L02_2plus2
 import Game.Levels.DSL_Knights_Knaves.L03_prob26

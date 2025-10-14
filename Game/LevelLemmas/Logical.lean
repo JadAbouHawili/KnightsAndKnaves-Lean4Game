@@ -1,5 +1,5 @@
 import Mathlib.Data.Multiset.Basic
-import Game.Metadata
+import Game.MathlibTheorems
 
 theorem notleft_right {P Q : Prop} (Or : P ∨ Q)(notleft : ¬P) : Q := by
   cases Or

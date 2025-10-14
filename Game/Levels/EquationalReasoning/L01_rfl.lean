@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.MathlibTheorems
 import Game.Doc.doc
 import Game.Doc.tactic_doc
 

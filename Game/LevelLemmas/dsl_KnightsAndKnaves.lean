@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.MathlibTheorems
 import Mathlib.Tactic.ApplyAt
 import Mathlib.Tactic.ApplyFun
 

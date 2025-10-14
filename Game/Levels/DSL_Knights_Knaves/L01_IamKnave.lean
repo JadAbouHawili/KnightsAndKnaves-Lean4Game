@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.MathlibTheorems
 
 import Game.LevelLemmas.dsl_KnightsAndKnaves
 World "DSL_Knights_Knaves"
