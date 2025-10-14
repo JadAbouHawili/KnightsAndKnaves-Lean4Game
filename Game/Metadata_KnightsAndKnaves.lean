@@ -2,7 +2,6 @@ import Game.Metadata
 --import Game.LevelLemmas.KnightsAndKnaves
 import Mathlib.Data.Set.Basic
 import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Multiset.Basic
 import Game.LevelLemmas.settheory
 
 namespace settheory_approach
@@ -21,7 +20,6 @@ theorem disjoint_without
 (Aright : A ∈ Knave)  : False := by
   have := Finset.mem_inter_of_mem Aleft Aright
   rw [dis] at this
-  #check dis
   contradiction
 
 macro_rules

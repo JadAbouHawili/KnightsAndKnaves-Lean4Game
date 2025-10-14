@@ -100,4 +100,3 @@ theorem XorToOr {inst : DecidableEq Inhabitant}{Knight : Finset Inhabitant } {Kn
       constructor
       assumption
       exact inright_notinleft h h_1
-
