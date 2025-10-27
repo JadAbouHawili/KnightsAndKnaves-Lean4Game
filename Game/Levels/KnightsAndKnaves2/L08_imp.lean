@@ -87,10 +87,10 @@ Rewrite `¬C` in `stA` as `¬True` using `eq_true`
 Rewrite `¬True` in `stA` as `False` using `not_true`
   "
   rw [not_true] at stA
-  -- TODO: mistake in the hint
+
   Hint
   "
-Rewrite `False → ¬B` in `stA` as `¬B` using `false_implies`
+Rewrite `False → ¬B` in `stA` as `True` using `false_implies`
   "
   rw [false_implies] at stA
   #check iff_true_right
@@ -98,16 +98,19 @@ Rewrite `False → ¬B` in `stA` as `¬B` using `false_implies`
 
   Hint
   "
-Rewrite `stA` using `iff_true : (p ↔ True) = p`.
+Rewrite `A ↔ True` to `A` using `iff_true_right  (ha : a) : (b ↔ a) ↔ b`.
+
+Notice that `a` here is `True` and a proof of `True` is simply `True.intro`
   "
-  rw [iff_true] at stA
+  rw [iff_true_right True.intro] at stA
 
   -- similarly here, let user use simp
   Hint
   "
 - Use `simp` and `hC : C` to simplify `stB`
 - Rewrite `stB` using `iff_not_comm` obtaining `stB : A ↔ ¬B`
-- Prove `¬B` using and conclude the goal
+- Prove `¬B`
+- Conclude the goal
   "
   simp [hC] at stB
   rw [iff_not_comm] at stB
@@ -120,4 +123,4 @@ This is it for this approach of knights and knaves.
 
 If you want more, you can try the other approaches.
 "
-NewTheorem iff_true_right true_implies not_iff_self not_true false_implies
+NewTheorem iff_true_right true_implies not_iff_self not_true false_implies True.intro

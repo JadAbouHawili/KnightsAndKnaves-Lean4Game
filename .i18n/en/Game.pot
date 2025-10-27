@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-15\n"
+"POT-Creation-Date: 2025-10-27\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2133,14 +2133,6 @@ msgid "The assumption tactic searches for an assumption that matches the goal, a
 "§1 will close the goal."
 msgstr ""
 
-#. §0: `stA`
-#. §1: `iff_true : (p ↔ True) = p`
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "\n"
-"Rewrite §0 using §1.\n"
-""
-msgstr ""
-
 #. §0: `B.isKnave`
 #: Game.Levels.DSL_Knights_Knaves.L12_31
 msgid "\n"
@@ -3276,6 +3268,22 @@ msgstr ""
 msgid "§0, Substituting Variables By Their Values"
 msgstr ""
 
+#. §0: `simp`
+#. §1: `hC : C`
+#. §2: `stB`
+#. §3: `stB`
+#. §4: `iff_not_comm`
+#. §5: `stB : A ↔ ¬B`
+#. §6: `¬B`
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "\n"
+"- Use §0 and §1 to simplify §2\n"
+"- Rewrite §3 using §4 obtaining §5\n"
+"- Prove §6\n"
+"- Conclude the goal\n"
+""
+msgstr ""
+
 #. §0: `h : A.isKnave`
 #. §1: `A`
 #: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
@@ -4201,21 +4209,6 @@ msgstr ""
 msgid "§0: All of us are knaves.\n"
 "\n"
 "§1: Exactly one of us is a knave."
-msgstr ""
-
-#. §0: `simp`
-#. §1: `hC : C`
-#. §2: `stB`
-#. §3: `stB`
-#. §4: `iff_not_comm`
-#. §5: `stB : A ↔ ¬B`
-#. §6: `¬B`
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "\n"
-"- Use §0 and §1 to simplify §2\n"
-"- Rewrite §3 using §4 obtaining §5\n"
-"- Prove §6 using and conclude the goal\n"
-""
 msgstr ""
 
 #. §0: `∨`
@@ -5189,6 +5182,21 @@ msgstr ""
 #: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
 msgid "\n"
 "§0's statement is true, so §1 is a knight.\n"
+""
+msgstr ""
+
+#. §0: `A ↔ True`
+#. §1: `A`
+#. §2: `iff_true_right  (ha : a) : (b ↔ a) ↔ b`
+#. §3: `a`
+#. §4: `True`
+#. §5: `True`
+#. §6: `True.intro`
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "\n"
+"Rewrite §0 to §1 using §2.\n"
+"\n"
+"Notice that §3 here is §4 and a proof of §5 is simply §6\n"
 ""
 msgstr ""
 
