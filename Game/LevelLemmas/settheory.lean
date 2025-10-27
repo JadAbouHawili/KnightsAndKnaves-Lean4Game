@@ -71,32 +71,3 @@ theorem notinright_inleftIff
   constructor
   · exact notright_left LeftorRight
   · exact inleft_notinright h
-
-theorem disjoint {inst : DecidableEq K}  {left : Finset K} {right : Finset K}
-(h : left ∩ right = ∅ )
-(Aleft : A ∈ left)
-(Aright : A ∈ right)  : False := by
-  have := Finset.mem_inter_of_mem Aleft Aright
-  rw [h] at this
-  contradiction
-
-theorem XorToOr {inst : DecidableEq Inhabitant}{Knight : Finset Inhabitant } {Knave : Finset Inhabitant} (A : Inhabitant)
-(h : Knight ∩ Knave = ∅ ) : Xor' (A ∈ Knight) (A ∈ Knave) ↔ A ∈ Knight ∨ A ∈ Knave := by
-  constructor
-  unfold Xor' at *
-  · intro h'
-    cases h'
-    · exact Or.inl (h_1.left)
-    · exact Or.inr (h_1.left)
-
-  · intro h'
-    unfold Xor'
-    cases h'
-    · left
-      constructor
-      assumption
-      exact inleft_notinright h h_1
-    · right
-      constructor
-      assumption
-      exact inright_notinleft h h_1

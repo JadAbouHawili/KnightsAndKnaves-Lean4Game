@@ -1,5 +1,4 @@
 import Game.MathlibTheorems
---import Game.LevelLemmas.KnightsAndKnaves
 import Mathlib.Data.Set.Basic
 import Mathlib.Data.Fintype.Card
 import Game.LevelLemmas.settheory
