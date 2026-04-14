@@ -10,19 +10,25 @@ Introduction
 In this level, we have `Objects`, `Assumptions`, and the `Goal`.
 
 # Objects
-Objects will always be variables (letter symbols) we are working with. What these variables denote is specified after the `:`, what is after the `:` is called the type of the object.
+`x : ℕ` means `x` is of type `ℕ`(natural number).
+In other orders , `x` is a `ℕ`.
 
-Here, `x` denotes a number but we don't know which number it is. The `: ℕ` in `x : ℕ` means that `x` is a natural number (positive numbers like `1`,`2`,`3`, and so on...).
+`x` denotes a number but we don't know which number it is.(yet)
 
 # Assumptions
-As for the assumptions, we have `h : x=2` which means that `h` is an object of type `x=2`. This essentially means that `h` is an object asserting that the proposition (or statement) `x=2` is true. In other words, we know that `x=2` and `h` is a proof of that.
+In our assumptions , we specify properties about our objects.
+
+We have `h : x = 2` which means that `h` is of type `x = 2`. This essentially means that `h` is
+a proof that `x = 2`. What is the type of `x=2`? Well , `x=2 : Prop` which means `x = 2` is a proposition. This is the prposoitions as
+types and proofs as terms perspective which you can read about here...
 
 # Goal
 Our goal is to prove that `x = 2`.
 We must use our assumptions.
-We have that `h : x=2`, i.e. `h` is a proof that `x=2`.
+We have that `h : x = 2`, i.e. `h` is a proof that `x = 2`.
 
-`h` is a proof of our goal, we should let `Lean` know that we have a proof of the goal. Using `exact h` accomplishes this because `h` is EXACTLY the goal.
+Looks like we are ready to prove/close the goal.
+`exact h` tells Lean that `h` is EXACTLY what's needed to prove/close the goal.
 "
 
 Statement{x : ℕ} (h : x=2)
@@ -33,11 +39,12 @@ Statement{x : ℕ} (h : x=2)
 
 Conclusion
 "
+The goal is asking for an object of type `x = 2`.
 The `exact` in `exact h` tells `Lean` that `h`'s type EXACTLY matches the goal. In other words, `h` is EXACTLY what we need to prove the goal. `Lean` verifies this and reports that there are no more goals to prove. We are done.
 
 The `assumption` tactic can also be used here which searches for an assumption that matches the goal, and closes the goal if it finds one.
 
-Try it before moving on to the next level.
+Try it before moving on to the next level. Just type `assumption` instead of `exact h`
 "
 
 NewTactic exact assumption
