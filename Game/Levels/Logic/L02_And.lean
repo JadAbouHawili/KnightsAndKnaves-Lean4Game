@@ -9,71 +9,22 @@ Introduction
 "
 In this level, we introduce the `∧` logical connective (read as 'and').
 
-Remember the following example:
-Given the two propositions `x=2` (`P`), `y=6` (`Q`), we can construct a new propositon `x=2 ∧ y=6` (`P ∧ Q`) which is read as `x=2 and y=6` (`P and Q`).
-
-What is the truth value of this new proposition `x=2 ∧ y=6` (`P ∧ Q`)?
-Well, it would depend on the truth value of the two component propositions `x=2` (`P`), `y=6` (`Q`).
-
-What possibilities are there for each's truth value? `x=2` (`P`) can either be true or false and similarly for `y=6` (`Q`). Here is a truth table that goes through all these possibilities:
-`T` stands for true
-`F` stands for false
-$
-\\begin{array}{|c|c|c|}
-\\hline
-x=2 & y=6 & x=2 ∧ y=6 \\\\
-\\hline
-T & T & T \\\\
-\\hline
-T & F & F \\\\
-\\hline
-F & T & F \\\\
-\\hline
-F & F & F \\\\
-\\hline
-\\end{array}
-$
-
-
-The proposition `x=2 and y=6` (`P and Q`) is true when `x=2` (`P`) is true AND `y=6` (`Q`) is true.
-In other words, if `P` is true AND `Q` is true regardless of what proposition `P` stands for, `Q` stands for. The only thing that matters is their truth value.
-Therefore, the more general truth table is the same:
-$
-\\begin{array}{|c|c|c|}
-\\hline
-P & Q & P ∧ Q \\\\
-\\hline
-T & T & T \\\\
-\\hline
-T & F & F \\\\
-\\hline
-F & T & F \\\\
-\\hline
-F & F & F \\\\
-\\hline
-\\end{array}
-$
-
-Notice that `P and Q` is true when both `P` is true and `Q` is true, being false otherwise.
-
-From this, we conclude that we can prove `P and Q` if we have a proof of `P` and a proof of `Q`.
-
-This is called the `and` introduction rule `And.intro`:
+Given the following proofs that `x = 2` and `y = 6`,
 ```
-And.intro (left : P)
-          (right : Q)
+h : x = 2
+h' : y = 6
+```
+we can construct a proof that `x = 2 AND y = 6` written in Lean notation as `x = 2 ∧ y = 6`.
+
+We construct such an expression using an introduction rule called `And.intro` which introduces the `∧` symbol
+```
+And.intro (hP : P)
+          (hQ : Q)
 : P and Q
 ```
 
 You can think of `And.intro` as a function that takes two inputs: a proof of `P`, a proof of `Q` and returns a proof of `P and Q`.
 
-For example:
-```
-And.intro arg1 arg2
-```
-where `arg1 : P`, `arg2 : Q`, `(And.intro arg1 arg2) : P and Q`.
-
-Use it to construct an object of type `P and Q`, and use `exact` to close the goal.
 "
 
 Statement (P Q : Prop) (hP : P) (hQ : Q)
@@ -88,10 +39,43 @@ exact And.intro hP hQ
 
 Conclusion
 "
-You can also use the `constructor` tactic which will split the goal `P and Q` into two,
-the first being to prove `P` and the second being to prove `Q`.
+Logical connectives are either defined by their introduction and elimination rules or by truth
+tables.
 
-Moreover, instead of `And.intro hP hQ` you can use the notation `\\<hP,hQ\\>` which means the same thing.
+An introduction rule 'introduces' a symbol , in this case proving a statement of `and`.
+
+An elimination rule 'eliminates' a symbol extracting information from it. For an expression `P and Q`
+, applying the elimination rule would give you a proof of `P` and a proof of `Q` separately.(seen in future levels)
+
+The only way to introduce the symbol `∧` i.e prove a statement involving `∧` is to use the
+`And.intro` introduction rule which requires a proof of `P` and a proof of `Q`.
+
+We can conclude from this that `P ∧ Q` is true in only one case: when `P` is true and `Q` is true. It is false otherwise
+
+In truth table form, this looks like:
+
+`T` stands for true
+`F` stands for false
+
+$$
+\\begin{array}{|c|c|c|}
+\\hline
+x=2 & y=6 & x=2 ∧ y=6 \\\\\\\\
+\\hline
+T & T & T \\\\\\\\
+\\hline
+T & F & F \\\\\\\\
+\\hline
+F & T & F \\\\\\\\
+\\hline
+F & F & F \\\\\\\\
+\\hline
+\\end{array}
+$$
+
+Restart the level and use these two alternative techniques to solve it:
+- You can also use the `constructor` tactic which will split the goal `P and Q` into two, the first being to prove `P` and the second being to prove `Q`.
+- Moreover, instead of `And.intro hP hQ` you can use the notation `\\<hP,hQ\\>` which means the same thing.
 "
 
 NewTheorem And.intro

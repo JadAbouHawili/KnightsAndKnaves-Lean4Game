@@ -10,9 +10,11 @@ Introduction
 "
 This should look familiar.
 
-If it doesn't, then replace `P` by `x=2`.
+If it doesn't, then mentally replace `P` by `x = 2`.
 
-`hP` is of type `P` and `P` is of type `Prop`. So, `hP` is a proof of `P`. Our goal is to prove `P`. We already have such a proof which is `hP`, `hP` is EXACTLY what we need to prove the goal. The type of `hP` EXACTLY matches the goal.
+We want to prove `P`. `hP` is a proof of `P`.
+
+`hP` is EXACTLY what we need to prove the goal. The type of `hP` EXACTLY matches the goal.
 "
 
 Statement (P Q R : Prop) (hP: P) (hQ: Q) (hR : R)
@@ -24,7 +26,14 @@ Statement (P Q R : Prop) (hP: P) (hQ: Q) (hR : R)
 
 Conclusion
 "
-In the next levels, we will discuss how to construct new propositions from existing ones.
+In the upcoming levels, we will discuss how to construct new propositions from existing ones.
+
+Here's an example in natural language.
+
+Given the two propositions 'The sun is shining', 'It is Monday'.
+
+You can construct 'The sun is shining and it is monday' which is a proposition as well.
+It's truth value depends on the truth value of its building blocks
 "
 
 NewDefinition «Prop»

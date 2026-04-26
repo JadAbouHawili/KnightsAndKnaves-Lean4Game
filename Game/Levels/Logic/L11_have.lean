@@ -20,6 +20,8 @@ For example, you can obtain a proof of `Q` in one step by
 hPQ hP
 ```
 then `have hQ := hPQ hP` will add `hQ : Q` to the proof state, i.e. you have proven `Q` and `hQ` is the proof.
+
+Then `hQR hQ` would be a proof of `R` that closes the goal
 "
 
 Statement {P Q R : Prop}
@@ -31,4 +33,6 @@ Statement {P Q R : Prop}
 
 Conclusion
 "
+You could have also not used `have` here by passing `hQR` a proof of `P` which is `hPQ hP`. Try it
+before moving on.
 "

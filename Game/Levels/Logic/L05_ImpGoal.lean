@@ -31,5 +31,30 @@ We have a proof of `P` and we want to prove `P`.
 Conclusion
 "
 The previous two levels showed how to use an implication and how to prove an implication.
+
+
+# Truth table
+$
+\\begin{array}{|c|c|c|}
+\\hline
+P & Q & P → Q \\\\\\\\
+\\hline
+T & T & T \\\\\\\\
+\\hline
+T & F & F \\\\\\\\
+\\hline
+F & T & T \\\\\\\\
+\\hline
+F & F & T \\\\\\\\
+\\hline
+\\end{array}
+$
+
+A statement `P → Q` is false when `P` is true and `Q` false, it's true otherwise.
+This is because this is the only case where the meaning of `P → Q` is violated, i.e. we have that `P` is true so `Q` is supposed to be true as well but it's not.
+
+When `P` is false, the implication `P → Q` is always true regardless of the truth value of `Q`. That's because the implication does not tell us what `Q` should be when `P` is false -- it only tells us that `Q` must be true when `P` is true.
+
+
 "
 NewTactic intro

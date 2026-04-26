@@ -8,9 +8,11 @@ Title "`have`"
 Introduction
 "
 In this level, we introduce the `have` tactic.
-You have to prove `R` but to do that, you need `Q` first.
 
-Use `have hQ : Q` to change the goal to proving `Q`. And when the proof is done, it would be named `hQ` and added to the assumptions in the proof state.
+You have to prove `R` using `hQR` but to do that, you need `Q` first.
+
+Type `have hQ : Q` to change the goal to proving `Q`. And when the proof is done, `hQ : Q` is
+added to the proof state and can be used.
 "
 
 Statement {P Q R : Prop}
@@ -28,7 +30,7 @@ Statement {P Q R : Prop}
 
   Hint
   "
-Now that you proved `Q`, its proof `{hQ} : Q` has been added to the assumptions.
+Now that you proved `Q`, its proof `{hQ} : Q` has been added to the proof state.
 
 `hQR` takes `{hQ}` and gives you a proof of `R` which is the goal.
   "

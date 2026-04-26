@@ -15,23 +15,13 @@ hnP : P → False
 
 ## Truth table
 $
-\begin{array}{|c c|}
-\hline
-P & ¬P \\
-\hline
-T & F \\
-F & T \\
-\hline
-\end{array}
-$
-
-$
 \begin{array}{|c|c|}
 \hline
-P & P → False \\
+P & ¬P \\\\
 \hline
-T & F \\
-F & T \\
+T & F \\\\
+\hline
+F & T \\\\
 \hline
 \end{array}
 $
@@ -89,17 +79,17 @@ Logical implication `P → Q` is made up of two components:
 
 # Truth table
 $
-\begin{array}{|c c|c|}
+\begin{array}{|c|c|c|}
 \hline
-P & Q & P → Q \\
+P & Q & P → Q \\\\
 \hline
-T & T & T \\
+T & T & T \\\\
 \hline
-T & F & F \\
+T & F & F \\\\
 \hline
-F & T & T \\
+F & T & T \\\\
 \hline
-F & F & T \\
+F & F & T \\\\
 \hline
 \end{array}
 $
@@ -111,6 +101,10 @@ What logical implication does is that it takes evidence or proof for `P` and tra
 The truth of `P` IMPLIES the truth of `Q`. A proof of `P` IMPLIES a proof of `Q`.
 
 In other words, it acts like a function. If you give `P → Q` a proof of `P`, you get a proof of `Q`.
+
+`P → Q` acts like a function. It takes a proof of `P` and returns a proof of `Q`.
+
+Given `hPQ : P → Q` `hP : P`, `hPQ hP` is a proof of Q
 -/
 DefinitionDoc imp as "→"
 
@@ -118,44 +112,29 @@ DefinitionDoc imp as "→"
 `∧` read as 'and'
 Truth table:
 
-$
-\begin{array}{|c c|c|}
-\hline
-P & Q & \text{P and Q} \\
-\hline
-T & T & T \\
-\hline
-T & F & F \\
-\hline
-F & T & T \\
-\hline
-F & F & T \\
-\hline
-\end{array}
-$
-
 # Truth table
 The truth table of a logical connective illustrates the rule for that logical connective, i.e. the truth value of the compound statement depending on the truth value of the propositions it connects.
 The following truth table illustrates this for the previously discussed `∧` connective.
 `T` stands for true
 `F` stands for false
 
-$
-\begin{array}{|c c|c|}
-\hline
-P & Q & \text{P and Q} \\
-\hline
-T & T & T \\
-T & F & F \\
-F & T & F \\
-F & F & F \\
-\hline
-\end{array}
-$
-
 Notice that `P and Q` is true when both `P` is true and `Q` is true, being false otherwise.
 
-
+$$
+\\begin{array}{|c|c|c|}
+\\hline
+x=2 & y=6 & x=2 ∧ y=6 \\\\
+\\hline
+T & T & T \\\\
+\\hline
+T & F & F \\\\
+\\hline
+F & T & F \\\\
+\\hline
+F & F & F \\\\
+\\hline
+\\end{array}
+$$
 -/
 DefinitionDoc logic_and as "and"
 
@@ -164,17 +143,17 @@ DefinitionDoc logic_and as "and"
 
 # Truth Table
 $
-\begin{array}{|c c|c|}
+\begin{array}{|c|c|c|}
 \hline
-P & Q & \text{P or Q} \\
+P & Q & \text{P or Q} \\\\
 \hline
-T & T & T \\
+T & T & T \\\\
 \hline
-T & F & T \\
+T & F & T \\\\
 \hline
-F & T & T \\
+F & T & T \\\\
 \hline
-F & F & F \\
+F & F & F \\\\
 \hline
 \end{array}
 $
@@ -184,6 +163,8 @@ From the truth table, we can see that if one of `P`,`Q` is true then `P ∨ Q` i
 Therefore, if we have `P or Q` as our goal, it is enough to prove `P` or to prove `Q`.
 
 Having `P or Q` as the goal, you can tell Lean that you want to prove the left side by simply typing `left` or the right side by simply typing `right`.
+
+`left` and `right` tactics are used instead of the `Or.inl` and `Or.inr` introduction rules stated here [#Or](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or)
 -/
 DefinitionDoc logic_or as "or"
 
@@ -226,46 +207,6 @@ And.intro hP hQ : P ∧ Q
 -/
 TheoremDoc And.intro as "And.intro" in "And"
 
-/--
-False.elim : False → C says that from False, any desired proposition C holds.
-
-## Intuitively
-
-Let's check the `→` truth table:
-$$
-\\begin{array}{|c|c|c|}
-\\hline
-P & Q & P → Q \\\\
-\\hline
-T & T & T \\\\
-\\hline
-T & F & F \\\\
-\\hline
-F & T & T \\\\
-\\hline
-F & F & T \\\\
-\\hline
-\\end{array}
-$$
-
-Let's focus on part of the truth table where `P` is `False`, because we want to see what `False` implies.
-$$
-\\begin{array}{|c|c|c|}
-\\hline
-Q & False → Q \\\\
-\\hline
-T & T \\\\
-\\hline
-F & T \\\\
-\\hline
-\\end{array}
-$$
-
-We have that the implication `False → Q` is true regardless what `Q` represents and regardless whether `Q` is true or is false.
-
-So `False` implies any proposition. This principle is known as: 'From `False` anything follows'.
--/
-TheoremDoc False.elim as "False.elim" in "False"
 
 /--
 
@@ -331,15 +272,15 @@ Notice that `¬(P or Q)`,
 $
 \begin{array}{|c | c|c|}
 \hline
-P & Q & \text{¬(P or Q)} \\
+P & Q & \text{¬(P or Q)} \\\\
 \hline
-T & T & F \\
+T & T & F \\\\
 \hline
-T & F & F \\
+T & F & F \\\\
 \hline
-F & T & F \\
+F & T & F \\\\
 \hline
-F & F & T \\
+F & F & T \\\\
 \hline
 \end{array}
 $
@@ -348,15 +289,15 @@ has the same truth table as `¬P and ¬Q`
 $
 \begin{array}{|c | c|c|}
 \hline
-P & Q & \text{¬P and ¬Q} \\
+P & Q & \text{¬P and ¬Q} \\\\
 \hline
-T & T & F \\
+T & T & F \\\\
 \hline
-T & F & F \\
+T & F & F \\\\
 \hline
-F & T & F \\
+F & T & F \\\\
 \hline
-F & F & T \\
+F & F & T \\\\
 \hline
 \end{array}
 $
@@ -370,15 +311,15 @@ Notice that `¬(P and Q)`,
 $
 \begin{array}{|c | c|c|}
 \hline
-P & Q & \text{¬(P and Q)} \\
+P & Q & \text{¬(P and Q)} \\\\
 \hline
-T & T & F \\
+T & T & F \\\\
 \hline
-T & F & T \\
+T & F & T \\\\
 \hline
-F & T & T \\
+F & T & T \\\\
 \hline
-F & F & T \\
+F & F & T \\\\
 \hline
 \end{array}
 $
@@ -387,15 +328,15 @@ has the same truth table as `¬P or ¬Q`
 $
 \begin{array}{|c | c|c|}
 \hline
-P & Q & \text{¬P or ¬Q} \\
+P & Q & \text{¬P or ¬Q} \\\\
 \hline
-T & T & F \\
+T & T & F \\\\
 \hline
-T & F & T \\
+T & F & T \\\\
 \hline
-F & T & T \\
+F & T & T \\\\
 \hline
-F & F & T \\
+F & F & T \\\\
 \hline
 \end{array}
 $
@@ -818,15 +759,15 @@ Its truth table looks like the folowing:
 $
 \begin{array}{|c c|c c|c|}
 \hline
-P & Q & P → Q & Q → P & P ↔ Q \\
+P & Q & P → Q & Q → P & P ↔ Q \\\\
 \hline
-T & T & T & T & T \\
+T & T & T & T & T \\\\
 \hline
-T & F & F & T & F \\
+T & F & F & T & F \\\\
 \hline
-F & T & T & F & F \\
+F & T & T & F & F \\\\
 \hline
-F & F & T & T & T \\
+F & F & T & T & T \\\\
 \hline
 \end{array}
 $
