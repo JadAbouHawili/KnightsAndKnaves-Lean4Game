@@ -21,6 +21,7 @@ Two people are said to be of the same type if they are both knights or both knav
 `B`: `A` and `C` are of the same type.
 "
 
+set_option push_neg.use_distrib true
 Statement
 {stA : A ∈ Knight ↔ B ∈ Knave}
 {stB : B ∈ Knight ↔ (A ∈ Knight ↔ C ∈ Knight)}
@@ -49,21 +50,20 @@ Conclude that `B.isKnave`
   "
 Therefore, from `B`'s statement, conclude that `A` and `C` are not the same, i.e. are different.
   "
-  have diff : ¬(A ∈ Knight ↔ C ∈ Knight)
-  intro same
-  have BKnight := stB.mpr same
-  contradiction
+  knave_interp at stB
+  have diff := stB.mp BKnave
+  simp at diff
 
-  #check not_iff
   Hint
   "
-Use `not_iff'`
+Use `not_iff`
   "
-  rw [not_iff'] at diff
+  rw [not_iff] at diff
   Hint
   "
 Conclude `¬C.isKnight` and close the goal.
   "
+  knight_interp at diff
   have CKnave := diff.mp AKnight
   knave_interp at CKnave
   assumption

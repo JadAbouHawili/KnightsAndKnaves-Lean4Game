@@ -32,5 +32,16 @@ def oneKnave  : Prop:=   (A ∈ Knave ∧ B ∈ Knight ∧ C ∈ Knight) ∨ (A 
 
 def allKnave : Prop := A ∈ Knave ∧ B ∈ Knave ∧ C ∈ Knave
 
+
+theorem full3 {S : Finset Inhabitant'} (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : S = {A,B,C} := by
+    #check Finset.eq_univ_iff_forall
+    #check Finset.univ_subset_iff
+    have : Finset.univ = {A,B,C} := rfl
+    rw [←this]
+    rw [Finset.eq_univ_iff_forall]
+    intro x
+    all_cases_satisfy_goal all' x
+
+
 macro "by_universe3" : tactic =>
   `(tactic| (apply set_subset_univ3 ; intro x ; exact all x))

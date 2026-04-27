@@ -46,41 +46,15 @@ Now that we know that `A` is not a knight, we know that what `A` said was a lie.
 `knave_interp at stA`
   "
 
---Use
---```
---notknight_said
---    (stA : A said P)
---    ( notKnight : ¬isKnight A) : ¬P
---```
-  -- doing this instead of introducing stAn
   knave_interp at stA
+  Hint
+  "
+use `{AnK}` to simplify `stA`
+  "
   simp [AnK] at stA
   constructor
   assumption
   assumption
-  /- dsl goes on and on..
-  have st := stAn.mp AnK
-  Hint
-  "
-Use `not_and_or` at `{st}`
-  "
-  rw [not_and_or] at st
-  Hint
-  "
-`A` is not a knight means that `A` is a knave, so `{st}` could be simplified.
-
-Obtain `A.isKnave` using `knight_to_knave`, and simplify `{st}` obtaining `B.isKnave`.
-
-After that, close the goal
-  "
-  set_knight_to_knave at AnK
-  simp [AnK] at st
-
-  constructor
-  set_knight_to_knave
-  assumption
-  assumption
-  -/
 
 Conclusion
 "
