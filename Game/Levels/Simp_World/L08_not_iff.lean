@@ -14,11 +14,11 @@ Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:
 $
 \\begin{array}{|c | c|c|}
 \\hline
-P & Q & \\text{¬(P ↔ Q)} \\\\
+P & Q & \\text{¬(P ↔ Q)} \\\\\\\\
 \\hline
-T & F & T \\\\
+T & F & T \\\\\\\\
 \\hline
-F & T & T \\\\
+F & T & T \\\\\\\\
 \\hline
 \\end{array}
 $

@@ -2,6 +2,7 @@ import GameServer.Commands
 import Mathlib.Data.Multiset.Basic
 
 theorem notleft_right {P Q : Prop} (Or : P ∨ Q)(notleft : ¬P) : Q := by
+--  simp only [notleft, false_or] at Or
   cases Or
   contradiction
   assumption
@@ -24,3 +25,13 @@ theorem not_iff' {P Q : Prop}
   rw [not_iff_not]
   exact Classical.not_iff
   -/
+
+syntax "all_cases_satisfy_goal" term : tactic
+macro_rules
+    | `(tactic| all_cases_satisfy_goal $t1:term) =>
+      `(tactic| first
+        | (rw [($t1)]; assumption)  -- base case
+        | (rcases ($t1) with h | h <;>
+            first
+            | (rw [h]; assumption)
+            | all_cases_satisfy_goal h))

@@ -4,7 +4,7 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 World "DSL_Knights_Knaves"
 Level 6
 
-Title ""
+Title "Yet another I am Knave variation"
 Introduction
 "
 Suppose `A` says, 'I am a knave, but `B` isn't.'
@@ -17,7 +17,7 @@ set_option push_neg.use_distrib true
 open Islander
 Statement
 {stA : A said (A.isKnave  and  ¬B.isKnave) }
-: ¬A.isKnight and B.isKnave := by 
+: ¬A.isKnight and B.isKnave := by
   have AnK : ¬A.isKnight
   Hint "
 Assume `A` is a knight.
@@ -58,15 +58,15 @@ Use `not_and_or` at `{st}`
   "
 `A` is not a knight means that `A` is a knave, so `{st}` could be simplified.
 
-Obtain `A.isKnave` using `knight_to_knave`, and simplify `{st}` obtaining `B.isKnave`.
+Obtain `A.isKnave` using `knave_interp`, and simplify `{st}` obtaining `B.isKnave`.
 
 After that, close the goal
   "
-  knight_to_knave at AnK
+  knave_interp at AnK
   simp [AnK] at st
 
   constructor
-  knight_to_knave
+  knave_interp
   assumption
   assumption
 

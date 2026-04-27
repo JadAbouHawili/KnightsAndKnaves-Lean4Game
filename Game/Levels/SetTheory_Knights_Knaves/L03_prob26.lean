@@ -1,11 +1,11 @@
-import Game.MathlibTheorems
+import Game.LevelLemmas.settheory_KnightsAndKnaves3
 
-import Game.LevelLemmas.dsl_KnightsAndKnaves
+open Inhabitant'
 
-World "DSL_Knights_Knaves"
+World "SetTheory_Knights_Knaves"
 Level 3
 
-Title ""
+Title "Intro"
 
 Introduction
 "
@@ -19,21 +19,20 @@ At this point the third man, `C`, said, 'Don't believe `B`; he is lying!'
 
 The question is, what are `B` and `C`?
 
-Change the goal to `B.isKnave` (using the `have` tactic)
+Change the goal to `B ∈ Knave` (using the `have` tactic)
 "
 
-variable { P Q : Prop}
-open Islander
 Statement
-{hB : B said (A said A.isKnave)}
-{hC : C said B.isKnave}
-: B.isKnave and C.isKnight := by
-  have BKnave : B.isKnave
+{hB : B ∈ Knight ↔ (A ∈ Knight ↔  A ∈ Knave)}
+{hC : C ∈ Knight ↔ B ∈ Knave}
+: B ∈ Knave and C ∈ Knight := by
+  have BKnave : B ∈ Knave
   Hint
   "
-Change the goal to `¬isKnight B`
+Change the goal to `B ∉ Knight`
 
-Use the `knight_interp` tactic.
+Use the `knight_interp` tactic. This tactics lets you interpate the goal as a statement of terms
+of `Knight`
   "
   knight_interp
   Hint
@@ -45,12 +44,13 @@ Assume that `B` is a knight.
   "
 `B` is a knight so whatever `B` said is true.
   "
-  have hA := knight_said hB BKnight
+  have hA := hB.mp BKnight
   Hint
   "
 If an islander says 'I am a knave', we get a contradiction, i.e. `False`.
   "
-  exact dsl_iamknave hA
+  Hint (hidden:=true) "remember `IamKnave`"
+  exact IamKnave hA
   Hint
   "
 Now that `B` is a knave, `C`'s statement is true then `C` is a knight.
@@ -58,14 +58,11 @@ Now that `B` is a knave, `C`'s statement is true then `C` is a knight.
 So you would have `B` is a knave and `C` is a knight closing the goal.
   "
 
-  have CKnight := said_knight hC BKnave
+  have CKnight := hC.mpr BKnave
 
   constructor
   assumption
   assumption
 
 Conclusion
-"
-"
-
-NewTactic knight_interp
+""

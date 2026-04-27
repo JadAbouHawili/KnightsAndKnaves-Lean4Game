@@ -65,7 +65,7 @@ Conclude that `B`'s statement is true
 Now we have that `B.isKnave`.
 Get `¬B.isKnight`
   "
-  knave_to_knight at h
+  knight_interp at h
   Hint
   "
 So, `A`'s statement is false.
@@ -78,7 +78,7 @@ Conclude that `A` is a knave.
 Now we have that `A.isKnave`
 Get `¬A.isKnight`
   "
-  knave_to_knight at AKnave
+  knight_interp at AKnave
   Hint
   "
   Now, `C`'s statement is false, so conclude that `C` is a knave.
@@ -97,7 +97,7 @@ Get `¬A.isKnight`
   have CKnave := said_knave stC (not_false)
   right
   unfold allKnaves
-  knave_to_knight at *
+  knight_interp at *
   simp [h,AKnave,CKnave]
 
 Conclusion

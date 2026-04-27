@@ -40,6 +40,9 @@ P
 TacticDoc assumption
 
 /--
+exemplifies the `∨` elimination rule
+[#Or.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or.elim)
+
 # Proof by cases
 The `cases` tactic enables us to do a 'proof by cases'.
 
@@ -89,7 +92,44 @@ hnP : ¬P
 (or other 'simple' contradictions)
 `contradiction` will close any goal.
 
-This is because from `False`, anything follows.
+This is because from `False`, anything follows. `contradiction` exemplifies this principle: [#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim))
+
+## Intuitively
+
+Let's check the `→` truth table:
+$$
+\\begin{array}{|c|c|c|}
+\\hline
+P & Q & P → Q \\\\
+\\hline
+T & T & T \\\\
+\\hline
+T & F & F \\\\
+\\hline
+F & T & T \\\\
+\\hline
+F & F & T \\\\
+\\hline
+\\end{array}
+$$
+
+Let's focus on part of the truth table where `P` is `False`, because we want to see what `False` implies.
+$$
+\\begin{array}{|c|c|c|}
+\\hline
+Q & False → Q \\\\
+\\hline
+T & T \\\\
+\\hline
+F & T \\\\
+\\hline
+\\end{array}
+$$
+
+We have that the implication `False → Q` is true regardless what `Q` represents.
+
+So `False` implies any proposition. This principle is known as: 'From `False` anything follows'.
+
 -/
 TacticDoc contradiction
 
@@ -218,13 +258,13 @@ Rewrites all expression asserting being a knight into the equivalent expression 
 Changes all instances of `isKnight A` to `¬isKnave A`
 
 # Change the Goal
-`knight_to_knave`
+`knave_interp`
 
 # Change the Hypothesis
-`knight_to_knave` at `hypothesis`
+`knave_interp` at `hypothesis`
 
 # Change the goal and all hypothesis
-`knight_to_knave` at *
+`knave_interp` at *
 
 The `*` is called the 'wildcard', and it matches anything.
 
@@ -241,21 +281,21 @@ isKnight_notisKnaveIff
 
 `A.isKnight` and `¬A.isKnave` always have the same truth value regardless of what `A` is, so they can be interchanged
 -/
-TacticDoc knight_to_knave
+TacticDoc knave_interp
 
 /--
 Rewrites all expression asserting being a knight into the equivalent expression of not being knave
 
-Changes all instances of `isKnave A` to `¬isKnight A`
+Changes all instances of `A.isKnave` to `¬A.isKnight`
 
 # Change the Goal
-`knave_to_knight`
+`knight_interp`
 
 # Change the Hypothesis
-`knave_to_knight` at `hypothesis`
+`knight_interp` at `hypothesis`
 
 # Change the goal and all hypothesis
-`knave_to_knight` at *
+`knight_interp` at *
 
 The `*` is called the 'wildcard', and it matches anything.
 
@@ -271,7 +311,7 @@ isKnight_notisKnaveIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 
 `A.isKnave` and `¬A.isKnight` always have the same truth value regardless of what `A` is, so they can be interchanged
 -/
-TacticDoc knave_to_knight
+TacticDoc knight_interp
 
 /--
 For an islander `A`,

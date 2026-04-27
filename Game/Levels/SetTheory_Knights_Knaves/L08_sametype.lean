@@ -1,11 +1,11 @@
-import Game.MathlibTheorems
+import Game.LevelLemmas.settheory_KnightsAndKnaves
 
-import Game.LevelLemmas.dsl_KnightsAndKnaves
+open Inhabitant
 
-World "DSL_Knights_Knaves"
+World "SetTheory_Knights_Knaves"
 Level 8
 
-Title ""
+Title "Intro"
 
 Introduction
 "
@@ -20,13 +20,36 @@ A knight or a knave will say they are the same type as a knight. So when `Robert
 Let's start by proving `Ira.isKnight`
 "
 
-open Islander
+theorem iff_assoc {P Q R: Prop}
+: ((P ↔ Q) ↔ R) ↔ (P ↔ (Q ↔ R)) := by{
+  grind
+  }
 
+-- changes made from the original copies form DSL , change corresponding level in DSL if necessary...
 Statement
-{stR : Robert said (Robert.isKnight ↔ Ira.isKnight)}
-{stI : Ira said (Robert.isKnight)}
-:  Robert.isKnight and Ira.isKnight := by {
-  have IKnight : Ira.isKnight
+{Robert Ira : Inhabitant}
+{stR : Robert ∈ Knight ↔ (Robert ∈ Knight ↔ Ira ∈ Knight)}
+{stI : Ira ∈ Knight ↔ (Robert ∈ Knight)}
+:  Robert ∈ Knight and Ira ∈ Knight := by {
+-- stR looks ugly
+  Hint
+  "
+  "
+  rw [iff_assoc.symm] at stR
+  rw [iff_self] at stR
+  rw [true_iff] at stR
+  have hR := stI.mp stR
+  constructor
+  assumption ; assumption
+}
+
+/-
+example
+{Robert Ira : Inhabitant}
+{stR : Robert ∈ Knight ↔ (Robert ∈ Knight ↔ Ira ∈ Knight)}
+{stI : Ira ∈ Knight ↔ (Robert ∈ Knight)}
+:  Robert ∈ Knight and Ira ∈ Knight := by {
+  have IKnight : Ira ∈ Knight
   Hint
   "
 Assume by contradiction that `¬Ira.isKnight` using the `by_contra` tactic.
@@ -38,7 +61,7 @@ Assume by contradiction that `¬Ira.isKnight` using the `by_contra` tactic.
 
   Because `¬Ira.isKnight`, `Robert.isKnight ↔ Ira.isKnight ` can be simplified to `¬ Robert.isKnight`
   "
-  simp [nIKnight] at stR
+  simp only[nIKnight] at stR
   Hint
   "
   `stR` now becomes `Robert said ¬ Robert.isKnight`.
@@ -46,7 +69,11 @@ Assume by contradiction that `¬Ira.isKnight` using the `by_contra` tactic.
   Change that to `Robert said Robert.isKnave`
 
   "
-  knave_interp at stR
+  have hR := stI.mp IKnight
+  constructor
+  assumption ; assumption
+  /-
+  set_knight_to_knave at stR
   Hint
   "
 `Robert` is saying 'I am a knave' which is a contradiction. Use the appropriate theorem
@@ -55,7 +82,7 @@ Assume by contradiction that `¬Ira.isKnight` using the `by_contra` tactic.
   "
 `dsl_iamknave`
   "
-  exact dsl_iamknave stR
+  exact IamKnave stR
 
   Hint
   "
@@ -64,8 +91,10 @@ Now that `Ira` is a knight, conclude that `Robert` is a knight and close the goa
   have RKnight := knight_said stI IKnight
   constructor
   assumption ; assumption
+  -/
 
   }
+-/
 
 Conclusion
 "

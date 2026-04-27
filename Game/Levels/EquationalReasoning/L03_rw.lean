@@ -5,7 +5,9 @@ Level 3
 
 Title "`rw`, Substituting Variables By Their Values"
 
-Introduction "We will learn how to substitute a variable with its value, for example how to substitiute `x` by `2` if we know that `x = 2`.
+Introduction
+"
+Given that `x = 2` , we can substitute any occurrence of `x` by `2`.
 
 This can be done using `rw` tactic.(short for 'rewrite').
 

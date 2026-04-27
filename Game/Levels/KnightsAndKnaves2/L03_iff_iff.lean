@@ -14,7 +14,9 @@ Introduction
 
 '`Ira` is my type' is translated as
 ```
-( (Ira and Robert) or (¬Ira and ¬Robert) )
+( (Ira and Robert)
+or (¬Ira and ¬Robert)
+)
 ```
 Notice that this is equivalent to `Ira ↔ Robert`
 

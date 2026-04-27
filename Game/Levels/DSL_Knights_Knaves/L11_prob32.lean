@@ -92,11 +92,11 @@ Solving this is in the same spirit of what you previously did.
 `unfold allKnaves` then simplify it using the fact that `A,B` are knaves
   "
   unfold allKnaves at notallKnave
-  knight_to_knave at AKnave
+  knave_interp at AKnave
   simp [AKnave,BKnave] at notallKnave
   constructor
   assumption
-  knight_to_knave
+  knave_interp
   assumption
 
 Conclusion

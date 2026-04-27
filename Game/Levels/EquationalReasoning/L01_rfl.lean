@@ -22,6 +22,11 @@ Statement
     rfl
   }
 
-Conclusion "Notice that 'level completed! 🎉' on the bottom. We say that the goal is closed/proven. "
+Conclusion
+"
+Notice the yellow highlights in the right side pane , showing newly introduced tactics/definitions/theorems which you will need to solve the current level and can use in future levels as well.
+
+Use this as a reference for documentation and examples if you ever get stuck.
+"
 
 NewTactic rfl

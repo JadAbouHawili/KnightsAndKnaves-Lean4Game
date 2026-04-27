@@ -15,11 +15,11 @@ The truth table shows that `¬¬P` is equivalent to `P`,
 $
 \\begin{array}{|c | c|c|}
 \\hline
-P & ¬P & \\text{¬¬P}\\\\
+P & ¬P & \\text{¬¬P}\\\\\\\\
 \\hline
-T & F & T \\\\
+T & F & T \\\\\\\\
 \\hline
-F & T & F \\\\
+F & T & F \\\\\\\\
 \\hline
 \\end{array}
 $
@@ -42,7 +42,7 @@ Statement
   {
   Hint
   "
-Remember that `↔` means `=`. 
+Remember that `↔` means `=`.
   "
   Hint(hidden:=true)
   "

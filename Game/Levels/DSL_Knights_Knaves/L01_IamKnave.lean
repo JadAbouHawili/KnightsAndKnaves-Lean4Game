@@ -4,7 +4,7 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 World "DSL_Knights_Knaves"
 Level 1
 
-Title "I am a knave, I am a liar"
+Title "I am a knave, I am lying"
 
 Introduction
 "

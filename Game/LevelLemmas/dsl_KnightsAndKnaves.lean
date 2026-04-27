@@ -62,24 +62,33 @@ macro "knight_or_knave" t1:term "with" t2:rcasesPat t3:rcasesPat : tactic => do`
 
 macro "knight_or_knave" t1:term : tactic => do`(tactic| cases isKnight_or_isKnave $t1)
 
--- *
-macro "knight_to_knave" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic =>
-do`(tactic| simp [isKnight_notisKnaveIff] at $t1)
--- goal
-macro "knight_to_knave" : tactic =>
-do`(tactic| simp [isKnight_notisKnaveIff])
--- hypothesis
-macro "knight_to_knave" "at" t1:Lean.Parser.Tactic.locationHyp : tactic =>
-do`(tactic| simp [isKnight_notisKnaveIff] at $t1)
 
--- *
-macro "knave_to_knight" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic =>
-do`(tactic| simp [isKnave_notisKnightIff] at $t1)
-macro "knave_to_knight" : tactic =>
-do`(tactic| simp [isKnave_notisKnightIff])
--- hypothesis
-macro "knave_to_knight" "at" t1:Lean.Parser.Tactic.locationHyp : tactic =>
-do`(tactic| simp [isKnave_notisKnightIff] at $t1)
+macro "knave_interp" : tactic =>
+do`(tactic| ((try rw [not_iff_not.symm] ); simp only[isKnight_notisKnaveIff ,not_not])
+)
+
+macro "knave_interp" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic =>
+do`(tactic| ((try rw [not_iff_not.symm] at $t1 ); simp only[isKnight_notisKnaveIff ,not_not] at $t1)
+)
+
+macro "knave_interp" "at" t1:Lean.Parser.Tactic.locationHyp : tactic =>
+do`(tactic| ((try rw [not_iff_not.symm] at $t1 ); simp only[isKnight_notisKnaveIff ,not_not] at $t1)
+)
+
+
+
+macro "knight_interp" : tactic =>
+do`(tactic| ((try rw [not_iff_not.symm] ); simp only[isKnave_notisKnightIff,not_not])
+)
+
+macro "knight_interp" "at" t1:Lean.Parser.Tactic.locationWildcard : tactic =>
+do`(tactic| ((try rw [not_iff_not.symm] at $t1 ); simp only[isKnave_notisKnightIff,not_not] at $t1)
+)
+
+macro "knight_interp" "at" t1:Lean.Parser.Tactic.locationHyp : tactic =>
+do`(tactic| ((try rw [not_iff_not.symm] at $t1 ); simp only[isKnave_notisKnightIff,not_not] at $t1)
+)
+
 
 macro_rules
 | `(tactic| contradiction) =>

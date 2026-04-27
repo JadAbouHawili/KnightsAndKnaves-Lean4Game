@@ -32,9 +32,9 @@ Statement
   have AKnave : A.isKnave
   Hint (strict:=true)
   "
-Change the goal from `knave_to_knight`
+Change the goal from `knight_interp`
   "
-  knave_to_knight
+  knight_interp
   Hint
   "
 Assume `A.isKnight`
@@ -68,9 +68,9 @@ Let's move on to proving `B.isKnight`
   have BKnight : B.isKnight
   Hint (strict:=true)
   "
-Convert from `knight_to_knave`.
+Convert from `knave_interp`.
   "
-  knight_to_knave
+  knave_interp
   Hint (strict:=true)
   "
 Assume `B.isKnave`.
@@ -97,7 +97,7 @@ Conclude that `B`'s statement is false
   To obtain this contradiction, `unfold allKnaves at {notallknave}` then simplify the unfolded expression or construct a proof of `A.isKnave and B.isKnave and C.isKnave`.
   "
   unfold oneisknight at notoneknight
-  knight_to_knave at notoneknight
+  knave_interp at notoneknight
   -- , isKnave_notisKnightIff.mp BKnave, isKnave_notisKnightIff.mp AKnave
   simp [AKnave, BKnave ] at notoneknight
   unfold allKnaves at notallknave
@@ -120,9 +120,9 @@ After which, you can close the goal.
   "
   unfold oneisknight at one
   simp [AKnave,BKnight] at one
-  knave_to_knight at one
+  knight_interp at one
   simp [AKnave,BKnight] at one
-  knight_to_knave at one
+  knave_interp at one
   simp [AKnave,BKnight,one]
 
 Conclusion

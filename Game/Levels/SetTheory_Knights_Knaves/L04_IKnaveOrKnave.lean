@@ -1,44 +1,42 @@
-import Game.MathlibTheorems
 
-import Game.LevelLemmas.dsl_KnightsAndKnaves
+import Game.LevelLemmas.settheory_KnightsAndKnaves
 
-World "DSL_Knights_Knaves"
+open Inhabitant
+
+World "SetTheory_Knights_Knaves"
 Level 4
 
-Title "I am Knave variation"
--- prob 28
---A: 'At least one of us is a knave.'
---What are A and B?
+Title "Intro"
+
 Introduction
 "
 `A` says 'I am a knave or `B` is a knave'.
 "
 
-open Islander
 Statement
-{stA : A said (A.isKnave or B.isKnave)}
-: A.isKnight and B.isKnave := by
+{stA : A ∈ Knight ↔ (A ∈ Knave or B ∈ Knave)}
+: A ∈ Knight and B ∈ Knave := by
   Hint (strict:=true)
   "
 Let's start with proving that `A` is a knight. (use `have`)
   "
-  have AKnight : A.isKnight
+  have AKnight : A ∈ Knight
   Hint (strict := true)
   "
-  Change the goal to `¬isKnave A` using the `knave_interp` tactic
+  Change the goal to `A ∉ Knave` using the `knave_interp` tactic
   "
   knave_interp
   Hint
   "
-Assume `¬A.isKnave`
+Assume `A ∈ Knave`
   "
   intro AKnave
 
   Hint (strict := true)
   "
-Let's first prove `isKnave A ∨ isKnave B`. Type `∨` by \\or.
+Let's first prove `A ∈ Knave ∨ B ∈ Knave`. Type `∨` by \\or.
   "
-  have orexp: isKnave A or isKnave B
+  have orexp: A ∈ Knave or B ∈ Knave
   Hint
   "
 Choose which side to prove, `left` or `right`?
@@ -49,22 +47,24 @@ Choose which side to prove, `left` or `right`?
   "
   `A`'s statement is true, so `A` is a knight.
   "
-  have AKnight := said_knight stA orexp
+  have AKnight := stA.mpr orexp
   Hint
   "
 But we already knew that `A` is a knave, `contradiction`.
   "
   contradiction
 
+  -- AKnight : A ∈ Knight
   Hint "
 `A` is a knight, so we can conclude `A`'s statement.
   "
-  have orexp := knight_said stA AKnight
+  have orexp := stA.mp AKnight
+  -- orexp : A ∈ Knave or B ∈ Knave
   Hint
   "
 `{orexp}` can be simplified, using `simp` and the fact that `A` is a knight and that knights are not knaves.
 
-  First, change `A.isKnave` in `{orexp}` to `¬A.isKnight` then use `simp` and the fact that `A` is a knight to simplify `{orexp}`
+  First, change `A ∈ Knave` in `{orexp}` to `A ∉ Knight` then use `simp` and the fact that `A` is a knight to simplify `{orexp}`
   "
   knight_interp at orexp
   simp [AKnight] at orexp
@@ -80,4 +80,3 @@ Now close the goal
 Conclusion
 "
 "
-NewTactic knave_interp

@@ -1,11 +1,11 @@
-import Game.LevelLemmas.Logical
+import Game.LevelLemmas.settheory_KnightsAndKnaves3
 
-import Game.LevelLemmas.dsl_KnightsAndKnaves
-
-World "DSL_Knights_Knaves"
+World "SetTheory_Knights_Knaves"
 Level 9
 
 Title ""
+
+open Inhabitant'
 
 -- prob 34, problem 34
 Introduction
@@ -21,12 +21,12 @@ Two people are said to be of the same type if they are both knights or both knav
 `B`: `A` and `C` are of the same type.
 "
 
-open Islander
 Statement
-{stA : A said B.isKnave}
-{stB : B said (A.isKnight ↔ C.isKnight)}
-(h : A.isKnight ∨ A.isKnave)
-: C.isKnave := by
+{stA : A ∈ Knight ↔ B ∈ Knave}
+{stB : B ∈ Knight ↔ (A ∈ Knight ↔ C ∈ Knight)}
+(h : A ∈ Knight ∨ A ∈ Knave)
+: C ∈ Knave := by
+
   Hint --(strict := true)
   "
 Take cases for `A`
@@ -35,23 +35,23 @@ Take cases for `A`
   "
 Remember the `knight_or_knave` tactic.
   "
---  rcases h with AKnight | AKnave
-  knight_or_knave A with AKnight AKnave
-  Hint (strict := true)
+  rcases h with AKnight| AKnave
+--  knight_or_knave A with AKnight AKnave
+  Hint
   "
 We are in the case where `A.isKnight`
 
 Conclude that `B.isKnave`
   "
-  have BKnave := knight_said stA AKnight
+  have BKnave := stA.mp AKnight
 
-  Hint (strict := true)
+  Hint
   "
 Therefore, from `B`'s statement, conclude that `A` and `C` are not the same, i.e. are different.
   "
-  have diff : ¬(A.isKnight ↔ C.isKnight)
+  have diff : ¬(A ∈ Knight ↔ C ∈ Knight)
   intro same
-  have BKnight := said_knight stB same
+  have BKnight := stB.mpr same
   contradiction
 
   #check not_iff
@@ -75,9 +75,10 @@ We can conclude `B` is a knight.
 
 which means that `A` and `C` have the same type, obtaining that `C` is a knave and closing the goal.
   "
-  have BKnight := knave_said stA AKnave
+  knave_interp at stA
+  have BKnight := stA.mp AKnave
   knight_interp at BKnight
-  have same := knight_said stB BKnight
+  have same := stB.mp BKnight
   knave_interp at same
   exact same.mp AKnave
 
