@@ -669,7 +669,66 @@ not_isKnight_and_isKnave (A : Islander)
 
 The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning.
 -/
-DefinitionDoc DSLKnightsKnaves as "DSL Knights and Knaves"
+DefinitionDoc DSLKnightsKnaves as "DSL Knights and Knaves" in "Knights and Knaves"
+
+/--
+The setting is an island.
+Every inhabitant of the island will make a statement. There are two types of inhabitants, 'knights' that always tell the truth, and 'knaves' that always lie.
+
+We give english statements and their corresponding translation to lean.
+
+Given an inhabitant `A`
+
+`A` is a knight
+```
+A ∈ Knight
+```
+where `Knight` is a finite set(`Finset`). Just think of this as the collection of inhabitants who
+are knights
+
+`A` is a knave
+```
+A ∈ Knave
+```
+where `Knave` is a finite set(`Finset`). Just think of this as the collection of inhabitants who
+are knaves
+
+Any inhabitant is either a knight or a knave
+```
+KorKn : ∀ x : Inhabitant, x ∈ Knight ∨ x ∈ Knave
+```
+You will not have to use `KorKn` directly but instead use the tactic `knight_or_knave`
+
+Statements made by inhabitants are represented as the following for a given "A : B is a Knave" ,
+```
+stA : A ∈ Knight ↔ B ∈ Knave
+```
+
+`stA` is of two parts.
+- The forward direction `A ∈ Knight → B ∈ Knave` represents the fact that if
+`A` were knight then `A` is telling the truth and `A`'s statement is true(in this case the statement
+being `B ∈ Knave`)
+- The backward direction `B ∈ Knave → A ∈ Knight` represents the fact that if what `A` is saying
+were true then `A` must be a knight that always tells the truth(because the other option would be a
+knave that always lies)
+
+If you are interested in proving `A` to be a knave then you can interpret `stA` in terms of that
+using `knave_interp at stA`:
+```
+stA : A ∈ Knave ↔ B ∈ Knight
+```
+
+Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. `A` is not a knight and a knave at the same time. This is represented as:
+```
+dis : Knight ∩ Knave = ∅
+```
+You will not have to use this directly , `contradiction` will do the job
+
+The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning.
+-/
+DefinitionDoc SetTheoryKnightsKnaves as "Set Theory Knights and Knaves" in "Knights and Knaves"
+
+
 
 /--
 Say we have an islander `A` who could be a knight or a knave.
@@ -724,7 +783,8 @@ This representation captures the rules of the knights and knaves puzzle which ar
 - No islander is both a knight and a knave at the same time
 - Knights always tell the truth, knaves always lie.
 -/
-DefinitionDoc PropositionalKnightsKnaves as "Propositional Knights and Knaves"
+DefinitionDoc PropositionalKnightsKnaves as "Propositional Knights and Knaves" in "Knights and Knaves"
+
 /--
 
 -/
