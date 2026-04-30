@@ -42,6 +42,9 @@ theorem full3 {S : Finset Inhabitant'} (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈
     intro x
     all_cases_satisfy_goal all' x
 
+macro "all_possibilities" t1:term : tactic =>
+do`(tactic| rcases all' $t1 with isA|isB|isC <;> expose_names  )
+
 
 macro "by_universe3" : tactic =>
   `(tactic| (apply set_subset_univ3 ; intro x ; exact all x))

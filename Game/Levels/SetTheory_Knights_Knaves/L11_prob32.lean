@@ -110,16 +110,61 @@ In both cases we can close the goal so do `knight_or_knave B with BKnight BKnave
 Knight`. This we can use to close the goal directly
   "
   obtain ⟨a,ha⟩ :=oneKnave
+  Hint
+  "
+Let's prove `C ∈ Knight`
+  "
   have CKnight : C ∈ Knight
+  Hint
+  "
+Interpret the goal as knaves and assume `CKnave`
+  "
   knave_interp
   intro CKnave
 
-  grind
-  grind
+  Hint
+  "
+`Knave = \{a}`.
+
+`A ∈ Knave` so `A ∈ \{a}` so `A = a`(by simp)
+`A ∈ Knave` so `C ∈ \{a}`(by `rw`) so `C = a`(by `simp`)
+
+Therefore , `A = C` which is a contradiction
+  "
+  rw [ha] at CKnave
+  simp at CKnave
+  rw [ha] at AKnave
+  simp at AKnave
+  rw [←CKnave] at AKnave
+  contradiction
+  Hint
+  "
+Now we know that `C ∈ Knight` and can close the case where `B ∈ Knight`
+  "
+  assumption
+  Hint
+  "
+Now in the case where `B ∈ Knave`
+
+We want to prove `C ∈ Knight`, if we were to assume other i.e `C ∈ Knave` then we would want to
+prove a contradiction.
+
+We can do so because now everyone is a knave
+
+As usual , assume `CKnave`
+  "
   knave_interp
   intro CKnave
+  Hint
+  "
+Use the following theorem to obtain a contradiction and close the goal
+```
+full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : S = \{A, B, C}
+```
+  "
   exact notallKnave (full3 AKnave BKnave CKnave)
 
 Conclusion
 "
 "
+NewTheorem full3 Finset.card_eq_one

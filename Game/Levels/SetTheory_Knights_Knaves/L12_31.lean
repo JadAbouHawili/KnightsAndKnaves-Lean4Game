@@ -9,14 +9,10 @@ open Inhabitant'
 
 Introduction
 "
+A : All of us are Knaves
+B : Exactly one of us is a knight
 "
 
-
-/-
-
-ideal
-
--/
 Statement
 {stA : A ∈ Knight ↔ Knave = {A,B,C}}
 {stB : B ∈ Knight ↔ (Knight : Finset Inhabitant').card = 1  }
@@ -25,7 +21,7 @@ Statement
   "
 Change the goal to `A ∈ Knave`
   "
-  have AKnave : A ∈ Knave -- proof for this like a primitive (repeated pattern)
+  have AKnave : A ∈ Knave
   Hint
   "
 Interpret the goal in terms of knights
@@ -91,9 +87,6 @@ Let's move on to prove `B ∈ Knight`
   Change the goal using `have oneKnight : (Knight : Finset Inhabitant').card = 1`
   "
   have oneKnight : (Knight: Finset Inhabitant').card = 1
-  --knave_interp at stB
-  --have notoneKnight := stB.mp BKnave
-  --apply notoneKnight
   Hint
   "
   What it means to have cardinality equal one is given by `Finset.card_eq_one`
@@ -155,21 +148,19 @@ Close the first part of `and` using `constructor`
   intro x h
   Hint
   "
-`all' (x : Inhabitant') : x = A or x = B or x = C`
-
-  `rcases all' x with h'|h'|h'` takes cases for what `x` might be
+  `all_possibilities x` takes cases for what `x` might be
   "
-  rcases all' x with h'|h'|h'
+  all_possibilities x
   Hint
   "
   If `x` where `A` , then `A ∈ Knight` and `A ∈ Knave`
   "
-  rw [h'] at h ; contradiction
+  rw [isA] at h ; contradiction
   Hint
   "
   If `x` where `B` , then `B ∈ Knight` and `B ∈ Knave`
   "
-  rw [h'] at h ; contradiction
+  rw [isB] at h ; contradiction
   assumption
   Hint
   "
@@ -230,3 +221,6 @@ Change the goal to proving `C ∈ Knave` , interpret as knight and assume `C ∈
 Conclusion
 "
 "
+
+NewTheorem Finset.eq_singleton_iff_unique_mem
+NewTactic all_possibilities
