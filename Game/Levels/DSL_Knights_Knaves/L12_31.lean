@@ -25,9 +25,8 @@ Change the goal to `A.isKnave`
 -- prob 31
 open Islander
 set_option push_neg.use_distrib true
-example
-{stA : A said @allKnaves A B C}
-{stB : B said @oneisknight A B C}
+Statement
+{stA : A said @allKnaves A B C} {stB : B said @oneisknight A B C}
 : A.isKnave ∧ B.isKnight ∧ C.isKnave := by
   have AKnave : A.isKnave
   Hint (strict:=true)
