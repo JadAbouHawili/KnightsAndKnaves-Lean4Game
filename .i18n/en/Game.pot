@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-10\n"
+"POT-Creation-Date: 2026-05-11\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -80,6 +80,16 @@ msgstr ""
 msgid "The §0 tactic can also be used here which searches for an assumption that matches the goal, and closes the goal if it finds one.\n"
 "\n"
 "Try it before moving on to the next level. Just type §1 instead of §2"
+msgstr ""
+
+#. §0: `A ∈ Knave`
+#. §1: `stA`
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"Now this is the case where §0\n"
+"\n"
+"Interpret §1 in terms of knaves\n"
+""
 msgstr ""
 
 #. §0: `A.isKnave`
@@ -412,6 +422,16 @@ msgid "This should look familiar.\n"
 "We want to prove §2. §3 is a proof of §4.\n"
 "\n"
 "§5 is EXACTLY what we need to prove the goal. The type of §6 EXACTLY matches the goal."
+msgstr ""
+
+#. §0: `A`
+#. §1: `knight_or_knave A`
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"Let's consider the possibilities of §0\n"
+"\n"
+"§1\n"
+""
 msgstr ""
 
 #. §0: `iff_of_true`
@@ -1200,6 +1220,14 @@ msgstr ""
 #. §3: `Q`
 #: Game.Doc.tactic_doc
 msgid "The §0 tactic will split a goal of the form §1 into two subgoals §2,§3 where you can deal with each one separately."
+msgstr ""
+
+#. §0: `stC`
+#. §1: `C ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"Simplify §0 concluding that §1\n"
+""
 msgstr ""
 
 #: Game.Doc.doc
@@ -2410,6 +2438,20 @@ msgid "\n"
 ""
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `C ∈ Knave`
+#. §4: `C`
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"Notice that neither §0 is a knight nor §1 is a knight , and so the statement §2 made is false.\n"
+"And so §3\n"
+"\n"
+"But first , interpret §4's statement in terms of knaves\n"
+""
+msgstr ""
+
 #. §0: `Zoey`
 #. §1: `¬Zoey`
 #: Game.Levels.KnightsAndKnaves2.L01_Intro
@@ -2559,6 +2601,13 @@ msgid "Our goal is now §0. The §1 tactic implicitly executes §2 after doing t
 "§5\n"
 "instead of\n"
 "§6"
+msgstr ""
+
+#. §0: `right`
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"Now everyone is a knave , choose that direction to prove the goal. It is the §0 direction\n"
+""
 msgstr ""
 
 #. §0: `B ∉ Knight`
@@ -2765,6 +2814,14 @@ msgid "\n"
 "§1\n"
 "\n"
 "You can use this to prove §2, or use §3 which has been modified to handle when §4 is a knight and a knave.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `B ∈ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"From §0's statement , conclude that §1\n"
 ""
 msgstr ""
 
@@ -3076,6 +3133,13 @@ msgstr ""
 msgid "§0: §1 is a knight or §2 is a knight.\n"
 "\n"
 "§3: §4 is a knight, if and only if §5 is a knight."
+msgstr ""
+
+#. §0: `B ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"Conclude §0\n"
+""
 msgstr ""
 
 #. §0: `A`
@@ -3587,6 +3651,12 @@ msgid "\n"
 "Moreover, we know §3.\n"
 "\n"
 "Change the goal using §4\n"
+""
+msgstr ""
+
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"Conclude that everyone is a knight and close the goal\n"
 ""
 msgstr ""
 
@@ -5332,6 +5402,20 @@ msgstr ""
 msgid "\n"
 "§0 is knave and is not a knave.\n"
 "contradiction.\n"
+""
+msgstr ""
+
+#. §0: `A ∈ Knave`
+#. §1: `B ∈ Knave`
+#. §2: `C ∈ Knave`
+#. §3: `Knave = {A,B,C}`
+#. §4: `full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : Knave = {A, B, C}`
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+msgid "\n"
+"When §0 , §1 , §2 then we can conclude that everyone is a knave i.e\n"
+"§3\n"
+"\n"
+"§4 is useful here\n"
 ""
 msgstr ""
 
