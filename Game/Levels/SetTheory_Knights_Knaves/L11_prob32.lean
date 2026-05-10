@@ -167,4 +167,4 @@ full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : S = \{A, B, C}
 Conclusion
 "
 "
-NewTheorem full3 Finset.card_eq_one
+NewTheorem Finset.card_eq_one

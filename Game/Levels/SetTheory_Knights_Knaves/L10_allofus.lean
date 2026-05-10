@@ -1,4 +1,3 @@
-
 import Game.LevelLemmas.settheory_KnightsAndKnaves3
 
 World "SetTheory_Knights_Knaves"
@@ -10,14 +9,16 @@ open Inhabitant'
 
 Introduction
 "
-A says B is a knight
-B says all of us are knights
-C says A  is a knight or B is a knight
+`A` says `B` is a knight
+
+`B` says all of us are knights
+
+`C` says `A` is a knight or `B` is a knight
 "
 
 Statement
 {stA : A ∈ Knight ↔ (B ∈ Knight) }
-{stB : B ∈ Knight ↔Knight={A,B,C}}
+{stB : B ∈ Knight ↔ Knight={A,B,C} }
 {stC : C ∈ Knight ↔ A ∈ Knight ∨ B ∈ Knight}
 : Knight={A,B,C} ∨ Knave={A,B,C}:= by
   knight_or_knave A with AKnight AKnave
@@ -35,3 +36,5 @@ Statement
 Conclusion
 "
 "
+
+NewTheorem full3
