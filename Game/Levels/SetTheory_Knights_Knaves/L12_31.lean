@@ -182,7 +182,7 @@ We now know that `B ∈ Knight` so there is only one knight.
   "
 `Finset.card_eq_one : s.card = 1 ↔ ∃ a, s = \{a}`
 
-Remember that you cna think of `↔` as `=`
+Remember that you can think of `↔` as `=`
   "
   rw [Finset.card_eq_one] at oneKnight
   Hint
