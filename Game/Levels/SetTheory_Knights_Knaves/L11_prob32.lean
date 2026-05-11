@@ -104,7 +104,6 @@ In both cases we can close the goal so do `knight_or_knave B with BKnight BKnave
   rw [Finset.card_eq_one] at oneKnave
   Hint
   "
-
   obtain ⟨a,ha⟩ :={oneKnave}
 (which would be `A`) so `C ∈
 Knight`. This we can use to close the goal directly
@@ -168,3 +167,4 @@ Conclusion
 "
 "
 NewTheorem Finset.card_eq_one
+NewTactic obtain

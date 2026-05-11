@@ -9,8 +9,9 @@ open Inhabitant'
 
 Introduction
 "
-A : All of us are Knaves
-B : Exactly one of us is a knight
+`A` : All of us are Knaves
+
+`B` : Exactly one of us is a knight
 "
 
 Statement
@@ -179,7 +180,9 @@ We now know that `B ∈ Knight` so there is only one knight.
   have oneKnight := stB.mp BKnight
   Hint
   "
-`Finset.card_eq_one`
+`Finset.card_eq_one : s.card = 1 ↔ ∃ a, s = \{a}`
+
+Remember that you cna think of `↔` as `=`
   "
   rw [Finset.card_eq_one] at oneKnight
   Hint

@@ -1318,17 +1318,6 @@ msgid "\n"
 msgstr ""
 
 #. §0: `A`
-#. §1: `C ∈
-#. Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"\n"
-"obtain ⟨a,ha⟩ :=«{oneKnave}»\n"
-"(which would be §0) so §1. This we can use to close the goal directly\n"
-""
-msgstr ""
-
-#. §0: `A`
 #. §1: `unfold allKnaves`
 #: Game.Levels.DSL_Knights_Knaves.L12_31
 msgid "\n"
@@ -2090,6 +2079,16 @@ msgid "\n"
 msgstr ""
 
 #. §0: `A`
+#. §1: `C ∈
+#. Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
+msgid "\n"
+"obtain ⟨a,ha⟩ :=«{oneKnave}»\n"
+"(which would be §0) so §1. This we can use to close the goal directly\n"
+""
+msgstr ""
+
+#. §0: `A`
 #. §1: `contradiction`
 #: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
 #: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
@@ -2274,6 +2273,14 @@ msgid "Proving §0 means deriving a contradiction.\n"
 "Since §7 is §8, we can obtain §9.\n"
 "\n"
 "Moreover, we know that §10 for any §11 and so §12. (using §13 would close the goal as well, without having to use §14)"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+msgid "§0 : All of us are Knaves\n"
+"\n"
+"§1 : Exactly one of us is a knight"
 msgstr ""
 
 #. §0: `Zoey`
@@ -3392,6 +3399,17 @@ msgid "Given that §0 , we can substitute any occurrence of §1 by §2.\n"
 "So §8 where §9 will replace all the §10s of the goal with §11."
 msgstr ""
 
+#. §0: `Finset.card_eq_one : s.card = 1 ↔ ∃ a, s = {a}`
+#. §1: `↔`
+#. §2: `=`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+msgid "\n"
+"§0\n"
+"\n"
+"Remember that you cna think of §1 as §2\n"
+""
+msgstr ""
+
 #. §0: `P ↔ Q`
 #. §1: `(P → Q) ∧ (Q → P)`
 #. §2: `PsameQ.mp`
@@ -3462,7 +3480,6 @@ msgstr ""
 #: Game.Levels.DSL_Knights_Knaves.L08_sametype
 #: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
 #: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
 #: Game.Levels.SetTheory_Knights_Knaves.L12_31
 #: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
 msgid "\n"
@@ -4839,11 +4856,6 @@ msgstr ""
 msgid "§0: All of us are knaves.\n"
 "\n"
 "§1: Exactly one of us is a knave."
-msgstr ""
-
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "A : All of us are Knaves\n"
-"B : Exactly one of us is a knight"
 msgstr ""
 
 #. §0: `IamKnave`
