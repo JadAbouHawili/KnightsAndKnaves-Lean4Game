@@ -42,6 +42,9 @@ theorem full3 {S : Finset Inhabitant'} (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈
     intro x
     all_cases_satisfy_goal all' x
 
+/--
+all possibilities of an inhabitant/islander
+-/
 macro "all_possibilities" t1:term : tactic =>
 do`(tactic| rcases all' $t1 with isA|isB|isC <;> expose_names  )
 

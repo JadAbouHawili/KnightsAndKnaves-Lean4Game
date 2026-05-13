@@ -3,7 +3,7 @@ import Game.LevelLemmas.settheory_KnightsAndKnaves3
 World "SetTheory_Knights_Knaves"
 Level 12
 
-Title ""
+Title "Everyone is a knave"
 
 open Inhabitant'
 
@@ -64,12 +64,12 @@ rewrite `Knave` in the goal with `\{A,B,C}`
 `knave_interp at stA`
   "
   knave_interp at stA
-  Hint
+  Hint (strict:=true)
   "
 Conclude from `stA` that not everyone is a knave
   "
   have := stA.mp AKnave
-  Hint
+  Hint (strict:=true)
   "
 Let's move on to prove `B ∈ Knight`
   "
@@ -92,6 +92,8 @@ Let's move on to prove `B ∈ Knight`
   "
   What it means to have cardinality equal one is given by `Finset.card_eq_one`
 
+`Finset.card_eq_one : s.card = 1 ↔ ∃ a, s = \{a}`
+
 `rw [Finset.card_eq_one]`
   "
   rw [Finset.card_eq_one]
@@ -108,7 +110,7 @@ We know this element has to be `C` so `use C`
   `rw [Finset.eq_singleton_iff_unique_mem]`
   "
   rw [Finset.eq_singleton_iff_unique_mem]
-  Hint
+  Hint (strict:=true)
   "
 We know `C ∈ Knight` because other everyone would be a knave.
 
@@ -126,6 +128,8 @@ Change the goal to `C ∈ Knight` and as usual interpret as knaves and assume `C
   Hint
   "
 Close the goal using `full3`
+
+`full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : Knave = \{A, B, C}`
   "
   exact full3 AKnave BKnave CKnave
   Hint
@@ -147,7 +151,7 @@ Close the first part of `and` using `constructor`
   `intro x h` to take an arbitrary inhabitant `x` and assume `h : x ∈ Knight`
   "
   intro x h
-  Hint
+  Hint(strict:=true)
   "
   `all_possibilities x` takes cases for what `x` might be
   "
@@ -192,25 +196,31 @@ We know that there exists some `a` such that `Knight = \{a}`
 We can extract these two facts using `obtain ⟨a,ha⟩ := {oneKnight}`
   "
   obtain ⟨a,ha⟩ := oneKnight
+
   Hint
   "
-We know that this `a` is `B` so `C` must be a knave.
-Change the goal to proving `C ∈ Knave` , interpret as knight and assume `C ∈ Knight`
+  We know that there is only one knight and that knight is `B` ,  this element `a` is `B` (`B = a`) so `C` must be a knave.
+
+  Change the goal to proving `C ∈ Knave` , interpret as knight and assume `C ∈ Knight`
   "
   have CKnave: C ∈ Knave
   knight_interp
   intro knight
   Hint
   "
-  `C ∈ Knight` but `Knight =\{a}` and so `C = a` but we also know `B = a` which means `B = C` , a
+  `C ∈ Knight` but `Knight =\{a}` and so `C = a` but we also know that `B = a` which means `B = C` , a
   contradiction.
 
-  You can reach this `contradiction` in many ways using `rw` , `simp`
+Rewriting `Knight = \{a}` at `C ∈ Knight` and simplifying will yield `C = a`. You can similarly show
+`B = a` then prove `B = C`(a contradiction)
+
   "
-  rw [ha] at knight
-  simp at knight
+
   rw [ha] at BKnight
   simp at BKnight
+
+  rw [ha] at knight
+  simp at knight
   rw [←knight] at BKnight
   contradiction
   Hint
@@ -221,9 +231,10 @@ Change the goal to proving `C ∈ Knave` , interpret as knight and assume `C ∈
   "
   simp [AKnave,BKnight,CKnave]
 
+
 Conclusion
 "
 "
 
 NewTheorem Finset.eq_singleton_iff_unique_mem
-NewTactic all_possibilities
+NewTactic all_possibilities use

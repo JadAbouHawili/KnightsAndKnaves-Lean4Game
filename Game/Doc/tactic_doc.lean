@@ -334,3 +334,13 @@ cases isKnight_orisKnave A
 where `isKnight_or_isKnave A : A.isKnight or A.isKnave`
 -/
 TacticDoc knight_or_knave
+
+/--
+Considers cases of all possibilities of an inhabitant
+`x`
+
+`cases h` where `h : x = A ∨ x = B ∨ x = C`
+
+
+-/
+TacticDoc all_possibilities
