@@ -17,47 +17,38 @@ You stumble into `A`,`B`.
 "
 
 Statement
-(stA : A ∈ Knight↔ B ∈ Knight)
-(stAn : A ∈ Knave ↔ B ∉ Knight)
-(stB : B ∈ Knight ↔ ( ¬ (A ∈ Knight ↔ B ∈ Knight) ) )
+(stA : A ∈ Knight ↔ B ∈ Knight)
+(stB : B ∈ Knight ↔ A ∈ Knave )
 : A ∈ Knave and B ∈ Knave := by
-  Hint
-  "
-Let's start by proving `A.isKnave`
-  "
-  have AKnave : A ∈ Knave
-  Hint
-  "
-Change this to a goal about knights,
-and assume `A.isKnight`
-  "
-  knight_interp
-  intro AKnight
-  Hint
-  "
-So, `B.isKnight` by `A`'s statement
-  "
-  have BKnight := stA.mp AKnight
-  Hint
-  "
-So `A`,`B` are the same type, but `B` being a knight also tells us that they are not. contradiction
 
-Conclude `¬(A.isKnight ↔ B.isKnight)` from `B`'statement then prove that `A.isKnight ↔ B.isKnight` using `iff_of_true`
-  "
-  have notsame := stB.mp BKnight
-  exact notsame (iff_of_true AKnight BKnight)
-
+-- instead of rewriting explain it as transitivity of ↔
   Hint
   "
-Now that `A` is a knave, we can conclude `A` was lying and `B` is in fact a `knave`.
+  `B ∈ Knight ↔ A ∈ Knave` means the two propositions have the same truth value , in a sense they
+  are 'equal'
 
-Then, close the goal.
+And so in `stA : A ∈ Knight ↔ B ∈ Knight` you can replace `B ∈ Knight` with `A ∈ Knave` by rewriting
+`stB` at `stA`
   "
-  have BKnave := stAn.mp AKnave
-  knave_interp at BKnave
-  constructor
-  assumption
-  assumption
+  Hint (hidden:=true)
+  "
+  rw [stB] at stA
+  "
+  rw [stB] at stA
+  Hint
+  "
+Now `stA` is `A` saying I am a knave.
+
+We can derive a proof of `False` from this and store it using `have`
+
+Then `contradiction` would do the trick
+  "
+  Hint (hidden:=true) (strict:=true)
+  "
+Remember `IamKnave`
+  "
+  have:= IamKnave stA
+  contradiction
 
 Conclusion
 "

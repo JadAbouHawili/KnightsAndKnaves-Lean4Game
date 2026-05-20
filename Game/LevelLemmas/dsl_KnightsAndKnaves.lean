@@ -43,10 +43,19 @@ axiom notisKnight_isKnave {A : Islander} : ¬A.isKnight → A.isKnave
 axiom notisKnave_isKnight {A : Islander} : ¬A.isKnave → A.isKnight
 axiom isKnave_notisKnightIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 
+-- made into one ↔
+-- how can i prove that A said A.isKnave or whatever else...
 axiom knight_said {A : Islander} {P : Prop}
   (stA : A said P) (AKnight : A.isKnight) :  P
 axiom said_knight {A : Islander} {P : Prop}
 (stA : A said P) (hP : P) : A.isKnight
+
+theorem knight_saidIff {A : Islander} {P : Prop}
+  (stA : A said P) : A.isKnight ↔  P := by
+    constructor
+    exact knight_said stA
+    exact said_knight stA
+
 axiom knave_said {A : Islander} {P : Prop}
 (stA : A said P) (AKnave : A.isKnave) :  ¬P
 theorem said_knave {A : Islander} {P : Prop} (AsaidP : A said P) (nP : ¬P) : A.isKnave := by
@@ -108,4 +117,5 @@ def allKnights {A B C : Islander}:= A.isKnight ∧ B.isKnight ∧ C.isKnight
 def allKnaves {A B C : Islander} := A.isKnave ∧ B.isKnave ∧ C.isKnave
 def oneisknight {A B C : Islander} := (A.isKnight ∧ B.isKnave ∧ C.isKnave)  ∨(A.isKnave ∧  B.isKnight ∧ C.isKnave) ∨ (A.isKnave ∧ B.isKnave ∧  C.isKnight)
 def exactlyOneIsKnave {A B C : Islander} : Prop := (A.isKnave and B.isKnight and C.isKnight) ∨ (A.isKnight and B.isKnave and C.isKnight) ∨ (A.isKnight and B.isKnight and C.isKnave)
+
 end Islander

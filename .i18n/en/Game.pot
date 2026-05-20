@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13\n"
+"POT-Creation-Date: 2026-05-18\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -94,7 +94,6 @@ msgstr ""
 
 #. §0: `A.isKnave`
 #: Game.Levels.DSL_Knights_Knaves.L07_difftype
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
 #: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
 msgid "\n"
 "Let's start by proving §0\n"
@@ -165,7 +164,6 @@ msgstr ""
 
 #. §0: `A.isKnight`
 #: Game.Levels.DSL_Knights_Knaves.L07_difftype
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
 msgid "\n"
 "Change this to a goal about knights,\n"
 "and assume §0\n"
@@ -231,7 +229,6 @@ msgstr ""
 #. §2: `B`
 #. §3: `knave`
 #: Game.Levels.DSL_Knights_Knaves.L07_difftype
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
 msgid "\n"
 "Now that §0 is a knave, we can conclude §1 was lying and §2 is in fact a §3.\n"
 "\n"
@@ -286,6 +283,21 @@ msgstr ""
 #. §3: `Q`
 #: Game.Doc.doc
 msgid "If we know that §0,§1 have the same truth value then §2,§3 have the same truth value."
+msgstr ""
+
+#. §0: `stA`
+#. §1: `A`
+#. §2: `False`
+#. §3: `have`
+#. §4: `contradiction`
+#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
+msgid "\n"
+"Now §0 is §1 saying I am a knave.\n"
+"\n"
+"We can derive a proof of §2 from this and store it using §3\n"
+"\n"
+"Then §4 would do the trick\n"
+""
 msgstr ""
 
 #. §0: `B.isKnave`
@@ -343,6 +355,22 @@ msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L02_2plus2
 msgid "2 + 2 = 5"
+msgstr ""
+
+#. §0: `B ∈ Knight ↔ A ∈ Knave`
+#. §1: `stA : A ∈ Knight ↔ B ∈ Knight`
+#. §2: `B ∈ Knight`
+#. §3: `A ∈ Knave`
+#. §4: `stB`
+#. §5: `stA`
+#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
+msgid "\n"
+"§0 means the two propositions have the same truth value , in a sense they\n"
+"are 'equal'\n"
+"\n"
+"And so in §1 you can replace §2 with §3 by rewriting\n"
+"§4 at §5\n"
+""
 msgstr ""
 
 #. §0: `simp [not_or] at h`
@@ -1722,7 +1750,6 @@ msgstr ""
 #. §0: `B.isKnight`
 #. §1: `A`
 #: Game.Levels.DSL_Knights_Knaves.L07_difftype
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
 msgid "\n"
 "So, §0 by §1's statement\n"
 ""
@@ -3660,6 +3687,12 @@ msgid "\n"
 ""
 msgstr ""
 
+#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
+msgid "\n"
+"rw [stB] at stA\n"
+""
+msgstr ""
+
 #. §0: `A ∈ Knave`
 #. §1: `B ∈ Knave`
 #. §2: `C ∈ Knight`
@@ -4759,6 +4792,13 @@ msgstr ""
 #: Game.Levels.DSL_Knights_Knaves.L13_prob27
 msgid "\n"
 "We know that §0 which is §1 which means §2 told a lie which means §3 is a knave.\n"
+""
+msgstr ""
+
+#. §0: `IamKnave`
+#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
+msgid "\n"
+"Remember §0\n"
 ""
 msgstr ""
 
@@ -5944,7 +5984,6 @@ msgstr ""
 #. §5: `A.isKnight ↔ B.isKnight`
 #. §6: `iff_of_true`
 #: Game.Levels.DSL_Knights_Knaves.L07_difftype
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
 msgid "\n"
 "So §0,§1 are the same type, but §2 being a knight also tells us that they are not. contradiction\n"
 "\n"

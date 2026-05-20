@@ -16,10 +16,14 @@ You stumble into `A`,`B`.
 "
 
 open Islander
+
+-- instead of rewriting explain it as transitivity of ↔
 Statement
 (stA : A said B.isKnight)
-(stB : B said ( ¬ (A.isKnight ↔ B.isKnight) ) )
+(stB : B said A.isKnave )
 : A.isKnave and B.isKnave := by
+-- how can i prove that A said A.isKnave or whatever else...
+-- perhaps dsl might need to be folded back and just have set theory...
   Hint
   "
 Let's start by proving `A.isKnave`
@@ -44,7 +48,9 @@ So `A`,`B` are the same type, but `B` being a knight also tells us that they are
 Conclude `¬(A.isKnight ↔ B.isKnight)` from `B`'statement then prove that `A.isKnight ↔ B.isKnight` using `iff_of_true`
   "
   have notsame := knight_said stB BKnight
-  exact notsame (iff_of_true AKnight BKnight)
+  -- introduce contradiction_hyp
+  sorry
+--  contradiction
 
   Hint
   "
