@@ -43,7 +43,6 @@ axiom notisKnight_isKnave {A : Islander} : ¬A.isKnight → A.isKnave
 axiom notisKnave_isKnight {A : Islander} : ¬A.isKnave → A.isKnight
 axiom isKnave_notisKnightIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 
--- made into one ↔
 -- how can i prove that A said A.isKnave or whatever else...
 axiom knight_said {A : Islander} {P : Prop}
   (stA : A said P) (AKnight : A.isKnight) :  P
@@ -103,6 +102,9 @@ macro_rules
 | `(tactic| contradiction) =>
   do `(tactic |solve | (exfalso ; apply not_isKnight_and_isKnave  ; assumption ; assumption   ) )
 
+macro "contradiction_hyp" h1:ident h2:ident : tactic =>
+`(tactic| (exact not_isKnight_and_isKnave $h1 $h2) )
+
 end tactics
 
 theorem dsl_iamknave {A : Islander} (hAKn : A said A.isKnave): False := by
@@ -117,5 +119,7 @@ def allKnights {A B C : Islander}:= A.isKnight ∧ B.isKnight ∧ C.isKnight
 def allKnaves {A B C : Islander} := A.isKnave ∧ B.isKnave ∧ C.isKnave
 def oneisknight {A B C : Islander} := (A.isKnight ∧ B.isKnave ∧ C.isKnave)  ∨(A.isKnave ∧  B.isKnight ∧ C.isKnave) ∨ (A.isKnave ∧ B.isKnave ∧  C.isKnight)
 def exactlyOneIsKnave {A B C : Islander} : Prop := (A.isKnave and B.isKnight and C.isKnight) ∨ (A.isKnight and B.isKnave and C.isKnight) ∨ (A.isKnight and B.isKnight and C.isKnave)
+
+
 
 end Islander

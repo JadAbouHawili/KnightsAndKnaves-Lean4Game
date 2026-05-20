@@ -25,9 +25,8 @@ open Islander
 Statement
 {stA : A said B.isKnave}
 {stB : B said (A.isKnight ↔ C.isKnight)}
-(h : A.isKnight ∨ A.isKnave)
 : C.isKnave := by
-  Hint --(strict := true)
+  Hint (strict := true)
   "
 Take cases for `A`
   "
@@ -35,7 +34,6 @@ Take cases for `A`
   "
 Remember the `knight_or_knave` tactic.
   "
---  rcases h with AKnight | AKnave
   knight_or_knave A with AKnight AKnave
   Hint (strict := true)
   "
@@ -54,7 +52,6 @@ Therefore, from `B`'s statement, conclude that `A` and `C` are not the same, i.e
   have BKnight := said_knight stB same
   contradiction
 
-  #check not_iff
   Hint
   "
 Use `not_iff'`

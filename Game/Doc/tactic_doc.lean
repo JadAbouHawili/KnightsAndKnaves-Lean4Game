@@ -281,7 +281,7 @@ isKnight_notisKnaveIff
 
 `A.isKnight` and `¬A.isKnave` always have the same truth value regardless of what `A` is, so they can be interchanged
 -/
-TacticDoc knave_interp
+TacticDoc knave_interp in "KnightsAndKnaves"
 
 /--
 Rewrites all expression asserting being a knight into the equivalent expression of not being knave
@@ -311,7 +311,7 @@ isKnight_notisKnaveIff {A : Islander} : A.isKnave ↔ ¬A.isKnight
 
 `A.isKnave` and `¬A.isKnight` always have the same truth value regardless of what `A` is, so they can be interchanged
 -/
-TacticDoc knight_interp
+TacticDoc knight_interp in "KnightsAndKnaves"
 
 /--
 For an islander `A`,
@@ -333,7 +333,7 @@ cases isKnight_orisKnave A
 ```
 where `isKnight_or_isKnave A : A.isKnight or A.isKnave`
 -/
-TacticDoc knight_or_knave
+TacticDoc knight_or_knave in "KnightsAndKnaves"
 
 /--
 Considers cases of all possibilities of an inhabitant
@@ -343,4 +343,4 @@ Considers cases of all possibilities of an inhabitant
 
 
 -/
-TacticDoc all_possibilities
+TacticDoc all_possibilities in "KnightsAndKnaves"

@@ -19,7 +19,9 @@ At this point the third man, `C`, said, 'Don't believe `B`; he is lying!'
 
 The question is, what are `B` and `C`?
 
-Change the goal to `B.isKnave` (using the `have` tactic)
+If `B` were a knight then we can conclude `A said A.isKnave` which is a contradictory statement. (`B ∈ Knight → False`)
+
+Change the goal to proving `B.isKnave` using the `have` tactic
 "
 
 variable { P Q : Prop}

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18\n"
+"POT-Creation-Date: 2026-05-20\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -249,9 +249,8 @@ msgstr ""
 #. §10: `B`
 #. §11: `B`
 #. §12: `C`
-#. §13: `B.isKnave`
+#. §13: `B ∈ Knave`
 #. §14: `have`
-#: Game.Levels.DSL_Knights_Knaves.L03_prob26
 #: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
 msgid "Three of the inhabitants §0, §1, and §2 were standing together in a garden.\n"
 "\n"
@@ -4830,6 +4829,40 @@ msgid "\n"
 "\n"
 "Take cases for §8\n"
 ""
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `A`
+#. §4: `A`
+#. §5: `B`
+#. §6: `A`
+#. §7: `B`
+#. §8: `A`
+#. §9: `C`
+#. §10: `B`
+#. §11: `B`
+#. §12: `C`
+#. §13: `B`
+#. §14: `A said A.isKnave`
+#. §15: `B ∈ Knight → False`
+#. §16: `B.isKnave`
+#. §17: `have`
+#: Game.Levels.DSL_Knights_Knaves.L03_prob26
+msgid "Three of the inhabitants §0, §1, and §2 were standing together in a garden.\n"
+"\n"
+"A stranger passed by and asked §3, 'Are you a knight or a knave?' §4 answered, but rather indistinctly, so the stranger could not make out what he said.\n"
+"\n"
+"The stranger then asked §5, 'What did §6 say?' §7 replied, '§8 said that he is a knave.'\n"
+"\n"
+"At this point the third man, §9, said, 'Don't believe §10; he is lying!'\n"
+"\n"
+"The question is, what are §11 and §12?\n"
+"\n"
+"If §13 were a knight then we can conclude §14 which is a contradictory statement. (§15)\n"
+"\n"
+"Change the goal to proving §16 using the §17 tactic"
 msgstr ""
 
 #. §0: `Robert`
