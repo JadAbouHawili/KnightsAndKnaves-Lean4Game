@@ -8,10 +8,11 @@ import Game.Levels.SetTheory_Knights_Knaves.L06_prob33
 import Game.Levels.SetTheory_Knights_Knaves.L07_difftype
 import Game.Levels.SetTheory_Knights_Knaves.L08_sametype
 import Game.Levels.SetTheory_Knights_Knaves.L09_same
-import Game.Levels.SetTheory_Knights_Knaves.L10_allofus
-import Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-import Game.Levels.SetTheory_Knights_Knaves.L12_31
-import Game.Levels.SetTheory_Knights_Knaves.L13_prob27
+import Game.Levels.SetTheory_Knights_Knaves.L10_allofus2
+import Game.Levels.SetTheory_Knights_Knaves.L11_allofus
+import Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+import Game.Levels.SetTheory_Knights_Knaves.L13_31
+import Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 
 World "SetTheory_Knights_Knaves"
 Title "SetTheory Knights and Knaves"

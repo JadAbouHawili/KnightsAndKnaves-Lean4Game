@@ -1,43 +1,12 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-20\n"
+"POT-Creation-Date: 2026-05-27\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
-
-#. §0: `True`
-#. §1: `True`
-#. §2: `trivial`
-#: Game.Levels.Simp_World.L02_true_or
-msgid "\n"
-"Now we want to prove §0. But §1 is always true, so the proof is trivial.\n"
-"\n"
-"The §2 tactic will do the job.\n"
-""
-msgstr ""
-
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"Conclude not everyone is a knave\n"
-""
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `B`
-#. §3: `C`
-#. §4: `A`
-#. §5: `B`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
-msgid "§0 says §1 is a knight\n"
-"\n"
-"§2 says all of us are knights\n"
-"\n"
-"§3 says §4 is a knight or §5 is a knight"
-msgstr ""
 
 #. §0: `have`
 #. §1: ```
@@ -67,36 +36,39 @@ msgid "Coming back to §0,\n"
 "Then §8 would be a proof of §9 that closes the goal"
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `B`
+#. §3: `C`
+#. §4: `A`
+#. §5: `B`
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
+msgid "§0 says §1 is a knight\n"
+"\n"
+"§2 says all of us are knights\n"
+"\n"
+"§3 says §4 is a knight or §5 is a knight"
+msgstr ""
+
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"Conclude not everyone is a knave\n"
+""
+msgstr ""
+
 #. §0: `P`
 #. §1: `P`
 #: Game.Levels.Logic.L03_Or
 msgid "We have a proof that §0 is true, and we want to prove §1"
 msgstr ""
 
-#. §0: `assumption`
-#. §1: `assumption`
-#. §2: `exact h`
-#: Game.Levels.EquationalReasoning.L02_exact
-msgid "The §0 tactic can also be used here which searches for an assumption that matches the goal, and closes the goal if it finds one.\n"
-"\n"
-"Try it before moving on to the next level. Just type §1 instead of §2"
-msgstr ""
-
 #. §0: `A ∈ Knave`
 #. §1: `stA`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
 msgid "\n"
 "Now this is the case where §0\n"
 "\n"
 "Interpret §1 in terms of knaves\n"
-""
-msgstr ""
-
-#. §0: `A.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"Let's start by proving §0\n"
 ""
 msgstr ""
 
@@ -143,84 +115,11 @@ msgid "\n"
 ""
 msgstr ""
 
-#: GameServer.RpcHandlers
-msgid "intermediate goal solved! 🎉"
-msgstr ""
-
 #. §0: `constructor`
 #. §1: `⟨⟩`
 #: Game.Levels.KnightsAndKnaves2.L06_
 msgid "\n"
 "Split using §0 or use §1 notation.\n"
-""
-msgstr ""
-
-#. §0: `C ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"Let's prove §0\n"
-""
-msgstr ""
-
-#. §0: `A.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
-msgid "\n"
-"Change this to a goal about knights,\n"
-"and assume §0\n"
-""
-msgstr ""
-
-#. §0: `isKnight A`
-#. §1: `¬isKnave A`
-#. §2: `knave_interp`
-#. §3: `knave_interp`
-#. §4: `hypothesis`
-#. §5: `knave_interp`
-#. §6: `*`
-#. §7: ```
-#. simp [isKnight_notisKnaveIff]
-#. ```
-#. §8: ```
-#. isKnight_notisKnaveIff
-#. : A.isKnight ↔ ¬A.isKnave
-#. ```
-#. §9: `A.isKnight`
-#. §10: `¬A.isKnave`
-#. §11: `A`
-#: Game.Doc.tactic_doc
-#: Game.Doc.tactic_doc
-msgid "Rewrites all expression asserting being a knight into the equivalent expression of not being knave\n"
-"\n"
-"Changes all instances of §0 to §1\n"
-"\n"
-"# Change the Goal\n"
-"§2\n"
-"\n"
-"# Change the Hypothesis\n"
-"§3 at §4\n"
-"\n"
-"# Change the goal and all hypothesis\n"
-"§5 at *\n"
-"\n"
-"The §6 is called the 'wildcard', and it matches anything.\n"
-"\n"
-"# Under the hood\n"
-"The tactic is simply a macro abbreviating:\n"
-"§7\n"
-"where\n"
-"§8\n"
-"\n"
-"§9 and §10 always have the same truth value regardless of what §11 is, so they can be interchanged"
-msgstr ""
-
-#. §0: `C ∈ Knight`
-#. §1: `C ∈ Knight`
-#. §2: `C ∈ Knave`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"We know §0 because other everyone would be a knave.\n"
-"\n"
-"Change the goal to §1 and as usual interpret as knaves and assume §2\n"
 ""
 msgstr ""
 
@@ -236,33 +135,15 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `A`
-#. §1: `B`
-#. §2: `C`
-#. §3: `A`
-#. §4: `A`
-#. §5: `B`
-#. §6: `A`
-#. §7: `B`
-#. §8: `A`
-#. §9: `C`
-#. §10: `B`
-#. §11: `B`
-#. §12: `C`
-#. §13: `B ∈ Knave`
-#. §14: `have`
-#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
-msgid "Three of the inhabitants §0, §1, and §2 were standing together in a garden.\n"
+#. §0: `C ∈ Knight`
+#. §1: `C ∈ Knight`
+#. §2: `C ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"We know §0 because other everyone would be a knave.\n"
 "\n"
-"A stranger passed by and asked §3, 'Are you a knight or a knave?' §4 answered, but rather indistinctly, so the stranger could not make out what he said.\n"
-"\n"
-"The stranger then asked §5, 'What did §6 say?' §7 replied, '§8 said that he is a knave.'\n"
-"\n"
-"At this point the third man, §9, said, 'Don't believe §10; he is lying!'\n"
-"\n"
-"The question is, what are §11 and §12?\n"
-"\n"
-"Change the goal to §13 (using the §14 tactic)"
+"Change the goal to §1 and as usual interpret as knaves and assume §2\n"
+""
 msgstr ""
 
 #. §0: `«{cont}»`
@@ -284,23 +165,8 @@ msgstr ""
 msgid "If we know that §0,§1 have the same truth value then §2,§3 have the same truth value."
 msgstr ""
 
-#. §0: `stA`
-#. §1: `A`
-#. §2: `False`
-#. §3: `have`
-#. §4: `contradiction`
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
-msgid "\n"
-"Now §0 is §1 saying I am a knave.\n"
-"\n"
-"We can derive a proof of §2 from this and store it using §3\n"
-"\n"
-"Then §4 would do the trick\n"
-""
-msgstr ""
-
 #. §0: `B.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
 msgid "\n"
 "First prove §0\n"
 ""
@@ -352,10 +218,6 @@ msgid "In this world , we use set theory instead of a §0 to represent and solve
 "be closed"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L02_2plus2
-msgid "2 + 2 = 5"
-msgstr ""
-
 #. §0: `B ∈ Knight ↔ A ∈ Knave`
 #. §1: `stA : A ∈ Knight ↔ B ∈ Knight`
 #. §2: `B ∈ Knight`
@@ -370,18 +232,6 @@ msgid "\n"
 "And so in §1 you can replace §2 with §3 by rewriting\n"
 "§4 at §5\n"
 ""
-msgstr ""
-
-#. §0: `simp [not_or] at h`
-#. §1: `rw [not_or] at h`
-#: Game.Levels.Simp_World.L03_not_or
-#: Game.Levels.Simp_World.L04_not_and_or
-msgid "§0 instead of §1 also works."
-msgstr ""
-
-#. §0: `False`
-#: Game.Levels.Logic.L09_False
-msgid "From §0, anything follows."
 msgstr ""
 
 #. §0: `contradiction`
@@ -412,6 +262,11 @@ msgid "The §0 tactic works for the following proofs states:\n"
 msgstr ""
 
 #. §0: `False`
+#: Game.Levels.Logic.L09_False
+msgid "From §0, anything follows."
+msgstr ""
+
+#. §0: `False`
 #. §1: `False`
 #. §2: `P`
 #. §3: `¬P`
@@ -434,57 +289,13 @@ msgid "Proving §0 is what's usually called deriving a contradiction, and note t
 "Try the §12 tactic before moving on to the next level."
 msgstr ""
 
-#. §0: `P`
-#. §1: `x = 2`
-#. §2: `P`
-#. §3: `hP`
-#. §4: `P`
-#. §5: `hP`
-#. §6: `hP`
-#: Game.Levels.Logic.L01_Intro
-msgid "This should look familiar.\n"
-"\n"
-"If it doesn't, then mentally replace §0 by §1.\n"
-"\n"
-"We want to prove §2. §3 is a proof of §4.\n"
-"\n"
-"§5 is EXACTLY what we need to prove the goal. The type of §6 EXACTLY matches the goal."
-msgstr ""
-
 #. §0: `A`
 #. §1: `knight_or_knave A`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
 msgid "\n"
 "Let's consider the possibilities of §0\n"
 "\n"
 "§1\n"
-""
-msgstr ""
-
-#. §0: `iff_of_true`
-#. §1: `A ↔ ¬C`
-#: Game.Levels.KnightsAndKnaves2.L06_
-#: Game.Levels.KnightsAndKnaves2.L06_
-msgid "\n"
-"Use §0 to prove §1\n"
-""
-msgstr ""
-
-#. §0: `B`
-#. §1: `A`
-#. §2: `C`
-#: Game.Levels.DSL_Knights_Knaves.L09_same
-#: Game.Levels.SetTheory_Knights_Knaves.L09_same
-msgid "\n"
-"Therefore, from §0's statement, conclude that §1 and §2 are not the same, i.e. are different.\n"
-""
-msgstr ""
-
-#. §0: `not_iff'`
-#: Game.Levels.DSL_Knights_Knaves.L09_same
-#: Game.Levels.SetTheory_Knights_Knaves.L09_same
-msgid "\n"
-"Use §0\n"
 ""
 msgstr ""
 
@@ -571,32 +382,6 @@ msgid "Say we have an islander §0 who could be a knight or a knave.\n"
 "- Knights always tell the truth, knaves always lie."
 msgstr ""
 
-#. §0: ```
-#. cases isKnight_or_isKnave A
-#. ```
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"Try\n"
-"§0\n"
-""
-msgstr ""
-
-#: Game
-msgid "Knights And Knaves Game"
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `unfold oneisknight at «{hF}»`
-#. §3: `simp`
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "\n"
-"We now know that there is only one knight but we also know that §0 is a knight and §1 is a knight. This is the contradiction needed to close the goal.\n"
-"\n"
-"Start by §2 and using §3\n"
-""
-msgstr ""
-
 #. §0: `or`
 #. §1: `P`
 #. §2: `Q`
@@ -629,8 +414,17 @@ msgid "The simplification here concerns §0.\n"
 "§14"
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L06_prob33
-msgid "Yet another I am Knave variation"
+#: Game
+msgid "Knights And Knaves Game"
+msgstr ""
+
+#. §0: `isKnave A ∨ isKnave B`
+#. §1: `∨`
+#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
+msgid "\n"
+"Let's first prove §0. Type §1 by \\\\or.\n"
+""
 msgstr ""
 
 #. §0: `«{notoneknight}»`
@@ -643,7 +437,7 @@ msgstr ""
 #. §7: `«{notallknave}» : ¬allKnaves`
 #. §8: `unfold allKnaves at «{notallknave}»`
 #. §9: `A.isKnave and B.isKnave and C.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
+#: Game.Levels.DSL_Knights_Knaves.L13_31
 msgid "\n"
 "§0 means that there are no knights or there are two or more knights.\n"
 "\n"
@@ -660,37 +454,16 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `isKnave A ∨ isKnave B`
-#. §1: `∨`
-#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
+#. §0: `not_and_or`
+#. §1: `«{st}»`
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
 msgid "\n"
-"Let's first prove §0. Type §1 by \\\\or.\n"
+"Use §0 at §1\n"
 ""
 msgstr ""
 
-#: Game.Levels.KnightsAndKnaves2.L07_orIff
-msgid "\n"
-"Use constructor\n"
-""
-msgstr ""
-
-#: Game.Levels.Logic.L04_Implication
-msgid "Implication, →"
-msgstr ""
-
-#. §0: `↔`
-#. §1: `=`
-#. §2: `↔`
-#: Game.Levels.KnightsAndKnaves2.L03_iff_iff
-msgid "\n"
-"Remember the interpretation where you can treat §0 like §1 (refer to §2 docs for an example).\n"
-""
-msgstr ""
-
-#. §0: `∨`
-#: Game.Levels.Logic.L03_Or
-msgid "Or, §0"
+#: Game.Levels.Logic.L05_ImpGoal
+msgid "Proving an implication, Implication as the goal"
 msgstr ""
 
 #. §0: `hA : A`
@@ -715,32 +488,12 @@ msgid "\n"
 ""
 msgstr ""
 
-#: Game.Levels.Logic.L05_ImpGoal
-msgid "Proving an implication, Implication as the goal"
-msgstr ""
-
-#. §0: `not_and_or`
-#. §1: `«{st}»`
-#: Game.Levels.DSL_Knights_Knaves.L06_prob33
-msgid "\n"
-"Use §0 at §1\n"
-""
-msgstr ""
-
 #. §0: `A`
 #: Game.Levels.DSL_Knights_Knaves.L09_same
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 #: Game.Levels.SetTheory_Knights_Knaves.L09_same
 msgid "\n"
 "Take cases for §0\n"
-""
-msgstr ""
-
-#: Game.Levels.Logic.L07_LogicalEquivalence
-msgid "\n"
-"The forward direction.\n"
-"\n"
-"exact PsameQ.mp hP\n"
 ""
 msgstr ""
 
@@ -750,14 +503,6 @@ msgstr ""
 #: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
 msgid "\n"
 "Change the goal to §0 using the §1 tactic\n"
-""
-msgstr ""
-
-#. §0: `C`
-#. §1: `use C`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"We know this element has to be §0 so §1\n"
 ""
 msgstr ""
 
@@ -792,162 +537,20 @@ msgid "§0 is short for reflexivity. In the context of numbers, it is the proper
 "§16 will close this goal."
 msgstr ""
 
-#. §0: `Lean`
-#. §1: `mathlib`
-#. §2: `Lean`
-#. §3: `Lean`
-#. §4: `Lean`
-#. §5: `Lean`
-#. §6: `Lean`
-#: Game
-msgid "# Official Documentation\n"
-"\n"
-"Many technical details have been skipped for the sake of not getting bogged down with §0 and its mathematical library §1, but focus on the aspects of reasoning and proof.\n"
-"\n"
-"Moreover, the Docs in the right side pane are custom written to provide only what you need to progress through the game.\n"
-"\n"
-"You can of course go deeper by searching through the [official docs](https://leanprover-community.github.io/mathlib4_docs/)\n"
-"\n"
-"# Zulip Community Chat\n"
-"\n"
-"Zulip chat for §2 has been a very useful resource to resolve issues when formalizing the exercises, you can visit it and ask questions in the '#new members' stream. You can also view messages without signing up. There are other streams dedicated to various topics you can check out as well.\n"
-"\n"
-"https://leanprover.zulipchat.com/\n"
-"\n"
-"https://zulip.com/case-studies/lean/\n"
-"\n"
-"# Sources for Puzzles:\n"
-"\n"
-"Some puzzles were taken as is, others were modified or inspired variations.\n"
-"\n"
-"- Wolfram Cloud [Puzzle\n"
-"Generator](https://www.wolframcloud.com/objects/demonstrations/KnightsAndKnavesPuzzleGenerator-source.nb)\n"
-"\n"
-"- [382 Puzzles](https://philosophy.hku.hk/think/logic/knights.php)\n"
-"\n"
-"- [What Is The Name Of This Book](https://raymondsmullyan.com/books/what-is-the-name-of-this-book/) by Raymond Smullyan\n"
-"\n"
-"- Knights and Knaves in a logic programming language (prolog):\n"
-"https://www.youtube.com/watch?v=oEAa2pQKqQU\n"
-"\n"
-"- Blog post series, includes introduction, representation and formalization, automated solutions using other provers, and creating your own puzzles.\n"
-"https://summerofgodel.blogspot.com/2019/04/table-of-contents-for-series-of-posts.html?\n"
-"\n"
-"\n"
-"# Editor Mode\n"
-"\n"
-"Editor mode mimics the §3 experience in vscode which is the most common way to use §4.\n"
-"\n"
-"To access editor mode, click on the icon next to the hamburger menu in the top right when in a level.\n"
-"\n"
-"# Links\n"
-"## Documentation\n"
-"https://leanprover-community.github.io/mathlib4_docs/\n"
-"\n"
-"https://lean-lang.org/documentation/\n"
-"\n"
-"https://leanprover-community.github.io/\n"
-"\n"
-"https://lean-lang.org/\n"
-"\n"
-"https://github.com/leanprover-community/mathlib4\n"
-"\n"
-"# Rules\n"
-"You can relax the rules and skip levels.\n"
-"\n"
-"This is not recommended for if you have never used §5 before because every level depends on\n"
-"introduced tactics/theorems/ideas in previous levels. Moreover, relaxing the rules would ruin the\n"
-"structured/guided experience this game is supposed to offer. If that is what you are looking for, then don't relax the rules.\n"
-"\n"
-"# Solutions\n"
-"[Github Repository](https://github.com/JadAbouHawili/KnightsAndKnaves-Lean4Game)\n"
-"\n"
-"You can view the §6 code for every level there (and the solution if you are really stuck).\n"
-"\n"
-"# Other Knights and Knaves Educational Games\n"
-"[Timer Game](https://en.oiler.education/bul)\n"
-"\n"
-"[Terminal-Like](https://christopherphelps.trinket.io/sites/knight_knave_puzzler)"
-msgstr ""
-
-#: Game.Levels.Logic.L02_And
+#. §0: `C`
+#. §1: `use C`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
-"exact And.intro hP hQ\n"
-""
-msgstr ""
-
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Interpret the goal in terms of knights\n"
+"We know this element has to be §0 so §1\n"
 ""
 msgstr ""
 
 #. §0: `C ∈ Knight`
 #. §1: `B ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "\n"
 "Now we know that §0 and can close the case where §1\n"
 ""
-msgstr ""
-
-#. §0: `A`
-#. §1: `A`
-#. §2: ```
-#. A.isKnight
-#. ```
-#. §3: `A`
-#. §4: ```
-#. A.isKnave
-#. ```
-#. §5: `A`
-#. §6: ```
-#. isKnight_or_isKnave (A : Islander)
-#. : A.isKnight or A.isKnave
-#. ```
-#. §7: ```
-#. knight_said
-#. : (A said P) → A.isKnight → P
-#. said_knight
-#. : (A said P) →  P → A.isKnight
-#. ```
-#. §8: ```
-#. knave_said
-#. : (A said P) →  A.isKnave → ¬P
-#. said_knave
-#. : (A said P) →  ¬P → A.isKnave
-#. ```
-#. §9: `A`
-#. §10: ```
-#. not_isKnight_and_isKnave (A : Islander)
-#. : ¬ (A.isKnight ∧ A.isKnave)
-#. ```
-#: Game.Doc.doc
-msgid "The setting is an island.\n"
-"Every islander will make a statement. There are two types of islanders, 'knights' that always tell the truth, and 'knaves' that always lie.\n"
-"\n"
-"We give english statements and their corresponding translation to lean.\n"
-"\n"
-"Given an islander §0\n"
-"\n"
-"§1 is a knight\n"
-"§2\n"
-"\n"
-"§3 is a knave\n"
-"§4\n"
-"\n"
-"§5 is either a knight or a knave\n"
-"§6\n"
-"\n"
-"Knights always tell the truth.\n"
-"§7\n"
-"\n"
-"Knaves always lie.\n"
-"§8\n"
-"\n"
-"Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. §9 is not a knight and a knave at the same time. This is represented as:\n"
-"§10\n"
-"\n"
-"The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning."
 msgstr ""
 
 #. §0: `B`
@@ -957,7 +560,7 @@ msgstr ""
 #. §4: `«{AKnave}»`
 #. §5: `«{BKnight}»`
 #. §6: `C`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
+#: Game.Levels.DSL_Knights_Knaves.L13_31
 msgid "\n"
 "We now have that not everyone is a knave and that there is only one knight. Since we know that knight is §0, then §1 can't be a knight and must be a knave.\n"
 "\n"
@@ -998,16 +601,6 @@ msgid "For an islander §0,\n"
 "where §9"
 msgstr ""
 
-#. §0: `¬Knave={A,B,C}`
-#. §1: `Knave={A,B,C}`
-#. §2: `Knave = {A,B,C}`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Let's prove the contradiction , we know that §0 but we can prove that\n"
-"§1 so change the goal to proving §2\n"
-""
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `A`
@@ -1023,17 +616,9 @@ msgid "Suppose §0 says, 'I am a knave, but §1 isn't.'\n"
 msgstr ""
 
 #. §0: `knight_interp`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
+#: Game.Levels.DSL_Knights_Knaves.L13_31
 msgid "\n"
 "Change the goal from §0\n"
-""
-msgstr ""
-
-#. §0: `A ∈ Knave`
-#. §1: `stA`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Now that we know §0 , let's interpret §1 in terms of knaves\n"
 ""
 msgstr ""
 
@@ -1054,18 +639,6 @@ msgstr ""
 msgid "A is a knight, so whatever A said is true"
 msgstr ""
 
-#. §0: `B`
-#. §1: `C`
-#. §2: `A`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"Notice that §0 and §1 are of opposite types which means one of them is a knight , there is at\n"
-"least one knight. This detail is important and will show up later in our reasoning\n"
-"\n"
-"Take cases for §2\n"
-""
-msgstr ""
-
 #. §0: `CorB`
 #: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "\n"
@@ -1077,41 +650,14 @@ msgstr ""
 
 #. §0: `B ∈ Knave`
 #. §1: `C ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
 "Now that we know §0 , we can conclude §1 and close the goal\n"
 ""
 msgstr ""
 
-#. §0: `P,Q`
-#. §1: `P,Q`
-#. §2: `P ↔ Q`
-#: Game.Doc.doc
-msgid "If two propositions are true, then they have the same truth value.\n"
-"\n"
-"If we know §0  then we can conclude that §1 have the same truth value, i.e. §2"
-msgstr ""
-
 #: Game.Levels.Simp_World
 msgid "Simplification"
-msgstr ""
-
-#. §0: `A.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Change the goal to §0\n"
-""
-msgstr ""
-
-#. §0: `A`
-#. §1: `contradiction`
-#: Game.Levels.SetTheory_Knights_Knaves.L01_IamKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"§0 is a knight and a knave. This is a §1\n"
-""
 msgstr ""
 
 #. §0: $Name~~~$
@@ -1154,35 +700,6 @@ msgid "### **Logic Constants & Operators**\n"
 "| And | §9\\\\and§10\\\\/§11\\\\or§12->§13\\\\imp§14<->§15\\\\iff§16\\\\<>§17\\\\l§18\\\\leftarrow§19\\\\gets§20\\\\<-` |"
 msgstr ""
 
-#. §0: `∨`
-#. §1: `cases`
-#. §2: ```
-#. PorQ : P ∨ Q
-#. 
-#. Goal
-#. some-goal
-#. ```
-#. §3: `cases PorQ`
-#. §4: `P`
-#. §5: `some-goal`
-#. §6: `Q`
-#. §7: `some-goal`
-#. §8: `some-goal`
-#. §9: `some-goal`
-#: Game.Doc.tactic_doc
-msgid "exemplifies the §0 elimination rule\n"
-"[#Or.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or.elim)\n"
-"\n"
-"# Proof by cases\n"
-"The §1 tactic enables us to do a 'proof by cases'.\n"
-"\n"
-"Given,\n"
-"§2\n"
-"§3 will first assume §4 and ask you to prove §5 and then it will assume §6 and ask you to prove §7.\n"
-"\n"
-"So in both cases, §8 is true. Therefore we can conclude §9. This is called a proof by cases."
-msgstr ""
-
 #. §0: `B`
 #. §1: `h : B`
 #. §2: `AiffC : A ↔ C`
@@ -1196,115 +713,13 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `¬(P ↔ Q)`
-#. §1: `P`
-#. §2: `Q`
-#. §3: `P`
-#. §4: `Q`
-#. §5: `¬(P ↔ Q)`
-#. §6: $
-#. \\begin{array}{|c | c|c|}
-#. \\hline
-#. P & Q & \\text{¬(P ↔ Q)} \\\\
-#. \\hline
-#. T & F & T \\\\
-#. \\hline
-#. F & T & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §7: `¬P`
-#. §8: `Q`
-#. §9: `¬P ↔ Q`
-#: Game.Doc.doc
-msgid "§0 means that §1 ,§2 don't have the same truth value, i.e. one of them is true and the other is false.\n"
-"\n"
-"Here are the values for §3,§4 where §5 is satisfied:\n"
-"§6\n"
-"\n"
-"We can conclude that §7,§8 have the same truth value (§9)."
-msgstr ""
-
-#. §0: `and`
-#. §1: `constructor`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Close the first part of §0 using §1\n"
-""
-msgstr ""
-
-#. §0: `A ∈ Knave`
-#. §1: `A ∈ Knave`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"This is means that §0 which is a contradiction. Change the goal to §1\n"
-""
-msgstr ""
-
-#. §0: `constructor`
-#. §1: `P ∧ Q`
-#. §2: `P`
-#. §3: `Q`
-#: Game.Doc.tactic_doc
-msgid "The §0 tactic will split a goal of the form §1 into two subgoals §2,§3 where you can deal with each one separately."
-msgstr ""
-
-#. §0: `stC`
-#. §1: `C ∈ Knave`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
-msgid "\n"
-"Simplify §0 concluding that §1\n"
-""
-msgstr ""
-
-#: Game.Doc.doc
-msgid "A said something true, so A is a knight."
-msgstr ""
-
-#. §0: ```
-#. Objects
-#. P : Prop
-#. 
-#. Assumptions
-#. hP : P
-#. 
-#. Goal:
-#. P
-#. ```
-#. §1: `hP : P`
-#. §2: `P : Prop`
-#. §3: `hP`
-#. §4: `P`
-#. §5: `P`
-#. §6: `exact hP`
-#. §7: `hP`
-#. §8: `hP`
-#. §9: `exact h`
-#: Game.Doc.tactic_doc
-msgid "## Overview\n"
-"For the following proof state:\n"
-"§0\n"
-"Remember that §1 where §2 means §3 is a proof of §4.\n"
-"\n"
-"Since the goal is to prove §5, the only thing we have to do is to let Lean know that we do have such a proof. This is done by §6.\n"
-"\n"
-"In other words, §7 is EXACTLY whats needed to prove the goal, the type of §8 EXACTLY matches the goal, so §9 will do the job."
-msgstr ""
-
-#. §0: `B ∈ Knave`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"As usual, interpret in terms of knaves and assume §0\n"
-""
-msgstr ""
-
 #: Game.Levels.EquationalReasoning
 msgid "Equational Reasoning"
 msgstr ""
 
 #. §0: `A`
 #. §1: `A`
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
 msgid "\n"
 "Now this is the second case where §0 is a knave.\n"
 "\n"
@@ -1312,29 +727,9 @@ msgid "\n"
 ""
 msgstr ""
 
-#: Game.Levels.Logic.L01_Intro
-msgid "In the upcoming levels, we will discuss how to construct new propositions from existing ones.\n"
-"\n"
-"Here's an example in natural language.\n"
-"\n"
-"Given the two propositions 'The sun is shining', 'It is Monday'.\n"
-"\n"
-"You can construct 'The sun is shining and it is monday' which is a proposition as well.\n"
-"It's truth value depends on the truth value of its building blocks"
-msgstr ""
-
-#. §0: `hPQ`
-#. §1: `hP`
-#. §2: `Q`
-#: Game.Levels.Logic.L10_have
-msgid "\n"
-"§0 takes §1 and gives you a proof of §2\n"
-""
-msgstr ""
-
 #. §0: `A`
 #. §1: `unfold allKnaves`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
+#: Game.Levels.DSL_Knights_Knaves.L13_31
 msgid "\n"
 "Now we have that everybody is a knave, but we know §0 is a knight. Therefore, we have a contradiction.\n"
 "\n"
@@ -1342,55 +737,9 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `A`
-#. §1: `B`
-#. §2: `A`
-#. §3: `B`
-#. §4: `B`
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
-msgid "You stumble into §0,§1.\n"
-"\n"
-"§2 says '§3 is a knight'\n"
-"\n"
-"§4 says 'We are different types'"
-msgstr ""
-
-#. §0: `x`
-#. §1: `A`
-#. §2: `A ∈ Knight`
-#. §3: `A ∈ Knave`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"If §0 where §1 , then §2 and §3\n"
-""
-msgstr ""
-
 #. §0: `rfl`
 #: Game.Levels.EquationalReasoning.L01_rfl
 msgid "§0, A Number Equals Itself"
-msgstr ""
-
-#. §0: `B`
-#: Game.Levels.DSL_Knights_Knaves.L03_prob26
-#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
-msgid "\n"
-"Assume that §0 is a knight.\n"
-""
-msgstr ""
-
-#. §0: ```
-#. P ∨ Q
-#. ```
-#. §1: `P Q : Prop`
-#. §2: `left`
-#. §3: `P`
-#: Game.Doc.tactic_doc
-#: Game.Doc.tactic_doc
-msgid "Having the goal of the form:\n"
-"§0\n"
-"for §1, §2 transforms the goal to §3."
 msgstr ""
 
 #. §0: `knight_said`
@@ -1409,7 +758,7 @@ msgid "\n"
 ""
 msgstr ""
 
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "Suppose the stranger, instead of asking A what he is, asked A, 'How many knights are among you?' Again A answers indistinctly.\n"
 "\n"
 "So the stranger asks B, 'What did A say? B replies, 'A said that there is one knight among us.'\n"
@@ -1419,64 +768,32 @@ msgid "Suppose the stranger, instead of asking A what he is, asked A, 'How many 
 "Now what are B and C?"
 msgstr ""
 
-#. §0: `simp at hP`
-#. §1: `hP : ¬¬P`
-#. §2: `hP : P`
-#. §3: `simp [not_not] at hP`
-#. §4: `not_not`
-#. §5: `@simp`
-#: Game.Levels.Simp_World.L05_not_not
-msgid "§0 simplifies §1 into §2\n"
-"\n"
-"You don't have to do §3 because §4 is marked as a §5 lemma."
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `A`
-#. §3: `C`
-#. §4: `C`
-#: Game.Levels.DSL_Knights_Knaves.L09_same
-#: Game.Levels.SetTheory_Knights_Knaves.L09_same
-msgid "\n"
-"Now that §0 is a knave.\n"
-"We can conclude §1 is a knight.\n"
-"\n"
-"which means that §2 and §3 have the same type, obtaining that §4 is a knave and closing the goal.\n"
-""
-msgstr ""
-
 #. §0: `cases`
 #: Game.Levels.Logic.L06_cases
 msgid "Proof by §0"
 msgstr ""
 
-#. §0: `grind`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"You don't have to go through the reasoning again here , just do §0\n"
-""
-msgstr ""
-
-#. §0: `Knave = {a}`
-#. §1: `A ∈ Knave`
-#. §2: `A ∈ {a}`
-#. §3: `A = a`
-#. §4: `A ∈ Knave`
-#. §5: `C ∈ {a}`
-#. §6: `rw`
-#. §7: `C = a`
-#. §8: `simp`
-#. §9: `A = C`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"§0.\n"
+#. §0: `Robert`
+#. §1: `Ira`
+#. §2: `Robert`
+#. §3: `Ira`
+#. §4: `Ira`
+#. §5: `Robert`
+#. §6: `Robert`
+#. §7: `Ira`
+#. §8: `Ira`
+#. §9: `Ira.isKnight`
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
+msgid "You have met a group of 2 islanders. Their names are §0 and §1.\n"
 "\n"
-"§1 so §2 so §3(by simp)\n"
-"§4 so §5(by §6) so §7(by §8)\n"
+"§2 says: §3 is my type.\n"
 "\n"
-"Therefore , §9 which is a contradiction\n"
-""
+"§4 says: §5 is truthful.\n"
+"\n"
+"A knight or a knave will say they are the same type as a knight. So when §6 says they are the same type as §7, we know that §8 is a knight.\n"
+"\n"
+"Let's start by proving §9"
 msgstr ""
 
 #. §0: `hC : C`
@@ -1505,121 +822,10 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `Robert`
-#. §1: `Ira`
-#. §2: `Robert`
-#. §3: `Ira`
-#. §4: `Ira`
-#. §5: `Robert`
-#. §6: `Robert`
-#. §7: `Ira`
-#. §8: `Ira`
-#. §9: `Ira.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
-#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
-msgid "You have met a group of 2 islanders. Their names are §0 and §1.\n"
-"\n"
-"§2 says: §3 is my type.\n"
-"\n"
-"§4 says: §5 is truthful.\n"
-"\n"
-"A knight or a knave will say they are the same type as a knight. So when §6 says they are the same type as §7, we know that §8 is a knight.\n"
-"\n"
-"Let's start by proving §9"
-msgstr ""
-
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-msgid "\n"
-"Conclude §0's statement.\n"
-""
-msgstr ""
-
-#. §0: `contradiction`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"We now have a §0\n"
-""
-msgstr ""
-
-#. §0: `False`
-#. §1: `¬P`
-#. §2: `P → False`
-#. §3: $
-#. \\begin{array}{|c|c|}
-#. \\hline
-#. P & ¬P \\\\
-#. \\hline
-#. T & F \\\\
-#. F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §4: `→`
-#. §5: $
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. P & Q & P → Q \\\\
-#. \\hline
-#. T & T & T \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & T \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §6: `Q=False`
-#. §7: $
-#. \\begin{array}{|c|c|}
-#. \\hline
-#. P & P → False \\\\
-#. \\hline
-#. T & F \\\\
-#. \\hline
-#. F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §8: `P`
-#. §9: `¬P`
-#. §10: `P → False`
-#. §11: `¬P ↔ (P → False)`
-#: Game.Levels.Logic.L08_Not
-msgid "In the next level, we will explore what it means to have proven §0, and what it means to have\n"
-"contradictory assumptions in our proof state.\n"
-"\n"
-"But for now , let's talk about why §1 is defined as §2.\n"
-"\n"
-"\n"
-"In truth table form:\n"
-"§3\n"
-"\n"
-"\n"
-"Consider the §4 truth table:\n"
-"§5\n"
-"\n"
-"Let's focus on the rows where §6,\n"
-"§7\n"
-"\n"
-"Notice that regardless of the truth value of §8, the two propositions §9 and §10 have\n"
-"the same truth table. Therefore, they can be used interchangeably and essentially have the same\n"
-"meaning (we say that these two expressions are logically equivalent, §11)."
-msgstr ""
-
 #: Game.Doc.doc
 msgid "You can't be a knight and a knave at the same time.\n"
 "\n"
 "You can't lie and tell the truth at the same time."
-msgstr ""
-
-#: Game.Levels.EquationalReasoning.L01_rfl
-msgid "Notice the yellow highlights in the right side pane , showing newly introduced tactics/definitions/theorems which you will need to solve the current level and can use in future levels as well.\n"
-"\n"
-"Use this as a reference for documentation and examples if you ever get stuck."
 msgstr ""
 
 #. §0: `B`
@@ -1632,76 +838,12 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `False`
-#. §1: `False`
-#. §2: `→`
-#. §3: $$
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. P & Q & P → Q \\\\
-#. \\hline
-#. T & T & T \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & T \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $$
-#. §4: `P`
-#. §5: `False`
-#. §6: `False`
-#. §7: $$
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. Q & False → Q \\\\
-#. \\hline
-#. T & T \\\\
-#. \\hline
-#. F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $$
-#. §8: `False → Q`
-#. §9: `Q`
-#. §10: `False`
-#. §11: `False`
-#. §12: `False.elim (h : False) : Q`
-#. §13: `False`
-#. §14: `Q`
-#. §15: `contradiction`
-#. §16: `contradiction`
-#: Game.Levels.Logic.L09_False
-msgid "We proved §0, what does this mean? What can we conclude? What does §1 IMPLY?\n"
-"\n"
-"Let's check the §2 truth table:\n"
-"§3\n"
-"\n"
-"Let's focus on part of the truth table where §4 is §5, because we want to see what §6 implies.\n"
-"§7\n"
-"\n"
-"We have that the implication §8 is true regardless what §9 represents.\n"
-"So §10 implies any proposition. This principle is known as: 'From §11, anything follows'.\n"
-"\n"
-"This principle is represented by §12 which takes a proof of §13, and\n"
-"proves any proposition §14.(which you can read about\n"
-"[#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim))\n"
-"\n"
-"The §15 tactic exemplifies this principle and its what we will use in this game. Just type\n"
-"§16"
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `C`
-#. §3: `B`
-#. §4: `C`
-#. §5: `A`
-#: Game.Levels.KnightsAndKnaves2.L07_orIff
-msgid "§0: §1 is a knight or §2 is a knight.\n"
-"§3: §4 is a knave, if and only if §5 is a knave"
+#. §0: `B.isKnight`
+#. §1: `A`
+#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+msgid "\n"
+"So, §0 by §1's statement\n"
+""
 msgstr ""
 
 #. §0: `Objects`
@@ -1746,16 +888,8 @@ msgid "In this level, we have §0, §1, and the §2.\n"
 "§18 tells Lean that §19 is EXACTLY what's needed to prove/close the goal."
 msgstr ""
 
-#. §0: `B.isKnight`
-#. §1: `A`
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
-msgid "\n"
-"So, §0 by §1's statement\n"
-""
-msgstr ""
-
 #. §0: `B ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "Let's move on to prove §0\n"
 ""
@@ -1763,13 +897,6 @@ msgstr ""
 
 #: Game.Levels.SetTheory_Knights_Knaves
 msgid "SetTheory Knights and Knaves"
-msgstr ""
-
-#. §0: `simp`
-#: Game.Levels.Simp_World.L09_not_iff_not
-msgid "This was the last simplification theorem.\n"
-"\n"
-"Some of these you will use in the next two worlds solving knights and knaves logic puzzles (or use the §0 tactic if you prefer)."
 msgstr ""
 
 #. §0: `¬C`
@@ -1815,125 +942,6 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `P ↔ Q`
-#. §1: `(P → Q) ∧ (Q → P)`
-#. §2: $
-#. \\begin{array}{|c c|c c|c|}
-#. \\hline
-#. P & Q & P → Q & Q → P & P ↔ Q \\\\
-#. \\hline
-#. T & T & T & T & T \\\\
-#. \\hline
-#. T & F & F & T & F \\\\
-#. \\hline
-#. F & T & T & F & F \\\\
-#. \\hline
-#. F & F & T & T & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §3: `P ↔ Q`
-#. §4: `P,Q`
-#. §5: `P,Q`
-#. §6: `P`
-#. §7: `Q`
-#. §8: `P`
-#. §9: `Q`
-#. §10: `P`
-#. §11: `Q`
-#. §12: ```
-#. h : P ↔ Q
-#. h.mp : P → Q
-#. h.mpr : Q → P
-#. ```
-#. §13: `h.mp`
-#. §14: `h.mpr`
-#. §15: `P ↔ Q`
-#. §16: `P = Q`
-#. §17: `P`
-#. §18: `Q`
-#. §19: `P ↔ Q`
-#. §20: `P = Q`
-#. §21: `rw`
-#. §22: `=`
-#. §23: ```
-#. h : P ↔ Q
-#. hP : P
-#. ```
-#. §24: `rw [h] at hP`
-#. §25: ```
-#. h : P ↔ Q
-#. hP : Q
-#. ```
-#: Game.Doc.doc
-msgid "## Truth Table\n"
-"§0  is defined as §1.\n"
-"\n"
-"Its truth table looks like the folowing:\n"
-"§2\n"
-"\n"
-"So, §3 is true when §4 are true or §5 are false, i.e. when §6 and §7 have the same truth value. Therefore, §8 and §9 are equivalent from a truth value perspective regardless what the statement of §10 and of §11 is.\n"
-"\n"
-"## Extracting Each Implication\n"
-"§12\n"
-"§13 is the forward direction and §14 is the backward direction.\n"
-"\n"
-"## §15 is §16\n"
-"Since §17, §18 have the same truth value, they can be used interchangeably.\n"
-"You can think of §19 as §20 and use §21 in the same way you would if there was an actual §22 in the expression.\n"
-"\n"
-"For example:\n"
-"§23\n"
-"Doing §24 results in:\n"
-"§25"
-msgstr ""
-
-#. §0: `A`
-#. §1: ```
-#. Asaid : A said A.isKnave
-#. ```
-#. §2: `False`
-#. §3: `A`
-#. §4: `A`
-#. §5: ```
-#. isKnight_or_isKnave
-#. (A : Islander)
-#. : A.isKnight or A.isKnave
-#. ```
-#. §6: `A`
-#. §7: `A`
-#. §8: `A`
-#. §9: `A`
-#. §10: `False`
-#. §11: `A`
-#. §12: `A`
-#. §13: `A`
-#. §14: `A`
-#. §15: `False`
-#. §16: `cases`
-#. §17: `isKnight_or_isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "In this level, we present the 'I am a knave' puzzle.\n"
-"\n"
-"The given islander §0 says 'I am a knave'\n"
-"§1\n"
-"\n"
-"The goal is to prove §2. Given the rules of the game, and that §3 says 'I am a knave' we have a contradiction.\n"
-"\n"
-"By the rules of the game, we know that §4 is either a knight or a knave.\n"
-"§5\n"
-"\n"
-"If §6 were a knight, then §7's statement is true then §8 is a knave but that's impossible. So, if §9 were a knight then we can prove §10.\n"
-"\n"
-"If §11 were a knave, then §12's statement would be false, i.e. §13 is not a knave but thats impossible as well. So, if §14 were a knave then we can prove §15.\n"
-"\n"
-"We consider every case using the §16 tactic, and §17."
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-msgid "Another I am Knave variation"
-msgstr ""
-
 #. §0: `P`
 #. §1: `Q`
 #. §2: ```
@@ -1947,56 +955,10 @@ msgid "Here, we have that §0,§1 are both true.\n"
 "§2"
 msgstr ""
 
-#. §0: `¬(P ↔ Q)`
-#. §1: `P`
-#. §2: `Q`
-#. §3: `P`
-#. §4: `Q`
-#. §5: `¬(P ↔ Q)`
-#. §6: $
-#. \\begin{array}{|c | c|c|}
-#. \\hline
-#. P & Q & \\text{¬(P ↔ Q)} \\\\
-#. \\hline
-#. T & F & T \\\\
-#. \\hline
-#. F & T & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §7: `¬P`
-#. §8: `Q`
-#. §9: `¬P ↔ Q`
-#. §10: `P`
-#. §11: `¬Q`
-#. §12: `P ↔ ¬Q`
-#. §13: ```
-#. not_iff : ¬(a ↔ b) ↔ (¬a ↔ b)
-#. ```
-#: Game.Levels.Simp_World.L08_not_iff
-msgid "§0 means that §1 ,§2 don't have the same truth value, i.e. one of them is true and the other is false.\n"
-"\n"
-"Here are the values for §3,§4 where §5 is satisfied:\n"
-"§6\n"
-"\n"
-"We can conclude that §7,§8 have the same truth value (§9), and that §10,§11 have the same truth value (§12).\n"
-"\n"
-"The theorem for the former simplification:\n"
-"§13"
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #: Game.Levels.DSL_Knights_Knaves.L05_prob29
 msgid "§0 says 'I am a knave or §1 is a knight'."
-msgstr ""
-
-#. §0: `A ∈ Knave`
-#. §1: `stB`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"Now we are in the case where §0 , interpret as knights and simplify §1\n"
-""
 msgstr ""
 
 #. §0: `A`
@@ -2010,7 +972,7 @@ msgstr ""
 #. §8: `B`
 #. §9: `B`
 #. §10: `C`
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
 msgid "Suppose the stranger, instead of asking §0 what he is,\n"
 "asked §1, 'How many knights are among you?'\n"
 "\n"
@@ -2024,45 +986,10 @@ msgid "Suppose the stranger, instead of asking §0 what he is,\n"
 msgstr ""
 
 #. §0: `stA`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "Conclude from §0 that not everyone is a knave\n"
 ""
-msgstr ""
-
-#. §0: `¬P`
-#. §1: `P`
-#. §2: `P`
-#. §3: `¬P`
-#. §4: `P → False`
-#. §5: `P`
-#. §6: `False`
-#. §7: `¬P`
-#. §8: `P`
-#. §9: `False`
-#. §10: `P`
-#. §11: `False`
-#: Game.Levels.Logic.L08_Not
-msgid "\n"
-"What §0 means is that if §1 were true, then we can deduce a contradiction. We know that §2 is true. Therefore, we can prove a contradiction which is the goal.\n"
-"\n"
-"§3 is defined as §4. We have a proof of §5 so we can prove §6(a contradiction)\n"
-"\n"
-"§7 being true tells us that a proof of §8 gives us a proof of §9. We have a proof of §10. Therefore we can obtain a proof of §11 which is the goal.\n"
-""
-msgstr ""
-
-#. §0: `«{cont}»`
-#. §1: `not_or`
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-msgid "\n"
-"Simplify §0 using §1\n"
-""
-msgstr ""
-
-#: Game
-msgid "From the basics to Knights And Knaves"
 msgstr ""
 
 #. §0: `¬¬P`
@@ -2076,16 +1003,6 @@ msgid "\n"
 msgstr ""
 
 #. §0: `A`
-#. §1: `C ∈
-#. Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"obtain ⟨a,ha⟩ :=«{oneKnave}»\n"
-"(which would be §0) so §1. This we can use to close the goal directly\n"
-""
-msgstr ""
-
-#. §0: `A`
 #. §1: `contradiction`
 #: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
 #: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
@@ -2095,20 +1012,12 @@ msgid "\n"
 msgstr ""
 
 #. §0: `A`
-#. §1: `A`
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#. §1: `C ∈
+#. Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "\n"
-"So, §0's statement is false.\n"
-"\n"
-"Conclude that §1 is a knave.\n"
-""
-msgstr ""
-
-#. §0: `¬C.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L09_same
-#: Game.Levels.SetTheory_Knights_Knaves.L09_same
-msgid "\n"
-"Conclude §0 and close the goal.\n"
+"obtain ⟨a,ha⟩ :=«{oneKnave}»\n"
+"(which would be §0) so §1. This we can use to close the goal directly\n"
 ""
 msgstr ""
 
@@ -2145,7 +1054,7 @@ msgstr ""
 #. §0: `Finset.card_eq_one`
 #. §1: `Finset.card_eq_one : s.card = 1 ↔ ∃ a, s = {a}`
 #. §2: `rw [Finset.card_eq_one]`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "What it means to have cardinality equal one is given by §0\n"
 "\n"
@@ -2155,57 +1064,8 @@ msgid "\n"
 ""
 msgstr ""
 
-#: Game.Levels.Logic
-msgid "Logic"
-msgstr ""
-
 #: Game.Levels.KnightsAndKnaves2
 msgid "Propositional Knights and Knaves"
-msgstr ""
-
-#: Game
-msgid "A guided experience that teaches you everything you need to know to understand and solve knights and knaves logic puzzles, including the basics of lean and logic.\n"
-"\n"
-"Based on statements made, you will deductively conclude who is a knight (truthful) and who is a knave (liar)."
-msgstr ""
-
-#. §0: `nB : ¬B`
-#. §1: `CdiffA : ¬(¬C ↔ ¬A)`
-#. §2: `stBn`
-#. §3: `nB`
-#. §4: `simp`
-#. §5: `nB : ¬B`
-#. §6: `stA`
-#. §7: `stA : A ↔ C`
-#. §8: `B ∨ C`
-#. §9: `C`
-#. §10: `C`
-#. §11: `B`
-#. §12: `not_iff_not`
-#. §13: `¬C ↔ ¬A`
-#. §14: `CdiffA`
-#. §15: `C ↔ A`
-#. §16: `False`
-#. §17: `CdiffA`
-#. §18: `stA.symm : A ↔ C`
-#: Game.Levels.KnightsAndKnaves2.L07_orIff
-msgid "\n"
-"Assuming §0:\n"
-"- Prove §1 using §2, §3\n"
-"- Using §4 and §5, reduce §6 to §7 (§8, §9 have the same truth value (for §10 being true or false) when §11 is false).\n"
-"- Using §12, reduce §13 in §14 to §15.\n"
-"- Prove §16 using §17, §18\n"
-""
-msgstr ""
-
-#. §0: `have`
-#. §1: `A`
-#: Game.Levels.KnightsAndKnaves2.L06_
-#: Game.Levels.KnightsAndKnaves2.L07_orIff
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "\n"
-"Use §0 to set §1 as the goal\n"
-""
 msgstr ""
 
 #. §0: `Gary`
@@ -2215,43 +1075,6 @@ msgstr ""
 msgid "\n"
 "Use §0 to prove §1 and §2 and close the goal.\n"
 ""
-msgstr ""
-
-#. §0: `A ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"Interpret the goal in terms of knights and assume §0\n"
-""
-msgstr ""
-
-#. §0: `knight_or_knave A with AKnight AKnave`
-#. §1: `knight_or_knave A`
-#. §2: `h : A.isKnight`
-#. §3: `h: A.isKnave`
-#. §4: `h : A.isKnight`
-#. §5: `A`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"For the previous step, you also have the option of using the custom tactic §0. This would allow you to name the hypothesis of every case.\n"
-"\n"
-"You could also just do §1 without specifying any names.\n"
-"\n"
-"Go back and try it before proceeding\n"
-"\n"
-"You get two cases, the first where §2 and the second where §3\n"
-"\n"
-"We are now in the first case where §4\n"
-"So, we can conclude that §5's statement is true.\n"
-""
-msgstr ""
-
-#. §0: `have`
-#. §1: `hQR`
-#. §2: `P`
-#. §3: `hPQ hP`
-#: Game.Levels.Logic.L11_have
-msgid "You could have also not used §0 here by passing §1 a proof of §2 which is §3. Try it\n"
-"before moving on."
 msgstr ""
 
 #. §0: `False`
@@ -2285,37 +1108,7 @@ msgid "Proving §0 means deriving a contradiction.\n"
 "Moreover, we know that §10 for any §11 and so §12. (using §13 would close the goal as well, without having to use §14)"
 msgstr ""
 
-#. §0: `A`
-#. §1: `B`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "§0 : All of us are Knaves\n"
-"\n"
-"§1 : Exactly one of us is a knight"
-msgstr ""
-
-#. §0: `Zoey`
-#. §1: `¬Zoey`
-#. §2: `¬Zoey → False`
-#. §3: `¬¬Zoey`
-#. §4: `Zoey`
-#. §5: `by_contra hnZ`
-#. §6: `¬Zoey`
-#. §7: ```
-#. hnZ : ¬Zoey
-#. ```
-#: Game.Levels.KnightsAndKnaves2.L01_Intro
-msgid "\n"
-"To prove §0, we will do a proof by contradiction.\n"
-"\n"
-"We will assume §1 and show a contradiction, proving that §2, i.e. §3 which is equivalent to §4.\n"
-"\n"
-"§5 will assume §6 adding,\n"
-"§7\n"
-"to the list of assumptions in the proof state.\n"
-""
-msgstr ""
-
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
 "Conclude there is only one knight\n"
 ""
@@ -2328,7 +1121,7 @@ msgstr ""
 #. §4: `C`
 #. §5: `C ∈ Knave`
 #. §6: `C ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "We know that there is only one knight and that knight is §0 ,  this element §1 is §2 (§3) so §4 must be a knave.\n"
 "\n"
@@ -2349,29 +1142,10 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `P`
-#. §1: `P`
-#. §2: `«{hP}»`
-#: Game.Levels.Logic.L05_ImpGoal
-msgid "\n"
-"We have a proof of §0 and we want to prove §1.\n"
-"\n"
-"§2 exactly matches the goal.\n"
-""
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-msgid "§0 says 'I am a knave or §1 is a knave'."
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `B`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
+#: Game.Levels.DSL_Knights_Knaves.L13_31
 msgid "\n"
 "Now, we know that §0 is a knave and §1 is a knight.\n"
 "\n"
@@ -2379,63 +1153,12 @@ msgid "\n"
 ""
 msgstr ""
 
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"You have everything you need to close the goal\n"
-""
-msgstr ""
-
-#. §0: `«{allKnave}».left`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
-msgid "\n"
-"§0 will do it.\n"
-""
-msgstr ""
-
-#. §0: `cases`
-#. §1: `h : P or Q`
-#. §2: `P`
-#. §3: `Q`
-#. §4: `R`
-#. §5: `R`
-#. §6: `∨`
-#. §7: `cases h`
-#: Game.Levels.Logic.L06_cases
-msgid "In this level, we will do a 'proof by cases' using the §0 tactic.\n"
-"\n"
-"By §1, we have two cases:\n"
-"§2 being true or §3 being true.\n"
-"\n"
-"If we consider each case individually and prove some statement §4, then we can conclude that §5\n"
-"is true.\n"
-"\n"
-"This is the elimination principle for §6 which you can read about\n"
-"[Or.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or.elim)\n"
-"\n"
-"To do this, start with §7"
-msgstr ""
-
-#. §0: `rw [«{h}»]`
-#. §1: `rw [«{g}»]`
-#: Game.Levels.EquationalReasoning.L03_rw
-msgid "Do §0 or §1 and observe what happens."
-msgstr ""
-
 #. §0: `B`
 #. §1: `stB`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "\n"
 "§0 is a knight then by §1 we know there is only one knave\n"
 ""
-msgstr ""
-
-#. §0: `¬P,¬Q`
-#. §1: `P,Q`
-#. §2: `P ↔ Q`
-#: Game.Doc.doc
-msgid "If two propositions are false, then they have the same truth value.\n"
-"\n"
-"If we know §0  then we can conclude that §1 have the same truth value, i.e. §2"
 msgstr ""
 
 #. §0: `BorC : B ∨ C`
@@ -2446,18 +1169,11 @@ msgid "\n"
 ""
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-msgid "\n"
-"Close the goal\n"
-""
-msgstr ""
-
 #. §0: `B ∈ Knave`
 #. §1: `C ∈ Knight`
 #. §2: `C ∈ Knave`
 #. §3: `CKnave`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "\n"
 "Now in the case where §0\n"
 "\n"
@@ -2470,20 +1186,6 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `A`
-#. §1: `B`
-#. §2: `C`
-#. §3: `C ∈ Knave`
-#. §4: `C`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
-msgid "\n"
-"Notice that neither §0 is a knight nor §1 is a knight , and so the statement §2 made is false.\n"
-"And so §3\n"
-"\n"
-"But first , interpret §4's statement in terms of knaves\n"
-""
-msgstr ""
-
 #. §0: `Zoey`
 #. §1: `¬Zoey`
 #: Game.Levels.KnightsAndKnaves2.L01_Intro
@@ -2492,87 +1194,13 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `¬Knight.card = 1`
-#. §1: `stB`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"Conclude §0 from §1\n"
-""
-msgstr ""
-
 #. §0: `B.isKnight`
 #. §1: `B`
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus2
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "\n"
 "We are at the case where §0\n"
 "Conclude that §1's statement is true\n"
-""
-msgstr ""
-
-#. §0: $
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. P & Q & P → Q \\\\
-#. \\hline
-#. T & T & T \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & T \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §1: `P → Q`
-#. §2: `P`
-#. §3: `Q`
-#. §4: `P → Q`
-#. §5: `P`
-#. §6: `Q`
-#. §7: `P`
-#. §8: `P → Q`
-#. §9: `Q`
-#. §10: `Q`
-#. §11: `P`
-#. §12: `Q`
-#. §13: `P`
-#: Game.Levels.Logic.L05_ImpGoal
-msgid "The previous two levels showed how to use an implication and how to prove an implication.\n"
-"\n"
-"\n"
-"# Truth table\n"
-"§0\n"
-"\n"
-"A statement §1 is false when §2 is true and §3 false, it's true otherwise.\n"
-"This is because this is the only case where the meaning of §4 is violated, i.e. we have that §5 is true so §6 is supposed to be true as well but it's not.\n"
-"\n"
-"When §7 is false, the implication §8 is always true regardless of the truth value of §9. That's because the implication does not tell us what §10 should be when §11 is false -- it only tells us that §12 must be true when §13 is true."
-msgstr ""
-
-#. §0: ```
-#. Objects
-#. P : Prop
-#. 
-#. Assumptions
-#. hP : P
-#. 
-#. Goal
-#. P
-#. ```
-#. §1: `assumption`
-#: Game.Doc.tactic_doc
-msgid "The assumption tactic searches for an assumption that matches the goal, and closes the goal if it finds one.\n"
-"\n"
-"Given,\n"
-"§0\n"
-"§1 will close the goal."
-msgstr ""
-
-#. §0: `B.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
-msgid "\n"
-"Assume §0.\n"
 ""
 msgstr ""
 
@@ -2582,7 +1210,7 @@ msgstr ""
 #. §3: `C`
 #. §4: `unfold allKnaves`
 #. §5: `A,B`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "\n"
 "Now we are in the case where §0 is a knave.\n"
 "\n"
@@ -2596,22 +1224,6 @@ msgid "\n"
 "\n"
 "§4 then simplify it using the fact that §5 are knaves\n"
 ""
-msgstr ""
-
-#. §0: `A`
-#. §1: ```
-#. isKnight A : Prop
-#. ```
-#. §2: ```
-#. A.isKnight : Prop
-#. ```
-#. §3: `A`
-#: Game.Doc.doc
-msgid "For an Islander §0,\n"
-"§1\n"
-"or\n"
-"§2\n"
-"is the proposition that §3 is a knight."
 msgstr ""
 
 #. §0: `3 + 3 = 6`
@@ -2636,56 +1248,9 @@ msgid "Our goal is now §0. The §1 tactic implicitly executes §2 after doing t
 msgstr ""
 
 #. §0: `right`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
 msgid "\n"
 "Now everyone is a knave , choose that direction to prove the goal. It is the §0 direction\n"
-""
-msgstr ""
-
-#. §0: `B ∉ Knight`
-#. §1: `knight_interp`
-#. §2: `Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
-msgid "\n"
-"Change the goal to §0\n"
-"\n"
-"Use the §1 tactic. This tactics lets you interpate the goal as a statement of terms\n"
-"of §2\n"
-""
-msgstr ""
-
-#: Game.Doc.doc
-msgid "A is a knave, so whatever A said is false"
-msgstr ""
-
-#. §0: ```
-#. or_true (p : Prop)
-#. : (p or True) = True
-#. ```
-#. §1: `simp`
-#. §2: ```
-#. simp [h]
-#. ```
-#. §3: `simp`
-#: Game.Levels.Simp_World.L02_true_or
-msgid "There's an analogous theorem\n"
-"§0\n"
-"\n"
-"To solve with §1,\n"
-"§2\n"
-"\n"
-"Try §3 before moving on."
-msgstr ""
-
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "Everyone is a knave"
-msgstr ""
-
-#. §0: `dsl_iamknave`
-#: Game.Levels.DSL_Knights_Knaves.L02_2plus2
-#: Game.Levels.SetTheory_Knights_Knaves.L02_2plus2
-msgid "\n"
-"Use §0.\n"
 ""
 msgstr ""
 
@@ -2709,17 +1274,16 @@ msgstr ""
 
 #. §0: `A ∈ Knave`
 #. §1: `stA`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "\n"
 "Since we have proven that §0 , let's intrepret §1 in terms of knaves\n"
 ""
 msgstr ""
 
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
-msgid "\n"
-"Assume §0 is a knight, and conclude that everyone must be a knave.\n"
-""
+#. §0: `«{h}»`
+#: Game.Levels.EquationalReasoning.L03_rw
+#: Game.Levels.EquationalReasoning.L03_rw
+msgid "You should use §0 now."
 msgstr ""
 
 #. §0: `↔`
@@ -2727,10 +1291,11 @@ msgstr ""
 msgid "In the next level , we will learn about logical equivalence §0 which states two propositions have the same truth value(either both are true or both are false)"
 msgstr ""
 
-#. §0: `«{h}»`
-#: Game.Levels.EquationalReasoning.L03_rw
-#: Game.Levels.EquationalReasoning.L03_rw
-msgid "You should use §0 now."
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
+msgid "\n"
+"Assume §0 is a knight, and conclude that everyone must be a knave.\n"
+""
 msgstr ""
 
 #. §0: `Mel`
@@ -2768,23 +1333,24 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `a`
-#. §1: `Knight = {a}`
-#. §2: `obtain ⟨a,ha⟩ := «{oneKnight}»`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#. §0: `A`
+#. §1: ```
+#. not_isKnight_and_isKnave
+#. (AKnight : isKnight A)
+#. (AKnave : isKnave A) : False
+#. ```
+#. §2: `False`
+#. §3: `contradiction`
+#. §4: `A`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
 msgid "\n"
-"We know that there exists some §0 such that §1\n"
+"We know §0 is a knight and a knave.\n"
+"This is a contradiction\n"
 "\n"
-"We can extract these two facts using §2\n"
-""
-msgstr ""
-
-#. §0: `stC`
-#. §1: `B ∈ Knight`
-#. §2: `C ∉ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"Interpret §0 in terms of §1 and conclude that §2\n"
+"Recall\n"
+"§1\n"
+"\n"
+"You can use this to prove §2, or use §3 which has been modified to handle when §4 is a knight and a knave.\n"
 ""
 msgstr ""
 
@@ -2832,32 +1398,12 @@ msgid "§0\n"
 "§11 and §12 tactics are used instead of the §13 and §14 introduction rules stated here [#Or](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or)"
 msgstr ""
 
-#. §0: `A`
-#. §1: ```
-#. not_isKnight_and_isKnave
-#. (AKnight : isKnight A)
-#. (AKnave : isKnave A) : False
-#. ```
-#. §2: `False`
-#. §3: `contradiction`
-#. §4: `A`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"We know §0 is a knight and a knave.\n"
-"This is a contradiction\n"
-"\n"
-"Recall\n"
-"§1\n"
-"\n"
-"You can use this to prove §2, or use §3 which has been modified to handle when §4 is a knight and a knave.\n"
-""
-msgstr ""
-
-#. §0: `A`
+#. §0: `stC`
 #. §1: `B ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+#. §2: `C ∉ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
-"From §0's statement , conclude that §1\n"
+"Interpret §0 in terms of §1 and conclude that §2\n"
 ""
 msgstr ""
 
@@ -2870,10 +1416,18 @@ msgid "\n"
 ""
 msgstr ""
 
+#. §0: `A`
+#. §1: `B ∈ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
+msgid "\n"
+"From §0's statement , conclude that §1\n"
+""
+msgstr ""
+
 #. §0: `Finset.card_eq_one : s.card = 1 ↔ ∃ a, s = {a}`
 #. §1: `↔`
 #. §2: `=`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "§0\n"
 "\n"
@@ -2881,115 +1435,15 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `have`
-#. §1: `A`
-#. §2: `A`
-#. §3: `¬¬A`
-#. §4: `A`
-#. §5: `¬A → False`
-#. §6: `by_contra`
-#. §7: `by_contra h`
-#. §8: `h : ¬A`
-#. §9: `False`
-#. §10: `nA : ¬A`
-#. §11: `nCnB : ¬C ∧ ¬B`
-#. §12: `stAn`
-#. §13: `AdiffC : ¬(A ↔ C)`
-#. §14: `stBn`
-#. §15: `nCnB.right : ¬B`
-#. §16: `AiffC : A ↔ C`
-#. §17: `iff_of_false (ha : ¬a) (hb : ¬b) : a ↔ b `
-#. §18: `nA:¬A`
-#. §19: `nCnB.left : ¬C`
-#. §20: `False`
-#. §21: `AdiffC : ¬(A ↔ C)`
-#. §22: `AiffC : (A ↔ C)`
-#: Game.Levels.KnightsAndKnaves2.L05_iff
-msgid "\n"
-"Use §0 to set §1 as the new goal.\n"
-"\n"
-"We want to prove §2, to do this we will prove §3 (which is equivalent to §4), i.e. §5. The tactic §6 facilitates this.\n"
-"\n"
-"§7 assumes §8 and changes the goal to §9.\n"
-"\n"
-"This is called a proof by contradiction because we are assuming the negation of what we want to prove and getting a contradiction.\n"
-"\n"
-"Assuming §10,\n"
-"- Prove §11 from §12\n"
-"- Prove §13 from §14, §15\n"
-"- Prove §16 from §17, §18, §19\n"
-"- Prove §20 from §21  §22\n"
-""
-msgstr ""
-
 #. §0: `knight_interp`
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
 msgid "\n"
 "As usual, §0\n"
 ""
 msgstr ""
 
-#: Game.Levels.Logic.L08_Not
-msgid "Remember that an implication acts like a function, that takes a proof of whats on the left hand returning a proof of whats on the right hand side.\n"
-""
-msgstr ""
-
-#. §0: `knight_or_knave B with BKnight BKnave`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"In both cases we can close the goal so do §0\n"
-""
-msgstr ""
-
-#. §0: ```
-#. not_iff' : ¬(P ↔ Q) ↔ (P ↔ ¬Q)
-#. ```
-#: Game.Levels.Simp_World.L08_not_iff
-msgid "Analogous Theorem:\n"
-"§0"
-msgstr ""
-
 #: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
 msgid "I am a knave, I am lying"
-msgstr ""
-
-#. §0: `→`
-#. §1: `P → Q`
-#. §2: `P`
-#. §3: `Q`
-#. §4: `P → Q`
-#. §5: `P`
-#. §6: `Q`
-#. §7: `P`
-#. §8: `Q`
-#. §9: `P`
-#. §10: `Q`
-#. §11: `P`
-#. §12: `P → Q`
-#. §13: `Q`
-#. §14: `P → Q`
-#. §15: `P`
-#. §16: `Q`
-#. §17: `hP`
-#. §18: `PtoQ`
-#. §19: `Q`
-#. §20: `exact`
-#: Game.Levels.Logic.L04_Implication
-msgid "In this level, we introduce the logical implication §0 connective.\n"
-"Logical implication §1 is made up of two components:\n"
-"- The premise, which in this case is §2\n"
-"- The conclusion, which in this case is §3\n"
-"\n"
-"§4 is read as 'If §5 is true, then §6 is true'.\n"
-"§7 being true IMPLIES §8 being true. A proof of §9 IMPLIES a proof of §10.\n"
-"\n"
-"In the current proof state, we know §11 and we know §12. Therefore, we can conclude §13.\n"
-"\n"
-"You can think of logical implication as a function. §14 takes a proof of §15 and returns a proof of §16.\n"
-"\n"
-"Pass §17 as an argument to §18 getting a proof of §19.\n"
-"\n"
-"You can then use §20 to close the goal"
 msgstr ""
 
 #. §0: `have`
@@ -3041,46 +1495,6 @@ msgid "The §0 tactic allows you to add theorems to the context (which you would
 "will change the goal to §14, which after proving would restore the original goal with the theorem §15 added and ready to be used."
 msgstr ""
 
-#. §0: ```
-#. Assumptions:
-#. h : A = B
-#. 
-#. Goal:
-#. some expression involving A
-#. ```
-#. §1: `rw [h]`
-#. §2: `A`
-#. §3: `B`
-#. §4: `rw [h] at h'`
-#. §5: `h'`
-#. §6: `h`
-#. §7: `A`
-#. §8: `B`
-#. §9: `rw [←h]`
-#. §10: `h`
-#. §11: `B`
-#. §12: `A`
-#. §13: `=`
-#. §14: `↔`
-#. §15: `rw [h]`
-#. §16: `h : x=2`
-#. §17: `h : P ↔ Q`
-#: Game.Doc.tactic_doc
-msgid "Given the following:\n"
-"§0\n"
-"\n"
-"§1 would change the goal by replacing every occurrence of §2 with §3.\n"
-"\n"
-"Moreover §4 would apply the rewrite on an assumption §5 instead of the goal.\n"
-"\n"
-"By default, rw uses an equation in the forward direction, matching the left-hand side of the equation §6 with an occurrence of §7 in the goal, and replaces it with the right-hand side, i.e. §8.\n"
-"\n"
-"The notation §9 can be used to instruct the tactic to use the equality §10 in the reverse direction, i.e. replace an occurrence of §11 with §12.\n"
-"\n"
-"## Behavior with §13 and §14\n"
-"For §15, the behavior is exactly the same for both, whether you had §16 or §17."
-msgstr ""
-
 #. §0: `P`
 #. §1: `P`
 #. §2: `P`
@@ -3096,35 +1510,10 @@ msgid "The goal, translated to English, is: 'If §0 is true, then §1 is true'.\
 "To do this, we need to assume the premise, i.e. introduce it to our assumptions. We can do this using the §4 tactic. §5 will introduce an assumption §6."
 msgstr ""
 
-#. §0: `B.isKnave`
-#. §1: `¬B.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
-msgid "\n"
-"Now we have that §0.\n"
-"Get §1\n"
-""
-msgstr ""
-
-#. §0: `Knave`
-#. §1: `{A,B,C}`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"rewrite §0 in the goal with §1\n"
-""
-msgstr ""
-
 #. §0: `¬A.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "\n"
 "Start by proving §0\n"
-""
-msgstr ""
-
-#. §0: `Knight = {B}`
-#. §1: `use B`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"§0 so §1\n"
 ""
 msgstr ""
 
@@ -3140,28 +1529,11 @@ msgid "§0: §1 is a knight and §2 is a knight.\n"
 "§3: §4 is a knight and §5 is a knave."
 msgstr ""
 
-#. §0: `rw`
-#. §1: `¬¬P`
-#. §2: `P`
-#. §3: `not_not`
-#: Game.Levels.Simp_World.L05_not_not
+#. §0: `Knight = {B}`
+#. §1: `use B`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
-"§0 §1 to §2 using §3.\n"
-""
-msgstr ""
-
-#. §0: `Mel and Zoey`
-#. §1: `Mel`
-#. §2: `stM`
-#: Game.Levels.KnightsAndKnaves2.L01_Intro
-#: Game.Levels.KnightsAndKnaves2.L05_iff
-#: Game.Levels.KnightsAndKnaves2.L06_
-#: Game.Levels.KnightsAndKnaves2.L06_
-#: Game.Levels.KnightsAndKnaves2.L06_
-#: Game.Levels.KnightsAndKnaves2.L07_orIff
-#: Game.Levels.KnightsAndKnaves2.L07_orIff
-msgid "\n"
-"Prove §0 using §1, §2\n"
+"§0 so §1\n"
 ""
 msgstr ""
 
@@ -3170,22 +1542,10 @@ msgstr ""
 msgid "And, §0"
 msgstr ""
 
-#. §0: `A`
-#. §1: `C`
-#. §2: `B`
-#. §3: `B`
-#. §4: `A`
-#. §5: `C`
-#: Game.Levels.KnightsAndKnaves2.L05_iff
-msgid "§0: §1 is a knight or §2 is a knight.\n"
-"\n"
-"§3: §4 is a knight, if and only if §5 is a knight."
-msgstr ""
-
-#. §0: `B ∈ Knave`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
 msgid "\n"
-"Conclude §0\n"
+"The left side of or is false and so can be simplified.\n"
 ""
 msgstr ""
 
@@ -3208,7 +1568,7 @@ msgstr ""
 #. ```
 #. §10: `allKnaves`
 #. §11: `unfold`
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "§0 says §1 is a knight\n"
 "\n"
 "§2 says all of us are knights\n"
@@ -3227,44 +1587,10 @@ msgid "§0 says §1 is a knight\n"
 "However, this will make the proof state look cluttered so don't §11."
 msgstr ""
 
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+#. §0: `B ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
 msgid "\n"
-"The left side of or is false and so can be simplified.\n"
-""
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `C`
-#. §3: `A`
-#. §4: `B`
-#. §5: `A`
-#. §6: `B`
-#. §7: `A`
-#. §8: `B`
-#. §9: `C`
-#. §10: `A.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
-msgid "Again we have three people, §0, §1, §2, each of whom is either a knight or a knave.\n"
-"\n"
-"§3 and §4 make the following statements:\n"
-"\n"
-"§5: All of us are knaves.\n"
-"\n"
-"§6: Exactly one of us is a knight.\n"
-"\n"
-"What are §7, §8, §9?\n"
-"\n"
-"Change the goal to §10"
-msgstr ""
-
-#. §0: `left`
-#. §1: `right`
-#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
-msgid "\n"
-"Choose which side to prove, §0 or §1?\n"
+"Conclude §0\n"
 ""
 msgstr ""
 
@@ -3273,45 +1599,13 @@ msgstr ""
 #. §2: `A`
 #. §3: `B`
 #. §4: `DSL`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "§0: All of us are knaves.\n"
 "\n"
 "§1: Exactly one of us is a knave.\n"
 "\n"
 "In this level , we take a different approach when formalizing the statements of §2 and §3 than the\n"
 "corresponding §4 level"
-msgstr ""
-
-#. §0: `∩`
-#. §1: `A`
-#. §2: `B`
-#. §3: ```
-#. A ∩ B
-#. ```
-#. §4: `A ∩ B`
-#. §5: `A`
-#. §6: `B`
-#. §7: `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`
-#. §8: `A ∩ B = ∅`
-#. §9: `A`
-#. §10: `B`
-#. §11: `A`
-#. §12: `B`
-#. §13: `x ∈ A → x ∉ B`
-#. §14: `x ∈ B → x ∉ A`
-#. §15: `inleft_notinright`
-#. §16: `inright_notinleft`
-#: Game.Doc.doc
-msgid "§0 is an operator on sets.\n"
-"\n"
-"Applying it to two sets §1,§2:\n"
-"§3\n"
-"\n"
-"§4 is itself another set, containing elements that are in both §5 and §6.\n"
-"In other words, §7.\n"
-"\n"
-"§8 means that §9 and §10 have no common element, i.e. no element of §11 belongs to both and no element of §12 belongs to both.\n"
-"In other words, §13, §14 which are §15 and §16 respectively."
 msgstr ""
 
 #. §0: `A`
@@ -3353,62 +1647,10 @@ msgstr ""
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
-#. §0: `B`
-#. §1: `B`
-#. §2: `B ∈ Knave`
-#. §3: `B ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"§0 can't be a knight because if §1 where a knight then we can conclude there is one knight which\n"
-"is a contradiction\n"
-"\n"
-"Change the goal to proving §2 , interpret as knight and assume §3\n"
-""
-msgstr ""
-
-#. §0: `unfold oneisknight at «{notoneknight}»`
-#. §1: `simp`
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "\n"
-"It is not true that there is one knight, but that is the case so contradiction\n"
-"\n"
-"§0 and use §1\n"
-""
-msgstr ""
-
-#. §0: `stR`
-#. §1: `¬Ira.isKnight`
-#. §2: `Robert.isKnight ↔ Ira.isKnight `
-#. §3: `¬ Robert.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
-msgid "\n"
-"We will now simplify §0.\n"
-"\n"
-"Because §1, §2 can be simplified to §3\n"
-""
-msgstr ""
-
 #. §0: `by_contra`
 #. §1: `not_not`
 #: Game.Levels.Simp_World.L05_not_not
 msgid "§0, §1"
-msgstr ""
-
-#. §0: `have`
-#. §1: `¬A`
-#: Game.Levels.KnightsAndKnaves2.L02_Introduction
-#: Game.Levels.KnightsAndKnaves2.L02_Introduction
-msgid "\n"
-"Use §0 to set §1 as the new goal.\n"
-""
-msgstr ""
-
-#. §0: `Ira`
-#. §1: `Robert`
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
-msgid "\n"
-"Now that §0 is a knight, conclude that §1 is a knight and close the goal.\n"
-""
 msgstr ""
 
 #: Game.Levels.KnightsAndKnaves2.L08_imp
@@ -3417,42 +1659,16 @@ msgid "This is it for this approach of knights and knaves.\n"
 "If you want more, you can try the other approaches."
 msgstr ""
 
-#. §0: `x = 2`
-#. §1: `x`
-#. §2: `2`
-#. §3: `rw`
-#. §4: `rw`
-#. §5: `A = B`
-#. §6: `A`
-#. §7: `B`
-#. §8: `rw [h]`
-#. §9: `h : x = 3`
-#. §10: `x`
-#. §11: `3`
-#: Game.Levels.EquationalReasoning.L03_rw
-msgid "Given that §0 , we can substitute any occurrence of §1 by §2.\n"
-"\n"
-"This can be done using §3 tactic.(short for 'rewrite').\n"
-"\n"
-"§4 takes a proof that §5 and replaces all the §6s in the goal with §7s.\n"
-"\n"
-"So §8 where §9 will replace all the §10s of the goal with §11."
-msgstr ""
-
-#. §0: `P ↔ Q`
-#. §1: `(P → Q) ∧ (Q → P)`
-#. §2: `PsameQ.mp`
-#. §3: `P → Q`
-#. §4: `PsameQ.mpr`
-#. §5: `Q → P`
-#: Game.Levels.Logic.L07_LogicalEquivalence
-msgid "§0  is defined as §1.\n"
-"\n"
-"Forward Direction: §2 (§3)\n"
-"\n"
-"Backward Direction: §4 (§5)\n"
-"\n"
-"Which direction do you need to prove the goal?"
+#. §0: `simp at stA`
+#: Game.Levels.DSL_Knights_Knaves.L02_2plus2
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
+msgid "\n"
+"§0\n"
+""
 msgstr ""
 
 #. §0: `True or Q`
@@ -3504,89 +1720,24 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `simp at stA`
-#: Game.Levels.DSL_Knights_Knaves.L02_2plus2
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"§0\n"
-""
+#. §0: `P ↔ Q`
+#. §1: `(P → Q) ∧ (Q → P)`
+#. §2: `PsameQ.mp`
+#. §3: `P → Q`
+#. §4: `PsameQ.mpr`
+#. §5: `Q → P`
+#: Game.Levels.Logic.L07_LogicalEquivalence
+msgid "§0  is defined as §1.\n"
+"\n"
+"Forward Direction: §2 (§3)\n"
+"\n"
+"Backward Direction: §4 (§5)\n"
+"\n"
+"Which direction do you need to prove the goal?"
 msgstr ""
 
 #: Game.Levels.EquationalReasoning
 msgid "In this world, you will learn how to solve equations."
-msgstr ""
-
-#. §0: ```
-#. h : False
-#. ```
-#. §1: ```
-#. hP : P
-#. hnP : ¬P
-#. ```
-#. §2: `contradiction`
-#. §3: `False`
-#. §4: `contradiction`
-#. §5: `→`
-#. §6: $$
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. P & Q & P → Q \\\\
-#. \\hline
-#. T & T & T \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & T \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $$
-#. §7: `P`
-#. §8: `False`
-#. §9: `False`
-#. §10: $$
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. Q & False → Q \\\\
-#. \\hline
-#. T & T \\\\
-#. \\hline
-#. F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $$
-#. §11: `False → Q`
-#. §12: `Q`
-#. §13: `False`
-#. §14: `False`
-#: Game.Doc.tactic_doc
-msgid "Contradiction is a tactic that detects if you have contradictory assumptions and if so, closes the goal.\n"
-"\n"
-"Having\n"
-"§0\n"
-"or\n"
-"§1\n"
-"(or other 'simple' contradictions)\n"
-"§2 will close any goal.\n"
-"\n"
-"This is because from §3, anything follows. §4 exemplifies this principle: [#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim))\n"
-"\n"
-"## Intuitively\n"
-"\n"
-"Let's check the §5 truth table:\n"
-"§6\n"
-"\n"
-"Let's focus on part of the truth table where §7 is §8, because we want to see what §9 implies.\n"
-"§10\n"
-"\n"
-"We have that the implication §11 is true regardless what §12 represents.\n"
-"\n"
-"So §13 implies any proposition. This principle is known as: 'From §14 anything follows'."
 msgstr ""
 
 #. §0: `P → R`
@@ -3597,42 +1748,8 @@ msgstr ""
 msgid "Combine §0 , §1 to get §2"
 msgstr ""
 
-#. §0: `knave_said`
-#. §1: `A`
-#. §2: `A`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"§0\n"
-"\n"
-"§1 is a knave, so whatever §2 said is false.\n"
-""
-msgstr ""
-
-#. §0: `¬C`
-#. §1: `stA`
-#. §2: `eq_true`
-#. §3: `True → ¬B`
-#. §4: `stA`
-#. §5: `¬B`
-#. §6: `true_implies`
-#. §7: `B`
-#. §8: `stA`
-#. §9: `A`
-#. §10: `stB`
-#. §11: `False`
-#. §12: `not_iff_self`
-#. §13: `stA`
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "\n"
-"- Rewrite §0 in §1 with true using §2\n"
-"- Rewrite §3 in §4 with §5 using §6\n"
-"- Rewrite §7 in §8 with §9 using §10\n"
-"- Prove §11 using §12 and §13\n"
-""
-msgstr ""
-
 #. §0: `B`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
+#: Game.Levels.DSL_Knights_Knaves.L13_31
 msgid "\n"
 "Conclude that §0's statement is false\n"
 ""
@@ -3640,49 +1757,9 @@ msgstr ""
 
 #. §0: `A`
 #. §1: `A ∈ Knave`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "Since everyone is a knave , then §0 is a knave. Change the goal to §1\n"
-""
-msgstr ""
-
-#. §0: `exact`
-#: Game.Levels.EquationalReasoning.L02_exact
-msgid "§0, goal is true by assumption"
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
-msgid "We are different types"
-msgstr ""
-
-#. §0: `C`
-#. §1: `nC : ¬C`
-#. §2: `by_contra nC`
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "\n"
-"We will prove §0 by contradiction.\n"
-"\n"
-"Assume §1 using §2.\n"
-""
-msgstr ""
-
-#. §0: `A.isKnight`
-#. §1: `B.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L09_same
-#: Game.Levels.SetTheory_Knights_Knaves.L09_same
-msgid "\n"
-"We are in the case where §0\n"
-"\n"
-"Conclude that §1\n"
-""
-msgstr ""
-
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-msgid "\n"
-"Conclude §0's statement\n"
 ""
 msgstr ""
 
@@ -3690,31 +1767,6 @@ msgstr ""
 msgid "\n"
 "rw [stB] at stA\n"
 ""
-msgstr ""
-
-#. §0: `A ∈ Knave`
-#. §1: `B ∈ Knave`
-#. §2: `C ∈ Knight`
-#. §3: `Knight.card = 1`
-#. §4: `have oneKnight : (Knight : Finset Inhabitant').card = 1`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Since §0 , §1 then we know §2 because not everyone is a knave.\n"
-"Moreover, we know §3.\n"
-"\n"
-"Change the goal using §4\n"
-""
-msgstr ""
-
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
-msgid "\n"
-"Conclude that everyone is a knight and close the goal\n"
-""
-msgstr ""
-
-#. §0: `rw`
-#: Game.Levels.EquationalReasoning.L03_rw
-msgid "§0, Substituting Variables By Their Values"
 msgstr ""
 
 #. §0: `have`
@@ -3733,6 +1785,21 @@ msgid "In this level, we introduce the §0 tactic.\n"
 "added to the proof state and can be used."
 msgstr ""
 
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
+msgid "\n"
+"Conclude that everyone is a knight and close the goal\n"
+""
+msgstr ""
+
+#. §0: `h : A.isKnave`
+#. §1: `A`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"We are now in the second case where §0\n"
+"So, we can conclude that §1's statement is false.\n"
+""
+msgstr ""
+
 #. §0: `simp`
 #. §1: `hC : C`
 #. §2: `stB`
@@ -3746,15 +1813,6 @@ msgid "\n"
 "- Rewrite §3 using §4 obtaining §5\n"
 "- Prove §6\n"
 "- Conclude the goal\n"
-""
-msgstr ""
-
-#. §0: `h : A.isKnave`
-#. §1: `A`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"We are now in the second case where §0\n"
-"So, we can conclude that §1's statement is false.\n"
 ""
 msgstr ""
 
@@ -3772,150 +1830,21 @@ msgstr ""
 
 #. §0: `left`
 #. §1: `right`
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "\n"
 "§0 or §1 part of the goal?\n"
 ""
 msgstr ""
 
-#. §0: `A`
-#. §1: `A`
-#. §2: ```
-#. A ∈ Knight
-#. ```
-#. §3: `Knight`
-#. §4: `Finset`
-#. §5: `A`
-#. §6: ```
-#. A ∈ Knave
-#. ```
-#. §7: `Knave`
-#. §8: `Finset`
-#. §9: ```
-#. KorKn : ∀ x : Inhabitant, x ∈ Knight ∨ x ∈ Knave
-#. ```
-#. §10: `KorKn`
-#. §11: `knight_or_knave`
-#. §12: ```
-#. stA : A ∈ Knight ↔ B ∈ Knave
-#. ```
-#. §13: `stA`
-#. §14: `A ∈ Knight → B ∈ Knave`
-#. §15: `A`
-#. §16: `A`
-#. §17: `A`
-#. §18: `B ∈ Knave`
-#. §19: `B ∈ Knave → A ∈ Knight`
-#. §20: `A`
-#. §21: `A`
-#. §22: `A`
-#. §23: `stA`
-#. §24: `knave_interp at stA`
-#. §25: ```
-#. stA : A ∈ Knave ↔ B ∈ Knight
-#. ```
-#. §26: `A`
-#. §27: ```
-#. dis : Knight ∩ Knave = ∅
-#. ```
-#. §28: `contradiction`
-#: Game.Doc.doc
-msgid "The setting is an island.\n"
-"Every inhabitant of the island will make a statement. There are two types of inhabitants, 'knights' that always tell the truth, and 'knaves' that always lie.\n"
-"\n"
-"We give english statements and their corresponding translation to lean.\n"
-"\n"
-"Given an inhabitant §0\n"
-"\n"
-"§1 is a knight\n"
-"§2\n"
-"where §3 is a finite set(§4). Just think of this as the collection of inhabitants who\n"
-"are knights\n"
-"\n"
-"§5 is a knave\n"
-"§6\n"
-"where §7 is a finite set(§8). Just think of this as the collection of inhabitants who\n"
-"are knaves\n"
-"\n"
-"Any inhabitant is either a knight or a knave\n"
-"§9\n"
-"You will not have to use §10 directly but instead use the tactic §11\n"
-"\n"
-"Statements made by inhabitants are represented as the following for a given \"A : B is a Knave\" ,\n"
-"§12\n"
-"\n"
-"§13 is of two parts.\n"
-"- The forward direction §14 represents the fact that if\n"
-"§15 were knight then §16 is telling the truth and §17's statement is true(in this case the statement\n"
-"being §18)\n"
-"- The backward direction §19 represents the fact that if what §20 is saying\n"
-"were true then §21 must be a knight that always tells the truth(because the other option would be a\n"
-"knave that always lies)\n"
-"\n"
-"If you are interested in proving §22 to be a knave then you can interpret §23 in terms of that\n"
-"using §24:\n"
-"§25\n"
-"\n"
-"Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. §26 is not a knight and a knave at the same time. This is represented as:\n"
-"§27\n"
-"You will not have to use this directly , §28 will do the job\n"
-"\n"
-"The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning."
-msgstr ""
-
-#: Game.Levels.Logic.L01_Intro
-#: Game.Levels.SetTheory_Knights_Knaves.L01_IamKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L02_2plus2
-#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
-#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
-#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
-msgid "Intro"
-msgstr ""
-
-#. §0: `simp`
-#. §1: `simp`
-#. §2: `simp`
-#: Game.Levels.Simp_World
-msgid "In the previous world, we introduced logical connectives and how to construct new propositions using them.\n"
-"\n"
-"In this world, we will simplify logical expressions involving these connectives. The §0 tactic\n"
-"can take care of that.\n"
-"\n"
-"But in this world , simplifications will be done manually so you gain an idea of what §1 is\n"
-"capable of and you should almost always use §2 in upcoming worlds."
-msgstr ""
-
-#. §0: `stR`
-#. §1: `Robert said ¬ Robert.isKnight`
-#. §2: `Robert said Robert.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L08_sametype
-msgid "\n"
-"§0 now becomes §1.\n"
-"\n"
-"Change that to §2\n"
-"\n"
-""
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "All Knaves , One Knight"
 msgstr ""
 
 #. §0: `B.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
+#: Game.Levels.DSL_Knights_Knaves.L13_31
 msgid "\n"
 "Let's move on to proving §0\n"
 ""
-msgstr ""
-
-#. §0: `A`
-#. §1: `C`
-#. §2: `B`
-#. §3: `B`
-#. §4: `A`
-#. §5: `C`
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "§0: If §1 is a knave, then §2 is a knave.\n"
-"§3: §4 is a knight, if and only if §5 is a knave."
 msgstr ""
 
 #. §0: `rw [h]`
@@ -3933,13 +1862,6 @@ msgstr ""
 msgid "§0"
 msgstr ""
 
-#. §0: `have : (Knight : Finset Inhabitant').card = 1`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
-msgid "\n"
-"Now we can prove §0\n"
-""
-msgstr ""
-
 #. §0: `CsameA`
 #. §1: `CsameA : C ↔ A`
 #. §2: `not_iff_not`
@@ -3949,54 +1871,11 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `Finset.card_eq_one`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
+#. §0: `have : (Knight : Finset Inhabitant').card = 1`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
-"Rewrite §0\n"
+"Now we can prove §0\n"
 ""
-msgstr ""
-
-#. §0: `¬(P or Q)`
-#. §1: $
-#. \\begin{array}{|c | c|c|}
-#. \\hline
-#. P & Q & \\text{¬(P or Q)} \\\\
-#. \\hline
-#. T & T & F \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & F \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §2: `¬P and ¬Q`
-#. §3: $
-#. \\begin{array}{|c | c|c|}
-#. \\hline
-#. P & Q & \\text{¬P and ¬Q} \\\\
-#. \\hline
-#. T & T & F \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & F \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#: Game.Doc.doc
-#: Game.Doc.doc
-msgid "Notice that §0,\n"
-"§1\n"
-"\n"
-"has the same truth table as §2\n"
-"§3\n"
-"\n"
-"Therefore, they are equivalent and can be interchanged."
 msgstr ""
 
 #. §0: `A`
@@ -4005,57 +1884,6 @@ msgstr ""
 msgid "\n"
 "Conclude that §0's statement is true.\n"
 ""
-msgstr ""
-
-#. §0: `¬P`
-#. §1: `P → False`
-#. §2: ```
-#. hnP : ¬P
-#. ```
-#. §3: `unfold Not at hnP`
-#. §4: ```
-#. hnP : P → False
-#. ```
-#. §5: $
-#. \\begin{array}{|c|c|}
-#. \\hline
-#. P & ¬P \\\\
-#. \\hline
-#. T & F \\\\
-#. \\hline
-#. F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §6: `¬P`
-#. §7: `P → False`
-#. §8: `¬P`
-#. §9: `¬P`
-#. §10: `P`
-#. §11: `False`
-#. §12: `¬P`
-#. §13: `intro`
-#: Game.Doc.doc
-msgid "## Implication defintion\n"
-"§0 is equivalent to §1\n"
-"\n"
-"Given\n"
-"§2\n"
-"§3 will result in:\n"
-"§4\n"
-"\n"
-"## Truth table\n"
-"§5\n"
-"\n"
-"Notice that this definition is an implication and that the truth table with §6 and the truth table with §7 are identical.\n"
-"\n"
-"## §8 as the goal\n"
-"What this means is that to prove §9, we assume §10 and derive a contradiction, i.e. constructing an object of type §11.\n"
-"In other words, having §12 as a goal, you have to start the proof with §13 because you are proving an implication."
-msgstr ""
-
-#: Game.Doc.doc
-msgid "A said something that is false (i.e. a lie), so A is a knave"
 msgstr ""
 
 #. §0: ```
@@ -4151,25 +1979,6 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `¬`
-#. §1: `P`
-#. §2: `¬P`
-#. §3: `P`
-#. §4: `¬P`
-#. §5: `¬`
-#. §6: `unfold Not at hnP`
-#: Game.Levels.Logic.L08_Not
-msgid "In this level we introduce logical negation, the §0 connective (read as 'not').\n"
-"\n"
-"Notice that this is the first logical connective that applies on one proposition only and not two.\n"
-"\n"
-"The job of this connective (as the name implies) is to negate a proposition:\n"
-"- For §1 true, §2 is false.\n"
-"- For §3 false, §4 is true.\n"
-"\n"
-"First , unfold the definition of §5 by doing §6"
-msgstr ""
-
 #. §0: `A`
 #. §1: `have`
 #: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
@@ -4203,47 +2012,20 @@ msgid "You have met a group of 3 islanders. Their names are §0, §1, and §2.\n
 "§7 says: §8 never lies."
 msgstr ""
 
-#. §0: `∨`
-#. §1: `P ∨ Q`
-#. §2: `P`
-#. §3: `Q`
-#. §4: `∨`
-#. §5: `∨`
-#. §6: `left`
-#. §7: `right`
-#. §8: `or`
-#. §9: `left`
-#. §10: `right`
-#. §11: `or`
-#. §12: `P`
-#. §13: `left`
-#: Game.Levels.Logic.L03_Or
-msgid "In this level, we introduce the §0 logical connective read as 'or'.\n"
+#. §0: `A`
+#. §1: `2+2=5`
+#. §2: `P or False`
+#. §3: `P`
+#. §4: `simp`
+#: Game.Levels.DSL_Knights_Knaves.L02_2plus2
+#: Game.Levels.SetTheory_Knights_Knaves.L02_2plus2
+msgid "§0 says 'I am a knave or 2+2=5'.\n"
 "\n"
-"You can prove a statement §1 from the fact that §2 is true or §3 is true. In other words, you\n"
-"prove an §4 statement if the left side is true or the right is true.\n"
+"§1 is false\n"
 "\n"
-"Therefore, there are two introduction rules for the §5 symbol. We will however use the §6 and\n"
-"§7 tactic instead.\n"
+"§2 is §3\n"
 "\n"
-"You can tell Lean which side of §8 you want to prove by simply executing §9 or §10.\n"
-"\n"
-"In our case, we know the left side of §11 (§12) is true, so use §13."
-msgstr ""
-
-#. §0: `PtoQ hP`
-#: Game.Levels.Logic.L04_Implication
-msgid "\n"
-"§0, this is exactly whats needed to prove the goal.\n"
-""
-msgstr ""
-
-#. §0: `False`
-#: Game.Levels.DSL_Knights_Knaves.L03_prob26
-#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
-msgid "\n"
-"If an islander says 'I am a knave', we get a contradiction, i.e. §0.\n"
-""
+"Use §4 to do these simplications for you."
 msgstr ""
 
 #. §0: ```
@@ -4287,22 +2069,6 @@ msgid "A summary of all the terminology presented throughout the game, in order 
 "What §11 means is the following, give me an object of type §12 which in this case is a proof of §13 and i will return an object of type §14 which in this case is a proof of §15.\n"
 "\n"
 "In other words, §16 means 'If P is true, then Q is true'."
-msgstr ""
-
-#. §0: `A`
-#. §1: `2+2=5`
-#. §2: `P or False`
-#. §3: `P`
-#. §4: `simp`
-#: Game.Levels.DSL_Knights_Knaves.L02_2plus2
-#: Game.Levels.SetTheory_Knights_Knaves.L02_2plus2
-msgid "§0 says 'I am a knave or 2+2=5'.\n"
-"\n"
-"§1 is false\n"
-"\n"
-"§2 is §3\n"
-"\n"
-"Use §4 to do these simplications for you."
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L02_2plus2
@@ -4360,7 +2126,7 @@ msgstr ""
 
 #. §0: `Finset.eq_singleton_iff_unique_mem`
 #. §1: `rw [Finset.eq_singleton_iff_unique_mem]`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "What it means for a set to be equal to a singleton is given by\n"
 "§0\n"
@@ -4384,31 +2150,6 @@ msgid "§0 proves §1 by contradiction, introducing a hypothesis §2 and proving
 "If §5 is a negation §6, h : §7 will be introduced instead of §8."
 msgstr ""
 
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-msgid "\n"
-"Conclude that §0's statement is false.\n"
-""
-msgstr ""
-
-#. §0: `h`
-#. §1: `simp`
-#. §2: `h`
-#. §3: `hnQ`
-#. §4: ```
-#. simp [hnQ] at h
-#. ```
-#: Game.Levels.Simp_World.L01_or_false
-msgid "You can also simplify §0 using the §1 tactic (which stands for 'simplification').\n"
-"\n"
-"We want to simplify §2 using §3, so\n"
-"§4\n"
-"will do.\n"
-"\n"
-"Try it."
-msgstr ""
-
 #. §0: `knight_or_knave`
 #: Game.Levels.DSL_Knights_Knaves.L09_same
 #: Game.Levels.SetTheory_Knights_Knaves.L09_same
@@ -4417,27 +2158,10 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `hP : P`
-#. §1: `hQ : Q`
-#. §2: `hR : R`
-#. §3: `P ∧ Q ∧ R`
-#. §4: ```
-#. exact ⟨hP,hQ,hR⟩
-#. ```
-#. §5: `⟨⟩`
-#. §6: `And.intro`
-#: Game.Levels.KnightsAndKnaves2.L06_
-msgid "\n"
-"Given §0, §1, §2 and the goal §3, you can close this goal using:\n"
-"§4\n"
-"where §5 is typed as \\\\<\\\\> (this is to avoid nesting §6 inside another).\n"
-""
-msgstr ""
-
 #. §0: `A ∈ Knight`
 #. §1: `A ∈ Knave`
 #. §2: `contradiction`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "Now that we know §0 and §1 we have a §2\n"
 ""
@@ -4469,7 +2193,7 @@ msgstr ""
 #. §7: `C = a`
 #. §8: `B = a`
 #. §9: `B = C`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "§0 but §1 and so §2 but we also know that §3 which means §4 , a\n"
 "contradiction.\n"
@@ -4480,105 +2204,11 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `P or Q`
-#. §1: `P,Q`
-#. §2: `left`
-#. §3: `right`
-#. §4: `P or Q`
-#. §5: `True or Q`
-#. §6: ```
-#. eq_true (h : p)
-#.   : p = True
-#. ```
-#: Game.Levels.Simp_World.L02_true_or
-msgid "§0 to be true requires at least one of §1 to be true.\n"
-"\n"
-"You have already done this level using §2/§3 tactic.\n"
-"\n"
-"Here we introduce a simplification theorem to do it.\n"
-"\n"
-"But first, rewrite §4 to §5 using\n"
-"§6"
-msgstr ""
-
 #. §0: `¬Knave={A,B,C}`
 #. §1: `Knave={A,B,C}`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "We know §0 and §1\n"
-""
-msgstr ""
-
-#. §0: `C`
-#. §1: `C`
-#. §2: `have`
-#. §3: `¬ (A.isKnight or B.isKnight)`
-#. §4: `simp`
-#. §5: `stC`
-#. §6: `C said False`
-#. §7: `C`
-#. §8: `said_knave`
-#. §9: `not_false : ¬False`
-#. §10: `C.isKnave`
-#. §11: `right`
-#. §12: `unfold`
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
-msgid "\n"
-"Now, §0's statement is false, so conclude that §1 is a knave.\n"
-"\n"
-"You can do this in a number of ways:\n"
-"- Use §2 to construct a proof that §3\n"
-"- Use §4 on §5, to obtain §6. Conclude §7 is a knave using §8, §9.\n"
-"\n"
-"- etc...\n"
-"\n"
-"Once you have §10 then everyone is a knave (§11 side of the goal).\n"
-"\n"
-"You can §12 the goal if that facilitates your reasoning.\n"
-""
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `C`
-#. §3: `A`
-#. §4: `B`
-#. §5: `A`
-#. §6: `B`
-#. §7: `B`
-#. §8: `A`
-#. §9: `C`
-#: Game.Levels.DSL_Knights_Knaves.L09_same
-#: Game.Levels.SetTheory_Knights_Knaves.L09_same
-msgid "We have three inhabitants, §0, §1, and §2.\n"
-"\n"
-"Two people are said to be of the same type if they are both knights or both knaves.\n"
-"\n"
-"§3 and §4 make the following statements:\n"
-"\n"
-"§5: §6 is a knave.\n"
-"\n"
-"§7: §8 and §9 are of the same type."
-msgstr ""
-
-#. §0: `A`
-#. §1: `A`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
-msgid "\n"
-"Now that we know §0 is a knave, conclude the negation of §1's statement.\n"
-""
-msgstr ""
-
-#. §0: `Q`
-#. §1: `«{hQ}» : Q`
-#. §2: `hQR`
-#. §3: `«{hQ}»`
-#. §4: `R`
-#: Game.Levels.Logic.L10_have
-msgid "\n"
-"Now that you proved §0, its proof §1 has been added to the proof state.\n"
-"\n"
-"§2 takes §3 and gives you a proof of §4 which is the goal.\n"
 ""
 msgstr ""
 
@@ -4592,7 +2222,7 @@ msgstr ""
 #. §7: `unfold exactlyOneIsKnave at «{exactlyoneKnave}»`
 #. §8: `simp`
 #. §9: `knight_to_knave`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "\n"
 "Notice what we have at our disposal.\n"
 "\n"
@@ -4604,85 +2234,6 @@ msgid "\n"
 "\n"
 "If it doesn't get simplified enough, then change the hypothesis involved from §9 or vice versa\n"
 ""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
-msgid "allKnights or allKnaves"
-msgstr ""
-
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
-msgid "\n"
-"Now that §0 is not a knight, conclude that not everyone is a knave.\n"
-""
-msgstr ""
-
-#. §0: `stA`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Conclude that everyone is a knave from §0\n"
-""
-msgstr ""
-
-#. §0: `¬(P or Q)`
-#. §1: $
-#. \\begin{array}{|c | c|c|}
-#. \\hline
-#. P & Q & \\text{¬(P or Q)} \\\\
-#. \\hline
-#. T & T & F \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & F \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §2: `¬P and ¬Q`
-#. §3: $
-#. \\begin{array}{|c | c|c|}
-#. \\hline
-#. P & Q & \\text{¬P and ¬Q} \\\\
-#. \\hline
-#. T & T & F \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & F \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §4: `¬(P or Q)`
-#. §5: `P or Q`
-#. §6: `P`
-#. §7: `Q`
-#. §8: `P`
-#. §9: `Q`
-#. §10: ```
-#. not_or : ¬(p or q) ↔ ¬p and ¬q
-#. ```
-#: Game.Levels.Simp_World.L03_not_or
-msgid "Notice that §0,\n"
-"§1\n"
-"\n"
-"has the same truth table as §2\n"
-"§3\n"
-"\n"
-"Therefore, they are equivalent and can be interchanged.\n"
-"\n"
-"On a more intuitive level, we can understand §4 as meaning §5 is not true, i.e. it is not true that either §6 or §7 is true, i.e. §8 is false and §9 is false.\n"
-"\n"
-"The simplification theorem to use,\n"
-"§10"
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves
-msgid "DSL Knights and Knaves"
 msgstr ""
 
 #. §0: `¬(P and Q)`
@@ -4747,64 +2298,13 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `have h : P`
-#. §1: `P`
-#. §2: `h`
-#: Game.Levels.Logic.L10_have
-msgid "§0 changes the goal to proving §1 and adds the proof §2 after that goal is closed."
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "allKnaves, exactlyOneIsKnave"
-msgstr ""
-
-#. §0: `A.isKnave`
-#. §1: `¬A.isKnight`
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
-msgid "\n"
-"Now we have that §0\n"
-"Get §1\n"
-""
-msgstr ""
-
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L06_prob33
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
-msgid "\n"
-"Assume §0 is a knight.\n"
-""
-msgstr ""
-
-#. §0: `B ∈ Knave`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"This contradicts our initial assumption that §0\n"
-""
-msgstr ""
-
 #. §0: `«{BKnight}» : B.isKnight`
 #. §1: `¬B.isKnave`
 #. §2: `C`
 #. §3: `C`
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
 msgid "\n"
 "We know that §0 which is §1 which means §2 told a lie which means §3 is a knave.\n"
-""
-msgstr ""
-
-#. §0: `IamKnave`
-#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
-msgid "\n"
-"Remember §0\n"
-""
-msgstr ""
-
-#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
-msgid "\n"
-"Now close the goal\n"
 ""
 msgstr ""
 
@@ -4818,7 +2318,7 @@ msgstr ""
 #. §6: `C ∈ Knave`
 #. §7: `«{notallKnave}»`
 #. §8: `B`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "\n"
 "Let's think about each case of §0\n"
 "\n"
@@ -4874,7 +2374,7 @@ msgstr ""
 
 #. §0: `∧`
 #. §1: `all_possibilities x`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
 "Close the left side of §0 and take all §1 to close the right side\n"
 ""
@@ -4882,15 +2382,10 @@ msgstr ""
 
 #. §0: `all_possibilities x`
 #. §1: `x`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "§0 takes cases for what §1 might be\n"
 ""
-msgstr ""
-
-#. §0: `knave_said`
-#: Game.Doc.doc
-msgid "Similar to §0."
 msgstr ""
 
 #. §0: `¬Ira.isKnight`
@@ -4899,6 +2394,14 @@ msgstr ""
 msgid "\n"
 "Assume by contradiction that §0 using the §1 tactic.\n"
 ""
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
+msgid "§0: All of us are knaves.\n"
+"\n"
+"§1: Exactly one of us is a knave."
 msgstr ""
 
 #. §0: `Zoey`
@@ -4930,71 +2433,11 @@ msgid "A very special island is inhabited only by knights and knaves. Knights al
 "First change the goal to §11 using the §12 tactic."
 msgstr ""
 
-#. §0: `A`
-#. §1: `B`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
-msgid "§0: All of us are knaves.\n"
-"\n"
-"§1: Exactly one of us is a knave."
-msgstr ""
-
-#. §0: `IamKnave`
-#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
-msgid "remember §0"
-msgstr ""
-
-#. §0: `A`
-#. §1: `unfold allKnaves at «{allKnave}»`
-#. §2: `A.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
-msgid "\n"
-"This would mean that §0 is also a knave, which is absurd.\n"
-"\n"
-"You can §1 and extract §2 from that.\n"
-""
-msgstr ""
-
 #. §0: `B`
-#: Game.Levels.DSL_Knights_Knaves.L10_allofus
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus2
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
 msgid "\n"
 "First, take cases for §0.\n"
-""
-msgstr ""
-
-#. §0: `B`
-#. §1: `C`
-#. §2: `C`
-#. §3: `B`
-#. §4: `C`
-#: Game.Levels.DSL_Knights_Knaves.L03_prob26
-#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
-msgid "\n"
-"Now that §0 is a knave, §1's statement is true then §2 is a knight.\n"
-"\n"
-"So you would have §3 is a knave and §4 is a knight closing the goal.\n"
-""
-msgstr ""
-
-#. §0: `A`
-#. §1: ```
-#. isKnave A : Prop
-#. ```
-#. §2: ```
-#. A.isKnave : Prop
-#. ```
-#. §3: `A`
-#: Game.Doc.doc
-msgid "For an Islander §0,\n"
-"§1\n"
-"or\n"
-"§2\n"
-"is the proposition that §3 is a knave."
-msgstr ""
-
-#. §0: `simp`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"§0 will do the job\n"
 ""
 msgstr ""
 
@@ -5095,7 +2538,7 @@ msgstr ""
 #. §1: `intro x h`
 #. §2: `x`
 #. §3: `h : x ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "The goal now states: for every arbitrary inhabitant that is a knight , this inhabitant is equal to\n"
 "§0\n"
@@ -5129,16 +2572,6 @@ msgid "Its truth table is as follows:\n"
 "From this truth table, we conclude that to prove §1, we need either §2 being true or §3 being true."
 msgstr ""
 
-#. §0: `¬A.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.DSL_Knights_Knaves.L12_31
-#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Assume §0\n"
-""
-msgstr ""
-
 #. §0: ```
 #. dsl_iamknave
 #. (hAKn : A said A.isKnave)
@@ -5152,8 +2585,2980 @@ msgid "We have proven the following theorem:\n"
 "You will need it in the next level."
 msgstr ""
 
+#. §0: ```
+#. full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : S = {A, B, C}
+#. ```
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"Use the following theorem to obtain a contradiction and close the goal\n"
+"§0\n"
+""
+msgstr ""
+
+#. §0: `B ∈ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"We now know that §0 so there is only one knight.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+#: Game.Levels.KnightsAndKnaves2.L06_
+msgid "\n"
+"Take cases for §0.\n"
+""
+msgstr ""
+
+#. §0: `P → Q`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `P → Q`
+#. §4: $
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. P & Q & P → Q \\\\
+#. \\hline
+#. T & T & T \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & T \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §5: `P → Q`
+#. §6: `P`
+#. §7: `Q`
+#. §8: `P`
+#. §9: `Q`
+#. §10: `P`
+#. §11: `Q`
+#. §12: `P`
+#. §13: `Q`
+#. §14: `P → Q`
+#. §15: `P`
+#. §16: `Q`
+#. §17: `P → Q`
+#. §18: `P`
+#. §19: `Q`
+#. §20: `hPQ : P → Q`
+#. §21: `hP : P`
+#. §22: `hPQ hP`
+#: Game.Doc.doc
+msgid "Logical implication §0 is made up of two components:\n"
+"- The premise, which in this case is §1\n"
+"- The conclusion, which in this case is §2\n"
+"\n"
+"§3 is read as 'If P is true, then Q is true.\n"
+"\n"
+"# Truth table\n"
+"§4\n"
+"\n"
+"A statement §5 is false when §6 is true and §7 false, it's true otherwise.\n"
+"\n"
+"# Implication as a function\n"
+"What logical implication does is that it takes evidence or proof for §8 and transforms it returning a proof of §9.\n"
+"The truth of §10 IMPLIES the truth of §11. A proof of §12 IMPLIES a proof of §13.\n"
+"\n"
+"In other words, it acts like a function. If you give §14 a proof of §15, you get a proof of §16.\n"
+"\n"
+"§17 acts like a function. It takes a proof of §18 and returns a proof of §19.\n"
+"\n"
+"Given §20 §21, §22 is a proof of Q"
+msgstr ""
+
+#. §0: `constructor`
+#. §1: `«{AKnave}»`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"Let's close the first part of the goal using §0 and §1\n"
+""
+msgstr ""
+
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"§0 is knave and is not a knave.\n"
+"contradiction.\n"
+""
+msgstr ""
+
+#. §0: `A ∈ Knave`
+#. §1: `B ∈ Knave`
+#. §2: `C ∈ Knave`
+#. §3: `Knave = {A,B,C}`
+#. §4: `full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : Knave = {A, B, C}`
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
+msgid "\n"
+"When §0 , §1 , §2 then we can conclude that everyone is a knave i.e\n"
+"§3\n"
+"\n"
+"§4 is useful here\n"
+""
+msgstr ""
+
+#: Game.Levels.SetTheory_Knights_Knaves.L02_2plus2
+msgid "\n"
+"This is identical to the previous level.\n"
+"\n"
+""
+msgstr ""
+
+#. §0: `full3`
+#. §1: `full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : Knave = {A, B, C}`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Close the goal using §0\n"
+"\n"
+"§1\n"
+""
+msgstr ""
+
+#. §0: `↔`
+#. §1: $
+#. \\begin{array}{|c c|c c|c|}
+#. \\hline
+#. P & Q & P → Q & Q → P & P → Q ∧ Q → P \\\\
+#. \\hline
+#. T & T & T & T & T \\\\
+#. \\hline
+#. T & F & F & T & F \\\\
+#. \\hline
+#. F & T & T & F & F \\\\
+#. \\hline
+#. F & F & T & T & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §2: `P ↔ Q`
+#. §3: `P,Q`
+#. §4: `P,Q`
+#. §5: `P`
+#. §6: `Q`
+#. §7: `P`
+#. §8: `Q`
+#. §9: `PsameQ`
+#. §10: `P`
+#. §11: `Q`
+#. §12: `PsameQ : P ↔ Q`
+#. §13: `PsameQ : P = Q`
+#. §14: `rw [PsameQ] at hP`
+#: Game.Levels.Logic.L07_LogicalEquivalence
+msgid "§0 truth table:\n"
+"§1\n"
+"\n"
+"So, §2 is true when §3 are true or §4 are false, i.e. when §5 and §6 have the same\n"
+"truth value. Therefore, §7 and §8 are equivalent from a truth value perspective.\n"
+"\n"
+"Since §9 means that §10 and §11 have the same truth value, you can consider think of §12 as §13 and §14. Try it!"
+msgstr ""
+
+#. §0: `knave_interp`
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+msgid "\n"
+"Transform the goal from §0.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `«{AKnave}».left : A.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
+#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
+msgid "\n"
+"Now you have that §0 is a knave, which is a contradiction\n"
+"\n"
+"Remeber that §1.\n"
+""
+msgstr ""
+
+#. §0: `P ↔ Q`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `P ↔ Q`
+#. §4: `P ↔ Q`
+#. §5: `P`
+#. §6: `Q`
+#. §7: ```
+#. iff_of_false (ha : ¬a) (hb : ¬b)
+#.   : a ↔ b
+#. ```
+#: Game.Levels.Simp_World.L06_iff_of_false
+msgid "§0 means that §1,§2 have the same truth value.\n"
+"\n"
+"If both of them are true, we can conclude §3.\n"
+"\n"
+"If both of them are false, we can conclude §4 as well.\n"
+"\n"
+"Here, we have that §5,§6 are both false.\n"
+"\n"
+"The relevant theorem,\n"
+"§7"
+msgstr ""
+
+#. §0: `and`
+#. §1: `P and Q`
+#. §2: `P`
+#. §3: `Q`
+#. §4: `∧`
+#. §5: `∧`
+#. §6: `And.intro`
+#. §7: `P`
+#. §8: `Q`
+#. §9: `P ∧ Q`
+#. §10: `P`
+#. §11: `Q`
+#. §12: `T`
+#. §13: `F`
+#. §14: $$
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. x=2 & y=6 & x=2 ∧ y=6 \\\\
+#. \\hline
+#. T & T & T \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & F \\\\
+#. \\hline
+#. F & F & F \\\\
+#. \\hline
+#. \\end{array}
+#. $$
+#. §15: `constructor`
+#. §16: `P and Q`
+#. §17: `P`
+#. §18: `Q`
+#. §19: `And.intro hP hQ`
+#. §20: `\\<hP,hQ\\>`
+#: Game.Levels.Logic.L02_And
+msgid "Logical connectives are either defined by their introduction and elimination rules or by truth\n"
+"tables.\n"
+"\n"
+"An introduction rule 'introduces' a symbol , in this case proving a statement of §0.\n"
+"\n"
+"An elimination rule 'eliminates' a symbol extracting information from it. For an expression §1\n"
+", applying the elimination rule would give you a proof of §2 and a proof of §3 separately.(seen in future levels)\n"
+"\n"
+"The only way to introduce the symbol §4 i.e prove a statement involving §5 is to use the\n"
+"§6 introduction rule which requires a proof of §7 and a proof of §8.\n"
+"\n"
+"We can conclude from this that §9 is true in only one case: when §10 is true and §11 is true. It is false otherwise\n"
+"\n"
+"In truth table form, this looks like:\n"
+"\n"
+"§12 stands for true\n"
+"§13 stands for false\n"
+"\n"
+"§14\n"
+"\n"
+"Restart the level and use these two alternative techniques to solve it:\n"
+"- You can also use the §15 tactic which will split the goal §16 into two, the first being to prove §17 and the second being to prove §18.\n"
+"- Moreover, instead of §19 you can use the notation §20 which means the same thing."
+msgstr ""
+
+#. §0: `False`
+#: Game.Doc.doc
+msgid "A : I am a knave\n"
+"\n"
+"This implies a contradiction, §0"
+msgstr ""
+
+#. §0: `¬True`
+#. §1: `stA`
+#. §2: `False`
+#. §3: `not_true`
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "\n"
+"Rewrite §0 in §1 as §2 using §3\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `A`
+#. §2: `knave_interp at stA`
+#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
+msgid "\n"
+"Now that we know that §0 is not a knight, we know that what §1 said was a lie.\n"
+"\n"
+"§2\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `A`
+#. §2: `«{st}»`
+#. §3: `A.isKnave`
+#. §4: `knave_interp`
+#. §5: `«{st}»`
+#. §6: `B.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
+msgid "\n"
+"§0 is not a knight means that §1 is a knave, so §2 could be simplified.\n"
+"\n"
+"Obtain §3 using §4, and simplify §5 obtaining §6.\n"
+"\n"
+"After that, close the goal\n"
+""
+msgstr ""
+
+#. §0: `B`
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
+msgid "\n"
+"Knowing that §0 is a knight, conclude that there is exactly one knave.\n"
+""
+msgstr ""
+
+#. §0: `¬isKnight B`
+#. §1: `knight_interp`
+#: Game.Levels.DSL_Knights_Knaves.L03_prob26
+msgid "\n"
+"Change the goal to §0\n"
+"\n"
+"Use the §1 tactic.\n"
+""
+msgstr ""
+
+#. §0: `«{AnK}»`
+#. §1: `stA`
+#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
+msgid "\n"
+"use §0 to simplify §1\n"
+""
+msgstr ""
+
+#. §0: `A ↔ True`
+#. §1: `A`
+#. §2: `iff_true_right  (ha : a) : (b ↔ a) ↔ b`
+#. §3: `a`
+#. §4: `True`
+#. §5: `True`
+#. §6: `True.intro`
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "\n"
+"Rewrite §0 to §1 using §2.\n"
+"\n"
+"Notice that §3 here is §4 and a proof of §5 is simply §6\n"
+""
+msgstr ""
+
+#. §0: `knave_interp`
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "\n"
+"Convert from §0.\n"
+""
+msgstr ""
+
+#. §0: `True`
+#. §1: `True`
+#. §2: `trivial`
+#: Game.Levels.Simp_World.L02_true_or
+msgid "\n"
+"Now we want to prove §0. But §1 is always true, so the proof is trivial.\n"
+"\n"
+"The §2 tactic will do the job.\n"
+""
+msgstr ""
+
+#. §0: `assumption`
+#. §1: `assumption`
+#. §2: `exact h`
+#: Game.Levels.EquationalReasoning.L02_exact
+msgid "The §0 tactic can also be used here which searches for an assumption that matches the goal, and closes the goal if it finds one.\n"
+"\n"
+"Try it before moving on to the next level. Just type §1 instead of §2"
+msgstr ""
+
+#. §0: `A.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"Let's start by proving §0\n"
+""
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus2
+msgid "\n"
+"Take cases for «{all}» and close the goal accordingly\n"
+""
+msgstr ""
+
+#. §0: `C ∈ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"Let's prove §0\n"
+""
+msgstr ""
+
+#. §0: `A.isKnight`
+#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+msgid "\n"
+"Change this to a goal about knights,\n"
+"and assume §0\n"
+""
+msgstr ""
+
+#. §0: `isKnight A`
+#. §1: `¬isKnave A`
+#. §2: `knave_interp`
+#. §3: `knave_interp`
+#. §4: `hypothesis`
+#. §5: `knave_interp`
+#. §6: `*`
+#. §7: ```
+#. simp [isKnight_notisKnaveIff]
+#. ```
+#. §8: ```
+#. isKnight_notisKnaveIff
+#. : A.isKnight ↔ ¬A.isKnave
+#. ```
+#. §9: `A.isKnight`
+#. §10: `¬A.isKnave`
+#. §11: `A`
+#: Game.Doc.tactic_doc
+#: Game.Doc.tactic_doc
+msgid "Rewrites all expression asserting being a knight into the equivalent expression of not being knave\n"
+"\n"
+"Changes all instances of §0 to §1\n"
+"\n"
+"# Change the Goal\n"
+"§2\n"
+"\n"
+"# Change the Hypothesis\n"
+"§3 at §4\n"
+"\n"
+"# Change the goal and all hypothesis\n"
+"§5 at *\n"
+"\n"
+"The §6 is called the 'wildcard', and it matches anything.\n"
+"\n"
+"# Under the hood\n"
+"The tactic is simply a macro abbreviating:\n"
+"§7\n"
+"where\n"
+"§8\n"
+"\n"
+"§9 and §10 always have the same truth value regardless of what §11 is, so they can be interchanged"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `A`
+#. §4: `A`
+#. §5: `B`
+#. §6: `A`
+#. §7: `B`
+#. §8: `A`
+#. §9: `C`
+#. §10: `B`
+#. §11: `B`
+#. §12: `C`
+#. §13: `B ∈ Knave`
+#. §14: `have`
+#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
+msgid "Three of the inhabitants §0, §1, and §2 were standing together in a garden.\n"
+"\n"
+"A stranger passed by and asked §3, 'Are you a knight or a knave?' §4 answered, but rather indistinctly, so the stranger could not make out what he said.\n"
+"\n"
+"The stranger then asked §5, 'What did §6 say?' §7 replied, '§8 said that he is a knave.'\n"
+"\n"
+"At this point the third man, §9, said, 'Don't believe §10; he is lying!'\n"
+"\n"
+"The question is, what are §11 and §12?\n"
+"\n"
+"Change the goal to §13 (using the §14 tactic)"
+msgstr ""
+
+#. §0: `stA`
+#. §1: `A`
+#. §2: `False`
+#. §3: `have`
+#. §4: `contradiction`
+#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
+msgid "\n"
+"Now §0 is §1 saying I am a knave.\n"
+"\n"
+"We can derive a proof of §2 from this and store it using §3\n"
+"\n"
+"Then §4 would do the trick\n"
+""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L02_2plus2
+msgid "2 + 2 = 5"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `A`
+#. §3: `not_false : ¬False`
+#. §4: `¬False`
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus2
+msgid "\n"
+"So, §0's statement is false because §1 is not a knight\n"
+"\n"
+"Conclude that §2 is a knave.\n"
+"\n"
+"Remember the term §3 a proof of §4\n"
+""
+msgstr ""
+
+#. §0: `simp [not_or] at h`
+#. §1: `rw [not_or] at h`
+#: Game.Levels.Simp_World.L03_not_or
+#: Game.Levels.Simp_World.L04_not_and_or
+msgid "§0 instead of §1 also works."
+msgstr ""
+
+#. §0: `P`
+#. §1: `x = 2`
+#. §2: `P`
+#. §3: `hP`
+#. §4: `P`
+#. §5: `hP`
+#. §6: `hP`
+#: Game.Levels.Logic.L01_Intro
+msgid "This should look familiar.\n"
+"\n"
+"If it doesn't, then mentally replace §0 by §1.\n"
+"\n"
+"We want to prove §2. §3 is a proof of §4.\n"
+"\n"
+"§5 is EXACTLY what we need to prove the goal. The type of §6 EXACTLY matches the goal."
+msgstr ""
+
+#. §0: `B`
+#. §1: `A`
+#. §2: `C`
+#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.SetTheory_Knights_Knaves.L09_same
+msgid "\n"
+"Therefore, from §0's statement, conclude that §1 and §2 are not the same, i.e. are different.\n"
+""
+msgstr ""
+
+#. §0: `iff_of_true`
+#. §1: `A ↔ ¬C`
+#: Game.Levels.KnightsAndKnaves2.L06_
+#: Game.Levels.KnightsAndKnaves2.L06_
+msgid "\n"
+"Use §0 to prove §1\n"
+""
+msgstr ""
+
+#. §0: `not_iff'`
+#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.SetTheory_Knights_Knaves.L09_same
+msgid "\n"
+"Use §0\n"
+""
+msgstr ""
+
+#. §0: ```
+#. cases isKnight_or_isKnave A
+#. ```
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"Try\n"
+"§0\n"
+""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
+msgid "Yet another I am Knave variation"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `unfold oneisknight at «{hF}»`
+#. §3: `simp`
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "\n"
+"We now know that there is only one knight but we also know that §0 is a knight and §1 is a knight. This is the contradiction needed to close the goal.\n"
+"\n"
+"Start by §2 and using §3\n"
+""
+msgstr ""
+
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
+msgid "\n"
+"Use constructor\n"
+""
+msgstr ""
+
+#: Game.Levels.Logic.L04_Implication
+msgid "Implication, →"
+msgstr ""
+
+#. §0: `∨`
+#: Game.Levels.Logic.L03_Or
+msgid "Or, §0"
+msgstr ""
+
+#. §0: `↔`
+#. §1: `=`
+#. §2: `↔`
+#: Game.Levels.KnightsAndKnaves2.L03_iff_iff
+msgid "\n"
+"Remember the interpretation where you can treat §0 like §1 (refer to §2 docs for an example).\n"
+""
+msgstr ""
+
+#: Game.Levels.Logic.L07_LogicalEquivalence
+msgid "\n"
+"The forward direction.\n"
+"\n"
+"exact PsameQ.mp hP\n"
+""
+msgstr ""
+
+#. §0: `Lean`
+#. §1: `mathlib`
+#. §2: `Lean`
+#. §3: `Lean`
+#. §4: `Lean`
+#. §5: `Lean`
+#. §6: `Lean`
+#: Game
+msgid "# Official Documentation\n"
+"\n"
+"Many technical details have been skipped for the sake of not getting bogged down with §0 and its mathematical library §1, but focus on the aspects of reasoning and proof.\n"
+"\n"
+"Moreover, the Docs in the right side pane are custom written to provide only what you need to progress through the game.\n"
+"\n"
+"You can of course go deeper by searching through the [official docs](https://leanprover-community.github.io/mathlib4_docs/)\n"
+"\n"
+"# Zulip Community Chat\n"
+"\n"
+"Zulip chat for §2 has been a very useful resource to resolve issues when formalizing the exercises, you can visit it and ask questions in the '#new members' stream. You can also view messages without signing up. There are other streams dedicated to various topics you can check out as well.\n"
+"\n"
+"https://leanprover.zulipchat.com/\n"
+"\n"
+"https://zulip.com/case-studies/lean/\n"
+"\n"
+"# Sources for Puzzles:\n"
+"\n"
+"Some puzzles were taken as is, others were modified or inspired variations.\n"
+"\n"
+"- Wolfram Cloud [Puzzle\n"
+"Generator](https://www.wolframcloud.com/objects/demonstrations/KnightsAndKnavesPuzzleGenerator-source.nb)\n"
+"\n"
+"- [382 Puzzles](https://philosophy.hku.hk/think/logic/knights.php)\n"
+"\n"
+"- [What Is The Name Of This Book](https://raymondsmullyan.com/books/what-is-the-name-of-this-book/) by Raymond Smullyan\n"
+"\n"
+"- Knights and Knaves in a logic programming language (prolog):\n"
+"https://www.youtube.com/watch?v=oEAa2pQKqQU\n"
+"\n"
+"- Blog post series, includes introduction, representation and formalization, automated solutions using other provers, and creating your own puzzles.\n"
+"https://summerofgodel.blogspot.com/2019/04/table-of-contents-for-series-of-posts.html?\n"
+"\n"
+"\n"
+"# Editor Mode\n"
+"\n"
+"Editor mode mimics the §3 experience in vscode which is the most common way to use §4.\n"
+"\n"
+"To access editor mode, click on the icon next to the hamburger menu in the top right when in a level.\n"
+"\n"
+"# Links\n"
+"## Documentation\n"
+"https://leanprover-community.github.io/mathlib4_docs/\n"
+"\n"
+"https://lean-lang.org/documentation/\n"
+"\n"
+"https://leanprover-community.github.io/\n"
+"\n"
+"https://lean-lang.org/\n"
+"\n"
+"https://github.com/leanprover-community/mathlib4\n"
+"\n"
+"# Rules\n"
+"You can relax the rules and skip levels.\n"
+"\n"
+"This is not recommended for if you have never used §5 before because every level depends on\n"
+"introduced tactics/theorems/ideas in previous levels. Moreover, relaxing the rules would ruin the\n"
+"structured/guided experience this game is supposed to offer. If that is what you are looking for, then don't relax the rules.\n"
+"\n"
+"# Solutions\n"
+"[Github Repository](https://github.com/JadAbouHawili/KnightsAndKnaves-Lean4Game)\n"
+"\n"
+"You can view the §6 code for every level there (and the solution if you are really stuck).\n"
+"\n"
+"# Other Knights and Knaves Educational Games\n"
+"[Timer Game](https://en.oiler.education/bul)\n"
+"\n"
+"[Terminal-Like](https://christopherphelps.trinket.io/sites/knight_knave_puzzler)"
+msgstr ""
+
+#: Game.Levels.Logic.L02_And
+msgid "\n"
+"exact And.intro hP hQ\n"
+""
+msgstr ""
+
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Interpret the goal in terms of knights\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `A`
+#. §2: ```
+#. A.isKnight
+#. ```
+#. §3: `A`
+#. §4: ```
+#. A.isKnave
+#. ```
+#. §5: `A`
+#. §6: ```
+#. isKnight_or_isKnave (A : Islander)
+#. : A.isKnight or A.isKnave
+#. ```
+#. §7: ```
+#. knight_said
+#. : (A said P) → A.isKnight → P
+#. said_knight
+#. : (A said P) →  P → A.isKnight
+#. ```
+#. §8: ```
+#. knave_said
+#. : (A said P) →  A.isKnave → ¬P
+#. said_knave
+#. : (A said P) →  ¬P → A.isKnave
+#. ```
+#. §9: `A`
+#. §10: ```
+#. not_isKnight_and_isKnave (A : Islander)
+#. : ¬ (A.isKnight ∧ A.isKnave)
+#. ```
+#: Game.Doc.doc
+msgid "The setting is an island.\n"
+"Every islander will make a statement. There are two types of islanders, 'knights' that always tell the truth, and 'knaves' that always lie.\n"
+"\n"
+"We give english statements and their corresponding translation to lean.\n"
+"\n"
+"Given an islander §0\n"
+"\n"
+"§1 is a knight\n"
+"§2\n"
+"\n"
+"§3 is a knave\n"
+"§4\n"
+"\n"
+"§5 is either a knight or a knave\n"
+"§6\n"
+"\n"
+"Knights always tell the truth.\n"
+"§7\n"
+"\n"
+"Knaves always lie.\n"
+"§8\n"
+"\n"
+"Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. §9 is not a knight and a knave at the same time. This is represented as:\n"
+"§10\n"
+"\n"
+"The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning."
+msgstr ""
+
+#. §0: `¬Knave={A,B,C}`
+#. §1: `Knave={A,B,C}`
+#. §2: `Knave = {A,B,C}`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Let's prove the contradiction , we know that §0 but we can prove that\n"
+"§1 so change the goal to proving §2\n"
+""
+msgstr ""
+
+#. §0: `A ∈ Knave`
+#. §1: `stA`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Now that we know §0 , let's interpret §1 in terms of knaves\n"
+""
+msgstr ""
+
+#. §0: `B`
+#. §1: `C`
+#. §2: `A`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
+msgid "\n"
+"Notice that §0 and §1 are of opposite types which means one of them is a knight , there is at\n"
+"least one knight. This detail is important and will show up later in our reasoning\n"
+"\n"
+"Take cases for §2\n"
+""
+msgstr ""
+
+#. §0: `P,Q`
+#. §1: `P,Q`
+#. §2: `P ↔ Q`
+#: Game.Doc.doc
+msgid "If two propositions are true, then they have the same truth value.\n"
+"\n"
+"If we know §0  then we can conclude that §1 have the same truth value, i.e. §2"
+msgstr ""
+
+#. §0: `A.isKnight`
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Change the goal to §0\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `contradiction`
+#: Game.Levels.SetTheory_Knights_Knaves.L01_IamKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"§0 is a knight and a knave. This is a §1\n"
+""
+msgstr ""
+
+#. §0: `∨`
+#. §1: `cases`
+#. §2: ```
+#. PorQ : P ∨ Q
+#. 
+#. Goal
+#. some-goal
+#. ```
+#. §3: `cases PorQ`
+#. §4: `P`
+#. §5: `some-goal`
+#. §6: `Q`
+#. §7: `some-goal`
+#. §8: `some-goal`
+#. §9: `some-goal`
+#: Game.Doc.tactic_doc
+msgid "exemplifies the §0 elimination rule\n"
+"[#Or.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or.elim)\n"
+"\n"
+"# Proof by cases\n"
+"The §1 tactic enables us to do a 'proof by cases'.\n"
+"\n"
+"Given,\n"
+"§2\n"
+"§3 will first assume §4 and ask you to prove §5 and then it will assume §6 and ask you to prove §7.\n"
+"\n"
+"So in both cases, §8 is true. Therefore we can conclude §9. This is called a proof by cases."
+msgstr ""
+
+#. §0: `¬(P ↔ Q)`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `P`
+#. §4: `Q`
+#. §5: `¬(P ↔ Q)`
+#. §6: $
+#. \\begin{array}{|c | c|c|}
+#. \\hline
+#. P & Q & \\text{¬(P ↔ Q)} \\\\
+#. \\hline
+#. T & F & T \\\\
+#. \\hline
+#. F & T & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §7: `¬P`
+#. §8: `Q`
+#. §9: `¬P ↔ Q`
+#: Game.Doc.doc
+msgid "§0 means that §1 ,§2 don't have the same truth value, i.e. one of them is true and the other is false.\n"
+"\n"
+"Here are the values for §3,§4 where §5 is satisfied:\n"
+"§6\n"
+"\n"
+"We can conclude that §7,§8 have the same truth value (§9)."
+msgstr ""
+
+#. §0: `and`
+#. §1: `constructor`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Close the first part of §0 using §1\n"
+""
+msgstr ""
+
+#. §0: `A ∈ Knave`
+#. §1: `A ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"This is means that §0 which is a contradiction. Change the goal to §1\n"
+""
+msgstr ""
+
+#. §0: `constructor`
+#. §1: `P ∧ Q`
+#. §2: `P`
+#. §3: `Q`
+#: Game.Doc.tactic_doc
+msgid "The §0 tactic will split a goal of the form §1 into two subgoals §2,§3 where you can deal with each one separately."
+msgstr ""
+
+#: Game.Doc.doc
+msgid "A said something true, so A is a knight."
+msgstr ""
+
+#. §0: `stC`
+#. §1: `C ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
+msgid "\n"
+"Simplify §0 concluding that §1\n"
+""
+msgstr ""
+
+#. §0: ```
+#. Objects
+#. P : Prop
+#. 
+#. Assumptions
+#. hP : P
+#. 
+#. Goal:
+#. P
+#. ```
+#. §1: `hP : P`
+#. §2: `P : Prop`
+#. §3: `hP`
+#. §4: `P`
+#. §5: `P`
+#. §6: `exact hP`
+#. §7: `hP`
+#. §8: `hP`
+#. §9: `exact h`
+#: Game.Doc.tactic_doc
+msgid "## Overview\n"
+"For the following proof state:\n"
+"§0\n"
+"Remember that §1 where §2 means §3 is a proof of §4.\n"
+"\n"
+"Since the goal is to prove §5, the only thing we have to do is to let Lean know that we do have such a proof. This is done by §6.\n"
+"\n"
+"In other words, §7 is EXACTLY whats needed to prove the goal, the type of §8 EXACTLY matches the goal, so §9 will do the job."
+msgstr ""
+
+#. §0: `B ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"As usual, interpret in terms of knaves and assume §0\n"
+""
+msgstr ""
+
+#: Game.Levels.Logic.L01_Intro
+msgid "In the upcoming levels, we will discuss how to construct new propositions from existing ones.\n"
+"\n"
+"Here's an example in natural language.\n"
+"\n"
+"Given the two propositions 'The sun is shining', 'It is Monday'.\n"
+"\n"
+"You can construct 'The sun is shining and it is monday' which is a proposition as well.\n"
+"It's truth value depends on the truth value of its building blocks"
+msgstr ""
+
+#. §0: `hPQ`
+#. §1: `hP`
+#. §2: `Q`
+#: Game.Levels.Logic.L10_have
+msgid "\n"
+"§0 takes §1 and gives you a proof of §2\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `A`
+#. §3: `B`
+#. §4: `B`
+#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
+msgid "You stumble into §0,§1.\n"
+"\n"
+"§2 says '§3 is a knight'\n"
+"\n"
+"§4 says 'We are different types'"
+msgstr ""
+
+#. §0: `x`
+#. §1: `A`
+#. §2: `A ∈ Knight`
+#. §3: `A ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"If §0 where §1 , then §2 and §3\n"
+""
+msgstr ""
+
+#. §0: `B`
+#: Game.Levels.DSL_Knights_Knaves.L03_prob26
+#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
+msgid "\n"
+"Assume that §0 is a knight.\n"
+""
+msgstr ""
+
+#. §0: ```
+#. P ∨ Q
+#. ```
+#. §1: `P Q : Prop`
+#. §2: `left`
+#. §3: `P`
+#: Game.Doc.tactic_doc
+#: Game.Doc.tactic_doc
+msgid "Having the goal of the form:\n"
+"§0\n"
+"for §1, §2 transforms the goal to §3."
+msgstr ""
+
+#. §0: `simp at hP`
+#. §1: `hP : ¬¬P`
+#. §2: `hP : P`
+#. §3: `simp [not_not] at hP`
+#. §4: `not_not`
+#. §5: `@simp`
+#: Game.Levels.Simp_World.L05_not_not
+msgid "§0 simplifies §1 into §2\n"
+"\n"
+"You don't have to do §3 because §4 is marked as a §5 lemma."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `A`
+#. §3: `C`
+#. §4: `C`
+#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.SetTheory_Knights_Knaves.L09_same
+msgid "\n"
+"Now that §0 is a knave.\n"
+"We can conclude §1 is a knight.\n"
+"\n"
+"which means that §2 and §3 have the same type, obtaining that §4 is a knave and closing the goal.\n"
+""
+msgstr ""
+
+#. §0: `grind`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
+msgid "\n"
+"You don't have to go through the reasoning again here , just do §0\n"
+""
+msgstr ""
+
+#. §0: `Knave = {a}`
+#. §1: `A ∈ Knave`
+#. §2: `A ∈ {a}`
+#. §3: `A = a`
+#. §4: `A ∈ Knave`
+#. §5: `C ∈ {a}`
+#. §6: `rw`
+#. §7: `C = a`
+#. §8: `simp`
+#. §9: `A = C`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"§0.\n"
+"\n"
+"§1 so §2 so §3(by simp)\n"
+"§4 so §5(by §6) so §7(by §8)\n"
+"\n"
+"Therefore , §9 which is a contradiction\n"
+""
+msgstr ""
+
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+msgid "\n"
+"Conclude §0's statement.\n"
+""
+msgstr ""
+
+#. §0: `contradiction`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"We now have a §0\n"
+""
+msgstr ""
+
+#. §0: `False`
+#. §1: `¬P`
+#. §2: `P → False`
+#. §3: $
+#. \\begin{array}{|c|c|}
+#. \\hline
+#. P & ¬P \\\\
+#. \\hline
+#. T & F \\\\
+#. F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §4: `→`
+#. §5: $
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. P & Q & P → Q \\\\
+#. \\hline
+#. T & T & T \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & T \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §6: `Q=False`
+#. §7: $
+#. \\begin{array}{|c|c|}
+#. \\hline
+#. P & P → False \\\\
+#. \\hline
+#. T & F \\\\
+#. \\hline
+#. F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §8: `P`
+#. §9: `¬P`
+#. §10: `P → False`
+#. §11: `¬P ↔ (P → False)`
+#: Game.Levels.Logic.L08_Not
+msgid "In the next level, we will explore what it means to have proven §0, and what it means to have\n"
+"contradictory assumptions in our proof state.\n"
+"\n"
+"But for now , let's talk about why §1 is defined as §2.\n"
+"\n"
+"\n"
+"In truth table form:\n"
+"§3\n"
+"\n"
+"\n"
+"Consider the §4 truth table:\n"
+"§5\n"
+"\n"
+"Let's focus on the rows where §6,\n"
+"§7\n"
+"\n"
+"Notice that regardless of the truth value of §8, the two propositions §9 and §10 have\n"
+"the same truth table. Therefore, they can be used interchangeably and essentially have the same\n"
+"meaning (we say that these two expressions are logically equivalent, §11)."
+msgstr ""
+
+#: Game.Levels.EquationalReasoning.L01_rfl
+msgid "Notice the yellow highlights in the right side pane , showing newly introduced tactics/definitions/theorems which you will need to solve the current level and can use in future levels as well.\n"
+"\n"
+"Use this as a reference for documentation and examples if you ever get stuck."
+msgstr ""
+
+#. §0: `False`
+#. §1: `False`
+#. §2: `→`
+#. §3: $$
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. P & Q & P → Q \\\\
+#. \\hline
+#. T & T & T \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & T \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $$
+#. §4: `P`
+#. §5: `False`
+#. §6: `False`
+#. §7: $$
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. Q & False → Q \\\\
+#. \\hline
+#. T & T \\\\
+#. \\hline
+#. F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $$
+#. §8: `False → Q`
+#. §9: `Q`
+#. §10: `False`
+#. §11: `False`
+#. §12: `False.elim (h : False) : Q`
+#. §13: `False`
+#. §14: `Q`
+#. §15: `contradiction`
+#. §16: `contradiction`
+#: Game.Levels.Logic.L09_False
+msgid "We proved §0, what does this mean? What can we conclude? What does §1 IMPLY?\n"
+"\n"
+"Let's check the §2 truth table:\n"
+"§3\n"
+"\n"
+"Let's focus on part of the truth table where §4 is §5, because we want to see what §6 implies.\n"
+"§7\n"
+"\n"
+"We have that the implication §8 is true regardless what §9 represents.\n"
+"So §10 implies any proposition. This principle is known as: 'From §11, anything follows'.\n"
+"\n"
+"This principle is represented by §12 which takes a proof of §13, and\n"
+"proves any proposition §14.(which you can read about\n"
+"[#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim))\n"
+"\n"
+"The §15 tactic exemplifies this principle and its what we will use in this game. Just type\n"
+"§16"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `B`
+#. §4: `C`
+#. §5: `A`
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
+msgid "§0: §1 is a knight or §2 is a knight.\n"
+"§3: §4 is a knave, if and only if §5 is a knave"
+msgstr ""
+
+#. §0: `simp`
+#: Game.Levels.Simp_World.L09_not_iff_not
+msgid "This was the last simplification theorem.\n"
+"\n"
+"Some of these you will use in the next two worlds solving knights and knaves logic puzzles (or use the §0 tactic if you prefer)."
+msgstr ""
+
+#. §0: `A`
+#. §1: ```
+#. Asaid : A said A.isKnave
+#. ```
+#. §2: `False`
+#. §3: `A`
+#. §4: `A`
+#. §5: ```
+#. isKnight_or_isKnave
+#. (A : Islander)
+#. : A.isKnight or A.isKnave
+#. ```
+#. §6: `A`
+#. §7: `A`
+#. §8: `A`
+#. §9: `A`
+#. §10: `False`
+#. §11: `A`
+#. §12: `A`
+#. §13: `A`
+#. §14: `A`
+#. §15: `False`
+#. §16: `cases`
+#. §17: `isKnight_or_isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "In this level, we present the 'I am a knave' puzzle.\n"
+"\n"
+"The given islander §0 says 'I am a knave'\n"
+"§1\n"
+"\n"
+"The goal is to prove §2. Given the rules of the game, and that §3 says 'I am a knave' we have a contradiction.\n"
+"\n"
+"By the rules of the game, we know that §4 is either a knight or a knave.\n"
+"§5\n"
+"\n"
+"If §6 were a knight, then §7's statement is true then §8 is a knave but that's impossible. So, if §9 were a knight then we can prove §10.\n"
+"\n"
+"If §11 were a knave, then §12's statement would be false, i.e. §13 is not a knave but thats impossible as well. So, if §14 were a knave then we can prove §15.\n"
+"\n"
+"We consider every case using the §16 tactic, and §17."
+msgstr ""
+
+#. §0: `P ↔ Q`
+#. §1: `(P → Q) ∧ (Q → P)`
+#. §2: $
+#. \\begin{array}{|c c|c c|c|}
+#. \\hline
+#. P & Q & P → Q & Q → P & P ↔ Q \\\\
+#. \\hline
+#. T & T & T & T & T \\\\
+#. \\hline
+#. T & F & F & T & F \\\\
+#. \\hline
+#. F & T & T & F & F \\\\
+#. \\hline
+#. F & F & T & T & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §3: `P ↔ Q`
+#. §4: `P,Q`
+#. §5: `P,Q`
+#. §6: `P`
+#. §7: `Q`
+#. §8: `P`
+#. §9: `Q`
+#. §10: `P`
+#. §11: `Q`
+#. §12: ```
+#. h : P ↔ Q
+#. h.mp : P → Q
+#. h.mpr : Q → P
+#. ```
+#. §13: `h.mp`
+#. §14: `h.mpr`
+#. §15: `P ↔ Q`
+#. §16: `P = Q`
+#. §17: `P`
+#. §18: `Q`
+#. §19: `P ↔ Q`
+#. §20: `P = Q`
+#. §21: `rw`
+#. §22: `=`
+#. §23: ```
+#. h : P ↔ Q
+#. hP : P
+#. ```
+#. §24: `rw [h] at hP`
+#. §25: ```
+#. h : P ↔ Q
+#. hP : Q
+#. ```
+#: Game.Doc.doc
+msgid "## Truth Table\n"
+"§0  is defined as §1.\n"
+"\n"
+"Its truth table looks like the folowing:\n"
+"§2\n"
+"\n"
+"So, §3 is true when §4 are true or §5 are false, i.e. when §6 and §7 have the same truth value. Therefore, §8 and §9 are equivalent from a truth value perspective regardless what the statement of §10 and of §11 is.\n"
+"\n"
+"## Extracting Each Implication\n"
+"§12\n"
+"§13 is the forward direction and §14 is the backward direction.\n"
+"\n"
+"## §15 is §16\n"
+"Since §17, §18 have the same truth value, they can be used interchangeably.\n"
+"You can think of §19 as §20 and use §21 in the same way you would if there was an actual §22 in the expression.\n"
+"\n"
+"For example:\n"
+"§23\n"
+"Doing §24 results in:\n"
+"§25"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+msgid "Another I am Knave variation"
+msgstr ""
+
+#. §0: `¬(P ↔ Q)`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `P`
+#. §4: `Q`
+#. §5: `¬(P ↔ Q)`
+#. §6: $
+#. \\begin{array}{|c | c|c|}
+#. \\hline
+#. P & Q & \\text{¬(P ↔ Q)} \\\\
+#. \\hline
+#. T & F & T \\\\
+#. \\hline
+#. F & T & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §7: `¬P`
+#. §8: `Q`
+#. §9: `¬P ↔ Q`
+#. §10: `P`
+#. §11: `¬Q`
+#. §12: `P ↔ ¬Q`
+#. §13: ```
+#. not_iff : ¬(a ↔ b) ↔ (¬a ↔ b)
+#. ```
+#: Game.Levels.Simp_World.L08_not_iff
+msgid "§0 means that §1 ,§2 don't have the same truth value, i.e. one of them is true and the other is false.\n"
+"\n"
+"Here are the values for §3,§4 where §5 is satisfied:\n"
+"§6\n"
+"\n"
+"We can conclude that §7,§8 have the same truth value (§9), and that §10,§11 have the same truth value (§12).\n"
+"\n"
+"The theorem for the former simplification:\n"
+"§13"
+msgstr ""
+
+#. §0: `A ∈ Knave`
+#. §1: `stB`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
+msgid "\n"
+"Now we are in the case where §0 , interpret as knights and simplify §1\n"
+""
+msgstr ""
+
+#. §0: `¬P`
+#. §1: `P`
+#. §2: `P`
+#. §3: `¬P`
+#. §4: `P → False`
+#. §5: `P`
+#. §6: `False`
+#. §7: `¬P`
+#. §8: `P`
+#. §9: `False`
+#. §10: `P`
+#. §11: `False`
+#: Game.Levels.Logic.L08_Not
+msgid "\n"
+"What §0 means is that if §1 were true, then we can deduce a contradiction. We know that §2 is true. Therefore, we can prove a contradiction which is the goal.\n"
+"\n"
+"§3 is defined as §4. We have a proof of §5 so we can prove §6(a contradiction)\n"
+"\n"
+"§7 being true tells us that a proof of §8 gives us a proof of §9. We have a proof of §10. Therefore we can obtain a proof of §11 which is the goal.\n"
+""
+msgstr ""
+
+#. §0: `«{cont}»`
+#. §1: `not_or`
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+msgid "\n"
+"Simplify §0 using §1\n"
+""
+msgstr ""
+
+#: Game
+msgid "From the basics to Knights And Knaves"
+msgstr ""
+
+#. §0: `A`
+#. §1: `A`
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
+msgid "\n"
+"So, §0's statement is false.\n"
+"\n"
+"Conclude that §1 is a knave.\n"
+""
+msgstr ""
+
+#. §0: `¬C.isKnight`
+#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.SetTheory_Knights_Knaves.L09_same
+msgid "\n"
+"Conclude §0 and close the goal.\n"
+""
+msgstr ""
+
+#: Game.Levels.Logic
+msgid "Logic"
+msgstr ""
+
+#: Game
+msgid "A guided experience that teaches you everything you need to know to understand and solve knights and knaves logic puzzles, including the basics of lean and logic.\n"
+"\n"
+"Based on statements made, you will deductively conclude who is a knight (truthful) and who is a knave (liar)."
+msgstr ""
+
+#. §0: `have`
+#. §1: `A`
+#: Game.Levels.KnightsAndKnaves2.L06_
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "\n"
+"Use §0 to set §1 as the goal\n"
+""
+msgstr ""
+
+#. §0: `nB : ¬B`
+#. §1: `CdiffA : ¬(¬C ↔ ¬A)`
+#. §2: `stBn`
+#. §3: `nB`
+#. §4: `simp`
+#. §5: `nB : ¬B`
+#. §6: `stA`
+#. §7: `stA : A ↔ C`
+#. §8: `B ∨ C`
+#. §9: `C`
+#. §10: `C`
+#. §11: `B`
+#. §12: `not_iff_not`
+#. §13: `¬C ↔ ¬A`
+#. §14: `CdiffA`
+#. §15: `C ↔ A`
+#. §16: `False`
+#. §17: `CdiffA`
+#. §18: `stA.symm : A ↔ C`
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
+msgid "\n"
+"Assuming §0:\n"
+"- Prove §1 using §2, §3\n"
+"- Using §4 and §5, reduce §6 to §7 (§8, §9 have the same truth value (for §10 being true or false) when §11 is false).\n"
+"- Using §12, reduce §13 in §14 to §15.\n"
+"- Prove §16 using §17, §18\n"
+""
+msgstr ""
+
+#. §0: `knight_or_knave A with AKnight AKnave`
+#. §1: `knight_or_knave A`
+#. §2: `h : A.isKnight`
+#. §3: `h: A.isKnave`
+#. §4: `h : A.isKnight`
+#. §5: `A`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"For the previous step, you also have the option of using the custom tactic §0. This would allow you to name the hypothesis of every case.\n"
+"\n"
+"You could also just do §1 without specifying any names.\n"
+"\n"
+"Go back and try it before proceeding\n"
+"\n"
+"You get two cases, the first where §2 and the second where §3\n"
+"\n"
+"We are now in the first case where §4\n"
+"So, we can conclude that §5's statement is true.\n"
+""
+msgstr ""
+
+#. §0: `A ∈ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"Interpret the goal in terms of knights and assume §0\n"
+""
+msgstr ""
+
+#. §0: `have`
+#. §1: `hQR`
+#. §2: `P`
+#. §3: `hPQ hP`
+#: Game.Levels.Logic.L11_have
+msgid "You could have also not used §0 here by passing §1 a proof of §2 which is §3. Try it\n"
+"before moving on."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "§0 : All of us are Knaves\n"
+"\n"
+"§1 : Exactly one of us is a knight"
+msgstr ""
+
+#. §0: `Zoey`
+#. §1: `¬Zoey`
+#. §2: `¬Zoey → False`
+#. §3: `¬¬Zoey`
+#. §4: `Zoey`
+#. §5: `by_contra hnZ`
+#. §6: `¬Zoey`
+#. §7: ```
+#. hnZ : ¬Zoey
+#. ```
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+msgid "\n"
+"To prove §0, we will do a proof by contradiction.\n"
+"\n"
+"We will assume §1 and show a contradiction, proving that §2, i.e. §3 which is equivalent to §4.\n"
+"\n"
+"§5 will assume §6 adding,\n"
+"§7\n"
+"to the list of assumptions in the proof state.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+msgid "§0 says 'I am a knave or §1 is a knave'."
+msgstr ""
+
+#. §0: `P`
+#. §1: `P`
+#. §2: `«{hP}»`
+#: Game.Levels.Logic.L05_ImpGoal
+msgid "\n"
+"We have a proof of §0 and we want to prove §1.\n"
+"\n"
+"§2 exactly matches the goal.\n"
+""
+msgstr ""
+
+#. §0: `«{allKnave}».left`
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
+msgid "\n"
+"§0 will do it.\n"
+""
+msgstr ""
+
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
+msgid "\n"
+"You have everything you need to close the goal\n"
+""
+msgstr ""
+
+#. §0: `rw [«{h}»]`
+#. §1: `rw [«{g}»]`
+#: Game.Levels.EquationalReasoning.L03_rw
+msgid "Do §0 or §1 and observe what happens."
+msgstr ""
+
+#. §0: `cases`
+#. §1: `h : P or Q`
+#. §2: `P`
+#. §3: `Q`
+#. §4: `R`
+#. §5: `R`
+#. §6: `∨`
+#. §7: `cases h`
+#: Game.Levels.Logic.L06_cases
+msgid "In this level, we will do a 'proof by cases' using the §0 tactic.\n"
+"\n"
+"By §1, we have two cases:\n"
+"§2 being true or §3 being true.\n"
+"\n"
+"If we consider each case individually and prove some statement §4, then we can conclude that §5\n"
+"is true.\n"
+"\n"
+"This is the elimination principle for §6 which you can read about\n"
+"[Or.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or.elim)\n"
+"\n"
+"To do this, start with §7"
+msgstr ""
+
+#. §0: `¬P,¬Q`
+#. §1: `P,Q`
+#. §2: `P ↔ Q`
+#: Game.Doc.doc
+msgid "If two propositions are false, then they have the same truth value.\n"
+"\n"
+"If we know §0  then we can conclude that §1 have the same truth value, i.e. §2"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+msgid "\n"
+"Close the goal\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `C ∈ Knave`
+#. §4: `C`
+#: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
+msgid "\n"
+"Notice that neither §0 is a knight nor §1 is a knight , and so the statement §2 made is false.\n"
+"And so §3\n"
+"\n"
+"But first , interpret §4's statement in terms of knaves\n"
+""
+msgstr ""
+
+#. §0: $
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. P & Q & P → Q \\\\
+#. \\hline
+#. T & T & T \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & T \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §1: `P → Q`
+#. §2: `P`
+#. §3: `Q`
+#. §4: `P → Q`
+#. §5: `P`
+#. §6: `Q`
+#. §7: `P`
+#. §8: `P → Q`
+#. §9: `Q`
+#. §10: `Q`
+#. §11: `P`
+#. §12: `Q`
+#. §13: `P`
+#: Game.Levels.Logic.L05_ImpGoal
+msgid "The previous two levels showed how to use an implication and how to prove an implication.\n"
+"\n"
+"\n"
+"# Truth table\n"
+"§0\n"
+"\n"
+"A statement §1 is false when §2 is true and §3 false, it's true otherwise.\n"
+"This is because this is the only case where the meaning of §4 is violated, i.e. we have that §5 is true so §6 is supposed to be true as well but it's not.\n"
+"\n"
+"When §7 is false, the implication §8 is always true regardless of the truth value of §9. That's because the implication does not tell us what §10 should be when §11 is false -- it only tells us that §12 must be true when §13 is true."
+msgstr ""
+
+#. §0: `¬Knight.card = 1`
+#. §1: `stB`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
+msgid "\n"
+"Conclude §0 from §1\n"
+""
+msgstr ""
+
+#. §0: ```
+#. Objects
+#. P : Prop
+#. 
+#. Assumptions
+#. hP : P
+#. 
+#. Goal
+#. P
+#. ```
+#. §1: `assumption`
+#: Game.Doc.tactic_doc
+msgid "The assumption tactic searches for an assumption that matches the goal, and closes the goal if it finds one.\n"
+"\n"
+"Given,\n"
+"§0\n"
+"§1 will close the goal."
+msgstr ""
+
+#. §0: `B.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "\n"
+"Assume §0.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: ```
+#. isKnight A : Prop
+#. ```
+#. §2: ```
+#. A.isKnight : Prop
+#. ```
+#. §3: `A`
+#: Game.Doc.doc
+msgid "For an Islander §0,\n"
+"§1\n"
+"or\n"
+"§2\n"
+"is the proposition that §3 is a knight."
+msgstr ""
+
+#. §0: `B ∉ Knight`
+#. §1: `knight_interp`
+#. §2: `Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
+msgid "\n"
+"Change the goal to §0\n"
+"\n"
+"Use the §1 tactic. This tactics lets you interpate the goal as a statement of terms\n"
+"of §2\n"
+""
+msgstr ""
+
+#. §0: ```
+#. or_true (p : Prop)
+#. : (p or True) = True
+#. ```
+#. §1: `simp`
+#. §2: ```
+#. simp [h]
+#. ```
+#. §3: `simp`
+#: Game.Levels.Simp_World.L02_true_or
+msgid "There's an analogous theorem\n"
+"§0\n"
+"\n"
+"To solve with §1,\n"
+"§2\n"
+"\n"
+"Try §3 before moving on."
+msgstr ""
+
+#: Game.Doc.doc
+msgid "A is a knave, so whatever A said is false"
+msgstr ""
+
+#. §0: `dsl_iamknave`
+#: Game.Levels.DSL_Knights_Knaves.L02_2plus2
+#: Game.Levels.SetTheory_Knights_Knaves.L02_2plus2
+msgid "\n"
+"Use §0.\n"
+""
+msgstr ""
+
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "Everyone is a knave"
+msgstr ""
+
+#. §0: `a`
+#. §1: `Knight = {a}`
+#. §2: `obtain ⟨a,ha⟩ := «{oneKnight}»`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"We know that there exists some §0 such that §1\n"
+"\n"
+"We can extract these two facts using §2\n"
+""
+msgstr ""
+
+#. §0: `have`
+#. §1: `A`
+#. §2: `A`
+#. §3: `¬¬A`
+#. §4: `A`
+#. §5: `¬A → False`
+#. §6: `by_contra`
+#. §7: `by_contra h`
+#. §8: `h : ¬A`
+#. §9: `False`
+#. §10: `nA : ¬A`
+#. §11: `nCnB : ¬C ∧ ¬B`
+#. §12: `stAn`
+#. §13: `AdiffC : ¬(A ↔ C)`
+#. §14: `stBn`
+#. §15: `nCnB.right : ¬B`
+#. §16: `AiffC : A ↔ C`
+#. §17: `iff_of_false (ha : ¬a) (hb : ¬b) : a ↔ b `
+#. §18: `nA:¬A`
+#. §19: `nCnB.left : ¬C`
+#. §20: `False`
+#. §21: `AdiffC : ¬(A ↔ C)`
+#. §22: `AiffC : (A ↔ C)`
+#: Game.Levels.KnightsAndKnaves2.L05_iff
+msgid "\n"
+"Use §0 to set §1 as the new goal.\n"
+"\n"
+"We want to prove §2, to do this we will prove §3 (which is equivalent to §4), i.e. §5. The tactic §6 facilitates this.\n"
+"\n"
+"§7 assumes §8 and changes the goal to §9.\n"
+"\n"
+"This is called a proof by contradiction because we are assuming the negation of what we want to prove and getting a contradiction.\n"
+"\n"
+"Assuming §10,\n"
+"- Prove §11 from §12\n"
+"- Prove §13 from §14, §15\n"
+"- Prove §16 from §17, §18, §19\n"
+"- Prove §20 from §21  §22\n"
+""
+msgstr ""
+
+#: Game.Levels.Logic.L08_Not
+msgid "Remember that an implication acts like a function, that takes a proof of whats on the left hand returning a proof of whats on the right hand side.\n"
+""
+msgstr ""
+
+#. §0: ```
+#. not_iff' : ¬(P ↔ Q) ↔ (P ↔ ¬Q)
+#. ```
+#: Game.Levels.Simp_World.L08_not_iff
+msgid "Analogous Theorem:\n"
+"§0"
+msgstr ""
+
+#. §0: `knight_or_knave B with BKnight BKnave`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"In both cases we can close the goal so do §0\n"
+""
+msgstr ""
+
+#. §0: `→`
+#. §1: `P → Q`
+#. §2: `P`
+#. §3: `Q`
+#. §4: `P → Q`
+#. §5: `P`
+#. §6: `Q`
+#. §7: `P`
+#. §8: `Q`
+#. §9: `P`
+#. §10: `Q`
+#. §11: `P`
+#. §12: `P → Q`
+#. §13: `Q`
+#. §14: `P → Q`
+#. §15: `P`
+#. §16: `Q`
+#. §17: `hP`
+#. §18: `PtoQ`
+#. §19: `Q`
+#. §20: `exact`
+#: Game.Levels.Logic.L04_Implication
+msgid "In this level, we introduce the logical implication §0 connective.\n"
+"Logical implication §1 is made up of two components:\n"
+"- The premise, which in this case is §2\n"
+"- The conclusion, which in this case is §3\n"
+"\n"
+"§4 is read as 'If §5 is true, then §6 is true'.\n"
+"§7 being true IMPLIES §8 being true. A proof of §9 IMPLIES a proof of §10.\n"
+"\n"
+"In the current proof state, we know §11 and we know §12. Therefore, we can conclude §13.\n"
+"\n"
+"You can think of logical implication as a function. §14 takes a proof of §15 and returns a proof of §16.\n"
+"\n"
+"Pass §17 as an argument to §18 getting a proof of §19.\n"
+"\n"
+"You can then use §20 to close the goal"
+msgstr ""
+
+#. §0: ```
+#. Assumptions:
+#. h : A = B
+#. 
+#. Goal:
+#. some expression involving A
+#. ```
+#. §1: `rw [h]`
+#. §2: `A`
+#. §3: `B`
+#. §4: `rw [h] at h'`
+#. §5: `h'`
+#. §6: `h`
+#. §7: `A`
+#. §8: `B`
+#. §9: `rw [←h]`
+#. §10: `h`
+#. §11: `B`
+#. §12: `A`
+#. §13: `=`
+#. §14: `↔`
+#. §15: `rw [h]`
+#. §16: `h : x=2`
+#. §17: `h : P ↔ Q`
+#: Game.Doc.tactic_doc
+msgid "Given the following:\n"
+"§0\n"
+"\n"
+"§1 would change the goal by replacing every occurrence of §2 with §3.\n"
+"\n"
+"Moreover §4 would apply the rewrite on an assumption §5 instead of the goal.\n"
+"\n"
+"By default, rw uses an equation in the forward direction, matching the left-hand side of the equation §6 with an occurrence of §7 in the goal, and replaces it with the right-hand side, i.e. §8.\n"
+"\n"
+"The notation §9 can be used to instruct the tactic to use the equality §10 in the reverse direction, i.e. replace an occurrence of §11 with §12.\n"
+"\n"
+"## Behavior with §13 and §14\n"
+"For §15, the behavior is exactly the same for both, whether you had §16 or §17."
+msgstr ""
+
+#. §0: `B.isKnave`
+#. §1: `¬B.isKnight`
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
+msgid "\n"
+"Now we have that §0.\n"
+"Get §1\n"
+""
+msgstr ""
+
+#. §0: `Knave`
+#. §1: `{A,B,C}`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"rewrite §0 in the goal with §1\n"
+""
+msgstr ""
+
+#. §0: `rw`
+#. §1: `¬¬P`
+#. §2: `P`
+#. §3: `not_not`
+#: Game.Levels.Simp_World.L05_not_not
+msgid "\n"
+"§0 §1 to §2 using §3.\n"
+""
+msgstr ""
+
+#. §0: `Mel and Zoey`
+#. §1: `Mel`
+#. §2: `stM`
+#: Game.Levels.KnightsAndKnaves2.L01_Intro
+#: Game.Levels.KnightsAndKnaves2.L05_iff
+#: Game.Levels.KnightsAndKnaves2.L06_
+#: Game.Levels.KnightsAndKnaves2.L06_
+#: Game.Levels.KnightsAndKnaves2.L06_
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
+#: Game.Levels.KnightsAndKnaves2.L07_orIff
+msgid "\n"
+"Prove §0 using §1, §2\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `C`
+#. §2: `B`
+#. §3: `B`
+#. §4: `A`
+#. §5: `C`
+#: Game.Levels.KnightsAndKnaves2.L05_iff
+msgid "§0: §1 is a knight or §2 is a knight.\n"
+"\n"
+"§3: §4 is a knight, if and only if §5 is a knight."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `A`
+#. §4: `B`
+#. §5: `A`
+#. §6: `B`
+#. §7: `A`
+#. §8: `B`
+#. §9: `C`
+#. §10: `A.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "Again we have three people, §0, §1, §2, each of whom is either a knight or a knave.\n"
+"\n"
+"§3 and §4 make the following statements:\n"
+"\n"
+"§5: All of us are knaves.\n"
+"\n"
+"§6: Exactly one of us is a knight.\n"
+"\n"
+"What are §7, §8, §9?\n"
+"\n"
+"Change the goal to §10"
+msgstr ""
+
+#. §0: `left`
+#. §1: `right`
+#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
+msgid "\n"
+"Choose which side to prove, §0 or §1?\n"
+""
+msgstr ""
+
+#. §0: `∩`
+#. §1: `A`
+#. §2: `B`
+#. §3: ```
+#. A ∩ B
+#. ```
+#. §4: `A ∩ B`
+#. §5: `A`
+#. §6: `B`
+#. §7: `x ∈ A ∩ B ↔ x ∈ A ∧ x ∈ B`
+#. §8: `A ∩ B = ∅`
+#. §9: `A`
+#. §10: `B`
+#. §11: `A`
+#. §12: `B`
+#. §13: `x ∈ A → x ∉ B`
+#. §14: `x ∈ B → x ∉ A`
+#. §15: `inleft_notinright`
+#. §16: `inright_notinleft`
+#: Game.Doc.doc
+msgid "§0 is an operator on sets.\n"
+"\n"
+"Applying it to two sets §1,§2:\n"
+"§3\n"
+"\n"
+"§4 is itself another set, containing elements that are in both §5 and §6.\n"
+"In other words, §7.\n"
+"\n"
+"§8 means that §9 and §10 have no common element, i.e. no element of §11 belongs to both and no element of §12 belongs to both.\n"
+"In other words, §13, §14 which are §15 and §16 respectively."
+msgstr ""
+
+#. §0: `B`
+#. §1: `B`
+#. §2: `B ∈ Knave`
+#. §3: `B ∈ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
+msgid "\n"
+"§0 can't be a knight because if §1 where a knight then we can conclude there is one knight which\n"
+"is a contradiction\n"
+"\n"
+"Change the goal to proving §2 , interpret as knight and assume §3\n"
+""
+msgstr ""
+
+#. §0: `stR`
+#. §1: `¬Ira.isKnight`
+#. §2: `Robert.isKnight ↔ Ira.isKnight `
+#. §3: `¬ Robert.isKnight`
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+msgid "\n"
+"We will now simplify §0.\n"
+"\n"
+"Because §1, §2 can be simplified to §3\n"
+""
+msgstr ""
+
+#. §0: `unfold oneisknight at «{notoneknight}»`
+#. §1: `simp`
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "\n"
+"It is not true that there is one knight, but that is the case so contradiction\n"
+"\n"
+"§0 and use §1\n"
+""
+msgstr ""
+
+#. §0: `have`
+#. §1: `¬A`
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
+#: Game.Levels.KnightsAndKnaves2.L02_Introduction
+msgid "\n"
+"Use §0 to set §1 as the new goal.\n"
+""
+msgstr ""
+
+#. §0: `Ira`
+#. §1: `Robert`
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+msgid "\n"
+"Now that §0 is a knight, conclude that §1 is a knight and close the goal.\n"
+""
+msgstr ""
+
+#. §0: `x = 2`
+#. §1: `x`
+#. §2: `2`
+#. §3: `rw`
+#. §4: `rw`
+#. §5: `A = B`
+#. §6: `A`
+#. §7: `B`
+#. §8: `rw [h]`
+#. §9: `h : x = 3`
+#. §10: `x`
+#. §11: `3`
+#: Game.Levels.EquationalReasoning.L03_rw
+msgid "Given that §0 , we can substitute any occurrence of §1 by §2.\n"
+"\n"
+"This can be done using §3 tactic.(short for 'rewrite').\n"
+"\n"
+"§4 takes a proof that §5 and replaces all the §6s in the goal with §7s.\n"
+"\n"
+"So §8 where §9 will replace all the §10s of the goal with §11."
+msgstr ""
+
+#. §0: ```
+#. h : False
+#. ```
+#. §1: ```
+#. hP : P
+#. hnP : ¬P
+#. ```
+#. §2: `contradiction`
+#. §3: `False`
+#. §4: `contradiction`
+#. §5: `→`
+#. §6: $$
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. P & Q & P → Q \\\\
+#. \\hline
+#. T & T & T \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & T \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $$
+#. §7: `P`
+#. §8: `False`
+#. §9: `False`
+#. §10: $$
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. Q & False → Q \\\\
+#. \\hline
+#. T & T \\\\
+#. \\hline
+#. F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $$
+#. §11: `False → Q`
+#. §12: `Q`
+#. §13: `False`
+#. §14: `False`
+#: Game.Doc.tactic_doc
+msgid "Contradiction is a tactic that detects if you have contradictory assumptions and if so, closes the goal.\n"
+"\n"
+"Having\n"
+"§0\n"
+"or\n"
+"§1\n"
+"(or other 'simple' contradictions)\n"
+"§2 will close any goal.\n"
+"\n"
+"This is because from §3, anything follows. §4 exemplifies this principle: [#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim))\n"
+"\n"
+"## Intuitively\n"
+"\n"
+"Let's check the §5 truth table:\n"
+"§6\n"
+"\n"
+"Let's focus on part of the truth table where §7 is §8, because we want to see what §9 implies.\n"
+"§10\n"
+"\n"
+"We have that the implication §11 is true regardless what §12 represents.\n"
+"\n"
+"So §13 implies any proposition. This principle is known as: 'From §14 anything follows'."
+msgstr ""
+
+#. §0: `knave_said`
+#. §1: `A`
+#. §2: `A`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"§0\n"
+"\n"
+"§1 is a knave, so whatever §2 said is false.\n"
+""
+msgstr ""
+
+#. §0: `¬C`
+#. §1: `stA`
+#. §2: `eq_true`
+#. §3: `True → ¬B`
+#. §4: `stA`
+#. §5: `¬B`
+#. §6: `true_implies`
+#. §7: `B`
+#. §8: `stA`
+#. §9: `A`
+#. §10: `stB`
+#. §11: `False`
+#. §12: `not_iff_self`
+#. §13: `stA`
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "\n"
+"- Rewrite §0 in §1 with true using §2\n"
+"- Rewrite §3 in §4 with §5 using §6\n"
+"- Rewrite §7 in §8 with §9 using §10\n"
+"- Prove §11 using §12 and §13\n"
+""
+msgstr ""
+
+#. §0: `exact`
+#: Game.Levels.EquationalReasoning.L02_exact
+msgid "§0, goal is true by assumption"
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+msgid "We are different types"
+msgstr ""
+
+#. §0: `A.isKnight`
+#. §1: `B.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.SetTheory_Knights_Knaves.L09_same
+msgid "\n"
+"We are in the case where §0\n"
+"\n"
+"Conclude that §1\n"
+""
+msgstr ""
+
+#. §0: `C`
+#. §1: `nC : ¬C`
+#. §2: `by_contra nC`
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "\n"
+"We will prove §0 by contradiction.\n"
+"\n"
+"Assume §1 using §2.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+msgid "\n"
+"Conclude §0's statement\n"
+""
+msgstr ""
+
+#. §0: `A ∈ Knave`
+#. §1: `B ∈ Knave`
+#. §2: `C ∈ Knight`
+#. §3: `Knight.card = 1`
+#. §4: `have oneKnight : (Knight : Finset Inhabitant').card = 1`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Since §0 , §1 then we know §2 because not everyone is a knave.\n"
+"Moreover, we know §3.\n"
+"\n"
+"Change the goal using §4\n"
+""
+msgstr ""
+
+#. §0: `rw`
+#: Game.Levels.EquationalReasoning.L03_rw
+msgid "§0, Substituting Variables By Their Values"
+msgstr ""
+
+#. §0: `A`
+#. §1: `A`
+#. §2: ```
+#. A ∈ Knight
+#. ```
+#. §3: `Knight`
+#. §4: `Finset`
+#. §5: `A`
+#. §6: ```
+#. A ∈ Knave
+#. ```
+#. §7: `Knave`
+#. §8: `Finset`
+#. §9: ```
+#. KorKn : ∀ x : Inhabitant, x ∈ Knight ∨ x ∈ Knave
+#. ```
+#. §10: `KorKn`
+#. §11: `knight_or_knave`
+#. §12: ```
+#. stA : A ∈ Knight ↔ B ∈ Knave
+#. ```
+#. §13: `stA`
+#. §14: `A ∈ Knight → B ∈ Knave`
+#. §15: `A`
+#. §16: `A`
+#. §17: `A`
+#. §18: `B ∈ Knave`
+#. §19: `B ∈ Knave → A ∈ Knight`
+#. §20: `A`
+#. §21: `A`
+#. §22: `A`
+#. §23: `stA`
+#. §24: `knave_interp at stA`
+#. §25: ```
+#. stA : A ∈ Knave ↔ B ∈ Knight
+#. ```
+#. §26: `A`
+#. §27: ```
+#. dis : Knight ∩ Knave = ∅
+#. ```
+#. §28: `contradiction`
+#: Game.Doc.doc
+msgid "The setting is an island.\n"
+"Every inhabitant of the island will make a statement. There are two types of inhabitants, 'knights' that always tell the truth, and 'knaves' that always lie.\n"
+"\n"
+"We give english statements and their corresponding translation to lean.\n"
+"\n"
+"Given an inhabitant §0\n"
+"\n"
+"§1 is a knight\n"
+"§2\n"
+"where §3 is a finite set(§4). Just think of this as the collection of inhabitants who\n"
+"are knights\n"
+"\n"
+"§5 is a knave\n"
+"§6\n"
+"where §7 is a finite set(§8). Just think of this as the collection of inhabitants who\n"
+"are knaves\n"
+"\n"
+"Any inhabitant is either a knight or a knave\n"
+"§9\n"
+"You will not have to use §10 directly but instead use the tactic §11\n"
+"\n"
+"Statements made by inhabitants are represented as the following for a given \"A : B is a Knave\" ,\n"
+"§12\n"
+"\n"
+"§13 is of two parts.\n"
+"- The forward direction §14 represents the fact that if\n"
+"§15 were knight then §16 is telling the truth and §17's statement is true(in this case the statement\n"
+"being §18)\n"
+"- The backward direction §19 represents the fact that if what §20 is saying\n"
+"were true then §21 must be a knight that always tells the truth(because the other option would be a\n"
+"knave that always lies)\n"
+"\n"
+"If you are interested in proving §22 to be a knave then you can interpret §23 in terms of that\n"
+"using §24:\n"
+"§25\n"
+"\n"
+"Since knights always tell the truth and knaves always lie, no islander can be both a knight and a knave. §26 is not a knight and a knave at the same time. This is represented as:\n"
+"§27\n"
+"You will not have to use this directly , §28 will do the job\n"
+"\n"
+"The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning."
+msgstr ""
+
+#: Game.Levels.Logic.L01_Intro
+#: Game.Levels.SetTheory_Knights_Knaves.L01_IamKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L02_2plus2
+#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
+#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
+#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
+#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
+msgid "Intro"
+msgstr ""
+
+#. §0: `stR`
+#. §1: `Robert said ¬ Robert.isKnight`
+#. §2: `Robert said Robert.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L08_sametype
+msgid "\n"
+"§0 now becomes §1.\n"
+"\n"
+"Change that to §2\n"
+"\n"
+""
+msgstr ""
+
+#. §0: `simp`
+#. §1: `simp`
+#. §2: `simp`
+#: Game.Levels.Simp_World
+msgid "In the previous world, we introduced logical connectives and how to construct new propositions using them.\n"
+"\n"
+"In this world, we will simplify logical expressions involving these connectives. The §0 tactic\n"
+"can take care of that.\n"
+"\n"
+"But in this world , simplifications will be done manually so you gain an idea of what §1 is\n"
+"capable of and you should almost always use §2 in upcoming worlds."
+msgstr ""
+
+#. §0: `A`
+#. §1: `C`
+#. §2: `B`
+#. §3: `B`
+#. §4: `A`
+#. §5: `C`
+#: Game.Levels.KnightsAndKnaves2.L08_imp
+msgid "§0: If §1 is a knave, then §2 is a knave.\n"
+"§3: §4 is a knight, if and only if §5 is a knave."
+msgstr ""
+
+#. §0: `¬(P or Q)`
+#. §1: $
+#. \\begin{array}{|c | c|c|}
+#. \\hline
+#. P & Q & \\text{¬(P or Q)} \\\\
+#. \\hline
+#. T & T & F \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & F \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §2: `¬P and ¬Q`
+#. §3: $
+#. \\begin{array}{|c | c|c|}
+#. \\hline
+#. P & Q & \\text{¬P and ¬Q} \\\\
+#. \\hline
+#. T & T & F \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & F \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#: Game.Doc.doc
+#: Game.Doc.doc
+msgid "Notice that §0,\n"
+"§1\n"
+"\n"
+"has the same truth table as §2\n"
+"§3\n"
+"\n"
+"Therefore, they are equivalent and can be interchanged."
+msgstr ""
+
+#. §0: `Finset.card_eq_one`
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
+msgid "\n"
+"Rewrite §0\n"
+""
+msgstr ""
+
+#. §0: `¬P`
+#. §1: `P → False`
+#. §2: ```
+#. hnP : ¬P
+#. ```
+#. §3: `unfold Not at hnP`
+#. §4: ```
+#. hnP : P → False
+#. ```
+#. §5: $
+#. \\begin{array}{|c|c|}
+#. \\hline
+#. P & ¬P \\\\
+#. \\hline
+#. T & F \\\\
+#. \\hline
+#. F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §6: `¬P`
+#. §7: `P → False`
+#. §8: `¬P`
+#. §9: `¬P`
+#. §10: `P`
+#. §11: `False`
+#. §12: `¬P`
+#. §13: `intro`
+#: Game.Doc.doc
+msgid "## Implication defintion\n"
+"§0 is equivalent to §1\n"
+"\n"
+"Given\n"
+"§2\n"
+"§3 will result in:\n"
+"§4\n"
+"\n"
+"## Truth table\n"
+"§5\n"
+"\n"
+"Notice that this definition is an implication and that the truth table with §6 and the truth table with §7 are identical.\n"
+"\n"
+"## §8 as the goal\n"
+"What this means is that to prove §9, we assume §10 and derive a contradiction, i.e. constructing an object of type §11.\n"
+"In other words, having §12 as a goal, you have to start the proof with §13 because you are proving an implication."
+msgstr ""
+
+#: Game.Doc.doc
+msgid "A said something that is false (i.e. a lie), so A is a knave"
+msgstr ""
+
+#. §0: `¬`
+#. §1: `P`
+#. §2: `¬P`
+#. §3: `P`
+#. §4: `¬P`
+#. §5: `¬`
+#. §6: `unfold Not at hnP`
+#: Game.Levels.Logic.L08_Not
+msgid "In this level we introduce logical negation, the §0 connective (read as 'not').\n"
+"\n"
+"Notice that this is the first logical connective that applies on one proposition only and not two.\n"
+"\n"
+"The job of this connective (as the name implies) is to negate a proposition:\n"
+"- For §1 true, §2 is false.\n"
+"- For §3 false, §4 is true.\n"
+"\n"
+"First , unfold the definition of §5 by doing §6"
+msgstr ""
+
+#. §0: `∨`
+#. §1: `P ∨ Q`
+#. §2: `P`
+#. §3: `Q`
+#. §4: `∨`
+#. §5: `∨`
+#. §6: `left`
+#. §7: `right`
+#. §8: `or`
+#. §9: `left`
+#. §10: `right`
+#. §11: `or`
+#. §12: `P`
+#. §13: `left`
+#: Game.Levels.Logic.L03_Or
+msgid "In this level, we introduce the §0 logical connective read as 'or'.\n"
+"\n"
+"You can prove a statement §1 from the fact that §2 is true or §3 is true. In other words, you\n"
+"prove an §4 statement if the left side is true or the right is true.\n"
+"\n"
+"Therefore, there are two introduction rules for the §5 symbol. We will however use the §6 and\n"
+"§7 tactic instead.\n"
+"\n"
+"You can tell Lean which side of §8 you want to prove by simply executing §9 or §10.\n"
+"\n"
+"In our case, we know the left side of §11 (§12) is true, so use §13."
+msgstr ""
+
+#. §0: `False`
+#: Game.Levels.DSL_Knights_Knaves.L03_prob26
+#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
+msgid "\n"
+"If an islander says 'I am a knave', we get a contradiction, i.e. §0.\n"
+""
+msgstr ""
+
+#. §0: `PtoQ hP`
+#: Game.Levels.Logic.L04_Implication
+msgid "\n"
+"§0, this is exactly whats needed to prove the goal.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+msgid "\n"
+"Conclude that §0's statement is false.\n"
+""
+msgstr ""
+
+#. §0: `h`
+#. §1: `simp`
+#. §2: `h`
+#. §3: `hnQ`
+#. §4: ```
+#. simp [hnQ] at h
+#. ```
+#: Game.Levels.Simp_World.L01_or_false
+msgid "You can also simplify §0 using the §1 tactic (which stands for 'simplification').\n"
+"\n"
+"We want to simplify §2 using §3, so\n"
+"§4\n"
+"will do.\n"
+"\n"
+"Try it."
+msgstr ""
+
+#. §0: `hP : P`
+#. §1: `hQ : Q`
+#. §2: `hR : R`
+#. §3: `P ∧ Q ∧ R`
+#. §4: ```
+#. exact ⟨hP,hQ,hR⟩
+#. ```
+#. §5: `⟨⟩`
+#. §6: `And.intro`
+#: Game.Levels.KnightsAndKnaves2.L06_
+msgid "\n"
+"Given §0, §1, §2 and the goal §3, you can close this goal using:\n"
+"§4\n"
+"where §5 is typed as \\\\<\\\\> (this is to avoid nesting §6 inside another).\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus2
+#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus2
+msgid "§0 : All of us are knights\n"
+"\n"
+"§1 : Exactly one of us is a knave"
+msgstr ""
+
+#. §0: `P or Q`
+#. §1: `P,Q`
+#. §2: `left`
+#. §3: `right`
+#. §4: `P or Q`
+#. §5: `True or Q`
+#. §6: ```
+#. eq_true (h : p)
+#.   : p = True
+#. ```
+#: Game.Levels.Simp_World.L02_true_or
+msgid "§0 to be true requires at least one of §1 to be true.\n"
+"\n"
+"You have already done this level using §2/§3 tactic.\n"
+"\n"
+"Here we introduce a simplification theorem to do it.\n"
+"\n"
+"But first, rewrite §4 to §5 using\n"
+"§6"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `A`
+#. §4: `B`
+#. §5: `A`
+#. §6: `B`
+#. §7: `B`
+#. §8: `A`
+#. §9: `C`
+#: Game.Levels.DSL_Knights_Knaves.L09_same
+#: Game.Levels.SetTheory_Knights_Knaves.L09_same
+msgid "We have three inhabitants, §0, §1, and §2.\n"
+"\n"
+"Two people are said to be of the same type if they are both knights or both knaves.\n"
+"\n"
+"§3 and §4 make the following statements:\n"
+"\n"
+"§5: §6 is a knave.\n"
+"\n"
+"§7: §8 and §9 are of the same type."
+msgstr ""
+
+#. §0: `C`
+#. §1: `C`
+#. §2: `have`
+#. §3: `¬ (A.isKnight or B.isKnight)`
+#. §4: `simp`
+#. §5: `stC`
+#. §6: `C said False`
+#. §7: `C`
+#. §8: `said_knave`
+#. §9: `not_false : ¬False`
+#. §10: `C.isKnave`
+#. §11: `right`
+#. §12: `unfold`
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
+msgid "\n"
+"Now, §0's statement is false, so conclude that §1 is a knave.\n"
+"\n"
+"You can do this in a number of ways:\n"
+"- Use §2 to construct a proof that §3\n"
+"- Use §4 on §5, to obtain §6. Conclude §7 is a knave using §8, §9.\n"
+"\n"
+"- etc...\n"
+"\n"
+"Once you have §10 then everyone is a knave (§11 side of the goal).\n"
+"\n"
+"You can §12 the goal if that facilitates your reasoning.\n"
+""
+msgstr ""
+
+#. §0: `Q`
+#. §1: `«{hQ}» : Q`
+#. §2: `hQR`
+#. §3: `«{hQ}»`
+#. §4: `R`
+#: Game.Levels.Logic.L10_have
+msgid "\n"
+"Now that you proved §0, its proof §1 has been added to the proof state.\n"
+"\n"
+"§2 takes §3 and gives you a proof of §4 which is the goal.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `A`
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+msgid "\n"
+"Now that we know §0 is a knave, conclude the negation of §1's statement.\n"
+""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus2
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
+msgid "allKnights or allKnaves"
+msgstr ""
+
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
+msgid "\n"
+"Now that §0 is not a knight, conclude that not everyone is a knave.\n"
+""
+msgstr ""
+
+#. §0: `¬(P or Q)`
+#. §1: $
+#. \\begin{array}{|c | c|c|}
+#. \\hline
+#. P & Q & \\text{¬(P or Q)} \\\\
+#. \\hline
+#. T & T & F \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & F \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §2: `¬P and ¬Q`
+#. §3: $
+#. \\begin{array}{|c | c|c|}
+#. \\hline
+#. P & Q & \\text{¬P and ¬Q} \\\\
+#. \\hline
+#. T & T & F \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & F \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §4: `¬(P or Q)`
+#. §5: `P or Q`
+#. §6: `P`
+#. §7: `Q`
+#. §8: `P`
+#. §9: `Q`
+#. §10: ```
+#. not_or : ¬(p or q) ↔ ¬p and ¬q
+#. ```
+#: Game.Levels.Simp_World.L03_not_or
+msgid "Notice that §0,\n"
+"§1\n"
+"\n"
+"has the same truth table as §2\n"
+"§3\n"
+"\n"
+"Therefore, they are equivalent and can be interchanged.\n"
+"\n"
+"On a more intuitive level, we can understand §4 as meaning §5 is not true, i.e. it is not true that either §6 or §7 is true, i.e. §8 is false and §9 is false.\n"
+"\n"
+"The simplification theorem to use,\n"
+"§10"
+msgstr ""
+
+#. §0: `stA`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Conclude that everyone is a knave from §0\n"
+""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves
+msgid "DSL Knights and Knaves"
+msgstr ""
+
+#. §0: `have h : P`
+#. §1: `P`
+#. §2: `h`
+#: Game.Levels.Logic.L10_have
+msgid "§0 changes the goal to proving §1 and adds the proof §2 after that goal is closed."
+msgstr ""
+
+#. §0: `A.isKnave`
+#. §1: `¬A.isKnight`
+#: Game.Levels.DSL_Knights_Knaves.L11_allofus
+msgid "\n"
+"Now we have that §0\n"
+"Get §1\n"
+""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "allKnaves, exactlyOneIsKnave"
+msgstr ""
+
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L06_prob33
+#: Game.Levels.DSL_Knights_Knaves.L14_prob27
+#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
+msgid "\n"
+"Assume §0 is a knight.\n"
+""
+msgstr ""
+
+#. §0: `B ∈ Knave`
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"This contradicts our initial assumption that §0\n"
+""
+msgstr ""
+
+#. §0: `IamKnave`
+#: Game.Levels.SetTheory_Knights_Knaves.L07_difftype
+msgid "\n"
+"Remember §0\n"
+""
+msgstr ""
+
+#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
+msgid "\n"
+"Now close the goal\n"
+""
+msgstr ""
+
+#. §0: `knave_said`
+#: Game.Doc.doc
+msgid "Similar to §0."
+msgstr ""
+
+#. §0: `IamKnave`
+#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
+msgid "remember §0"
+msgstr ""
+
+#. §0: `B`
+#. §1: `C`
+#. §2: `C`
+#. §3: `B`
+#. §4: `C`
+#: Game.Levels.DSL_Knights_Knaves.L03_prob26
+#: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
+msgid "\n"
+"Now that §0 is a knave, §1's statement is true then §2 is a knight.\n"
+"\n"
+"So you would have §3 is a knave and §4 is a knight closing the goal.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: `unfold allKnaves at «{allKnave}»`
+#. §2: `A.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L12_prob32
+msgid "\n"
+"This would mean that §0 is also a knave, which is absurd.\n"
+"\n"
+"You can §1 and extract §2 from that.\n"
+""
+msgstr ""
+
+#. §0: `A`
+#. §1: ```
+#. isKnave A : Prop
+#. ```
+#. §2: ```
+#. A.isKnave : Prop
+#. ```
+#. §3: `A`
+#: Game.Doc.doc
+msgid "For an Islander §0,\n"
+"§1\n"
+"or\n"
+"§2\n"
+"is the proposition that §3 is a knave."
+msgstr ""
+
+#. §0: `simp`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"§0 will do the job\n"
+""
+msgstr ""
+
+#. §0: `¬A.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.DSL_Knights_Knaves.L13_31
+#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
+msgid "\n"
+"Assume §0\n"
+""
+msgstr ""
+
 #. §0: `CKnave`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "\n"
 "Interpret the goal as knaves and assume §0\n"
 ""
@@ -5377,145 +5782,23 @@ msgstr ""
 
 #. §0: `B ∈ Knight`
 #. §1: `stB`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "Now that we know there is only one knight , conclude that §0 from §1\n"
 ""
 msgstr ""
 
-#. §0: ```
-#. full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : S = {A, B, C}
-#. ```
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"Use the following theorem to obtain a contradiction and close the goal\n"
-"§0\n"
-""
-msgstr ""
-
-#. §0: `B ∈ Knight`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"We now know that §0 so there is only one knight.\n"
-""
-msgstr ""
-
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L13_prob27
-#: Game.Levels.KnightsAndKnaves2.L06_
-msgid "\n"
-"Take cases for §0.\n"
-""
-msgstr ""
-
 #. §0: `stB`
 #. §1: `B ∈ Knight ↔ Knight.card = 1`
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
 "§0 simplifies to §1\n"
-""
-msgstr ""
-
-#. §0: `P → Q`
-#. §1: `P`
-#. §2: `Q`
-#. §3: `P → Q`
-#. §4: $
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. P & Q & P → Q \\\\
-#. \\hline
-#. T & T & T \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & T \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §5: `P → Q`
-#. §6: `P`
-#. §7: `Q`
-#. §8: `P`
-#. §9: `Q`
-#. §10: `P`
-#. §11: `Q`
-#. §12: `P`
-#. §13: `Q`
-#. §14: `P → Q`
-#. §15: `P`
-#. §16: `Q`
-#. §17: `P → Q`
-#. §18: `P`
-#. §19: `Q`
-#. §20: `hPQ : P → Q`
-#. §21: `hP : P`
-#. §22: `hPQ hP`
-#: Game.Doc.doc
-msgid "Logical implication §0 is made up of two components:\n"
-"- The premise, which in this case is §1\n"
-"- The conclusion, which in this case is §2\n"
-"\n"
-"§3 is read as 'If P is true, then Q is true.\n"
-"\n"
-"# Truth table\n"
-"§4\n"
-"\n"
-"A statement §5 is false when §6 is true and §7 false, it's true otherwise.\n"
-"\n"
-"# Implication as a function\n"
-"What logical implication does is that it takes evidence or proof for §8 and transforms it returning a proof of §9.\n"
-"The truth of §10 IMPLIES the truth of §11. A proof of §12 IMPLIES a proof of §13.\n"
-"\n"
-"In other words, it acts like a function. If you give §14 a proof of §15, you get a proof of §16.\n"
-"\n"
-"§17 acts like a function. It takes a proof of §18 and returns a proof of §19.\n"
-"\n"
-"Given §20 §21, §22 is a proof of Q"
-msgstr ""
-
-#. §0: `constructor`
-#. §1: `«{AKnave}»`
-#: Game.Levels.SetTheory_Knights_Knaves.L11_prob32
-msgid "\n"
-"Let's close the first part of the goal using §0 and §1\n"
 ""
 msgstr ""
 
 #. §0: `↔`
 #: Game.Levels.Logic.L07_LogicalEquivalence
 msgid "Logical Equivalence, §0"
-msgstr ""
-
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"§0 is knave and is not a knave.\n"
-"contradiction.\n"
-""
-msgstr ""
-
-#. §0: `A ∈ Knave`
-#. §1: `B ∈ Knave`
-#. §2: `C ∈ Knave`
-#. §3: `Knave = {A,B,C}`
-#. §4: `full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : Knave = {A, B, C}`
-#: Game.Levels.SetTheory_Knights_Knaves.L10_allofus
-msgid "\n"
-"When §0 , §1 , §2 then we can conclude that everyone is a knave i.e\n"
-"§3\n"
-"\n"
-"§4 is useful here\n"
-""
-msgstr ""
-
-#: Game.Levels.SetTheory_Knights_Knaves.L02_2plus2
-msgid "\n"
-"This is identical to the previous level.\n"
-"\n"
-""
 msgstr ""
 
 #. §0: `Lean`
@@ -5612,63 +5895,6 @@ msgid "We will introduce the knights and knaves puzzle here explaining rules of 
 "The objective is to conclude who is a knight and who is a knave, based on the statements of several islanders. This will be done using logical reasoning."
 msgstr ""
 
-#. §0: `full3`
-#. §1: `full3 (hA : A ∈ S) (hB : B ∈ S) (hC : C ∈ S) : Knave = {A, B, C}`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
-msgid "\n"
-"Close the goal using §0\n"
-"\n"
-"§1\n"
-""
-msgstr ""
-
-#. §0: `↔`
-#. §1: $
-#. \\begin{array}{|c c|c c|c|}
-#. \\hline
-#. P & Q & P → Q & Q → P & P → Q ∧ Q → P \\\\
-#. \\hline
-#. T & T & T & T & T \\\\
-#. \\hline
-#. T & F & F & T & F \\\\
-#. \\hline
-#. F & T & T & F & F \\\\
-#. \\hline
-#. F & F & T & T & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §2: `P ↔ Q`
-#. §3: `P,Q`
-#. §4: `P,Q`
-#. §5: `P`
-#. §6: `Q`
-#. §7: `P`
-#. §8: `Q`
-#. §9: `PsameQ`
-#. §10: `P`
-#. §11: `Q`
-#. §12: `PsameQ : P ↔ Q`
-#. §13: `PsameQ : P = Q`
-#. §14: `rw [PsameQ] at hP`
-#: Game.Levels.Logic.L07_LogicalEquivalence
-msgid "§0 truth table:\n"
-"§1\n"
-"\n"
-"So, §2 is true when §3 are true or §4 are false, i.e. when §5 and §6 have the same\n"
-"truth value. Therefore, §7 and §8 are equivalent from a truth value perspective.\n"
-"\n"
-"Since §9 means that §10 and §11 have the same truth value, you can consider think of §12 as §13 and §14. Try it!"
-msgstr ""
-
-#. §0: `knave_interp`
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-msgid "\n"
-"Transform the goal from §0.\n"
-""
-msgstr ""
-
 #. §0: `«{hA}»`
 #. §1: `«{hB}»`
 #. §2: `h`
@@ -5698,41 +5924,6 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `P ↔ Q`
-#. §1: `P`
-#. §2: `Q`
-#. §3: `P ↔ Q`
-#. §4: `P ↔ Q`
-#. §5: `P`
-#. §6: `Q`
-#. §7: ```
-#. iff_of_false (ha : ¬a) (hb : ¬b)
-#.   : a ↔ b
-#. ```
-#: Game.Levels.Simp_World.L06_iff_of_false
-msgid "§0 means that §1,§2 have the same truth value.\n"
-"\n"
-"If both of them are true, we can conclude §3.\n"
-"\n"
-"If both of them are false, we can conclude §4 as well.\n"
-"\n"
-"Here, we have that §5,§6 are both false.\n"
-"\n"
-"The relevant theorem,\n"
-"§7"
-msgstr ""
-
-#. §0: `A`
-#. §1: `«{AKnave}».left : A.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L06_prob33
-#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
-msgid "\n"
-"Now you have that §0 is a knave, which is a contradiction\n"
-"\n"
-"Remeber that §1.\n"
-""
-msgstr ""
-
 #. §0: `B ∈ Knight`
 #. §1: `C ∈ Knave`
 #. §2: `stB`
@@ -5741,72 +5932,11 @@ msgstr ""
 #. 
 #. Change the goal to `
 #. §5: ` and assume `
-#: Game.Levels.SetTheory_Knights_Knaves.L13_prob27
+#: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
 "If §0 , then §1. §2 gives us §3 but that is the case\n"
 "(§4B ∈ Knave§5B ∈ Knight`\n"
 ""
-msgstr ""
-
-#. §0: `and`
-#. §1: `P and Q`
-#. §2: `P`
-#. §3: `Q`
-#. §4: `∧`
-#. §5: `∧`
-#. §6: `And.intro`
-#. §7: `P`
-#. §8: `Q`
-#. §9: `P ∧ Q`
-#. §10: `P`
-#. §11: `Q`
-#. §12: `T`
-#. §13: `F`
-#. §14: $$
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. x=2 & y=6 & x=2 ∧ y=6 \\\\
-#. \\hline
-#. T & T & T \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & F \\\\
-#. \\hline
-#. F & F & F \\\\
-#. \\hline
-#. \\end{array}
-#. $$
-#. §15: `constructor`
-#. §16: `P and Q`
-#. §17: `P`
-#. §18: `Q`
-#. §19: `And.intro hP hQ`
-#. §20: `\\<hP,hQ\\>`
-#: Game.Levels.Logic.L02_And
-msgid "Logical connectives are either defined by their introduction and elimination rules or by truth\n"
-"tables.\n"
-"\n"
-"An introduction rule 'introduces' a symbol , in this case proving a statement of §0.\n"
-"\n"
-"An elimination rule 'eliminates' a symbol extracting information from it. For an expression §1\n"
-", applying the elimination rule would give you a proof of §2 and a proof of §3 separately.(seen in future levels)\n"
-"\n"
-"The only way to introduce the symbol §4 i.e prove a statement involving §5 is to use the\n"
-"§6 introduction rule which requires a proof of §7 and a proof of §8.\n"
-"\n"
-"We can conclude from this that §9 is true in only one case: when §10 is true and §11 is true. It is false otherwise\n"
-"\n"
-"In truth table form, this looks like:\n"
-"\n"
-"§12 stands for true\n"
-"§13 stands for false\n"
-"\n"
-"§14\n"
-"\n"
-"Restart the level and use these two alternative techniques to solve it:\n"
-"- You can also use the §15 tactic which will split the goal §16 into two, the first being to prove §17 and the second being to prove §18.\n"
-"- Moreover, instead of §19 you can use the notation §20 which means the same thing."
 msgstr ""
 
 #. §0: `intro`
@@ -5844,11 +5974,9 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `False`
-#: Game.Doc.doc
-msgid "A : I am a knave\n"
-"\n"
-"This implies a contradiction, §0"
+#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
+msgid "\n"
+""
 msgstr ""
 
 #. §0: `A ∈ Knave`
@@ -5857,7 +5985,7 @@ msgstr ""
 #. §3: `And.intro`
 #. §4: `constructor`
 #. §5: `simp`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_31
+#: Game.Levels.SetTheory_Knights_Knaves.L13_31
 msgid "\n"
 "We have proven that §0 , §1 , §2 so you can close the goal (many\n"
 "options like\n"
@@ -5865,75 +5993,8 @@ msgid "\n"
 ""
 msgstr ""
 
-#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
-msgid "\n"
-""
-msgstr ""
-
-#. §0: `¬True`
-#. §1: `stA`
-#. §2: `False`
-#. §3: `not_true`
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "\n"
-"Rewrite §0 in §1 as §2 using §3\n"
-""
-msgstr ""
-
-#. §0: `A`
-#. §1: `A`
-#. §2: `knave_interp at stA`
-#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
-msgid "\n"
-"Now that we know that §0 is not a knight, we know that what §1 said was a lie.\n"
-"\n"
-"§2\n"
-""
-msgstr ""
-
-#. §0: `B`
-#: Game.Levels.DSL_Knights_Knaves.L11_prob32
-msgid "\n"
-"Knowing that §0 is a knight, conclude that there is exactly one knave.\n"
-""
-msgstr ""
-
 #: Game.Levels.Logic.L08_Not
 msgid "Not Connective, ¬"
-msgstr ""
-
-#. §0: `A`
-#. §1: `A`
-#. §2: `«{st}»`
-#. §3: `A.isKnave`
-#. §4: `knave_interp`
-#. §5: `«{st}»`
-#. §6: `B.isKnave`
-#: Game.Levels.DSL_Knights_Knaves.L06_prob33
-msgid "\n"
-"§0 is not a knight means that §1 is a knave, so §2 could be simplified.\n"
-"\n"
-"Obtain §3 using §4, and simplify §5 obtaining §6.\n"
-"\n"
-"After that, close the goal\n"
-""
-msgstr ""
-
-#. §0: `AiffC : A ↔ C`
-#. §1: `iff_of_true (ha : a) (hb : b) : a ↔ b`
-#. §2: `hA : A`
-#. §3: `h : C`
-#. §4: `iff_of_true`
-#. §5: `P ↔ Q`
-#. §6: `P`
-#. §7: `Q`
-#: Game.Levels.KnightsAndKnaves2.L05_iff
-msgid "\n"
-"Prove §0 using §1, §2, §3\n"
-"\n"
-"§4 says that we can conclude §5 is true when §6 is true, §7 is true (check the truth table).\n"
-""
 msgstr ""
 
 #. §0: `P`
@@ -5977,21 +6038,19 @@ msgid "In this level, you will learn 'proof by contradiction'.\n"
 "The second is using the §10 tactic where §11 would be assuming §12."
 msgstr ""
 
-#. §0: `¬isKnight B`
-#. §1: `knight_interp`
-#: Game.Levels.DSL_Knights_Knaves.L03_prob26
+#. §0: `AiffC : A ↔ C`
+#. §1: `iff_of_true (ha : a) (hb : b) : a ↔ b`
+#. §2: `hA : A`
+#. §3: `h : C`
+#. §4: `iff_of_true`
+#. §5: `P ↔ Q`
+#. §6: `P`
+#. §7: `Q`
+#: Game.Levels.KnightsAndKnaves2.L05_iff
 msgid "\n"
-"Change the goal to §0\n"
+"Prove §0 using §1, §2, §3\n"
 "\n"
-"Use the §1 tactic.\n"
-""
-msgstr ""
-
-#. §0: `«{AnK}»`
-#. §1: `stA`
-#: Game.Levels.SetTheory_Knights_Knaves.L06_prob33
-msgid "\n"
-"use §0 to simplify §1\n"
+"§4 says that we can conclude §5 is true when §6 is true, §7 is true (check the truth table).\n"
 ""
 msgstr ""
 
@@ -6024,6 +6083,15 @@ msgid "\n"
 ""
 msgstr ""
 
+#. §0: `B.isKnave`
+#: Game.Levels.DSL_Knights_Knaves.L10_allofus2
+msgid "\n"
+"We are at the case where §0\n"
+"\n"
+"Interpret this in terms of knights\n"
+""
+msgstr ""
+
 #. §0: `x`
 #. §1: `cases h`
 #. §2: `h : x = A ∨ x = B ∨ x = C`
@@ -6032,6 +6100,39 @@ msgid "Considers cases of all possibilities of an inhabitant\n"
 "§0\n"
 "\n"
 "§1 where §2"
+msgstr ""
+
+#. §0: `∧`
+#. §1: `x = 2`
+#. §2: `y = 6`
+#. §3: ```
+#. h : x = 2
+#. h' : y = 6
+#. ```
+#. §4: `x = 2 AND y = 6`
+#. §5: `x = 2 ∧ y = 6`
+#. §6: `And.intro`
+#. §7: `∧`
+#. §8: ```
+#. And.intro (hP : P)
+#.           (hQ : Q)
+#. : P and Q
+#. ```
+#. §9: `And.intro`
+#. §10: `P`
+#. §11: `Q`
+#. §12: `P and Q`
+#: Game.Levels.Logic.L02_And
+msgid "In this level, we introduce the §0 logical connective (read as 'and').\n"
+"\n"
+"Given the following proofs that §1 and §2,\n"
+"§3\n"
+"we can construct a proof that §4 written in Lean notation as §5.\n"
+"\n"
+"We construct such an expression using an introduction rule called §6 which introduces the §7 symbol\n"
+"§8\n"
+"\n"
+"You can think of §9 as a function that takes two inputs: a proof of §10, a proof of §11 and returns a proof of §12."
 msgstr ""
 
 #. §0: `Robert`
@@ -6069,37 +6170,13 @@ msgid "§0 says: §1 is my type.\n"
 "then use §10 to prove §11 and obtain §12."
 msgstr ""
 
-#. §0: `∧`
-#. §1: `x = 2`
-#. §2: `y = 6`
-#. §3: ```
-#. h : x = 2
-#. h' : y = 6
-#. ```
-#. §4: `x = 2 AND y = 6`
-#. §5: `x = 2 ∧ y = 6`
-#. §6: `And.intro`
-#. §7: `∧`
-#. §8: ```
-#. And.intro (hP : P)
-#.           (hQ : Q)
-#. : P and Q
-#. ```
-#. §9: `And.intro`
-#. §10: `P`
-#. §11: `Q`
-#. §12: `P and Q`
-#: Game.Levels.Logic.L02_And
-msgid "In this level, we introduce the §0 logical connective (read as 'and').\n"
-"\n"
-"Given the following proofs that §1 and §2,\n"
-"§3\n"
-"we can construct a proof that §4 written in Lean notation as §5.\n"
-"\n"
-"We construct such an expression using an introduction rule called §6 which introduces the §7 symbol\n"
-"§8\n"
-"\n"
-"You can think of §9 as a function that takes two inputs: a proof of §10, a proof of §11 and returns a proof of §12."
+#. §0: `A`
+#. §1: `A`
+#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
+#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
+msgid "\n"
+"§0's statement is true, so §1 is a knight.\n"
+""
 msgstr ""
 
 #. §0: `And.intro`
@@ -6131,37 +6208,6 @@ msgid "The theorem §0 takes a proof of §1, a proof of §2, and gives a proof o
 "§8\n"
 "instead of\n"
 "§9"
-msgstr ""
-
-#. §0: `A`
-#. §1: `A`
-#: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave
-#: Game.Levels.SetTheory_Knights_Knaves.L04_IKnaveOrKnave
-msgid "\n"
-"§0's statement is true, so §1 is a knight.\n"
-""
-msgstr ""
-
-#. §0: `A ↔ True`
-#. §1: `A`
-#. §2: `iff_true_right  (ha : a) : (b ↔ a) ↔ b`
-#. §3: `a`
-#. §4: `True`
-#. §5: `True`
-#. §6: `True.intro`
-#: Game.Levels.KnightsAndKnaves2.L08_imp
-msgid "\n"
-"Rewrite §0 to §1 using §2.\n"
-"\n"
-"Notice that §3 here is §4 and a proof of §5 is simply §6\n"
-""
-msgstr ""
-
-#. §0: `knave_interp`
-#: Game.Levels.DSL_Knights_Knaves.L12_31
-msgid "\n"
-"Convert from §0.\n"
-""
 msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves.L04_IKnaveOrKnave

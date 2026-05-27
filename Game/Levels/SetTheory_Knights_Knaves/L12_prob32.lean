@@ -1,7 +1,7 @@
 import Game.LevelLemmas.settheory_KnightsAndKnaves3
 
 World "SetTheory_Knights_Knaves"
-Level 11
+Level 12
 
 Title ""
 

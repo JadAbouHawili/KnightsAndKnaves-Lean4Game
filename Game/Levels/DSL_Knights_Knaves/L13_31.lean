@@ -3,9 +3,9 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 
 World "DSL_Knights_Knaves"
-Level 12
+Level 13
 
-Title ""
+Title "All Knaves , One Knight"
 
 Introduction
 "
@@ -26,7 +26,8 @@ Change the goal to `A.isKnave`
 open Islander
 set_option push_neg.use_distrib true
 Statement
-{stA : A said @allKnaves A B C} {stB : B said @oneisknight A B C}
+{stA : A said @allKnaves A B C}
+{stB : B said @oneisknight A B C}
 : A.isKnave ∧ B.isKnight ∧ C.isKnave := by
   have AKnave : A.isKnave
   Hint (strict:=true)

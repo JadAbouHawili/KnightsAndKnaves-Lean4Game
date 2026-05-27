@@ -2,7 +2,7 @@ import Game.LevelLemmas.dsl_KnightsAndKnaves
 
 
 World "DSL_Knights_Knaves"
-Level 13
+Level 14
 
 Title ""
 
