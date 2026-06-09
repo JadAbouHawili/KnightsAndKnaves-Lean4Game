@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27\n"
+"POT-Creation-Date: 2026-06-09\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -713,6 +713,16 @@ msgid "\n"
 ""
 msgstr ""
 
+#. §0: `A`
+#. §1: `contradiction`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"§0 is a knave and is not a knave.\n"
+"\n"
+"§1\n"
+""
+msgstr ""
+
 #: Game.Levels.EquationalReasoning
 msgid "Equational Reasoning"
 msgstr ""
@@ -724,6 +734,23 @@ msgid "\n"
 "Now this is the second case where §0 is a knave.\n"
 "\n"
 "Conclude that §1's statement is false\n"
+""
+msgstr ""
+
+#. §0: `knight_said (stA : A said P) (AKnight : A.isKnight) : P`
+#. §1: `A`
+#. §2: `A`
+#. §3: `P`
+#. §4: `A`
+#. §5: `have`
+#. §6: `knight_said`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"§0\n"
+"\n"
+"§1 is a knight, so whatever §2 said (in this case being the proposition §3) is true.\n"
+"\n"
+"Prove §4's statement using §5 , §6\n"
 ""
 msgstr ""
 
@@ -740,22 +767,6 @@ msgstr ""
 #. §0: `rfl`
 #: Game.Levels.EquationalReasoning.L01_rfl
 msgid "§0, A Number Equals Itself"
-msgstr ""
-
-#. §0: `knight_said`
-#. §1: `A`
-#. §2: `A`
-#. §3: `A`
-#. §4: `have`
-#. §5: `knight_said`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"§0\n"
-"\n"
-"§1 is a knight, so whatever §2 said is true.\n"
-"\n"
-"Prove §3's statement using §4,§5\n"
-""
 msgstr ""
 
 #: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
@@ -1153,6 +1164,25 @@ msgid "\n"
 ""
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `B`
+#. §3: `contradiction`
+#. §4: `contradiction`
+#. §5: `not_isKnight_and_isKnave`
+#. §6: `¬(A.isKnight ↔ B.isKnight)`
+#. §7: `B`
+#. §8: `A.isKnight ↔ B.isKnight`
+#. §9: `iff_of_true`
+#: Game.Levels.DSL_Knights_Knaves.L07_difftype
+msgid "\n"
+"So §0,§1 are the same type, but §2 being a knight also tells us that they are not.\n"
+"§3 (§4 fails here , so use §5 here)\n"
+"\n"
+"Conclude §6 from §7'statement then prove that §8 using §9\n"
+""
+msgstr ""
+
 #. §0: `B`
 #. §1: `stB`
 #: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
@@ -1223,6 +1253,24 @@ msgid "\n"
 "Solving this is in the same spirit of what you previously did.\n"
 "\n"
 "§4 then simplify it using the fact that §5 are knaves\n"
+""
+msgstr ""
+
+#. §0: `knave_said (stA : A said P) (AKnave : A.isKnave) : ¬P`
+#. §1: `A`
+#. §2: `A`
+#. §3: `P`
+#. §4: `A`
+#. §5: `have`
+#. §6: `knave_said`
+#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
+msgid "\n"
+"§0\n"
+"\n"
+"§1 is a knave, so whatever §2 said (in this case being the proposition §3) is false.\n"
+"\n"
+"\n"
+"Prove the negation of §4's statement using §5 , §6\n"
 ""
 msgstr ""
 
@@ -2675,14 +2723,6 @@ msgstr ""
 #: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
 msgid "\n"
 "Let's close the first part of the goal using §0 and §1\n"
-""
-msgstr ""
-
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"§0 is knave and is not a knave.\n"
-"contradiction.\n"
 ""
 msgstr ""
 
@@ -4824,17 +4864,6 @@ msgid "Contradiction is a tactic that detects if you have contradictory assumpti
 "So §13 implies any proposition. This principle is known as: 'From §14 anything follows'."
 msgstr ""
 
-#. §0: `knave_said`
-#. §1: `A`
-#. §2: `A`
-#: Game.Levels.DSL_Knights_Knaves.L01_IamKnave
-msgid "\n"
-"§0\n"
-"\n"
-"§1 is a knave, so whatever §2 said is false.\n"
-""
-msgstr ""
-
 #. §0: `¬C`
 #. §1: `stA`
 #. §2: `eq_true`
@@ -6066,21 +6095,6 @@ msgid "If we know that §0,§1 have the same truth value then §2,§3 have the s
 "\n"
 "The relevant theorem,\n"
 "§4"
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `B`
-#. §3: `¬(A.isKnight ↔ B.isKnight)`
-#. §4: `B`
-#. §5: `A.isKnight ↔ B.isKnight`
-#. §6: `iff_of_true`
-#: Game.Levels.DSL_Knights_Knaves.L07_difftype
-msgid "\n"
-"So §0,§1 are the same type, but §2 being a knight also tells us that they are not. contradiction\n"
-"\n"
-"Conclude §3 from §4'statement then prove that §5 using §6\n"
-""
 msgstr ""
 
 #. §0: `B.isKnave`

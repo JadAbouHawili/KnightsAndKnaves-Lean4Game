@@ -34,7 +34,7 @@ We consider every case using the `cases` tactic, and `isKnight_or_isKnave`.
 open Islander
 
 Statement (hAKn : A said A.isKnave): False := by
-  Hint (hidden := true)(strict:=true)
+  Hint (hidden := true) (strict:=true)
   "
 Try
 ```
@@ -55,13 +55,13 @@ You get two cases, the first where `h : A.isKnight` and the second where `h: A.i
 We are now in the first case where `h : A.isKnight`
 So, we can conclude that `A`'s statement is true.
 "
-  Hint (hidden := true)(strict := true)
+  Hint (hidden := true) (strict := true)
 "
-`knight_said`
+`knight_said (stA : A said P) (AKnight : A.isKnight) : P`
 
-`A` is a knight, so whatever `A` said is true.
+`A` is a knight, so whatever `A` said (in this case being the proposition `P`) is true.
 
-Prove `A`'s statement using `have`,`knight_said`
+Prove `A`'s statement using `have` , `knight_said`
 "
   have hnA := knight_said hAKn hA
   Hint
@@ -87,15 +87,19 @@ So, we can conclude that `A`'s statement is false.
 "
   Hint (hidden := true)(strict := true)
 "
-`knave_said`
+`knave_said (stA : A said P) (AKnave : A.isKnave) : ¬P`
 
-`A` is a knave, so whatever `A` said is false.
+`A` is a knave, so whatever `A` said (in this case being the proposition `P`) is false.
+
+
+Prove the negation of `A`'s statement using `have` , `knave_said`
 "
   have hnA := knave_said hAKn hnA
   Hint
   "
-`A` is knave and is not a knave.
-contradiction.
+`A` is a knave and is not a knave.
+
+`contradiction`
   "
   contradiction
 
@@ -112,7 +116,7 @@ which you can use in future levels.
 You will need it in the next level.
 "
 
-NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave Islander.isKnight Islander.isKnave Islander.not_isKnight_and_isKnave
-NewDefinition DSLKnightsKnaves
+NewTheorem Islander.knight_said Islander.said_knight Islander.knave_said Islander.said_knave Islander.not_isKnight_and_isKnave
+NewDefinition DSLKnightsKnaves Islander.isKnight Islander.isKnave
 
 NewTactic knight_or_knave

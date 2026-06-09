@@ -32,7 +32,7 @@ Notice that this definition is an implication and that the truth table with `¬P
 What this means is that to prove `¬P`, we assume `P` and derive a contradiction, i.e. constructing an object of type `False`.
 In other words, having `¬P` as a goal, you have to start the proof with `intro` because you are proving an implication.
 -/
-DefinitionDoc Not as "¬"
+DefinitionDoc Not as "¬" in "Prop"
 
 /--
 Proving `False` means deriving a contradiction.
@@ -49,7 +49,7 @@ Since `hnP : ¬P` is `P → False`, we can obtain `hnP hP : False`.
 
 Moreover, we know that `False.elim : False → Q` for any `Q : Prop` and so `False.elim (hnP hP) : Q`. (using `contradiction` would close the goal as well, without having to use `False.elim`)
 -/
-DefinitionDoc False as "`False`"
+DefinitionDoc False as "False" in "Prop"
 
 /--
 You can think of a proposition as a statement that is either true or false (obviously, it can't be both at the same time).
@@ -68,7 +68,7 @@ This truth value depends on the truth value of the propositions it was built out
 The truth table of a logical connective illustrates the rule for that logical connective, i.e. the truth value of the compound statement depending on the truth value of the propositions it connects.
 
 -/
-DefinitionDoc «Prop» as "Prop"
+DefinitionDoc «Prop» as "Prop" in "Prop"
 
 /--
 Logical implication `P → Q` is made up of two components:
@@ -106,7 +106,7 @@ In other words, it acts like a function. If you give `P → Q` a proof of `P`, y
 
 Given `hPQ : P → Q` `hP : P`, `hPQ hP` is a proof of Q
 -/
-DefinitionDoc imp as "→"
+DefinitionDoc imp as "→" in "Prop"
 
 /--
 `∧` read as 'and'
@@ -136,7 +136,7 @@ F & F & F \\\\
 \\end{array}
 $$
 -/
-DefinitionDoc logic_and as "and"
+DefinitionDoc logic_and as "and" in "Prop"
 
 /--
 `∨`
@@ -166,7 +166,7 @@ Having `P or Q` as the goal, you can tell Lean that you want to prove the left s
 
 `left` and `right` tactics are used instead of the `Or.inl` and `Or.inr` introduction rules stated here [#Or](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or)
 -/
-DefinitionDoc logic_or as "or"
+DefinitionDoc logic_or as "or" in "Prop"
 
 /--
 `∩` is an operator on sets.
@@ -669,7 +669,7 @@ not_isKnight_and_isKnave (A : Islander)
 
 The objective is to conclude who is a knight and who is a knave, based on the statements of several inhabitants. This will be done using logical reasoning.
 -/
-DefinitionDoc DSLKnightsKnaves as "DSL Knights and Knaves" in "Knights and Knaves"
+DefinitionDoc DSLKnightsKnaves as "DSL Knights and Knaves" in "DSL"
 
 /--
 The setting is an island.
@@ -857,7 +857,7 @@ h : P ↔ Q
 hP : Q
 ```
 -/
-DefinitionDoc Iff as "↔"
+DefinitionDoc Iff as "↔" in "Prop"
 
 /--
 
@@ -894,7 +894,7 @@ A.isKnight : Prop
 ```
 is the proposition that `A` is a knight.
 -/
-TheoremDoc Islander.isKnight as "isKnight" in "DSL"
+DefinitionDoc Islander.isKnight as "isKnight" in "DSL"
 
 /--
 For an Islander `A`,
@@ -907,7 +907,7 @@ A.isKnave : Prop
 ```
 is the proposition that `A` is a knave.
 -/
-TheoremDoc Islander.isKnave as "isKnave" in "DSL"
+DefinitionDoc Islander.isKnave as "isKnave" in "DSL"
 
 /--
 You can't be a knight and a knave at the same time.

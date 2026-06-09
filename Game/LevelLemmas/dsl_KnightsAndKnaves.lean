@@ -102,8 +102,8 @@ macro_rules
 | `(tactic| contradiction) =>
   do `(tactic |solve | (exfalso ; apply not_isKnight_and_isKnave  ; assumption ; assumption   ) )
 
-macro "contradiction_hyp" h1:ident h2:ident : tactic =>
-`(tactic| (exact not_isKnight_and_isKnave $h1 $h2) )
+--macro "contradiction_hyp" h1:ident h2:ident : tactic =>
+--`(tactic| (exact not_isKnight_and_isKnave $h1 $h2) )
 
 end tactics
 
