@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-09\n"
+"POT-Creation-Date: 2026-06-12\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2269,7 +2269,7 @@ msgstr ""
 #. §6: `«{exactlyoneKnave}»`
 #. §7: `unfold exactlyOneIsKnave at «{exactlyoneKnave}»`
 #. §8: `simp`
-#. §9: `knight_to_knave`
+#. §9: `knave_interp`
 #: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "\n"
 "Notice what we have at our disposal.\n"

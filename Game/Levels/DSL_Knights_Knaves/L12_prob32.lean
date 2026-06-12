@@ -71,7 +71,7 @@ You can obtain `C` by using the fact that `A` is a knave, `B` is a knight and si
 
 `unfold exactlyOneIsKnave at {exactlyoneKnave}` first then use `simp`.
 
-If it doesn't get simplified enough, then change the hypothesis involved from `knight_to_knave` or vice versa
+If it doesn't get simplified enough, then change the hypothesis involved from `knave_interp` or vice versa
   "
   unfold exactlyOneIsKnave at exactlyoneKnave
   simp [AKnave, BKnight] at exactlyoneKnave
