@@ -731,6 +731,8 @@ DefinitionDoc SetTheoryKnightsKnaves as "Set Theory Knights and Knaves" in "Knig
 
 
 /--
+# Representation
+
 Say we have an islander `A` who could be a knight or a knave.
 
 `A` is represented as
@@ -740,6 +742,8 @@ A : Prop
 where having the proposition `A` being true means the islander `A` is a knight and having the proposition `A` being false means the islander `A` is a knave.
 
 Now, we intrepret having a proof of `A` as `A` being a knight, and having a proof of `¬A` as `A` being a knave.
+
+## Rules of the Game
 
 From this, every islander being a knight or a knave is represented as follows:
 ```

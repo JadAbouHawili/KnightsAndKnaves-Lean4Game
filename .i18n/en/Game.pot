@@ -382,6 +382,10 @@ msgid "Say we have an islander §0 who could be a knight or a knave.\n"
 "- Knights always tell the truth, knaves always lie."
 msgstr ""
 
+#: Game
+msgid "Knights And Knaves Game"
+msgstr ""
+
 #. §0: `or`
 #. §1: `P`
 #. §2: `Q`
@@ -412,10 +416,6 @@ msgid "The simplification here concerns §0.\n"
 "\n"
 "Rewrite the expression §12 into §13 using the theorem\n"
 "§14"
-msgstr ""
-
-#: Game
-msgid "Knights And Knaves Game"
 msgstr ""
 
 #. §0: `isKnave A ∨ isKnave B`
@@ -1833,6 +1833,14 @@ msgid "In this level, we introduce the §0 tactic.\n"
 "added to the proof state and can be used."
 msgstr ""
 
+#. §0: `Robert ∉ Knight`
+#. §1: `stI`
+#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
+msgid "\n"
+"We can now conclude that §0 using §1\n"
+""
+msgstr ""
+
 #: Game.Levels.SetTheory_Knights_Knaves.L11_allofus
 msgid "\n"
 "Conclude that everyone is a knight and close the goal\n"
@@ -2631,6 +2639,24 @@ msgid "We have proven the following theorem:\n"
 "which you can use in future levels.\n"
 "\n"
 "You will need it in the next level."
+msgstr ""
+
+#. §0: `Robert`
+#. §1: `Ira`
+#. §2: `Robert ∈ Knight`
+#. §3: `stR`
+#. §4: `Robert ∉ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
+msgid "\n"
+"§0 and §1 have the same type which means that §2 by §3\n"
+"\n"
+"But we know that §4.\n"
+""
+msgstr ""
+
+#. §0: `simp`
+#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
+msgid "Remember §0"
 msgstr ""
 
 #. §0: ```
@@ -5068,6 +5094,14 @@ msgid "In the previous world, we introduced logical connectives and how to const
 "capable of and you should almost always use §2 in upcoming worlds."
 msgstr ""
 
+#. §0: `by_contra`
+#. §1: `Ira ∉ Knight`
+#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
+msgid "\n"
+"Assume by contradiction(§0)  that §1\n"
+""
+msgstr ""
+
 #. §0: `A`
 #. §1: `C`
 #. §2: `B`
@@ -6000,11 +6034,6 @@ msgid "\n"
 "Prove the second goal using §0, §1\n"
 "\n"
 "Then close the goal (using §2, or §3 notation, or §4 etc..).\n"
-""
-msgstr ""
-
-#: Game.Levels.SetTheory_Knights_Knaves.L08_sametype
-msgid "\n"
 ""
 msgstr ""
 
