@@ -3,7 +3,7 @@ import Game.LevelLemmas.Logical
 
 
 World "Logic"
-Level 7
+Level 8
 
 Title "Logical Equivalence, `↔`"
 

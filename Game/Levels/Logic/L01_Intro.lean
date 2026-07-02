@@ -33,7 +33,7 @@ Here's an example in natural language.
 Given the two propositions 'The sun is shining', 'It is Monday'.
 
 You can construct 'The sun is shining and it is monday' which is a proposition as well.
-It's truth value depends on the truth value of its building blocks
+It's truth value depends on the truth value of its building blocks.
 "
 
 NewDefinition «Prop»

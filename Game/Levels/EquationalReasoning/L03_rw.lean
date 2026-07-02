@@ -9,7 +9,7 @@ Introduction
 "
 Given that `x = 2` , we can substitute any occurrence of `x` by `2`.
 
-This can be done using `rw` tactic.(short for 'rewrite').
+This can be done using `rw` (short for 'rewrite').
 
 `rw` takes a proof that `A = B` and replaces all the `A`s in the goal with `B`s.
 
@@ -30,16 +30,11 @@ Statement {x y z : ℕ } (h : x = 3) (g: y = 6) (i : z=10) : x + x = y := by
 
 Conclusion
 "
-Our goal is now `3 + 3 = 6`. The `rw` tactic implicitly executes `rfl` after doing the rewrite which unfolds the numbers `3` and `6` to what they are defined as, and it turns out both sides are identical.
+Our goal is now `3 + 3 = 6`. The `rw` tactic implicitly executes `rfl` after doing the rewrite.
 
-Another solution:
+You can also do multiple rewrites in one step
 ```
 rw [h,g]
-```
-instead of
-```
-rw [h]
-rw [g]
 ```
 "
 

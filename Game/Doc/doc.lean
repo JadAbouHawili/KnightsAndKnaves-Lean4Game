@@ -135,6 +135,39 @@ F & F & F \\\\
 \\hline
 \\end{array}
 $$
+
+
+
+The only way to introduce the symbol `∧` i.e prove a statement involving `∧` is to use the
+`And.intro` introduction rule which requires a proof of `P` and a proof of `Q`.
+
+We can conclude from this that `P ∧ Q` is true in only one case: when `P` is true and `Q` is true. It is false otherwise
+
+In truth table form, this looks like:
+
+`T` stands for true
+`F` stands for false
+
+$$
+\\begin{array}{|c|c|c|}
+\\hline
+x=2 & y=6 & x=2 ∧ y=6 \\\\\\\\
+\\hline
+T & T & T \\\\\\\\
+\\hline
+T & F & F \\\\\\\\
+\\hline
+F & T & F \\\\\\\\
+\\hline
+F & F & F \\\\\\\\
+\\hline
+\\end{array}
+$$
+
+Restart the level and use these two alternative techniques to solve it:
+- You can also use the `constructor` tactic which will split the goal `P and Q` into two, the first being to prove `P` and the second being to prove `Q`.
+- Moreover, instead of `And.intro hP hQ` you can use the notation `\\<hP,hQ\\>` which means the same thing.
+
 -/
 DefinitionDoc logic_and as "and" in "Prop"
 

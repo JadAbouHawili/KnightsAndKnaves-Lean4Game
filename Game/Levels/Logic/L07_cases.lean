@@ -2,7 +2,7 @@ import Game.MathlibTheorems
 import Game.LevelLemmas.Logical
 
 World "Logic"
-Level 6
+Level 7
 
 Title "Proof by `cases`"
 

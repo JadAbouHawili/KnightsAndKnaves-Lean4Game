@@ -2,7 +2,7 @@ import Game.MathlibTheorems
 import Game.LevelLemmas.Logical
 
 World "Logic"
-Level 8
+Level 9
 
 Title "Not Connective, ¬"
 

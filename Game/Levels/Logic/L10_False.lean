@@ -2,7 +2,7 @@ import Game.MathlibTheorems
 import Game.LevelLemmas.Logical
 
 World "Logic"
-Level 9
+Level 10
 
 Title "From `False`, anything follows."
 

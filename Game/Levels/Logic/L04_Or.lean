@@ -2,7 +2,7 @@ import Game.MathlibTheorems
 import Game.LevelLemmas.Logical
 
 World "Logic"
-Level 3
+Level 4
 
 Title "Or, `∨`"
 

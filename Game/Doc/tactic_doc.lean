@@ -22,7 +22,7 @@ x - 7 = x - 7
 TacticDoc rfl
 
 /--
-The assumption tactic searches for an assumption that matches the goal, and closes the goal if it finds one.
+The `assumption` tactic tries to prove the goal using one of the assumptions.
 
 Given,
 ```

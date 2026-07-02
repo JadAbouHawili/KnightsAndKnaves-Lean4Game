@@ -3,25 +3,16 @@ import Game.MathlibTheorems
 World "Logic"
 Level 11
 
-Title ""
+Title "`have`"
 
 Introduction
 "
-Coming back to `have`,
+In this level, we introduce the `have` tactic.
 
-If you can prove something in one step, then
-```
-have theorem-name := proof
-```
-will do.
+You have to prove `R` using `hQR` but to do that, you need `Q` first.
 
-For example, you can obtain a proof of `Q` in one step by
-```
-hPQ hP
-```
-then `have hQ := hPQ hP` will add `hQ : Q` to the proof state, i.e. you have proven `Q` and `hQ` is the proof.
-
-Then `hQR hQ` would be a proof of `R` that closes the goal
+Type `have hQ : Q` to change the goal to proving `Q`. And when the proof is done, `hQ : Q` is
+added to the proof state and can be used.
 "
 
 Statement {P Q R : Prop}
@@ -29,10 +20,26 @@ Statement {P Q R : Prop}
 {hPQ : P → Q}
 {hQR : Q → R}
   : R := by
-  exact hQR (hPQ hP)
+  {
+  have hQ : Q
+  Hint
+  "
+  `hPQ` takes `hP` and gives you a proof of `Q`
+  "
+  exact hPQ hP
+
+  Hint
+  "
+Now that you proved `Q`, its proof `{hQ} : Q` has been added to the proof state.
+
+`hQR` takes `{hQ}` and gives you a proof of `R` which is the goal.
+  "
+  exact hQR hQ
+  }
 
 Conclusion
 "
-You could have also not used `have` here by passing `hQR` a proof of `P` which is `hPQ hP`. Try it
-before moving on.
+`have h : P` changes the goal to proving `P` and adds the proof `h` after that goal is closed.
 "
+
+NewTactic «have»
