@@ -1,40 +1,12 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.29.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-02\n"
+"POT-Creation-Date: 2026-07-03\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
-
-#. §0: `have`
-#. §1: ```
-#. have theorem-name := proof
-#. ```
-#. §2: `Q`
-#. §3: ```
-#. hPQ hP
-#. ```
-#. §4: `have hQ := hPQ hP`
-#. §5: `hQ : Q`
-#. §6: `Q`
-#. §7: `hQ`
-#. §8: `hQR hQ`
-#. §9: `R`
-#: Game.Levels.Logic.L12_have
-msgid "Coming back to §0,\n"
-"\n"
-"If you can prove something in one step, then\n"
-"§1\n"
-"will do.\n"
-"\n"
-"For example, you can obtain a proof of §2 in one step by\n"
-"§3\n"
-"then §4 will add §5 to the proof state, i.e. you have proven §6 and §7 is the proof.\n"
-"\n"
-"Then §8 would be a proof of §9 that closes the goal"
-msgstr ""
 
 #. §0: `A`
 #. §1: `B`
@@ -109,6 +81,35 @@ msgid "\n"
 "\n"
 "Interpret §1 in terms of knaves\n"
 ""
+msgstr ""
+
+#. §0: `∨`
+#. §1: `P ∨ Q`
+#. §2: `P`
+#. §3: `Q`
+#. §4: `∨`
+#. §5: `∨`
+#. §6: `left`
+#. §7: `right`
+#. §8: `P ∨ Q`
+#. §9: `or`
+#. §10: `left`
+#. §11: `right`
+#. §12: `or`
+#. §13: `P`
+#. §14: `left`
+#: Game.Levels.Logic.L04_Or
+msgid "In this level, we introduce the §0 logical connective read as 'or'.\n"
+"\n"
+"You can prove a statement §1 from the fact that §2 is true or §3 is true. In other words, you\n"
+"prove an §4 statement if the left side is true or the right is true.\n"
+"\n"
+"Therefore, there are two introduction rules for the §5 symbol. We will however use the §6 and\n"
+"§7 tactic instead to choose which side of the goal §8 to prove.\n"
+"\n"
+"You can tell Lean which side of §9 you want to prove by simply executing §10 or §11.\n"
+"\n"
+"In our case, we know the left side of §12 (§13) is true, so use §14."
 msgstr ""
 
 #. §0: `¬C`
@@ -257,6 +258,11 @@ msgid "In this world , we use set theory instead of a §0 to represent and solve
 "be closed"
 msgstr ""
 
+#. §0: `∧`
+#: Game.Levels.Logic.L03_And_elimination
+msgid "§0 Elimination Rule"
+msgstr ""
+
 #. §0: `B ∈ Knight ↔ A ∈ Knave`
 #. §1: `stA : A ∈ Knight ↔ B ∈ Knight`
 #. §2: `B ∈ Knight`
@@ -271,6 +277,11 @@ msgid "\n"
 "And so in §1 you can replace §2 with §3 by rewriting\n"
 "§4 at §5\n"
 ""
+msgstr ""
+
+#. §0: `False`
+#: Game.Levels.Logic.L10_False
+msgid "From §0, anything follows."
 msgstr ""
 
 #. §0: `contradiction`
@@ -298,34 +309,6 @@ msgid "The §0 tactic works for the following proofs states:\n"
 "Example:\n"
 "-- disjoint\n"
 "You need to show that having two sets being disjoint (i.e. sharing no common element) and having a common element is a contradiction."
-msgstr ""
-
-#. §0: `False`
-#: Game.Levels.Logic.L10_False
-msgid "From §0, anything follows."
-msgstr ""
-
-#. §0: `False`
-#. §1: `False`
-#. §2: `P`
-#. §3: `¬P`
-#. §4: `P → False`
-#. §5: `P`
-#. §6: `¬P`
-#. §7: `contradiction`
-#. §8: `False`
-#. §9: `False`
-#. §10: `contradiction`
-#. §11: `False`
-#. §12: `contradiction`
-#: Game.Levels.Logic.L10_False
-msgid "Proving §0 is what's usually called deriving a contradiction, and note that to prove §1 you would first need to have a proof §2, and a proof of §3, i.e. §4.\n"
-"\n"
-"Moreover, having a proof of §5 and a proof of §6 means you have contradictory theorems. If so, then §7 will close any goal without having to prove §8 first.\n"
-"\n"
-"If you were able to prove §9, then the §10 tactic will prove the goal regardless what the goal is because 'from §11, anything follows'.\n"
-"\n"
-"Try the §12 tactic before moving on to the next level."
 msgstr ""
 
 #. §0: `A`
@@ -442,6 +425,12 @@ msgid "\n"
 "\n"
 "Each can be done in one step, so the appropriate §10 syntax should be used.\n"
 ""
+msgstr ""
+
+#. §0: `↔`
+#: Game.Levels.Logic.L07_cases
+msgid "In the next level , we will learn about logical equivalence §0 which states that two propositions\n"
+"have the same truth value either both being true or both being false"
 msgstr ""
 
 #. §0: `A`
@@ -604,6 +593,36 @@ msgid "\n"
 ""
 msgstr ""
 
+#. §0: `have`
+#. §1: ```
+#. have theorem-name := proof
+#. ```
+#. §2: `Q`
+#. §3: ```
+#. hPQ hP
+#. ```
+#. §4: `have hQ := hPQ hP`
+#. §5: `hQ : Q`
+#. §6: `Q`
+#. §7: `hQ`
+#. §8: `hQR hQ`
+#. §9: `R`
+#: Game.Levels.Logic.L11_have
+msgid "Redo the level with the following approach.\n"
+"\n"
+"Coming back to §0,\n"
+"\n"
+"If you can prove something in one step, then\n"
+"§1\n"
+"will do.\n"
+"\n"
+"For example, you can obtain a proof of §2 in one step by\n"
+"§3\n"
+"then §4 will add §5 to the proof state, i.e. you have proven §6 and §7 is the proof.\n"
+"\n"
+"Then §8 would be a proof of §9 that closes the goal"
+msgstr ""
+
 #. §0: `B ∈ Knave`
 #. §1: `C ∈ Knight`
 #: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
@@ -676,6 +695,13 @@ msgid "\n"
 "§0 is a knave and is not a knave.\n"
 "\n"
 "§1\n"
+""
+msgstr ""
+
+#. §0: `And.left hP`
+#: Game.Levels.Logic.L03_And_elimination
+msgid "\n"
+"The left side. §0\n"
 ""
 msgstr ""
 
@@ -867,6 +893,77 @@ msgid "\n"
 ""
 msgstr ""
 
+#. §0: `False`
+#. §1: `¬P`
+#. §2: `P → False`
+#. §3: `¬P`
+#. §4: $
+#. \\begin{array}{|c|c|}
+#. \\hline
+#. P & ¬P \\\\
+#. \\hline
+#. T & F \\\\
+#. F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §5: `P → False`
+#. §6: `→`
+#. §7: $
+#. \\begin{array}{|c|c|c|}
+#. \\hline
+#. P & Q & P → Q \\\\
+#. \\hline
+#. T & T & T \\\\
+#. \\hline
+#. T & F & F \\\\
+#. \\hline
+#. F & T & T \\\\
+#. \\hline
+#. F & F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §8: `Q=False`
+#. §9: $
+#. \\begin{array}{|c|c|}
+#. \\hline
+#. P & P → False \\\\
+#. \\hline
+#. T & F \\\\
+#. \\hline
+#. F & T \\\\
+#. \\hline
+#. \\end{array}
+#. $
+#. §10: `P`
+#. §11: `¬P`
+#. §12: `P → False`
+#. §13: `¬P ↔ P → False`
+#: Game.Levels.Logic.L09_Not
+msgid "In the next level, we will explore what it means to have proven §0, and what it means to have\n"
+"contradictory assumptions in our proof state.\n"
+"\n"
+"Why §1 is defined as §2 and does this match our intuition of what negation should be?\n"
+"\n"
+"\n"
+"In truth table form, this is what the behavior of §3 should be:\n"
+"§4\n"
+"\n"
+"We will show that §5 behaves the same way\n"
+"\n"
+"\n"
+"Consider the §6 truth table:\n"
+"§7\n"
+"\n"
+"Let's focus on the rows where §8,\n"
+"§9\n"
+"\n"
+"Notice that regardless of the truth value of §10, the two propositions §11 and §12 have\n"
+"the same truth table. Therefore, they can be used interchangeably and essentially have the same\n"
+"meaning i.e are logically equivalent (§13)."
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: ```
@@ -1000,37 +1097,6 @@ msgstr ""
 msgid "\n"
 "Use §0 to prove §1 and §2 and close the goal.\n"
 ""
-msgstr ""
-
-#. §0: `False`
-#. §1: `P`
-#. §2: `¬P`
-#. §3: `P`
-#. §4: `¬P`
-#. §5: `False`
-#. §6: ```
-#. hP: P
-#. hnP: ¬P
-#. ```
-#. §7: `hnP : ¬P`
-#. §8: `P → False`
-#. §9: `hnP hP : False`
-#. §10: `False.elim : False → Q`
-#. §11: `Q : Prop`
-#. §12: `False.elim (hnP hP) : Q`
-#. §13: `contradiction`
-#. §14: `False.elim`
-#: Game.Doc.doc
-msgid "Proving §0 means deriving a contradiction.\n"
-"\n"
-"A contradiction is when §1 and §2 are both true. We say that §3 and §4 contradict each other.\n"
-"\n"
-"# Principle of explosion, from §5 anything follows.\n"
-"This principle asserts that if you have contradictory assumptions then you can prove anything.\n"
-"§6\n"
-"Since §7 is §8, we can obtain §9.\n"
-"\n"
-"Moreover, we know that §10 for any §11 and so §12. (using §13 would close the goal as well, without having to use §14)"
 msgstr ""
 
 #: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
@@ -1227,11 +1293,6 @@ msgstr ""
 msgid "You should use §0 now."
 msgstr ""
 
-#. §0: `↔`
-#: Game.Levels.Logic.L07_cases
-msgid "In the next level , we will learn about logical equivalence §0 which states two propositions have the same truth value(either both are true or both are false)"
-msgstr ""
-
 #. §0: `A`
 #: Game.Levels.DSL_Knights_Knaves.L12_prob32
 msgid "\n"
@@ -1387,53 +1448,17 @@ msgstr ""
 msgid "I am a knave, I am lying"
 msgstr ""
 
-#. §0: `have`
-#. §1: ```
-#. have theorem-name := expression
-#. ```
-#. §2: `expression : P`
-#. §3: `P : Prop`
-#. §4: `expression`
-#. §5: `P`
-#. §6: ```
-#. theorem-name : P
-#. ```
-#. §7: `P`
-#. §8: `theorem-name`
-#. §9: ```
-#. have theorem-name : theorem-prop
-#. ```
-#. §10: `theorem-prop : Prop`
-#. §11: `theorem-name : theorem-prop`
-#. §12: `theorem-prop`
-#. §13: ```
-#. have a : 2=2
-#. ```
-#. §14: `2=2`
-#. §15: `a : 2=2`
-#: Game.Doc.tactic_doc
-msgid "The §0 tactic allows you to add theorems to the context (which you would have to prove, of course).\n"
+#. §0: `¬P`
+#. §1: `P → False`
+#. §2: `P`
+#. §3: `P`
+#. §4: `False`
+#: Game.Levels.Logic.L09_Not
+msgid "\n"
+"§0 is defined as §1 which means if §2 were true, then we can deduce a contradiction.\n"
 "\n"
-"## One step\n"
-"If the proof is one step, then the following:\n"
-"§1\n"
-"will do, where §2 with §3, i.e. §4 is a proof of §5\n"
-"\n"
-"The result would be adding the following to the hypothesis:\n"
-"§6\n"
-"\n"
-"You are storing the proof of §7 in §8 so that you don't have to construct this proof everytime you need it.\n"
-"\n"
-"## Multiple steps\n"
-"If the proof is multiple steps, then:\n"
-"§9\n"
-"will change the current goal to §10 which is what you want to prove.\n"
-"\n"
-"After being proven, the original goal is restored with §11 added (which is a proof of the proposition §12)\n"
-"\n"
-"### Example\n"
-"§13\n"
-"will change the goal to §14, which after proving would restore the original goal with the theorem §15 added and ready to be used."
+"We have a proof of §3 so we can prove the goal §4(a contradiction)\n"
+""
 msgstr ""
 
 #. §0: `P`
@@ -1480,7 +1505,6 @@ msgstr ""
 
 #. §0: `∧`
 #: Game.Levels.Logic.L02_And
-#: Game.Levels.Logic.L03_And_elimination
 msgid "And, §0"
 msgstr ""
 
@@ -2384,11 +2408,93 @@ msgid "\n"
 msgstr ""
 
 #. §0: `∧`
+#. §1: `∧`
+#. §2: `and`
+#. §3: `P and Q`
+#. §4: `P`
+#. §5: `Q`
+#. §6: `and`
+#. §7: ```
+#. And.left (self : a and b) : a
+#. ```
+#. §8: `and`
+#. §9: ```
+#. And.right (self : a and b) : b
+#. ```
+#: Game.Levels.Logic.L03_And_elimination
+msgid "In the previous level , we defined the §0 introduction rule.\n"
+"\n"
+"In this level, we will define the §1 elimination rule.\n"
+"\n"
+"An introduction rule 'introduces' a symbol , in this case proving a statement of §2.\n"
+"\n"
+"An elimination rule 'eliminates' a symbol extracting information from it. For an expression §3\n"
+", applying the elimination rule would give you a proof of §4 and a proof of §5 separately.\n"
+"\n"
+"To extract the left side of §6 , use the left elimination rule\n"
+"§7\n"
+"\n"
+"To extract the right side of §8 , use the right elimination rule\n"
+"§9\n"
+"\n"
+"Which side do we need to prove the goal?"
+msgstr ""
+
+#. §0: `∧`
 #. §1: `all_possibilities x`
 #: Game.Levels.SetTheory_Knights_Knaves.L14_prob27
 msgid "\n"
 "Close the left side of §0 and take all §1 to close the right side\n"
 ""
+msgstr ""
+
+#. §0: `have`
+#. §1: ```
+#. have theorem-name := expression
+#. ```
+#. §2: `expression : P`
+#. §3: `P : Prop`
+#. §4: `expression`
+#. §5: `P`
+#. §6: ```
+#. theorem-name : P
+#. ```
+#. §7: `P`
+#. §8: `theorem-name`
+#. §9: ```
+#. have theorem-name : theorem-prop
+#. ```
+#. §10: `theorem-prop : Prop`
+#. §11: `theorem-name : theorem-prop`
+#. §12: `theorem-prop`
+#. §13: ```
+#. have a : 2=2
+#. ```
+#. §14: `2=2`
+#. §15: `a : 2=2`
+#: Game.Doc.tactic_doc
+msgid "The §0 tactic is used to prove your own subgoal.\n"
+"\n"
+"## One step\n"
+"If the proof is one step, then the following:\n"
+"§1\n"
+"will do, where §2 with §3, i.e. §4 is a proof of §5\n"
+"\n"
+"The result would be adding the following to the hypothesis:\n"
+"§6\n"
+"\n"
+"You are storing the proof of §7 in §8 so that you don't have to construct this proof everytime you need it.\n"
+"\n"
+"## Multiple steps\n"
+"If the proof is multiple steps, then:\n"
+"§9\n"
+"will change the current goal to §10 which is what you want to prove.\n"
+"\n"
+"After being proven, the original goal is restored with §11 added (which is a proof of the proposition §12)\n"
+"\n"
+"### Example\n"
+"§13\n"
+"will change the goal to §14, which after proving would restore the original goal with the theorem §15 added and ready to be used."
 msgstr ""
 
 #. §0: `all_possibilities x`
@@ -2397,6 +2503,38 @@ msgstr ""
 msgid "\n"
 "§0 takes cases for what §1 might be\n"
 ""
+msgstr ""
+
+#. §0: `∨`
+#. §1: `R`
+#. §2: `R`
+#. §3: `R`
+#. §4: `cases`
+#. §5: `cases h`
+#. §6: `h : P or Q`
+#. §7: `P`
+#. §8: `Q`
+#. §9: `R`
+#. §10: `R`
+#. §11: `∨`
+#: Game.Levels.Logic.L07_cases
+msgid "To eliminate an §0 hypothesis, what we can do is take cases. We assume the left case and prove\n"
+"the goal §1, then we assume the right case and prove the goal §2. Thus, we now know that §3 is\n"
+"true.\n"
+"\n"
+"In other words, a 'proof by cases' using the §4 tactic.\n"
+"\n"
+"To do this, start with §5\n"
+"\n"
+"\n"
+"By §6, we have two cases:\n"
+"§7 being true or §8 being true.\n"
+"\n"
+"If we consider each case individually and prove some statement §9, then we can conclude that §10\n"
+"is true.\n"
+"\n"
+"[Or.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or.elim) is the\n"
+"elimination principle for §11."
 msgstr ""
 
 #. §0: `¬Ira.isKnight`
@@ -2455,21 +2593,6 @@ msgstr ""
 #. §0: `exact hP`
 #: Game.Levels.Logic.L01_Intro
 msgid "Type §0!"
-msgstr ""
-
-#. §0: `and`
-#. §1: `P and Q`
-#. §2: `P`
-#. §3: `Q`
-#: Game.Levels.Logic.L03_And_elimination
-msgid "Logical connectives are either defined by their introduction and elimination rules or by truth\n"
-"tables.\n"
-"\n"
-"An introduction rule 'introduces' a symbol , in this case proving a statement of §0.\n"
-"\n"
-"An elimination rule 'eliminates' a symbol extracting information from it. For an expression §1\n"
-", applying the elimination rule would give you a proof of §2 and a proof of §3 separately which\n"
-"will be explored in the next level."
 msgstr ""
 
 #. §0: `A`
@@ -2949,12 +3072,6 @@ msgid "\n"
 "Now we want to prove §0. But §1 is always true, so the proof is trivial.\n"
 "\n"
 "The §2 tactic will do the job.\n"
-""
-msgstr ""
-
-#: Game.Levels.Logic.L03_And_elimination
-msgid "\n"
-"\n"
 ""
 msgstr ""
 
@@ -3680,114 +3797,6 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `A`
-#: Game.Levels.DSL_Knights_Knaves.L05_prob29
-#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
-msgid "\n"
-"Conclude §0's statement.\n"
-""
-msgstr ""
-
-#. §0: `contradiction`
-#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
-msgid "\n"
-"We now have a §0\n"
-""
-msgstr ""
-
-#. §0: `assumption`
-#. §1: ```
-#. Objects
-#. P : Prop
-#. 
-#. Assumptions
-#. hP : P
-#. 
-#. Goal
-#. P
-#. ```
-#. §2: `assumption`
-#: Game.Doc.tactic_doc
-msgid "The §0 tactic tries to prove the goal using one of the assumptions.\n"
-"\n"
-"Given,\n"
-"§1\n"
-"§2 will close the goal."
-msgstr ""
-
-#. §0: `False`
-#. §1: `¬P`
-#. §2: `P → False`
-#. §3: $
-#. \\begin{array}{|c|c|}
-#. \\hline
-#. P & ¬P \\\\
-#. \\hline
-#. T & F \\\\
-#. F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §4: `→`
-#. §5: $
-#. \\begin{array}{|c|c|c|}
-#. \\hline
-#. P & Q & P → Q \\\\
-#. \\hline
-#. T & T & T \\\\
-#. \\hline
-#. T & F & F \\\\
-#. \\hline
-#. F & T & T \\\\
-#. \\hline
-#. F & F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §6: `Q=False`
-#. §7: $
-#. \\begin{array}{|c|c|}
-#. \\hline
-#. P & P → False \\\\
-#. \\hline
-#. T & F \\\\
-#. \\hline
-#. F & T \\\\
-#. \\hline
-#. \\end{array}
-#. $
-#. §8: `P`
-#. §9: `¬P`
-#. §10: `P → False`
-#. §11: `¬P ↔ (P → False)`
-#: Game.Levels.Logic.L09_Not
-msgid "In the next level, we will explore what it means to have proven §0, and what it means to have\n"
-"contradictory assumptions in our proof state.\n"
-"\n"
-"But for now , let's talk about why §1 is defined as §2.\n"
-"\n"
-"\n"
-"In truth table form:\n"
-"§3\n"
-"\n"
-"\n"
-"Consider the §4 truth table:\n"
-"§5\n"
-"\n"
-"Let's focus on the rows where §6,\n"
-"§7\n"
-"\n"
-"Notice that regardless of the truth value of §8, the two propositions §9 and §10 have\n"
-"the same truth table. Therefore, they can be used interchangeably and essentially have the same\n"
-"meaning (we say that these two expressions are logically equivalent, §11)."
-msgstr ""
-
-#: Game.Levels.EquationalReasoning.L01_rfl
-msgid "Notice the yellow highlights in the right side pane , showing newly introduced tactics/definitions/theorems which you will need to solve the current level and can use in future levels as well.\n"
-"\n"
-"Use this as a reference for documentation and examples if you ever get stuck."
-msgstr ""
-
 #. §0: `False`
 #. §1: `False`
 #. §2: `→`
@@ -3823,12 +3832,9 @@ msgstr ""
 #. §8: `False → Q`
 #. §9: `Q`
 #. §10: `False`
-#. §11: `False`
-#. §12: `False.elim (h : False) : Q`
-#. §13: `False`
-#. §14: `Q`
-#. §15: `contradiction`
-#. §16: `contradiction`
+#. §11: `Q`
+#. §12: `contradiction`
+#. §13: `contradiction`
 #: Game.Levels.Logic.L10_False
 msgid "We proved §0, what does this mean? What can we conclude? What does §1 IMPLY?\n"
 "\n"
@@ -3838,15 +3844,53 @@ msgid "We proved §0, what does this mean? What can we conclude? What does §1 I
 "Let's focus on part of the truth table where §4 is §5, because we want to see what §6 implies.\n"
 "§7\n"
 "\n"
-"We have that the implication §8 is true regardless what §9 represents.\n"
-"So §10 implies any proposition. This principle is known as: 'From §11, anything follows'.\n"
+"We have that the implication §8 is true for any proposition §9. From §10 , anything follows.\n"
 "\n"
-"This principle is represented by §12 which takes a proof of §13, and\n"
-"proves any proposition §14.(which you can read about\n"
-"[#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim))\n"
+"This principle is represented by [#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim)) proves any proposition §11.\n"
 "\n"
-"The §15 tactic exemplifies this principle and its what we will use in this game. Just type\n"
-"§16"
+"The §12 tactic exemplifies this principle and its what we will use in this game. Just type\n"
+"§13"
+msgstr ""
+
+#. §0: `A`
+#: Game.Levels.DSL_Knights_Knaves.L05_prob29
+#: Game.Levels.SetTheory_Knights_Knaves.L05_prob29
+msgid "\n"
+"Conclude §0's statement.\n"
+""
+msgstr ""
+
+#. §0: `contradiction`
+#: Game.Levels.SetTheory_Knights_Knaves.L12_prob32
+msgid "\n"
+"We now have a §0\n"
+""
+msgstr ""
+
+#. §0: `assumption`
+#. §1: ```
+#. Objects
+#. P : Prop
+#. 
+#. Assumptions
+#. hP : P
+#. 
+#. Goal
+#. P
+#. ```
+#. §2: `assumption`
+#: Game.Doc.tactic_doc
+msgid "The §0 tactic tries to prove the goal using one of the assumptions.\n"
+"\n"
+"Given,\n"
+"§1\n"
+"§2 will close the goal."
+msgstr ""
+
+#: Game.Levels.EquationalReasoning.L01_rfl
+msgid "Notice the yellow highlights in the right side pane , showing newly introduced tactics/definitions/theorems which you will need to solve the current level and can use in future levels as well.\n"
+"\n"
+"Use this as a reference for documentation and examples if you ever get stuck."
 msgstr ""
 
 #. §0: `A`
@@ -4032,28 +4076,6 @@ msgid "\n"
 ""
 msgstr ""
 
-#. §0: `¬P`
-#. §1: `P`
-#. §2: `P`
-#. §3: `¬P`
-#. §4: `P → False`
-#. §5: `P`
-#. §6: `False`
-#. §7: `¬P`
-#. §8: `P`
-#. §9: `False`
-#. §10: `P`
-#. §11: `False`
-#: Game.Levels.Logic.L09_Not
-msgid "\n"
-"What §0 means is that if §1 were true, then we can deduce a contradiction. We know that §2 is true. Therefore, we can prove a contradiction which is the goal.\n"
-"\n"
-"§3 is defined as §4. We have a proof of §5 so we can prove §6(a contradiction)\n"
-"\n"
-"§7 being true tells us that a proof of §8 gives us a proof of §9. We have a proof of §10. Therefore we can obtain a proof of §11 which is the goal.\n"
-""
-msgstr ""
-
 #. §0: `«{cont}»`
 #. §1: `not_or`
 #: Game.Levels.DSL_Knights_Knaves.L05_prob29
@@ -4117,6 +4139,12 @@ msgstr ""
 
 #: Game.Levels.Logic
 msgid "Logic"
+msgstr ""
+
+#. §0: `hP.left`
+#. §1: `And.left hP`
+#: Game.Levels.Logic.L03_And_elimination
+msgid "§0 is a shorthand equivalent to §1"
 msgstr ""
 
 #: Game
@@ -4190,15 +4218,6 @@ msgstr ""
 msgid "\n"
 "Interpret the goal in terms of knights and assume §0\n"
 ""
-msgstr ""
-
-#. §0: `have`
-#. §1: `hQR`
-#. §2: `P`
-#. §3: `hPQ hP`
-#: Game.Levels.Logic.L12_have
-msgid "You could have also not used §0 here by passing §1 a proof of §2 which is §3. Try it\n"
-"before moving on."
 msgstr ""
 
 #. §0: `A`
@@ -4276,29 +4295,6 @@ msgstr ""
 #. §1: `rw [«{g}»]`
 #: Game.Levels.EquationalReasoning.L03_rw
 msgid "Do §0 or §1 and observe what happens."
-msgstr ""
-
-#. §0: `cases`
-#. §1: `h : P or Q`
-#. §2: `P`
-#. §3: `Q`
-#. §4: `R`
-#. §5: `R`
-#. §6: `∨`
-#. §7: `cases h`
-#: Game.Levels.Logic.L07_cases
-msgid "In this level, we will do a 'proof by cases' using the §0 tactic.\n"
-"\n"
-"By §1, we have two cases:\n"
-"§2 being true or §3 being true.\n"
-"\n"
-"If we consider each case individually and prove some statement §4, then we can conclude that §5\n"
-"is true.\n"
-"\n"
-"This is the elimination principle for §6 which you can read about\n"
-"[Or.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or.elim)\n"
-"\n"
-"To do this, start with §7"
 msgstr ""
 
 #. §0: `¬P,¬Q`
@@ -5314,34 +5310,6 @@ msgid "In this level we introduce logical negation, the §0 connective (read as 
 "First , unfold the definition of §5 by doing §6"
 msgstr ""
 
-#. §0: `∨`
-#. §1: `P ∨ Q`
-#. §2: `P`
-#. §3: `Q`
-#. §4: `∨`
-#. §5: `∨`
-#. §6: `left`
-#. §7: `right`
-#. §8: `or`
-#. §9: `left`
-#. §10: `right`
-#. §11: `or`
-#. §12: `P`
-#. §13: `left`
-#: Game.Levels.Logic.L04_Or
-msgid "In this level, we introduce the §0 logical connective read as 'or'.\n"
-"\n"
-"You can prove a statement §1 from the fact that §2 is true or §3 is true. In other words, you\n"
-"prove an §4 statement if the left side is true or the right is true.\n"
-"\n"
-"Therefore, there are two introduction rules for the §5 symbol. We will however use the §6 and\n"
-"§7 tactic instead.\n"
-"\n"
-"You can tell Lean which side of §8 you want to prove by simply executing §9 or §10.\n"
-"\n"
-"In our case, we know the left side of §11 (§12) is true, so use §13."
-msgstr ""
-
 #. §0: `False`
 #: Game.Levels.DSL_Knights_Knaves.L03_prob26
 #: Game.Levels.SetTheory_Knights_Knaves.L03_prob26
@@ -5591,13 +5559,6 @@ msgstr ""
 
 #: Game.Levels.DSL_Knights_Knaves
 msgid "DSL Knights and Knaves"
-msgstr ""
-
-#. §0: `have h : P`
-#. §1: `P`
-#. §2: `h`
-#: Game.Levels.Logic.L11_have
-msgid "§0 changes the goal to proving §1 and adds the proof §2 after that goal is closed."
 msgstr ""
 
 #. §0: `A.isKnave`
@@ -5912,6 +5873,57 @@ msgstr ""
 msgid "\n"
 "§0 simplifies to §1\n"
 ""
+msgstr ""
+
+#. §0: `False`
+#. §1: `P`
+#. §2: `¬P`
+#. §3: `P`
+#. §4: `¬P`
+#. §5: `False`
+#. §6: ```
+#. hP: P
+#. hnP: ¬P
+#. ```
+#. §7: `hnP : ¬P`
+#. §8: `P → False`
+#. §9: `hnP hP : False`
+#. §10: `False.elim : False → Q`
+#. §11: `Q : Prop`
+#. §12: `False.elim (hnP hP) : Q`
+#. §13: `contradiction`
+#. §14: `False.elim`
+#. §15: `False`
+#. §16: `False`
+#. §17: `P`
+#. §18: `¬P`
+#. §19: `P → False`
+#. §20: `P`
+#. §21: `¬P`
+#. §22: `contradiction`
+#. §23: `False`
+#. §24: `False`
+#. §25: `contradiction`
+#. §26: `False`
+#: Game.Doc.doc
+msgid "Proving §0 means deriving a contradiction.\n"
+"\n"
+"A contradiction is when §1 and §2 are both true. We say that §3 and §4 contradict each other.\n"
+"\n"
+"# Principle of explosion, from §5 anything follows.\n"
+"This principle asserts that if you have contradictory assumptions then you can prove anything.\n"
+"§6\n"
+"Since §7 is §8, we can obtain §9.\n"
+"\n"
+"Moreover, we know that §10 for any §11 and so §12. (using §13 would close the goal as well, without having to use §14)\n"
+"\n"
+"\n"
+"\n"
+"Proving §15 is what's usually called deriving a contradiction, and note that to prove §16 you would first need to have a proof §17, and a proof of §18, i.e. §19.\n"
+"\n"
+"Moreover, having a proof of §20 and a proof of §21 means you have contradictory theorems. If so, then §22 will close any goal without having to prove §23 first.\n"
+"\n"
+"If you were able to prove §24, then the §25 tactic will prove the goal regardless what the goal is because 'from §26, anything follows'."
 msgstr ""
 
 #. §0: `↔`

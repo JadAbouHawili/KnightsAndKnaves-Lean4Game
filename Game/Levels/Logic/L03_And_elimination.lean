@@ -1,24 +1,32 @@
-
 import Game.MathlibTheorems
 import Game.LevelLemmas.Logical
 
 World "Logic"
 Level 3
 
-Title "And, `∧`"
+Title "`∧` Elimination Rule "
 Introduction
 "
+In the previous level , we defined the `∧` introduction rule.
 
-
-Logical connectives are either defined by their introduction and elimination rules or by truth
-tables.
+In this level, we will define the `∧` elimination rule.
 
 An introduction rule 'introduces' a symbol , in this case proving a statement of `and`.
 
 An elimination rule 'eliminates' a symbol extracting information from it. For an expression `P and Q`
-, applying the elimination rule would give you a proof of `P` and a proof of `Q` separately which
-will be explored in the next level.
+, applying the elimination rule would give you a proof of `P` and a proof of `Q` separately.
 
+To extract the left side of `and` , use the left elimination rule
+```
+And.left (self : a and b) : a
+```
+
+To extract the right side of `and` , use the right elimination rule
+```
+And.right (self : a and b) : b
+```
+
+Which side do we need to prove the goal?
 "
 
 Statement (P Q : Prop) (hP : P and Q)
@@ -26,15 +34,16 @@ Statement (P Q : Prop) (hP : P and Q)
   {
     Hint(hidden:=true)
     "
-
+The left side. `And.left hP`
     "
     exact hP.left
   }
 
 Conclusion
 "
+`hP.left` is a shorthand equivalent to `And.left hP`
 "
 
-NewTheorem And.intro
+NewTheorem And.intro And.left And.right
 NewDefinition logic_and
 NewTactic constructor

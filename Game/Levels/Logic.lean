@@ -9,7 +9,6 @@ import Game.Levels.Logic.L08_LogicalEquivalence
 import Game.Levels.Logic.L09_Not
 import Game.Levels.Logic.L10_False
 import Game.Levels.Logic.L11_have
-import Game.Levels.Logic.L12_have
 
 World "Logic"
 Title "Logic"

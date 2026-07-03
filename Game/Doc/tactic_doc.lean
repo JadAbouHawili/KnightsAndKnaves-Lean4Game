@@ -196,7 +196,7 @@ In other words, `hP` is EXACTLY whats needed to prove the goal, the type of `hP`
 TacticDoc exact
 
 /--
-The `have` tactic allows you to add theorems to the context (which you would have to prove, of course).
+The `have` tactic is used to prove your own subgoal.
 
 ## One step
 If the proof is one step, then the following:

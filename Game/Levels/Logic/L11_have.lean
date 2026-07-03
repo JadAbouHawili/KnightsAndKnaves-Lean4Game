@@ -39,7 +39,25 @@ Now that you proved `Q`, its proof `{hQ} : Q` has been added to the proof state.
 
 Conclusion
 "
-`have h : P` changes the goal to proving `P` and adds the proof `h` after that goal is closed.
+Redo the level with the following approach.
+
+Coming back to `have`,
+
+If you can prove something in one step, then
+```
+have theorem-name := proof
+```
+will do.
+
+For example, you can obtain a proof of `Q` in one step by
+```
+hPQ hP
+```
+then `have hQ := hPQ hP` will add `hQ : Q` to the proof state, i.e. you have proven `Q` and `hQ` is the proof.
+
+Then `hQR hQ` would be a proof of `R` that closes the goal
+
+
 "
 
 NewTactic «have»

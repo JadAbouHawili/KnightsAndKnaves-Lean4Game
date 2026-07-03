@@ -18,6 +18,8 @@ Backward Direction: `PsameQ.mpr` (`Q → P`)
 Which direction do you need to prove the goal?
 "
 
+#check Iff.intro
+
 Statement {P Q : Prop} (PsameQ : P ↔ Q) (hP : P)
   : Q := by
 

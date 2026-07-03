@@ -40,12 +40,9 @@ F & T \\\\\\\\
 \\end{array}
 $$
 
-We have that the implication `False → Q` is true regardless what `Q` represents.
-So `False` implies any proposition. This principle is known as: 'From `False`, anything follows'.
+We have that the implication `False → Q` is true for any proposition `Q`. From `False` , anything follows.
 
-This principle is represented by `False.elim (h : False) : Q` which takes a proof of `False`, and
-proves any proposition `Q`.(which you can read about
-[#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim))
+This principle is represented by [#False.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#False.elim)) proves any proposition `Q`.
 
 The `contradiction` tactic exemplifies this principle and its what we will use in this game. Just type
 `contradiction`
@@ -55,13 +52,6 @@ Statement {Q : Prop} (hF : False) : Q := by
 
 Conclusion
 "
-Proving `False` is what's usually called deriving a contradiction, and note that to prove `False` you would first need to have a proof `P`, and a proof of `¬P`, i.e. `P → False`.
-
-Moreover, having a proof of `P` and a proof of `¬P` means you have contradictory theorems. If so, then `contradiction` will close any goal without having to prove `False` first.
-
-If you were able to prove `False`, then the `contradiction` tactic will prove the goal regardless what the goal is because 'from `False`, anything follows'.
-
-Try the `contradiction` tactic before moving on to the next level.
 "
 
 NewTactic contradiction

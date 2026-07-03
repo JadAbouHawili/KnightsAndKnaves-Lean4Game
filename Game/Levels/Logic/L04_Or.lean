@@ -14,7 +14,7 @@ You can prove a statement `P ∨ Q` from the fact that `P` is true or `Q` is tru
 prove an `∨` statement if the left side is true or the right is true.
 
 Therefore, there are two introduction rules for the `∨` symbol. We will however use the `left` and
-`right` tactic instead.
+`right` tactic instead to choose which side of the goal `P ∨ Q` to prove.
 
 You can tell Lean which side of `or` you want to prove by simply executing `left` or `right`.
 

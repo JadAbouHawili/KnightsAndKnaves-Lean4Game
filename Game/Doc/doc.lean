@@ -48,6 +48,24 @@ hnP: ¬P
 Since `hnP : ¬P` is `P → False`, we can obtain `hnP hP : False`.
 
 Moreover, we know that `False.elim : False → Q` for any `Q : Prop` and so `False.elim (hnP hP) : Q`. (using `contradiction` would close the goal as well, without having to use `False.elim`)
+
+
+
+Proving `False` is what's usually called deriving a contradiction, and note that to prove `False` you would first need to have a proof `P`, and a proof of `¬P`, i.e. `P → False`.
+
+Moreover, having a proof of `P` and a proof of `¬P` means you have contradictory theorems. If so, then `contradiction` will close any goal without having to prove `False` first.
+
+If you were able to prove `False`, then the `contradiction` tactic will prove the goal regardless what the goal is because 'from `False`, anything follows'.
+
+
+
+
+
+
+
+
+
+
 -/
 DefinitionDoc False as "False" in "Prop"
 
