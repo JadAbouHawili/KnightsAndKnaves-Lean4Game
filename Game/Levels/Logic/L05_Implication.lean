@@ -35,5 +35,7 @@ Conclusion
 "
 
 In the next level, you will learn how to prove an implication using the `intro` tactic.
+
+The `intro` tactic exemplifies the `→` introduction rule.
 "
 NewDefinition imp

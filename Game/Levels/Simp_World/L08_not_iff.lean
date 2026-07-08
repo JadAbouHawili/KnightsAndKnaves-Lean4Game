@@ -10,11 +10,14 @@ Introduction
 "
 `¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value, i.e. one of them is true and the other is false.
 
-Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:
 $
 \\begin{array}{|c | c|c|}
 \\hline
 P & Q & \\text{¬(P ↔ Q)} \\\\\\\\
+\\hline
+T & T & F \\\\\\\\
+\\hline
+F & F & F \\\\\\\\
 \\hline
 T & F & T \\\\\\\\
 \\hline
@@ -23,7 +26,9 @@ F & T & T \\\\\\\\
 \\end{array}
 $
 
-We can conclude that `¬P`,`Q` have the same truth value (`¬P ↔ Q`), and that `P`,`¬Q` have the same truth value (`P ↔ ¬Q`).
+We can conclude that for `¬(P ↔ Q)`:
+- `¬P`,`Q` have the same truth value (`¬P ↔ Q`)
+- `P`,`¬Q` have the same truth value (`P ↔ ¬Q`).
 
 The theorem for the former simplification:
 ```

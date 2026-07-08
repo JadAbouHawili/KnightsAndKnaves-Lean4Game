@@ -40,14 +40,6 @@ Statement
   : P := by
 
   {
-  Hint
-  "
-Remember that `↔` means `=`.
-  "
-  Hint(hidden:=true)
-  "
-`rw` `¬¬P` to `P` using `not_not`.
-  "
   by_contra h
   Hint(hidden:=true)
   "
@@ -60,7 +52,8 @@ Conclusion
 "
 `simp at hP` simplifies `hP : ¬¬P` into `hP : P`
 
-You don't have to do `simp [not_not] at hP` because `not_not` is marked as a `@simp` lemma.
+You don't have to do `simp [not_not] at hP` because `not_not` is in the pool of thereoms that
+`simp` always invokes.
 "
 #check not_not
 NewTactic by_contra

@@ -40,7 +40,26 @@ Type `exact And.intro hP hQ`
 
 Conclusion
 "
-You can also use the `constructor` tactic which breaks the goal into its components: proving `P` and
+`P and Q` is true only when `P` is true and `Q` is true. The following truth table captures this.
+
+$$
+\\begin{array}{|c|c|c|}
+\\hline
+x=2 & y=6 & x=2 ∧ y=6 \\\\
+\\hline
+T & T & T \\\\
+\\hline
+T & F & F \\\\
+\\hline
+F & T & F \\\\
+\\hline
+F & F & F \\\\
+\\hline
+\\end{array}
+$$
+
+
+Instead of `And.intro` , you can also use the `constructor` tactic which breaks the goal into its components: proving `P` and
 `Q` individually.
 
 Click retry and try this before moving on to the next level

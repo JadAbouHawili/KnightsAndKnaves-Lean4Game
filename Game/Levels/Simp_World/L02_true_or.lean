@@ -7,7 +7,7 @@ Title "`true_or`"
 
 Introduction
 "
-`P or Q` to be true requires at least one of `P,Q` to be true.
+To prove `P or Q` , you need at least one of `P` or `Q` to be true.
 
 You have already done this level using `left`/`right` tactic.
 
@@ -44,6 +44,7 @@ F & F & F \\\\
 \\hline
 \\end\{array}
 $
+
 `P or Q` is always true for `P = True`, i.e. `True or Q` and `True` have the same truth value.
 
 $
@@ -60,7 +61,8 @@ $
 
 You can use the theorem
 ```
-true_or (p : Prop) : (True or p) = True
+true_or (p : Prop)
+  : (True or p) = True
 ```
   "
   rw [true_or Q]
@@ -86,7 +88,7 @@ To solve with `simp`,
 simp [h]
 ```
 
-Try `simp` before moving on.
+Click retry and use `simp` before moving on to the next level.
 "
 
 NewTactic trivial

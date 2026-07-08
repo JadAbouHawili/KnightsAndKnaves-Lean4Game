@@ -40,7 +40,7 @@ P
 TacticDoc assumption
 
 /--
-exemplifies the `∨` elimination rule
+`cases` exemplifies the `∨` elimination rule
 [#Or.elim](https://leanprover-community.github.io/mathlib4_docs/Init/Prelude.html#Or.elim)
 
 # Proof by cases
@@ -59,7 +59,7 @@ So in both cases, `some-goal` is true. Therefore we can conclude `some-goal`. Th
 -/
 TacticDoc cases
 /--
-`intro` tactic is used to deal with goals of the form `P → Q`.
+`intro` is the `→` introduction rule , proving goals of the form `P → Q`
 
 Having the following:
 ```

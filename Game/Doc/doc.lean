@@ -56,16 +56,6 @@ Proving `False` is what's usually called deriving a contradiction, and note that
 Moreover, having a proof of `P` and a proof of `¬P` means you have contradictory theorems. If so, then `contradiction` will close any goal without having to prove `False` first.
 
 If you were able to prove `False`, then the `contradiction` tactic will prove the goal regardless what the goal is because 'from `False`, anything follows'.
-
-
-
-
-
-
-
-
-
-
 -/
 DefinitionDoc False as "False" in "Prop"
 
@@ -131,30 +121,6 @@ DefinitionDoc imp as "→" in "Prop"
 Truth table:
 
 # Truth table
-The truth table of a logical connective illustrates the rule for that logical connective, i.e. the truth value of the compound statement depending on the truth value of the propositions it connects.
-The following truth table illustrates this for the previously discussed `∧` connective.
-`T` stands for true
-`F` stands for false
-
-Notice that `P and Q` is true when both `P` is true and `Q` is true, being false otherwise.
-
-$$
-\\begin{array}{|c|c|c|}
-\\hline
-x=2 & y=6 & x=2 ∧ y=6 \\\\
-\\hline
-T & T & T \\\\
-\\hline
-T & F & F \\\\
-\\hline
-F & T & F \\\\
-\\hline
-F & F & F \\\\
-\\hline
-\\end{array}
-$$
-
-
 
 The only way to introduce the symbol `∧` i.e prove a statement involving `∧` is to use the
 `And.intro` introduction rule which requires a proof of `P` and a proof of `Q`.
@@ -162,9 +128,6 @@ The only way to introduce the symbol `∧` i.e prove a statement involving `∧`
 We can conclude from this that `P ∧ Q` is true in only one case: when `P` is true and `Q` is true. It is false otherwise
 
 In truth table form, this looks like:
-
-`T` stands for true
-`F` stands for false
 
 $$
 \\begin{array}{|c|c|c|}
@@ -183,7 +146,6 @@ F & F & F \\\\\\\\
 $$
 
 Restart the level and use these two alternative techniques to solve it:
-- You can also use the `constructor` tactic which will split the goal `P and Q` into two, the first being to prove `P` and the second being to prove `Q`.
 - Moreover, instead of `And.intro hP hQ` you can use the notation `\\<hP,hQ\\>` which means the same thing.
 
 -/
@@ -260,7 +222,7 @@ TheoremDoc And.intro as "And.intro" in "And"
 
 
 /--
-
+Knowing `¬P` means `P` is false
 -/
 TheoremDoc eq_false as "eq_false" in "Logic"
 
@@ -412,7 +374,7 @@ TheoremDoc not_false as "not_false" in "Logic"
 TheoremDoc Classical.not_not as "not_not" in "Logic"
 
 /--
-
+Either `P` being true or `False` being true is equivalent to `P` being true
 -/
 TheoremDoc or_false as "or_false" in "Logic"
 
@@ -439,25 +401,50 @@ TheoremDoc true_implies as "true_implies" in "Logic"
 /--
 `¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value, i.e. one of them is true and the other is false.
 
-Here are the values for `P`,`Q` where `¬(P ↔ Q)` is satisfied:
 $
 \\begin{array}{|c | c|c|}
 \\hline
-P & Q & \\text{¬(P ↔ Q)} \\\\
+P & Q & \\text{¬(P ↔ Q)} \\\\\\\\
 \\hline
-T & F & T \\\\
+T & T & F \\\\\\\\
 \\hline
-F & T & T \\\\
+F & F & F \\\\\\\\
+\\hline
+T & F & T \\\\\\\\
+\\hline
+F & T & T \\\\\\\\
 \\hline
 \\end{array}
 $
 
-We can conclude that `¬P`,`Q` have the same truth value (`¬P ↔ Q`).
+We can conclude that for `¬(P ↔ Q)`:
+- `¬P`,`Q` have the same truth value (`¬P ↔ Q`)
+- `P`,`¬Q` have the same truth value (`P ↔ ¬Q`).
 -/
 TheoremDoc not_iff as "not_iff" in "Logic"
 
 /--
+`¬(P ↔ Q)` means that `P` ,`Q` don't have the same truth value, i.e. one of them is true and the other is false.
 
+$
+\\begin{array}{|c | c|c|}
+\\hline
+P & Q & \\text{¬(P ↔ Q)} \\\\\\\\
+\\hline
+T & T & F \\\\\\\\
+\\hline
+F & F & F \\\\\\\\
+\\hline
+T & F & T \\\\\\\\
+\\hline
+F & T & T \\\\\\\\
+\\hline
+\\end{array}
+$
+
+We can conclude that for `¬(P ↔ Q)`:
+- `¬P`,`Q` have the same truth value (`¬P ↔ Q`)
+- `P`,`¬Q` have the same truth value (`P ↔ ¬Q`).
 -/
 TheoremDoc not_iff' as "not_iff'" in "Logic"
 

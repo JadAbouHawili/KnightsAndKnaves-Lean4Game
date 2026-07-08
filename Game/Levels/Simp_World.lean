@@ -14,10 +14,5 @@ Introduction
 "
 In the previous world, we introduced logical connectives and how to construct new propositions using them.
 
-In this world, we will simplify logical expressions involving these connectives. The `simp` tactic
-can take care of that.
-
-But in this world , simplifications will be done manually so you gain an idea of what `simp` is
-capable of and you should almost always use `simp` in upcoming worlds.
-
+In this world, we will simplify logical expressions involving these connectives using the `simp`
 "

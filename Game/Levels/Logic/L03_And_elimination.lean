@@ -42,8 +42,9 @@ The left side. `And.left hP`
 Conclusion
 "
 `hP.left` is a shorthand equivalent to `And.left hP`
+
+Click retry and solve this level using `hP.left`
 "
 
-NewTheorem And.intro And.left And.right
+NewTheorem And.left And.right
 NewDefinition logic_and
-NewTactic constructor

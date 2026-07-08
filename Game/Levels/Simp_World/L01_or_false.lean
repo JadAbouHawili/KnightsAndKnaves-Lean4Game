@@ -23,7 +23,7 @@ Rewrite the expression `P or Q` into `P or False` using the theorem
 eq_false (h : ¬p) : p = False
 ```
 "
-#check or_false
+
 Statement {P Q: Prop} {h : P or Q} {hnQ : ¬Q}
   : P := by
 {
@@ -72,17 +72,6 @@ $
 `P or Q` has the same truth value as `P` (for `Q = False`).
 
 In other words, `P or False` and `P` have the same truth value, i.e. `(P or False) ↔ P`. Whenever `P or False` occurs, we can replace it by `P` which is of a simpler form.
-$
-\\begin\{array}\{|c|c|}
-\\hline
-P & \\text\{P or False} \\\\
-\\hline
-T & T \\\\
-\\hline
-F & F \\\\
-\\hline
-\\end\{array}
-$
 
 The theorem for this simplication
 ```
@@ -90,7 +79,7 @@ or_false (p : Prop)
 : (p or False) = p
 ```
 
-Rewrite at `h : P or False` obtaining `h : P`, using the theorem `or_false`.
+Rewrite at `h : P or False` using the theorem `or_false`.
   "
   rw [or_false P] at h
   assumption
@@ -106,7 +95,7 @@ simp [hnQ] at h
 ```
 will do.
 
-Try it.
+Try it before moving on to the next level
 "
 
 NewTheorem eq_false or_false

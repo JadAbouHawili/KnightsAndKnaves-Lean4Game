@@ -44,7 +44,9 @@ $
 
 Therefore, they are equivalent and can be interchanged.
 
-On a more intuitive level, we can understand `¬(P and Q)` as meaning `P and Q` is not true, i.e. `P`,`Q` can't be true at the same (at least one of them has to be false)
+On a more intuitive level, we can understand `¬(P and Q)` as meaning `P and Q` is not true, i.e.
+`P`,`Q` can't be true at the same (at least one of them has to be false, either `P` is false or `Q`
+is false , `¬P ∨ ¬Q`)
 
 The simplification theorem to use,
 ```
@@ -63,6 +65,6 @@ Statement {P Q : Prop} (h : ¬(P and Q))
 
 Conclusion
 "
-`simp [not_and_or] at h` instead of `rw [not_and_or] at h` also works.
 "
+
 NewTheorem not_and_or
