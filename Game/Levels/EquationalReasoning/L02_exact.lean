@@ -14,7 +14,7 @@ In this level, we have `Objects`, `Assumptions`, and the `Goal`.
 In other words , `x` is an `ℕ`.
 
 # Assumptions
-In our assumptions , we specify properties about our objects.
+In our assumptions, we specify properties about our objects.
 
 `x = 2` is a proposition(`x = 2 : Prop`). We have `h : x = 2` which means that `h` is of type `x =
   2` i.e a proof of the proposition `x = 2`.
