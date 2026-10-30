@@ -11,7 +11,7 @@ In this level, we have `Objects`, `Assumptions`, and the `Goal`.
 
 # Objects
 `x : ℕ` means `x` is of type `ℕ`(natural number).
-In other words , `x` is a `ℕ`.
+In other words , `x` is an `ℕ`.
 
 # Assumptions
 In our assumptions , we specify properties about our objects.
