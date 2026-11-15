@@ -3,7 +3,7 @@ import Mathlib.Data.Fintype.Card
 import Game.LevelLemmas.Logical
 
 variable {K : Type} {A : K}
-[DecidableEq K]
+  [DecidableEq K]
 
 theorem disjoint_finset
 {left right : Finset K}

@@ -52,7 +52,6 @@ Therefore, from `B`'s statement, conclude that `A` and `C` are not the same, i.e
   "
   knave_interp at stB
   have diff := stB.mp BKnave
-  simp at diff
 
   Hint
   "

@@ -11,7 +11,7 @@ class World' (Inhabitant : Type u) [DecidableEq Inhabitant] where
   KorKn : ∀ x : Inhabitant, x ∈ Knight ∨ x ∈ Knave
 
 variable {Inhabitant : Type}
-[DecidableEq Inhabitant]
+  [DecidableEq Inhabitant]
 
 namespace hidden
 axiom  Knight : Finset Inhabitant
