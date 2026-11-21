@@ -10,7 +10,13 @@ inductive Inhabitant'
 | A
 | B
 | C
-deriving DecidableEq , Fintype
+deriving DecidableEq
+
+instance : Fintype Inhabitant' where
+  elems := {Inhabitant'.A, Inhabitant'.B, Inhabitant'.C}
+  complete := by
+    intro x
+    cases x <;> simp
 
 noncomputable instance world'' : World' Inhabitant' :=  by exact W
 

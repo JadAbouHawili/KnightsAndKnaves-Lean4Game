@@ -9,7 +9,13 @@ import Game.LevelLemmas.settheory_knightsknavesfoundation
 inductive Inhabitant
 | A
 | B
-deriving DecidableEq , Fintype
+deriving DecidableEq
+
+instance : Fintype Inhabitant where
+  elems := {Inhabitant.A, Inhabitant.B}
+  complete := by
+    intro x
+    cases x <;> simp
 
 noncomputable instance world : World' Inhabitant :=  by exact W
 

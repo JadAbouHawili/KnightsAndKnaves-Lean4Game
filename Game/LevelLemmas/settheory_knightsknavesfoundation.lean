@@ -11,7 +11,7 @@ class World' (Inhabitant : Type u) [DecidableEq Inhabitant] where
   KorKn : ∀ x : Inhabitant, x ∈ Knight ∨ x ∈ Knave
 
 variable {Inhabitant : Type}
-[DecidableEq Inhabitant]
+  [DecidableEq Inhabitant]
 
 namespace hidden
 axiom  Knight : Finset Inhabitant
@@ -37,12 +37,12 @@ noncomputable def Knave : Finset Inhabitant := W.Knave
 noncomputable def  dis : Knight ∩ (Knave : Finset Inhabitant) = ∅ := W.dis
 noncomputable def  KorKn : ∀ x : Inhabitant, x ∈ Knight ∨ x ∈ Knave := W.KorKn
 
-#check Finset.instUnion
+-- #check Finset.instUnion -- TODO
 instance : OrOp Prop  :=
   ⟨fun a b ↦ Or a b⟩
 #check xor_def
 
-example : (Xor' (2=2) (2=2)) ↔ (2=2 ↔ 2≠2) := by
+example : (Xor (2=2) (2=2)) ↔ (2=2 ↔ 2≠2) := by
   exact xor_iff_iff_not
 -- open World is no good
 

@@ -1,4 +1,4 @@
-import GameServer.Commands
+import GameApi
 import Mathlib.Data.Multiset.Basic
 
 theorem notleft_right {P Q : Prop} (Or : P ∨ Q)(notleft : ¬P) : Q := by
