@@ -90,7 +90,7 @@ You can view the `Lean` code for every level there (and the solution if you are 
 "
 
 /-! Information to be displayed on the servers landing page. -/
-Languages "English"
+Languages "en"
 CaptionShort "From the basics to Knights And Knaves"
 CaptionLong "A guided experience that teaches you everything you need to know to understand and solve knights and knaves logic puzzles, including the basics of lean and logic.
 
